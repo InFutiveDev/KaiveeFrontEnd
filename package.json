@@ -1,0 +1,49 @@
+{
+  "name": "kaivee",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start -p 3002",
+    "lint": "next lint",
+    "sitemap": "next-sitemap --config next-sitemap.config.js"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "axios": "^1.3.5",
+    "html2canvas": "^1.4.1",
+    "iban": "0.0.14",
+    "moment": "^2.29.4",
+    "next": "13.2.4",
+    "next-sitemap": "^3.1.52",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-feather": "^2.0.10",
+    "react-google-recaptcha": "^3.1.0",
+    "react-icons": "^4.8.0",
+    "react-lazyload": "^3.2.0",
+    "react-multi-carousel": "^2.8.4",
+    "react-otp-input": "^3.1.0",
+    "react-paginate": "^8.2.0",
+    "react-redux": "^8.0.5",
+    "react-share": "^4.4.1",
+    "react-slick": "^0.29.0",
+    "react-toastify": "^9.1.2",
+    "react-youtube": "^10.1.0",
+    "reactstrap": "^9.1.6",
+    "redux": "^4.2.1",
+    "redux-debounced": "^0.5.0",
+    "redux-thunk": "^2.4.2",
+    "sharp": "^0.32.1",
+    "slick-carousel": "^1.8.1",
+    "yup": "^1.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.14",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "postcss": "8.4.26",
+    "tailwindcss": "3.3.3"
+  }
+}

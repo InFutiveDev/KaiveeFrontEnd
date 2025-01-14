@@ -1,0 +1,524 @@
+.banner_slider_wrap_about {
+    background: linear-gradient(225deg, rgba(171, 218, 164, 0.80) 0%, rgba(255, 219, 83, 0.50) 98.23%);
+}
+
+.about .slick-prev.slick-arrow {
+    left: 0% !important;
+}
+
+.banner_slider_wrap_ourteam {
+    background: linear-gradient(90deg, #FAEED2 0%, #EFF0E3 100%);
+}
+
+.banner_slider_wrap_quality-assurance {
+    background: linear-gradient(180deg, #F8E4AC 0%, #FAF0D1 100%);
+}
+
+.assurance-image {
+    border: 2px solid rgba(255, 255, 255, 0.50);
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 4px 4px 50px 0px rgba(255, 255, 255, 0.25) inset;
+
+}
+
+.quality-assurance-slider-main {
+    border-radius: 16px 0px 0px 16px;
+    background: linear-gradient(225deg, rgba(171, 218, 164, 0.40) 0%, rgba(255, 219, 83, 0.25) 98.23%);
+}
+
+.banner_slider_wrap_csr {
+    background: linear-gradient(90deg, rgba(255, 226, 142, 0.50) 0%, rgba(239, 189, 50, 0.50) 78.13%);
+}
+
+.blur-card {
+    background: rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(8px);
+}
+
+.banner_slider_wrap_awards_accreditaion {
+    background: linear-gradient(90deg, #FAEED2 0%, #EFF0E3 100%);
+}
+
+.discount-span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: red;
+    transform: rotate(345deg);
+    top: 15px;
+    left: 0px;
+}
+
+.background-image-health {
+    /* background-image: url("../images/facilities/unsplash_RJ_Jly-fUUg.png"); */
+    background-image: url("../images/facilities/subimg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+.background-image-covid {
+    background-image: url("../images/covid/covid-new_1681695643779_1681963186911\ 1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+.background-image-covid-vaccination {
+    background-image: url("../images/covid/covid-19-vaccine-afp1\ 1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+.background-image-freehome-sample {
+    background-image: url("../images/freeHomeSampleCollection/unsplash_RJ_Jly-fUUg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+.active-accordion .accordion-button {
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+    justify-content: space-between;
+
+}
+
+.inactive-accordion .accordion-button {
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    justify-content: space-between;
+
+}
+
+.facilities-enquiry {
+    background: linear-gradient(180deg, rgba(171, 218, 164, 0.50) 0%, rgba(255, 227, 123, 0.50) 98.23%);
+}
+
+
+.health-right-bg {
+    width: 130%;
+    height: 130%;
+    position: absolute;
+    object-fit: cover;
+    top: -20px;
+    right: -200px;
+    z-index: -1;
+    border-radius: 0px 0px 0px 200px;
+    background: linear-gradient(174deg, #FFD176 0%, #99E59C 98.23%);
+    transform: rotate(36.332deg);
+
+    /* width: 819.955px;
+height: 765.33px;
+transform: rotate(36.332deg);
+flex-shrink: 0;
+border-radius: 0px 0px 0px 200px;
+background: linear-gradient(174deg, #FFD176 20.26%, #99E59C 147.12%); */
+}
+
+.bg-health {
+    background-image: url("https://storage.googleapis.com/download/storage/v1/b/cityxray-61a3e.appspot.com/o/images%2F1690.9371934035278Rectangle%2027047.png?generation=1692707326909087&alt=media");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+@media screen and (max-width:1200px) {
+    .bg-health {
+        background-image: none;
+    }
+}
+
+.banner_slider_wrap_awards_health {
+    background: linear-gradient(90deg, rgba(255, 226, 142, 0.50) 0%, rgba(239, 189, 50, 0.50) 78.13%);
+
+}
+
+
+.banner_slider_wrap_feedback {
+    background: linear-gradient(135deg, rgba(255, 228, 174, 0.70) 0%, #B3D6F3 98.23%);
+
+
+}
+
+.banner_slider_wrap_franchisee {
+    background: linear-gradient(142deg, rgba(255, 173, 51, 0.25) 0%, rgba(229, 151, 112, 0.50) 100%);
+
+}
+
+.banner_slider_wrap_biomedical {
+    background: #FDE3C8;
+}
+
+.bio-select-div {
+    background: linear-gradient(180deg, rgba(171, 218, 164, 0.80) 0%, rgba(255, 227, 123, 0.80) 98.23%);
+}
+
+.banner_slider_wrap_clinical {
+    background: linear-gradient(180deg, rgba(171, 218, 164, 0.40) 0%, rgba(255, 227, 123, 0.80) 98.23%);
+}
+
+.banner_slider_wrap_empanelled {
+    background: #FDE3C8;
+}
+
+.banner_slider_wrap_covid_RT {
+    background: linear-gradient(135deg, rgba(255, 173, 51, 0.20) 0%, rgba(147, 28, 43, 0.20) 100%);
+}
+
+.banner_slider_wrap_freehome_sample {
+    background: linear-gradient(93deg, rgba(255, 226, 142, 0.50) 0%, #FFD45D 100%);
+}
+
+.banner_slider_wrap_facilities {
+    background: linear-gradient(180deg, rgba(218, 255, 213, 0.80) 0%, rgba(255, 227, 123, 0.80) 98.23%);
+}
+
+.footer-bg {
+    background: linear-gradient(90deg, #FAEED2 0%, #EFF0E3 100%);
+}
+
+input[type=checkbox] {
+    /* visibility: hidden;
+     */
+    background: white;
+}
+
+input[type="checkbox"]:focus {
+    /* border-color: #ffffcc; */
+    background: orange !important;
+}
+
+.quality_assurance button.slick-prev.slick-arrow {
+    top: 112% !important;
+    right: 96px !important;
+    left: inherit !important;
+}
+
+.quality_assurance button.slick-next.slick-arrow {
+    top: 112% !important;
+    right: 37px !important;
+    left: inherit !important;
+}
+
+input:checked {
+    color: white;
+}
+
+.cusmCheckBox {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: normal;
+    color: #6c757d;
+    font-weight: 400;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cusmCheckBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+
+    border: 1px solid rgba(75, 85, 99, 0.28);
+    background: #F6F8F9;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cusmCheckBox input:checked~.checkmark {
+    background-color: #FCC42C;
+    border-color: #FCC42C;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.cusmCheckBox input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.cusmCheckBox .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.hover-menu:hover .show-menu {
+    /* height: auto; */
+    transform: scale(1) !important;
+
+    /* transition: 0.9s; */
+}
+
+.custom-dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+}
+
+.hover-menu-about {
+    top: 100% !important;
+}
+
+.hover-menu-about:hover .show-menu-about {
+    display: block !important;
+}
+
+.show-menu {
+    top: 100% !important;
+    overflow: hidden;
+    /* height: 0%; */
+    display: block !important;
+    transform: scale(0) !important;
+    transform-origin: top right;
+    transition: transform 0.4s ease-in-out;
+    transition-delay: 0.2s;
+}
+
+
+
+.upload_Modal .modal-content {
+    border-radius: 24px !important;
+    overflow: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*  { */
+@media (min-width: 1600px) {
+    .custom_container_home {
+        max-width: 1536px !important;
+    }
+
+    .custom_container_home .container {
+        max-width: 1536px !important;
+
+    }
+}
+
+@media (min-width: 1536px) {
+    .custom_container_home {
+        max-width: 1480px !important;
+    }
+
+    .custom_container_home .container {
+        max-width: 1480px !important;
+
+    }
+}
+
+.editor_faq a {
+    color: black;
+
+}
+
+.editor_div table tr td:first-child {
+    width: 35%;
+}
+
+.editor_div_facilites a,
+.editor_div a {
+    color: #FCC42C;
+}
+
+.editor_div_carrier ol,
+.editor_faq ol,
+.editor_div ol,
+.editor_div_facilites ol {
+    margin-left: 30px !important;
+    list-style: decimal !important;
+    font-size: 15px;
+}
+
+.editor_div_facilites ul,
+.editor_faq ul,
+.editor_div ul {
+    list-style: disc !important;
+    /* color: red; */
+    margin-left: 30px;
+}
+
+
+
+.editor_faq ul li::marker {
+    color: black
+}
+
+.editor_div ul li::marker,
+.editor_div_facilites li::marker {
+    color: #FCC42C
+}
+
+.editor_div_facilites h2,
+.editor_div_facilites h3,
+.editor_div_facilites h4,
+.editor_div_facilites h5,
+.editor_div_facilites h6 {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+
+.editor_div_facilites ul {
+    padding-bottom: 15px;
+}
+
+.editor_div_facilites li {
+    padding-bottom: 5px;
+}
+
+.editor_div_facilites li span {
+    font-size: 15px;
+}
+
+.editor_div_facilites p {
+    padding-bottom: 15px;
+}
+
+/* / ---------Css properties for carrier ---------- / */
+
+.editor_div_carrier h2,
+.editor_div_facilites h3,
+.editor_div_facilites h4,
+.editor_div_carrier h5,
+.editor_div_carrier h6 {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.editor_div_carrier ul {
+    list-style: disc !important;
+    padding-bottom: 15px;
+    margin-left: 30px;
+}
+
+.editor_div_carrier li {
+    padding-bottom: 5px;
+}
+
+.editor_div_carrier li span {
+    font-size: 15px;
+}
+
+.editor_div_carrier span {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    /* font-weight: bold;
+        text-decoration-line: underline; */
+}
+
+.editor_div_carrier p {
+    padding-bottom: 15px;
+}
+
+/* } */
+
+section.sliders.banner_slider_wrap_clinical.cstm-clinicresearch-bg {
+    background: linear-gradient(90deg, #FAEED2 0%, #EFF0E3 96.98%);
+    padding: 0 !important;
+}
+
+.cstm-volunteerbg {
+    background-image: url("../images/pattern-v.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+}
+
+.contactbg {
+    background-image: url("../images/contactbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+@media (max-width:576px) {
+    .contactbg {
+        padding: 20px;
+    }
+}
+
+.cstm-cr-arrow button.slick-next.slick-arrow {
+    top: -43%;
+}
+
+.cstm-cr-arrow button.slick-prev.slick-arrow {
+    top: -43%;
+    left: 90%;
+}
+
+@media (max-width: 1500px) {
+    .cstm-cr-arrow button.slick-prev.slick-arrow {
+        left: 87%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .cstm-cr-arrow button.slick-prev.slick-arrow {
+        left: 84%;
+    }
+}
+
+@media (max-width: 700px) {
+    .cstm-cr-arrow button.slick-prev.slick-arrow {
+        left: 85%;
+    }
+}
+
+@media (max-width: 500px) {
+    .cstm-cr-arrow button.slick-prev.slick-arrow {
+        left: 83%;
+    }
+}
+
+@media (max-width: 400px) {
+    .cstm-cr-arrow button.slick-prev.slick-arrow {
+        left: 80%;
+    }
+}

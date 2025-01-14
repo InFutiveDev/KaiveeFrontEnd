@@ -1,0 +1,9 @@
+
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /cart
+Disallow: /check-out
+Disallow: /ads/
+
+Sitemap: https://www.cityxrayclinic.com/sitemap.xml

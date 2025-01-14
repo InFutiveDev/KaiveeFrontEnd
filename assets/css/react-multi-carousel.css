@@ -1,0 +1,29 @@
+.react-multi-carousel-dot button {
+  background-color: #dce2eb !important;
+  border: 0 !important;
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: orange !important;
+  border: 0 !important;
+}
+
+/* styles.css */
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+.button-group {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  left: 0;
+}
+
+.left-button:hover,
+.right-button:hover {
+  background-color: #fcc42c !important;
+  /* Darker orange on hover */
+}
