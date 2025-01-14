@@ -132,21 +132,21 @@ const testimonial = [
   {
     id: 1,
     name: "Patient1",
-    img: img1.src,
+    img: "",
     description:
       "I have had a lovely experience with Kaivee. The staff is very friendly and very assertive. They help and guide people with best possible way. Receptionists are extremely polite and humble. They give special attention to elderly people and pregnant ladies. Kudos to the entire team.",
   },
   {
     id: 3,
     name: "Patient2",
-    img: img2.src,
+    img: "",
     description:
       "Good service and very professional and efficient staff. Ms. Neha ma’am was wonderful with her work & their staff is also very nice & helpful. I would say one of the best X ray clinic in west Delhi.",
   },
   {
     id: 2,
     name: "Patient3",
-    img: img3.src,
+    img: "",
     description:
       "Nice diagnostic centre in Delhi. I am feeling good because I got best quality radiology services here. I have done my 3 Tesla MRI Scan, CT Scan test, CBCT dental test from Kaivee. Cost is affordable. Staff is very professional and cooperative.",
   },

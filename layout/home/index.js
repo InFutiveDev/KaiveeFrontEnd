@@ -481,7 +481,7 @@ const HomeLayout = () => {
             <div className="container  pt-4 pb-4">
               <h1 className="text-center font-semibold text-lg lg:text-xl xl:text-[26px] font-source-pro text-black">
                 ONE-STOP DESTINATION FOR ALL YOUR TEST - BEST DIAGNOSTIC CENTRE
-                IN DELHI!
+                IN REGION!
               </h1>
               <div className="text-center">
                 <span className="text-secondary text-base lg:text-lg xl:text-[20px]">
@@ -512,22 +512,13 @@ const HomeLayout = () => {
                         When it comes to excellence in diagnostics, Kaivee
                         Healthcare is a name that people count upon for a
                         high-quality, safe, and best diagnostic centre in Delhi.
-                        We are a NABL and NABH-certified center, reckoned for
-                        our excellent team of doctors & technicians and
-                        state-of-the-art equipment. The brainchild of Dr. Ravi
-                        Kapoor & Dr. Sunita Kapoor – Directors of City X-ray &
-                        Scan Clinic, the diagnostic center is aimed at
-                        delivering the highest standards of medical diagnostics
-                        services. Our mission is to provide “Care with courtesy,
-                        compassion, competence & quality.
                       </span>
                       {!readMore ? (
                         <span className="text-secondary">...</span>
                       ) : (
                         <div>
                           <span className="text-secondary">
-                            The brainchild of Dr. Ravi Kapoor & Dr. Sunita
-                            Kapoor – Directors of City X-ray & Scan Clinic
+                            The brainchild of Doctors
                           </span>
                           <h2 className="!text-[24px] my-2 text-[#212529]">
                             Our Services
@@ -548,9 +539,7 @@ const HomeLayout = () => {
                           <h2 className="!text-[24px] my-2 text-black">
                             Why Choose Us?
                           </h2>
-                          <p className="font-bold">
-                            Book A Diagnostic Test With City X-Ray & Scan Clinic
-                          </p>
+                          <p className="font-bold">Book A Diagnostic</p>
                           <p className="text-slate-500 my-2">
                             Here’s what makes us a premier diagnostic centre in
                             Delhi:
@@ -559,9 +548,8 @@ const HomeLayout = () => {
                             return <p key={index}>{item.description}</p>;
                           })}
                           <p className="text-slate-500 my-2">
-                            City X-Ray & Scan Clinic is your most trusted choice
-                            when considering the best diagnostic center near me
-                            in Delhi.
+                            trusted choice when considering the best diagnostic
+                            center near me in Delhi.
                           </p>
                         </div>
                       )}
@@ -608,7 +596,7 @@ const ourServices = [
   {
     id: 2,
     title: "✔ Digital X-ray ",
-    description: `City X-Ray clinic has state-of-the-art 800 MA digital radiology scanners offering
+    description: ` clinic has state-of-the-art 800 MA digital radiology scanners offering
     high-quality, quick, low-cost scans.`,
   },
   {
@@ -639,13 +627,13 @@ const ourServices = [
   {
     id: 7,
     title: "✔ Molecular Biology  ",
-    description: `City X-Ray clinic boasts an advanced molecular lab, specializing in viral testing,
+    description: ` clinic boasts an advanced molecular lab, specializing in viral testing,
     pathogen testing, HLA B27, and oncology testing.`,
   },
   {
     id: 8,
     title: "✔ Pathology ",
-    description: `City X-ray & Scan Clinic specializes in diverse fields of clinical pathology,
+    description: ` specializes in diverse fields of clinical pathology,
     including hematology, biochemistry & immunology, microbiology, cytopathology,
     etc.`,
   },
