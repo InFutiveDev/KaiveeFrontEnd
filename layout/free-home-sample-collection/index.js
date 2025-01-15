@@ -92,7 +92,7 @@ const FreeHomeSampleCollectionLayout = () => {
           <div className="lg:w-5/6 md:w-3/4 w-full">
             <div>
               <h1 className="text-lg sm:text-[26px] font-[400] mb-[20px]">
-                Blood Test At Home By City X-Ray
+                Blood Test At Home By us
               </h1>
 
               <div className="flex flex-col gap-y-2">

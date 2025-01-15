@@ -40,8 +40,8 @@ const CorporateHealthLayout = () => {
               </h1>
               <div className="flex flex-col gap-y-2">
                 <p className="text-secondary text-[16px] lg:text-[16px] md:text-xl">
-                  {` Welcome to the City X-Ray and Scan Clinic! We are dedicated to promoting the health and wellbeing of your organization's most valuable asset – your employees. Our comprehensive
-                  corporate health services are designed to empower businesses in City X-Ray to prioritise the
+                  {` Welcome to the us! We are dedicated to promoting the health and wellbeing of your organization's most valuable asset – your employees. Our comprehensive
+                  corporate health services are designed to empower businesses in us to prioritise the
                   health and productivity of their workforce.`}
                 </p>
                 <h2 className="text-[16px] lg:text-[24px] md:text-[18x]  font-semibold font-source-pro">
@@ -49,11 +49,11 @@ const CorporateHealthLayout = () => {
                 </h2>
                 {/* <p className="text-black font-semibold text-[32px] "></p> */}
                 <p className="text-secondary text-[16px]  lg:text-[16px] md:text-xl">
-                  <b>1. Customized Health Solutions:</b> At City X-Ray and Scan
-                  Clinic, we understand that each organization has unique
-                  healthcare needs. We offer customized health packages tailored
-                  to your company's requirements, ensuring that you receive the
-                  most relevant and effective services.
+                  <b>1. Customized Health Solutions:</b> At us, we understand
+                  that each organization has unique healthcare needs. We offer
+                  customized health packages tailored to your company's
+                  requirements, ensuring that you receive the most relevant and
+                  effective services.
                 </p>
                 <p className="text-secondary text-[16px] lg:text-[16px] md:text-xl  ">
                   <b>2. Efficient Health Screenings:</b> Our state-of-the-art
