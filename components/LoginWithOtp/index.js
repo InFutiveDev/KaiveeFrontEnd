@@ -155,12 +155,12 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                   </button>
                 </div>
                 <p className="text-secondary text-[16px] mt-[24px] font-poppins">
-                  By proceeding, you agree to City X-Ray{" "}
-                  <a href="https://www.cityxrayclinic.com/terms-conditions">
+                  By proceeding, you agree to Kaivee Healtcare{" "}
+                  <a href="terms-conditions">
                     <b>T&C</b>
                   </a>{" "}
                   and{" "}
-                  <a href="https://www.cityxrayclinic.com/privacy-policy">
+                  <a href="privacy-policy">
                     <b>Privacy Policy</b>
                   </a>
                 </p>
@@ -237,7 +237,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                     width: "95%",
                   }}
                 >
-                  <p className="login-text">I don't receive a code ?</p>
+                  <p className="login-text">I did not receive a code ?</p>
                   {counter <= 0 ? (
                     // <div>
                     <div className="">

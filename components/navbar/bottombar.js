@@ -111,7 +111,7 @@ const Bottombar = () => {
                 <UncontrolledDropdown className="hover-menu-about">
                   <div
                     className={`flex justify-between items-start sm:p-0 p-[15px]  ${
-                      aboutOpen ? "bg-[#fcc42c]" : ""
+                      aboutOpen ? "bg-[#7DB440]" : ""
                     } `}
                   >
                     <div
@@ -151,10 +151,10 @@ const Bottombar = () => {
                         href={`/about`}
                         onClick={closeMenu}
                         className={`transition-all align-middle menuText  ${
-                          asPath == "/about" && "!text-orange !font-medium"
+                          asPath == "/about" && "!text-[#D41958] !font-medium"
                         }`}
                       >
-                        <DropdownItem className="transition-all  hover:bg-orange text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all  hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           About us
                         </DropdownItem>
                       </Link>
@@ -165,10 +165,10 @@ const Bottombar = () => {
                         onClick={closeMenu}
                         className={`transition-all align-middle menuText  ${
                           asPath == "/about/our-team" &&
-                          "!text-orange !font-medium"
+                          "!text-[#D41958] !font-medium"
                         }`}
                       >
-                        <DropdownItem className="transition-all  hover:bg-orange text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all  hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Our Team
                         </DropdownItem>
                       </Link>
@@ -179,10 +179,10 @@ const Bottombar = () => {
                         onClick={closeMenu}
                         className={`transition-all align-middle menuText  ${
                           asPath == "/about/quality-assurance" &&
-                          "!text-orange !font-medium"
+                          "!text-[#D41958] !font-medium"
                         }`}
                       >
-                        <DropdownItem className="transition-all hover:bg-orange text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Quality Assurance
                         </DropdownItem>
                       </Link>
@@ -192,10 +192,10 @@ const Bottombar = () => {
                         onClick={closeMenu}
                         className={`align-middle menuText  ${
                           asPath == "/about/awards-accreditations" &&
-                          "!text-orange !font-medium"
+                          "!text-[#D41958] !font-medium"
                         }`}
                       >
-                        <DropdownItem className="transition-all hover:bg-orange text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Awards & Accreditations
                         </DropdownItem>
                       </Link>
@@ -204,10 +204,11 @@ const Bottombar = () => {
                         href={`/about/csr`}
                         onClick={closeMenu}
                         className={`align-middle menuText  ${
-                          asPath == "/about/csr" && "!text-orange !font-medium"
+                          asPath == "/about/csr" &&
+                          "!text-[#D41958] !font-medium"
                         }`}
                       >
-                        <DropdownItem className="transition-all hover:bg-orange text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           CSR
                         </DropdownItem>
                       </Link>
@@ -241,7 +242,7 @@ const Bottombar = () => {
                     href="/health-packages"
                     className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${
                       asPath?.includes("/health-packages") &&
-                      "active text-orange border-b-2 border-[#f7a70b]"
+                      "active text-[#D41958] border-b-2 border-[#f7a70b]"
                     }`}
                   >
                     Health Packages
@@ -267,10 +268,9 @@ const Bottombar = () => {
                   className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${
                     asPath == "/covid-19-pcr-h2" && "active"
                   }`}
-                  href="/covid-19-pcr-h2"
+                  href="/"
                 >
-                  {/* COVID 19 PCR (H)* */}
-                  Covid-19
+                  Mobile App
                 </Link>
               </NavItem>
               {/* <NavItem>
@@ -278,7 +278,7 @@ const Bottombar = () => {
                   <div
                     className={`transition-all cursor-pointer font-[400] menuText !text-[16px] ${
                       asPath?.includes("/covid-19") &&
-                      "active text-orange border-b-2 border-[#f7a70b]"
+                      "active text-[#D41958] border-b-2 border-[#f7a70b]"
                     }`}
                   >
                     Covid-19
@@ -289,11 +289,11 @@ const Bottombar = () => {
                         prefetch
                         className={`transition-all font-[400] menuText  ${
                           asPath == `/covid-19/covid-19-RT-PCR` &&
-                          "!text-orange !font-medium"
+                          "!text-[#D41958] !font-medium"
                         }`}
                         href={`/covid-19/covid-19-RT-PCR`}
                       >
-                        <DropdownItem className="transition-all hover:bg-orange text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Covid 19 RT-PCR
                         </DropdownItem>
                       </Link>
@@ -301,11 +301,11 @@ const Bottombar = () => {
                         prefetch
                         className={`transition-all font-[400] menuText  ${
                           asPath == `/covid-19/COVID-19-vaccination` &&
-                          "!text-orange !font-medium"
+                          "!text-[#D41958] !font-medium"
                         }`}
                         href={`/covid-19/COVID-19-vaccination`}
                       >
-                        <DropdownItem className="transition-all hover:bg-orange text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           COVID-19 Vaccination
                         </DropdownItem>
                       </Link>
@@ -330,9 +330,9 @@ const Bottombar = () => {
                   className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${
                     asPath == "/print-media-coverage" && "active"
                   }`}
-                  href="/print-media-coverage"
+                  href="/locate-us"
                 >
-                  News
+                  Locate
                 </Link>
               </NavItem>
 

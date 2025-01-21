@@ -1709,7 +1709,7 @@ img {
 }
 
 .menuText:hover {
-  color: #f7a708 !important;
+  color: #7DB440 !important;
 }
 
 .textHeading {
@@ -2848,11 +2848,11 @@ section.services.booking-card .frame-2 svg {
 }
 
 .navbar-wrap li a.active {
-  color: #fcc42c !important;
+  color: #7DB440 !important;
 }
 
 section.top_navbar {
-  background: #fcc42c;
+  background: #7DB440;
 }
 
 section.top_navbar .menu-items {
@@ -2869,8 +2869,9 @@ section.top_navbar .menu-item-lists li {
 } */
 
 .nav-bg {
-  background: #f7f7fb;
+  background: white;
   padding: 12px 0;
+  border-bottom:1px solid rgb(180, 178, 178);
 }
 
 .banner_slider_wrap {
@@ -2883,7 +2884,8 @@ section.top_navbar .menu-item-lists li {
 .backImageBox {
   position: absolute;
   width: 100%;
-  background-image: url("/Box.svg");
+  background-color: white;
+  /* background-image: url("/Box.svg"); */
   background-size: cover;
   background-repeat: no-repeat;
   top: 0;

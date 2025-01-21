@@ -108,13 +108,14 @@ const HomeLayout = () => {
         <SpinnerComponent />
       ) : (
         <>
-          <section className="py-2.5 banner_slider_wrap relative z-[1]  h-[auto] sm:h-[430px] ">
-            <div className=" container flex  justify-between items-center h-full">
+          <section className="py-10 mt-10 banner_slider_wrap relative z-[1] h-[auto] sm:h-[600px]">
+            <div className="container flex justify-between items-center h-full">
               <Homebanner />
             </div>
-            <div className="backImageBox " />
+            <div className="backImageBox" />
           </section>
-          <div className="bg-[#F7F7FB] py-[12px] px-[24px] flex">
+
+          {/* <div className="bg-white py-[12px] px-[24px] flex">
             <marquee
               className="text-[16px] font-medium "
               width="100%"
@@ -122,7 +123,7 @@ const HomeLayout = () => {
             >
               {` Welcome to Kaivee Healthcare. 📢 Book a Test Quick and Queue-Free! Now You Can Book Your Tests, Appointments, and Free Home Collection Online from City X-Ray. || 📢 Kaivee Healthcare Is Also Available On WhatsApp. To Book a Test, Download a Report, or Get Quick Customer Support Just By Sending "Hi" to 9999999999 || 💬 NABH Accreditated Radiological Services as Per Scope | NABL Accreditated Pathological Services as Per Scope`}
             </marquee>
-          </div>
+          </div> */}
           <div className="container">
             <BookingCard packagesId={habits?.data[0]?._id || ""} />
           </div>

@@ -35,7 +35,7 @@ const BookingCard = () => {
       {openInquiryModal ? (
         <InquiryModal handleInquiryModal={handleInquiryModal} />
       ) : null}
-      <section className="services my-8 lg:my-12 booking-card">
+      <section className="services my-12 lg:my-12 booking-card">
         <div className="boxBookingCard">
           <div className="frame-wrapper sm:px-2 md:px-24 p-2">
             <div className="gap-4 lg:gap-7 grid xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 text-md ">

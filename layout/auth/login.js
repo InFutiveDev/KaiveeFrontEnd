@@ -20,7 +20,7 @@ const Login = ({ type, href }) => {
           className="loginbutton"
           onClick={() => setOpen(!loginModalOpen)}
         >
-          <svg
+          {/* <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -42,9 +42,9 @@ const Login = ({ type, href }) => {
                 <rect width="23.9999" height="24" fill="white" />
               </clipPath>
             </defs>
-          </svg>
+          </svg> */}
 
-          <span className="cartText"> Login</span>
+          <span className="cartText"> Login|Singup</span>
         </div>
       ) : (
         <div

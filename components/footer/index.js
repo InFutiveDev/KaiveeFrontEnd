@@ -29,7 +29,7 @@ const Footer = () => {
         {!collapse ? (
           <div className="fixed right-0 top-[50%] z-[111111111]">
             <div
-              className="bg-orange shadow-2xl px-1.5 py-2 rounded-l-full relative cursor-pointer"
+              className="bg-[#D41958] shadow-2xl px-1.5 py-2 rounded-l-full relative cursor-pointer"
               onClick={() => setCollapse(!collapse)}
             >
               <div className="text-white flex justify-start items-center space-x-1">

@@ -706,7 +706,7 @@ a.menuText.active {
 
 .navbar-wrap a.menuText.active:after {
   content: "";
-  background: #f7a708;
+  background: #7DB440;
 }
 
 a.menuText.active::after {
@@ -729,7 +729,7 @@ ul.menu-item-lists.topnavbar {
 } */
 
 .menu-item-lists li a:hover {
-  color: #f7a708;
+  color: #7DB440;
 }
 
 /* 

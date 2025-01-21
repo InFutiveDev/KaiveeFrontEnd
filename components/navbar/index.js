@@ -132,17 +132,17 @@ const Navbar = () => {
           : "header-nav web-view header-nav-web lg:sticky bg-white  top-[0px] z-[1000]"
       }
     >
-      <div className=" sm:p-3 sm:container mx-auto">
+      <div className=" sm:p-1 sm:container mx-auto">
         <div className="navigation_bar">
           <div className=" pb-2 sm:pb-0 w-full sm:w-auto flex justify-between items-center">
             <div className="logo-main">
               <Link href="/">
                 <Image
-                  height={700}
-                  width={700}
+                  height={90}
+                  width={259}
                   quality={100}
                   layout="fixed"
-                  className="h-[65px] md:h-[65px] object-contain object-center rounded"
+                  className="h-[101px]  object-contain object-center rounded"
                   alt="About"
                   src={logo?.src}
                 />
@@ -165,7 +165,7 @@ const Navbar = () => {
                       />
                     </svg>
                     <div className="lg:-top-[15px] md:-top[9px] -top-[12px] absolute -right-[7px] text-[12px]">
-                      <span className="bg-orange text-white lg:px-[6px] lg:py-[1px] md:px-[5px] px-[4px] block rounded-full ">
+                      <span className="bg-[#7DB440] text-white lg:px-[6px] lg:py-[1px] md:px-[5px] px-[4px] block rounded-full ">
                         {cart?.cartQuantity}
                       </span>
                     </div>
@@ -222,7 +222,7 @@ const Navbar = () => {
                 />
                 <button
                   type="submit"
-                  className="bg-[#fcc42c] px-2 py-1.5 flex justify-center items-center rounded-r-md text-white text-xl "
+                  className="bg-[#D41958] px-2 py-1.5 flex justify-center items-center rounded-r-md text-white text-xl "
                 >
                   <Search name="search-outline" />
                 </button>
@@ -281,6 +281,7 @@ const Navbar = () => {
                   <span className="">011-2000-2000</span>
                 </a>
               </div>
+              <span className="hidden sm:block h-5 w-px bg-gray-300"></span>
               <div className="track">
                 <Link href={"/dashboard/report-tracking"}>
                   <svg
@@ -302,31 +303,7 @@ const Navbar = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                  <span>Track My Sample</span>
-                </Link>
-              </div>
-              <div className="cart-icon hidden sm:block">
-                <Link href={"/cart"} className="align-middle loginbutton">
-                  <div className="relative">
-                    <svg
-                      width="24"
-                      height="23"
-                      viewBox="0 0 24 23"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1.00012 1.3791e-07C0.447837 1.3791e-07 0.00012207 0.447715 0.00012207 1C0.00012207 1.55228 0.447837 2 1.00012 2H2.77942C2.92502 2 3.06692 2.04581 3.18503 2.13095C3.30314 2.21608 3.39147 2.33622 3.43751 2.47435L6.7345 12.3672C6.88091 12.8064 6.89952 13.2793 6.78723 13.7285L6.51575 14.8164C6.1174 16.4098 7.35771 18 9.00012 18H21.0001C21.5524 18 22.0001 17.5523 22.0001 17C22.0001 16.4477 21.5524 16 21.0001 16H9.00012C8.61074 16 8.36076 15.6805 8.4552 15.3027L8.65993 14.485C8.69462 14.3465 8.77462 14.2235 8.88722 14.1356C8.99981 14.0477 9.13854 14 9.28137 14H20.0001C20.4307 14.0002 20.8131 13.7248 20.9493 13.3164L23.6154 5.31641C23.8313 4.66862 23.349 3.99969 22.6661 4H6.55481C6.40921 4 6.2673 3.95419 6.14919 3.86906C6.03107 3.78392 5.94274 3.66379 5.8967 3.52566L4.94934 0.683594C4.81308 0.275155 4.43069 -0.000224972 4.00012 1.3791e-07H1.00012ZM8.00012 19C6.89555 19 6.00012 19.8954 6.00012 21C6.00012 22.1046 6.89555 23 8.00012 23C9.10469 23 10.0001 22.1046 10.0001 21C10.0001 19.8954 9.10469 19 8.00012 19ZM20.0001 19C18.8956 19 18.0001 19.8954 18.0001 21C18.0001 22.1046 18.8956 23 20.0001 23C21.1047 23 22.0001 22.1046 22.0001 21C22.0001 19.8954 21.1047 19 20.0001 19Z"
-                        fill="#52525B"
-                      />
-                    </svg>
-                    <div className="-top-[12px] absolute -right-[7px] text-[12px]">
-                      <span className="bg-orange text-white lg:px-[6px] lg:py-[1px] md:px-[5px] px-[4px] block rounded-full ">
-                        {cart?.cartQuantity}
-                      </span>
-                    </div>
-                  </div>
-                  <span className="cartText">Cart</span>
+                  <span className="text-[#D41958]">Track My Sample</span>
                 </Link>
               </div>
               <div className="login-btn-wrap hidden sm:block hover-menu">
@@ -349,6 +326,30 @@ const Navbar = () => {
                     <Login type={"home"} />
                   )}
                 </a>
+              </div>
+              <div className="cart-icon hidden sm:block">
+                <Link href={"/cart"} className="align-middle loginbutton">
+                  <div className="relative">
+                    <svg
+                      width="24"
+                      height="23"
+                      viewBox="0 0 24 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.00012 1.3791e-07C0.447837 1.3791e-07 0.00012207 0.447715 0.00012207 1C0.00012207 1.55228 0.447837 2 1.00012 2H2.77942C2.92502 2 3.06692 2.04581 3.18503 2.13095C3.30314 2.21608 3.39147 2.33622 3.43751 2.47435L6.7345 12.3672C6.88091 12.8064 6.89952 13.2793 6.78723 13.7285L6.51575 14.8164C6.1174 16.4098 7.35771 18 9.00012 18H21.0001C21.5524 18 22.0001 17.5523 22.0001 17C22.0001 16.4477 21.5524 16 21.0001 16H9.00012C8.61074 16 8.36076 15.6805 8.4552 15.3027L8.65993 14.485C8.69462 14.3465 8.77462 14.2235 8.88722 14.1356C8.99981 14.0477 9.13854 14 9.28137 14H20.0001C20.4307 14.0002 20.8131 13.7248 20.9493 13.3164L23.6154 5.31641C23.8313 4.66862 23.349 3.99969 22.6661 4H6.55481C6.40921 4 6.2673 3.95419 6.14919 3.86906C6.03107 3.78392 5.94274 3.66379 5.8967 3.52566L4.94934 0.683594C4.81308 0.275155 4.43069 -0.000224972 4.00012 1.3791e-07H1.00012ZM8.00012 19C6.89555 19 6.00012 19.8954 6.00012 21C6.00012 22.1046 6.89555 23 8.00012 23C9.10469 23 10.0001 22.1046 10.0001 21C10.0001 19.8954 9.10469 19 8.00012 19ZM20.0001 19C18.8956 19 18.0001 19.8954 18.0001 21C18.0001 22.1046 18.8956 23 20.0001 23C21.1047 23 22.0001 22.1046 22.0001 21C22.0001 19.8954 21.1047 19 20.0001 19Z"
+                        fill="#52525B"
+                      />
+                    </svg>
+                    <div className="-top-[12px] absolute -right-[7px] text-[12px]">
+                      <span className="bg-[#D41958] text-white lg:px-[6px] lg:py-[1px] md:px-[5px] px-[4px] block rounded-full ">
+                        {cart?.cartQuantity}
+                      </span>
+                    </div>
+                  </div>
+                  {/* <span className="cartText">Cart</span> */}
+                </Link>
               </div>
             </div>
           </div>
