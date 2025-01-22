@@ -21,13 +21,13 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
       <button
         disabled={currentSlide === 0}
         onClick={() => previous()}
-        className="left-button border text-[#fcc42c] hover:text-white bg-white h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center"
+        className="left-button border text-[#D41958] hover:text-white bg-white h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center"
       >
         <IoMdArrowBack />
       </button>
       <button
         onClick={() => goToSlide(currentSlide + 1)}
-        className="text-[#fcc42c] right-button hover:text-white bg-white border  h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center"
+        className="text-[#D41958] right-button hover:text-white bg-white border  h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center"
       >
         <IoMdArrowForward />
       </button>

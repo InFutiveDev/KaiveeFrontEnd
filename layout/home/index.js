@@ -124,7 +124,7 @@ const HomeLayout = () => {
               {` Welcome to Kaivee Healthcare. 📢 Book a Test Quick and Queue-Free! Now You Can Book Your Tests, Appointments, and Free Home Collection Online from City X-Ray. || 📢 Kaivee Healthcare Is Also Available On WhatsApp. To Book a Test, Download a Report, or Get Quick Customer Support Just By Sending "Hi" to 9999999999 || 💬 NABH Accreditated Radiological Services as Per Scope | NABL Accreditated Pathological Services as Per Scope`}
             </marquee>
           </div> */}
-          <div className="container">
+          <div className="container ">
             <BookingCard packagesId={habits?.data[0]?._id || ""} />
           </div>
           <div className="bg-[#FAFAFA]">
@@ -455,7 +455,7 @@ const HomeLayout = () => {
                       </div>
                       <div className="mt-[36px]">
                         <a href="">
-                          <buttton className="inline-block w-full text-center bg-orange text-white rounded-md  py-[12px] text-base lg:text-[18px] font-[400]">
+                          <buttton className="inline-block w-full text-center bg-[#D41958] text-white rounded-md  py-[12px] text-base lg:text-[18px] font-[400]">
                             Call Us Now
                           </buttton>
                         </a>
@@ -492,7 +492,7 @@ const HomeLayout = () => {
               </div>
               <div className="mt-[32px]">
                 <div className="rounded-xl border-[1px] shadow-md border-[#E4E4E7] p-3 md:p-[32px] bg-white">
-                  <h2 className="flex items-center gap-[12px] text-orange font-semibold text-base xl:text-[24px] pb-[8px] border-b border-[#E4E4E7]">
+                  <h2 className="flex items-center gap-[12px] text-[#D41958] font-semibold text-base xl:text-[24px] pb-[8px] border-b border-[#E4E4E7]">
                     <ArrowSvgYellow /> Comprehensive Diagnostic Solutions Under
                     One Roof!
                   </h2>

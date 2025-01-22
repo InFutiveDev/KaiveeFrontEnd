@@ -70,7 +70,7 @@ const HealthBulletin = () => {
           Blog – Health Bulletin & Articles
         </p>
         <a target="_blank" href="https://blog.cityxrayclinic.com/">
-          <div className="bg-orange text-white text-[14px] md:text-[18px] px-2 rounded-md">
+          <div className="bg-[#D41958] text-white text-[14px] md:text-[18px] px-2 rounded-md">
             View All
           </div>
         </a>

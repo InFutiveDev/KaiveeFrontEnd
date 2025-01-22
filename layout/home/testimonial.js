@@ -7,123 +7,94 @@ import img1 from "assets/images/Finalimg/clinet/Akash Gupta.webp";
 import img2 from "assets/images/Finalimg/clinet/Gurpreet Singh.webp";
 import img3 from "assets/images/Finalimg/clinet/Neeraj Kumar.webp";
 
-const RightArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <button onClick={onClick} className={className} style={{ ...style }}>
-      <PrevIcons />,
-    </button>
-  );
-};
+// const RightArrow = (props) => {
+//   const { className, style, onClick } = props;
+//   return (
+//     <button onClick={onClick} className={className} style={{ ...style }}>
+//       <PrevIcons />,
+//     </button>
+//   );
+// };
 
-const LeftArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <button onClick={onClick} className={className} style={{ ...style }}>
-      <NextIcons />,
-    </button>
-  );
-};
+// const LeftArrow = (props) => {
+//   const { className, style, onClick } = props;
+//   return (
+//     <button onClick={onClick} className={className} style={{ ...style }}>
+//       <NextIcons />,
+//     </button>
+//   );
+// };
 
 const Testimonial = () => {
-  const [isActive, setActive] = useState(0);
-  let settings = {
-    dots: false,
-    infinite: true,
-    // autoplay: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    nextArrow: <LeftArrow />,
-    prevArrow: <RightArrow />,
-  };
-  const active = (index) => {
-    setActive(index);
-  };
+  const testimonials = [
+    {
+      text: "When I signed up with Lendwise it was a no-brainer. It’s been one of the best decisions I’ve made to ensure my finances are on point.",
+      name: "Alex Bergwin",
+      position: "Accounting at MakeShip",
+    },
+    {
+      text: "When I signed up with Lendwise it was a no-brainer. It’s been one of the best decisions I’ve made to ensure my finances are on point.",
+      name: "Alex Bergwin",
+      position: "Accounting at MakeShip",
+    },
+    {
+      text: "When I signed up with Lendwise it was a no-brainer. It’s been one of the best decisions I’ve made to ensure my finances are on point.",
+      name: "Alex Bergwin",
+      position: "Accounting at MakeShip",
+    },
+    {
+      text: "When I signed up with Lendwise it was a no-brainer. It’s been one of the best decisions I’ve made to ensure my finances are on point.",
+      name: "Alex Bergwin",
+      position: "Accounting at MakeShip",
+    },
+    {
+      text: "When I signed up with Lendwise it was a no-brainer. It’s been one of the best decisions I’ve made to ensure my finances are on point.",
+      name: "Alex Bergwin",
+      position: "Accounting at MakeShip",
+    },
+    {
+      text: "When I signed up with Lendwise it was a no-brainer. It’s been one of the best decisions I’ve made to ensure my finances are on point.",
+      name: "Alex Bergwin",
+      position: "Accounting at MakeShip",
+    },
+  ];
+
   return (
-    <div className="relative">
-      <div>
-        <p className="font-semibold lg:text-[32px] text-xl px-2 font-source-pro">
-          Testimonial
+    <section className="bg-white py-14 px-6 lg:px-24">
+      <div className="text-center mb-6">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-2">
+          Trusted by Leading Medical Practices
+        </h2>
+        <p className="text-gray-600 lg:text-lg">
+          See how clinics and hospitals are transforming their workflows with
+          our platform.
         </p>
       </div>
-      <div>
-        <Slider {...settings}>
-          <div>
-            <div className="grid  grid-cols-1 md:grid-cols-3  justify-start items-center space-x-6 p-3">
-              <div className=" col-span-1 sm:mx-auto w-full">
-                <div className="h-full ">
-                  <video
-                    className="w-full object-fill  "
-                    loop
-                    autoPlay={true}
-                    muted
-                    // video link here
-                    src={"/"}
-                    controls
-                  />
-                </div>
-              </div>
-              <div className="col-span-2 flex justify-between lg:justify-around items-center flex-col h-full w-full ">
-                <div className="w-full flex justify-start md:pb-0 pb-2">
-                  <QuoteSVG />
-                </div>
-                <div className="flex justify-center flex-col">
-                  <div className="font-poppins">
-                    {testimonial.map((item, index) => {
-                      return (
-                        isActive === index && (
-                          <div key={index}>
-                            <p className="text-2xl pb-2">{item.name}</p>
-                            <p className="text-gray-500 font-[400] !text-[14px] lg:text-[18px] pb-2">
-                              {item.description}
-                            </p>
-                          </div>
-                        )
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className="w-full flex justify-between items-center">
-                  <div className="flex items-start gap-1">
-                    {testimonial.map((item, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className="d-flex flex-col justify-center items-center"
-                        >
-                          <div
-                            className="mb-2 flex justify-start items-center space-x-4"
-                            onClick={() => active(index)}
-                          >
-                            <img
-                              alt="other user avatar"
-                              src={item.img}
-                              className={`md:h-14 md:w-14 h-10 w-10 ${
-                                isActive === index
-                                  ? "Testimonial-img-active"
-                                  : ""
-                              }`}
-                            />
-                          </div>
-                          {/* {isActive === index ? (
-                            <p className="text-sm">{item.name}</p>
-                          ) : (
-                            <div className="" />
-                          )} */}
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <QuoteSVG />
-                </div>
+
+      <div className="grid gap-10 lg:gap-12 xl:gap-14 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+        {testimonials.map((item, index) => (
+          <div
+            key={index}
+            className="p-6 shadow-lg rounded-lg bg-white border border-gray-100"
+          >
+            <p className="text-gray-700 mb-6">{`"${item.text}"`}</p>
+            <div className="flex items-center">
+              <div className="h-10 w-10 bg-pink-200 rounded-full flex-shrink-0"></div>
+              <div className="ml-4">
+                <h4 className="font-bold text-gray-800">{item.name}</h4>
+                <p className="text-gray-500 text-sm">{item.position}</p>
               </div>
             </div>
           </div>
-        </Slider>
+        ))}
       </div>
-    </div>
+
+      <div className="text-center mt-12">
+        <button className="px-8 py-3 text-white bg-pink-500 rounded-lg shadow-lg hover:bg-pink-600">
+          View More →
+        </button>
+      </div>
+    </section>
   );
 };
 

@@ -153,7 +153,7 @@ const HomePopularPackeges = ({
         )}
         <button
           onClick={() => router.push(viewAll)}
-          className="bg-orange w-36 text-white lg:text-[14px] md:text-[14px] text-[12px] rounded-md px-2 lg:px-2 py-1 font-[500]"
+          className="bg-[#D41958] w-36 text-white lg:text-[14px] md:text-[14px] text-[12px] rounded-md px-2 lg:px-2 py-1 font-[500]"
         >
           View more
         </button>

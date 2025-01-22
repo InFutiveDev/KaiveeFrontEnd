@@ -210,7 +210,7 @@ const HomePopularPackeges = ({
             onClick={() => {
               handleViewMore();
             }}
-            className=" bg-orange sm:w-36 w-fit	 text-white sm:text-[14px] text-[12px] rounded-md  px-[8px] sm:px-3  lg:px-2 py-1 font-[500] lg:ml-auto ml-0"
+            className=" bg-[#D41958] sm:w-36 w-fit	 text-white sm:text-[14px] text-[12px] rounded-md  px-[8px] sm:px-3  lg:px-2 py-1 font-[500] lg:ml-auto ml-0"
           >
             View more
           </button>
