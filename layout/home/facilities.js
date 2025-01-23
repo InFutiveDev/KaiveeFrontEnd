@@ -7,6 +7,7 @@ import img1 from "assets/images/Finalimg/Facility/MRI Scan.webp";
 import img2 from "assets/images/Finalimg/Facility/CT Scan.webp";
 import img3 from "assets/images/Finalimg/Facility/digital xray.webp";
 import img4 from "assets/images/Finalimg/Facility/Neurology tests.webp";
+import { AlignCenter } from "react-feather";
 
 const Facilities = () => {
   const services = [
@@ -47,7 +48,7 @@ const Facilities = () => {
       textAlign: "center",
     },
     title: {
-      fontSize: "28px",
+      fontSize: "26px",
       fontWeight: "bold",
       marginBottom: "40px",
       textalign: "left",
@@ -91,20 +92,13 @@ const Facilities = () => {
       fontSize: "12px",
     },
     titleText: {
-      fontSize: "14px",
+      fontSize: "20px",
       fontWeight: "bold",
       marginBottom: "10px",
-      textAlign: "left",
     },
     description: {
-      fontSize: "10px",
+      fontSize: "16px",
       color: "#666",
-      textAlign: "left",
-    },
-    svgConnector: {
-      width: "100px",
-      height: "50px",
-      margin: "0 auto",
     },
   };
 
@@ -123,17 +117,20 @@ const Facilities = () => {
               {/* Add SVG after the image if not the last item */}
               {index < services.length - 1 && (
                 <svg
-                  style={styles.svgConnector}
-                  viewBox="0 0 100 50"
                   xmlns="http://www.w3.org/2000/svg"
+                  width="200"
+                  height="100"
+                  viewBox="0 0 200 140"
                 >
                   <path
-                    d="M0 25 Q50 0 100 25"
+                    d="M20 80 C 80 30, 120 30, 180 80"
                     fill="none"
-                    stroke="#bbb"
-                    strokeWidth="2"
-                    strokeDasharray="5,5"
+                    stroke="navy"
+                    stroke-width="2"
+                    stroke-dasharray="5,5"
                   />
+                  <polygon points="177,80 180,74 188,80" fill="navy" />
+                  <polygon points="23,80 22,85 15,80" fill="navy" />
                 </svg>
               )}
               <div style={styles.step}>{`0${service.id}`}</div>

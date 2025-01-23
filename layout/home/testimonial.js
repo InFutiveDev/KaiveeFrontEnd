@@ -1,29 +1,5 @@
-import React, { useState } from "react";
-import Slider from "react-slick";
-import { QuoteSVG } from "assets/images/SvgImage";
-import { PrevIcons } from "assets/images/SvgImage";
-import { NextIcons } from "assets/images/SvgImage";
-import img1 from "assets/images/Finalimg/clinet/Akash Gupta.webp";
-import img2 from "assets/images/Finalimg/clinet/Gurpreet Singh.webp";
-import img3 from "assets/images/Finalimg/clinet/Neeraj Kumar.webp";
-
-// const RightArrow = (props) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <button onClick={onClick} className={className} style={{ ...style }}>
-//       <PrevIcons />,
-//     </button>
-//   );
-// };
-
-// const LeftArrow = (props) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <button onClick={onClick} className={className} style={{ ...style }}>
-//       <NextIcons />,
-//     </button>
-//   );
-// };
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Testimonial = () => {
   const testimonials = [
@@ -59,6 +35,44 @@ const Testimonial = () => {
     },
   ];
 
+  const anotherSetOfTestimonials = [
+    {
+      text: "The service provided has completely transformed my financial management! I couldn’t be more pleased with the results.",
+      name: "Jamie Smith",
+      position: "Marketing Director at GlobalTech",
+    },
+    {
+      text: "Lendwise has simplified my budgeting and made managing my finances so much easier. Highly recommend!",
+      name: "Sophie Liu",
+      position: "Finance Manager at SpeedyCorp",
+    },
+    {
+      text: "A game-changer for managing my financial health. Lendwise has become an essential part of my workflow.",
+      name: "David Green",
+      position: "Business Consultant at Green Solutions",
+    },
+  ];
+
+  // Carousel settings
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1024 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
+    },
+    tablet: {
+      breakpoint: { max: 768, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
     <section className="bg-white py-14 px-6 lg:px-24">
       <div className="text-center mb-6">
@@ -71,24 +85,75 @@ const Testimonial = () => {
         </p>
       </div>
 
-      <div className="grid gap-10 lg:gap-12 xl:gap-14 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-        {testimonials.map((item, index) => (
-          <div
-            key={index}
-            className="p-6 shadow-lg rounded-lg bg-white border border-gray-100"
-          >
-            <p className="text-gray-700 mb-6">{`"${item.text}"`}</p>
-            <div className="flex items-center">
-              <div className="h-10 w-10 bg-pink-200 rounded-full flex-shrink-0"></div>
-              <div className="ml-4">
-                <h4 className="font-bold text-gray-800">{item.name}</h4>
-                <p className="text-gray-500 text-sm">{item.position}</p>
+      {/* First Carousel - Move Right */}
+      <div
+        className="mb-14"
+        style={{
+          transform: "translateX(10%)",
+          transition: "transform 0.3s ease-in-out",
+        }}
+      >
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          transitionDuration={500}
+          showDots={true}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+        >
+          {testimonials.map((item, index) => (
+            <div
+              key={index}
+              className="p-6 shadow-lg rounded-lg bg-white border border-gray-100"
+            >
+              <p className="text-gray-700 mb-6">{`"${item.text}"`}</p>
+              <div className="flex items-center">
+                <div className="h-10 w-10 bg-pink-200 rounded-full flex-shrink-0"></div>
+                <div className="ml-4">
+                  <h4 className="font-bold text-gray-800">{item.name}</h4>
+                  <p className="text-gray-500 text-sm">{item.position}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </Carousel>
       </div>
 
+      {/* Second Carousel - Move Left */}
+      <div
+        className="mt-14"
+        style={{
+          transform: "translateX(-10%)",
+          transition: "transform 0.3s ease-in-out",
+        }}
+      >
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          transitionDuration={500}
+          showDots={true}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+        >
+          {anotherSetOfTestimonials.map((item, index) => (
+            <div
+              key={index}
+              className="p-6 shadow-lg rounded-lg bg-white border border-gray-100"
+            >
+              <p className="text-gray-700 mb-6">{`"${item.text}"`}</p>
+              <div className="flex items-center">
+                <div className="h-10 w-10 bg-blue-200 rounded-full flex-shrink-0"></div>
+                <div className="ml-4">
+                  <h4 className="font-bold text-gray-800">{item.name}</h4>
+                  <p className="text-gray-500 text-sm">{item.position}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      </div>
       <div className="text-center mt-12">
         <button className="px-8 py-3 text-white bg-pink-500 rounded-lg shadow-lg hover:bg-pink-600">
           View More →
@@ -99,26 +164,3 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
-const testimonial = [
-  {
-    id: 1,
-    name: "Patient1",
-    img: "",
-    description:
-      "I have had a lovely experience with Kaivee. The staff is very friendly and very assertive. They help and guide people with best possible way. Receptionists are extremely polite and humble. They give special attention to elderly people and pregnant ladies. Kudos to the entire team.",
-  },
-  {
-    id: 3,
-    name: "Patient2",
-    img: "",
-    description:
-      "Good service and very professional and efficient staff. Ms. Neha ma’am was wonderful with her work & their staff is also very nice & helpful. I would say one of the best X ray clinic in west Delhi.",
-  },
-  {
-    id: 2,
-    name: "Patient3",
-    img: "",
-    description:
-      "Nice diagnostic centre in Delhi. I am feeling good because I got best quality radiology services here. I have done my 3 Tesla MRI Scan, CT Scan test, CBCT dental test from Kaivee. Cost is affordable. Staff is very professional and cooperative.",
-  },
-];
