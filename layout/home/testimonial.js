@@ -89,7 +89,7 @@ const Testimonial = () => {
       <div
         className="mb-14"
         style={{
-          transform: "translateX(10%)",
+          transform: "translateX(20px)",
           transition: "transform 0.3s ease-in-out",
         }}
       >
@@ -124,7 +124,7 @@ const Testimonial = () => {
       <div
         className="mt-14"
         style={{
-          transform: "translateX(-10%)",
+          transform: "translateX(-20px)",
           transition: "transform 0.3s ease-in-out",
         }}
       >

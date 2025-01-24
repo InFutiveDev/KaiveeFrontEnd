@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-const DynamicHead = ({ scritpChat = false }) => {
+const DynamicHead = ({ scritpChat = false, favicon = "/favicon.ico" }) => {
   const router = useRouter();
   const dispatch = useDispatch();
   const dynamicMetaTitle = useSelector(
@@ -13,26 +13,20 @@ const DynamicHead = ({ scritpChat = false }) => {
   useMemo(() => {
     dispatch({ type: "GET_DYNAMIC_META_TITLE_DES", data: {} });
   }, [router?.pathname]);
+
   return (
     <Head>
-      {/* <title>{dynamicMetaTitle?.title || ""}</title>
-      <meta name="description" content={dynamicMetaTitle?.description || ""} /> */}
-
-      {/* <!-- Google Console --> */}
-      <meta
-        name="google-site-verification"
-        content="W02fYyVHnRB50LdhbjZgjgu4iKiYm8HWgTXbqW5sW1c"
-      />
-      <link rel="icon" href="/favicon.ico" />
-      <link
-        rel="canonical"
-        href={`https://www.cityxrayclinic.com${router?.asPath}`}
-      ></link>
-      {/* <!-- Google Analytics tag (gtag.js) --> */}
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-VBSMY8PWWH"
-      ></script>
+      {/* Meta tags for SEO */}
+      <meta name="google-site-verification" content="W02fYyVHnRB50LdhbjZgjgu4iKiYm8HWgTXbqW5sW1c" />
+      
+      {/* Dynamic Favicon */}
+      <link rel="icon" href={favicon} />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={`https://www.dummywebsite.com${router?.asPath}`} />
+      
+      {/* Google Analytics */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBSMY8PWWH"></script>
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -41,45 +35,39 @@ const DynamicHead = ({ scritpChat = false }) => {
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-N78CGTH');
-              `,
+          `,
         }}
       />
-      {/* Google Tag Manager script */}
+      
+      {/* Structured Data for SEO (Dummy Data) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: `
           {
             "@context": "https://schema.org",
-            "@type": "DiagnosticLab",
-            "name": "City X-Ray & Scan Clinic Pvt. Ltd.",
-            "url": "https://www.cityxrayclinic.com/",
-            "logo": "https://www.cityxrayclinic.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.e921700e.png&w=750&q=100",
-            "alternateName": "City X-Ray",
+            "@type": "Organization",
+            "name": "Dummy Website",
+            "url": "https://www.dummywebsite.com",
+            "logo": "https://www.dummywebsite.com/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-800-123-4567",
+              "contactType": "customer service",
+              "areaServed": "US",
+              "availableLanguage": "en"
+            },
             "sameAs": [
-              "https://www.facebook.com/cityxrayclinic/",
-              "https://twitter.com/CityXrayClinic",
-              "https://www.instagram.com/city_xray/",
-              "https://www.youtube.com/c/Cityxrayclinic/",
-              "https://www.linkedin.com/company/city-x-ray-scan-clinic/"
-            ],
-            "contactPoint": [
-              {
-                "@type": "ContactPoint",
-                "telephone": "011-2000-2000",
-                "contactType": "customer service",
-                "email": "lft@cityxrayclinic.com",
-                "areaServed": "IN",
-                "availableLanguage": [
-                  "en",
-                  "hi"
-                ]
-              }
+              "https://www.facebook.com/dummywebsite",
+              "https://twitter.com/dummywebsite",
+              "https://www.instagram.com/dummywebsite"
             ]
           }
-              `,
+          `,
         }}
       />
+      
+      {/* Chat Scripts */}
       {!scritpChat ? <script defer src="/chatScript.js" async></script> : ""}
       <script src="/googleScript.js" async></script>
     </Head>

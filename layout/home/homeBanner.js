@@ -20,7 +20,7 @@ const Homebanner = () => {
   ];
 
   return (
-    <section className="bg-white py-10 px-6 md:px-16">
+    <section className="bg-white  px-6 md:px-16">
       {/* Hero Section */}
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         {/* Left Section: Image */}
@@ -81,7 +81,7 @@ const Homebanner = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-8 mt-4 mb-1 bg-white-50">
+      {/* <div className="py-8 mt-4 mb-1 bg-white-50">
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-6 gap-2 text-center">
           {features.map((feature, index) => (
             <div key={index} className=" flex items-center space-y-2">
@@ -92,7 +92,7 @@ const Homebanner = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -5,11 +5,11 @@ import UploadPrescriptionModal from "components/UploadPrescriptionModal";
 import { useState } from "react";
 import Image from "next/image";
 
-import img1 from "../../assets/images/Finalimg/Book/Book a Health Package.webp";
-import img2 from "../../assets/images/Finalimg/Book/Book a home collection.webp";
-import img3 from "../../assets/images/Finalimg/Book/Book a test.webp";
-import img4 from "../../assets/images/Finalimg/Book/Book an Appoinment.webp";
-import img5 from "../../assets/images/Finalimg/Facility/Upload Prescription (1).webp";
+import img1 from "../../assets/images/home-icon/package.png";
+import img2 from "../../assets/images/home-icon/appointment.png";
+import img3 from "../../assets/images/home-icon/test.png";
+import img4 from "../../assets/images/home-icon/home.png";
+import img5 from "../../assets/images/home-icon/uplaod.png";
 
 const ServicesSection = () => {
   const [UploadOpen, setUploadOpen] = useState(false);
@@ -40,32 +40,32 @@ const ServicesSection = () => {
             className="flex flex-col items-center"
             onClick={() => router.push(`/health-packages`)}
           >
-            <Image src={img1} alt="Health Package" className="w-16 mb-4" />
+            <Image src={img1} alt="Health Package" className="w-23 mb-4" />
           </div>
           {/* Appointment */}
           <div
             className="flex flex-col items-center"
             onClick={() => router.push(`/dashboard/book-an-appointment`)}
           >
-            <Image src={img2} alt=" Appointment" className="w-16 mb-4" />
+            <Image src={img2} alt=" Appointment" className="w-23 mb-4" />
           </div>
           {/* Test */}
           <div
             className="flex flex-col items-center"
             onClick={() => router.push(`/book-a-test`)}
           >
-            <Image src={img3} alt="Book a Test" className="w-16 mb-4" />
+            <Image src={img3} alt="Book a Test" className="w-23 mb-4" />
           </div>
           {/* Home Collection */}
           <div
             className="flex flex-col items-center"
             onClick={() => router.push(`/free-home-sample-collection`)}
           >
-            <Image src={img4} alt=" Home Collection" className="w-16 mb-4" />
+            <Image src={img4} alt=" Home Collection" className="w-23 mb-4" />
           </div>
           {/* Upload Prescription */}
           <div className="flex flex-col items-center" onClick={uploadModal}>
-            <Image src={img5} alt="Upload Prescription" className="w-16 mb-4" />
+            <Image src={img5} alt="Upload Prescription" className="w-23 mb-4" />
           </div>
         </div>
         <UploadPrescriptionModal setOpen={setUploadOpen} open={UploadOpen} />

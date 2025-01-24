@@ -124,7 +124,8 @@ const HomeLayout = () => {
               {` Welcome to Kaivee Healthcare. 📢 Book a Test Quick and Queue-Free! Now You Can Book Your Tests, Appointments, and Free Home Collection Online from City X-Ray. || 📢 Kaivee Healthcare Is Also Available On WhatsApp. To Book a Test, Download a Report, or Get Quick Customer Support Just By Sending "Hi" to 9999999999 || 💬 NABH Accreditated Radiological Services as Per Scope | NABL Accreditated Pathological Services as Per Scope`}
             </marquee>
           </div> */}
-          <div className="container ">
+          <div className="bg-[#FAFAFA]">
+          <div className="container bg-">
             <BookingCard packagesId={habits?.data[0]?._id || ""} />
           </div>
           <div className="bg-[#FAFAFA]">
@@ -136,6 +137,7 @@ const HomeLayout = () => {
                 />
               </div>
             </div>
+          </div>
           </div>
           <div className="container">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
@@ -647,40 +649,52 @@ const ourServices = [
 ];
 const data = [
   {
-    title: "Team of Experienced <br /> Doctors & Staffs",
-    image: img1,
+    id: 1,
+    title: "NABL Accredited Labs",
+    description: "Follows all protocols as per NABL & CAP Guidelines",
+    icon: "🏅",
   },
   {
-    title: "10M+ Happy Patients",
-    image: img2,
+    id: 2,
+    title: "Trusted by Leading Doctors & Hospitals",
+    description: "Qualified Pathologist at each lab",
+    icon: "👨‍⚕️",
   },
   {
-    title: "31 Year of Excellence in <br /> Diagnostic Healthcare",
-    image: img3,
+    id: 3,
+    title: "Shortest Reporting Time",
+    description: "Ownership and Innovation",
+    icon: "⏱️",
   },
   {
-    title: "World Class Technology",
-    image: img4,
+    id: 4,
+    title: "Accurate Test Reports",
+    description: "Quality checks by Quality Assurance Team",
+    icon: "🧪",
   },
   {
-    title: "Fast & Accurate Results",
-    image: img6,
+    id: 5,
+    title: "1 Crore+ Satisfied Customers",
+    description: "Making superior quality diagnostics services",
+    icon: "😊",
   },
   {
-    title: "Affordable",
-    image: img5,
+    id: 6,
+    title: "100+ Labs",
+    description: "Large Network Labs in all the major cities",
+    icon: "🏢",
   },
   {
-    title: "Free Home Sample <br /> Collection",
-    image: img7,
+    id: 7,
+    title: "3000+ Collection Centres",
+    description: "Expanding our reach and counting",
+    icon: "📍",
   },
   {
-    title: "NABL & NABH Certified <br /> Centre",
-    image: img8,
-  },
-  {
-    title: "Large Menu of Tests <br /> Available ",
-    image: img9,
+    id: 8,
+    title: "Scientific Orientation",
+    description: "MD Doctors in Every Lab & State-of-the-Art Machines",
+    icon: "🔬",
   },
 ];
 export default memo(HomeLayout);
