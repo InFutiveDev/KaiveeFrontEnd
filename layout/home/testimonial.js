@@ -28,6 +28,24 @@ const Testimonial = () => {
       name: "Alex Bergwin",
       position: "Accounting at MakeShip",
     },
+  ];
+
+  const anotherSetOfTestimonials = [
+    {
+      text: "The service provided has completely transformed my financial management! I couldn’t be more pleased with the results.",
+      name: "Jamie Smith1",
+      position: "Marketing Director at GlobalTech",
+    },
+    {
+      text: "Lendwise has simplified my budgeting and made managing my finances so much easier. Highly recommend!",
+      name: "Sophie Liu2",
+      position: "Finance Manager at SpeedyCorp",
+    },
+    {
+      text: "A game-changer for managing my financial health. Lendwise has become an essential part of my workflow.",
+      name: "David Green3",
+      position: "Business Consultant at Green Solutions",
+    },
     {
       text: "When I signed up with Lendwise it was a no-brainer. It’s been one of the best decisions I’ve made to ensure my finances are on point.",
       name: "Alex Bergwin",
@@ -35,23 +53,8 @@ const Testimonial = () => {
     },
   ];
 
-  const anotherSetOfTestimonials = [
-    {
-      text: "The service provided has completely transformed my financial management! I couldn’t be more pleased with the results.",
-      name: "Jamie Smith",
-      position: "Marketing Director at GlobalTech",
-    },
-    {
-      text: "Lendwise has simplified my budgeting and made managing my finances so much easier. Highly recommend!",
-      name: "Sophie Liu",
-      position: "Finance Manager at SpeedyCorp",
-    },
-    {
-      text: "A game-changer for managing my financial health. Lendwise has become an essential part of my workflow.",
-      name: "David Green",
-      position: "Business Consultant at Green Solutions",
-    },
-  ];
+  // Reverse the array to start iteration from the end
+  const reversedTestimonials = [...anotherSetOfTestimonials].reverse();
 
   // Carousel settings
   const responsive = {
@@ -80,8 +83,7 @@ const Testimonial = () => {
           Trusted by Leading Medical Practices
         </h2>
         <p className="text-gray-600 lg:text-lg">
-          See how clinics and hospitals are transforming their workflows with
-          our platform.
+          See how clinics and hospitals are transforming their workflows with our platform.
         </p>
       </div>
 
@@ -89,8 +91,9 @@ const Testimonial = () => {
       <div
         className="mb-14"
         style={{
-          transform: "translateX(20px)",
+          transform: "translateX(40px)",
           transition: "transform 0.3s ease-in-out",
+          padding: "0 32px", // Added padding around the carousel
         }}
       >
         <Carousel
@@ -101,15 +104,22 @@ const Testimonial = () => {
           transitionDuration={500}
           showDots={true}
           removeArrowOnDeviceType={["tablet", "mobile"]}
+          arrows={false} // Disable arrows
+          rtl={true}
         >
           {testimonials.map((item, index) => (
             <div
               key={index}
               className="p-6 shadow-lg rounded-lg bg-white border border-gray-100"
+              style={{
+                margin: "20px", // Space between items
+                width: "100%", // Constant width
+                height: "auto", // Constant height
+              }}
             >
               <p className="text-gray-700 mb-6">{`"${item.text}"`}</p>
               <div className="flex items-center">
-                <div className="h-10 w-10 bg-pink-200 rounded-full flex-shrink-0"></div>
+                <div className="h-10 w-10 bg-[#D41958] rounded-full flex-shrink-0"></div>
                 <div className="ml-4">
                   <h4 className="font-bold text-gray-800">{item.name}</h4>
                   <p className="text-gray-500 text-sm">{item.position}</p>
@@ -122,10 +132,12 @@ const Testimonial = () => {
 
       {/* Second Carousel - Move Left */}
       <div
-        className="mt-14"
+        className="mt-6"
         style={{
-          transform: "translateX(-20px)",
+          transform: "translateX(-40px)", // Increased left shift
           transition: "transform 0.3s ease-in-out",
+          padding: "0 32px", // Added padding around the carousel
+
         }}
       >
         <Carousel
@@ -136,15 +148,22 @@ const Testimonial = () => {
           transitionDuration={500}
           showDots={true}
           removeArrowOnDeviceType={["tablet", "mobile"]}
+          arrows={false} // Disable arrows
+          
         >
-          {anotherSetOfTestimonials.map((item, index) => (
+          {reversedTestimonials.map((item, index) => (
             <div
               key={index}
               className="p-6 shadow-lg rounded-lg bg-white border border-gray-100"
+              style={{
+                margin: "20px", // Space between items
+                width: "100%", // Constant width
+                height: "auto", // Constant height
+              }}
             >
               <p className="text-gray-700 mb-6">{`"${item.text}"`}</p>
               <div className="flex items-center">
-                <div className="h-10 w-10 bg-blue-200 rounded-full flex-shrink-0"></div>
+                <div className="h-10 w-10 bg-[#8DBD4D] rounded-full flex-shrink-0"></div>
                 <div className="ml-4">
                   <h4 className="font-bold text-gray-800">{item.name}</h4>
                   <p className="text-gray-500 text-sm">{item.position}</p>
@@ -154,11 +173,13 @@ const Testimonial = () => {
           ))}
         </Carousel>
       </div>
-      <div className="text-center mt-12">
-        <button className="px-8 py-3 text-white bg-pink-500 rounded-lg shadow-lg hover:bg-pink-600">
+
+      {/* View More Button */}
+      {/* <div className="text-center mt-8">
+        <button className="px-8 py-3 text-white bg-[#D41958] rounded-lg shadow-lg hover:bg-pink-600">
           View More →
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };

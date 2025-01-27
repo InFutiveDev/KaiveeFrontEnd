@@ -43,15 +43,15 @@ const Facilities = () => {
 
   const styles = {
     section: {
-      padding: "50px 60px",
+      padding: "20px 20px",
       backgroundColor: "#ffffff",
       textAlign: "center",
     },
     title: {
-      fontSize: "26px",
+      fontSize: "32px",
+      font: "semibold",
       fontWeight: "bold",
-      marginBottom: "40px",
-      textalign: "left",
+      marginBottom: "40px",     
     },
     container: {
       display: "flex",
@@ -75,11 +75,13 @@ const Facilities = () => {
       borderRadius: "50%",
       objectFit: "cover",
       border: "2px solid #ddd",
+      alignItems: "center",
+      margin: "0px auto",
     },
     step: {
       position: "absolute",
-      top: "-10px",
-      right: "130px",
+      top: "5px",
+      right: "81px",
       backgroundColor: "#D41958",
       color: "#fff",
       borderRadius: "50%",
@@ -104,7 +106,7 @@ const Facilities = () => {
 
   return (
     <div style={styles.section}>
-      <h2 style={styles.title}>Facilities</h2>
+      <h2 className="font-semibold lg:text-[32px] text-xl font-source-pro text-left mb-2">Facilities</h2>
       <div style={styles.container}>
         {services.map((service, index) => (
           <div key={service.id} style={styles.item}>
@@ -115,7 +117,7 @@ const Facilities = () => {
                 style={styles.image}
               />
               {/* Add SVG after the image if not the last item */}
-              {index < services.length - 1 && (
+              {/* {index < services.length - 1 && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="200"
@@ -132,7 +134,7 @@ const Facilities = () => {
                   <polygon points="177,80 180,74 188,80" fill="navy" />
                   <polygon points="23,80 22,85 15,80" fill="navy" />
                 </svg>
-              )}
+              )} */}
               <div style={styles.step}>{`0${service.id}`}</div>
             </div>
             <h3 style={styles.titleText}>{service.title}</h3>

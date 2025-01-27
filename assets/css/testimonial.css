@@ -61,4 +61,6 @@
       transform: translateX(-100%);
     }
   }
-  
+  .carousel-item-padding {
+    margin: 0 10px; /* Adjust spacing between items */
+  }  

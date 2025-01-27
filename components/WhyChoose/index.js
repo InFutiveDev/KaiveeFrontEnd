@@ -26,7 +26,10 @@ const WhyChoose = ({ data }) => {
     border: "1px solid #e0e0e0",
     borderRadius: "8px",
     padding: "20px",
-    textAlign: "center",
+    display: "flex", // Flexbox for card layout
+    flexDirection: "column", // Stack icon above title/description
+    alignItems: "center", // Center align content horizontally
+    gap: "15px", // Space between elements (icon, title, description)
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
     transition: "transform 0.3s ease",
   };
@@ -34,13 +37,16 @@ const WhyChoose = ({ data }) => {
   const iconStyle = {
     fontSize: "2.5rem",
     color: "#007bff",
-    marginBottom: "15px",
+  };
+
+  const textContainerStyle = {
+    textAlign: "center", // Center text horizontally
   };
 
   const featureTitleStyle = {
     fontSize: "1.2rem",
     color: "#333",
-    marginBottom: "10px",
+    marginBottom: "5px",
   };
 
   const descriptionStyle = {
@@ -68,8 +74,10 @@ const WhyChoose = ({ data }) => {
                 />
               )}
             </div>
-            <h3 style={featureTitleStyle}>{item.title}</h3>
-            <p style={descriptionStyle}>{item.description}</p>
+            <div style={textContainerStyle}>
+              <h3 style={featureTitleStyle}>{item.title}</h3>
+              <p style={descriptionStyle}>{item.description}</p>
+            </div>
           </div>
         ))}
       </div>

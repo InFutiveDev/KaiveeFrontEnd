@@ -1,7 +1,7 @@
 import { memo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import bannerImage from "assets/images/home/banner.png"; // Replace with your actual banner image path
+import bannerImage from "assets/images/home/Screenshot 2025-01-27 at 5.01.10 PM.png"; // Replace with your actual banner image path
 import {
   FaStethoscope,
   FaSmile,
@@ -20,7 +20,7 @@ const Homebanner = () => {
   ];
 
   return (
-    <section className="bg-white  px-6 md:px-16">
+    <section className="bg-white   md:px-10">
       {/* Hero Section */}
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         {/* Left Section: Image */}
@@ -29,8 +29,8 @@ const Homebanner = () => {
             src={bannerImage}
             alt="Health Banner"
             className="rounded-lg"
-            width={500}
-            height={550}
+            width={550}
+            height={250}
           />
         </div>
 
@@ -44,13 +44,13 @@ const Homebanner = () => {
             Health – Accurate Tests, Fast Results.
           </h1>
 
-          <p className="mt-3 text-gray-600  md:text-lg">
+          <p className="mt-3 text-gray-600  md:text-[22px]">
             Book blood tests, full-body checkups, and health packages at the
             convenience of your home or nearest center.
           </p>
 
           {/* Buttons */}
-          <div className="mt-6 flex space-x-4">
+          <div className="mt-12 flex space-x-4">
             <Link href="/book-test">
               <button className="bg-[#D41958] text-white py-2 px-6 rounded-lg shadow-lg hover:bg-[#8DBD4D]">
                 Book a Test
@@ -64,7 +64,7 @@ const Homebanner = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="mt-6 flex space-x-6">
+          <div className="mt-10 flex space-x-6">
             <div className="text-center">
               <h2 className="text-28px font-bold text-gray-800">10k+</h2>
               <p className="text-16px text-gray-600 text-sm">Tests Available</p>

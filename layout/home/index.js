@@ -2,7 +2,7 @@
 import { memo, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import Laptop from "assets/images/home/Group 1261152534.png";
+import Laptop from "assets/images/home/Screenshot 2025-01-27 at 12.59.37 PM.png";
 
 import { GET_FEATURED_BY_ID, GET_TEST_BY_HABIT } from "redux/actions/test";
 
@@ -26,6 +26,12 @@ import { GET_ALL_HEALTHRISK } from "redux/actions/healthrisk";
 import { GET_ALL_HEALTH_PACKAGES } from "redux/actions/healthPackages";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import icon1 from "assets/images/home/banner/1.png";
+import icon2 from "assets/images/home/banner/2.png";
+import icon3 from "assets/images/home/banner/3.png";
+import icon4 from "assets/images/home/banner/4.png";
+import icon5 from "assets/images/home/banner/5.png";
+import icon6 from "assets/images/home/banner/6.png";
 
 const Homebanner = dynamic(() => import("./homeBanner"));
 const BookingCard = dynamic(() => import("./bookingCard"));
@@ -42,6 +48,8 @@ const HealthcareVideos = dynamic(() => import("./healthcareVideos"));
 const HealthBulletin = dynamic(() => import("./healthBulletin"));
 const AccreditationsAwards = dynamic(() => import("./accreditationsAwards"));
 const Testimonial = dynamic(() => import("./testimonial"));
+
+
 
 const HomeLayout = () => {
   const dispatch = useDispatch();
@@ -102,6 +110,15 @@ const HomeLayout = () => {
     dispatch(GET_ALL_HABITS());
     dispatch(GET_ALL_HEALTH_PACKAGES());
   }, [dispatch]);
+
+  const features = [
+    { icon: icon1, label: "Feature 1" },
+    { icon: icon2, label: "Feature 2" },
+    { icon: icon3, label: "Feature 3" },
+    { icon: icon4, label: "Feature 4" },
+    { icon: icon5, label: "Feature 5" },
+    { icon: icon6, label: "Feature 6" },
+  ];
   return (
     <>
       {loaderBanner ? (
@@ -124,11 +141,30 @@ const HomeLayout = () => {
               {` Welcome to Kaivee Healthcare. 📢 Book a Test Quick and Queue-Free! Now You Can Book Your Tests, Appointments, and Free Home Collection Online from City X-Ray. || 📢 Kaivee Healthcare Is Also Available On WhatsApp. To Book a Test, Download a Report, or Get Quick Customer Support Just By Sending "Hi" to 9999999999 || 💬 NABH Accreditated Radiological Services as Per Scope | NABL Accreditated Pathological Services as Per Scope`}
             </marquee>
           </div> */}
+          <div className="container">
+      <div className="py-4 mt-4 mb-1 bg-white bg-opacity-50">
+        <div className="container mx-auto grid grid-cols-3 md:grid-cols-6 gap-4 text-center">
+          {features.map((feature, index) => (
+            <div key={index} className="flex flex-col items-center space-y-2 ">
+              <Image
+                src={feature.icon}
+                alt={feature.label}
+                className="w-auto object-cover mx-auto"
+                style={{height:'72%'}}
+              />
+             
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
           <div className="bg-[#FAFAFA]">
           <div className="container bg-">
             <BookingCard packagesId={habits?.data[0]?._id || ""} />
           </div>
-          <div className="bg-[#FAFAFA]">
+          
+          
+          <div className="bg-[white]">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
             <div className="container">
               <div className=" pb-4 py-2">
@@ -139,6 +175,7 @@ const HomeLayout = () => {
             </div>
           </div>
           </div>
+          
           <div className="container">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
             <div className=" pb-0 lg:pb-4 py-2">
@@ -171,9 +208,9 @@ const HomeLayout = () => {
               </div>
             </div>
           </div>
-          <div className="container">
+          {/* <div className="container"> */}
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            <div className=" pb-0 lg:pb-8 py-2 lg:pt-8 pt-4">
+            {/* <div className=" pb-0 lg:pb-8 py-2 lg:pt-8 pt-4">
               <HealthRisks
                 altImageKey="home_image_altTag"
                 imageKey="healthRisk_image"
@@ -182,7 +219,7 @@ const HomeLayout = () => {
                 data={healthRisk?.healthRiskData || []}
               />
             </div>
-          </div>
+          </div> */}
           <div className="bg-[#FAFAFA]">
             <div className="container">
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
@@ -197,9 +234,9 @@ const HomeLayout = () => {
               </div>
             </div>
           </div>
-          <div className="container">
+          {/* <div className="container"> */}
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            <div className=" pb-0 lg:pb-8 py-2 pt-8">
+            {/* <div className=" pb-0 lg:pb-8 py-2 pt-8">
               <HealthRisks
                 altImageKey="home_image_altTag"
                 imageKey="home_image"
@@ -213,7 +250,7 @@ const HomeLayout = () => {
                 title={"Test by Modality / Department"}
               />
             </div>
-          </div>
+          </div> */}
           <div className="bg-[#FAFAFA]">
             <div className="container">
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
@@ -263,8 +300,8 @@ const HomeLayout = () => {
                         </span>
                       </p>
                     </div>
-                    <div className="bg-[#FCC42C] py-[40px] relative">
-                      <div className="lg:-ml-32">
+                    <div className="bg-[#8DBD4D] py-[40px] relative">
+                      <div className="lg:-ml-3rem">
                         <img
                           src={Laptop.src}
                           className="lg:mx-0 mx-auto"
@@ -286,44 +323,46 @@ const HomeLayout = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[#FAFAFA]">
+          
             <div className="container">
               {/* sm:mx-1 lg:mx-2 xl:mx-24 */}
               <div className=" pt-4 pb-2">
                 <Testimonial />
               </div>
             </div>
-          </div>
+          
+          <div className="bg-[#FAFAFA]">
           <div className="container">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
             <div className=" pt-4 pb-2">
               <HealthBulletin />
             </div>
           </div>
-          <div className="bg-[#FAFAFA]">
-            <div className="container">
+          </div>
+          {/* <div className="bg-[#FAFAFA]">
+            <div className="container"> */}
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-              <div className=" pt-4 pb-2">
+              {/* <div className=" pt-4 pb-2">
                 <AccreditationsAwards />
               </div>
             </div>
-          </div>
-          <div className="bg-[#F7F7FB] ">
+          </div> */}
+          {/* <div className="bg-[#F7F7FB] "> */}
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            <div className="container">
+            {/* <div className="container">
               <div className="  pt-4 pb-4">
                 <Media />
               </div>
             </div>
-          </div>
-          <div className="bg-[#F7F7FB] ">
-            <div className="container">
+          </div> */}
+          {/* <div className="bg-[#F7F7FB] ">
+            <div className="container"> */}
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-              <div className="  pt-4 pb-4">
+              {/* <div className="  pt-4 pb-4">
                 <PrintMedia />
               </div>
             </div>
-          </div>
+          </div> */}
           {/* <div>
             <div className="container  pt-4 pb-4">
               <div className="grid items-center lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4">
@@ -359,7 +398,7 @@ const HomeLayout = () => {
               </div>
             </div>
           </div> */}
-          <div>
+          {/* <div>
             <div className="py-[50px] md:py-[70px]">
               <div className="container mb-[50px]">
                 <p className="font-semibold pb-4 lg:text-[32px] text-lg font-source-pro">
@@ -370,7 +409,7 @@ const HomeLayout = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="bg-[#FAFAFA] ">
             <div className="container  pt-4 pb-4">
               <div>
@@ -721,18 +760,16 @@ const ArrowSvgYellow = () => {
 };
 
 const locationData = [
-  // {
-  //   mainTilte: "Naraina",
-  //   address:
-  //     "A 41/1, Shindi Colony, Naraina Vihar, Naraina, New Delhi, Delhi 110028",
-  //   serviceAvailable:
-  //     "MRI Scan, CT Scan, Digital X-Ray, Neurology Test, Dental Imaging, Cardiology, Nuclear Imaging, DEXA Scan (BMD), Digital Mammography, Pathology Laboratory, 3D/4D Ultrasound, CT Coronary Angiography",
-  //   contactNumber: "011-4725-2000",
-  //   timing: "07:30 AM to 11:00 PM",
-  //   email: "lft@cityxrayclinic.com",
-  //   iframe:
-  //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.113490520778!2d77.13685389999999!3d28.626360499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03301d2f8431%3A0x28390e9bc2d6e6b0!2sCity%20X-Ray%20%26%20Scan%20Clinic%20Pvt%20Ltd.!5e0!3m2!1sen!2sin!4v1692600460937!5m2!1sen!2sin",
-  // },
+  {
+    mainTilte: "Zen Health Services",
+    address:
+      "K4, Sector 116, Noida, Uttar Pradesh 201305",
+    serviceAvailable:
+      "MRI Scan, CT Scan, Digital X-Ray, Neurology Test",
+    contactNumber: "084483 38674",
+    timing: "24 hours open",
+    email: "zenhealthcare@gmail.com",
+    iframe:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1278876753586!2d77.3960429!3d28.5659222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef823d515f91%3A0xd4d4ace124409340!2sZen%20Health%20Services!5e0!3m2!1sen!2sin!4v1737958352844!5m2!1sen!2sin"  },
   // {
   //   mainTilte: "Tilak Nagar",
   //   address:
