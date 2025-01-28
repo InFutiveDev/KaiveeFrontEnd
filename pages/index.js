@@ -3,10 +3,10 @@ import { HomeLayout } from "../layout";
 
 const Home = () => {
   const metaData = {
-    title: "Kaivee Healthcare : Best Diagnostic Centre in Delhi-NCR",
+    title: "Kaivee Healthcare",
     description:
       "Kaivee Healthcare is one of the leading diagnostic centres in Delhi NCR. We provide numerous diagnostic tests in Delhi and are NABL & NABH approved.",
-    url: "/", // Replace with the canonical URL of the page
+    url: "http://localhost:3002/", // Replace with the canonical URL of the page
     image: "/",
   };
 

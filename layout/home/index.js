@@ -6,21 +6,22 @@ import Laptop from "assets/images/home/Screenshot 2025-01-27 at 12.59.37 PM.png"
 
 import { GET_FEATURED_BY_ID, GET_TEST_BY_HABIT } from "redux/actions/test";
 
+
 import { GET_ALL_BANNERS } from "redux/actions/banner";
 import SpinnerComponent from "components/spinner";
 
 import PatientImageOne from "assets/images/home/Ellipse 3984.png";
 import PatientImageTwo from "assets/images/home/drugs (3) 1.png";
 // why choose
-import img2 from "assets/images/Finalimg/Why Choose Us/10M+ Happy Patients.webp";
-import img3 from "assets/images/Finalimg/Why Choose Us/30 Years of Excellence in Diagnostic Health Care.webp";
-import img5 from "assets/images/Finalimg/Why Choose Us/Affordable.webp";
-import img6 from "assets/images/Finalimg/Why Choose Us/Fast & Accurate Results.webp";
-import img7 from "assets/images/Finalimg/Why Choose Us/Free Home Sample Collection.webp";
-import img9 from "assets/images/Finalimg/Why Choose Us/Large Menu of Tests Available.webp";
-import img8 from "assets/images/Finalimg/Why Choose Us/NABL & NABH Certified Centre.webp";
-import img1 from "assets/images/Finalimg/Why Choose Us/Team of Experienced Doctor & Staffs.webp";
-import img4 from "assets/images/Finalimg/Why Choose Us/World Class Technology.webp";
+import img1 from "assets/images/why choose us/1.png";
+import img2 from "assets/images/why choose us/2.png";
+import img3 from "assets/images/why choose us/3.png";
+import img4 from "assets/images/why choose us/4.png";
+import img5 from "assets/images/why choose us/5.png";
+import img6 from "assets/images/why choose us/6.png";
+import img7 from "assets/images/why choose us/7.png";
+import img8 from "assets/images/why choose us/8.png";
+// import img9 from "assets/images/Finalimg/Why Choose Us/World Class Technology.webp";
 import { GET_ALL_HABITS, GET_HABIT_BY_ID } from "redux/actions/habit";
 import { GET_ALL_HEALTHRISK } from "redux/actions/healthrisk";
 import { GET_ALL_HEALTH_PACKAGES } from "redux/actions/healthPackages";
@@ -208,9 +209,9 @@ const HomeLayout = () => {
               </div>
             </div>
           </div>
-          {/* <div className="container"> */}
+          <div className="container">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            {/* <div className=" pb-0 lg:pb-8 py-2 lg:pt-8 pt-4">
+            <div className=" pb-0 lg:pb-8 py-2 lg:pt-8 pt-4">
               <HealthRisks
                 altImageKey="home_image_altTag"
                 imageKey="healthRisk_image"
@@ -219,7 +220,7 @@ const HomeLayout = () => {
                 data={healthRisk?.healthRiskData || []}
               />
             </div>
-          </div> */}
+          </div>
           <div className="bg-[#FAFAFA]">
             <div className="container">
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
@@ -228,7 +229,7 @@ const HomeLayout = () => {
                   altImageKey="home_image_altTag"
                   imageKey="hebit_image"
                   queryString={"Habit"}
-                  title={"Test by Health Condition, Habit or Disease"}
+                  title={"Test by Habit/Condition"}
                   data={habits?.data?.length !== 0 ? habits?.data : []}
                 />
               </div>
@@ -262,25 +263,47 @@ const HomeLayout = () => {
           <div>
             <WhyChoose data={data} padding={"50px"} />
           </div>
-          <div className="bg-[#FAFAFA]">
-            <div className="container">
+          {/* <div className="bg-[#FAFAFA]">
+            <div className="container"> */}
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-              <div className=" pb-0 lg:pb-4 py-2 pt-4">
+              {/* <div className=" pb-0 lg:pb-4 py-2 pt-4">
                 <HealthcareVideos />
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="container">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
             <div className=" px-2 pb-0 lg:pb-4 py-2 pt-4">
-              <div>
+              {/* <div>
                 <p className="font-semibold lg:text-[32px] text-xl font-source-pro">
                   Why our Patient recommend us?
-                </p>
+                </p> */}
                 <div className="mt-[20px] md:mt-[32px]">
+                  
                   <div className="bg-[#F7F7FB] rounded-xl grid items-center lg:grid-cols-3 grid-cols-1">
+                  {/* <div className="bg-[#8DBD4D] py-[40px] relative"> */}
+                      <div className="lg:-ml-3rem">
+                        <img
+                          src={Laptop.src}
+                          className="lg:mx-0 mx-auto"
+                          alt="Image of a laptop"
+                        />
+                      </div>
+                      {/* <div className="absolute top-2 right-3">
+                        <img
+                          src={PatientImageTwo.src}
+                          alt="Image of a Tablet"
+                        />
+                      </div>
+                      <div className="absolute bottom-0 right-0">
+                        <img src={PatientImageOne.src} alt="Image of Circle" />
+                      </div> */}
+                    {/* </div> */}
                     <div className="col-span-2">
+                    <p className="lg:ml-[42px]  font-semibold lg:text-[32px] text-xl font-source-pro">
+                  Why our Patient recommend us?
+                </p>
                       <p className="lg:ml-[42px]  text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
                         {`Our diagnostic center is consistently recommended by our patients for several compelling reasons. Firstly, we prioritize accuracy and reliability in our diagnostic tests, ensuring that patients receive the most precise results. Secondly, our team of experienced and compassionate healthcare professionals provides personalized care, addressing patients' concerns and offering guidance throughout their journey. Additionally, our state-of-the-art facilities and cutting-edge technology guarantee top-notch healthcare services. Furthermore, we maintain a patient-centric approach, minimizing wait times and streamlining the entire process. Lastly, our commitment to confidentiality and a comfortable `}
                         {!readMore ? (
@@ -300,27 +323,10 @@ const HomeLayout = () => {
                         </span>
                       </p>
                     </div>
-                    <div className="bg-[#8DBD4D] py-[40px] relative">
-                      <div className="lg:-ml-3rem">
-                        <img
-                          src={Laptop.src}
-                          className="lg:mx-0 mx-auto"
-                          alt="Image of a laptop"
-                        />
-                      </div>
-                      <div className="absolute top-2 right-3">
-                        <img
-                          src={PatientImageTwo.src}
-                          alt="Image of a Tablet"
-                        />
-                      </div>
-                      <div className="absolute bottom-0 right-0">
-                        <img src={PatientImageOne.src} alt="Image of Circle" />
-                      </div>
-                    </div>
+                    
                   </div>
                 </div>
-              </div>
+              {/* </div> */}
             </div>
           </div>
           
@@ -688,52 +694,52 @@ const ourServices = [
 ];
 const data = [
   {
-    id: 1,
-    title: "NABL Accredited Labs",
-    description: "Follows all protocols as per NABL & CAP Guidelines",
-    icon: "🏅",
+    // id: 1,
+    // title: "NABL Accredited Labs",
+    // description: "Follows all protocols as per NABL & CAP Guidelines",
+    icon: <Image src={img1} alt="NABL Accredited Icon" />,
   },
   {
     id: 2,
     title: "Trusted by Leading Doctors & Hospitals",
     description: "Qualified Pathologist at each lab",
-    icon: "👨‍⚕️",
+    icon: <Image src={img2} alt="NABL Accredited Icon" />,
   },
   {
     id: 3,
     title: "Shortest Reporting Time",
     description: "Ownership and Innovation",
-    icon: "⏱️",
+    icon: <Image src={img3} alt="NABL Accredited Icon" />,
   },
   {
     id: 4,
     title: "Accurate Test Reports",
     description: "Quality checks by Quality Assurance Team",
-    icon: "🧪",
+    icon: <Image src={img4} alt="NABL Accredited Icon" />,
   },
   {
     id: 5,
     title: "1 Crore+ Satisfied Customers",
     description: "Making superior quality diagnostics services",
-    icon: "😊",
+    icon: <Image src={img5} alt="NABL Accredited Icon" />,
   },
   {
     id: 6,
     title: "100+ Labs",
     description: "Large Network Labs in all the major cities",
-    icon: "🏢",
+    icon: <Image src={img6} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
     title: "3000+ Collection Centres",
     description: "Expanding our reach and counting",
-    icon: "📍",
+    icon: <Image src={img7} alt="NABL Accredited Icon" />,
   },
   {
     id: 8,
     title: "Scientific Orientation",
     description: "MD Doctors in Every Lab & State-of-the-Art Machines",
-    icon: "🔬",
+    icon: <Image src={img8} alt="NABL Accredited Icon" />,
   },
 ];
 export default memo(HomeLayout);

@@ -242,7 +242,7 @@ const Bottombar = () => {
                     href="/health-packages"
                     className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${
                       asPath?.includes("/health-packages") &&
-                      "active text-[#D41958] border-b-2 border-[#f7a70b]"
+                      "active text-[#D41958] border-b-2 "
                     }`}
                   >
                     Health Packages
@@ -261,18 +261,7 @@ const Bottombar = () => {
                   Book a Test
                 </Link>
               </NavItem>
-              <NavItem>
-                <Link
-                  prefetch
-                  onClick={closeMenu}
-                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${
-                    asPath == "/covid-19-pcr-h2" && "active"
-                  }`}
-                  href="/"
-                >
-                  Mobile App
-                </Link>
-              </NavItem>
+             
               {/* <NavItem>
                 <UncontrolledDropdown className="hover-menu">
                   <div

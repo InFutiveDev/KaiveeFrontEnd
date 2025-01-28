@@ -16,7 +16,7 @@ const WhyChoose = ({ data }) => {
   const gridStyle = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: "20px",
+    gap: "40px",
     maxWidth: "1200px",
     margin: "0 auto",
   };
@@ -25,11 +25,11 @@ const WhyChoose = ({ data }) => {
     backgroundColor: "#fff",
     border: "1px solid #e0e0e0",
     borderRadius: "8px",
-    padding: "20px",
+    // padding: "20px",
     display: "flex", // Flexbox for card layout
     flexDirection: "column", // Stack icon above title/description
     alignItems: "center", // Center align content horizontally
-    gap: "15px", // Space between elements (icon, title, description)
+    gap: "22px", // Space between elements (icon, title, description)
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
     transition: "transform 0.3s ease",
   };
@@ -56,7 +56,7 @@ const WhyChoose = ({ data }) => {
 
   return (
     <section style={sectionStyle}>
-      <h2 style={titleStyle}>Why Choose Us</h2>
+      <h2 style={titleStyle}>Why <span style={{ color: "#D41958" }}>Kaivee</span> HealthCare</h2>
       <div style={gridStyle}>
         {data?.map((item, index) => (
           <div
@@ -70,14 +70,14 @@ const WhyChoose = ({ data }) => {
                 <img
                   src={item.image?.src}
                   alt={`Feature ${index}`}
-                  style={{ width: "50px", height: "50px", objectFit: "cover" }}
+                  style={{ width: "80px", height: "80px", objectFit: "cover" }}
                 />
               )}
             </div>
-            <div style={textContainerStyle}>
+            {/* <div style={textContainerStyle}>
               <h3 style={featureTitleStyle}>{item.title}</h3>
               <p style={descriptionStyle}>{item.description}</p>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
