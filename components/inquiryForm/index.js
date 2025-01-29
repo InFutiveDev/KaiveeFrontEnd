@@ -167,7 +167,7 @@ const InquiryForm = ({
             type="submit"
             onClick={handleSubmit}
             id={"btnInquiry"}
-            className="bg-orange text-white rounded px-3 py-1"
+            className="bg-[#D41958] text-white rounded px-3 py-1"
           >
             {loading ? "Processing..." : "Submit"}
           </button>

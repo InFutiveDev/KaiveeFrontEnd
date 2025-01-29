@@ -7,15 +7,15 @@ import React from "react";
 import InquiryForm from "components/inquiryForm";
 import WhyChoose from "components/WhyChoose";
 // why choose
-import ImageTwo from "assets/images/Finalimg/Why Choose Us/10M+ Happy Patients.webp";
-import ImageThree from "assets/images/Finalimg/Why Choose Us/30 Years of Excellence in Diagnostic Health Care.webp";
-import ImageFive from "assets/images/Finalimg/Why Choose Us/Affordable.webp";
-import ImageSix from "assets/images/Finalimg/Why Choose Us/Fast & Accurate Results.webp";
-import ImageSeven from "assets/images/Finalimg/Why Choose Us/Free Home Sample Collection.webp";
-import ImageNine from "assets/images/Finalimg/Why Choose Us/Large Menu of Tests Available.webp";
-import ImageEight from "assets/images/Finalimg/Why Choose Us/NABL & NABH Certified Centre.webp";
-import ImageOne from "assets/images/Finalimg/Why Choose Us/Team of Experienced Doctor & Staffs.webp";
-import ImageFour from "assets/images/Finalimg/Why Choose Us/World Class Technology.webp";
+import img11 from "assets/images/why choose us/1.png";
+import img22 from "assets/images/why choose us/2.png";
+import img33 from "assets/images/why choose us/3.png";
+import img44 from "assets/images/why choose us/4.png";
+import img55 from "assets/images/why choose us/5.png";
+import img66 from "assets/images/why choose us/6.png";
+import img77 from "assets/images/why choose us/7.png";
+import img88 from "assets/images/why choose us/8.png";
+import Image from "next/image";
 // import BreadCrumb from "components/breadcrumb";
 import LazyLoad from "react-lazyload";
 import Link from "next/link";
@@ -193,40 +193,52 @@ const FreeHomeSampleCollectionLayout = () => {
 };
 const data = [
   {
-    title: "Team of Experienced <br /> Doctors & Staffs",
-    image: ImageOne,
+    // id: 1,
+    // title: "NABL Accredited Labs",
+    // description: "Follows all protocols as per NABL & CAP Guidelines",
+    icon: <Image src={img11} alt="NABL Accredited Icon" />,
   },
   {
-    title: "10M+ Happy Patients",
-    image: ImageTwo,
+    id: 2,
+    title: "Trusted by Leading Doctors & Hospitals",
+    description: "Qualified Pathologist at each lab",
+    icon: <Image src={img22} alt="NABL Accredited Icon" />,
   },
   {
-    title: "31 Year of Excellence in <br /> Diagnostic Healthcare",
-    image: ImageThree,
+    id: 3,
+    title: "Shortest Reporting Time",
+    description: "Ownership and Innovation",
+    icon: <Image src={img33} alt="NABL Accredited Icon" />,
   },
   {
-    title: "World Class Technology",
-    image: ImageFour,
+    id: 4,
+    title: "Accurate Test Reports",
+    description: "Quality checks by Quality Assurance Team",
+    icon: <Image src={img44} alt="NABL Accredited Icon" />,
   },
   {
-    title: "Fast & Accurate Results",
-    image: ImageSix,
+    id: 5,
+    title: "1 Crore+ Satisfied Customers",
+    description: "Making superior quality diagnostics services",
+    icon: <Image src={img55} alt="NABL Accredited Icon" />,
   },
   {
-    title: "Affordable",
-    image: ImageFive,
+    id: 6,
+    title: "100+ Labs",
+    description: "Large Network Labs in all the major cities",
+    icon: <Image src={img66} alt="NABL Accredited Icon" />,
   },
   {
-    title: "Free Home Sample <br /> Collection",
-    image: ImageSeven,
+    id: 7,
+    title: "3000+ Collection Centres",
+    description: "Expanding our reach and counting",
+    icon: <Image src={img77} alt="NABL Accredited Icon" />,
   },
   {
-    title: "NABL & NABH Certified <br /> Centre",
-    image: ImageEight,
-  },
-  {
-    title: "Large Menu of Tests <br /> Available ",
-    image: ImageNine,
+    id: 8,
+    title: "Scientific Orientation",
+    description: "MD Doctors in Every Lab & State-of-the-Art Machines",
+    icon: <Image src={img88} alt="NABL Accredited Icon" />,
   },
 ];
 export default FreeHomeSampleCollectionLayout;

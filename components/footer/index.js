@@ -222,10 +222,10 @@ const Footer = () => {
               <div>
                 <div className="font-bold text-base">OTHER LINKS</div>
                 <ul className="text-[14px] mt-[12px] flex flex-col lg:gap-3 gap-1">
-                  <li>
+                  {/* <li> */}
                     {/* <Link href="/covid-19-rt-pcr-test">Covid 19</Link> */}
-                    <Link href="/covid-19-pcr-h2">Covid 19</Link>
-                  </li>
+                    {/* <Link href="/covid-19-pcr-h2">Covid 19</Link>
+                  </li> */}
                   {/* <li>
                     <Link href="/covid-19/COVID-19-vaccination">
                       COVID-19 Vaccination
