@@ -137,7 +137,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                       id="mobile"
                       disabled={otpsend}
                       required
-                      className="border-b-2 border-[#FCC42C] placeholder-[#FCC42C] px-[16px] w-full py-[14px] focus:outline-none !text-base font-poppins"
+                      className="border-b-2 border-[#8DBD4D] placeholder-[#8DBD4D] px-[16px] w-full py-[14px] focus:outline-none !text-base font-poppins"
                       placeholder="Enter Mobile Number"
                       onChange={mobilenumberchange}
                     />
@@ -149,7 +149,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                 <div className="mt-[25px]">
                   <button
                     onClick={sendotp}
-                    className=" bg-[#FCC42C] text-white rounded-xl px-[30px] py-[12px] text-base font-poppins"
+                    className=" bg-[#D41958] text-white rounded-xl px-[30px] py-[12px] text-base font-poppins"
                   >
                     Proceed
                   </button>
@@ -178,7 +178,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                       id="mobile"
                       value={mobilenumber}
                       disabled={otpsend}
-                      className="border-b-2 border-[#FCC42C] placeholder-[#FCC42C] px-[16px] w-full py-[14px] focus:outline-none !text-base font-poppins"
+                      className="border-b-2 border-[#8DBD4D] placeholder-[#8DBD4D] px-[16px] w-full py-[14px] focus:outline-none !text-base font-poppins"
                       placeholder="Enter Mobile Number"
                       required
                     />
@@ -186,7 +186,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                       className="absolute right-3 top-2 cursor-pointer"
                       onClick={() => handleEditNumber()}
                     >
-                      <CiEdit className="text-[#ffc936] font-semibold text-3xl" />
+                      <CiEdit className="text-[#8DBD4D] font-semibold text-3xl" />
                     </div>
                   </div>
                   {error ? (
@@ -212,7 +212,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                       isInputNum={true}
                       inputType="number"
                       inputStyle={
-                        "!w-[2rem] border-b-2 mx-1 border-[#FCC42C] otp-input test"
+                        "!w-[2rem] border-b-2 mx-1 border-[#8DBD4D] otp-input test"
                       }
                       renderSeparator={<span> </span>}
                       renderInput={(props) => (

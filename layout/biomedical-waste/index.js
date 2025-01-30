@@ -165,7 +165,7 @@ const BiomedicalWasteLayout = () => {
                   <div>
                     <button
                       onClick={() => handleFilter()}
-                      className=" bg-orange text-white rounded px-[32px] py-[8px] text-[16px] font-semibold"
+                      className=" bg-[#D41958] text-white rounded px-[32px] py-[8px] text-[16px] font-semibold"
                     >
                       Submit
                     </button>
@@ -185,7 +185,7 @@ const BiomedicalWasteLayout = () => {
 
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-[42px]">
             <table className="w-full text-sm text-left">
-              <thead className="text-xs text-black uppercase bg-orange">
+              <thead className="text-xs text-black uppercase bg-[#8DBD4D]">
                 <tr className="Aign-text py-2 TableHeading1">
                   <th className="lg:px-6 lg:py-3 px-2 py-2 whitespace-nowrap font-normal">
                     SR.No

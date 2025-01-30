@@ -429,7 +429,7 @@ const HomeLayout = () => {
               <div className="mt-[32px] grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4">
                 <div className="flex flex-col gap-2">
                   <div>
-                    <div className="flex items-center justify-between rounded-t-lg  px-[24px] py-[16px] bg-[#FDEDCE]">
+                    <div className="flex items-center justify-between rounded-t-lg  px-[24px] py-[16px] bg-white">
                       <select
                         className="w-full bg-transparent text-[18px] font-semibold font-source-pro text-[#71717A] !font-source-pro"
                         value={locationActive}
@@ -755,11 +755,11 @@ const ArrowSvgYellow = () => {
     >
       <path
         d="M2.25832 14.9568L3.70832 12.0568C4.10832 11.2485 4.10832 10.3068 3.70832 9.49846L2.25832 6.59012C1.01665 4.10679 3.69165 1.48179 6.14999 2.78179L7.43332 3.46512C7.61665 3.55679 7.75832 3.70679 7.83332 3.89012L12.575 14.4318C12.7667 14.8651 12.5917 15.3735 12.175 15.5901L6.14165 18.7651C3.69165 20.0651 1.01665 17.4401 2.25832 14.9568Z"
-        fill="#FCC42C"
+        fill="#D41958"
       />
       <path
         d="M13.5918 13.7738L10.4834 6.87381C10.1334 6.09881 10.9668 5.31548 11.7168 5.71548L16.5251 8.24881C18.5668 9.32381 18.5668 12.2405 16.5251 13.3155L14.8251 14.2071C14.3668 14.4405 13.8084 14.2488 13.5918 13.7738Z"
-        fill="#FCC42C"
+        fill="#D41958"
       />
     </svg>
   );
