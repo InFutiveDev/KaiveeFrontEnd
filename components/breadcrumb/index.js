@@ -21,7 +21,7 @@ const BreadCrumb = ({ breadcrumblist, active }) => {
                   </li>
                 );
               })}
-              <li className="breadcrumb-item !text-orange font-source-pro">
+              <li className="breadcrumb-item !text-[#D41958] font-source-pro">
                 <Link href={router?.asPath} className="font-source-pro">
                   <span className="font-source-pro">{active}</span>{" "}
                 </Link>

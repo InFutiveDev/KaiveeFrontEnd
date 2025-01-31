@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
                     <TopNavbar />
                 </section>
                 <Navbar /> */}
-        <div className="bg-[#fcc42c]">
+        <div className="bg-[#8DBD4D]">
           <div className="container">
             <section className="d-flex text-lg py-1">
               <div>Home</div> <span className="ml-2">{">"}</span>
@@ -50,7 +50,7 @@ const PrivacyPolicy = () => {
         </div>
         <div className="container mt-3">
           <div>
-            <h1 className="!text-[26px] font-medium text-[#fcc42c]">
+            <h1 className="!text-[26px] font-medium text-[#D41958]">
               Privacy Policy
             </h1>
           </div>

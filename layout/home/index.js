@@ -272,14 +272,11 @@ const HomeLayout = () => {
             </div>
           </div> */}
 
-          <div className="container">
+          <div className="w-full">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
             <div className=" px-2 pb-0 lg:pb-4 py-2 pt-4">
-              {/* <div>
-                <p className="font-semibold lg:text-[32px] text-xl font-source-pro">
-                  Why our Patient recommend us?
-                </p> */}
-                <div className="mt-[20px] md:mt-[32px]">
+              
+                {/* <div className="mt-[20px] md:mt-[32px]"> */}
                   
                   <div className="bg-[#F7F7FB] rounded-xl grid items-center lg:grid-cols-3 grid-cols-1">
                   {/* <div className="bg-[#8DBD4D] py-[40px] relative"> */}
@@ -290,16 +287,7 @@ const HomeLayout = () => {
                           alt="Image of a laptop"
                         />
                       </div>
-                      {/* <div className="absolute top-2 right-3">
-                        <img
-                          src={PatientImageTwo.src}
-                          alt="Image of a Tablet"
-                        />
-                      </div>
-                      <div className="absolute bottom-0 right-0">
-                        <img src={PatientImageOne.src} alt="Image of Circle" />
-                      </div> */}
-                    {/* </div> */}
+                      
                     <div className="col-span-2">
                     <p className="lg:ml-[42px]  font-semibold lg:text-[32px] text-xl font-source-pro">
                   Why our Patient recommend us?
@@ -325,7 +313,7 @@ const HomeLayout = () => {
                     </div>
                     
                   </div>
-                </div>
+                {/* </div> */}
               {/* </div> */}
             </div>
           </div>
@@ -416,22 +404,22 @@ const HomeLayout = () => {
               </div>
             </div>
           </div> */}
-          <div className="bg-[#FAFAFA] ">
-            <div className="container  pt-4 pb-4">
+          <div className="bg-[#FAFAFA] py-6 ">
+            <div className="container  mx-auto px-4">
               <div>
-                <p className="font-semibold lg:text-[32px] text-lg pb-[6px] font-source-pro">
+                <p className="font-semibold lg:text-[32px] text-lg pb-2 font-source-pro">
                   Location
                 </p>
                 <span className="text-secondary text-[18px]">
                   Select Your Nearest Location
                 </span>
               </div>
-              <div className="mt-[32px] grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4">
+              <div className="mt-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4">
                 <div className="flex flex-col gap-2">
                   <div>
-                    <div className="flex items-center justify-between rounded-t-lg  px-[24px] py-[16px] bg-white">
+                    <div className="flex items-center justify-between rounded-t-lg px-6 py-4 bg-white border border-gray-200">
                       <select
-                        className="w-full bg-transparent text-[18px] font-semibold font-source-pro text-[#71717A] !font-source-pro"
+                        className="w-full bg-transparent text-[18px] font-semibold font-source-pro text-[#71717A] outline-none"
                         value={locationActive}
                         onChange={(e) => handleLocationActive(e.target.value)}
                       >
@@ -442,61 +430,61 @@ const HomeLayout = () => {
                         ))}
                       </select>
                     </div>
-                    <div className="rounded-lg bg-white p-3 lg:p-[24px]">
-                      <div className="form-group">
+                    <div className="rounded-lg bg-white p-6 border border-gray-200 shadow-sm">
+                      <div className="mb-4">
                         <label
-                          htmlFor="organizationName"
+                          // htmlFor="organizationName"
                           className="font-medium text-base lg:text-[18px] "
                         >
                           Address
                         </label>
-                        <div className="mt-[6px] text-sm lg:text-[16px] text-gray-800">
+                        <div className="mt-2 text-sm lg:text-[16px] text-gray-800 p-3 bg-gray-100 rounded-md">
                           {locationData[locationActive - 1]?.address}
                         </div>
                       </div>
-                      <div className="form-group">
+                      <div className="mb-4">
                         <label
-                          htmlFor="organizationName"
+                          // htmlFor="organizationName"
                           className="font-medium text-base lg:text-[18px]"
                         >
                           Service Available
                         </label>
-                        <div className="mt-[6px] text-sm lg:text-[16px] text-gray-800">
+                        <div className="mt-2 text-sm lg:text-[16px] text-gray-800 p-3 bg-gray-100 rounded-md">
                           {locationData[locationActive - 1]?.serviceAvailable}
                         </div>
                       </div>
                       <div className="grid gap-4 grid-cols-2 ">
-                        <div className="form-group">
+                        <div>
                           <label
-                            htmlFor="organizationName"
+                            // htmlFor="organizationName"
                             className="font-medium text-base lg:text-[18px]"
                           >
                             Contact Number{" "}
                           </label>
-                          <div className="mt-[6px] text-sm lg:text-[16px] text-gray-800">
+                          <div className="mt-2 text-sm lg:text-[16px] text-gray-800 p-3 bg-gray-100 rounded-md">
                             {locationData[locationActive - 1]?.contactNumber}
                           </div>
                         </div>
-                        <div className="form-group">
+                        <div>
                           <label
-                            htmlFor="organizationName"
+                            // htmlFor="organizationName"
                             className="font-medium text-base lg:text-[18px]"
                           >
                             Timing
                           </label>
-                          <div className="mt-[6px] text-sm lg:text-[16px] text-gray-800">
+                          <div className="mt-2 text-sm lg:text-[16px] text-gray-800 p-3 bg-gray-100 rounded-md">
                             {locationData[locationActive - 1]?.timing}
                           </div>
                         </div>
                       </div>
-                      <div className="form-group">
+                      <div className="mt-4">
                         <label
-                          htmlFor="organizationName"
+                          // htmlFor="organizationName"
                           className="font-medium text-base lg:text-[18px]"
                         >
                           Email
                         </label>
-                        <div className="mt-[6px] text-sm lg:text-[16px] text-gray-800">
+                        <div className="mt-2 text-sm lg:text-[16px] text-gray-800 p-3 bg-gray-100 rounded-md">
                           {locationData[locationActive - 1]?.email}
                         </div>
                       </div>

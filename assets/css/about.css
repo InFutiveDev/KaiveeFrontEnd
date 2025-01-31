@@ -96,7 +96,7 @@
 }
 
 .facilities-enquiry {
-    background: linear-gradient(180deg, rgba(171, 218, 164, 0.50) 0%, rgba(255, 227, 123, 0.50) 98.23%);
+    background: rgb(199, 229, 247);
 }
 
 
@@ -154,7 +154,7 @@ background: linear-gradient(174deg, #FFD176 20.26%, #99E59C 147.12%); */
 }
 
 .bio-select-div {
-    background: linear-gradient(180deg, rgba(171, 218, 164, 0.80) 0%, rgba(255, 227, 123, 0.80) 98.23%);
+    background: rgb(142 189 77);
 }
 
 .banner_slider_wrap_clinical {
@@ -178,7 +178,7 @@ background: linear-gradient(174deg, #FFD176 20.26%, #99E59C 147.12%); */
 }
 
 .footer-bg {
-    background: linear-gradient(90deg, #FAEED2 0%, #EFF0E3 100%);
+    background: rgb(250, 249, 248);
 }
 
 input[type=checkbox] {

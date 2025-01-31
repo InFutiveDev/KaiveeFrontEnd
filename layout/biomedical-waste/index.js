@@ -94,89 +94,59 @@ const BiomedicalWasteLayout = () => {
           <BiomedicalWasteBanner />
         </div>
       </section>
-      <div className="container py-[70px]">
-        <h1 className="lg: text-[26px] text-black font-semibold font-source-pro ">
-          Select Choose Month and Year to View the Data - Biomedical Waste
-        </h1>
-        <div className="mt-[12px] rounded-2xl p-[24px] grid lg:grid-cols-2 grid-cols-1  gap-3 bio-select-div">
-          <div>
-            <div className="form-group">
-              <label
-                htmlFor="organizationName"
-                className="font-medium text-[16px]"
-              >
-                Month
-              </label>
-              <div className="mt-[6px]">
-                <select
-                  onChange={(e) => handleMonth(e)}
-                  value={month}
-                  className="border rounded-lg px-[16px] w-full py-[14px] focus:outline-none text-[12px] font-poppins font-normal  "
-                  //   placeholder="Select City"
-                >
-                  <option
-                    value=""
-                    className="text-[14px] font-normal font-source-pro"
-                  >
-                    Select Month
-                  </option>
-                  {monthsData.map((item, index) => (
-                    <option
-                      key={index}
-                      value={item}
-                      className="text-[14px] font-normal font-source-pro"
-                    >
-                      {item}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="">
-              <div className="form-group w-full">
-                <label
-                  htmlFor="organizationName"
-                  className="font-medium text-[16px]"
-                >
-                  Year
-                </label>
-                <div className="mt-[6px] lg:flex gap-3 ">
-                  <select
-                    onChange={(e) => handleYear(e)}
-                    className="border rounded-lg px-[16px] w-full py-[14px] focus:outline-none text-[12px]  lg:mb-0 md:mb-3  sm:mb-3 font-poppins font-normal"
-                    value={year}
-                    //   placeholder="Select City"
-                  >
-                    <option className="font-source-pro font-normal text-[14px]">
-                      Select year
-                    </option>
-                    {yearData.map((item, index) => (
-                      <option
-                        key={index}
-                        value={item}
-                        className="font-source-pro font-normal text-[14px]"
-                      >
-                        {item}
-                      </option>
-                    ))}
-                  </select>
-                  <div>
-                    <button
-                      onClick={() => handleFilter()}
-                      className=" bg-[#D41958] text-white rounded px-[32px] py-[8px] text-[16px] font-semibold"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FAFAFA]">
+      <div className="w-full bg-pink-50">
+  <h1 className="text-2xl font-semibold text-black font-source-pro text-center">
+    Select Month and Year to View Biomedical Waste Data
+  </h1>
+
+  <div className="mt-6 bg-white shadow-lg rounded-xl p-6 grid lg:grid-cols-2 gap-6">
+    {/* Month Selection */}
+    <div className="flex flex-col">
+      <label className="font-medium text-lg mb-2">Month</label>
+      <select
+        onChange={handleMonth}
+        value={month}
+        className="border border-gray-300 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-[#D41958] transition-all"
+      >
+        <option value="">Select Month</option>
+        {monthsData.map((item, index) => (
+          <option key={index} value={item}>
+            {item}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    {/* Year Selection */}
+    <div className="flex flex-col">
+      <label className="font-medium text-lg mb-2">Year</label>
+      <select
+        onChange={handleYear}
+        value={year}
+        className="border border-gray-300 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-[#D41958] transition-all"
+      >
+        <option value="">Select Year</option>
+        {yearData.map((item, index) => (
+          <option key={index} value={item}>
+            {item}
+          </option>
+        ))}
+      </select>
+    </div>
+  </div>
+
+  {/* Submit Button in Second Row */}
+  <div className="mt-6 flex justify-center">
+    <button
+      onClick={handleFilter}
+      className="bg-[#D41958] hover:bg-[#b31548] text-white rounded-lg px-6 py-3 font-medium transition-all"
+    >
+      Submit
+    </button>
+  </div>
+</div>
+
+      <div className="bg-white">
         <div className="container py-[70px]">
           <h2 className="text-[24px] text-black font-source-pro font-semibold ">
             Monthly Breakdown of Biomedical Waste Data of All Our Centers for

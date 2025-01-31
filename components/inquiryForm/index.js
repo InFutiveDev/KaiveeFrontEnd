@@ -73,7 +73,7 @@ const InquiryForm = ({
             <div className="flex justify-center gap-x-2 flex-nowrap items-center">
               <FacilitesBooksSvg />
               <p className="text-[#3F3F46]  xl:text-xl lg:text-[18px] md:text-[18px] text-[14px] font-bold font-source-pro">
-                Need help in Booking a Test?
+              Connect with Our Health Experts
               </p>
             </div>
           </div>
@@ -83,12 +83,12 @@ const InquiryForm = ({
             htmlFor=""
             className="col-form-label md:text-[16px] text-[14px]"
           >
-            Name *
+           
           </label>
           <input
             value={payload?.patient_name}
             type="text"
-            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px] shadow-md"
             name="patient_name"
             id="patient_name"
             placeholder="Your name"
@@ -103,12 +103,12 @@ const InquiryForm = ({
                 htmlFor=""
                 className="col-form-label md:text-[16px] text-[14px]"
               >
-                Email
+                
               </label>
               <input
                 value={payload?.patient_email}
                 type="text"
-                className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+                className="form-control rounded placeholder:font-[300] placeholder:text-[14px] shadow-md"
                 name="patient_email"
                 id="patient_email"
                 placeholder="Your email"
@@ -125,12 +125,12 @@ const InquiryForm = ({
             htmlFor=""
             className="col-form-label md:text-[16px] text-[14px]"
           >
-            Phone *
+            
           </label>
           <input
             value={payload?.mobile_number}
             type="text"
-            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px] shadow-md"
             name="mobile_number"
             maxLength="10"
             placeholder="Phone"
@@ -147,12 +147,12 @@ const InquiryForm = ({
             htmlFor=""
             className="col-form-label md:text-[16px] text-[14px]"
           >
-            Message *
+            
           </label>
           <textarea
             value={payload?.message}
             type="text"
-            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px] shadow-md"
             name="message"
             id="message"
             placeholder="Message"

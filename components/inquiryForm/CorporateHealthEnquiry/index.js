@@ -71,44 +71,38 @@ const CorporateHealthEnquiry = ({ hideUX = false, leads_source = "" }) => {
             <div className="flex justify-center gap-x-2 flex-nowrap items-center">
               <FacilitesBooksSvg />
               <p className="text-[#3F3F46]  xl:text-xl lg:text-[18px] md:text-[18px] text-[14px] font-bold font-source-pro">
-                Get In Touch with Our Health Expert
+              Let's Improve Workplace Well-being Together
               </p>
             </div>
           </div>
         )}
         <div className="col-md-12 form-group mb-2">
-          <label
-            htmlFor=""
-            className="col-form-label md:text-[16px] text-[14px]"
-          >
-            Your Name *
-          </label>
           <input
             value={payload?.your_name}
             type="text"
-            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px] shadow-md"
             name="your_name"
             id="your_name"
-            placeholder="Your name"
+            placeholder="Your name *"
             onChange={handleChange}
           />
           {errorKeyName === "your_name" ? (
             <p className="text-red-500 text-sm">Please Enter a your name</p>
           ) : null}
-
           <label
             htmlFor=""
             className="col-form-label md:text-[16px] text-[14px]"
           >
-            Company Name *
+           
           </label>
+
           <input
             value={payload?.company_name}
             type="text"
-            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px] shadow-md"
             name="company_name"
             id="company_name"
-            placeholder="Company Name"
+            placeholder="Company Name *"
             onChange={handleChange}
           />
           {errorKeyName === "company_name" ? (
@@ -116,39 +110,40 @@ const CorporateHealthEnquiry = ({ hideUX = false, leads_source = "" }) => {
           ) : null}
 
           <div>
-            <label
-              htmlFor=""
-              className="col-form-label md:text-[16px] text-[14px]"
-            >
-              Email *
-            </label>
+          <label
+            htmlFor=""
+            className="col-form-label md:text-[16px] text-[14px]"
+          >
+           
+          </label>
             <input
               value={payload?.your_email}
               type="email"
-              className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+              className="form-control rounded placeholder:font-[300] placeholder:text-[14px] shadow-md"
               name="your_email"
               id="your_email"
-              placeholder="Your email"
+              placeholder="Email *"
               onChange={handleChange}
             />
             {errorKeyName === "your_email" ? (
               <p className="text-red-500 text-sm">Please Enter a valid Email</p>
             ) : null}
           </div>
-
+          
+          <div>
           <label
             htmlFor=""
             className="col-form-label md:text-[16px] text-[14px]"
           >
-            Phone *
+           
           </label>
           <input
             value={payload?.mobile_number}
             type="text"
-            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px] shadow-md"
             name="mobile_number"
             maxLength="10"
-            placeholder="Phone"
+            placeholder="Phone *"
             onChange={(e) => {
               if (/^[0-9\s]*$/.test(e.target?.value)) {
                 handleChange(e);
@@ -158,18 +153,19 @@ const CorporateHealthEnquiry = ({ hideUX = false, leads_source = "" }) => {
           {errorKeyName === "mobile_number" ? (
             <p className="text-red-500 text-sm">Please Enter a your number</p>
           ) : null}
+          </div>
 
-          <label
+          {/* <label
             htmlFor=""
             className="col-form-label md:text-[16px] text-[14px]"
           >
             Select Enquiry *
-          </label>
+          </label> */}
           <select
             name="select_enquiry"
             value={payload?.select_enquiry}
             onChange={handleChange}
-            className=" text-base border border-[#E5E7EB] bg-white rounded-[8px] w-full p-2"
+            className="mt-4 text-base border border-[#E5E7EB] bg-white rounded-[8px] w-full p-2 shadow-md"
           >
             <option>Select Enquiry</option>
             {Select_Enquiry.map((item, index) => (

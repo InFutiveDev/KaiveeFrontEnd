@@ -15,7 +15,7 @@ const Index = () => {
       <LazyLoad>
         <div className="container mt-3">
           <div>
-            <h1 className="!text-3xl font-medium text-[#fcc42c]">Disclaimer</h1>
+            <h1 className="!text-3xl font-medium text-[#D41958]">Disclaimer</h1>
           </div>
           <div className="mt-3">
             <ul className="list-disc ms-9 text-gray-500 text-[16px]">

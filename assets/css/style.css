@@ -2252,7 +2252,7 @@ button.slick-prev.slick-arrow {
   /* transform: rotate(180deg); */
   left: -2%;
   top: 46%;
-  background-color: #fff;
+  background-color: #D41958;
   border-radius: 50%;
   box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
     rgb(27 31 35 / 15%) 0px 0px 0px 1px;
@@ -2301,7 +2301,7 @@ button.slick-next.slick-arrow {
   position: absolute;
   right: 0px;
   top: 46%;
-  background-color: #fcc42c;
+  background-color: #D41958;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -3716,7 +3716,7 @@ input:focus {
   /* height: 40px; */
   border: none;
   outline: none;
-  background: #fcc42c;
+  background: #D41958;
   border-radius: 10px;
   cursor: pointer;
   font-size: 18px;
@@ -4169,7 +4169,7 @@ button:focus {
   padding: 5px 20px;
   height: 40px;
   width: fit-content;
-  background: #fcc42c;
+  background: #D41958;
   box-shadow: 0 12px 24px rgb(44 39 56/4%), 0 24px 48px rgb(44 39 56/8%);
   border-radius: 6px;
   border: 1px solid #fcc42c;
@@ -7310,7 +7310,7 @@ input[type="radio"] {
 
 /* cart page design */
 .offerprice {
-  color: var(--Primary, #fcc42c);
+  color: var(--Primary, #D41958);
   font-family: Poppins;
   font-size: 20px;
   font-style: normal;
@@ -8094,7 +8094,7 @@ section.aboutme {
   background: rgba(247, 167, 8, 0.1) !important;
   border-radius: 5px;
   border: 0px !important;
-  color: #fcc42c;
+  color: #D41958;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -11295,7 +11295,7 @@ input.contact-submitbutton {
 .cart-box .cart-frame-19 {
   align-items: center;
   align-self: stretch;
-  background-color: #fcc42c;
+  background-color: #D41958;
   border-radius: 12px;
   display: flex;
   flex: 1;
@@ -11911,7 +11911,7 @@ input.contact-submitbutton {
   align-items: center;
   gap: 6px;
   border-radius: 8px;
-  background: var(--Primary, #fcc42c);
+  background: var(--Primary, #D41958);
   color: #ffffff;
 }
 
@@ -11974,7 +11974,7 @@ input.contact-submitbutton {
 }
 
 .c-border {
-  border: 2px solid #fcc42c !important;
+  border: 2px solid #D41958 !important;
 }
 
 ::-webkit-scrollbar-thumb {
