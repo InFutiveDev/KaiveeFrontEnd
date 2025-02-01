@@ -286,8 +286,7 @@ const ClinicalResearchLayout = () => {
         <div
           className="p-[20px] md:p-[23px] rounded-[10px] mb-[12px]"
           style={{
-            background:
-              "linear-gradient(180deg, rgba(171, 218, 164, 0.5) -49.9%, rgba(255, 227, 123, 0.5) 156.68%)",
+            background:"rgb(199, 229, 247)"
           }}
         >
           <div className="flex justify-center gap-x-2 flex-nowrap items-center">

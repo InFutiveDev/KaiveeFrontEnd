@@ -240,109 +240,29 @@ const AboutLayout = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white">
-        <div className="md:py-[70px] py-[35px] container">
-          <h2 className="text-black font-semibold lg:text-[24px] text-xl font-source-pro">
-            Leadership
-          </h2>
-          <div className="mt-[32px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  xl:gap-8 md:gap-4 gap-3">
-            <div className="border rounded-[180px]">
-              <div className="flex justify-center items-center mt-5">
-                <Image
-                  src={""}
-                  alt="leader avatar "
-                  loading="eager"
-                  className=" object-fill "
-                  width={140}
-                  height={140}
-                />
-              </div>
-              <div className="">
-                <p className="text-black font-source-pro font-semibold text-[24px] mt-3 text-center">
-                  Dr. XYZ
-                </p>
-                <div className="text-secondary text-[18px] mt-1 text-center px-2">
-                  Director
-                </div>
-                <p className="text-secondary text-[16px] mt-3 text-center pb-20 px-4">
-                  MBBS
-                </p>
-              </div>
-            </div>
-            <div className="border rounded-[180px]">
-              <div className="flex justify-center items-center mt-5">
-                <Image
-                  src={""}
-                  alt="leader2 avatar "
-                  loading="eager"
-                  className=" object-fill "
-                  width={140}
-                  height={140}
-                />
-              </div>
-              <div className="">
-                <p className="text-black font-source-pro font-semibold text-[24px] mt-3 text-center">
-                  Dr ABC
-                </p>
-                <div className="text-secondary text-[18px] mt-1 text-center px-2">
-                  Senior Consultant
-                </div>
-                <p className="text-secondary text-[16px] mt-3 text-center pb-20 px-4">
-                  MBBS
-                </p>
-              </div>
-            </div>
-            <div className="border rounded-[180px]">
-              <div className="flex justify-center items-center mt-5">
-                <Image
-                  src={""}
-                  alt="leader3 avatar "
-                  loading="eager"
-                  className=" object-fill "
-                  width={140}
-                  height={140}
-                />
-              </div>
-              <div className="">
-                <p className="text-black font-source-pro font-semibold text-[24px] mt-3 text-center">
-                  Dr. 123
-                </p>
-                <div className="text-secondary text-[18px] mt-1 text-center px-2 ">
-                  Radiologist
-                </div>
-                <p className="text-secondary text-[16px] mt-3 text-center px-4 pb-20">
-                  MD in Radiodiagnosis
-                </p>
-              </div>
-            </div>
+   
 
-            <div className="border rounded-[180px]">
-              <div className="flex justify-center items-center mt-5">
-                <Image
-                  src={""}
-                  alt="leader4 avatar "
-                  loading="eager"
-                  className=" object-fill "
-                  width={140}
-                  height={140}
-                />
-              </div>
-              <div className="">
-                <p className="text-black font-source-pro font-semibold text-[24px] mt-3 text-center">
-                  Dr. PQR
-                </p>
-                <div className="text-secondary text-[18px] mt-1 text-center px-2">
-                  Consultant
-                </div>
-                <p className="text-secondary text-[16px] mt-3 text-center pb-20 px-4">
-                  MBBS, MD(Radio-diagnosis)
-                </p>
-              </div>
-            </div>
+<div className="bg-white">
+  <div className="md:py-[70px] py-[35px] container">
+    <h2 className="text-black font-semibold lg:text-[24px] text-xl font-source-pro">Leadership</h2>
+    <div className="mt-[32px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:gap-8 md:gap-4 gap-3">
+      {leaders.map((leader, index) => (
+        <div key={index} className="border rounded-lg p-5 shadow-lg">
+          <div className="flex justify-center items-center">
+            <Image src={leader.image} alt={`${leader.name} avatar`} loading="eager" width={140} height={140} className="object-cover"/>
+          </div>
+          <div className="text-center mt-3">
+            <p className="text-black font-source-pro font-semibold text-[24px]">{leader.name}</p>
+            <div className="text-secondary text-[18px] mt-1">{leader.role}</div>
+            <p className="text-secondary text-[16px] mt-3 px-4">{leader.degree}</p>
           </div>
         </div>
-      </div>
-      <div className="bg-[#FAFAFA]">
+      ))}
+    </div>
+  </div>
+</div>
+
+      <div className="bg-rgb(199, 229, 247)">
         <div className=" container py-[70px]">
           <p className="font-semibold text-center">
             Promising Good Health For All, Driven By A Passionate Team, Latest
@@ -406,3 +326,11 @@ const data = [
     icon: <Image src={img88} alt="NABL Accredited Icon" />,
   },
 ];
+
+const leaders = [
+  { name: "Dr. ABC", role: "Director", degree: "MBBS", image: img1 },
+  { name: "Dr. XYZ", role: "Senior Consultant", degree: "MBBS", image: img2 },
+  { name: "Dr. !@#", role: "Radiologist", degree: "MD in Radiodiagnosis", image: img3 },
+  { name: "Dr. 123", role: "Consultant", degree: "MBBS, MD(Radio-diagnosis)", image: img4 },
+];
+
