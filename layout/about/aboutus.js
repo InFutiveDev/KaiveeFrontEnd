@@ -15,39 +15,29 @@ const AboutUs = () => {
             </h1>
 
             <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              {`Kaivee, a prestigious and distinguished private diagnostic establishment, created and closely supervised by doctors, experts in diagnostic specialities. It has been serving Delhi for over three decades. With NABL and NABH certifications for Laboratory & Radiology respectively, our facility is dedicated to elevating the precision of medical tests and ensuring quicker turnaround times. The facility offers a comprehensive array of investigations spanning Pathology, Radiology, Nuclear Medicine, Cardiology and Neurology . Our brand is widely recognized for embodying trust, transparency and reliability in diagnostics. We strongly believe that accurate and high quality diagnostic plays a crucial role in ensuring effective patient care and treatment. Hence, we aspire to lead the way by establishing unparalleled standards in the field of diagnostic services. `}
+              At <span className="font-bold">Kaivee Healthcare</span>, we are redefining diagnostics with <span className="font-bold">accuracy, efficiency, and patient-centric care. </span>
+              As a trusted pathlab, we offer a <span className="font-bold">wide range of medical tests </span>designed to detect diseases early, monitor health conditions, and provide crucial insights for better well-being.
+
+
+
               {!readMore ? (
                 <span>...</span>
               ) : (
                 <span>
                   <br />
                   <br />
-                  Our expertise lies in delivering diagnostic services
-                  affordably, ensuring the highest standards of care and
-                  professionalism. Advancing from personalized care to the
-                  application of Science, our collective journey has markedly
-                  improved health and well being of the community on a broad
-                  scale. Our brand remains dedicated to seamless integration of
-                  top tier quality, patient care and efficiency, ultimately
-                  promoting better healthcare by ensuring the availability of
-                  timely and accurate diagnostic and prognostic data.<br></br>
+                  With a commitment to<strong> cutting-edge technology, experienced professionals, and stringent quality standards</strong>, we ensure that every report you receive is not just accurate but also timely and reliable. From <strong>routine health screenings to specialized diagnostics</strong>, we make healthcare accessible, affordable, and stress-free.<br></br>
+
+
+
+                  <br />
+                  Our goal is simple:<strong>to empower individuals and healthcare providers with the right diagnostic insights for better health outcomes</strong> .<br></br>
                   <br></br>
-                  We provide door step services to patients like sample
-                  collection and testing at our satellite centres, home sample
-                  collection facility, large fleet of patient pick up and
-                  transport vans, online release of reports to patients etc.
-                  <br></br>
-                  <br></br>
-                  We strive to build a workplace characterized by friendliness
-                  and support, with a strong emphasis on improved collaboration,
-                  care and productivity. We, at Kaivee pride ourselves on our
-                  dedication to honesty, commitment, compassion and going above
-                  and beyond, exemplified by our diagnostic specialists.
-                  <br></br>
+
                 </span>
               )}{" "}
               <span
-                className="font-bold cursor-pointer text-nowrap"
+                className="font-bold text-[#8DBD4D] cursor-pointer text-nowrap"
                 onClick={() => setReadMore(!readMore)}
               >
                 {!readMore ? "Read More" : "Read less"}
@@ -89,7 +79,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

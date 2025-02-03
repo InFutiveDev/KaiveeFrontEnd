@@ -143,40 +143,40 @@ const HomeLayout = () => {
             </marquee>
           </div> */}
           <div className="container">
-      <div className="py-4 mt-4 mb-1 bg-white bg-opacity-50">
-        <div className="container mx-auto grid grid-cols-3 md:grid-cols-6 gap-4 text-center">
-          {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center space-y-2 ">
-              <Image
-                src={feature.icon}
-                alt={feature.label}
-                className="w-auto object-cover mx-auto"
-                style={{height:'72%'}}
-              />
-             
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-          <div className="bg-[#FAFAFA]">
-          <div className="container bg-">
-            <BookingCard packagesId={habits?.data[0]?._id || ""} />
-          </div>
-          
-          
-          <div className="bg-[white]">
-            {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            <div className="container">
-              <div className=" pb-4 py-2">
-                <Facilities
-                  facilitiedData={categories?.data?.categoryData || []}
-                />
+            <div className="py-4 mt-4 mb-1 bg-white bg-opacity-50">
+              <div className="container mx-auto grid grid-cols-3 md:grid-cols-6 gap-4 text-center">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex flex-col items-center space-y-2 ">
+                    <Image
+                      src={feature.icon}
+                      alt={feature.label}
+                      className="w-auto object-cover mx-auto"
+                      style={{ height: '72%' }}
+                    />
+
+                  </div>
+                ))}
               </div>
             </div>
           </div>
+          <div className="bg-[#FAFAFA]">
+            <div className="container bg-">
+              <BookingCard packagesId={habits?.data[0]?._id || ""} />
+            </div>
+
+
+            <div className="bg-[white]">
+              {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
+              <div className="container">
+                <div className=" pb-4 py-2">
+                  <Facilities
+                    facilitiedData={categories?.data?.categoryData || []}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          
+
           <div className="container">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
             <div className=" pb-0 lg:pb-4 py-2">
@@ -236,8 +236,8 @@ const HomeLayout = () => {
             </div>
           </div>
           {/* <div className="container"> */}
-            {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            {/* <div className=" pb-0 lg:pb-8 py-2 pt-8">
+          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
+          {/* <div className=" pb-0 lg:pb-8 py-2 pt-8">
               <HealthRisks
                 altImageKey="home_image_altTag"
                 imageKey="home_image"
@@ -265,8 +265,8 @@ const HomeLayout = () => {
           </div>
           {/* <div className="bg-[#FAFAFA]">
             <div className="container"> */}
-              {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-              {/* <div className=" pb-0 lg:pb-4 py-2 pt-4">
+          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
+          {/* <div className=" pb-0 lg:pb-4 py-2 pt-4">
                 <HealthcareVideos />
               </div>
             </div>
@@ -275,75 +275,78 @@ const HomeLayout = () => {
           <div className="w-full">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
             <div className=" px-2 pb-0 lg:pb-4 py-2 pt-4">
-              
-                {/* <div className="mt-[20px] md:mt-[32px]"> */}
-                  
-                  <div className="bg-[#F7F7FB] rounded-xl grid items-center lg:grid-cols-3 grid-cols-1">
-                  {/* <div className="bg-[#8DBD4D] py-[40px] relative"> */}
-                      <div className="lg:-ml-3rem">
-                        <img
-                          src={Laptop.src}
-                          className="lg:mx-0 mx-auto"
-                          alt="Image of a laptop"
-                        />
-                      </div>
-                      
-                    <div className="col-span-2">
-                    <p className="lg:ml-[42px]  font-semibold lg:text-[32px] text-xl font-source-pro">
-                  Why our Patient recommend us?
-                </p>
-                      <p className="lg:ml-[42px]  text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                        {`Our diagnostic center is consistently recommended by our patients for several compelling reasons. Firstly, we prioritize accuracy and reliability in our diagnostic tests, ensuring that patients receive the most precise results. Secondly, our team of experienced and compassionate healthcare professionals provides personalized care, addressing patients' concerns and offering guidance throughout their journey. Additionally, our state-of-the-art facilities and cutting-edge technology guarantee top-notch healthcare services. Furthermore, we maintain a patient-centric approach, minimizing wait times and streamlining the entire process. Lastly, our commitment to confidentiality and a comfortable `}
-                        {!readMore ? (
-                          <span>...</span>
-                        ) : (
-                          <span>
-                            environment fosters trust and reassurance among our
-                            patients, making us their preferred choice for
-                            diagnostic services
-                          </span>
-                        )}{" "}
-                        <span
-                          className="font-bold cursor-pointer text-nowrap"
-                          onClick={() => setReadMore(!readMore)}
-                        >
-                          {!readMore ? "Read More" : "Read less"}
-                        </span>
-                      </p>
-                    </div>
-                    
-                  </div>
-                {/* </div> */}
+
+              {/* <div className="mt-[20px] md:mt-[32px]"> */}
+
+              <div className="bg-[#F7F7FB] rounded-xl grid items-center lg:grid-cols-3 grid-cols-1">
+                {/* <div className="bg-[#8DBD4D] py-[40px] relative"> */}
+                <div className="lg:-ml-3rem">
+                  <img
+                    src={Laptop.src}
+                    className="lg:mx-0 mx-auto"
+                    alt="Image of a laptop"
+                  />
+                </div>
+
+                <div className="col-span-2">
+                  <p className="lg:ml-[42px]  font-semibold lg:text-[32px] text-xl font-source-pro">
+                    Why our Patient recommend us?
+                  </p>
+                  <ul className="list-none">
+                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
+                      💙 Trusted Accuracy: Cutting-edge technology ensures precise and reliable test results.
+                    </li>
+                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
+                      ⏳ Fast Turnaround: No long waits—get your reports on time, every time.
+                    </li>
+                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
+                      🏡 Convenient Home Sample Collection: Healthcare that comes to you.
+                    </li>
+                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
+                      💡 Affordable & Transparent Pricing: Quality healthcare with no hidden costs.
+                    </li>
+                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
+                      📱 Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.
+                    </li>
+                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
+                      🩸 Hygienic & Safe Practices: We follow strict safety protocols for your well-being.
+                    </li>
+                  </ul>
+
+                </div>
+
+              </div>
+              {/* </div> */}
               {/* </div> */}
             </div>
           </div>
-          
-            <div className="container">
-              {/* sm:mx-1 lg:mx-2 xl:mx-24 */}
-              <div className=" pt-4 pb-2">
-                <Testimonial />
-              </div>
-            </div>
-          
-          <div className="bg-[#FAFAFA]">
+
           <div className="container">
-            {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
+            {/* sm:mx-1 lg:mx-2 xl:mx-24 */}
             <div className=" pt-4 pb-2">
-              <HealthBulletin />
+              <Testimonial />
             </div>
           </div>
+
+          <div className="bg-[#FAFAFA]">
+            <div className="container">
+              {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
+              <div className=" pt-4 pb-2">
+                <HealthBulletin />
+              </div>
+            </div>
           </div>
           {/* <div className="bg-[#FAFAFA]">
             <div className="container"> */}
-              {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-              {/* <div className=" pt-4 pb-2">
+          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
+          {/* <div className=" pt-4 pb-2">
                 <AccreditationsAwards />
               </div>
             </div>
           </div> */}
           {/* <div className="bg-[#F7F7FB] "> */}
-            {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            {/* <div className="container">
+          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
+          {/* <div className="container">
               <div className="  pt-4 pb-4">
                 <Media />
               </div>
@@ -351,8 +354,8 @@ const HomeLayout = () => {
           </div> */}
           {/* <div className="bg-[#F7F7FB] ">
             <div className="container"> */}
-              {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-              {/* <div className="  pt-4 pb-4">
+          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
+          {/* <div className="  pt-4 pb-4">
                 <PrintMedia />
               </div>
             </div>
@@ -763,7 +766,8 @@ const locationData = [
     contactNumber: "084483 38674",
     timing: "24 hours open",
     email: "zenhealthcare@gmail.com",
-    iframe:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1278876753586!2d77.3960429!3d28.5659222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef823d515f91%3A0xd4d4ace124409340!2sZen%20Health%20Services!5e0!3m2!1sen!2sin!4v1737958352844!5m2!1sen!2sin"  },
+    iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1278876753586!2d77.3960429!3d28.5659222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef823d515f91%3A0xd4d4ace124409340!2sZen%20Health%20Services!5e0!3m2!1sen!2sin!4v1737958352844!5m2!1sen!2sin"
+  },
   // {
   //   mainTilte: "Tilak Nagar",
   //   address:

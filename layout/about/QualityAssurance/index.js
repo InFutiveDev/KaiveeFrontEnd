@@ -55,34 +55,18 @@ const QualityAssuranceLayout = () => {
       <div className="py-[35px] md:py-[70px] 2xl:pl-[10rem] xl:pl-[4rem] lg:pl-[1rem] pl-[16px]">
         <div className="grid  grid-cols-1 sm:grid-cols-1 lg:grid-cols-2  xl:grid-cols-2 md:grid-cols-1 gap-10">
           <div>
-            <h1 className="lg:text-[26px] text-xl text-black font-semibold md:pb-4 pb-2 font-source-pro">
+            <h1 className="lg:text-[26px] text-xl text-black font-semibold md:pb-4 pb-2 font-source-pro mb-2">
               Quality Assurance
             </h1>
-            <p className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              {`“Quality is never an accident. It is always the result of high intention, sincere effort,
-intelligent direction and skilful execution. It represents the wise choice of many
-alternatives.” – Willa A Foster.
-`}
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-[6px] mb-4">
+              <span className="font-bold">Quality</span> is the backbone of effective healthcare decisions. At Kaivee Healthcare, we maintain the highest standards in diagnostics through rigorous <span className="font-bold">quality control measures</span>, advanced <span className="font-bold">technology</span>, and continuous <span className="font-bold">process improvement</span>.
             </p>
-            <p className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              At City X-Ray & Scan Clinic, we firmly believe this and therefore,
-              we have a strong Quality Assurance programme behind the success of
-              our diagnostic clinic. And we maintain the highest standards of
-              quality through all aspects of our operation – from preparing the
-              patient to sample collection, analysis, reporting and dispatch.
+
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
+              Our laboratories are equipped with <span className="font-bold">state-of-the-art equipment</span>, operated by skilled professionals who follow <span className="font-bold">standardized protocols</span> to ensure <span className="font-bold">accuracy</span> at every step—from <span className="font-bold">sample collection</span> to <span className="font-bold">report delivery</span>. We leave no room for errors because we understand the impact that every result has on your <span className="font-bold">health</span>.
             </p>
-            <p className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              At our diagnostic centre and laboratory, “quality” is the way of
-              optimum functioning. It directs us to deliver reliable and
-              accurate results, every time. Even for routine tests, we insist on
-              achieving the highest standards of precision. Every professional
-              and every process at City X-Ray & Scan Clinic upholds quality,
-              making us the most trusted choice for healthcare diagnostic
-              services in Delhi. In addition to our stringent internal quality
-              programmes, we strive to achieve the most prestigious
-              accreditations which is a testimony of the high levels of quality
-              we maintain.
-            </p>
+
+
           </div>
           <div className="quality-assurance-slider-main md:py-[103px] py-[50px] overflow-hidden">
             <Slider {...settings} className="carousel quality_assurance">
@@ -264,40 +248,28 @@ alternatives.” – Willa A Foster.
       </div>
       <div className="bg-[#FAFAFA]">
         <div className="container py-[35px] md:py-[70px]">
-          <h2 className="lg:text-[24px] text-xl font-semibold md:pb-4 pb-2 Our Quality Policie font-source-pro">
+          <h2 className="lg:text-[26px] text-xl text-black font-semibold md:pb-4 pb-2 font-source-pro mb-2">
             Our Quality Policies
           </h2>
+          <p>Our commitment to quality is guided by strict policies that ensure:</p>
           <ul className="list-disc md:ml-[40px] ml-[20px] flex flex-col gap-2 mt-[10px]">
-            <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              All the diagnostic testing we perform strictly adheres to a
-              Standard Operating Procedures (SOP) which clearly outline what,
-              how and who could do the test
+            <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
+              🔬 Accuracy & Precision: Every test undergoes multiple checks to guarantee reliable results.
             </li>
-            <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              Fully automated high-tech pathology centre and state-of-the-art
-              molecular and genetic lab that meet international standards
+            <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
+              🩺 Standardized Procedures: We follow globally recognized protocols for sample handling, testing, and reporting.
             </li>
-            <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              We have partnered with only fully accredited vendors to use the
-              most advanced and medically-certified equipment and technologies
+            <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
+              👩‍⚕️ Qualified Expertise: Our team includes experienced pathologists, lab technicians, and quality control experts.
             </li>
-            <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              Our internal quality check team ensures all equipment and devices
-              used for medical diagnostic testing are correctly calibrated and
-              reviewed at all times
+            <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
+              ⚡ Timely Reporting: Fast doesn’t mean compromised—we deliver quick results without sacrificing accuracy.
             </li>
-            <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              Continuous quality improvement through constantly monitoring and
-              ensuring ensures that the customers receive high-quality care
+            <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
+              📊 Regular Audits: Continuous internal and external audits help us maintain and improve quality standards.
             </li>
-            <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              Our internal quality check team ensures all equipment and devices
-              used for medical diagnostic testing are correctly calibrated and
-              reviewed at all times
-            </li>
-            <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              Continuous quality improvement through constantly monitoring and
-              ensuring ensures that the customers receive high-quality care
+            <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
+              🧪 Safe & Hygienic Practices: We adhere to strict biosafety measures to protect both samples and staff.
             </li>
           </ul>
         </div>
@@ -307,39 +279,29 @@ alternatives.” – Willa A Foster.
           How We Measure Our Quality Standards?
         </h2>
         <p className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-          Being a top-tier and trusted healthcare diagnostic centre in Delhi, we
-          use different quality indicators. This enables us to constantly
-          monitor our Quality Assurance programme, upgrade our systems and
-          procedures, and maintain high levels of efficiency & accuracy. These
-          include:
+          We believe in<strong> continuous improvement </strong>, which is why we regularly monitor and evaluate our performance through:
         </p>
         <ul className="list-disc md:ml-[40px] ml-[20px] flex flex-col gap-2 mt-[10px]">
           <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-            Recalled patients log
+            <strong> Internal Quality Control (IQC) </strong>: Daily checks to ensure equipment and processes are functioning optimally.
           </li>
           <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-            Regular customer feedback
+            <strong> External Quality Assessment (EQA) </strong> : Participation in external proficiency testing programs to benchmark our accuracy against national and international standards.
           </li>
           <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-            Clinicians feedback
+            <strong> Performance Metrics </strong>: Tracking key indicators such as <strong> turnaround time, error rates, and customer satisfaction </strong> to identify areas for improvement.
           </li>
           <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-            Interobserver log
+            <strong> Staff Training & Development </strong>: Ongoing training programs to keep our team updated with the latest diagnostic advancements and quality protocols.
           </li>
           <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-            Adverse reaction log
-          </li>
-          <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-            Delayed reports
-          </li>
-          <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-            TAT monitoring
+            <strong> Patient Feedback </strong> : We actively seek feedback to improve our services and address concerns promptly.
           </li>
         </ul>
-        <p className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-          These quality indicators pave the way for continuous improvement,
-          optimizing our processes and achieving higher patient satisfaction
+        <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mt-6 mb-[6px]">
+          At Kaivee Healthcare, <span className="font-bold">quality</span> is not a one-time goal—it’s an ongoing journey to ensure you receive the most <span className="font-bold">accurate</span>, <span className="font-bold">reliable</span>, and <span className="font-bold">trusted</span> diagnostic services.
         </p>
+
       </div>
     </>
   );

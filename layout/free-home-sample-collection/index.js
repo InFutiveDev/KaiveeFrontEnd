@@ -168,15 +168,15 @@ const FreeHomeSampleCollectionLayout = () => {
         <div className="background-image-freehome-sample flex justify-center items-center ">
           <div className="flex px-[30px] justify-center items-center flex-col gap-4">
             <p className="text-white text-center text-3xl font-bold">
-              Your Health Our Happiness
+              Prioritize Your Health Today!
             </p>
             <p className="text-white text-center ">
-              Didn't find what you were looking for! Click to call us now.
+              ✅ Book Your Health Package Now | 🏠 Home Sample Collection Available | 📋 Get Reports Online, Fast & Hassle-Free
             </p>
             <div className="flex gap-2">
               <Link
                 href="tel:011-2000-2000"
-                className="flex gap-x-1 md:gap-x-2 justify-center items-center text-blacke font-medium bg-orange rounded py-[10px] lg:px-[24px] px-[10px] lg:text-[18px] text-[14px]"
+                className="flex gap-x-1 md:gap-x-2 justify-center items-center text-blacke font-medium bg-[#D41958] rounded py-[10px] lg:px-[24px] px-[10px] lg:text-[18px] text-[14px]"
               >
                 <CallBlackImg />
                 Call Now

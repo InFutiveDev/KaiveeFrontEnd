@@ -152,13 +152,26 @@ const ClinicalResearchLayout = () => {
   }, []);
   return (
     <>
-       <section className="sliders banner_slider_wrap_clinical cstm-clinicresearch-bg">
+      <section className="sliders banner_slider_wrap_clinical cstm-clinicresearch-bg">
         <div className="web-view relative flexbox container">
           <ClinicalResearchBanner />
         </div>
       </section>
 
-      
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8">Advancing Healthcare Through Reliable Clinical Research</h2>
+          <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
+            At <span className="font-bold">Kaivee Healthcare</span>, we’re committed to driving medical progress through <span className="font-bold">ethical, precise, and data-driven clinical research</span> that shapes the future of healthcare.
+          </p>
+
+
+          {/* <button className="bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-pink-700 transition-colors font-medium">
+            Learn More About Our Research
+          </button> */}
+        </div>
+      </section>
+
 
       {/* Key Stats */}
       <section className="bg-white py-16">
@@ -178,20 +191,21 @@ const ClinicalResearchLayout = () => {
       </section>
 
       {/* Content Section Above Research Focus Areas */}
-<section className="py-16 bg-gray-100">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-3xl font-bold mb-8">Why Clinical Research Matters</h2>
-    <p className="text-lg text-gray-700 mb-6">
-      Clinical research plays a crucial role in advancing medical knowledge, improving patient care, and developing innovative therapies. Our team is dedicated to conducting studies that focus on the most pressing health challenges, contributing to the global scientific community's efforts to improve lives.
-    </p>
-    <p className="text-lg text-gray-700 mb-6">
-      With decades of experience, our research spans across multiple disciplines, including infectious diseases, metabolic disorders, and clinical trials. Join us as we continue to drive progress in healthcare.
-    </p>
-    <button className="bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-pink-700 transition-colors font-medium">
-      Learn More About Our Research
-    </button>
-  </div>
-</section>
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8">Why Clinical Research Matters</h2>
+          <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
+            <span className="font-bold">Kaivee Healthcare</span> isn’t just a trusted name in diagnostics—we’re also at the forefront of <span className="font-bold">clinical research and development</span>. Our state-of-the-art facilities, combined with a team of experienced researchers, enable us to conduct high-quality <span className="font-bold">clinical studies</span> that contribute to new medical discoveries, improved treatments, and patient care innovations.
+          </p>
+          <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
+            We collaborate with <span className="font-bold">pharmaceutical companies</span>, <span className="font-bold">healthcare institutions</span>, and <span className="font-bold">research organizations</span> to ensure our studies meet the highest standards of <span className="font-bold">ethics, accuracy, and reliability</span>.
+          </p>
+
+          {/* <button className="bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-pink-700 transition-colors font-medium">
+            Learn More About Our Research
+          </button> */}
+        </div>
+      </section>
 
 
       {/* Research Focus Areas */}
@@ -200,7 +214,7 @@ const ClinicalResearchLayout = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Our Research Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { 
+              {
                 title: "Infectious Diseases",
                 content: "Pioneering research in emerging pathogens and treatment protocols",
                 icon: HC1
@@ -277,114 +291,114 @@ const ClinicalResearchLayout = () => {
 
       {/* Modern Contact Form */}
       <section className="py-16 bg-white">
-  <div className="w-full px-4">
-    <div className=" mx-auto bg-gradient-to-br from-blue-50 to-gray-50 p-8 rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold mb-8 text-center">Partner With Us</h2>
+        <div className="w-full px-4">
+          <div className=" mx-auto bg-gradient-to-br from-blue-50 to-gray-50 p-8 rounded-xl shadow-lg">
+            <h2 className="text-3xl font-bold mb-8 text-center">Partner With Us</h2>
 
-      {/* Original Enquiry Form */}
-      <div className="border border-[#E4E4E7] bg-white p-[24px] rounded-[24px] w-full">
-        <div
-          className="p-[20px] md:p-[23px] rounded-[10px] mb-[12px]"
-          style={{
-            background:"rgb(199, 229, 247)"
-          }}
-        >
-          <div className="flex justify-center gap-x-2 flex-nowrap items-center">
-            <FacilitesBooksSvg />
-            <p className="text-[#3F3F46] xl:text-xl lg:text-[18px] md:text-[18px] text-[14px] font-bold font-source-pro">
-              Get in Touch!
-            </p>
+            {/* Original Enquiry Form */}
+            <div className="border border-[#E4E4E7] bg-white p-[24px] rounded-[24px] w-full">
+              <div
+                className="p-[20px] md:p-[23px] rounded-[10px] mb-[12px]"
+                style={{
+                  background: "rgb(199, 229, 247)"
+                }}
+              >
+                <div className="flex justify-center gap-x-2 flex-nowrap items-center">
+                  <FacilitesBooksSvg />
+                  <p className="text-[#3F3F46] xl:text-xl lg:text-[18px] md:text-[18px] text-[14px] font-bold font-source-pro">
+                    Get in Touch!
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                {/* First Row: Name, Email, Phone */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {/* Name Field */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">
+                      Your Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="your_name"
+                      value={payload?.your_name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Enter Your Name"
+                    />
+                    {errorKeyName === "your_name" && (
+                      <p className="text-red-500 text-sm mt-1">Please enter your name</p>
+                    )}
+                  </div>
+
+                  {/* Email Field */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={payload?.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Enter Your Email"
+                    />
+                    {errorKeyName === "email" && (
+                      <p className="text-red-500 text-sm mt-1">Please enter a valid email</p>
+                    )}
+                  </div>
+
+                  {/* Phone Field */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">
+                      Mobile Number *
+                    </label>
+                    <input
+                      type="text"
+                      name="mobile_number"
+                      value={payload?.mobile_number}
+                      maxLength="10"
+                      onChange={(e) =>
+                        /^[0-9]*$/.test(e.target.value) && handleChange(e)
+                      }
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Enter Mobile Number"
+                    />
+                    {errorKeyName === "mobile_number" && (
+                      <p className="text-red-500 text-sm mt-1">Please enter a valid number</p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Second Row: Message */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">Message</label>
+                  <textarea
+                    name="write_up"
+                    value={payload?.write_up}
+                    onChange={handleChange}
+                    rows="4"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  onClick={handleSubmit}
+                  disabled={loading}
+                  className="w-full bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                >
+                  {loading ? "Submitting..." : "Submit Enquiry"}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className="space-y-6">
-          {/* First Row: Name, Email, Phone */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Name Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Your Name *
-              </label>
-              <input
-                type="text"
-                name="your_name"
-                value={payload?.your_name}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter Your Name"
-              />
-              {errorKeyName === "your_name" && (
-                <p className="text-red-500 text-sm mt-1">Please enter your name</p>
-              )}
-            </div>
-
-            {/* Email Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Email *
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={payload?.email}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter Your Email"
-              />
-              {errorKeyName === "email" && (
-                <p className="text-red-500 text-sm mt-1">Please enter a valid email</p>
-              )}
-            </div>
-
-            {/* Phone Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Mobile Number *
-              </label>
-              <input
-                type="text"
-                name="mobile_number"
-                value={payload?.mobile_number}
-                maxLength="10"
-                onChange={(e) =>
-                  /^[0-9]*$/.test(e.target.value) && handleChange(e)
-                }
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter Mobile Number"
-              />
-              {errorKeyName === "mobile_number" && (
-                <p className="text-red-500 text-sm mt-1">Please enter a valid number</p>
-              )}
-            </div>
-          </div>
-
-          {/* Second Row: Message */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Message</label>
-            <textarea
-              name="write_up"
-              value={payload?.write_up}
-              onChange={handleChange}
-              rows="4"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Enter your message"
-            ></textarea>
-          </div>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            onClick={handleSubmit}
-            disabled={loading}
-            className="w-full bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-          >
-            {loading ? "Submitting..." : "Submit Enquiry"}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       {/* Interactive Map Section */}
@@ -394,7 +408,7 @@ const ClinicalResearchLayout = () => {
             <iframe
               className="w-full h-96"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1278876753586!2d77.3960429!3d28.5659222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef823d515f91%3A0xd4d4ace124409340!2sZen%20Health%20Services!5e0!3m2!1sen!2sin!4v1737958352844!5m2!1sen!2sin"
-              // ... existing map props
+            // ... existing map props
             ></iframe>
           </div>
         </div>
@@ -537,40 +551,34 @@ const ClinicalResearchLayout = () => {
 };
 const data = [
   {
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
-    name: "John Doe",
-    role: "Research Scientist",
-    quote: "This platform has been a game-changer in our research. The insights we gained have significantly enhanced our work.",
+    // avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+    name: "Dr. Rohan Mehta",
+    role: "Clinical Researcher",
+    quote: "Kaivee Healthcare’s dedication to ethical research practices and data accuracy has been exceptional. Their team’s expertise and professionalism have significantly contributed to the success of our trials.",
     rating: { src: "https://upload.wikimedia.org/wikipedia/commons/6/69/Star_icon_2.svg" }  // Star image URL for rating
   },
   {
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
-    name: "Jane Smith",
-    role: "Clinical Researcher",
-    quote: "The ease of access to quality data has accelerated our progress. I highly recommend this to any researcher!",
+    // avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    name: "Anita Sharma",
+    role: "Pharma Partner",
+    quote: "Partnering with Kaivee for our clinical studies has been a seamless experience. Their attention to detail, strict quality protocols, and efficient processes are truly commendable.",
     rating: { src: "https://upload.wikimedia.org/wikipedia/commons/6/69/Star_icon_2.svg" }
   },
   {
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
-    name: "Alex Johnson",
-    role: "PhD Candidate",
-    quote: "Incredible service that has helped me finish my dissertation on time. The support is top-notch.",
+    // avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "Rahul Verma",
+    role: "Study Participant:",
+    quote: "As a participant in one of Kaivee’s clinical trials, I was impressed by the care and transparency throughout the process. I felt safe and well-informed at every stage.",
     rating: { src: "https://upload.wikimedia.org/wikipedia/commons/6/69/Star_icon_2.svg" }
   },
   {
-    avatar: "https://randomuser.me/api/portraits/women/4.jpg",
-    name: "Emily Davis",
-    role: "Biomedical Researcher",
-    quote: "I've been using this platform for months, and it's incredibly easy to use and trustworthy.",
+    // avatar: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "Dr. Priya Nair",
+    role: "Project Manager",
+    quote: "Kaivee’s commitment to scientific integrity and patient safety sets them apart. Their clinical research team is both knowledgeable and responsive.",
     rating: { src: "https://upload.wikimedia.org/wikipedia/commons/6/69/Star_icon_2.svg" }
   },
-  {
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
-    name: "Michael Lee",
-    role: "Senior Researcher",
-    quote: "The data provided is thorough and accurate, making my job as a researcher much easier.",
-    rating: { src: "https://upload.wikimedia.org/wikipedia/commons/6/69/Star_icon_2.svg" }
-  }
+
 ];
 
 

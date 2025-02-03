@@ -25,27 +25,27 @@ const CsrLayout = () => {
       <div className="py-[70px] 2xl:pl-[10rem] xl:pl-[4rem] lg:pl-[1rem] pl-[16px]">
         <div className="grid  grid-cols-1 sm:grid-cols-1 lg:grid-cols-2  xl:grid-cols-2 md:grid-cols-1 gap-3">
           <div className="flex justify-center flex-col md:pb-0 pb-3">
-            <h1 className="text-[26px] lg:text-[26px] md:text-[22x] text-black  font-semibold font-source-pro md:mb-3 mb-2">
+            <h1 className="text-[26px] lg:text-[26px] md:text-[22x] text-black  font-semibold font-source-pro md:mb-3 mb-4">
               Corporate Social Responsibility
             </h1>
-            <p className="text-secondary lg:text-[16px] text-[14px] ">
-              City X-Ray & Scan Clinic is committed to building a happier and
-              healthier society through our constant drive towards Corporate
-              Social Responsibility. Our vision is to educate the unprivileged,
-              spread social awareness and enhance the lives of millions through
-              high-quality, preventive and affordable health care initiatives.
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-2">
+              Our commitment to <span className="font-bold">health</span> doesn’t stop at diagnostics. Through our <span className="font-bold">CSR initiatives</span>, we aim to contribute to the greater good of society by focusing on <span className="font-bold">healthcare accessibility</span>, <span className="font-bold">education</span>, and <span className="font-bold">environmental sustainability</span>.
             </p>
-            <p className="text-secondary lg:text-[16px] text-[14px]">
-              City X-Ray & Scan Clinic has always fulfilled its societal
-              responsibilities, making a positive impact through knowledge and
-              awareness. This begins with promoting the importance of health for
-              individual and the wellness of society at large.
+
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-2">
+              We actively engage in programs that support:
+              <ul className="list-disc pl-6 mt-2">
+                <li><span className="font-bold">Free Health Camps</span> for underprivileged communities</li>
+                <li><span className="font-bold">Awareness Drives</span> on preventive healthcare</li>
+                <li><span className="font-bold">Support for Local Healthcare Facilities</span> with medical equipment and resources</li>
+                <li><span className="font-bold">Educational Programs</span> promoting health literacy and early detection</li>
+              </ul>
             </p>
-            <p className="text-secondary lg:text-[16px] text-[14px]">
-              Our CSR policy expresses the mechanisms and principles we follow
-              to undertake different CSR programs/activities as mentioned
-              herewith.
+
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] ">
+              Our goal is simple: to make <span className="font-bold">quality healthcare</span> affordable, accessible, and impactful for all, especially for those who need it the most.
             </p>
+
           </div>
           <div className="quality-assurance-slider-main px-[73px]">
             <div className="grid grid-cols-3 grid-flow-row-9 grid-flow-row-dense gap-4">
@@ -158,69 +158,55 @@ const CsrLayout = () => {
           <h2 className="text-[24px] lg:text-[24px] md:text-[18x] md:mb-3 mb-2 font-semibold font-source-pro">
             Other CSR Activities
           </h2>
-          <p className="text-secondary lg:text-[16px] text-[14px]">
-            Under our CSR initiatives, we support multiple projects in diverse
-            fields such as:
+          <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
+            In addition to <span className="font-bold">healthcare-focused initiatives</span>, we’re proud to support a range of activities that contribute to <span className="font-bold">social welfare</span> and <span className="font-bold">environmental sustainability</span>, including:
           </p>
+
           <ul className="list-disc ml-[20px] md:ml-[40px] flex flex-col gap-2 mt-[10px]">
             <li className="text-secondary lg:text-[16px] text-[14px]">
-              Promoting and funding projects under the Swachh Bharat Abhiyan in
-              West Delhi
+              🌱 <strong> Environmental Responsibility</strong>: Promoting eco-friendly lab practices, reducing waste, and supporting green initiatives.
             </li>
             <li className="text-secondary lg:text-[16px] text-[14px]">
-              Supporting various animal welfare organisations for the treatment
-              and rehabilitation of stray animals
+              🎓 <strong> Education for All</strong>: Scholarships and learning programs for students pursuing careers in healthcare and science.
             </li>
             <li className="text-secondary lg:text-[16px] text-[14px]">
-              Supporting special children in our communities through societal
-              awareness and proper education
+              🤝 <strong> Community Engagement</strong>: Partnering with local organizations for blood donation camps, health awareness seminars, and wellness workshops.
             </li>
             <li className="text-secondary lg:text-[16px] text-[14px]">
-              Promoting tree plantations in different areas of West Delhi with
-              the objective to make the planet a better place to live in.
+              💊 <strong> Healthcare Support During Crises</strong>: Providing diagnostic support and medical aid during health emergencies and natural disasters.
             </li>
           </ul>
         </div>
       </div>
       <div className="container py-[35px] md:py-[70px] g-white">
         <h2 className="lg:text-[24px] text-xl font-semibold md:mb-3 mb-2 font-source-pro">
-          How We Measure Our Quality Standards?
+          How We Measure the Impact of Our CSR Initiatives
         </h2>
         <p className="text-secondary lg:text-[16px] text-[14px]">
-          Being a top-tier and trusted healthcare diagnostic centre in Delhi, we
-          use different quality indicators. This enables us to constantly
-          monitor our Quality Assurance programme, upgrade our systems and
-          procedures, and maintain high levels of efficiency & accuracy. These
-          include:
+          We believe in creating measurable, lasting change. To ensure our efforts are effective, we regularly track:
         </p>
         <ul className="list-disc ml-[20px] md:ml-[40px] flex flex-col gap-2 mt-[32px]">
           <li className="text-secondary lg:text-[16px] text-[14px]">
-            Recalled patients log
+            <strong> Community Reach</strong>: The number of people and communities positively impacted by our programs.
           </li>
           <li className="text-secondary lg:text-[16px] text-[14px]">
-            Regular customer feedback
+            <strong> Health Outcomes</strong>: Improvements in health awareness, early detection rates, and access to diagnostics.
           </li>
           <li className="text-secondary lg:text-[16px] text-[14px]">
-            Clinicians feedback
+            <strong> Sustainability Metrics</strong>: Reduction in our environmental footprint through eco-friendly practices.
           </li>
           <li className="text-secondary lg:text-[16px] text-[14px]">
-            Interobserver log
+            <strong> Feedback Mechanisms</strong>: Gathering insights from beneficiaries and partners to refine and improve our initiatives.
           </li>
           <li className="text-secondary lg:text-[16px] text-[14px]">
-            Adverse reaction log
-          </li>
-          <li className="text-secondary lg:text-[16px] text-[14px]">
-            Delayed reports
-          </li>
-          <li className="text-secondary lg:text-[16px] text-[14px]">
-            TAT monitoring
+            <strong> Partnership Effectiveness</strong>: Collaborating with NGOs, government bodies, and local organizations to amplify our impact.
           </li>
         </ul>
         <br />
-        <p className="text-secondary lg:text-[16px] text-[14px]">
-          These quality indicators pave the way for continuous improvement,
-          optimizing our processes and achieving higher patient satisfaction
+        <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
+          At Kaivee Healthcare, we believe that <span className="font-bold">healthy communities</span> build a <span className="font-bold">healthier future</span>. Our <span className="font-bold">CSR journey</span> reflects our dedication to not just diagnosing health issues, but also driving meaningful change in the world around us.
         </p>
+
       </div>
     </>
   );
