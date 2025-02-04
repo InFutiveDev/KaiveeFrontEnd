@@ -536,69 +536,23 @@ const HomeLayout = () => {
                   </h2>
                   <div className="mt-[12px]">
                     <div className="text-secondary text-sm lg:text-[16px] ">
-                      Kaivee Healthcare is a trusted diagnostic center in Delhi,
-                      offering a complete suite of high-quality, reliable, and
-                      accurate diagnostic procedures in Radiology, Pathology,
-                      Neurology, and Cardiology – all under one roof.
+                      At<strong> Kaivee Healthcare</strong>, we offer a full spectrum of diagnostic services designed for preventive, routine, and specialized healthcare needs.
                     </div>
 
                     <div className="text-base lg:text-[16px] font-semibold mt-2">
-                      Comprehensive Diagnostic Solutions Under One Roof!
+                      🔬 Blood & Routine Tests
                     </div>
+                    <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
+                      <li>Complete Blood Count (CBC)</li>
+                      <li>Lipid Profile (Cholesterol, Triglycerides)</li>
+                      <li>Liver & Kidney Function Tests</li>
+                      <li>Diabetes Screening (HbA1c, Fasting Blood Sugar)</li>
+                      <li>Thyroid Function Tests</li>
+                    </ul>
 
-                    <div className=" text-sm lg:text-[16px] !mt-2">
-                      <span className="text-secondary">
-                        When it comes to excellence in diagnostics, Kaivee
-                        Healthcare is a name that people count upon for a
-                        high-quality, safe, and best diagnostic centre in Delhi.
-                      </span>
-                      {!readMore ? (
-                        <span className="text-secondary">...</span>
-                      ) : (
-                        <div>
-                          <span className="text-secondary">
-                            The brainchild of Doctors
-                          </span>
-                          <h2 className="!text-[24px] my-2 text-[#212529]">
-                            Our Services
-                          </h2>
-                          <p className="font-bold">You’re In Safe Hands!</p>
-                          {ourServices?.map((item, index) => {
-                            return (
-                              <section key={index}>
-                                <div className="mt-2 font-semibold">
-                                  {item.title}
-                                </div>
-                                <p className="text-secondary">
-                                  {item.description}{" "}
-                                </p>
-                              </section>
-                            );
-                          })}
-                          <h2 className="!text-[24px] my-2 text-black">
-                            Why Choose Us?
-                          </h2>
-                          <p className="font-bold">Book A Diagnostic</p>
-                          <p className="text-slate-500 my-2">
-                            Here’s what makes us a premier diagnostic centre in
-                            Delhi:
-                          </p>
-                          {whyChooseUs?.map((item, index) => {
-                            return <p key={index}>{item.description}</p>;
-                          })}
-                          <p className="text-slate-500 my-2">
-                            trusted choice when considering the best diagnostic
-                            center near me in Delhi.
-                          </p>
-                        </div>
-                      )}
-                      <span
-                        className="font-bold cursor-pointer"
-                        onClick={() => setReadMore(!readMore)}
-                      >
-                        {!readMore ? "Read More" : "Read less"}
-                      </span>
-                    </div>
+
+
+
                   </div>
                 </div>
               </div>

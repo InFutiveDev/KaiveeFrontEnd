@@ -26,7 +26,7 @@ const Index = () => {
                 The information provided on the<strong> Kaivee Healthcare </strong> website, including all text, graphics, images, and other materials, is intended for informational purposes only. By accessing or using our website and services, you agree to the following disclaimer terms. If you do not agree with the terms outlined in this disclaimer, please refrain from using our website.              </p>
             </div>
             <h2 className=" text-[24px] mt-3 font-semibold">
-              User Responsibilities
+              Medical Disclaimer
             </h2>
             <div className="mt-3">
               <ul className="list-disc ms-9 text-gray-500 text-[16px]">
@@ -37,100 +37,82 @@ const Index = () => {
 
                 </li>
                 <li>
-                  <p><strong>Use the website and services responsibly</strong>: You agree to use our website and services only for lawful purposes and in a manner that does not infringe upon the rights of others or restrict their use of services.</p>
+                  <p><strong>Accuracy of Information</strong>: While Kaivee Healthcare strives to provide accurate and up-to-date information, the information provided may not always reflect the most current medical standards or research. We make no representations or warranties regarding the completeness or accuracy of the information on this website.
+                  </p>
                 </li>
                 <li>
                   <p >
-                    <strong>Adhere to medical advice</strong>: While we provide comprehensive diagnostic services, please follow any medical advice or guidance given by your healthcare provider.
+                    <strong>Reliability of Test Results</strong>: We ensure the highest quality standards in our diagnostic tests and procedures. However, due to the nature of medical tests, there can be errors or variations in results. Kaivee Healthcare is not responsible for any decisions made based on test results. Always consult a healthcare professional for interpretation of diagnostic test results.                    .
                   </p>
                 </li>
               </ul>
             </div>
             <h2 className=" text-[24px] mt-3 font-semibold">
-              Appointments & Bookings
+              Liability Disclaimer
             </h2>
             <div className="mt-3">
 
               <ul className="list-disc ms-9 text-gray-500 text-[16px]">
                 <li>
                   <p >
-                    <strong>Booking Process:</strong> Users can book appointments for tests or home collection services through the website or mobile application. By booking, you confirm your understanding and agreement to these Terms and Conditions.s
+                    <strong>Limitation of Liability:</strong> Kaivee Healthcare will not be liable for any<strong>direct, indirect, incidental, special, consequential, or punitive damages </strong> resulting from the use of, or inability to use, this website or any services offered by us. This includes, without limitation, any errors or omissions in the content, loss of data, or loss of income or profits.                    .
                   </p>
 
                 </li>
                 <li>
-                  <p><strong>Home Collection:</strong>: For home collection services, the user agrees to ensure accurate details (address, contact, preferred time) are provided for smooth collection.</p>
-                </li>
-                <li>
-                  <p >
-                    <strong>Cancellation/Rescheduling</strong>: You may cancel or reschedule appointments in accordance with our cancellation policy. Please refer to the individual appointment page for further details on rescheduling or cancellation procedures.
-                  </p>
-                </li>
-                <li>
-                  <p >
-                    <strong>Service Availability</strong>:  Availability of home sample collection or other services may vary by location.
-                  </p>
+                  <p><strong>Third-Party Links:</strong>: Our website may contain links to third-party websites for informational purposes. Kaivee Healthcare does not control or endorse these external websites, and we are not responsible for their content, practices, or privacy policies. Use of any third-party links is at your own risk..</p>
                 </li>
               </ul>
             </div>
             <h2 className="text-[24px] mt-3 font-semibold">
-              Privacy & Data Protection
+              No Guarantee of Results
             </h2>
             <div className="mt-3">
               <p className="text-gray-500 text-[18px] mt-3">
-                We value your privacy and are committed to protecting your personal data. For detailed information on how we collect, use, and protect your data, please refer to our Privacy Policy.
+                Kaivee Healthcare does not guarantee specific results from the use of our services. Every individual’s health and response to diagnostic services vary, and we do not guarantee that our services will achieve any particular health outcome.
+              </p>
+              <p className="text-gray-500 text-[18px] mt-3">
+                The effectiveness of our services depends on several factors, including individual health conditions, adherence to prescribed procedures, and follow-up care.
               </p>
             </div>
             <h2 className="text-[24px] mt-3 font-semibold">
-              Limitation of Liability
+              Changes to Content
             </h2>
             <div className="mt-3">
               <p className="text-gray-500 text-[18px] mt-3">
-                While we strive to provide accurate diagnostic services, Kaivee Healthcare is not responsible for any medical decisions made based on the information provided by our services. The user agrees that Kaivee Healthcare shall not be liable for any loss, injury, or damages resulting from the use of our services, except as required by law.            </p>
-            </div>
-
-
-            <h2 className="text-[24px] mt-3 font-semibold">
-              Intellectual Property
-
-            </h2>
-            <div className="mt-3">
-              <p className="text-gray-500 text-[18px] mt-3">
-                The content, logos, designs, and materials on this website are the intellectual property of Kaivee Healthcare. Users may not reproduce, distribute, or use any part of this website for commercial purposes without prior written permission.
+                We reserve the right to modify, update, or remove any content on this website at our discretion. The information provided is subject to change without notice.
               </p>
-            </div>
-
-            <h2 className="text-[24px] mt-3 font-semibold">
-              Modifications to the Terms and Conditions
-
-            </h2>
-            <div className="mt-3">
               <p className="text-gray-500 text-[18px] mt-3">
-                Kaivee Healthcare reserves the right to modify, update, or change these Terms and Conditions at any time without prior notice. The most current version of the Terms and Conditions will be available on our website, and it is your responsibility to review them periodically.            </p>
+                We also reserve the right to update this disclaimer page at any time. Any changes will be reflected on this page with an updated date. Please review this page periodically to stay informed about the latest terms.              </p>
             </div>
-
             <h2 className="text-[24px] mt-3 font-semibold">
               Governing Law
 
             </h2>
             <div className="mt-3">
               <p className="text-gray-500 text-[18px] mt-3">
-                These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be resolved in the courts of India.
-              </p>
+                This disclaimer shall be governed by and construed in accordance with the laws of India. Any disputes arising from the use of our website or services shall be resolved in the courts of India.              </p>
             </div>
+
+
+
+
             <h2 className="text-[24px] mt-3 font-semibold">
               Contact Us
 
             </h2>
             <div className="mt-3">
               <p className="text-gray-500 text-[18px] mt-3">
-                If you have any questions regarding these Terms and Conditions, please feel free to contact us at:
+                If you have any questions regarding this Disclaimer or need further clarification, please feel free to contact us at:
                 <p>📧<strong> Email</strong> : info@kaiveehealthcare.com</p>
                 <p>📞<strong> Phone</strong> : +91++++++++++</p>
               </p>
             </div>
+            <div>
 
+            </div>
           </div>
+          <div className="mt-5"></div>
         </div>
       </LazyLoad>
     </>

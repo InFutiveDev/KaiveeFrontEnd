@@ -56,8 +56,7 @@ const RefundAndCancellationPolicy = () => {
           </div>
           <div className="mt-3">
             <p className="list-disc text-gray-500 text-[16px]">
-              All services are non-refundable, but we will be more than happy to
-              schedule a corrective service free of charge.
+              All services are<strong> non-refundable</strong>, but if there’s an issue, we’ll be happy to<strong> schedule a corrective service </strong>free of charge. For cancellations, please notify us at least<strong> 24 hours in advance </strong>to avoid any charges.
             </p>
           </div>
         </div>

@@ -54,37 +54,61 @@ const PrivacyPolicy = () => {
               Privacy Policy
             </h1>
           </div>
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Privacy & Data Protection
+          </h2>
           <div className="mt-3">
-            <ul className="ms-9 text-gray-500 text-[16px]">
-              <li className="pb-2">
-                City Xray and Scan Clinic Pvt. Ltd. is committed to protect your
-                privacy. It is important for us that our patients and the
-                visitors to our site retain their privacy while taking advantage
-                of the services that we offer. We employ the highest levels of
-                security to keep your personal information strictly
-                confidential.
-              </li>
-              <li className="pb-2">
-                We will not disclose or sell any of your personal information,
-                including your name, address, age, sex or medical history to any
-                third party without your permission.
-              </li>
-              <li className="pb-2">
-                Although we use cookie technology to help users navigate our
-                site efficiently, we never use cookies to store personal
-                information, such as credit card numbers. Please be aware, that
-                our site contains links to other sites and that the privacy
-                practices of other sites may differ from those of City Xray and
-                Scan Clinic Pvt. Ltd. If you have any additional questions or
-                concerns regarding our privacy policies, please email us at
-                web@cityxrayclinic.com and we'll respond within 48 hours.
-              </li>
-              <li className="pb-2">
-                We reserve the right to change or update these policies at any
-                time upon reasonable notice, effective immediately upon posting
-                to this site.
-              </li>
-            </ul>
+            <p className="text-gray-500 text-[18px] mt-3">
+              We value your privacy and are committed to protecting your personal data. For detailed information on how we collect, use, and protect your data, please refer to our Privacy Policy.
+            </p>
+          </div>
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Limitation of Liability
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              While we strive to provide accurate diagnostic services, Kaivee Healthcare is not responsible for any medical decisions made based on the information provided by our services. The user agrees that Kaivee Healthcare shall not be liable for any loss, injury, or damages resulting from the use of our services, except as required by law.            </p>
+          </div>
+
+
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Intellectual Property
+
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              The content, logos, designs, and materials on this website are the intellectual property of Kaivee Healthcare. Users may not reproduce, distribute, or use any part of this website for commercial purposes without prior written permission.
+            </p>
+          </div>
+
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Modifications to the Terms and Conditions
+
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              Kaivee Healthcare reserves the right to modify, update, or change these Terms and Conditions at any time without prior notice. The most current version of the Terms and Conditions will be available on our website, and it is your responsibility to review them periodically.            </p>
+          </div>
+
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Governing Law
+
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be resolved in the courts of India.
+            </p>
+          </div>
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Contact Us
+
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              If you have any questions regarding these Terms and Conditions, please feel free to contact us at:
+              <p>📧<strong> Email</strong> : info@kaiveehealthcare.com</p>
+              <p>📞<strong> Phone</strong> : +91++++++++++</p>
+            </p>
           </div>
         </div>
       </div>
