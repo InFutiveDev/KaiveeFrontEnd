@@ -54,93 +54,118 @@ const TermsOfUse = () => {
             <h1 className="!text-[26px] font-medium text-[#D41958]">
               Terms & Conditions
             </h1>
-            <p className="text-gray-500 text-[16px] mt-3">
-              {`The Website Owner, including subsidiaries and affiliates ("Website" or "Website Owner" or "we" or "us" or "our") provides the information contained on the website or any of the pages comprising the website ("website") to visitors ("visitors") (cumulatively referred to as "you" or "your" hereinafter) subject to the terms and conditions set out in these website terms and conditions, the privacy policy and any other relevant terms and conditions, policies and notices which may be applicable to a specific section or module of the website.`}
+            <p className="text-gray-500 text-[18px] mt-3">
+              Welcome to<strong> Kaivee Healthcare </strong> ! By accessing and using our website and services, you agree to be bound by the following<strong> Terms and Conditions</strong>. Please read these terms carefully before using our services. If you do not agree with these terms, please refrain from using our website.
             </p>
           </div>
           <h2 className=" text-[24px] mt-3 font-semibold">
-            Terms & Conditions
+            User Responsibilities
           </h2>
           <div className="mt-3">
+            <p className="text-gray-500 text-[18px] ">By using our services, you agree to:</p>
             <ul className="list-disc ms-9 text-gray-500 text-[16px]">
               <li>
-                Welcome to our website. If you continue to browse and use this
-                website you are agreeing to comply with and be bound by the
-                following terms and conditions of use, which together with our
-                privacy policy govern Kaivee Healthcare relationship with you in
-                relation to this website.
+                <p >
+                  <strong>Provide accurate information:</strong> All information you provide must be true, complete, and accurate.
+                </p>
+
               </li>
               <li>
-                {`The term 'City X-ray & Scan Clinic Pvt. Ltd.' or 'us' or 'we' refers to the owner of the website whose registered office is 5A/34, Tilak Nagar, New Delhi-110018. Our company registration number is U85110DL2002PTC117135. The term 'you' refers to the user or viewer of our website.`}
+                <p><strong>Use the website and services responsibly</strong>: You agree to use our website and services only for lawful purposes and in a manner that does not infringe upon the rights of others or restrict their use of services.</p>
+              </li>
+              <li>
+                <p >
+                  <strong>Adhere to medical advice</strong>: While we provide comprehensive diagnostic services, please follow any medical advice or guidance given by your healthcare provider.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <h2 className=" text-[24px] mt-3 font-semibold">
+            Appointments & Bookings
+          </h2>
+          <div className="mt-3">
+
+            <ul className="list-disc ms-9 text-gray-500 text-[16px]">
+              <li>
+                <p >
+                  <strong>Booking Process:</strong> Users can book appointments for tests or home collection services through the website or mobile application. By booking, you confirm your understanding and agreement to these Terms and Conditions.s
+                </p>
+
+              </li>
+              <li>
+                <p><strong>Home Collection:</strong>: For home collection services, the user agrees to ensure accurate details (address, contact, preferred time) are provided for smooth collection.</p>
+              </li>
+              <li>
+                <p >
+                  <strong>Cancellation/Rescheduling</strong>: You may cancel or reschedule appointments in accordance with our cancellation policy. Please refer to the individual appointment page for further details on rescheduling or cancellation procedures.
+                </p>
+              </li>
+              <li>
+                <p >
+                  <strong>Service Availability</strong>:  Availability of home sample collection or other services may vary by location.
+                </p>
               </li>
             </ul>
           </div>
           <h2 className="text-[24px] mt-3 font-semibold">
-            The use of this website is subject to the following terms of use:
+            Privacy & Data Protection
           </h2>
           <div className="mt-3">
-            <ul className="list-disc ms-9 text-gray-500 text-[16px]">
-              <li>
-                The content of the pages of this website is for your general
-                information and use only. It is subject to change without
-                notice.
-              </li>
-              <li>
-                Neither we nor any third parties provide any warranty or
-                guarantee as to the accuracy, timeliness, performance,
-                completeness or suitability of the information and materials
-                found or offered on this website for any particular purpose. You
-                acknowledge that such information and materials may contain
-                inaccuracies or errors and we expressly exclude liability for
-                any such inaccuracies or errors to the fullest extent permitted
-                by law.
-              </li>
-              <li>
-                Your use of any information or materials on this website is
-                entirely at your own risk, for which we shall not be liable. It
-                shall be your own responsibility to ensure that any products,
-                services or information available through this website meet your
-                specific requirements.
-              </li>
-              <li>
-                This website contains material which is owned by or licensed to
-                us. This material includes, but is not limited to, the design,
-                layout, look, appearance and graphics. Reproduction is
-                prohibited other than in accordance with the copyright notice,
-                which forms part of these terms and conditions.
-              </li>
-              <li>
-                All trademarks reproduced in this website which are not the
-                property of, or licensed to, the operator are acknowledged on
-                the website.
-              </li>
-              <li>
-                Unauthorized use of this website may give rise to a claim for
-                damages and/or be a criminal offence.
-              </li>
-              <li>
-                From time to time this website may also include links to other
-                websites. These links are provided for your convenience to
-                provide further information. They do not signify that we endorse
-                the website(s). We have no responsibility for the content of the
-                linked website(s).
-              </li>
-              <li>
-                You may not create a link to this website from another website
-                or document without the prior written consent from City X-Ray
-                and Scan Clinic Pvt. Ltd.
-              </li>
-              <li>
-                Your use of this website and any dispute arising out of such use
-                of the website is subject to the laws of India or other
-                regulatory authority.
-              </li>
-            </ul>
+            <p className="text-gray-500 text-[18px] mt-3">
+              We value your privacy and are committed to protecting your personal data. For detailed information on how we collect, use, and protect your data, please refer to our Privacy Policy.
+            </p>
           </div>
-          <p className="text-lg font-semibold mt-3">
-            {`"We shall be under no liability whatsoever in respect of any loss or damage arising directly or indirectly out of the decline of authorization for any transaction, on Account of the Cardholder having exceeded the pre-set limit mutually agreed by us with our acquiring bank from time to time"`}
-          </p>
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Limitation of Liability
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              While we strive to provide accurate diagnostic services, Kaivee Healthcare is not responsible for any medical decisions made based on the information provided by our services. The user agrees that Kaivee Healthcare shall not be liable for any loss, injury, or damages resulting from the use of our services, except as required by law.            </p>
+          </div>
+
+
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Intellectual Property
+
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              The content, logos, designs, and materials on this website are the intellectual property of Kaivee Healthcare. Users may not reproduce, distribute, or use any part of this website for commercial purposes without prior written permission.
+            </p>
+          </div>
+
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Modifications to the Terms and Conditions
+
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              Kaivee Healthcare reserves the right to modify, update, or change these Terms and Conditions at any time without prior notice. The most current version of the Terms and Conditions will be available on our website, and it is your responsibility to review them periodically.            </p>
+          </div>
+
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Governing Law
+
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be resolved in the courts of India.
+            </p>
+          </div>
+          <h2 className="text-[24px] mt-3 font-semibold">
+            Contact Us
+
+          </h2>
+          <div className="mt-3">
+            <p className="text-gray-500 text-[18px] mt-3">
+              If you have any questions regarding these Terms and Conditions, please feel free to contact us at:
+              <p>📧<strong> Email</strong> : info@kaiveehealthcare.com</p>
+              <p>📞<strong> Phone</strong> : +91++++++++++</p>
+            </p>
+          </div>
+
         </div>
+
       </div>
       <div className="mt-5"></div>
     </div>
