@@ -44,7 +44,7 @@ const Login = ({ type, href }) => {
             </defs>
           </svg> */}
 
-          <span className="cartText"> Login|Singup</span>
+          <span className="cartText"> Login|Signup</span>
         </div>
       ) : (
         <div

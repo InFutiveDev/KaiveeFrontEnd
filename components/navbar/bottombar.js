@@ -54,6 +54,15 @@ const Bottombar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const isBaseURL = [
+    "/about",
+    "/about/our-team",
+    "/about/quality-assurance",
+    "/about/awards-accreditations",
+    "/about/csr",
+  ].includes(router.asPath);
+
   return (
     <div className="nav-bg">
       <div
@@ -98,9 +107,8 @@ const Bottombar = () => {
               <NavItem>
                 <Link
                   prefetch
-                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block  ${
-                    asPath == "/" && "active"
-                  }`}
+                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block  ${asPath == "/" && "active"
+                    }`}
                   href="/"
                   onClick={closeMenu}
                 >
@@ -108,16 +116,15 @@ const Bottombar = () => {
                 </Link>
               </NavItem>
               <NavItem>
-                <UncontrolledDropdown className="hover-menu-about">
+                <UncontrolledDropdown className="hover-menu-about ">
                   <div
-                    className={`flex justify-between items-start sm:p-0 p-[15px]  ${
-                      aboutOpen ? "bg-[#7DB440]" : ""
-                    } `}
+
+                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[15px]  ${aboutOpen ? "bg-[#7DB440]" : ""
+                      } `}
                   >
                     <div
-                      className={`transition-all font-[400] menuText !text-[16px]  ${
-                        asPath == "" && "active"
-                      }`}
+                      className={`transition-all font-[400] menuText !text-[16px]  ${asPath == "" && "active"
+                        }`}
                     >
                       About Us
                     </div>
@@ -136,23 +143,20 @@ const Bottombar = () => {
                   </div>
                   <div className="pl-[28px] pt-[2px]">
                     <DropdownMenu
-                      className={`${
-                        !isXS ? "show-menu-about" : "!block"
-                      }  m-0 transition-all duration-1000 transform ease-in-out  ${
-                        aboutOpen
+                      className={`${!isXS ? "show-menu-about" : "!block"
+                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${aboutOpen
                           ? " !h-auto	"
                           : isXS
-                          ? "overflow-hidden  !h-0  !p-0 !border-none"
-                          : ""
-                      } `}
+                            ? "overflow-hidden  !h-0  !p-0 !border-none"
+                            : ""
+                        } `}
                     >
                       <Link
                         prefetch
                         href={`/about`}
                         onClick={closeMenu}
-                        className={`transition-all align-middle menuText  ${
-                          asPath == "/about" && "!text-[#D41958] !font-medium"
-                        }`}
+                        className={`transition-all align-middle menuText   ${asPath == "/about" && "!text-[#D41958] !font-medium"
+                          }`}
                       >
                         <DropdownItem className="transition-all  hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           About us
@@ -163,10 +167,9 @@ const Bottombar = () => {
                         prefetch
                         href={`/about/our-team`}
                         onClick={closeMenu}
-                        className={`transition-all align-middle menuText  ${
-                          asPath == "/about/our-team" &&
+                        className={`transition-all align-middle menuText  ${asPath == "/about/our-team" &&
                           "!text-[#D41958] !font-medium"
-                        }`}
+                          }`}
                       >
                         <DropdownItem className="transition-all  hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Our Team
@@ -177,10 +180,9 @@ const Bottombar = () => {
                         prefetch
                         href={`/about/quality-assurance`}
                         onClick={closeMenu}
-                        className={`transition-all align-middle menuText  ${
-                          asPath == "/about/quality-assurance" &&
+                        className={`transition-all align-middle menuText  ${asPath == "/about/quality-assurance" &&
                           "!text-[#D41958] !font-medium"
-                        }`}
+                          }`}
                       >
                         <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Quality Assurance
@@ -190,10 +192,9 @@ const Bottombar = () => {
                         prefetch
                         href={`/about/awards-accreditations`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${
-                          asPath == "/about/awards-accreditations" &&
+                        className={`align-middle menuText  ${asPath == "/about/awards-accreditations" &&
                           "!text-[#D41958] !font-medium"
-                        }`}
+                          }`}
                       >
                         <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Awards & Accreditations
@@ -203,10 +204,9 @@ const Bottombar = () => {
                         prefetch
                         href={`/about/csr`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${
-                          asPath == "/about/csr" &&
+                        className={`align-middle menuText  ${asPath == "/about/csr" &&
                           "!text-[#D41958] !font-medium"
-                        }`}
+                          }`}
                       >
                         <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           CSR
@@ -240,10 +240,9 @@ const Bottombar = () => {
                     prefetch
                     onClick={closeMenu}
                     href="/health-packages"
-                    className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${
-                      asPath?.includes("/health-packages") &&
+                    className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${asPath?.includes("/health-packages") &&
                       "active text-[#D41958] border-b-2 "
-                    }`}
+                      }`}
                   >
                     Health Packages
                   </Link>
@@ -253,15 +252,14 @@ const Bottombar = () => {
                 <Link
                   prefetch
                   onClick={closeMenu}
-                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[15px] inline-block ${
-                    asPath == "/book-a-test" && "active"
-                  }`}
+                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[15px] inline-block ${asPath == "/book-a-test" && "active"
+                    }`}
                   href="/book-a-test"
                 >
                   Book a Test
                 </Link>
               </NavItem>
-             
+
               {/* <NavItem>
                 <UncontrolledDropdown className="hover-menu">
                   <div
@@ -316,9 +314,8 @@ const Bottombar = () => {
                 <Link
                   prefetch
                   onClick={closeMenu}
-                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${
-                    asPath == "/print-media-coverage" && "active"
-                  }`}
+                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${asPath == "/print-media-coverage" && "active"
+                    }`}
                   href="/locate-us"
                 >
                   Locate
@@ -329,9 +326,8 @@ const Bottombar = () => {
                 <Link
                   prefetch
                   onClick={closeMenu}
-                  className={` cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[15px] inline-block ${
-                    asPath == "/feedback" && "active"
-                  }`}
+                  className={` cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[15px] inline-block ${asPath == "/feedback" && "active"
+                    }`}
                   href="/feedback"
                 >
                   Feedback
@@ -341,9 +337,8 @@ const Bottombar = () => {
                 <Link
                   prefetch
                   onClick={closeMenu}
-                  className={` cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${
-                    asPath == "/contact-us" && "active"
-                  }`}
+                  className={` cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${asPath == "/contact-us" && "active"
+                    }`}
                   href="/contact-us"
                 >
                   Contact Us
