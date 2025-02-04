@@ -39,87 +39,49 @@ const CorporateHealthLayout = () => {
                 Corporate Health Enquiry
               </h1>
               <div className="flex flex-col gap-y-2">
-                <p className="text-secondary text-[16px] lg:text-[16px] md:text-xl">
-                  {` Welcome to the us! We are dedicated to promoting the health and wellbeing of your organization's most valuable asset – your employees. Our comprehensive
-                  corporate health services are designed to empower businesses in us to prioritise the
-                  health and productivity of their workforce.`}
+                <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
+                  At <span className="font-bold">Kaivee Healthcare</span>, we understand the importance of a <span className="font-bold">healthy workforce</span> in driving business success. Our <span className="font-bold">Corporate Health Enquiry</span> services are designed to provide <span className="font-bold">comprehensive health solutions</span> tailored to your organization’s needs. Whether you are looking to offer <span className="font-bold">employee wellness programs</span>, <span className="font-bold">preventive health check-ups</span>, or <span className="font-bold">customized diagnostic services</span>, we are here to partner with you to ensure the well-being of your employees.
                 </p>
+                <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
+                  By collaborating with us, you’ll ensure that your employees have access to
+                  <span className="font-bold"> high-quality diagnostics</span> and
+                  <span className="font-bold"> preventive healthcare</span>, enabling them to stay
+                  <span className="font-bold"> healthier</span>,
+                  <span className="font-bold"> happier</span>, and
+                  <span className="font-bold"> more productive</span>.
+                </p>
+
+
                 <h2 className="text-[16px] lg:text-[24px] md:text-[18x]  font-semibold font-source-pro">
                   Key Benefits of Corporate Health Enquiry
                 </h2>
                 {/* <p className="text-black font-semibold text-[32px] "></p> */}
-                <p className="text-secondary text-[16px]  lg:text-[16px] md:text-xl">
-                  <b>1. Customized Health Solutions:</b> At us, we understand
-                  that each organization has unique healthcare needs. We offer
-                  customized health packages tailored to your company's
-                  requirements, ensuring that you receive the most relevant and
-                  effective services.
+                <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
+                  <b>1. 🌟 Improved Employee Well-Being:</b> Regular health check-ups and preventive care can <strong>identify health risks </strong>  early, leading to healthier, more engaged employees.
                 </p>
-                <p className="text-secondary text-[16px] lg:text-[16px] md:text-xl  ">
-                  <b>2. Efficient Health Screenings:</b> Our state-of-the-art
-                  diagnostic equipment and experienced medical professionals
-                  ensure quick and accurate health screenings. This efficiency
-                  minimizes downtime for your employees and keeps your business
-                  running smoothly.
+                <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl  ">
+                  <b>2. 💼 Boost Productivity & Engagement:</b> A healthier workforce is a more productive one. Offering healthcare benefits shows your employees that you care, leading to higher <strong>job satisfaction and increased engagement</strong> .
                 </p>
-                <p className="text-secondary text-[16px]  lg:text-[16px] md:text-xl">
-                  <b> 3. Comprehensive Health Assessments:</b> Our corporate
-                  health services encompass a wide range of assessments,
-                  including general health check-ups, wellness programs,
-                  vaccinations, and specialized tests. This comprehensive
-                  approach enables you to address various health concerns within
-                  your workforce.
+                <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl">
+                  <b> 3. 💰 Cost-Effective Healthcare Solutions:</b> Offering health services through corporate tie-ups is<strong> more affordable </strong> than individual health plans. It’s an <strong> investment in long-term productivity </strong>and reduced absenteeism.
                 </p>
-                <p className="text-secondary text-[16px]  lg:text-[16px] md:text-xl">
-                  <b>4. Employee Well-Being:</b> Prioritizing employee health
-                  contributes to increased morale and job satisfaction. By
-                  offering our corporate health services, you demonstrate your
-                  commitment to the well-being of your team, fostering a
-                  positive work environment.
+                <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
+                  <b>4. 🩺 Comprehensive Health Screenings:</b> We offer a variety of<strong> health packages </strong>designed specifically for organizations. From basic screenings to advanced tests, our packages are customizable to fit your company’s needs.
                 </p>
-                <p className="text-secondary text-[16px] lg:text-[16px] md:text-xl">
-                  <b>5. Cost-Efficiency:</b> Investing in preventive healthcare
-                  can significantly reduce long-term healthcare costs for your
-                  organization. Detecting health issues early can prevent more
-                  extensive and costly treatments down the line.
+                <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl">
+                  <b>5. 🔄 Convenient Services:</b> Our services are designed with your employees’ convenience in mind, including<strong> on-site check-ups, home sample collections, and easy access to reports</strong>.
+
                 </p>
-                <p className="text-secondary text-[16px]  lg:text-[16px] md:text-xl">
-                  <b> 6. Timely Reporting:</b> We provide detailed reports and
-                  insights to help you track and manage your employees' health.
-                  These reports assist in making informed decisions related to
-                  employee benefits and wellness programs.
+                <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
+                  <b> 6. 📊 Data-Driven Insights:</b> Access detailed <strong>health reports and analytics </strong> that can help your company monitor overall employee health trends and identify potential wellness programs.
                 </p>
-                <p className="text-secondary text-[16px]  lg:text-[16px] md:text-xl">
-                  <b> 7. Expert Guidance:</b> Our experienced medical
-                  professionals are available to provide guidance and
-                  recommendations based on the health data collected during
-                  screenings. This ensures that your organization can take
-                  proactive measures to address any health concerns.
+
+                <p>
+                  By integrating <span className="font-bold">Kaivee Healthcare</span> into your organization’s health
+                  initiatives, you are investing in <span className="font-bold">preventive care</span>, <span className="font-bold">wellness</span>,
+                  and the overall success of your team.
                 </p>
-                <p className="text-secondary text-[16px]  lg:text-[16px] md:text-xl">
-                  <b> 8. Convenience:</b> We offer flexible scheduling options
-                  to accommodate your company's operational hours. Our
-                  conveniently located clinics in City X make it easy for your
-                  employees to access our services.
-                </p>
-                <p className="text-secondary text-[16px]  lg:text-[16px] md:text-xl">
-                  <b> 9. Confidentiality:</b> We prioritize the privacy and
-                  confidentiality of all health-related information. Your
-                  employees can trust that their health data will be handled
-                  with the utmost care and discretion.
-                </p>
-                <p className="text-secondary text-[16px]  lg:text-[16px] md:text-xl">
-                  <b>10. Compliance and Certification:</b> Our corporate health
-                  services are compliant with industry standards and
-                  regulations. We can provide the necessary certifications and
-                  documentation required by regulatory authorities.
-                </p>
-                <p className="text-secondary text-[16px] lg:text-[16px] md:text-xl">
-                  {` Invest in the health and well-being of your employees with City X-Ray and Scan Clinic's
-                  corporate health services. Contact us today to discuss how we can partner with your
-                  organization to ensure a healthier, happier, and more productive workforce. Together, we can
-                  build a healthier future for your business and your employees.`}
-                </p>
+                <p>Let us help you create a healthier, happier, and more productive workplace.</p>
               </div>
             </div>
             <div className="col-span-1 h-min  sticky lg:top-[197px] xl:top-[161px]  lg:order-last order-first">

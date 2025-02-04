@@ -97,66 +97,64 @@ const FreeHomeSampleCollectionLayout = () => {
 
               <div className="flex flex-col gap-y-2">
                 <p className="text-secondary text-[16px] sm:text-[16px]">
-                  In this pandemic, it can be difficult for most people to step
-                  out of their homes for blood checkups. And for others, it can
-                  be risky. At Kaivee, we understand that health cannot take a
-                  backseat even if there’s a COVID-19 outbreak going on. With
-                  the Kaivee home collection service, you have the convenience
-                  of getting blood tests at home at an affordable price without
-                  compromising on your safety. The home visit service is
-                  especially helpful for people having weaker immunity and those
-                  who are at a higher risk of facing major complications from
-                  COVID-19. So instead of heading outside, having your blood
-                  sample collected at home is a safer way to ensure all health
-                  needs are fulfilled.
+                  At <span className="font-bold">Kaivee Healthcare</span>, we make healthcare more convenient by offering
+                  <span className="font-bold"> home sample collection</span> for your blood tests. Skip the hassle of
+                  visiting a lab and let our <span className="font-bold">certified professionals</span> come to your home
+                  at a time that works best for you.
                 </p>
                 <h2 className="text-lg sm:text-[24px] font-[400] mb-[20px]">
                   You Just Need To Follow Some Simple Steps To Book A Home
                   Collection Visit.
                 </h2>
                 <div className="text-secondary text-[16px] sm:text-[16px]">
-                  <h3 className=" font-normal ">
-                    1. Pick A Convenient Location
+                  <p>
+                    <span className="font-bold ">Booking your home collection</span> with Kaivee Healthcare is easy and quick.
+                    Just follow these <span className="font-bold">simple steps</span>:
+                  </p>
+
+                  <h3 className=" font-bold ">
+                    1. Choose Your Test
                   </h3>
-                  <br />
-                  Testing at home is less stressful than taking the risk of
-                  stepping outside during a pandemic. To book a home visit, all
-                  you need to do is add your location details and qualified
-                  phlebotomists from Metropolis will be at your doorstep for
-                  home blood collection
+
+                  Select the blood tests you want from our wide range of diagnostic services.
                 </div>
                 <div className="text-secondary text-[16px] sm:text-[16px]">
-                  <h3 className=" font-normal ">
-                    2. Professional & Highly Trained Phlebotomists
+                  <h3 className=" font-bold ">
+                    2. Enter Your Details
                   </h3>
-                  <br />
-                  At Metropolis, all our phlebotomists are professional and
-                  highly trained in what they do. They ensure utmost safety and
-                  follow strict hygiene protocols while collecting your blood
-                  samples.
+
+                  Provide your personal details and preferred time for the home visit.
                 </div>
                 <div className="text-secondary text-[16px] sm:text-[16px]">
-                  <h3 className=" font-normal ">
-                    3. Flexibility And Convenience
+                  <h3 className=" font-bold ">
+                    3. Schedule a Convenient Time
                   </h3>
-                  <br />
-                  You can book an appointment as per your convenient time and
-                  get your blood sample collected safely from home. The blood
-                  sample collection from home service is also available on
-                  Sundays.
+
+                  Pick a time that suits you best for the sample collection.
                 </div>
                 <div className="text-secondary text-[16px] sm:text-[16px]">
-                  <h3 className=" font-normal ">
-                    4. Get Your Test Reports Online
+                  <h3 className=" font-bold ">
+                    4. Confirm the Booking
                   </h3>
-                  <br />
-                  Book a home visit and receive your test reports on email
-                  within 24-48 hours of the sample collection. With this
-                  service, you have the peace of mind of getting your blood
-                  sample taken safely at home and the convenience of viewing
-                  your reports online.
+
+                  Complete the booking and get a confirmation of your appointment.
+                </div>
+                <div className="text-secondary text-[16px] sm:text-[16px]">
+                  <h3 className=" font-bold ">
+                    4. Sit Back and Relax:
+                  </h3>
+
+                  Our professional technician will arrive at your location, collect the samples, and ensure your tests are processed with the highest accuracy.
+                </div>
+                <div className="text-secondary text-[16px] sm:text-[16px]">
+                  <h3 className=" font-bold">
+                    4. Get Results Online:
+                  </h3>
+
+                  Receive your test results securely through our online portal—quick and hassle-free.
                 </div>
               </div>
+              <p >It’s that simple to get your blood tests done without leaving your home!</p>
             </div>
           </div>
           <div className="sticky lg:top-[197px] xl:top-[161px] mt-2 h-min flex justify-end lg:w-2/4 ">
@@ -168,10 +166,10 @@ const FreeHomeSampleCollectionLayout = () => {
         <div className="background-image-freehome-sample flex justify-center items-center ">
           <div className="flex px-[30px] justify-center items-center flex-col gap-4">
             <p className="text-white text-center text-3xl font-bold">
-              Prioritize Your Health Today!
+              Book Your Home Collection Today!
             </p>
             <p className="text-white text-center ">
-              ✅ Book Your Health Package Now | 🏠 Home Sample Collection Available | 📋 Get Reports Online, Fast & Hassle-Free
+              🚪 Easy, Convenient, and Fast | 💻 Get Results Online | 📞 24/7 Customer Support
             </p>
             <div className="flex gap-2">
               <Link
