@@ -126,7 +126,7 @@ const HomeLayout = () => {
         <SpinnerComponent />
       ) : (
         <>
-          <section className="py-10 mt-10 banner_slider_wrap relative z-[1] h-[auto] sm:h-[600px]">
+          <section className="py-0 mt-0 banner_slider_wrap relative z-[1] h-[auto] sm:h-[600px]">
             <div className="container flex justify-between items-center h-full">
               <Homebanner />
             </div>
@@ -143,7 +143,7 @@ const HomeLayout = () => {
             </marquee>
           </div> */}
           <div className="container">
-            <div className="py-4 mt-4 mb-1 bg-white bg-opacity-50">
+            <div className="py-4 mt-0 mb-1 bg-white bg-opacity-50">
               <div className="container mx-auto grid grid-cols-3 md:grid-cols-6 gap-4 text-center">
                 {features.map((feature, index) => (
                   <div key={index} className="flex flex-col items-center space-y-2 ">
@@ -516,43 +516,83 @@ const HomeLayout = () => {
               </div>
             </div>
           </div>
+
           <div className="bg-[#F7F7FB]">
-            <div className="container  pt-4 pb-4">
+            <div className="container pt-4 pb-4">
               <h1 className="text-center font-semibold text-lg lg:text-xl xl:text-[26px] font-source-pro text-black">
-                ONE-STOP DESTINATION FOR ALL YOUR TEST - BEST DIAGNOSTIC CENTRE
-                IN REGION!
+                ONE-STOP DESTINATION FOR ALL YOUR TEST - BEST DIAGNOSTIC CENTRE IN REGION!
               </h1>
               <div className="text-center">
                 <span className="text-secondary text-base lg:text-lg xl:text-[20px]">
-                  Advanced diagnostic technology combines superior care – Get
-                  all services under one roof.
+                  Advanced diagnostic technology combines superior care – Get all services under one roof.
                 </span>
               </div>
               <div className="mt-[32px]">
                 <div className="rounded-xl border-[1px] shadow-md border-[#E4E4E7] p-3 md:p-[32px] bg-white">
                   <h2 className="flex items-center gap-[12px] text-[#D41958] font-semibold text-base xl:text-[24px] pb-[8px] border-b border-[#E4E4E7]">
-                    <ArrowSvgYellow /> Comprehensive Diagnostic Solutions Under
-                    One Roof!
+                    <ArrowSvgYellow /> Comprehensive Diagnostic Solutions Under One Roof!
                   </h2>
                   <div className="mt-[12px]">
-                    <div className="text-secondary text-sm lg:text-[16px] ">
-                      At<strong> Kaivee Healthcare</strong>, we offer a full spectrum of diagnostic services designed for preventive, routine, and specialized healthcare needs.
+                    <div className="text-secondary text-sm lg:text-[16px]">
+                      At <strong>Kaivee Healthcare</strong>, we offer a full spectrum of diagnostic services designed for preventive, routine, and specialized healthcare needs.
                     </div>
 
-                    <div className="text-base lg:text-[16px] font-semibold mt-2">
-                      🔬 Blood & Routine Tests
-                    </div>
-                    <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
-                      <li>Complete Blood Count (CBC)</li>
-                      <li>Lipid Profile (Cholesterol, Triglycerides)</li>
-                      <li>Liver & Kidney Function Tests</li>
-                      <li>Diabetes Screening (HbA1c, Fasting Blood Sugar)</li>
-                      <li>Thyroid Function Tests</li>
-                    </ul>
+                    {/* Read More / Read Less Button */}
+                    <span
+                      className="font-bold cursor-pointer text-[#D41958] mt-2 inline-block"
+                      onClick={() => setReadMore(!readMore)}
+                    >
+                      {readMore ? "Read Less ▲" : "Read More ▼"}
+                    </span>
 
-
-
-
+                    {/* Conditional Rendering Based on Read More State */}
+                    {readMore && (
+                      <div>
+                        <div className="text-base lg:text-[16px] font-semibold mt-2">
+                          🔬 Blood & Routine Tests
+                        </div>
+                        <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
+                          <li>Complete Blood Count (CBC)</li>
+                          <li>Lipid Profile (Cholesterol, Triglycerides)</li>
+                          <li>Liver & Kidney Function Tests</li>
+                          <li>Diabetes Screening (HbA1c, Fasting Blood Sugar)</li>
+                          <li>Thyroid Function Tests</li>
+                        </ul>
+                        <div className="text-base lg:text-[16px] font-semibold mt-2">
+                          🦠 Infection & Disease Panels
+                        </div>
+                        <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
+                          <li>COVID-19, Dengue, Malaria, and Typhoid Tests</li>
+                          <li>Viral & Bacterial Infection Screening</li>
+                          <li>STD & STI Panels</li>
+                        </ul>
+                        <div className="text-base lg:text-[16px] font-semibold mt-2">
+                          💉 Full Body Checkups
+                        </div>
+                        <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
+                          <li>Essential Health Packages for Men & Women</li>
+                          <li>Senior Citizen Health Checkups</li>
+                          <li>Corporate Health Screenings</li>
+                        </ul>
+                        <div className="text-base lg:text-[16px] font-semibold mt-2">
+                          🩺 Specialized Diagnostic Tests
+                        </div>
+                        <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
+                          <li>Hormone Analysis (PCOS, Fertility, Vitamin D & B12)</li>
+                          <li>Allergy Screening</li>
+                          <li>Autoimmune & Genetic Testing</li>
+                        </ul>
+                        <div className="text-base lg:text-[16px] font-semibold mt-2">
+                          ⚡ Wellness & Preventive Health Packages
+                        </div>
+                        <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
+                          <li>Heart Health Screening</li>
+                          <li>Cancer Marker Tests</li>
+                          <li>Lifestyle & Nutritional Assessments</li>
+                        </ul>
+                        <p>Whether it’s a routine test or a specialized diagnostic need,<strong> Kaivee Healthcare </strong>ensures accuracy, efficiency, and care in every report.</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

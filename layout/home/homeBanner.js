@@ -1,7 +1,7 @@
 import { memo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import bannerImage from "assets/images/home/Screenshot 2025-01-27 at 5.01.10 PM.png";
+import bannerImage from "assets/images/home/resize-173875572518311443574Febbanner2.jpg";
 import {
   FaStethoscope,
   FaSmile,
@@ -20,9 +20,10 @@ const Homebanner = () => {
           <Image
             src={bannerImage}
             alt="Health Banner"
-            className="rounded-lg w-full md:w-4/5"
+            className="rounded-lg w-full md:w-full"
             width={550}
             height={250}
+
           />
         </div>
 
@@ -39,7 +40,7 @@ const Homebanner = () => {
           </p>
 
           {/* Buttons */}
-          <div className="mt-6 flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4">
+          <div className="mt-6 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
             <Link href="/book-test">
               <button className="bg-[#D41958] text-white py-2 px-6 rounded-lg shadow-lg hover:bg-[#8DBD4D] w-full md:w-auto">
                 Book a Test
@@ -53,7 +54,7 @@ const Homebanner = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="mt-6 flex flex-col md:flex-row items-center justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-6">
+          <div className="mt-6 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
             <div className="text-center">
               <h2 className="text-2xl font-bold text-gray-800">10k+</h2>
               <p className="text-gray-600 text-sm">Tests Available</p>
@@ -64,6 +65,7 @@ const Homebanner = () => {
               <p className="text-gray-600 text-sm">Patients Benefiting</p>
             </div>
           </div>
+
         </div>
       </div>
     </section>

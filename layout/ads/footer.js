@@ -62,7 +62,7 @@ const FooterAds = ({ data }) => {
     <footer className=" bg-[#f6f0d9] body-font">
       <div className="absolute bottom-4 right-[13px]">
         <a
-          href="https://api.whatsapp.com/send/?phone=%2B918800900947&text=Hi+City+X-Ray"
+          href="https://api.whatsapp.com/send/?phone=%2B919319274356&text=Hi+Kaivee+HealthCare"
           target="_black"
           className="flex items-center justify-center"
         >

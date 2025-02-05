@@ -10,6 +10,7 @@ import BookIcon from "assets/images/footer/Group.png";
 import HomeIcon from "assets/images/footer/home (6) 1.png";
 import CallIcon from "assets/images/footer/phone-call 1.png";
 import ReportIcon from "assets/images/footer/report (1) 1.png";
+import { WhatsappSVG } from "assets/images/SvgImage";
 
 import { File, Phone, Settings, X } from "react-feather";
 import { RiTestTubeFill } from "react-icons/ri";
@@ -25,6 +26,17 @@ const Footer = () => {
   // console.log("categories", categories);
   return (
     <>
+      <div className="fixed bottom-6 right-6 z-50">
+        <a
+          href="https://api.whatsapp.com/send/?phone=%2B919319274356&text=Hi+Kaivee+HealthCare"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg transition-transform hover:scale-110"
+        >
+          <WhatsappSVG className="w-10 h-10 text-white" />
+        </a>
+      </div>
+
       <div className=" footer-bg relative">
         {!collapse ? (
           <div className="fixed right-0 top-[50%] z-[111111111]">
@@ -223,8 +235,8 @@ const Footer = () => {
                 <div className="font-bold text-base">OTHER LINKS</div>
                 <ul className="text-[14px] mt-[12px] flex flex-col lg:gap-3 gap-1">
                   {/* <li> */}
-                    {/* <Link href="/covid-19-rt-pcr-test">Covid 19</Link> */}
-                    {/* <Link href="/covid-19-pcr-h2">Covid 19</Link>
+                  {/* <Link href="/covid-19-rt-pcr-test">Covid 19</Link> */}
+                  {/* <Link href="/covid-19-pcr-h2">Covid 19</Link>
                   </li> */}
                   {/* <li>
                     <Link href="/covid-19/COVID-19-vaccination">
