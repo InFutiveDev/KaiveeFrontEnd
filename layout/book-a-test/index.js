@@ -304,8 +304,8 @@ const BookATestLayout = ({ urlData }) => {
                   </div>
                 </div>
               </div>
-              <div className="lg:col-span-3 overflow-hidden rounded-xl border-[1px] border-[#E4E4E7]">
-                <div className="bg-[#FDEDCE] py-1.5 px-3 lg:flex lg:mb-0 mb-3 justify-between items-center">
+              <div className="lg:col-span-3 overflow-hidden rounded-xl border-[1px] border-[#D41958]">
+                <div className="bg-[#D41958] py-1.5 px-3 lg:flex lg:mb-0 mb-3 justify-between items-center">
                   <p className="text-lg sm:text-2xl font-semibold font-source-pro">
                     Tests
                   </p>
@@ -313,31 +313,28 @@ const BookATestLayout = ({ urlData }) => {
                     <p className="text-sm sm:text-xl">Search For</p>
                     <button
                       onClick={() => handlePackageFilter("")}
-                      className={`${
-                        packageFilter === ""
-                          ? "bg-orange text-black"
-                          : "bg-white text-secondary"
-                      }  rounded-xl px-[30px] py-[6px] text-sm sm:text-lg`}
+                      className={`${packageFilter === ""
+                        ? "bg-orange text-black"
+                        : "bg-white text-secondary"
+                        }  rounded-xl px-[30px] py-[6px] text-sm sm:text-lg`}
                     >
                       All
                     </button>
                     <button
                       onClick={() => handlePackageFilter("lab-test")}
-                      className={`${
-                        packageFilter === "lab-test"
-                          ? "bg-orange text-black"
-                          : "bg-white text-secondary"
-                      }  rounded-xl px-[20px] py-[6px] text-sm sm:text-lg `}
+                      className={`${packageFilter === "lab-test"
+                        ? "bg-orange text-black"
+                        : "bg-white text-secondary"
+                        }  rounded-xl px-[20px] py-[6px] text-sm sm:text-lg `}
                     >
                       Test
                     </button>
                     <button
                       onClick={() => handlePackageFilter("health-package")}
-                      className={`${
-                        packageFilter === "health-package"
-                          ? "bg-orange text-black"
-                          : "bg-white text-secondary"
-                      }  rounded-xl px-[20px] py-[6px] text-sm sm:text-lg`}
+                      className={`${packageFilter === "health-package"
+                        ? "bg-green text-black"
+                        : "bg-white text-secondary"
+                        }  rounded-xl px-[20px] py-[6px] text-sm sm:text-lg`}
                     >
                       Packages
                     </button>
