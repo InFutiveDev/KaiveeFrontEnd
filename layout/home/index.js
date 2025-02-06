@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import Laptop from "assets/images/home/Screenshot 2025-01-27 at 12.59.37 PM.png";
 
-import { GET_FEATURED_BY_ID, GET_TEST_BY_HABIT } from "redux/actions/test";
+import { GET_ALL_TEST, GET_TEST_BY_HABIT } from "redux/actions/test";
 
 
 import { GET_ALL_BANNERS } from "redux/actions/banner";
@@ -62,7 +62,7 @@ const HomeLayout = () => {
   const { category, habit, test, healthrisk, healthPackages } = store;
   const { categories } = category;
   const { healthRisk } = healthrisk;
-  const { getfeaturedbyId } = test;
+  const { getAlltest } = test;
   const { habits } = habit;
   // console.log("categories--->>>", categories);
   // let categoriesData = [
@@ -83,7 +83,7 @@ const HomeLayout = () => {
     setCart(cartData);
   };
   const handleTestsTabChange = (id) => {
-    dispatch(GET_FEATURED_BY_ID(id, 1, ""));
+    dispatch(GET_ALL_TEST(id));
   };
 
   const handlePackagesTabChange = (id) => {
@@ -112,12 +112,30 @@ const HomeLayout = () => {
     dispatch(GET_ALL_HEALTH_PACKAGES());
   }, [dispatch]);
 
+  // Fetch test data when the component mounts
+  useEffect(() => {
+    setLoaderBanner(true);
+
+    // Dispatch GET_ALL_TEST to fetch the tests
+    dispatch(GET_ALL_TEST()).then(() => {
+      setLoaderBanner(false);  // Hide loader once data is fetched
+    });
+
+    // Check local storage for cart data
+    const cartData = JSON.parse(localStorage.getItem("cart"));
+    if (cartData) {
+      setCart(cartData);
+    }
+  }, [dispatch]);
+
+  const testData = getAlltest?.data?.data?.categoryData || [];
+
   const features = [
-    { icon: icon1, label: "Feature 1" },
+    // { icon: icon1, label: "Feature 1" },
     { icon: icon2, label: "Feature 2" },
     { icon: icon3, label: "Feature 3" },
     { icon: icon4, label: "Feature 4" },
-    { icon: icon5, label: "Feature 5" },
+    // { icon: icon5, label: "Feature 5" },
     { icon: icon6, label: "Feature 6" },
   ];
   return (
@@ -144,21 +162,23 @@ const HomeLayout = () => {
           </div> */}
           <div className="container">
             <div className="py-4 mt-0 mb-1 bg-white bg-opacity-50">
-              <div className="container mx-auto grid grid-cols-3 md:grid-cols-6 gap-4 text-center">
+              <div className="container mx-auto grid grid-cols-3 md:grid-cols-4 gap-2 text-center">
                 {features.map((feature, index) => (
-                  <div key={index} className="flex flex-col items-center space-y-2 ">
+                  <div key={index} className="flex flex-col items-center justify-center space-y-1"> {/* Reduced space-y-2 to space-y-1 */}
                     <Image
                       src={feature.icon}
                       alt={feature.label}
                       className="w-auto object-cover mx-auto"
-                      style={{ height: '72%' }}
+                      style={{ height: '72%' }} // Keeping height as per your previous request
                     />
+
 
                   </div>
                 ))}
               </div>
             </div>
           </div>
+
           <div className="bg-[#FAFAFA]">
             <div className="container bg-">
               <BookingCard packagesId={habits?.data[0]?._id || ""} />
@@ -200,11 +220,11 @@ const HomeLayout = () => {
                   viewAll="/book-a-test"
                   title={"Popular Test"}
                   id={"test"}
-                  handleTestsTabChange={handleTestsTabChange}
-                  navbar={categoriesData || []}
-                  handleCartData={handleCartData}
+                  handleTestsTabChange={() => { }}
+                  navbar={[]}
+                  handleCartData={(data) => setCart(data)}
                   cart={cart}
-                  data={getfeaturedbyId?.data?.categoryData || []}
+                  data={testData}
                 />
               </div>
             </div>
@@ -252,7 +272,7 @@ const HomeLayout = () => {
               />
             </div>
           </div> */}
-          <div className="bg-[#FAFAFA]">
+          <div className="bg-white">
             <div className="container">
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
               <div className=" pb-0 lg:pb-4 py-2 pt-2">
@@ -272,9 +292,9 @@ const HomeLayout = () => {
             </div>
           </div> */}
 
-          <div className="w-full">
+          <div className="w-full ">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            <div className=" px-2 pb-0 lg:pb-4 py-2 pt-4">
+            <div className="  pb-0 lg:pb-4 py-2 ">
 
               {/* <div className="mt-[20px] md:mt-[32px]"> */}
 
@@ -292,24 +312,24 @@ const HomeLayout = () => {
                   <p className="lg:ml-[42px]  font-semibold lg:text-[32px] text-xl font-source-pro">
                     Why our Patient recommend us?
                   </p>
-                  <ul className="list-none">
+                  <ul className="list-inside list-disc">
                     <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      💙 Trusted Accuracy: Cutting-edge technology ensures precise and reliable test results.
+                      Trusted Accuracy: Cutting-edge technology ensures precise and reliable test results.
                     </li>
                     <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      ⏳ Fast Turnaround: No long waits—get your reports on time, every time.
+                      Fast Turnaround: No long waits—get your reports on time, every time.
                     </li>
                     <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      🏡 Convenient Home Sample Collection: Healthcare that comes to you.
+                      Convenient Home Sample Collection: Healthcare that comes to you.
                     </li>
                     <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      💡 Affordable & Transparent Pricing: Quality healthcare with no hidden costs.
+                      Affordable & Transparent Pricing: Quality healthcare with no hidden costs.
                     </li>
                     <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      📱 Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.
+                      Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.
                     </li>
                     <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      🩸 Hygienic & Safe Practices: We follow strict safety protocols for your well-being.
+                      Hygienic & Safe Practices: We follow strict safety protocols for your well-being.
                     </li>
                   </ul>
 
@@ -549,7 +569,7 @@ const HomeLayout = () => {
                     {readMore && (
                       <div>
                         <div className="text-base lg:text-[16px] font-semibold mt-2">
-                          🔬 Blood & Routine Tests
+                          Blood & Routine Tests
                         </div>
                         <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
                           <li>Complete Blood Count (CBC)</li>
@@ -559,7 +579,7 @@ const HomeLayout = () => {
                           <li>Thyroid Function Tests</li>
                         </ul>
                         <div className="text-base lg:text-[16px] font-semibold mt-2">
-                          🦠 Infection & Disease Panels
+                          Infection & Disease Panels
                         </div>
                         <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
                           <li>COVID-19, Dengue, Malaria, and Typhoid Tests</li>
@@ -567,7 +587,7 @@ const HomeLayout = () => {
                           <li>STD & STI Panels</li>
                         </ul>
                         <div className="text-base lg:text-[16px] font-semibold mt-2">
-                          💉 Full Body Checkups
+                          Full Body Checkups
                         </div>
                         <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
                           <li>Essential Health Packages for Men & Women</li>
@@ -575,7 +595,7 @@ const HomeLayout = () => {
                           <li>Corporate Health Screenings</li>
                         </ul>
                         <div className="text-base lg:text-[16px] font-semibold mt-2">
-                          🩺 Specialized Diagnostic Tests
+                          Specialized Diagnostic Tests
                         </div>
                         <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
                           <li>Hormone Analysis (PCOS, Fertility, Vitamin D & B12)</li>
@@ -583,7 +603,7 @@ const HomeLayout = () => {
                           <li>Autoimmune & Genetic Testing</li>
                         </ul>
                         <div className="text-base lg:text-[16px] font-semibold mt-2">
-                          ⚡ Wellness & Preventive Health Packages
+                          Wellness & Preventive Health Packages
                         </div>
                         <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
                           <li>Heart Health Screening</li>

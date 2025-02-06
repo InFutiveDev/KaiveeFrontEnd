@@ -110,14 +110,14 @@ const HomeTestCard = ({ data, cart, handleCartData }) => {
         <div className="flex justify-start">
           {cart?.hasOwnProperty(data?._id || "") ? (
             <button
-              className="w-full  bg-orange text-white rounded-md px-[12px] py-[8px] text-[14px] font-[400]"
+              className="w-full  bg-[#D41958] text-white rounded-md px-[12px] py-[8px] text-[14px] font-[400]"
               onClick={handleRemoveCart}
             >
               Remove item
             </button>
           ) : (
             <button
-              className="w-full  bg-orange text-white rounded-md px-[12px] py-[8px] text-[14px] font-[400] "
+              className="w-full  bg-[#D41958] text-white rounded-md px-[12px] py-[8px] text-[14px] font-[400] "
               onClick={handleAddToCart}
             >
               Add To Cart

@@ -105,7 +105,7 @@ const Testimonial = () => {
               </p>
               <div className="flex items-center">
                 <div className="h-10 w-10 bg-[#D41958] rounded-full flex-shrink-0"></div>
-                <div className="ml-4">
+                <div className="mr-4">
                   <h4 className="font-bold text-gray-800">{item.name}</h4>
                 </div>
               </div>

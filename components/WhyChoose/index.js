@@ -4,7 +4,8 @@ const WhyChoose = ({ data }) => {
   const sectionStyle = {
     padding: "50px 20px",
     textAlign: "center",
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "white",
+
   };
 
   const titleStyle = {

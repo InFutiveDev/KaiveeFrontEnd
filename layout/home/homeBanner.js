@@ -1,7 +1,7 @@
 import { memo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import bannerImage from "assets/images/home/resize-173875572518311443574Febbanner2.jpg";
+import bannerImage from "assets/images/home/693-By-500-image.jpg";
 import {
   FaStethoscope,
   FaSmile,
@@ -16,15 +16,16 @@ const Homebanner = () => {
       {/* Hero Section */}
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-6">
         {/* Left Section: Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <Image
-            src={bannerImage}
-            alt="Health Banner"
-            className="rounded-lg w-full md:w-full"
-            width={550}
-            height={250}
-
-          />
+        <div className="flex justify-center w-full md:w-1/2">
+          <div className="w-full h-[300px] md:h-[500px] relative">
+            <Image
+              src={bannerImage}
+              alt="Health Banner"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
         </div>
 
         {/* Right Section: Content */}
