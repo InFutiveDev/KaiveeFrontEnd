@@ -107,14 +107,14 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
         <div className=" flex gap-x-2 items-center">
           {cart?.hasOwnProperty(data?._id || "") ? (
             <button
-              className=" bg-orange w-full text-white rounded-[8px] px-[12px] py-[8px] text-[14px] font-semibold"
+              className=" bg-[#D41958] w-full text-white rounded-[8px] px-[12px] py-[8px] text-[14px] font-semibold"
               onClick={handleRemoveCart}
             >
               Remove item
             </button>
           ) : (
             <button
-              className=" bg-orange w-full text-white rounded-[8px] px-[12px] py-[8px] text-[14px] font-semibold"
+              className=" bg-[#D41958] w-full text-white rounded-[8px] px-[12px] py-[8px] text-[14px] font-semibold"
               onClick={handleAddToCart}
             >
               Add To Cart

@@ -14,15 +14,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { GET_TEST_BY_ID } from "redux/actions/test";
 import SpinnerComponent from "components/spinner";
 import { UPDATE_CART_QAUNTITY } from "redux/actions/cart";
-import ImageTwo from "assets/images/Finalimg/Why Choose Us/10M+ Happy Patients.webp";
-import ImageThree from "assets/images/Finalimg/Why Choose Us/30 Years of Excellence in Diagnostic Health Care.webp";
-import ImageFive from "assets/images/Finalimg/Why Choose Us/Affordable.webp";
-import ImageSix from "assets/images/Finalimg/Why Choose Us/Fast & Accurate Results.webp";
-import ImageSeven from "assets/images/Finalimg/Why Choose Us/Free Home Sample Collection.webp";
-import ImageNine from "assets/images/Finalimg/Why Choose Us/Large Menu of Tests Available.webp";
-import ImageEight from "assets/images/Finalimg/Why Choose Us/NABL & NABH Certified Centre.webp";
-import ImageOne from "assets/images/Finalimg/Why Choose Us/Team of Experienced Doctor & Staffs.webp";
-import ImageFour from "assets/images/Finalimg/Why Choose Us/World Class Technology.webp";
+import img1 from "assets/images/why choose us/1.png";
+import img2 from "assets/images/why choose us/2.png";
+import img3 from "assets/images/why choose us/3.png";
+import img4 from "assets/images/why choose us/4.png";
+import img5 from "assets/images/why choose us/5.png";
+import img6 from "assets/images/why choose us/6.png";
+import img7 from "assets/images/why choose us/7.png";
+import img8 from "assets/images/why choose us/8.png";
+import Image from "next/image";
 import { GET_ALL_LAB_DETAIL } from "redux/actions/lab";
 import Faqs from "components/faqs";
 import Link from "next/link";
@@ -226,19 +226,19 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                     <div className="flex items-center gap-5 my-[6px]">
                       <div>
                         {testInfo?.data[0]?.offer_price && (
-                          <span className="text-orange font-semibold text-xl">
+                          <span className="text-[#D41958] font-semibold text-xl">
                             ₹{testInfo?.data[0]?.offer_price}
                           </span>
                         )}
                         {testInfo?.data[0]?.offer_price <
                           testInfo?.data[0]?.mrp && (
-                          <span className="text-secondary font-semibold text-[14px] ml-[10px]">
-                            <del>₹{testInfo?.data[0]?.mrp}</del>
-                          </span>
-                        )}
+                            <span className="text-secondary font-semibold text-[14px] ml-[10px]">
+                              <del>₹{testInfo?.data[0]?.mrp}</del>
+                            </span>
+                          )}
                       </div>
                       {testInfo?.data[0]?.offer_price <
-                      testInfo?.data[0]?.mrp ? (
+                        testInfo?.data[0]?.mrp ? (
                         <span className="text-[#005E54] font-semibold">
                           {(
                             ((testInfo?.data[0]?.mrp -
@@ -301,10 +301,10 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                       </span>
                       {testInfo?.data[0]?.offer_price <
                         testInfo?.data[0]?.mrp && (
-                        <span className="text-secondary font-semibold text-[14px] ml-[10px]">
-                          <del>₹{testInfo?.data[0]?.mrp}</del>
-                        </span>
-                      )}
+                          <span className="text-secondary font-semibold text-[14px] ml-[10px]">
+                            <del>₹{testInfo?.data[0]?.mrp}</del>
+                          </span>
+                        )}
                     </div>
                     {testInfo?.data[0]?.offer_price < testInfo?.data[0]?.mrp ? (
                       <span className="text-[#005E54] font-semibold">
@@ -324,14 +324,14 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                     {cart?.hasOwnProperty(testInfo?.data[0]?._id || "") ? (
                       <button
                         onClick={handleRemoveCart}
-                        className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
+                        className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
                       >
                         Remove item
                       </button>
                     ) : (
                       <button
                         onClick={handleAddToCart}
-                        className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
+                        className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
                       >
                         Add To Cart
                       </button>
@@ -339,7 +339,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
 
                     <button
                       onClick={checkOutRedirect}
-                      className="w-full border-[1px] border-orange text-orange bg-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
+                      className="w-full border-[1px] border-orange text-[#D41958] bg-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
                     >
                       Check out
                     </button>
@@ -378,19 +378,18 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                         </th>
                       </tr>
                     </thead>
-                    {collapse && (
+                    {collapse && testInfo?.data?.[0] && (
                       <tbody>
-                        {Object.keys(testInfo?.data[0])?.map((keyname) => {
-                          if (
-                            keyname === "no_of_parameters" &&
-                            !testInfo?.data[0][keyname]
-                          ) {
-                            return;
+                        {Object.keys(testInfo?.data[0]).map((keyname) => {
+                          // Skip if "no_of_parameters" is falsy
+                          if (keyname === "no_of_parameters" && !testInfo?.data[0][keyname]) {
+                            return null; // Prevent rendering if the condition is met
                           }
+
                           return (
                             <Fragment key={keyname}>
                               {!dataNotToShow.includes(keyname) && (
-                                <tr className="w-full" key={keyname}>
+                                <tr className="w-full">
                                   <td className="border border-slate-700 text-sm md:text-[18px] md:py-[10px] md:px-[24px] p-[10px]">
                                     {getTitleOfKeyname(keyname)}
                                   </td>
@@ -406,6 +405,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                         })}
                       </tbody>
                     )}
+
                   </table>
                   <div className="my-6 md:my-8 w-full  flex flex-col">
                     {testInfo?.data[0]?.preparation && (
@@ -422,34 +422,29 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                         />
                       </>
                     )}
-                    {testInfo?.data[0]["test_components"] && (
+                    {testInfo?.data && testInfo.data[0]?.test_components && (
                       <>
                         <h2 className="text-gray-900 font-semibold">
-                          {" "}
                           <span className="border_text">Components</span>
                         </h2>
                         <div
                           className="my-2 text-gray-700 editor_div components_editor_div"
-                          dangerouslySetInnerHTML={renderHTML(
-                            testInfo?.data[0]["test_components"]
-                          )}
+                          dangerouslySetInnerHTML={renderHTML(testInfo.data[0].test_components)}
                         />
                       </>
                     )}
-                    {testInfo?.data[0]["test_pre_test_info"] && (
+                    {testInfo?.data && testInfo.data[0]?.test_pre_test_info && (
                       <>
                         <h2 className="text-gray-900 md:mt-0 mt-[10px] font-semibold">
-                          {" "}
                           <span className="border_text"> Overview</span>
                         </h2>
                         <div
                           className="my-2 text-gray-700 editor_div md:text-[20px] text-[14px]"
-                          dangerouslySetInnerHTML={renderHTML(
-                            testInfo?.data[0]["test_pre_test_info"]
-                          )}
+                          dangerouslySetInnerHTML={renderHTML(testInfo.data[0].test_pre_test_info)}
                         />
                       </>
                     )}
+
                   </div>
                 </div>
               </div>
@@ -496,15 +491,15 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                   </div>
                   <div className="flex  items-center gap-5 my-[6px]">
                     <div>
-                      <span className="text-orange font-semibold text-xl">
+                      <span className="text-[#D41958] font-semibold text-xl">
                         ₹{testInfo?.data[0]?.offer_price}
                       </span>
                       {testInfo?.data[0]?.offer_price <
                         testInfo?.data[0]?.mrp && (
-                        <span className="text-secondary font-semibold text-[14px] ml-[10px]">
-                          <del>₹{testInfo?.data[0]?.mrp}</del>
-                        </span>
-                      )}
+                          <span className="text-secondary font-semibold text-[14px] ml-[10px]">
+                            <del>₹{testInfo?.data[0]?.mrp}</del>
+                          </span>
+                        )}
                     </div>
                     {testInfo?.data[0]?.offer_price < testInfo?.data[0]?.mrp ? (
                       <span className="text-[#005E54] font-semibold">
@@ -524,14 +519,14 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                     {cart?.hasOwnProperty(testInfo?.data[0]?._id || "") ? (
                       <button
                         onClick={handleRemoveCart}
-                        className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
+                        className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
                       >
                         Remove item
                       </button>
                     ) : (
                       <button
                         onClick={handleAddToCart}
-                        className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
+                        className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
                       >
                         Add To Cart
                       </button>
@@ -539,7 +534,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
 
                     <button
                       onClick={checkOutRedirect}
-                      className="w-full border-[1px] border-orange text-orange bg-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
+                      className="w-full border-[1px] border-[#D41958] text-[#D41958] bg-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
                     >
                       Check out
                     </button>
@@ -547,7 +542,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                   <div className="mt-[20px]">
                     <Link
                       href="tel:011-4725-2000"
-                      className=" flex gap-2 justify-center items-center text-orange bg-[#FEF6E6] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
+                      className=" flex gap-2 justify-center items-center text-[#D41958] bg-[#FEF6E6] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
                     >
                       <CallYellowImg />
                       Call to Book
@@ -605,40 +600,52 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
 
 const data = [
   {
-    title: "Team of Experienced <br /> Doctors & Staffs",
-    image: ImageOne,
+    // id: 1,
+    // title: "NABL Accredited Labs",
+    // description: "Follows all protocols as per NABL & CAP Guidelines",
+    icon: <Image src={img1} alt="NABL Accredited Icon" />,
   },
   {
-    title: "10M+ Happy Patients",
-    image: ImageTwo,
+    id: 2,
+    title: "Trusted by Leading Doctors & Hospitals",
+    description: "Qualified Pathologist at each lab",
+    icon: <Image src={img2} alt="NABL Accredited Icon" />,
   },
   {
-    title: "31 Year of Excellence in <br /> Diagnostic Healthcare",
-    image: ImageThree,
+    id: 3,
+    title: "Shortest Reporting Time",
+    description: "Ownership and Innovation",
+    icon: <Image src={img3} alt="NABL Accredited Icon" />,
   },
   {
-    title: "World Class Technology",
-    image: ImageFour,
+    id: 4,
+    title: "Accurate Test Reports",
+    description: "Quality checks by Quality Assurance Team",
+    icon: <Image src={img4} alt="NABL Accredited Icon" />,
   },
   {
-    title: "Fast & Accurate Results",
-    image: ImageSix,
+    id: 5,
+    title: "1 Crore+ Satisfied Customers",
+    description: "Making superior quality diagnostics services",
+    icon: <Image src={img5} alt="NABL Accredited Icon" />,
   },
   {
-    title: "Affordable",
-    image: ImageFive,
+    id: 6,
+    title: "100+ Labs",
+    description: "Large Network Labs in all the major cities",
+    icon: <Image src={img6} alt="NABL Accredited Icon" />,
   },
   {
-    title: "Free Home Sample <br /> Collection",
-    image: ImageSeven,
+    id: 7,
+    title: "3000+ Collection Centres",
+    description: "Expanding our reach and counting",
+    icon: <Image src={img7} alt="NABL Accredited Icon" />,
   },
   {
-    title: "NABL & NABH Certified <br /> Centre",
-    image: ImageEight,
-  },
-  {
-    title: "Large Menu of Tests <br /> Available ",
-    image: ImageNine,
+    id: 8,
+    title: "Scientific Orientation",
+    description: "MD Doctors in Every Lab & State-of-the-Art Machines",
+    icon: <Image src={img8} alt="NABL Accredited Icon" />,
   },
 ];
 export default HealthPackagesDetailLayout;

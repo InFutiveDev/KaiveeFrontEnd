@@ -385,7 +385,7 @@ const CovidRTPCRLayout = ({ data }) => {
               </div> */}
               <div className="flex  items-center gap-5 my-[6px]">
                 <div>
-                  <span className="text-orange text-[24px] font-[600]">
+                  <span className="text-[#D41958] text-[24px] font-[600]">
                     ₹{data?.offer_price}
                   </span>
                   {/* <span className="text-secondary lg:text-[16px] text-sm ml-[10px] font-medium">
@@ -403,14 +403,14 @@ const CovidRTPCRLayout = ({ data }) => {
                 {cart?.hasOwnProperty(data?._id || "") ? (
                   <button
                     onClick={handleRemoveCart}
-                    className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
+                    className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
                   >
                     Remove item
                   </button>
                 ) : (
                   <button
                     onClick={handleAddToCart}
-                    className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
+                    className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[6px] py-[6px] text-xs font-semibold"
                   >
                     Add To Cart
                   </button>
@@ -418,7 +418,7 @@ const CovidRTPCRLayout = ({ data }) => {
 
                 <button
                   onClick={checkOutRedirect}
-                  className="w-full border-[1px] border-orange text-orange bg-white rounded px-[12px] py-[8px] text-[14px] font-medium"
+                  className="w-full border-[1px] border-[#D41958] text-orange bg-white rounded px-[12px] py-[8px] text-[14px] font-medium"
                 >
                   Check out
                 </button>

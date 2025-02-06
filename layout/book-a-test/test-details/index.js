@@ -178,10 +178,10 @@ const TestDetailsLayout = ({ byidData }) => {
                     </span>
                     {byidData?.data[0]?.offer_price <
                       byidData?.data[0]?.mrp && (
-                      <span className="text-gray-400 font-[300] text-[14px]">
-                        <del>₹{byidData?.data[0]?.mrp}</del>
-                      </span>
-                    )}
+                        <span className="text-gray-400 font-[300] text-[14px]">
+                          <del>₹{byidData?.data[0]?.mrp}</del>
+                        </span>
+                      )}
 
                     {byidData?.data[0]?.offer_price < byidData?.data[0]?.mrp ? (
                       <span className="text-[#005E54] text-[14px] font-semibold">
@@ -244,10 +244,10 @@ const TestDetailsLayout = ({ byidData }) => {
                     </span>
                     {byidData?.data[0]?.offer_price <
                       byidData?.data[0]?.mrp && (
-                      <span className="text-gray-400 font-[300] text-[14px]">
-                        <del>₹{byidData?.data[0]?.mrp}</del>
-                      </span>
-                    )}
+                        <span className="text-gray-400 font-[300] text-[14px]">
+                          <del>₹{byidData?.data[0]?.mrp}</del>
+                        </span>
+                      )}
 
                     {byidData?.data[0]?.offer_price < byidData?.data[0]?.mrp ? (
                       <span className="text-[#005E54] text-[14px] font-semibold">
@@ -269,14 +269,14 @@ const TestDetailsLayout = ({ byidData }) => {
                   {cart?.hasOwnProperty(byidData?.data[0]?._id || "") ? (
                     <button
                       onClick={handleRemoveCart}
-                      className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
+                      className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
                     >
                       Remove item
                     </button>
                   ) : (
                     <button
                       onClick={handleAddToCart}
-                      className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
+                      className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
                     >
                       Add To Cart
                     </button>
@@ -462,15 +462,15 @@ const TestDetailsLayout = ({ byidData }) => {
 
                 <div className="flex  items-center gap-5 mt-[6px]">
                   <div className=" space-x-2 ">
-                    <span className="text-orange font-bold text-xl">
+                    <span className="text-[#D41958] font-bold text-xl">
                       ₹{byidData?.data[0]?.offer_price || "NaN"}
                     </span>
                     {byidData?.data[0]?.offer_price <
                       byidData?.data[0]?.mrp && (
-                      <span className="text-gray-400 font-[300] text-[14px]">
-                        <del>₹{byidData?.data[0]?.mrp}</del>
-                      </span>
-                    )}
+                        <span className="text-gray-400 font-[300] text-[14px]">
+                          <del>₹{byidData?.data[0]?.mrp}</del>
+                        </span>
+                      )}
 
                     {byidData?.data[0]?.offer_price < byidData?.data[0]?.mrp ? (
                       <span className="text-[#005E54] text-[14px] font-semibold">
@@ -492,14 +492,14 @@ const TestDetailsLayout = ({ byidData }) => {
                   {cart?.hasOwnProperty(byidData?.data[0]?._id || "") ? (
                     <button
                       onClick={handleRemoveCart}
-                      className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
+                      className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
                     >
                       Remove item
                     </button>
                   ) : (
                     <button
                       onClick={handleAddToCart}
-                      className="w-full bg-orange text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
+                      className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
                     >
                       Add To Cart
                     </button>
@@ -515,7 +515,7 @@ const TestDetailsLayout = ({ byidData }) => {
                     onClick={() => {
                       checkOutRedirect();
                     }}
-                    className="w-full border-[1px] border-orange text-orange bg-white rounded px-[12px] py-[8px] text-xs font-semibold"
+                    className="w-full border-[1px] border-[#D41958] text-[#D41958] bg-white rounded px-[12px] py-[8px] text-xs font-semibold"
                   >
                     Check out
                   </button>
@@ -523,7 +523,7 @@ const TestDetailsLayout = ({ byidData }) => {
                 <div className="mt-[20px]">
                   <Link
                     href="tel:011-2000-2000"
-                    className=" flex gap-2 justify-center items-center text-orange bg-[#FEF6E6] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
+                    className=" flex gap-2 justify-center items-center text-[#D41958] bg-[#FEF6E6] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
                   >
                     <CallYellowImg />
                     Call to Book

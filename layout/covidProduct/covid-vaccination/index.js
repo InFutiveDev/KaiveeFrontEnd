@@ -222,19 +222,19 @@ and have questions, we encourage you to speak with your healthcare provider`}</l
               <div className=" flex gap-x-2 my-[6px] ">
                 <button
                   // onClick={handleAddToCart}
-                  className="w-full bg-orange text-white rounded px-[12px] py-[8px] font-medium text-[14px]"
+                  className="w-full bg-[#D41958] text-white rounded px-[12px] py-[8px] font-medium text-[14px]"
                 >
                   Add To Cart
                 </button>
 
-                <button className="w-full border-[1px] border-orange text-orange bg-white rounded px-[12px] py-[8px] text-[14px] font-medium">
+                <button className="w-full border-[1px] border-[#D41958] text-orange bg-white rounded px-[12px] py-[8px] text-[14px] font-medium">
                   Check out
                 </button>
               </div>
               <div className="mt-[20px]">
                 <Link
                   href="tel:011-4725-2000"
-                  className=" flex gap-2 justify-center items-center text-orange bg-[#FEF6E6] rounded-2xl w-full py-[8px]"
+                  className=" flex gap-2 justify-center items-center text-[#D41958] bg-[#FEF6E6] rounded-2xl w-full py-[8px]"
                 >
                   <CallYellowImg />
                   Call to Book

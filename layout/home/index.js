@@ -144,7 +144,7 @@ const HomeLayout = () => {
         <SpinnerComponent />
       ) : (
         <>
-          <section className="py-0 mt-0 banner_slider_wrap relative z-[1] h-[auto] sm:h-[600px]">
+          <section className="py-0  banner_slider_wrap relative z-[1] h-[auto] sm:h-[600px]">
             <div className="container flex justify-between items-center h-full">
               <Homebanner />
             </div>
@@ -161,7 +161,7 @@ const HomeLayout = () => {
             </marquee>
           </div> */}
           <div className="container">
-            <div className="py-4 mt-0 mb-1 bg-white bg-opacity-50">
+            <div className="py-4  mb-1 bg-white bg-opacity-50">
               <div className="container mx-auto grid grid-cols-3 md:grid-cols-4 gap-2 text-center">
                 {features.map((feature, index) => (
                   <div key={index} className="flex flex-col items-center justify-center space-y-1"> {/* Reduced space-y-2 to space-y-1 */}

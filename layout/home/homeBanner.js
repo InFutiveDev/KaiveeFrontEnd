@@ -12,7 +12,7 @@ import {
 
 const Homebanner = () => {
   return (
-    <section className="bg-white px-4 md:px-10 py-4 md:py-6">
+    <section className="bg-white px-4 md:px-10 py-4 md:py-6 mb-0">
       {/* Hero Section */}
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-6">
         {/* Left Section: Image */}
