@@ -171,7 +171,7 @@ const BookATestLayout = ({ urlData }) => {
                 <div className="text-md flex justify-between items-center py-2 px-[24px] bg-[#FDEDCE] border-b-[1px] border-[#E4E4E7]">
                   <p className="font-semibold font-source-pro ">Filter</p>
                   <button
-                    className="text-[16px] bg-orange text-white rounded-md px-2"
+                    className="text-[16px] bg-[#D41958] text-white rounded-md px-2"
                     onClick={() => {
                       dispatch(GET_BOOK_A_TEST(1, 12, ""));
                       router.push("/book-a-test");
@@ -314,7 +314,7 @@ const BookATestLayout = ({ urlData }) => {
                     <button
                       onClick={() => handlePackageFilter("")}
                       className={`${packageFilter === ""
-                        ? "bg-orange text-black"
+                        ? "bg-[#8DBD4D] text-black"
                         : "bg-white text-secondary"
                         }  rounded-xl px-[30px] py-[6px] text-sm sm:text-lg`}
                     >
@@ -323,7 +323,7 @@ const BookATestLayout = ({ urlData }) => {
                     <button
                       onClick={() => handlePackageFilter("lab-test")}
                       className={`${packageFilter === "lab-test"
-                        ? "bg-orange text-black"
+                        ? "bg-[#8DBD4D] text-black"
                         : "bg-white text-secondary"
                         }  rounded-xl px-[20px] py-[6px] text-sm sm:text-lg `}
                     >

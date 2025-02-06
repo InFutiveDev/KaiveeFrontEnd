@@ -52,7 +52,7 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
         </p>
         <div className="flex  items-center gap-5 my-[6px]">
           <div>
-            <span className="text-orange font-semibold md:text-xl text-lg">
+            <span className="text-[#8DBD4D] font-semibold md:text-xl text-lg">
               ₹{data?.offer_price}
             </span>
             {data?.offer_price < data?.mrp && (
@@ -79,7 +79,7 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
                 <span className="text-secondary font-semibold text-[14px]">
                   Test parameters :-
                 </span>
-                <span className="text-orange font-bold text-[14px]">
+                <span className="text-[#8DBD4D] font-bold text-[14px]">
                   {data?.no_of_parameters} Test
                 </span>
               </div>
@@ -101,14 +101,14 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
         <div className="my-[16px] grid grid-cols-2 gap-x-2">
           {cart?.hasOwnProperty(data?._id || "") ? (
             <button
-              className=" bg-orange text-white rounded px-[12px] py-[8px] text-xs font-semibold !text-[12px]"
+              className=" bg-[#8DBD4D] text-white rounded px-[12px] py-[8px] text-xs font-semibold !text-[12px]"
               onClick={handleRemoveCart}
             >
               Remove item
             </button>
           ) : (
             <button
-              className=" bg-orange text-white rounded xl:px-[12px] xl:py-[8px] px-[8px] py-[4px] text-xs font-medium !text-[12px]"
+              className=" bg-[#8DBD4D] text-white rounded xl:px-[12px] xl:py-[8px] px-[8px] py-[4px] text-xs font-medium !text-[12px]"
               onClick={handleAddToCart}
             >
               Add To Cart
@@ -125,7 +125,7 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
             onClick={() => {
               checkOutRedirect();
             }}
-            className="border-[1px] border-orange text-orange bg-white rounded px-[12px] py-[8px]  font-medium !text-[12px]"
+            className="border-[1px] border-[#8DBD4D] text-[#8DBD4D] bg-white rounded px-[12px] py-[8px]  font-medium !text-[12px]"
           >
             Check out
           </button>
@@ -139,7 +139,7 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
                 router.push(`/book-a-test/${data?.test_url}`);
               }
             }}
-            className="border-[1px] flex gap-[12px] justify-center items-center text-orange bg-[#FEF6E6] rounded w-full py-[4px] text-[12px] font-source-pro"
+            className="border-[1px] flex gap-[12px] justify-center items-center text-[#8DBD4D] bg-[#D41958] rounded w-full py-[4px] text-[12px] font-source-pro"
           >
             <EyeIconYellow />
             View Details

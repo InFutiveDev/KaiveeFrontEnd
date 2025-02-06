@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import Laptop from "assets/images/home/Screenshot 2025-01-27 at 12.59.37 PM.png";
 
-import { GET_ALL_TEST, GET_TEST_BY_HABIT } from "redux/actions/test";
+import { GET_FEATURED_BY_ID, GET_TEST_BY_HABIT } from "redux/actions/test";
 
 
 import { GET_ALL_BANNERS } from "redux/actions/banner";
@@ -64,6 +64,7 @@ const HomeLayout = () => {
   const { healthRisk } = healthrisk;
   const { getAlltest } = test;
   const { habits } = habit;
+  const { getfeaturedbyId } = test;
   // console.log("categories--->>>", categories);
   // let categoriesData = [
   //   ...categories?.data?.categoryData?.filter((ele) => ele.category_name),
@@ -83,7 +84,7 @@ const HomeLayout = () => {
     setCart(cartData);
   };
   const handleTestsTabChange = (id) => {
-    dispatch(GET_ALL_TEST(id));
+    dispatch(GET_FEATURED_BY_ID(id, 1, ""));
   };
 
   const handlePackagesTabChange = (id) => {
@@ -112,23 +113,8 @@ const HomeLayout = () => {
     dispatch(GET_ALL_HEALTH_PACKAGES());
   }, [dispatch]);
 
-  // Fetch test data when the component mounts
-  useEffect(() => {
-    setLoaderBanner(true);
+  
 
-    // Dispatch GET_ALL_TEST to fetch the tests
-    dispatch(GET_ALL_TEST()).then(() => {
-      setLoaderBanner(false);  // Hide loader once data is fetched
-    });
-
-    // Check local storage for cart data
-    const cartData = JSON.parse(localStorage.getItem("cart"));
-    if (cartData) {
-      setCart(cartData);
-    }
-  }, [dispatch]);
-
-  const testData = getAlltest?.data?.data?.categoryData || [];
 
   const features = [
     // { icon: icon1, label: "Feature 1" },
@@ -220,11 +206,11 @@ const HomeLayout = () => {
                   viewAll="/book-a-test"
                   title={"Popular Test"}
                   id={"test"}
-                  handleTestsTabChange={() => { }}
-                  navbar={[]}
-                  handleCartData={(data) => setCart(data)}
+                  handleTestsTabChange={handleTestsTabChange}
+                  navbar={categoriesData || []}
+                  handleCartData={handleCartData}
                   cart={cart}
-                  data={testData}
+                  data={getfeaturedbyId?.data?.categoryData || []}
                 />
               </div>
             </div>

@@ -1,16 +1,16 @@
 import Image from "next/image";
-import img1 from "assets/images/Finalimg/Facility/MRI Scan.webp";
-import img12 from "assets/images/Finalimg/Facility/ultrasound.webp";
-import img2 from "assets/images/Finalimg/Facility/CT Scan.webp";
-import img3 from "assets/images/Finalimg/Facility/digital xray.webp";
-import img4 from "assets/images/Finalimg/Facility/Neurology tests.webp";
+import img1 from "assets/images/Finalimg/Facility/7.webp";
+import img12 from "assets/images/Finalimg/Facility/3d4D-ultrasound.webp";
+import img2 from "assets/images/Finalimg/Facility/CT-Scan.webp";
+import img3 from "assets/images/Finalimg/Facility/Digital-Xray.webp";
+import img4 from "assets/images/Finalimg/Facility/pathalogy-laboratory.webp";
 import img5 from "assets/images/Finalimg/Facility/Dental Imaging.webp";
-import img6 from "assets/images/Finalimg/Facility/mammography.webp";
-import img7 from "assets/images/Finalimg/Facility/CT coronary angiography.webp";
-import img8 from "assets/images/Finalimg/Facility/Cardiology Tests.webp";
-import img9 from "assets/images/Finalimg/Facility/nuclear imaging.webp";
-import img10 from "assets/images/Finalimg/Facility/BMD.webp";
-import img11 from "assets/images/Finalimg/Facility/Laboratory pathology lab.webp";
+import img6 from "assets/images/Finalimg/Facility/Mammography.webp";
+import img7 from "assets/images/Finalimg/Facility/CT-Corona-Angiography.webp";
+import img8 from "assets/images/Finalimg/Facility/cardiologist.webp";
+import img9 from "assets/images/Finalimg/Facility/neuclear-imaging.webp";
+import img10 from "assets/images/Finalimg/Facility/Dexa.webp";
+import img11 from "assets/images/Finalimg/Facility/pathalogy-laboratory.webp";
 import { GET_ALL_HEALTHRISK } from "redux/actions/healthrisk";
 import { useEffect, useRef } from "react";
 import Carousel from "react-multi-carousel";
@@ -113,8 +113,8 @@ const Facilities = () => {
                   layout="fill"
                   objectFit="contain"
                   className=" transition-transform duration-300"
-                  quality={75}
-                  placeholder="blur"
+                  quality={100}
+                  
                 />
               </div>
               <div className="mt-4 text-center">
