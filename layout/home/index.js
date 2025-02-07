@@ -27,12 +27,12 @@ import { GET_ALL_HEALTHRISK } from "redux/actions/healthrisk";
 import { GET_ALL_HEALTH_PACKAGES } from "redux/actions/healthPackages";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import icon1 from "assets/images/home/banner/1.png";
-import icon2 from "assets/images/home/banner/2.png";
-import icon3 from "assets/images/home/banner/3.png";
-import icon4 from "assets/images/home/banner/4.png";
+
+import icon2 from "assets/images/home/banner/icon-1.png";
+import icon3 from "assets/images/home/banner/icon-2.png";
+import icon4 from "assets/images/home/banner/icon-3.png";
 import icon5 from "assets/images/home/banner/5.png";
-import icon6 from "assets/images/home/banner/6.png";
+import icon6 from "assets/images/home/banner/icon-4.png";
 
 const Homebanner = dynamic(() => import("./homeBanner"));
 const BookingCard = dynamic(() => import("./bookingCard"));
@@ -117,12 +117,12 @@ const HomeLayout = () => {
 
 
   const features = [
-    // { icon: icon1, label: "Feature 1" },
-    { icon: icon2, label: "Feature 2" },
-    { icon: icon3, label: "Feature 3" },
-    { icon: icon4, label: "Feature 4" },
-    // { icon: icon5, label: "Feature 5" },
-    { icon: icon6, label: "Feature 6" },
+
+    { icon: icon2, label: "Home Collection Qualified Technicians" },
+    { icon: icon3, label: "Exclusive Collection Centres" },
+    { icon: icon4, label: "NABL Approved Labs" },
+
+    { icon: icon6, label: "Trusted Doctors" },
   ];
   return (
     <>
@@ -137,25 +137,31 @@ const HomeLayout = () => {
             <div className="backImageBox" />
           </section>
 
-        <div className="conatiner">
-          <div className="container pt-3">
-            <div className="py-4  mb-1 bg-white bg-opacity-50">
-              <div className="container mx-auto grid grid-cols-3 md:grid-cols-4 gap-2 text-center">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex flex-col items-center justify-center space-y-1 font-[Poppins] text-[50%]"> {/* Reduced space-y-2 to space-y-1 */}
-                    <Image
-                      src={feature.icon}
-                      alt={feature.label}
-                      className="w-auto object-cover mx-auto"
-                      style={{ height: '72%' }} // Keeping height as per your previous request
-                    />
+          
+          <div className="container">
+  <div className="container pt-6">
+    <div className="py-6 mb-2 bg-white bg-opacity-50 rounded-lg">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-centre">
+        {features.map((feature, index) => (
+          <div key={index} className="flex justify-start items-center space-x-4 font-[Poppins] text-sm md:text-lg">
+            <Image
+              src={feature.icon}
+              alt={feature.label}
+              className="w-auto object-contain"
+              style={{ height: '70px', width: '70px' }} // Increased icon size
+            />
+            <span className="text-gray-800 ">{feature.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
 
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          </div>
+
+
+
+
           <div className="bg-[#FAFAFA]">
             <div className="container pt-1 ">
               <BookingCard packagesId={habits?.data[0]?._id || ""} />
@@ -246,54 +252,47 @@ const HomeLayout = () => {
           </div>
           
 
-          <div className="w-full ">
-            {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            <div className="  pb-0 lg:pb-4 py-2 ">
+          <div className="w-full">
+  <div className="pb-0 lg:pb-4 py-2">
+    <div className="bg-[#F7F7FB] rounded-xl grid items-center grid-cols-1 lg:grid-cols-2">
+      {/* Image Section - Takes 1/2 width on large screens */}
+      <div className="flex justify-center lg:justify-start ">
+        <img
+          src={Laptop.src}
+          className="w-[90%]"
+          alt="Image of a laptop"
+        />
+      </div>
 
-              {/* <div className="mt-[20px] md:mt-[32px]"> */}
+      {/* Content Section - Takes 1/2 width on large screens */}
+      <div className="p-4 lg:p-6">
+        <p className="text-xl lg:text-[32px] font-source-pro font-semibold">
+          Why our Patients Recommend Us?
+        </p>
+        <ul className="list-inside list-disc space-y-2">
+          {[
+            "Trusted Accuracy: Cutting-edge technology ensures precise and reliable test results.",
+            "Fast Turnaround: No long waits—get your reports on time, every time.",
+            "Convenient Home Sample Collection: Healthcare that comes to you.",
+            "Affordable & Transparent Pricing: Quality healthcare with no hidden costs.",
+            "Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.",
+            "Hygienic & Safe Practices: We follow strict safety protocols for your well-being.",
+            "Fast Turnaround: No long waits—get your reports on time, every time.",
+            "Convenient Home Sample Collection: Healthcare that comes to you.",
+            "Affordable & Transparent Pricing: Quality healthcare with no hidden costs.",
+            "Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.",
+           
+          ].map((item, index) => (
+            <li key={index} className="text-[#585981] text-[16px] font-[400]">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-              <div className="bg-[#F7F7FB] rounded-xl grid items-center lg:grid-cols-3 grid-cols-1">
-                {/* <div className="bg-[#8DBD4D] py-[40px] relative"> */}
-                <div className="lg:-ml-3rem">
-                  <img
-                    src={Laptop.src}
-                    className="lg:mx-0 mx-auto"
-                    alt="Image of a laptop"
-                  />
-                </div>
-
-                <div className="col-span-2">
-                  <p className="lg:ml-[42px] lg:text-[32px] text-xl font-source-pro">
-                    Why our Patient recommend us?
-                  </p>
-                  <ul className="list-inside list-disc">
-                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      Trusted Accuracy: Cutting-edge technology ensures precise and reliable test results.
-                    </li>
-                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      Fast Turnaround: No long waits—get your reports on time, every time.
-                    </li>
-                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      Convenient Home Sample Collection: Healthcare that comes to you.
-                    </li>
-                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      Affordable & Transparent Pricing: Quality healthcare with no hidden costs.
-                    </li>
-                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.
-                    </li>
-                    <li className="lg:ml-[42px] text-[#585981] lg:w-10/12 p-2 md:p-4 text-[16px] font-[400] font-source-pro">
-                      Hygienic & Safe Practices: We follow strict safety protocols for your well-being.
-                    </li>
-                  </ul>
-
-                </div>
-
-              </div>
-              {/* </div> */}
-              {/* </div> */}
-            </div>
-          </div>
 
           <div className="container">
             {/* sm:mx-1 lg:mx-2 xl:mx-24 */}

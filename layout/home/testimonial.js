@@ -4,20 +4,20 @@ import "react-multi-carousel/lib/styles.css";
 const Testimonial = () => {
   const testimonials = [
     {
-      text: "Kaivee Healthcare made my health check-up seamless! Their home collection service was a lifesaver, and my reports were ready in no time!.",
-      name: "Riya Sharma",
+      text: "I made RT PCR test from this lab.My experience with this lab was wonderful and each process was easy and fast. Highly recommended services.",
+      name: "Lokesh Singh",
     },
     {
-      text: "Accurate results, professional staff, and a smooth experience—Kaivee Healthcare is my go-to lab!.",
-      name: "Anil Mehta",
+      text: "Very efficient ad prompt. Have well established contactless transfer of info, receipts and data. Dev from Zen health extends great co-operation and co-ordination.Strongly recommend to avail their services",
+      name: "Rahul Vats",
     },
     {
-      text: "The whole process, from booking to receiving reports, was effortless. Highly recommended!.",
-      name: "Priya Kapoor",
+      text: "Recently I got my test done from Zen Health Solutions, I would highly recommend zen health if you are looking for reasonable prices, clean environment with accurate and on-time results. Best services I got ever",
+      name: "Sonu Goel",
     },
     {
-      text: "Affordable, reliable, and hygienic. Kaivee Healthcare exceeded my expectations!.",
-      name: "Vikram Singh",
+      text: "Zen Health is a very professional establishment and their services are the best bar none. Also, the reports usually arrive before the expected time. Quite happy and satisfied with my experience with them",
+      name: "Sadh Khan",
     },
   ];
 
@@ -53,16 +53,16 @@ const Testimonial = () => {
     <section className="bg-white py-16 px-6 lg:px-20">
       <div className="text-center ">
         <h2 className="text-3xl lg:text-4xl  text-gray-800 mb-2">
-          Trusted by Leading Medical Practices
+        Happy Customers
         </h2>
         <p className="text-gray-600 lg:text-lg">
-          See how clinics and hospitals are transforming their workflows with our platform.
+        Don't take our word for it. See what customers are saying about us.
         </p>
       </div>
 
       {/* First Carousel */}
       <div
-        className="gap mb-14"
+        className="gap mb-4"
         style={{
           transform: "translateX(40px)",
           transition: "transform 0.3s ease-in-out",
@@ -101,7 +101,7 @@ const Testimonial = () => {
                   textOverflow: "ellipsis",
                 }}
               >
-                {`"${item.text}"`}
+                {`${item.text}`}
               </p>
               <div className="flex items-center">
                 <div className="h-10 w-10 bg-[#D41958] rounded-full flex-shrink-0"></div>
@@ -154,7 +154,7 @@ const Testimonial = () => {
                   textOverflow: "ellipsis",
                 }}
               >
-                {`"${item.text}"`}
+                {`${item.text}`}
               </p>
               <div className="flex items-center">
                 <div className="h-10 w-10 bg-[#8DBD4D] rounded-full flex-shrink-0"></div>

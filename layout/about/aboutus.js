@@ -14,10 +14,8 @@ const AboutUs = () => {
               About US
             </h1>
 
-            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              At <span className="font-bold">Kaivee Healthcare</span>, we are redefining diagnostics with <span className="font-bold">accuracy, efficiency, and patient-centric care. </span>
-              As a trusted pathlab, we offer a <span className="font-bold">wide range of medical tests </span>designed to detect diseases early, monitor health conditions, and provide crucial insights for better well-being.
-
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-[6px] leading-[1.5]">
+            Kaivee HealthCare is the trustworthy corporate healthcare company in India providing healthcare services to the corporate’s employees all over India. Years of experience and our impeccable services have made us the most prestigious, and trustworthy corporate wellness service provider company in India. Providing the best service in healthcare service to corporates and safeguard the employee is the primary objective of our work.
 
 
               {!readMore ? (
