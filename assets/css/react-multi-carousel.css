@@ -9,6 +9,12 @@
 }
 
 .react-multi-carousel-track li {
+  margin:0px;
+  width: 100%; 
+  height: auto;
+}
+
+.gap .react-multi-carousel-track li {
   margin:20px;
   width: 100%; 
   height: auto;

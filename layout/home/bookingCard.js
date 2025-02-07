@@ -29,8 +29,8 @@ const ServicesSection = () => {
     <>
       <section className="my-16 lg:my-20 mb-0 mt-2 text-center">
         {/* Heading with increased margin top and reduced margin bottom */}
-        <h2 className="mt-16 text-[42px] lg:text-3xl font-bold mb-4 mx-auto w-full sm:w-[985px]">
-          From <span className="text-[#8DBD4D]">Tests</span> to{" "}
+        <h2 className="mt-15 text-[42px] lg:text-3xl  mb-4 mx-auto w-full sm:w-[985px]">
+          From <span className="text-[#8DBD4D]">Tests to </span> 
           <span className="text-[#8DBD4D]">Prescriptions</span>, We’ve Got You
           Covered
         </h2>
@@ -42,32 +42,32 @@ const ServicesSection = () => {
             className="flex flex-col items-center cursor-pointer group relative"
             onClick={() => router.push(`/health-packages`)}
           >
-            <Image src={img1} alt="Health Package" className="w-24 sm:w-23 mb-4" />
+            <Image src={img1} alt="Health Package" className="w-28 sm:w-23 mb-4" />
           </div>
           {/* Appointment */}
           <div
             className="flex flex-col items-center cursor-pointer group relative"
             onClick={() => router.push(`/dashboard/book-an-appointment`)}
           >
-            <Image src={img2} alt=" Appointment" className="w-24 sm:w-23 mb-4" />
+            <Image src={img2} alt=" Appointment" className="w-28 sm:w-23 mb-4" />
           </div>
           {/* Test */}
           <div
             className="flex flex-col items-center cursor-pointer group relative"
             onClick={() => router.push(`/book-a-test`)}
           >
-            <Image src={img3} alt="Book a Test" className="w-24 sm:w-23 mb-4" />
+            <Image src={img3} alt="Book a Test" className="w-28 sm:w-23 mb-4" />
           </div>
           {/* Home Collection */}
           <div
             className="flex flex-col items-center cursor-pointer group relative"
             onClick={() => router.push(`/free-home-sample-collection`)}
           >
-            <Image src={img4} alt=" Home Collection" className="w-24 sm:w-23 mb-4" />
+            <Image src={img4} alt=" Home Collection" className="w-28 sm:w-23 mb-4" />
           </div>
           {/* Upload Prescription */}
           <div className="flex flex-col items-center cursor-pointer group relative" onClick={uploadModal}>
-            <Image src={img5} alt="Upload Prescription" className="w-24 sm:w-23 mb-4" />
+            <Image src={img5} alt="Upload Prescription" className="w-28 sm:w-23 mb-4" />
           </div>
         </div>
 

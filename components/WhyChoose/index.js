@@ -23,7 +23,7 @@ const WhyChoose = ({ data }) => {
   };
 
   const cardStyle = {
-    backgroundColor: "#fff",
+    backgroundColor: "#D419580D",
     border: "1px solid #e0e0e0",
     borderRadius: "8px",
     // padding: "20px",

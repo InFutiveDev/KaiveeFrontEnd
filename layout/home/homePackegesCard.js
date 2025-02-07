@@ -60,7 +60,7 @@ const HomePackegesCard = ({ data, cart, handleCartData }) => {
           href={`/health-packages/${data?.test_url}`}
           className="cursor-pointer"
         >
-          <p className="fixed-height-text text-black font-semibold text-[18px] font-source-pro ">
+          <p className="fixed-height-text text-black  text-[18px] font-source-pro ">
             {data?.specialityName || "Package Name"}
           </p>
         </Link>

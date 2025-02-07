@@ -52,7 +52,7 @@ const Testimonial = () => {
   return (
     <section className="bg-white py-16 px-6 lg:px-20">
       <div className="text-center ">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-2">
+        <h2 className="text-3xl lg:text-4xl  text-gray-800 mb-2">
           Trusted by Leading Medical Practices
         </h2>
         <p className="text-gray-600 lg:text-lg">
@@ -62,7 +62,7 @@ const Testimonial = () => {
 
       {/* First Carousel */}
       <div
-        className="mb-14"
+        className="gap mb-14"
         style={{
           transform: "translateX(40px)",
           transition: "transform 0.3s ease-in-out",
@@ -116,7 +116,7 @@ const Testimonial = () => {
 
       {/* Second Carousel */}
       <div
-        className="mt-6"
+        className="gap mt-6"
         style={{
           transform: "translateX(-40px)",
           transition: "transform 0.3s ease-in-out",

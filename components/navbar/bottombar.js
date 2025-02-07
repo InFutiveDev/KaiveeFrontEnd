@@ -158,7 +158,7 @@ const Bottombar = () => {
                         className={`transition-all align-middle menuText   ${asPath == "/about" && "!text-[#D41958] !font-medium"
                           }`}
                       >
-                        <DropdownItem className="transition-all  hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all  hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           About us
                         </DropdownItem>
                       </Link>
@@ -171,7 +171,7 @@ const Bottombar = () => {
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
-                        <DropdownItem className="transition-all  hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all  hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Our Team
                         </DropdownItem>
                       </Link>
@@ -184,7 +184,7 @@ const Bottombar = () => {
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
-                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Quality Assurance
                         </DropdownItem>
                       </Link>
@@ -196,7 +196,7 @@ const Bottombar = () => {
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
-                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           Awards & Accreditations
                         </DropdownItem>
                       </Link>
@@ -208,7 +208,7 @@ const Bottombar = () => {
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
-                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           CSR
                         </DropdownItem>
                       </Link>

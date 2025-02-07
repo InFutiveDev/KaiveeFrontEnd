@@ -80,7 +80,7 @@ const Facilities = () => {
       
         {/* Header & Buttons */}
         <div className="flex justify-between px-2 items-center w-full pb-[10px]">
-          <p className="lg:text-[32px] font-semibold">Facilities</p>
+          <p className="lg:text-[32px] ">Facilities</p>
           <ButtonGroup onPrevious={() => carouselRef.current?.previous()} onNext={() => carouselRef.current?.next()} />
         </div>
 
@@ -118,10 +118,10 @@ const Facilities = () => {
                 />
               </div>
               <div className="mt-4 text-center">
-                <h3 className="text-[20px] font-semibold text-gray-900 mb-2 line-clamp-1">
+                <h3 className="text-[20px]  text-gray-900 mb-2 line-clamp-1">
                   {item.title}
                 </h3>
-                <p className="text-[16px] text-gray-600 line-clamp-3">
+                <p className="text-[14px] text-gray-600 line-clamp-3">
                   {item.description}
                 </p>
               </div>

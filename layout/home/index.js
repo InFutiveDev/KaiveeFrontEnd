@@ -137,20 +137,12 @@ const HomeLayout = () => {
             <div className="backImageBox" />
           </section>
 
-          {/* <div className="bg-white py-[12px] px-[24px] flex">
-            <marquee
-              className="text-[16px] font-medium "
-              width="100%"
-              direction="left"
-            >
-              {` Welcome to Kaivee Healthcare. 📢 Book a Test Quick and Queue-Free! Now You Can Book Your Tests, Appointments, and Free Home Collection Online from City X-Ray. || 📢 Kaivee Healthcare Is Also Available On WhatsApp. To Book a Test, Download a Report, or Get Quick Customer Support Just By Sending "Hi" to 9999999999 || 💬 NABH Accreditated Radiological Services as Per Scope | NABL Accreditated Pathological Services as Per Scope`}
-            </marquee>
-          </div> */}
-          <div className="container">
+        <div className="conatiner">
+          <div className="container pt-3">
             <div className="py-4  mb-1 bg-white bg-opacity-50">
               <div className="container mx-auto grid grid-cols-3 md:grid-cols-4 gap-2 text-center">
                 {features.map((feature, index) => (
-                  <div key={index} className="flex flex-col items-center justify-center space-y-1"> {/* Reduced space-y-2 to space-y-1 */}
+                  <div key={index} className="flex flex-col items-center justify-center space-y-1 font-[Poppins] text-[50%]"> {/* Reduced space-y-2 to space-y-1 */}
                     <Image
                       src={feature.icon}
                       alt={feature.label}
@@ -158,15 +150,14 @@ const HomeLayout = () => {
                       style={{ height: '72%' }} // Keeping height as per your previous request
                     />
 
-
                   </div>
                 ))}
               </div>
             </div>
           </div>
-
+          </div>
           <div className="bg-[#FAFAFA]">
-            <div className="container bg-">
+            <div className="container pt-1 ">
               <BookingCard packagesId={habits?.data[0]?._id || ""} />
             </div>
 
@@ -241,23 +232,7 @@ const HomeLayout = () => {
               </div>
             </div>
           </div>
-          {/* <div className="container"> */}
-          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-          {/* <div className=" pb-0 lg:pb-8 py-2 pt-8">
-              <HealthRisks
-                altImageKey="home_image_altTag"
-                imageKey="home_image"
-                autoPlay={true}
-                data={
-                  categories?.data?.categoryData?.length !== 0
-                    ? categoriesData
-                    : []
-                }
-                queryString={"Categories"}
-                title={"Test by Modality / Department"}
-              />
-            </div>
-          </div> */}
+          
           <div className="bg-white">
             <div className="container">
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
@@ -269,14 +244,7 @@ const HomeLayout = () => {
           <div>
             <WhyChoose data={data} padding={"50px"} />
           </div>
-          {/* <div className="bg-[#FAFAFA]">
-            <div className="container"> */}
-          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-          {/* <div className=" pb-0 lg:pb-4 py-2 pt-4">
-                <HealthcareVideos />
-              </div>
-            </div>
-          </div> */}
+          
 
           <div className="w-full ">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
@@ -295,7 +263,7 @@ const HomeLayout = () => {
                 </div>
 
                 <div className="col-span-2">
-                  <p className="lg:ml-[42px]  font-semibold lg:text-[32px] text-xl font-source-pro">
+                  <p className="lg:ml-[42px] lg:text-[32px] text-xl font-source-pro">
                     Why our Patient recommend us?
                   </p>
                   <ul className="list-inside list-disc">
@@ -342,81 +310,11 @@ const HomeLayout = () => {
               </div>
             </div>
           </div>
-          {/* <div className="bg-[#FAFAFA]">
-            <div className="container"> */}
-          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-          {/* <div className=" pt-4 pb-2">
-                <AccreditationsAwards />
-              </div>
-            </div>
-          </div> */}
-          {/* <div className="bg-[#F7F7FB] "> */}
-          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-          {/* <div className="container">
-              <div className="  pt-4 pb-4">
-                <Media />
-              </div>
-            </div>
-          </div> */}
-          {/* <div className="bg-[#F7F7FB] ">
-            <div className="container"> */}
-          {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-          {/* <div className="  pt-4 pb-4">
-                <PrintMedia />
-              </div>
-            </div>
-          </div> */}
-          {/* <div>
-            <div className="container  pt-4 pb-4">
-              <div className="grid items-center lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4">
-                <div>
-                  <Image
-                    loading="lazy"
-                    src={Mobile.src}
-                    width={600}
-                    height={600}
-                    className="h-[90%] object-fill"
-                  />
-                </div>
-                <div>
-                  <p className="md:text-[36px] text-lg font-bold font-source-pro text-center md:!text-left">
-                    Presenting the All New City X-
-                    <br />
-                    Ray Mobile App
-                  </p>
-                  <div className="text-secondary mt-[8px] text-[14px] font-normal text-center md:!text-left">
-                    Amet minim mollit non deserunt
-                    <br /> ullamco est sit aliqua dolor do amet
-                    <br /> sint.
-                  </div>
-                  <div className="flex gap-1 mt-[30px] justify-center md:justify-start">
-                    <div>
-                      <img src={AppStore.src} alt="playstore icon" />
-                    </div>
-                    <div>
-                      <img src={PlayStore.src} alt="playstore icon" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* <div>
-            <div className="py-[50px] md:py-[70px]">
-              <div className="container mb-[50px]">
-                <p className="font-semibold pb-4 lg:text-[32px] text-lg font-source-pro">
-                  Our Journey
-                </p>
-                <div className="w-full h-60 lg:h-[600px] md:h-72 sm:h-60">
-                  <OurJourney />
-                </div>
-              </div>
-            </div>
-          </div> */}
+         
           <div className="bg-[#FAFAFA] py-6 ">
             <div className="container  mx-auto px-4">
               <div>
-                <p className="font-semibold lg:text-[32px] text-lg pb-2 font-source-pro">
+                <p className=" lg:text-[32px] text-lg pb-2 font-source-pro">
                   Location
                 </p>
                 <span className="text-secondary text-[18px]">
@@ -525,7 +423,7 @@ const HomeLayout = () => {
 
           <div className="bg-[#F7F7FB]">
             <div className="container pt-4 pb-4">
-              <h1 className="text-center font-semibold text-lg lg:text-xl xl:text-[26px] font-source-pro text-black">
+              <h1 className="text-center  text-lg lg:text-xl xl:text-[26px] font-source-pro text-black">
                 ONE-STOP DESTINATION FOR ALL YOUR TEST - BEST DIAGNOSTIC CENTRE IN REGION!
               </h1>
               <div className="text-center">
@@ -768,42 +666,5 @@ const locationData = [
     email: "zenhealthcare@gmail.com",
     iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1278876753586!2d77.3960429!3d28.5659222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef823d515f91%3A0xd4d4ace124409340!2sZen%20Health%20Services!5e0!3m2!1sen!2sin!4v1737958352844!5m2!1sen!2sin"
   },
-  // {
-  //   mainTilte: "Tilak Nagar",
-  //   address:
-  //     "5A/34  Tilak Nagar, Metro Pillar No-492 Near Haldiram Sweets, New Delhi, Delhi-110018",
-  //   serviceAvailable:
-  //     "MRI Scan, CT Scan, Digital X-Ray, Neurology Test, Dental Imaging, Cardiology, Nuclear Imaging, DEXA Scan (BMD), Digital Mammography, Pathology Laboratory, 3D/4D Ultrasound, CT Coronary Angiography",
-  //   contactNumber: "011-4725-2000",
-  //   timing: "07:00 AM to 11:00 PM",
-  //   email: "lft@cityxrayclinic.com",
-  //   // iframe:
-  //   //   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.66731111373!2d77.1011643!3d28.6397315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d049e6b2d0ccd%3A0x9a36a2303144f6ab!2sCity%20X-Ray%20%26%20Scan%20Clinic%20Pvt.%20Ltd.%20-%20Tilak%20Nagar!5e0!3m2!1sen!2sin!4v1692600788400!5m2!1sen!2sin",
-  //   iframe:
-  //     "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14006.66924445492!2d77.1011643!3d28.6397315!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d049e6b2d0ccd%3A0x9a36a2303144f6ab!2sCity%20X-Ray%20%26%20Scan%20Clinic%20Pvt.%20Ltd.%20-%20Tilak%20Nagar!5e0!3m2!1sen!2sin!4v1705926071893!5m2!1sen!2sin",
-  // },
-  // {
-  //   mainTilte: "Vikaspuri",
-  //   address:
-  //     "Terminal, A - 12, Vikaspuri, near Metro Pillar Number 632, near Uttam Nagar, New Delhi, Delhi 110018",
-  //   serviceAvailable:
-  //     "MRI Scan, CT Scan, Digital X-Ray, Neurology Test, Dental Imaging, Cardiology, Nuclear Imaging, DEXA Scan (BMD), Digital Mammography, Pathology Laboratory, 3D/4D Ultrasound, CT Coronary Angiography",
-  //   contactNumber: "011-4725-2000",
-  //   timing: "08:00 AM to 8:00 PM",
-  //   email: "lft@cityxrayclinic.com",
-  //   iframe:
-  //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1086096406048!2d77.0685195!3d28.626506799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0521cbfdd29d%3A0xacf278f199bcea9a!2sCity%20X-Ray%20%26%20Scan%20Clinic%20Pvt.%20Ltd.%20-%20Vikaspuri!5e0!3m2!1sen!2sin!4v1692602179245!5m2!1sen!2sin",
-  // },
-  // {
-  //   mainTilte: "Vishnu Garden",
-  //   address:
-  //     "WZ 283/24A, Block A, Khayala, Vishnu Garden, New Delhi, Delhi, 110018",
-  //   serviceAvailable:
-  //     "MRI Scan, CT Scan, Digital X-Ray, Neurology Test, Dental Imaging, Cardiology, Nuclear Imaging, DEXA Scan (BMD), Digital Mammography, Pathology Laboratory, 3D/4D Ultrasound, CT Coronary Angiography",
-  //   contactNumber: "011-4725-2000",
-  //   timing: "08:00 AM to 6:00 PM",
-  //   email: "lft@cityxrayclinic.com",
-  //   iframe:
-  //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.2860372527743!2d77.10192359999999!3d28.6511529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03ea87833a47%3A0x8624a19fbe20d9d8!2sCity%20X-Ray%20%26%20Scan%20Clinic%20Pvt%20Ltd%20-%20Vishnu%20Garden!5e0!3m2!1sen!2sin!4v1692602268821!5m2!1sen!2sin",
-  // },
+  
 ];

@@ -305,8 +305,8 @@ const BookATestLayout = ({ urlData }) => {
                 </div>
               </div>
               <div className="lg:col-span-3 overflow-hidden rounded-xl border-[1px] border-[#D41958]">
-                <div className="bg-[#D41958] py-1.5 px-3 lg:flex lg:mb-0 mb-3 justify-between items-center">
-                  <p className="text-lg sm:text-2xl font-semibold font-source-pro">
+                <div className="bg-[#D419580D] py-1.5 px-3 lg:flex lg:mb-0 mb-3 justify-between items-center">
+                  <p className="text-lg text-[#D41958] sm:text-2xl font-semibold font-source-pro">
                     Tests
                   </p>
                   <div className="flex flex-wrap gap-2 sm:mb-3 lg:mb-0  justify-start items-center">

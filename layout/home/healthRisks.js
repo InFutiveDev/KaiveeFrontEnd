@@ -90,7 +90,7 @@ const HealthRisks = ({
   return (
     <div className="md:mt-4 relative w-full ">
       <div className="flex justify-between px-2 items-center w-full">
-        <p className="font-semibold lg:text-[32px] md:text-xl">{title}</p>
+        <p className=" lg:text-[32px] md:text-xl">{title}</p>
         <ButtonGroup onPrevious={handlePrevious} onNext={handleNext} />
       </div>
       <div className="row mt-4">

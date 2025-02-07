@@ -63,7 +63,7 @@ const LatestAnnouncement = () => {
   return (
     <div className="p-2">
       <div>
-        <p className="font-semibold lg:text-[32px] text-xl">
+        <p className=" lg:text-[32px] text-xl">
           Latest Announcement
         </p>
       </div>

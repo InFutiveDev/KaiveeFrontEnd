@@ -46,7 +46,7 @@ const Facilities = ({ categories, closeMenu }) => {
       </div>
       <div className="transition-all z-50 mt-1 min-h-[1.8rem] py-1 px-2 left-0 max-w-min absolute top-3 text-xs text-secondary hidden group-hover:block">
         <svg
-          className="absolute rotate-180 text-orange h-3 left-6 mr-3 -top-2"
+          className="absolute rotate-180 text-black h-3 left-6 mr-3 -top-2"
           x="0px"
           y="0px"
           viewBox="0 0 255 255"
@@ -73,9 +73,9 @@ const Facilities = ({ categories, closeMenu }) => {
                     // }}
                   >
                     <div
-                      className={`p-2 relative transition-all cursor-pointer hover:bg-orange  text-[14px] text-gray-700 font-[500] text-start hover:text-gray-700 focus:text-gray-700 hover:font-semibold ${
+                      className={`p-2 relative transition-all cursor-pointer hover:bg-[#D419580D] text-[14px] text-gray-700 font-[500] text-start hover:text-gray-700 focus:text-gray-700 hover:font-semibold ${
                         router?.query?.slug === category.category_url
-                          ? "text-orange"
+                          ? "text-black"
                           : ""
                       }`}
                       onClick={() => {
@@ -101,9 +101,9 @@ const Facilities = ({ categories, closeMenu }) => {
                             }}
                             className={`${
                               router?.query?.slug === item.category_url
-                                ? "text-orange"
+                                ? "text-black"
                                 : ""
-                            } p-2 !m-0 relative transition-all cursor-pointer hover:bg-orange !text-[14px] !font-[500] text-start text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold `}
+                            } p-2 !m-0 relative transition-all cursor-pointer hover:bg-[#D419580D] !text-[14px] !font-[500] text-start text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold `}
                           >
                             {/* {item.category_url} */}
                             {item.category_name}

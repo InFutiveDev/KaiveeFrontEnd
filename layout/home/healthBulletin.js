@@ -66,7 +66,7 @@ const HealthBulletin = () => {
   return (
     <div className="relative px-2">
       <div className="flex flex-wrap justify-between items-center gap-2 lg:pb-0 pb-3">
-        <p className="font-semibold lg:text-[32px] text-lg font-source-pro">
+        <p className=" lg:text-[32px] text-lg font-source-pro">
           Blog – Health Bulletin & Articles
         </p>
         <a target="_blank" href="https://blog.cityxrayclinic.com/">

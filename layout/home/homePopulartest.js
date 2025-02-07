@@ -163,7 +163,7 @@ const HomePopularPackeges = ({
       <div className="relative w-full flex md:!flex-nowrap sm:flex-row	 sm:gap-1 sm:flex-wrap flex-col  sm:items-center items-start md:justify-between  justify-start space-x-3 p-2">
         {/* md:w-[150px] lg:w-[300px] xl:w-[300px] */}
         <div className="inline-flex justify-start">
-          <p className="font-semibold lg:text-[32px] text-xl font-source-pro">
+          <p className=" lg:text-[32px] text-xl font-source-pro">
             {title}
           </p>
         </div>
