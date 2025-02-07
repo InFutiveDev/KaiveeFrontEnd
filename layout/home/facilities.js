@@ -5,7 +5,7 @@ import img2 from "assets/images/Finalimg/Facility/CT-Scan.webp";
 import img3 from "assets/images/Finalimg/Facility/Digital-Xray.webp";
 import img4 from "assets/images/Finalimg/Facility/pathalogy-laboratory.webp";
 import img5 from "assets/images/Finalimg/Facility/Dental-Imaging.webp";
-import img6 from "assets/images/Finalimg/Facility/Mammography.webp";
+import img6 from "assets/images/Finalimg/Facility/mammography.webp";
 import img7 from "assets/images/Finalimg/Facility/CT-Corona-Angiography.webp";
 import img8 from "assets/images/Finalimg/Facility/cardiologist.webp";
 import img9 from "assets/images/Finalimg/Facility/neuclear-imaging.webp";
