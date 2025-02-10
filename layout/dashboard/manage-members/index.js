@@ -40,7 +40,7 @@ const ManageMembersLayout = () => {
             <p className="text-lg font-semibold">Manage Members</p>
             <button
               onClick={() => setOpen(true)}
-              className=" bg-orange text-white rounded px-[30px] py-[12px] text-[16px]"
+              className=" bg-[#D41958] text-white rounded px-[30px] py-[12px] text-[16px]"
             >
               + Add Member
             </button>
@@ -53,7 +53,7 @@ const ManageMembersLayout = () => {
                   <tr>
                     <th
                       colSpan="2"
-                      className="border  md:py-[10px] bg-[rgb(255,244,224)] md:px-[24px] px-[12px] py-[6px] border-[#EFF1F5] "
+                      className="border  md:py-[10px] bg-[#D419580D] md:px-[24px] px-[12px] py-[6px] border-[#EFF1F5] "
                     >
                       <div className="flex gap-[5px] flex-wrap justify-between items-center">
                         <span className="md:text-[18px] text-[16px]">
@@ -65,7 +65,7 @@ const ManageMembersLayout = () => {
                               setEditOpen(true);
                               setMemeberBy(item);
                             }}
-                            className=" bg-orange flex gap-[3px] space-x-2 items-center text-white rounded px-2 py-1 font-[300] text-[16px]"
+                            className=" bg-[#D41958] flex gap-[3px] space-x-2 items-center text-white rounded px-2 py-1 font-[300] text-[16px]"
                           >
                             <img src={EditIcon.src} alt="edit icon" />{" "}
                             <span className="md:text-[18px] text-[13px]">
@@ -76,7 +76,7 @@ const ManageMembersLayout = () => {
                             onClick={() => {
                               setItemToDelete(item);
                             }}
-                            className="bg-orange w-7 h-7 rounded-full flex justify-center items-center"
+                            className="bg-[#D41958] w-7 h-7 rounded-full flex justify-center items-center"
                           >
                             <Trash size={18} color="white" />
                           </button>

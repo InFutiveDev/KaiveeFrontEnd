@@ -266,7 +266,7 @@ const HomeLayout = () => {
 
       {/* Content Section - Takes 1/2 width on large screens */}
       <div className="p-4 lg:p-6">
-        <p className="text-xl lg:text-[32px] font-source-pro font-semibold">
+        <p className="text-xl lg:text-[32px] font-source-pro ">
           Why our Patients Recommend Us?
         </p>
         <ul className="list-inside list-disc space-y-2">
@@ -277,16 +277,25 @@ const HomeLayout = () => {
             "Affordable & Transparent Pricing: Quality healthcare with no hidden costs.",
             "Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.",
             "Hygienic & Safe Practices: We follow strict safety protocols for your well-being.",
-            "Fast Turnaround: No long waits—get your reports on time, every time.",
-            "Convenient Home Sample Collection: Healthcare that comes to you.",
-            "Affordable & Transparent Pricing: Quality healthcare with no hidden costs.",
-            "Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.",
+            
            
           ].map((item, index) => (
             <li key={index} className="text-[#585981] text-[16px] font-[400]">
               {item}
             </li>
           ))}
+          {/* Read More / Read Less Button */}
+          <span
+                      className="font-bold cursor-pointer text-[#D41958] mt-2 inline-block"
+                      onClick={() => setReadMore(!readMore)}
+                    >
+                      {readMore ? "Read Less ▲" : "Read More ▼"}
+                    </span>
+
+                    {/* Conditional Rendering Based on Read More State */}
+                    {readMore && (
+          <p className="text-[16px] text-[#585981]">At Kaivee Healthcare, we are committed to providing our patients with the best possible care. We are constantly striving to improve our services and our patient experience. We continually seek feedback from our patients and use it to make our services even better. We also strive to maintain a high level of customer service, so that our patients are able to get the support they need when they need it.</p>
+                   ) }
         </ul>
       </div>
     </div>

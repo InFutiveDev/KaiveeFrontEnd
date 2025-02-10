@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { CallYellowImg } from "assets/images/SvgImage";
 import { EmailYellowSVG } from "assets/images/SvgImage";
 import ImgOne from "assets/images/dashboard/Frame 1410140987.png";
+import EditImgActive from "assets/images/check-out/Frame 1410140987.png"
 import Profileicon from "assets/images/dashboard/Profile-icon.png";
 import ImgTwo from "assets/images/dashboard/Frame 1410140987 (1).png";
 import ImgThree from "assets/images/dashboard/Frame 1410140987 (2).png";
@@ -63,35 +64,42 @@ const DashboardCard = () => {
           className="rounded-xl bg-white cursor-pointer shadow-md"
         >
           <div>
-            <div className="bg-[#F7F8F8] py-[24px] rounded-t-xl w-full flex justify-center flex-column items-center">
-              <div className="rounded-[50%] overflow-hidden bg-white h-[5rem] w-[5rem] flex justify-center items-center">
-                {!userInfo?.profilePicture ? (
-                  <div className="text-6xl ">{firstChar}</div>
-                ) : (
-                  <img
-                    className="object-cover rounded-[50%] h-[5rem] w-[5rem] p-2"
-                    src={userInfo?.profilePicture}
-                  />
-                )}
-              </div>
-              <p className="mt-[10px] font-semibold text-lg">
-                {userInfo?.name || "N/A"}
-              </p>
+            <div className="bg-[#D419580D] py-[24px] rounded-t-xl w-full flex justify-center flex-column items-center">
+            <div className="relative rounded-[50%] overflow-hidden bg-white h-[5rem] w-[5rem] flex justify-center items-center group">
+            {!userInfo?.profilePicture ? (
+              <div className="text-6xl">{firstChar}</div>
+            ) : (
+              <img
+                className="object-cover rounded-[50%] h-[5rem] w-[5rem] p-2"
+                src={userInfo?.profilePicture}
+              />
+            )}
+
+          {/* Edit Icon */}
+          <div className="absolute bottom-35px right-35px bg-gray-200 p-1 rounded-full cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <img src={EditImgActive.src} />
+          </div>
+          </div>
+
+          <p className="mt-[10px] font-semibold text-lg">{userInfo?.name || "N/A"}</p>
+
             </div>
             <div className="p-2 pl-3">
-              <div className="flex justify-start items-center gap-3">
-                <span>
-                  <EmailYellowSVG />
-                </span>
-                <span className="text-base"> {userInfo?.email || "NaN"}</span>
-              </div>
-              <div className="flex justify-start items-center gap-3">
-                <span>
-                  <CallYellowImg />
-                </span>
-                <span className="text-base">+91 {userInfo?.mobile || ""}</span>
-              </div>
+            <div className="flex justify-start items-center gap-x-6 flex-wrap  ">
+            {/* Email Section */}
+            <div className="flex items-center gap-2">
+            <EmailYellowSVG />
+            <span className="text-base">{userInfo?.email || "NaN"}</span>
             </div>
+
+            {/* Mobile Section */}
+            <div className="flex items-center gap-2">
+            <CallYellowImg />
+            <span className="text-base">+91 {userInfo?.mobile || ""}</span>
+            </div>
+            </div>
+            </div>
+
           </div>
         </div>
 
@@ -104,7 +112,7 @@ const DashboardCard = () => {
 
         <Link href={"/dashboard/my-booking"}>
           <div className="rounded-xl overflow-hidden bg-white shadow-md ">
-            <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+            <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
               <img src={ImgOne.src} alt="icon" />
             </div>
             <div className="bg-white py-[24px] px-[24px] flex justify-between">
@@ -116,7 +124,7 @@ const DashboardCard = () => {
 
         <Link href={"/dashboard/my-report"}>
           <div className="rounded-xl overflow-hidden bg-white shadow-md ">
-            <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+            <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
               <img src={ImgTwo.src} alt="icon" />
             </div>
             <div className="bg-white py-[24px] px-[24px] flex justify-between">
@@ -128,7 +136,7 @@ const DashboardCard = () => {
 
         <Link href={"/dashboard/report-tracking"}>
           <div className="rounded-xl overflow-hidden bg-white shadow-md ">
-            <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+            <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
               <img src={ImgThree.src} alt="icon" />
             </div>
             <div className="bg-white py-[24px] px-[24px] flex justify-between">
@@ -140,7 +148,7 @@ const DashboardCard = () => {
 
         <Link href={"/dashboard/manage-address"}>
           <div className="rounded-xl overflow-hidden bg-white shadow-md ">
-            <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+            <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
               <img src={ImgFour.src} alt="icon" />
             </div>
             <div className="bg-white py-[24px] px-[24px] flex justify-between">
@@ -152,7 +160,7 @@ const DashboardCard = () => {
 
         <Link href={"/dashboard/manage-members"}>
           <div className="rounded-xl overflow-hidden bg-white shadow-md ">
-            <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+            <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
               <img src={ImgFive.src} alt="icon" />
             </div>
             <div className="bg-white py-[24px] px-[24px] flex justify-between">
@@ -167,7 +175,7 @@ const DashboardCard = () => {
           onClick={() => setUploadOpen(true)}
           className="rounded-xl overflow-hidden bg-white shadow-md "
         >
-          <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+          <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
             <img src={ImgSix.src} alt="icon" />
           </div>
           <div className="bg-white py-[24px] px-[24px] flex justify-between">
@@ -180,7 +188,7 @@ const DashboardCard = () => {
 
         <Link href={"/feedback"}>
           <div className="rounded-xl overflow-hidden bg-white shadow-md ">
-            <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+            <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
               <img src={ImgSeven.src} alt="icon" />
             </div>
             <div className="bg-white py-[24px] px-[24px] flex justify-between">
@@ -192,7 +200,7 @@ const DashboardCard = () => {
 
         <Link href={"/book-a-test"}>
           <div className="rounded-xl overflow-hidden bg-white shadow-md ">
-            <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+            <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
               <img src={ImgEight.src} alt="icon" />
             </div>
             <div className="bg-white py-[24px] px-[24px] flex justify-between">
@@ -204,7 +212,7 @@ const DashboardCard = () => {
 
         <Link href={"/free-home-sample-collection"}>
           <div className="rounded-xl overflow-hidden bg-white shadow-md ">
-            <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+            <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
               <img src={ImgNine.src} alt="icon" />
             </div>
             <div className="bg-white py-[24px] px-[24px] flex justify-between">
@@ -233,7 +241,7 @@ const DashboardCard = () => {
         )}
         <Link href={"/dashboard/book-an-appointment"}>
           <div className="rounded-xl overflow-hidden bg-white shadow-md ">
-            <div className="bg-[#F7F8F8] flex justify-center py-[24px] w-full">
+            <div className="bg-[#D419580D] flex justify-center py-[24px] w-full">
               <img src={ImgEleven.src} alt="icon" />
             </div>
             <div className="bg-white py-[24px] px-[24px] flex justify-between">

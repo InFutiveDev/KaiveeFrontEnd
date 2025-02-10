@@ -47,22 +47,22 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
   return (
     <div className="rounded-lg min-h-[150px] flex flex-col  justify-between shadow-md lg:p-[24px] p-2 border border-[#E4E4E7]">
       <div>
-        <p className="text-black font-semibold line-clamp-2 text-lg font-source-pro">
+        <p className="text-black  line-clamp-2 text-lg font-source-pro">
           {data?.specialityName || "N/A"}
         </p>
         <div className="flex  items-center gap-5 my-[6px]">
           <div>
-            <span className="text-[#8DBD4D] font-semibold md:text-xl text-lg">
+            <span className="text-[#8DBD4D]  md:text-xl text-lg">
               ₹{data?.offer_price}
             </span>
             {data?.offer_price < data?.mrp && (
-              <span className="text-secondary font-semibold text-[14px] ml-[10px]">
+              <span className="text-secondary text-[14px] ml-[10px]">
                 <del>₹{data?.mrp}</del>
               </span>
             )}
           </div>
           {data?.offer_price < data?.mrp ? (
-            <span className="text-[#005E54] font-semibold md:text-xl text-lg">
+            <span className="text-[#005E54]  md:text-xl text-lg">
               {(((data?.mrp - data?.offer_price) / data?.mrp) * 100).toFixed()}%
               off
             </span>
@@ -76,10 +76,10 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
       {data?.no_of_parameters > 0 ?
             (
               <div className="flex ">
-                <span className="text-secondary font-semibold text-[14px]">
+                <span className="text-secondary  text-[14px]">
                   Test parameters :-
                 </span>
-                <span className="text-[#D41958] font-bold text-[14px]">
+                <span className="text-[#D41958]  text-[14px]">
                   {data?.no_of_parameters} Test
                 </span>
               </div>
@@ -101,7 +101,7 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
         <div className="my-[16px] grid grid-cols-2 gap-x-2">
           {cart?.hasOwnProperty(data?._id || "") ? (
             <button
-              className=" bg-[#8DBD4D] text-white rounded px-[12px] py-[8px] text-xs font-semibold !text-[12px]"
+              className=" bg-[#8DBD4D] text-white rounded px-[12px] py-[8px] text-xs  !text-[12px]"
               onClick={handleRemoveCart}
             >
               Remove item

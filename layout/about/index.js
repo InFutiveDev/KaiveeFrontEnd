@@ -47,6 +47,41 @@ const AboutLayout = () => {
       </section>
 
       <AboutUs />
+      <section className="py-12 px-6 bg-[#D419580D]">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-gray-800">Know Our Journey</h2>
+        <p className="mt-4 text-gray-600">
+          At kaivee HealthCare, we believe in comprehensive services, convenient pick-ups, timely delivery, and an informed follow-up. We make sure that you get quick, accurate, and state-of-the-art services.
+        </p>
+      </div>
+
+      <div className="max-w-4xl mx-auto mt-10 space-y-8">
+        {/* Right-aligned on desktop */}
+        <div className="bg-white p-6 rounded-lg shadow-md md:ml-auto md:max-w-[85%]">
+          <h3 className="text-2xl font-semibold text-gray-700">How We Started</h3>
+          <p className="mt-2 text-gray-600">
+            When we began this journey in 2021, all we wanted was to make quality healthcare accessible to people and to give a sense of convenience with a healthy lifestyle.
+          </p>
+        </div>
+
+        {/* Left-aligned on desktop */}
+        <div className="bg-white p-6 rounded-lg shadow-md md:mr-auto md:max-w-[85%]">
+          <h3 className="text-2xl font-semibold text-gray-700">Defining The Problem</h3>
+          <p className="mt-2 text-gray-600">
+            We have seen the harsh realities of both urban and rural life - from the issue of affordability to the problem of accessibility. Our strong desire to improve the overall well-being of people, by providing them with accurate diagnostics, motivated us to create 'Zen Health Labs'. Through our innovative solutions, we strive to ensure that everyone has access to the diagnostic healthcare they need, regardless of their location or financial situation.
+          </p>
+        </div>
+
+        {/* Right-aligned on desktop */}
+        <div className="bg-white p-6 rounded-lg shadow-md md:ml-auto md:max-w-[85%]">
+          <h3 className="text-2xl font-semibold text-gray-700">Creating a Pan-India Dx Revolution</h3>
+          <p className="mt-2 text-gray-600">
+            We believe in the philosophy of preventive health and disease management. In just four short years, we have been able to provide care to 2.5 million Indians, making us a leader in the field of diagnostics. We are proud to be able to make a positive impact in the lives of so many people.
+          </p>
+        </div>
+      </div>
+    </section>
+
       <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />
       </div>
@@ -70,7 +105,7 @@ const AboutLayout = () => {
               Our Vision
             </h2>
             <p className="text-secondary lg:text-[18px] text-base mt-[16px]">
-              To be a leading and <strong> trusted name in diagnostics</strong>, making high-quality healthcare<strong>accessible, reliable, and convenient </strong> for everyone.
+            We are committed to delivering exceptional patient-centered healthcare solutions that provide the highest quality, service, and access to in-home and ambulatory care from highly trained medical professionals and aides. Our goal is to ensure each patient receives the best care possible, giving them the attention and care they deserve.
             </p>
           </div>
         </div>
@@ -92,12 +127,12 @@ const AboutLayout = () => {
               Our Mission
             </h2>
             <p className="text-secondary lg:text-[18px] text-base mt-[16px]">
-              At<strong> Kaivee Healthcare</strong> , our mission is to make high-quality diagnostics <strong>accessible, accurate, and hassle-free </strong> for everyone. We strive to provide precise test results using<strong> state-of-the-art technology and expert analysis</strong> , ensuring that every diagnosis leads to better health decisions. Our seamless services, including<strong> home sample collection and digital reports</strong> , bring convenience to your healthcare journey. We believe in<strong> affordable diagnostics</strong>, so everyone can prioritize their health without financial burden. Through<strong> preventive screenings and early detection</strong>, we empower individuals to take charge of their well-being and lead healthier lives.
-            </p>
+            As a trusted and quality-focused partner for health care around the world, Zen Health is committed to delivering an exceptional experience to our customers. We strive to provide the highest quality of service, tailored to meet the unique needs of each individual and organization. Our goal is to ensure that everyone who chooses us as their health care partner is provided with the best possible service and assistance. With our team of experienced professionals and a personalized approach, we strive to provide the best care and support for our clients.
+             </p>
           </div>
         </div>
 
-        <div className="grid relative items-center md:grid-cols-2 grid-cols-1 lg:gap-[90px] lg:pr-[120px]">
+        {/* <div className="grid relative items-center md:grid-cols-2 grid-cols-1 lg:gap-[90px] lg:pr-[120px]">
           <div className="">
             <div className="lg:mb-0 mb-8">
               <div className="our-vision lg:pr-0 md:!pr-[16px] pr-0">
@@ -110,8 +145,8 @@ const AboutLayout = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className="lg:pl-0 md:pl-[100px] pl-0">
+          </div> */}
+          {/* <div className="lg:pl-0 md:pl-[100px] pl-0">
             <h2 className="text-black lg:text-[24px] text-xl font-semibold font-source-pro ">
               Our Value
             </h2>
@@ -124,7 +159,7 @@ const AboutLayout = () => {
               making sure that every report is a reflection of our dedication to <strong>excellence</strong>.
               Because at Kaivee Healthcare, your <strong>health matters the most</strong>.
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="absolute top-0 right-0">
           <AboutPattern />
@@ -132,11 +167,11 @@ const AboutLayout = () => {
         <div className="absolute bottom-0 left-0">
           <AboutPattern />
         </div>
-      </div>
+      {/* </div> */}
 
 
 
-      <div className="bg-white">
+      {/* <div className="bg-white">
         <div className="md:py-[70px] py-[35px] container">
           <h2 className="text-black font-semibold lg:text-[24px] text-xl font-source-pro">Leadership</h2>
           <div className="mt-[32px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:gap-8 md:gap-4 gap-3">
@@ -154,7 +189,7 @@ const AboutLayout = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="bg-rgb(199, 229, 247)">
         <div className=" container py-[70px]">

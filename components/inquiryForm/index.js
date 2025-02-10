@@ -57,7 +57,7 @@ const InquiryForm = ({ leads_source = "" }) => {
         <span>☰</span> Enquire Now
       </h2>
 
-      <form onSubmit={handleSubmit} className="mt-4 space-y-4">
+      <form onSubmit={handleSubmit} className="mt-4 ">
       <label htmlFor="patient_name" className="block text-gray-700 ">
             Full Name *
           </label>

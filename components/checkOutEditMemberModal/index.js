@@ -172,7 +172,7 @@ const CheckOutEditMemeberModal = ({ setOpen, open, member }) => {
               <button
                 type="button"
                 // data-bs-dismiss="modal"
-                className="mt-[20px] bg-white text-orange border-[1px] border-orange rounded px-[24px] py-[12px]"
+                className="mt-[20px] bg-white text-[#D41958] border-[1px] border-[#D41958] rounded px-[24px] py-[12px]"
                 onClick={() => setOpen(!open)}
               >
                 Cancel
@@ -180,7 +180,7 @@ const CheckOutEditMemeberModal = ({ setOpen, open, member }) => {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className="mt-[20px] bg-orange text-white rounded px-[24px] py-[12px]"
+                className="mt-[20px] bg-[#D41958] text-white rounded px-[24px] py-[12px]"
               >
                 {loading ? "Processing..." : "Submit"}
               </button>

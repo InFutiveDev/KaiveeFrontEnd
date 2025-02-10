@@ -136,8 +136,8 @@ const UploadPrescriptionModal = ({ open, setOpen }) => {
         >
           <Image src={CancelIcon} width={20} height={20} alt="cancel" />
         </div>
-        <p className="my-2 text-xl  text-gray-700 font-[400]">
-          Add Prescription
+        <p className="my-2 text-xl font-semibold text-black font-[400]">
+          Upload Prescription
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="p-[20px] shadow-sm bg-white rounded-xl border-2 flex flex-col gap-2">
@@ -286,7 +286,7 @@ const UploadPrescriptionModal = ({ open, setOpen }) => {
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="mt-[20px] bg-orange text-white rounded w-full py-[8px]"
+              className="mt-[20px] bg-[#D41958] text-white rounded w-full py-[8px]"
             >
               {loading ? "Processing..." : "Submit"}
             </button>

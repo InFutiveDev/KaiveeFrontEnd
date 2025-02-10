@@ -215,7 +215,7 @@ const EditAddressModal = ({ address, open, setOpen, dateShow = true }) => {
               <div className="modal-footer">
                 <button
                   type="button"
-                  className="mt-[20px] bg-white text-orange border-[1px] border-orange rounded p-1 px-2"
+                  className="mt-[20px] bg-white text-[#D41958] border-[1px] border-[#D41958] rounded p-1 px-2"
                   onClick={() => setOpen(!open)}
                 >
                   Cancel
@@ -223,7 +223,7 @@ const EditAddressModal = ({ address, open, setOpen, dateShow = true }) => {
                 <button
                   type="submit"
                   onClick={handleSubmit}
-                  className="mt-[20px] bg-orange text-white rounded p-1 px-2"
+                  className="mt-[20px] bg-[#D41958] text-white rounded p-1 px-2"
                 >
                   {loading ? "Processing..." : "Submit"}
                 </button>

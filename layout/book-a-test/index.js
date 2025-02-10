@@ -4,7 +4,7 @@ import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
-import Line from "assets/images/book-a-test/Line 304.png";
+import Line from "assets/images/book-a-test/Line_304_Pink_Transparent.png";
 import FacilitesCard from "components/booktestCard";
 import ReactPaginate from "react-paginate";
 import { useRouter } from "next/router";
@@ -168,8 +168,8 @@ const BookATestLayout = ({ urlData }) => {
           ) : (
             <div className="grid  lg:grid-cols-4 grid-cols-1 items-start gap-6">
               <div className="lg:col-span-1 overflow-hidden rounded-xl border-[1px] border-[#E4E4E7]">
-                <div className="text-md flex justify-between items-center py-2 px-[24px] bg-[#FDEDCE] border-b-[1px] border-[#E4E4E7]">
-                  <p className="font-semibold font-source-pro ">Filter</p>
+                <div className="text-md flex justify-between items-center py-2 px-[24px] bg-[#D419580D] border-b-[1px] border-[#E4E4E7]">
+                  <p className=" font-source-pro ">Filter</p>
                   <button
                     className="text-[16px] bg-[#D41958] text-white rounded-md px-2"
                     onClick={() => {
@@ -187,7 +187,7 @@ const BookATestLayout = ({ urlData }) => {
                       onClick={() => handleAccordionOpen("Categories")}
                       className="flex gap-3 items-center justify-between"
                     >
-                      <p className="text-[18px] font-semibold source-sans-3">
+                      <p className="text-[18px] source-sans-3">
                         Facilities
                       </p>
                       {filterType === "Categories" ? (
@@ -230,7 +230,7 @@ const BookATestLayout = ({ urlData }) => {
                       onClick={() => handleAccordionOpen("Habit")}
                       className="flex gap-3 items-center justify-between"
                     >
-                      <p className="text-[18px] font-semibold source-sans-3">
+                      <p className="text-[18px] source-sans-3">
                         Habit
                       </p>
                       {filterType === "Habit" ? (
@@ -273,7 +273,7 @@ const BookATestLayout = ({ urlData }) => {
                       onClick={() => handleAccordionOpen("HealthRisk")}
                       className="flex gap-3 items-center justify-between"
                     >
-                      <p className="text-[18px] font-semibold source-sans-3">
+                      <p className="text-[18px] source-sans-3">
                         Health Risks
                       </p>
                       {filterType === "HealthRisk" ? (
@@ -306,7 +306,7 @@ const BookATestLayout = ({ urlData }) => {
               </div>
               <div className="lg:col-span-3 overflow-hidden rounded-xl border-[1px] border-[#D41958]">
                 <div className="bg-[#D419580D] py-1.5 px-3 lg:flex lg:mb-0 mb-3 justify-between items-center">
-                  <p className="text-lg text-[#D41958] sm:text-2xl font-semibold font-source-pro">
+                  <p className="text-lg text-[#D41958] sm:text-2xl  font-source-pro">
                     Tests
                   </p>
                   <div className="flex flex-wrap gap-2 sm:mb-3 lg:mb-0  justify-start items-center">

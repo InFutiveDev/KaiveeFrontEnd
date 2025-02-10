@@ -62,7 +62,7 @@ const AddNewAddressModal = ({ open, setOpen, dateShow }) => {
         >
           <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
-              <div className="modal-header">
+              <div className="modal-header bg-[#D419580D]">
                 <h5 id="addNewAddressLabel" className="modal-title">
                   Add a New Address
                 </h5>
@@ -237,10 +237,10 @@ const AddNewAddressModal = ({ open, setOpen, dateShow }) => {
                   )} */}
                 </div>
               </div>
-              <div className="modal-footer accordian-buttons center-bututon">
+              <div className="modal-footer accordian-buttons center-bututon bg-[#D419580D]">
                 <button
                   type="button"
-                  className="mt-[20px] bg-white text-orange border-[1px] border-orange rounded p-2 py-2"
+                  className="mt-[20px] bg-white text-[#D41958] border-[1px] border-[#D41958] rounded p-2 py-2"
                   onClick={() => setOpen(!open)}
                 >
                   Cancel
@@ -248,7 +248,7 @@ const AddNewAddressModal = ({ open, setOpen, dateShow }) => {
                 <button
                   type="submit"
                   onClick={handleSubmit}
-                  className="mt-[20px] bg-orange text-white rounded p-2 py-2"
+                  className="mt-[20px] bg-[#D41958] text-white rounded p-2 py-2"
                 >
                   {loading ? "Processing..." : "Submit"}
                 </button>

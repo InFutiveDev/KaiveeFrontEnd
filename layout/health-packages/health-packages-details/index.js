@@ -491,7 +491,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                   </div>
                   <div className="flex  items-center gap-5 my-[6px]">
                     <div>
-                      <span className="text-[#D41958] font-semibold text-xl">
+                      <span className="text-[#7DB440] font-semibold text-xl">
                         ₹{testInfo?.data[0]?.offer_price}
                       </span>
                       {testInfo?.data[0]?.offer_price <
@@ -542,7 +542,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                   <div className="mt-[20px]">
                     <Link
                       href="tel:011-4725-2000"
-                      className=" flex gap-2 justify-center items-center text-[#D41958] bg-[#FEF6E6] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
+                      className=" flex gap-2 justify-center items-center text-[#D41958] bg-[#D419580D] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
                     >
                       <CallYellowImg />
                       Call to Book

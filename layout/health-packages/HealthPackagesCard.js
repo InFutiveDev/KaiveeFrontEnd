@@ -84,7 +84,7 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
         <div className="flex  items-center gap-5 my-[6px]">
           <div>
             {data?.offer_price && (
-              <span className="text-orange font-semibold text-xl">
+              <span className="text-[#7DB440]  font-semibold text-xl">
                 ₹{data?.offer_price}
               </span>
             )}
@@ -95,7 +95,7 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
             )}
           </div>
           {data?.offer_price < data?.mrp ? (
-            <span className="text-[#005E54] lg:text-[14px] font-semibold">
+            <span className="text-[#7DB440]  lg:text-[14px] font-semibold">
               {(((data?.mrp - data?.offer_price) / data?.mrp) * 100).toFixed()}%
               off
             </span>
@@ -122,7 +122,7 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
           )}
           <button
             onClick={() => router.push(`/health-packages/${data?.test_url}`)}
-            className="border-[1px] w-full border-orange text-orange bg-white rounded-[8px] px-[12px] py-[8px] text-xs font-semibold"
+            className="border-[1px] w-full border-[#D41958]  text-[#D41958]  bg-white rounded-[8px] px-[12px] py-[8px] text-xs font-semibold"
           >
             View Details
           </button>

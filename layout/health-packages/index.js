@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import HealthPackagesBanner from "./HealthPackagesBanner";
-import LogoCity from "assets/images/health-packages/logo1.png";
+
 import HealthPackagesCard from "./HealthPackagesCard";
 import WhyChoose from "components/WhyChoose";
-import { GalleryImg } from "assets/images/SvgImage";
+
 import { CallBlackImg } from "assets/images/SvgImage";
 import Link from "next/link";
 // why choose
@@ -50,7 +50,7 @@ const HealthPackagesLayout = ({ healthPackages }) => {
           </div> */}
       </section>
       <div className="py-[70px] container">
-        <h1 className="text-[18px] lg:text-[26px] md:text-[22x] text-black  font-semibold font-source-pro mb-[20px]">
+        <h1 className="text-[18px] lg:text-[26px] md:text-[22x] text-black  font-source-pro mb-[20px]">
           {" "}
           Your Health, Our Priority – Comprehensive Health Packages for Every Need
         </h1>
@@ -124,25 +124,25 @@ const HealthPackagesLayout = ({ healthPackages }) => {
               className="text-secondary text-[16px] lg:text-[16px] md:text-xl ml-[30px]"
               style={{ listStyleType: "disc" }}
             >
-              💰 <strong>Transparent Pricing </strong>: No hidden costs—just clear, upfront rates.
+               <strong>Transparent Pricing </strong>: No hidden costs—just clear, upfront rates.
             </li>
             <li
               className="text-secondary text-[16px] lg:text-[16px] md:text-xl ml-[30px]"
               style={{ listStyleType: "disc" }}
             >
-              🧪 <strong>Comprehensive Test Panels</strong>: Covering everything from basic blood tests to advanced diagnostics.
+               <strong>Comprehensive Test Panels</strong>: Covering everything from basic blood tests to advanced diagnostics.
             </li>
             <li
               className="text-secondary text-[16px] lg:text-[16px] md:text-xl ml-[30px]"
               style={{ listStyleType: "disc" }}
             >
-              🚀 <strong>Quick Turnaround</strong>: Fast reporting without compromising accuracy.
+               <strong>Quick Turnaround</strong>: Fast reporting without compromising accuracy.
             </li>
             <li
               className="text-secondary text-[16px] lg:text-[16px] md:text-xl ml-[30px]"
               style={{ listStyleType: "disc" }}
             >
-              🏠 <strong>Convenient Home Sample Collection</strong>: Get tested from the comfort of your home.
+               <strong>Convenient Home Sample Collection</strong>: Get tested from the comfort of your home.
             </li>
           </ul>
 

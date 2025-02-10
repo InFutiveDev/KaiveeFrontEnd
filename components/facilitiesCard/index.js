@@ -56,7 +56,7 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
 
         <div className="flex  items-center gap-5 my-[6px]">
           <div>
-            <span className="text-orange font-bold text-[20px]">
+            <span className="text-[#8DBD4D] font-bold text-[20px]">
               ₹{data?.offer_price || data?.mrp}
             </span>
             {data?.offer_price < data?.mrp && (
@@ -65,26 +65,16 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
               </span>
             )}
           </div>
-          {data?.offer_price ? (
-            <div>
-              {data?.mrp - data?.offer_price !== 0 && (
-                <span className="text-[#005E54] font-semibold">
-                  {(
-                    ((data?.mrp - data?.offer_price) / data?.mrp) *
-                    100
-                  ).toFixed()}
-                  % off
-                  {/* {(data?.mrp - data?.offer_price) / 100}% off */}
-                </span>
-              )}
-            </div>
-          ) : (
-            <div>
-              <span className="text-[#D01212] font-semibold  text-[16px]">
-                0% off
-              </span>
-            </div>
-          )}
+       
+          {/* Show Discount Only If There Is an Actual Discount */}
+  {data?.offer_price && data?.mrp > data?.offer_price ? (
+    <div>
+      <span className="text-[#8DBD4D] font-semibold">
+        {(((data?.mrp - data?.offer_price) / data?.mrp) * 100).toFixed()}% off
+      </span>
+    </div>
+  ) : null}
+
         </div>
 
         {data?.no_of_parameters > 0 ? (
@@ -102,14 +92,14 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
       <div className="grid gap-2 grid-cols-2 pb-2">
         {cart?.hasOwnProperty(data?._id || "") ? (
           <button
-            className=" bg-orange text-white rounded-lg py-2 text-[12px] font-medium "
+            className=" bg-[#D41958] text-white rounded-lg py-2 text-[12px] font-medium "
             onClick={handleRemoveCart}
           >
             Remove item
           </button>
         ) : (
           <button
-            className=" bg-orange text-white rounded-lg text-[12px]  font-medium px-2"
+            className=" bg-[#D41958] text-white rounded-lg text-[12px]  font-medium px-2"
             onClick={handleAddToCart}
           >
             Add To Cart
@@ -126,7 +116,7 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
           onClick={() => {
             checkOutRedirect();
           }}
-          className="w-full border-[1px] border-orange text-orange bg-white rounded px-[12px] py-[8px] text-xs font-semibold"
+          className="w-full border-[1px] border-[#D41958] text-[#D41958] bg-white rounded px-[12px] py-[8px] text-xs font-semibold"
         >
           Check out
         </button>
@@ -134,7 +124,7 @@ const FacilitesCard = ({ data, cart, handleCartData }) => {
       <div>
         <button
           onClick={() => router.push(`/book-a-test/${data?.test_url}`)}
-          className="border-[1px] flex gap-3 justify-center items-center text-black bg-[#FEF6E6] rounded-lg w-full px-3 py-2 text-[12px] font-medium"
+          className="border-[1px] flex gap-3 justify-center items-center text-black bg-[#D419580D] rounded-lg w-full px-3 py-2 text-[12px] font-medium"
         >
           <EyeIconYellow />
           View Details

@@ -706,7 +706,7 @@ a.menuText.active {
 
 .navbar-wrap a.menuText.active:after {
   content: "";
-  background: #7DB440;
+  background: #D41958;
 }
 
 a.menuText.active::after {
@@ -4190,9 +4190,9 @@ button:focus {
   font-size: 12px;
   line-height: 20px;
   text-align: center;
-  color: #f7a708;
-  background: #f9f9f9;
-  border: 1px solid #f7a708;
+  color: #D41958;
+  background: #D419580D;
+  border: 1px solid #D41958;
   box-shadow: 0px 1px 2px rgb(44 39 56 / 8%), 0px 2px 4px rgb(44 39 56 / 8%);
   border-radius: 5px;
   padding: 10px 12px;
@@ -8091,7 +8091,7 @@ section.aboutme {
 }
 
 .page-item.active .page-link {
-  background: rgba(247, 167, 8, 0.1) !important;
+  background: #D419580D !important;
   border-radius: 5px;
   border: 0px !important;
   color: #D41958;

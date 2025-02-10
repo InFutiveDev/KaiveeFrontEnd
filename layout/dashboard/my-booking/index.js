@@ -71,7 +71,7 @@ const MyBookingLayout = () => {
         ) : (
           <div>
             <div className="rounded-xl border-[1px] border-[#E4E4E7] overflow-hidden ">
-              <div className="p-[18px] bg-[#FFF4E0] ">
+              <div className="p-[18px] bg-[#D419580D] ">
                 <p className="text-lg font-semibold">Your Bookings</p>
               </div>
               {userBookings?.data?.data?.length ? (

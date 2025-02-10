@@ -38,7 +38,7 @@ const ManageAddressLayout = () => {
             <p className="text-lg font-semibold">Manage Address</p>
             <button
               onClick={() => setOpen(true)}
-              className=" bg-orange text-white rounded p-2 text-[16px]"
+              className=" bg-[#D41958] text-white rounded p-2 text-[16px]"
             >
               + Add Address
             </button>
@@ -52,7 +52,7 @@ const ManageAddressLayout = () => {
                   <tr>
                     <th
                       colSpan="2"
-                      className="border py-[10px] bg-[#FFF4E0] px-[24px] border-[#EFF1F5]"
+                      className="border py-[10px] bg-[#D419580D] px-[24px] border-[#EFF1F5]"
                     >
                       <div className="flex justify-between items-center font-source-pro text-[24px] font-[600]">
                         <span className="md:text-[18px] text-[16px]">
@@ -64,7 +64,7 @@ const ManageAddressLayout = () => {
                               setEditOpen(true);
                               setAddress(item);
                             }}
-                            className="bg-orange text-white rounded p-2 text-[16px] flex"
+                            className="bg-[#D41958] text-white rounded p-2 text-[16px] flex"
                           >
                             <span className="pr-2 md:text-[18px] text-[16px]">
                               <img src={Edit?.src} alt="Edit" />
@@ -73,7 +73,7 @@ const ManageAddressLayout = () => {
                           </button>
                           <button
                             onClick={() => setAddressToDelete(item)} // Trigger the delete modal
-                            className="bg-orange w-9 h-9 rounded-full flex justify-center items-center"
+                            className="bg-[#D41958] w-9 h-9 rounded-full flex justify-center items-center"
                           >
                             <Trash size={18} color="white" />
                           </button>

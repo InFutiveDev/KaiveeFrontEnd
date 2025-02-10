@@ -166,7 +166,7 @@ const BookAppointmentLayout = () => {
                     <tr>
                       <th
                         colSpan="2"
-                        className="border  py-[10px] bg-[#FFF4E0] px-2.5 border-[#EFF1F5] "
+                        className="border  py-[10px] bg-[#D419580D] px-2.5 border-[#EFF1F5] "
                       >
                         <div className="flex justify-start items-center space-x-2">
                           <span>{logedInUser?.data[0]?.name}</span>
@@ -194,7 +194,7 @@ const BookAppointmentLayout = () => {
                             className="h-5 w-5"
                           />
                           <button
-                            className="flex gap-1 items-center bg-orange text-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                            className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"
                             onClick={() => {
                               setUserInfo(logedInUser?.data[0]);
                               setProfileEditOpen(true);
@@ -250,7 +250,7 @@ const BookAppointmentLayout = () => {
                   I Want to Book an Appointment
                 </p>
                 <div className="shadow-md bg-white border-[1px] border-[#E4E4E7] overflow-hidden rounded-xl">
-                  <div className="py-[18px] px-[24px] bg-[#FFF4E0] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
+                  <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                     <p className="text-lg font-semibold">Select Member</p>
                   </div>
                   <div className="p-2">
@@ -305,7 +305,7 @@ const BookAppointmentLayout = () => {
                     </div>
                     <div className="mt-[40px] flex justify-center gap-3">
                       <button
-                        className="flex gap-1 items-center bg-orange text-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                        className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"
                         onClick={() => setMemberOpen(true)}
                       >
                         <Plus className="text-lg" /> Add Member
@@ -321,7 +321,7 @@ const BookAppointmentLayout = () => {
                   />
                   <div className="my-[20px] flex justify-center gap-3">
                     <button
-                      className="flex gap-1 items-center bg-orange text-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                      className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"
                       onClick={() => setAddressOpen(true)}
                     >
                       <Plus className="text-lg" /> Add Address

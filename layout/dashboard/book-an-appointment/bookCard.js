@@ -47,8 +47,8 @@ const BookCard = ({ setSendData, sendData, handleSubmit }) => {
   };
 
   return (
-    <div className="pt-2 sm:text-pt-2 lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left md:mb-0">
-      <div className="shadow-md rounded-xl border bg-white border-[#E4E4E7] p-3">
+    <div className="w-full pt-12 sm:text-pt-2 lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left md:mb-0">
+      <div className="w-full shadow-md rounded-xl border bg-white border-[#E4E4E7] p-4 sm:p-6">
         {/* Message Box */}
         <div className="form-group w-full">
           <label htmlFor="message_box" className="text-lg">
@@ -145,7 +145,7 @@ const BookCard = ({ setSendData, sendData, handleSubmit }) => {
         <div>
           <button
             onClick={handleSubmit}
-            className="bg-orange text-white rounded w-full py-[8px] text-xs font-[400]"
+            className="bg-[#D41958] text-white rounded w-full py-[8px] text-xs font-[400]"
           >
             Book Appointment
           </button>

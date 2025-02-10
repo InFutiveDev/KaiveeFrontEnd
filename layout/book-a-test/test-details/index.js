@@ -523,7 +523,7 @@ const TestDetailsLayout = ({ byidData }) => {
                 <div className="mt-[20px]">
                   <Link
                     href="tel:011-2000-2000"
-                    className=" flex gap-2 justify-center items-center text-[#D41958] bg-[#FEF6E6] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
+                    className=" flex gap-2 justify-center items-center text-[#D41958] bg-[#D419580D] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
                   >
                     <CallYellowImg />
                     Call to Book
