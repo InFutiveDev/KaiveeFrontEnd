@@ -243,7 +243,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                     <div className="">
                       <button
                         onClick={sendotp}
-                        className=" login-text text-orange rounded px-[0px] py-[0px]"
+                        className=" login-text text-[#D41958] rounded px-[0px] py-[0px]"
                       >
                         Resend OTP
                       </button>
@@ -252,7 +252,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                     // </div>
                     <span
                       style={{
-                        color: "#FF9800",
+                        color: "#D41958",
                         fontSize: "25px",
                         fontWeight: "600",
                       }}
@@ -265,7 +265,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                 <div className="">
                   <button
                     onClick={verify}
-                    className=" bg-orange text-white rounded px-[30px] py-[6px]"
+                    className=" bg-[#D41958] text-white rounded px-[30px] py-[6px]"
                   >
                     Submit
                   </button>

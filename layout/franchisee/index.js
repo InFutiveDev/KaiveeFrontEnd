@@ -2,14 +2,14 @@ import React from "react";
 import FranchiseeBanner from "./FranchiseeBanner";
 import WhyChoose from "components/WhyChoose";
 // why choose
-import img11 from "assets/images/why choose us/1.png";
-import img22 from "assets/images/why choose us/2.png";
-import img33 from "assets/images/why choose us/3.png";
-import img44 from "assets/images/why choose us/4.png";
-import img55 from "assets/images/why choose us/5.png";
-import img66 from "assets/images/why choose us/6.png";
-import img77 from "assets/images/why choose us/7.png";
-import img88 from "assets/images/why choose us/8.png";
+import img11 from "assets/images/whychooseus/1.png";
+import img22 from "assets/images/whychooseus/2-png.png";
+import img33 from "assets/images/whychooseus/icon-3.png";
+import img44 from "assets/images/whychooseus/3-png.png";
+import img55 from "assets/images/whychooseus/4-png.png";
+import img66 from "assets/images/whychooseus/5-png.png";
+import img77 from "assets/images/whychooseus/6-png.png";
+import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
 import InquiryForm from "components/inquiryForm";
 import FranchiseeForm from "./FranchiseeForm";
@@ -54,18 +54,18 @@ const FranchiseeLayout = () => {
 
                   <ul className="list-disc ml-4">
                     <li>
-                      🚀<strong> Strong Brand Recognition</strong>: Be part of a trusted name in the diagnostics industry.
+                      <strong> Strong Brand Recognition</strong>: Be part of a trusted name in the diagnostics industry.
                     </li>
                     <li>
-                      🔬 <strong> Advanced Technology & Infrastructure</strong>: Access to the latest diagnostic equipment and lab management systems.
+                       <strong> Advanced Technology & Infrastructure</strong>: Access to the latest diagnostic equipment and lab management systems.
                     </li>
-                    <li><strong> 📊 Proven Business Model</strong>: Benefit from a scalable, profitable business structure with consistent support.</li>
+                    <li><strong>  Proven Business Model</strong>: Benefit from a scalable, profitable business structure with consistent support.</li>
                     <li>
-                      🎯 <strong> Comprehensive Training & Support</strong>: From operations to marketing, we’ve got you covered.
+                       <strong> Comprehensive Training & Support</strong>: From operations to marketing, we’ve got you covered.
                     </li>
-                    <li>💼 <strong> Low Investment, High Returns</strong>: Affordable entry with great growth potential in the booming healthcare sector.</li>
+                    <li> <strong> Low Investment, High Returns</strong>: Affordable entry with great growth potential in the booming healthcare sector.</li>
                     <li>
-                      🤝 <strong> Continuous Guidance</strong>: Ongoing operational, technical, and marketing support to help your franchise thrive.
+                       <strong> Continuous Guidance</strong>: Ongoing operational, technical, and marketing support to help your franchise thrive.
                     </li>
                   </ul>
                 </div>
@@ -109,25 +109,25 @@ const FranchiseeLayout = () => {
                   <ul className="list-disc ml-4">
 
                     <li>
-                      🏥 <span className="font-bold">Brand Power:</span> Leverage our trusted name to attract customers effortlessly.
+                       <span className="font-bold">Brand Power:</span> Leverage our trusted name to attract customers effortlessly.
                     </li>
                     <li>
-                      🛠️ <span className="font-bold">Setup Assistance:</span> Guidance in selecting the right location, designing the clinic, and procuring equipment.
+                       <span className="font-bold">Setup Assistance:</span> Guidance in selecting the right location, designing the clinic, and procuring equipment.
                     </li>
                     <li>
-                      👨‍💼 <span className="font-bold">Training & Development:</span> Hands-on training for your staff in lab operations, customer service, and quality control.
+                       <span className="font-bold">Training & Development:</span> Hands-on training for your staff in lab operations, customer service, and quality control.
                     </li>
                     <li>
-                      📢 <span className="font-bold">Marketing Support:</span> Comprehensive marketing strategies, digital promotions, and local outreach programs.
+                       <span className="font-bold">Marketing Support:</span> Comprehensive marketing strategies, digital promotions, and local outreach programs.
                     </li>
                     <li>
-                      🔍 <span className="font-bold">Quality Assurance:</span> Strict quality protocols and regular audits to maintain high diagnostic standards.
+                       <span className="font-bold">Quality Assurance:</span> Strict quality protocols and regular audits to maintain high diagnostic standards.
                     </li>
                     <li>
-                      💻 <span className="font-bold">Tech-Enabled Solutions:</span> Access to advanced software for smooth operations, billing, and reporting.
+                       <span className="font-bold">Tech-Enabled Solutions:</span> Access to advanced software for smooth operations, billing, and reporting.
                     </li>
                     <li>
-                      📈 <span className="font-bold">Growth Opportunities:</span> Scope for expansion into multiple services, health packages, and more.
+                       <span className="font-bold">Growth Opportunities:</span> Scope for expansion into multiple services, health packages, and more.
                     </li>
                   </ul>
                 </div>
@@ -152,54 +152,54 @@ const FranchiseeLayout = () => {
     </div>
   );
 };
-const data = [
+const data=[
   {
-    // id: 1,
-    // title: "NABL Accredited Labs",
-    // description: "Follows all protocols as per NABL & CAP Guidelines",
-    icon: <Image src={img11} alt="NABL Accredited Icon" />,
+    id: 1,
+    title: "NABL Accredited Labs",
+    
+    icon: <Image src={img33} alt="NABL Accredited Icon" />,
   },
   {
     id: 2,
     title: "Trusted by Leading Doctors & Hospitals",
-    description: "Qualified Pathologist at each lab",
-    icon: <Image src={img22} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img22} alt="doctors Icon" />,
   },
   {
     id: 3,
     title: "Shortest Reporting Time",
-    description: "Ownership and Innovation",
-    icon: <Image src={img33} alt="NABL Accredited Icon" />,
+  
+    icon: <Image src={img55} alt="time Icon" />,
   },
   {
     id: 4,
     title: "Accurate Test Reports",
-    description: "Quality checks by Quality Assurance Team",
-    icon: <Image src={img44} alt="NABL Accredited Icon" />,
+   
+    icon: <Image src={img44} alt="report Icon" />,
   },
   {
     id: 5,
-    title: "1 Crore+ Satisfied Customers",
-    description: "Making superior quality diagnostics services",
-    icon: <Image src={img55} alt="NABL Accredited Icon" />,
+    title: "Satisfied Customers",
+    
+    icon: <Image src={img11} alt="customer Icon" />,
   },
   {
     id: 6,
     title: "100+ Labs",
-    description: "Large Network Labs in all the major cities",
+    
     icon: <Image src={img66} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
     title: "3000+ Collection Centres",
-    description: "Expanding our reach and counting",
-    icon: <Image src={img77} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img77} alt="collection Icon" />,
   },
   {
     id: 8,
     title: "Scientific Orientation",
-    description: "MD Doctors in Every Lab & State-of-the-Art Machines",
-    icon: <Image src={img88} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img88} alt="scientific Icon" />,
   },
 ];
 

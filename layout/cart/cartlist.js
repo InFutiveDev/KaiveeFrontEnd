@@ -193,7 +193,7 @@ const CartList = () => {
                         Collection Charges
                       </span>
                       <div>
-                        <span className="text-lg font-semibold text-orange">
+                        <span className="text-lg font-semibold text-[#D41958]">
                           ₹{" "}
                           {collecttionType === "home-collection" &&
                           totalAmount <= 500

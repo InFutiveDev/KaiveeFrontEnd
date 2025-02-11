@@ -5,14 +5,14 @@ import { YelloShadoLeftSVG } from "assets/images/SvgImage";
 import InquiryForm from "components/inquiryForm";
 import WhyChoose from "components/WhyChoose";
 // why choose
-import img11 from "assets/images/why choose us/1.png";
-import img22 from "assets/images/why choose us/2.png";
-import img33 from "assets/images/why choose us/3.png";
-import img44 from "assets/images/why choose us/4.png";
-import img55 from "assets/images/why choose us/5.png";
-import img66 from "assets/images/why choose us/6.png";
-import img77 from "assets/images/why choose us/7.png";
-import img88 from "assets/images/why choose us/8.png";
+import img11 from "assets/images/whychooseus/1.png";
+import img22 from "assets/images/whychooseus/2-png.png";
+import img33 from "assets/images/whychooseus/icon-3.png";
+import img44 from "assets/images/whychooseus/3-png.png";
+import img55 from "assets/images/whychooseus/4-png.png";
+import img66 from "assets/images/whychooseus/5-png.png";
+import img77 from "assets/images/whychooseus/6-png.png";
+import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
 import CorporateHealthEnquiry from "components/inquiryForm/CorporateHealthEnquiry";
 
@@ -57,23 +57,23 @@ const CorporateHealthLayout = () => {
                 </h2>
                 {/* <p className="text-black font-semibold text-[32px] "></p> */}
                 <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
-                  <b>1. 🌟 Improved Employee Well-Being:</b> Regular health check-ups and preventive care can <strong>identify health risks </strong>  early, leading to healthier, more engaged employees.
+                  <b>1.  Improved Employee Well-Being:</b> Regular health check-ups and preventive care can <strong>identify health risks </strong>  early, leading to healthier, more engaged employees.
                 </p>
                 <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl  ">
-                  <b>2. 💼 Boost Productivity & Engagement:</b> A healthier workforce is a more productive one. Offering healthcare benefits shows your employees that you care, leading to higher <strong>job satisfaction and increased engagement</strong> .
+                  <b>2.  Boost Productivity & Engagement:</b> A healthier workforce is a more productive one. Offering healthcare benefits shows your employees that you care, leading to higher <strong>job satisfaction and increased engagement</strong> .
                 </p>
                 <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl">
-                  <b> 3. 💰 Cost-Effective Healthcare Solutions:</b> Offering health services through corporate tie-ups is<strong> more affordable </strong> than individual health plans. It’s an <strong> investment in long-term productivity </strong>and reduced absenteeism.
+                  <b> 3.  Cost-Effective Healthcare Solutions:</b> Offering health services through corporate tie-ups is<strong> more affordable </strong> than individual health plans. It’s an <strong> investment in long-term productivity </strong>and reduced absenteeism.
                 </p>
                 <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
-                  <b>4. 🩺 Comprehensive Health Screenings:</b> We offer a variety of<strong> health packages </strong>designed specifically for organizations. From basic screenings to advanced tests, our packages are customizable to fit your company’s needs.
+                  <b>4.  Comprehensive Health Screenings:</b> We offer a variety of<strong> health packages </strong>designed specifically for organizations. From basic screenings to advanced tests, our packages are customizable to fit your company’s needs.
                 </p>
                 <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl">
-                  <b>5. 🔄 Convenient Services:</b> Our services are designed with your employees’ convenience in mind, including<strong> on-site check-ups, home sample collections, and easy access to reports</strong>.
+                  <b>5.  Convenient Services:</b> Our services are designed with your employees’ convenience in mind, including<strong> on-site check-ups, home sample collections, and easy access to reports</strong>.
 
                 </p>
                 <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
-                  <b> 6. 📊 Data-Driven Insights:</b> Access detailed <strong>health reports and analytics </strong> that can help your company monitor overall employee health trends and identify potential wellness programs.
+                  <b> 6. Data-Driven Insights:</b> Access detailed <strong>health reports and analytics </strong> that can help your company monitor overall employee health trends and identify potential wellness programs.
                 </p>
 
                 <p>
@@ -100,54 +100,54 @@ const CorporateHealthLayout = () => {
   );
 };
 
-const data = [
+const data=[
   {
-    // id: 1,
-    // title: "NABL Accredited Labs",
-    // description: "Follows all protocols as per NABL & CAP Guidelines",
-    icon: <Image src={img11} alt="NABL Accredited Icon" />,
+    id: 1,
+    title: "NABL Accredited Labs",
+    
+    icon: <Image src={img33} alt="NABL Accredited Icon" />,
   },
   {
     id: 2,
     title: "Trusted by Leading Doctors & Hospitals",
-    description: "Qualified Pathologist at each lab",
-    icon: <Image src={img22} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img22} alt="doctors Icon" />,
   },
   {
     id: 3,
     title: "Shortest Reporting Time",
-    description: "Ownership and Innovation",
-    icon: <Image src={img33} alt="NABL Accredited Icon" />,
+  
+    icon: <Image src={img55} alt="time Icon" />,
   },
   {
     id: 4,
     title: "Accurate Test Reports",
-    description: "Quality checks by Quality Assurance Team",
-    icon: <Image src={img44} alt="NABL Accredited Icon" />,
+   
+    icon: <Image src={img44} alt="report Icon" />,
   },
   {
     id: 5,
-    title: "1 Crore+ Satisfied Customers",
-    description: "Making superior quality diagnostics services",
-    icon: <Image src={img55} alt="NABL Accredited Icon" />,
+    title: "Satisfied Customers",
+    
+    icon: <Image src={img11} alt="customer Icon" />,
   },
   {
     id: 6,
     title: "100+ Labs",
-    description: "Large Network Labs in all the major cities",
+    
     icon: <Image src={img66} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
     title: "3000+ Collection Centres",
-    description: "Expanding our reach and counting",
-    icon: <Image src={img77} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img77} alt="collection Icon" />,
   },
   {
     id: 8,
     title: "Scientific Orientation",
-    description: "MD Doctors in Every Lab & State-of-the-Art Machines",
-    icon: <Image src={img88} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img88} alt="scientific Icon" />,
   },
 ];
 export default CorporateHealthLayout;
