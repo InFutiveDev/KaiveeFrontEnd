@@ -23,7 +23,7 @@ const WhyChoose = ({ data }) => {
   };
 
   const cardStyle = {
-    backgroundColor: "#D419580D",
+    backgroundColor: "white",
     border: "1px solid #e0e0e0",
     borderRadius: "8px",
     // padding: "20px",
@@ -36,7 +36,7 @@ const WhyChoose = ({ data }) => {
   };
 
   const iconStyle = {
-    fontSize: "2.5rem",
+    fontSize: "1.5rem",
     color: "#007bff",
   };
 
@@ -45,7 +45,7 @@ const WhyChoose = ({ data }) => {
   };
 
   const featureTitleStyle = {
-    fontSize: "1.2rem",
+    fontSize: "1.0rem",
     color: "#333",
     marginBottom: "5px",
   };
@@ -71,14 +71,14 @@ const WhyChoose = ({ data }) => {
                 <img
                   src={item.image?.src}
                   alt={`Feature ${index}`}
-                  style={{ width: "80px", height: "80px", objectFit: "cover" }}
+                  style={{ width: "100px", height: "80px", objectFit: "cover" }}
                 />
               )}
             </div>
-            {/* <div style={textContainerStyle}>
+            <div style={textContainerStyle}>
               <h3 style={featureTitleStyle}>{item.title}</h3>
-              <p style={descriptionStyle}>{item.description}</p>
-            </div> */}
+              
+            </div>
           </div>
         ))}
       </div>

@@ -7,7 +7,7 @@ import BreadCrumb from "components/breadcrumb";
 import { PrevIcons } from "assets/images/SvgImage";
 import { NextIcons } from "assets/images/SvgImage";
 import LazyLoad from "react-lazyload";
-import BannerImage from "assets/images/about/About us 1400x300.webp";
+import BannerImage from "assets/images/about/About us 1400x300.jpg";
 import MobileImage from "assets/images/about/about us 1000 x 600.webp";
 const RightArrow = (props) => {
   const { className, style, onClick } = props;

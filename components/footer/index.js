@@ -85,7 +85,7 @@ const Footer = () => {
                   Book a Test
                 </span>
               </a>
-              <a
+              {/* <a
                 href="https://lis.cityxrayclinic.com/CityLab/Design/cxr/"
                 target="_blank"
                 className=" space-x-3 absolute cursor-pointer flex-col flex justify-start items-center left-[50px] top-[217px] text-white"
@@ -94,7 +94,7 @@ const Footer = () => {
                   <Image src={ReportIcon} width={24} height={24} alt="cancel" />
                 </div>
                 <span className="text-white text-[15px] !m-0"> My Report</span>
-              </a>
+              </a> */}
               <a
                 href="/free-home-sample-collection"
                 target="_blank"
@@ -284,7 +284,7 @@ const Footer = () => {
           </div>
           <div className="flex  md:justify-start sm:justify-start justify-start gap-[16px] mt-[24px]">
             <div>
-              <a href="https://www.instagram.com/" target="_black">
+              <a href="https://www.instagram.com/kaivee.in/" target="_black">
                 <HealthInstagramSVG />
               </a>
             </div>
@@ -300,7 +300,7 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <a href="https://www.facebook.com/" target="_black">
+              <a href="https://www.facebook.com/kaivee.in/" target="_black">
                 <HealthFacebookSVG />
               </a>
             </div>

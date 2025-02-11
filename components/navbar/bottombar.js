@@ -87,7 +87,7 @@ const Bottombar = () => {
               </div>
             </div>
             {/* <NavbarToggler onClick={toggle} /> */}
-            <div className="block sm:hidden h-fit">
+            {/* <div className="block sm:hidden h-fit">
               <a
                 className={`transition-all cursor-pointer font-[400] menuText !text-[16px] download_report_button`}
                 // franchisee
@@ -100,7 +100,7 @@ const Bottombar = () => {
                   alt="Icon"
                 ></img>
               </a>
-            </div>
+            </div> */}
           </div>
           <Collapse isOpen={isOpen} navbar className="visible">
             <Nav className="menu-item-lists navbar-wrap" navbar>

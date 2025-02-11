@@ -10,20 +10,20 @@ import img2 from "assets/images/Finalimg/ourValue/Accountability.webp";
 import img3 from "assets/images/Finalimg/ourValue/Executional Excellence.webp";
 import img4 from "assets/images/Finalimg/ourValue/Innovation.webp";
 import img5 from "assets/images/Finalimg/ourValue/Integrity.webp";
-import Clint1 from "assets/images/Finalimg/Leadership/Dr. Aakaar Kapoor.webp";
-import Clint2 from "assets/images/Finalimg/Leadership/Dr. Ravi Kapoor.webp";
-import Clint3 from "assets/images/Finalimg/Leadership/Dr. Sunita Kapoor.webp";
-import Clint4 from "assets/images/Finalimg/Leadership/Dr. Apurva Kapoor.webp";
+// import Clint1 from "assets/images/Finalimg/Leadership/Dr. Aakaar Kapoor.webp";
+// import Clint2 from "assets/images/Finalimg/Leadership/Dr. Ravi Kapoor.webp";
+// import Clint3 from "assets/images/Finalimg/Leadership/Dr. Sunita Kapoor.webp";
+// import Clint4 from "assets/images/Finalimg/Leadership/Dr. Apurva Kapoor.webp";
 import { AboutTeamwork } from "assets/images/SvgImage";
 import WhyChoose from "components/WhyChoose";
-import img11 from "assets/images/why choose us/1.png";
-import img22 from "assets/images/why choose us/2.png";
-import img33 from "assets/images/why choose us/3.png";
-import img44 from "assets/images/why choose us/4.png";
-import img55 from "assets/images/why choose us/5.png";
-import img66 from "assets/images/why choose us/6.png";
-import img77 from "assets/images/why choose us/7.png";
-import img88 from "assets/images/why choose us/8.png";
+import img11 from "assets/images/whychooseus/1.png";
+import img22 from "assets/images/whychooseus/2-png.png";
+import img33 from "assets/images/whychooseus/icon-3.png";
+import img44 from "assets/images/whychooseus/3-png.png";
+import img55 from "assets/images/whychooseus/4-png.png";
+import img66 from "assets/images/whychooseus/5-png.png";
+import img77 from "assets/images/whychooseus/6-png.png";
+import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
 
 const AboutLayout = () => {
@@ -50,7 +50,7 @@ const AboutLayout = () => {
       <section className="py-12 px-6 bg-[#D419580D]">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800">Know Our Journey</h2>
-        <p className="mt-4 text-gray-600">
+        <p className=" text-[18px] mt-4 text-gray-600">
           At kaivee HealthCare, we believe in comprehensive services, convenient pick-ups, timely delivery, and an informed follow-up. We make sure that you get quick, accurate, and state-of-the-art services.
         </p>
       </div>
@@ -59,7 +59,7 @@ const AboutLayout = () => {
         {/* Right-aligned on desktop */}
         <div className="bg-white p-6 rounded-lg shadow-md md:ml-auto md:max-w-[85%]">
           <h3 className="text-2xl font-semibold text-gray-700">How We Started</h3>
-          <p className="mt-2 text-gray-600">
+          <p className="text-[18px] mt-2 text-gray-600">
             When we began this journey in 2021, all we wanted was to make quality healthcare accessible to people and to give a sense of convenience with a healthy lifestyle.
           </p>
         </div>
@@ -67,7 +67,7 @@ const AboutLayout = () => {
         {/* Left-aligned on desktop */}
         <div className="bg-white p-6 rounded-lg shadow-md md:mr-auto md:max-w-[85%]">
           <h3 className="text-2xl font-semibold text-gray-700">Defining The Problem</h3>
-          <p className="mt-2 text-gray-600">
+          <p className="text-[18px] mt-2 text-gray-600">
             We have seen the harsh realities of both urban and rural life - from the issue of affordability to the problem of accessibility. Our strong desire to improve the overall well-being of people, by providing them with accurate diagnostics, motivated us to create 'Zen Health Labs'. Through our innovative solutions, we strive to ensure that everyone has access to the diagnostic healthcare they need, regardless of their location or financial situation.
           </p>
         </div>
@@ -75,7 +75,7 @@ const AboutLayout = () => {
         {/* Right-aligned on desktop */}
         <div className="bg-white p-6 rounded-lg shadow-md md:ml-auto md:max-w-[85%]">
           <h3 className="text-2xl font-semibold text-gray-700">Creating a Pan-India Dx Revolution</h3>
-          <p className="mt-2 text-gray-600">
+          <p className="text-[18px] mt-2 text-gray-600">
             We believe in the philosophy of preventive health and disease management. In just four short years, we have been able to provide care to 2.5 million Indians, making us a leader in the field of diagnostics. We are proud to be able to make a positive impact in the lives of so many people.
           </p>
         </div>
@@ -161,12 +161,12 @@ const AboutLayout = () => {
             </p>
           </div> */}
         </div>
-        <div className="absolute top-0 right-0">
+        {/* <div className="absolute top-0 right-0">
           <AboutPattern />
         </div>
         <div className="absolute bottom-0 left-0">
           <AboutPattern />
-        </div>
+        </div> */}
       {/* </div> */}
 
 
@@ -194,7 +194,7 @@ const AboutLayout = () => {
       <div className="bg-rgb(199, 229, 247)">
         <div className=" container py-[70px]">
           <p className="font-semibold text-center">
-            At Kaivee Healthcare, we believe that quality diagnostics lead to better health decisions. Experience the ease of accurate testing with us today!
+           Kaivee Healthcare is clearly your best partner at Health & Checkups.
 
           </p>
         </div>
@@ -207,52 +207,52 @@ export default AboutLayout;
 
 const data = [
   {
-    // id: 1,
-    // title: "NABL Accredited Labs",
-    // description: "Follows all protocols as per NABL & CAP Guidelines",
-    icon: <Image src={img11} alt="NABL Accredited Icon" />,
+    id: 1,
+    title: "NABL Accredited Labs",
+    
+    icon: <Image src={img33} alt="NABL Accredited Icon" />,
   },
   {
     id: 2,
     title: "Trusted by Leading Doctors & Hospitals",
-    description: "Qualified Pathologist at each lab",
-    icon: <Image src={img22} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img22} alt="doctors Icon" />,
   },
   {
     id: 3,
     title: "Shortest Reporting Time",
-    description: "Ownership and Innovation",
-    icon: <Image src={img33} alt="NABL Accredited Icon" />,
+  
+    icon: <Image src={img55} alt="time Icon" />,
   },
   {
     id: 4,
     title: "Accurate Test Reports",
-    description: "Quality checks by Quality Assurance Team",
-    icon: <Image src={img44} alt="NABL Accredited Icon" />,
+   
+    icon: <Image src={img44} alt="report Icon" />,
   },
   {
     id: 5,
-    title: "1 Crore+ Satisfied Customers",
-    description: "Making superior quality diagnostics services",
-    icon: <Image src={img55} alt="NABL Accredited Icon" />,
+    title: "Satisfied Customers",
+    
+    icon: <Image src={img11} alt="customer Icon" />,
   },
   {
     id: 6,
     title: "100+ Labs",
-    description: "Large Network Labs in all the major cities",
+    
     icon: <Image src={img66} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
     title: "3000+ Collection Centres",
-    description: "Expanding our reach and counting",
-    icon: <Image src={img77} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img77} alt="collection Icon" />,
   },
   {
     id: 8,
     title: "Scientific Orientation",
-    description: "MD Doctors in Every Lab & State-of-the-Art Machines",
-    icon: <Image src={img88} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img88} alt="scientific Icon" />,
   },
 ];
 

@@ -13,14 +13,14 @@ import SpinnerComponent from "components/spinner";
 import PatientImageOne from "assets/images/home/Ellipse 3984.png";
 import PatientImageTwo from "assets/images/home/drugs (3) 1.png";
 // why choose
-import img1 from "assets/images/why choose us/1.png";
-import img2 from "assets/images/why choose us/2.png";
-import img3 from "assets/images/why choose us/3.png";
-import img4 from "assets/images/why choose us/4.png";
-import img5 from "assets/images/why choose us/5.png";
-import img6 from "assets/images/why choose us/6.png";
-import img7 from "assets/images/why choose us/7.png";
-import img8 from "assets/images/why choose us/8.png";
+import img1 from "assets/images/whychooseus/1.png";
+import img2 from "assets/images/whychooseus/2-png.png";
+import img3 from "assets/images/whychooseus/icon-3.png";
+import img4 from "assets/images/whychooseus/3-png.png";
+import img5 from "assets/images/whychooseus/4-png.png";
+import img6 from "assets/images/whychooseus/5-png.png";
+import img7 from "assets/images/whychooseus/6-png.png";
+import img8 from "assets/images/whychooseus/7-png.png";
 // import img9 from "assets/images/Finalimg/Why Choose Us/World Class Technology.webp";
 import { GET_ALL_HABITS, GET_HABIT_BY_ID } from "redux/actions/habit";
 import { GET_ALL_HEALTHRISK } from "redux/actions/healthrisk";
@@ -591,52 +591,52 @@ const ourServices = [
 ];
 const data = [
   {
-    // id: 1,
-    // title: "NABL Accredited Labs",
-    // description: "Follows all protocols as per NABL & CAP Guidelines",
-    icon: <Image src={img1} alt="NABL Accredited Icon" />,
+    id: 1,
+    title: "NABL Accredited Labs",
+    
+    icon: <Image src={img3} alt="NABL Accredited Icon" />,
   },
   {
     id: 2,
     title: "Trusted by Leading Doctors & Hospitals",
-    description: "Qualified Pathologist at each lab",
-    icon: <Image src={img2} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img2} alt="doctors Icon" />,
   },
   {
     id: 3,
     title: "Shortest Reporting Time",
-    description: "Ownership and Innovation",
-    icon: <Image src={img3} alt="NABL Accredited Icon" />,
+  
+    icon: <Image src={img5} alt="time Icon" />,
   },
   {
     id: 4,
     title: "Accurate Test Reports",
-    description: "Quality checks by Quality Assurance Team",
-    icon: <Image src={img4} alt="NABL Accredited Icon" />,
+   
+    icon: <Image src={img4} alt="report Icon" />,
   },
   {
     id: 5,
-    title: "1 Crore+ Satisfied Customers",
-    description: "Making superior quality diagnostics services",
-    icon: <Image src={img5} alt="NABL Accredited Icon" />,
+    title: "Satisfied Customers",
+    
+    icon: <Image src={img1} alt="customer Icon" />,
   },
   {
     id: 6,
     title: "100+ Labs",
-    description: "Large Network Labs in all the major cities",
+    
     icon: <Image src={img6} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
     title: "3000+ Collection Centres",
-    description: "Expanding our reach and counting",
-    icon: <Image src={img7} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img7} alt="collection Icon" />,
   },
   {
     id: 8,
     title: "Scientific Orientation",
-    description: "MD Doctors in Every Lab & State-of-the-Art Machines",
-    icon: <Image src={img8} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img8} alt="scientific Icon" />,
   },
 ];
 export default memo(HomeLayout);
