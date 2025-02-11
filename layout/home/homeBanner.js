@@ -71,7 +71,7 @@ const Homebanner = () => {
 
         {/* Right Section: Content */}
         <div className="w-full lg:w-1/2 bg-white rounded-lg p-5 lg:p-8">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-gray-800 leading-normal text-center lg:text-left">
+          <h1 className="text-[35px] sm:text-[35px] lg:text-[35px] text-gray-800 leading-normal text-center lg:text-left">
             Your <span className="text-[#8DBD4D]">Trusted Partner</span> in Health  Accurate Tests, Fast Results.
           </h1>
 
@@ -96,12 +96,12 @@ const Homebanner = () => {
           {/* Stats Section */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center justify-end   space-y-6 sm:space-y-0 sm:space-x-8">
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">10k+</h2>
+              <h2 className="text-[24px] sm:text-[24px] font-bold text-gray-800">10k+</h2>
               <p className="text-gray-600 text-sm sm:text-base">Tests Available</p>
             </div>
             <span className="hidden sm:block h-6 w-px bg-gray-300"></span>
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">240k+</h2>
+              <h2 className="text-[24px] sm:text-[24px] font-bold text-gray-800">240k+</h2>
               <p className="text-gray-600 text-sm sm:text-base">Patients Benefiting</p>
             </div>
           </div>
