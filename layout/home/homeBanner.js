@@ -4,11 +4,11 @@ import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import bannerImage from "assets/images/home/HOME-BANNER-1.jpg";
-import bannerImage2 from "assets/images/home/HOME-BANNER-2.jpg";
+// import bannerImage2 from "assets/images/home/HOME-BANNER-2.jpg";
 import bannerImage3 from "assets/images/home/HOME-BANNER-3.jpg";
 
 
-const images = [bannerImage,bannerImage2,bannerImage3];
+const images = [bannerImage,bannerImage3];
 
 const responsive = {
   superLargeDesktop: {
