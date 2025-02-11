@@ -7,14 +7,14 @@ import React from "react";
 import InquiryForm from "components/inquiryForm";
 import WhyChoose from "components/WhyChoose";
 // why choose
-import img11 from "assets/images/why choose us/1.png";
-import img22 from "assets/images/why choose us/2.png";
-import img33 from "assets/images/why choose us/3.png";
-import img44 from "assets/images/why choose us/4.png";
-import img55 from "assets/images/why choose us/5.png";
-import img66 from "assets/images/why choose us/6.png";
-import img77 from "assets/images/why choose us/7.png";
-import img88 from "assets/images/why choose us/8.png";
+import img11 from "assets/images/whychooseus/1.png";
+import img22 from "assets/images/whychooseus/2-png.png";
+import img33 from "assets/images/whychooseus/icon-3.png";
+import img44 from "assets/images/whychooseus/3-png.png";
+import img55 from "assets/images/whychooseus/4-png.png";
+import img66 from "assets/images/whychooseus/5-png.png";
+import img77 from "assets/images/whychooseus/6-png.png";
+import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
 // import BreadCrumb from "components/breadcrumb";
 import LazyLoad from "react-lazyload";
@@ -191,52 +191,52 @@ const FreeHomeSampleCollectionLayout = () => {
 };
 const data = [
   {
-    // id: 1,
-    // title: "NABL Accredited Labs",
-    // description: "Follows all protocols as per NABL & CAP Guidelines",
-    icon: <Image src={img11} alt="NABL Accredited Icon" />,
+    id: 1,
+    title: "NABL Accredited Labs",
+    
+    icon: <Image src={img33} alt="NABL Accredited Icon" />,
   },
   {
     id: 2,
     title: "Trusted by Leading Doctors & Hospitals",
-    description: "Qualified Pathologist at each lab",
-    icon: <Image src={img22} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img22} alt="doctors Icon" />,
   },
   {
     id: 3,
     title: "Shortest Reporting Time",
-    description: "Ownership and Innovation",
-    icon: <Image src={img33} alt="NABL Accredited Icon" />,
+  
+    icon: <Image src={img55} alt="time Icon" />,
   },
   {
     id: 4,
     title: "Accurate Test Reports",
-    description: "Quality checks by Quality Assurance Team",
-    icon: <Image src={img44} alt="NABL Accredited Icon" />,
+   
+    icon: <Image src={img44} alt="report Icon" />,
   },
   {
     id: 5,
-    title: "1 Crore+ Satisfied Customers",
-    description: "Making superior quality diagnostics services",
-    icon: <Image src={img55} alt="NABL Accredited Icon" />,
+    title: "Satisfied Customers",
+    
+    icon: <Image src={img11} alt="customer Icon" />,
   },
   {
     id: 6,
     title: "100+ Labs",
-    description: "Large Network Labs in all the major cities",
+    
     icon: <Image src={img66} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
     title: "3000+ Collection Centres",
-    description: "Expanding our reach and counting",
-    icon: <Image src={img77} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img77} alt="collection Icon" />,
   },
   {
     id: 8,
     title: "Scientific Orientation",
-    description: "MD Doctors in Every Lab & State-of-the-Art Machines",
-    icon: <Image src={img88} alt="NABL Accredited Icon" />,
+    
+    icon: <Image src={img88} alt="scientific Icon" />,
   },
 ];
 export default FreeHomeSampleCollectionLayout;

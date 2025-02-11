@@ -593,7 +593,7 @@ const data = [
   {
     id: 1,
     title: "NABL Accredited Labs",
-    
+    description: "Follows all protocols as per NABL & CAP Guidelines",
     icon: <Image src={img3} alt="NABL Accredited Icon" />,
   },
   {

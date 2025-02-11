@@ -124,9 +124,9 @@ const HealthRisks = ({
                   key={index}
                   onClick={() => singlePage(item._id)}
                 >
-                  <div className="w-full rounded border-[1px] border-[#FDE8BF]">
-                    <div className="py-[12px]">
-                      <p className="text-center font-[600] text-[18px] font-source-pro">
+                  <div className="w-full rounded border-[1px] border-[#D41958]">
+                    <div className="py-[12px] bg-[#D419580D]">
+                      <p className="text-center font-[600] text-[18px] font-source-pro ">
                         {Object.keys(item).includes("healthRiskTitle")
                           ? item?.healthRiskTitle
                           : Object.keys(item).includes("perent_category_name")

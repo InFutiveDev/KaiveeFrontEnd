@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import bannerImage from "assets/images/home/HOME-BANNER-1.jpg";
-// import bannerImage2 from "assets/images/home/HOME-BANNER-2.jpg";
+import bannerImage from "assets/images/home/home-banner-2-new.jpg";
+import bannerImage2 from "assets/images/home/HOME-BANNER-NEW.jpg";
 import bannerImage3 from "assets/images/home/HOME-BANNER-3.jpg";
 
 
-const images = [bannerImage,bannerImage3];
+const images = [bannerImage2,bannerImage,bannerImage3];
 
 const responsive = {
   superLargeDesktop: {

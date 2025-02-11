@@ -44,7 +44,7 @@ const HomeTestCard = ({ data, cart, handleCartData }) => {
             height={500}
             src={data?.package_image || CityHealth.src}
             alt={data?.package_image_altTag}
-            className="object-cover h-32 !w-full"
+            className="object-fill h-32 !w-full"
           />
         </div>
       </Link>

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import CityHealth from "assets/images/health-packages/city advanced health package website (1350x1050) 1.png";
+import CityHealth from "assets/images/health-packages/Home-collection.jpg";
 import { UPDATE_CART_QAUNTITY } from "redux/actions/cart";
 import { useDispatch } from "react-redux";
 import { StarSVG } from "assets/images/SvgImage";
@@ -46,11 +46,11 @@ const HomePackegesCard = ({ data, cart, handleCartData }) => {
             loading="eager"
             //  className=" object-cover "
             width={500}
-            height={500}
+            height={200}
             src={data?.package_image || CityHealth.src}
             // width={"100%"}
             // height={"100%"}
-            className="object-cover h-32 !w-full"
+            className="object-fill h-32 !w-full"
             alt={data?.package_image_altTag}
           />
         </div>

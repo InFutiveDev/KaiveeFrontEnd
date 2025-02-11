@@ -168,7 +168,7 @@ const HomePopularPackeges = ({
           </p>
         </div>
         {/* <div className=""> */}
-        <div className="relative lg:w-1/2 md:w-1/3 sm:w-full w-[50%] ">
+        {/* <div className="relative lg:w-1/2 md:w-1/3 sm:w-full w-[50%] ">
           <Carousel
             arrows={false}
             infinite={true}
@@ -203,7 +203,7 @@ const HomePopularPackeges = ({
               );
             })}
           </Carousel>
-        </div>
+        </div> */}
 
         <div className="sm:relative sm:top-0 sm:right-0 absolute top-8 right-0">
           <button
