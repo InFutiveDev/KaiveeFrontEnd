@@ -6,7 +6,6 @@ import Laptop from "assets/images/home/Screenshot 2025-01-27 at 12.59.37 PM.png"
 
 import { GET_FEATURED_BY_ID, GET_TEST_BY_HABIT } from "redux/actions/test";
 
-
 import { GET_ALL_BANNERS } from "redux/actions/banner";
 import SpinnerComponent from "components/spinner";
 
@@ -49,8 +48,6 @@ const HealthcareVideos = dynamic(() => import("./healthcareVideos"));
 const HealthBulletin = dynamic(() => import("./healthBulletin"));
 const AccreditationsAwards = dynamic(() => import("./accreditationsAwards"));
 const Testimonial = dynamic(() => import("./testimonial"));
-
-
 
 const HomeLayout = () => {
   const dispatch = useDispatch();
@@ -113,12 +110,8 @@ const HomeLayout = () => {
     dispatch(GET_ALL_HEALTH_PACKAGES());
   }, [dispatch]);
 
-  
-
-
   const features = [
-
-    { icon: icon2, label: "Home Collection Qualified Technicians" },
+    { icon: icon2, label: "Home Collection by Qualified Technicians" },
     { icon: icon3, label: "Exclusive Collection Centres" },
     { icon: icon4, label: "NABL Approved Labs" },
 
@@ -137,36 +130,33 @@ const HomeLayout = () => {
             <div className="backImageBox" />
           </section>
 
-          
           <div className="container">
-  <div className="container pt-6">
-    <div className="py-6 mb-2 bg-white bg-opacity-50 rounded-lg">
-      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-centre">
-        {features.map((feature, index) => (
-          <div key={index} className="flex justify-start items-center space-x-4 font-[Poppins] text-sm md:text-lg">
-            <Image
-              src={feature.icon}
-              alt={feature.label}
-              className="w-auto object-contain"
-              style={{ height: '70px', width: '70px' }} // Increased icon size
-            />
-            <span className="text-gray-800 ">{feature.label}</span>
+            <div className="container ">
+              <div className="py-6 mb-2 bg-white bg-opacity-80 rounded-lg">
+                <div className="container mx-auto grid grid-cols-2  lg:grid-cols-4 gap-6 text-centre">
+                  {features.map((feature, index) => (
+                    <div
+                      key={index}
+                      className="flex justify-start items-center space-x-4 font-[Poppins] text-sm md:text-lg transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-[#8DBD4D0D] p-2 rounded-lg"
+                    >
+                      <Image
+                        src={feature.icon}
+                        alt={feature.label}
+                        className="w-auto object-contain"
+                        style={{ height: "70px", width: "70px" }} // Increased icon size
+                      />
+                      <span className="text-gray-800 ">{feature.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
 
           <div className="bg-[#FAFAFA]">
             <div className="container pt-1 ">
               <BookingCard packagesId={habits?.data[0]?._id || ""} />
             </div>
-
 
             <div className="bg-[white]">
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
@@ -238,54 +228,54 @@ const HomeLayout = () => {
               </div>
             </div>
           </div>
-          
-          <div className="bg-white">
+
+          {/* <div className="bg-white">
             <div className="container">
-              {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
+             
               <div className=" pb-0 lg:pb-4 py-2 pt-2">
                 <LatestAnnouncement />
               </div>
             </div>
-          </div>
+          </div> */}
           <div>
             <WhyChoose data={data} padding={"50px"} />
           </div>
-          
 
           <div className="w-full">
-  <div className="pb-0 lg:pb-4 py-2">
-    <div className="bg-[#F7F7FB] rounded-xl grid items-center grid-cols-1 lg:grid-cols-2">
-      {/* Image Section - Takes 1/2 width on large screens */}
-      <div className="flex justify-center lg:justify-start ">
-        <img
-          src={Laptop.src}
-          className="w-[90%]"
-          alt="Image of a laptop"
-        />
-      </div>
+            <div className="pb-0 lg:pb-4 py-2">
+              <div className="bg-[#F7F7FB] rounded-xl grid items-center grid-cols-1 lg:grid-cols-2">
+                {/* Image Section - Takes 1/2 width on large screens */}
+                <div className="flex justify-center lg:justify-start ">
+                  <img
+                    src={Laptop.src}
+                    className="w-[90%]"
+                    alt="Image of a laptop"
+                  />
+                </div>
 
-      {/* Content Section - Takes 1/2 width on large screens */}
-      <div className="p-4 lg:p-6">
-        <p className="text-xl lg:text-[32px] font-source-pro ">
-          Why our Patients Recommend Us?
-        </p>
-        <ul className="list-inside list-disc space-y-2">
-          {[
-            "Trusted Accuracy: Cutting-edge technology ensures precise and reliable test results.",
-            "Fast Turnaround: No long waits—get your reports on time, every time.",
-            "Convenient Home Sample Collection: Healthcare that comes to you.",
-            "Affordable & Transparent Pricing: Quality healthcare with no hidden costs.",
-            "Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.",
-            "Hygienic & Safe Practices: We follow strict safety protocols for your well-being.",
-            
-           
-          ].map((item, index) => (
-            <li key={index} className="text-[#585981] text-[16px] font-[400]">
-              {item}
-            </li>
-          ))}
-          {/* Read More / Read Less Button */}
-          <span
+                {/* Content Section - Takes 1/2 width on large screens */}
+                <div className="p-4 lg:p-6">
+                  <p className="text-xl lg:text-[32px] font-source-pro ">
+                    Why our Patients Recommend Us?
+                  </p>
+                  <ul className="list-inside list-disc space-y-2">
+                    {[
+                      "Trusted Accuracy: Cutting-edge technology ensures precise and reliable test results.",
+                      "Fast Turnaround: No long waits—get your reports on time, every time.",
+                      "Convenient Home Sample Collection: Healthcare that comes to you.",
+                      "Affordable & Transparent Pricing: Quality healthcare with no hidden costs.",
+                      "Easy Online Booking & Reports: Schedule tests and access reports from the comfort of your home.",
+                      "Hygienic & Safe Practices: We follow strict safety protocols for your well-being.",
+                    ].map((item, index) => (
+                      <li
+                        key={index}
+                        className="text-[#585981] text-[16px] font-[400]"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                    {/* Read More / Read Less Button */}
+                    <span
                       className="font-bold cursor-pointer text-[#D41958] mt-2 inline-block"
                       onClick={() => setReadMore(!readMore)}
                     >
@@ -294,14 +284,22 @@ const HomeLayout = () => {
 
                     {/* Conditional Rendering Based on Read More State */}
                     {readMore && (
-          <p className="text-[16px] text-[#585981]">At Kaivee Healthcare, we are committed to providing our patients with the best possible care. We are constantly striving to improve our services and our patient experience. We continually seek feedback from our patients and use it to make our services even better. We also strive to maintain a high level of customer service, so that our patients are able to get the support they need when they need it.</p>
-                   ) }
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
+                      <p className="text-[16px] text-[#585981]">
+                        At Kaivee Healthcare, we are committed to providing our
+                        patients with the best possible care. We are constantly
+                        striving to improve our services and our patient
+                        experience. We continually seek feedback from our
+                        patients and use it to make our services even better. We
+                        also strive to maintain a high level of customer
+                        service, so that our patients are able to get the
+                        support they need when they need it.
+                      </p>
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="container">
             {/* sm:mx-1 lg:mx-2 xl:mx-24 */}
@@ -318,7 +316,7 @@ const HomeLayout = () => {
               </div>
             </div>
           </div>
-         
+
           <div className="bg-[#FAFAFA] py-6 ">
             <div className="container  mx-auto px-4">
               <div>
@@ -432,21 +430,26 @@ const HomeLayout = () => {
           <div className="bg-[#F7F7FB]">
             <div className="container pt-4 pb-4">
               <h1 className="text-center  text-lg lg:text-xl xl:text-[26px] font-source-pro text-black">
-                ONE-STOP DESTINATION FOR ALL YOUR TEST - BEST DIAGNOSTIC CENTRE IN REGION!
+                ONE-STOP DESTINATION FOR ALL YOUR TEST - BEST DIAGNOSTIC CENTRE
+                IN REGION!
               </h1>
               <div className="text-center">
                 <span className="text-secondary text-base lg:text-lg xl:text-[20px]">
-                  Advanced diagnostic technology combines superior care – Get all services under one roof.
+                  Advanced diagnostic technology combines superior care – Get
+                  all services under one roof.
                 </span>
               </div>
               <div className="mt-[32px]">
                 <div className="rounded-xl border-[1px] shadow-md border-[#E4E4E7] p-3 md:p-[32px] bg-white">
                   <h2 className="flex items-center gap-[12px] text-[#D41958] font-semibold text-base xl:text-[24px] pb-[8px] border-b border-[#E4E4E7]">
-                    <ArrowSvgYellow /> Comprehensive Diagnostic Solutions Under One Roof!
+                    <ArrowSvgYellow /> Comprehensive Diagnostic Solutions Under
+                    One Roof!
                   </h2>
                   <div className="mt-[12px]">
                     <div className="text-secondary text-sm lg:text-[16px]">
-                      At <strong>Kaivee Healthcare</strong>, we offer a full spectrum of diagnostic services designed for preventive, routine, and specialized healthcare needs.
+                      At <strong>Kaivee Healthcare</strong>, we offer a full
+                      spectrum of diagnostic services designed for preventive,
+                      routine, and specialized healthcare needs.
                     </div>
 
                     {/* Read More / Read Less Button */}
@@ -467,7 +470,9 @@ const HomeLayout = () => {
                           <li>Complete Blood Count (CBC)</li>
                           <li>Lipid Profile (Cholesterol, Triglycerides)</li>
                           <li>Liver & Kidney Function Tests</li>
-                          <li>Diabetes Screening (HbA1c, Fasting Blood Sugar)</li>
+                          <li>
+                            Diabetes Screening (HbA1c, Fasting Blood Sugar)
+                          </li>
                           <li>Thyroid Function Tests</li>
                         </ul>
                         <div className="text-base lg:text-[16px] font-semibold mt-2">
@@ -490,7 +495,9 @@ const HomeLayout = () => {
                           Specialized Diagnostic Tests
                         </div>
                         <ul className="list-disc pl-5 text-sm lg:text-[16px] text-secondary">
-                          <li>Hormone Analysis (PCOS, Fertility, Vitamin D & B12)</li>
+                          <li>
+                            Hormone Analysis (PCOS, Fertility, Vitamin D & B12)
+                          </li>
                           <li>Allergy Screening</li>
                           <li>Autoimmune & Genetic Testing</li>
                         </ul>
@@ -502,7 +509,12 @@ const HomeLayout = () => {
                           <li>Cancer Marker Tests</li>
                           <li>Lifestyle & Nutritional Assessments</li>
                         </ul>
-                        <p>Whether it’s a routine test or a specialized diagnostic need,<strong> Kaivee Healthcare </strong>ensures accuracy, efficiency, and care in every report.</p>
+                        <p>
+                          Whether it’s a routine test or a specialized
+                          diagnostic need,<strong> Kaivee Healthcare </strong>
+                          ensures accuracy, efficiency, and care in every
+                          report.
+                        </p>
                       </div>
                     )}
                   </div>
@@ -515,20 +527,20 @@ const HomeLayout = () => {
     </>
   );
 };
-const whyChooseUs = [
-  {
-    description: `✔India’s most trusted lab featuring cutting-edge, medically-certified equipment and trained professionals`,
-  },
-  { description: `✔Free home sample collection ` },
-  {
-    description: `✔Comprehensive & tailored health check-up packages under one roof `,
-  },
-  { description: `✔Highly qualified doctors and certified technicians ` },
-  {
-    description: `✔Delhi’s one-of-a-kind PCR lab guarantees high standards of accuracy in testing`,
-  },
-  { description: `✔Prompt reports; access anywhere and anytime` },
-];
+// const whyChooseUs = [
+//   {
+//     description: `✔India’s most trusted lab featuring cutting-edge, medically-certified equipment and trained professionals`,
+//   },
+//   { description: `✔Free home sample collection ` },
+//   {
+//     description: `✔Comprehensive & tailored health check-up packages under one roof `,
+//   },
+//   { description: `✔Highly qualified doctors and certified technicians ` },
+//   {
+//     description: `✔Delhi’s one-of-a-kind PCR lab guarantees high standards of accuracy in testing`,
+//   },
+//   { description: `✔Prompt reports; access anywhere and anytime` },
+// ];
 
 const ourServices = [
   {
@@ -599,43 +611,43 @@ const data = [
   {
     id: 2,
     title: "Trusted by Leading Doctors & Hospitals",
-    
+
     icon: <Image src={img2} alt="doctors Icon" />,
   },
   {
     id: 3,
     title: "Shortest Reporting Time",
-  
+
     icon: <Image src={img5} alt="time Icon" />,
   },
   {
     id: 4,
     title: "Accurate Test Reports",
-   
+
     icon: <Image src={img4} alt="report Icon" />,
   },
   {
     id: 5,
     title: "Satisfied Customers",
-    
+
     icon: <Image src={img1} alt="customer Icon" />,
   },
   {
     id: 6,
     title: "100+ Labs",
-    
+
     icon: <Image src={img6} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
     title: "3000+ Collection Centres",
-    
+
     icon: <Image src={img7} alt="collection Icon" />,
   },
   {
     id: 8,
     title: "Scientific Orientation",
-    
+
     icon: <Image src={img8} alt="scientific Icon" />,
   },
 ];
@@ -665,14 +677,12 @@ const ArrowSvgYellow = () => {
 const locationData = [
   {
     mainTilte: "Zen Health Services",
-    address:
-      "K4, Sector 116, Noida, Uttar Pradesh 201305",
-    serviceAvailable:
-      "MRI Scan, CT Scan, Digital X-Ray, Neurology Test",
+    address: "K4, Sector 116, Noida, Uttar Pradesh 201305",
+    serviceAvailable: "MRI Scan, CT Scan, Digital X-Ray, Neurology Test",
     contactNumber: "084483 38674",
     timing: "24 hours open",
     email: "zenhealthcare@gmail.com",
-    iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1278876753586!2d77.3960429!3d28.5659222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef823d515f91%3A0xd4d4ace124409340!2sZen%20Health%20Services!5e0!3m2!1sen!2sin!4v1737958352844!5m2!1sen!2sin"
+    iframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1278876753586!2d77.3960429!3d28.5659222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef823d515f91%3A0xd4d4ace124409340!2sZen%20Health%20Services!5e0!3m2!1sen!2sin!4v1737958352844!5m2!1sen!2sin",
   },
-  
 ];

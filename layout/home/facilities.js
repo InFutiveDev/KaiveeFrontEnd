@@ -56,77 +56,84 @@ const Facilities = () => {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1536 },
       items: 4,
-      partialVisibilityGutter: 40
+      partialVisibilityGutter: 40,
     },
     desktop: {
       breakpoint: { max: 1536, min: 1024 },
       items: 3,
-      partialVisibilityGutter: 30
+      partialVisibilityGutter: 30,
     },
     tablet: {
       breakpoint: { max: 1024, min: 640 },
       items: 2,
-      partialVisibilityGutter: 20
+      partialVisibilityGutter: 20,
     },
     mobile: {
       breakpoint: { max: 640, min: 0 },
       items: 1,
-      partialVisibilityGutter: 10
+      partialVisibilityGutter: 10,
     },
   };
 
   return (
     <section className="w-full">
-      
-        {/* Header & Buttons */}
-        <div className="flex justify-between px-2 items-center w-full pb-[10px]">
-          <p className="lg:text-[32px] ">Facilities</p>
-          <ButtonGroup onPrevious={() => carouselRef.current?.previous()} onNext={() => carouselRef.current?.next()} />
-        </div>
+      {/* Header & Buttons */}
+      <div className="flex justify-between px-2 items-center w-full pb-[10px]">
+        <p className="lg:text-[32px] ">Facilities</p>
+        <ButtonGroup
+          onPrevious={() => carouselRef.current?.previous()}
+          onNext={() => carouselRef.current?.next()}
+        />
+      </div>
 
-        {/* Carousel Section */}
-       
-            {servicesData.length > 0 && (
-              <Carousel
-              ref={carouselRef}
-              arrows={false}
-              swipeable={true}
-              draggable={true}
-              showDots={false}
-              responsive={responsive}
-              infinite={true}
-              autoPlay={false}
-              keyBoardControl={true}
-              customTransition="all 500ms ease"
-              transitionDuration={500}
-              containerClass="carousel-container pb-4"
-              itemClass="px-2 sm:px-3"
-              partialVisible={true}
-              >
-                {servicesData.map((item, index) => (
-                  <div key={index + item?.title} className="group bg-white  transition-shadow duration-300 p-4 h-full cursor-pointer" role="button" onClick={() => router.push(`/facilities/${item?.slug}`)}>
-                    <div className="flex flex-col items-center">
-              <div className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-100">
-                <Image
-                  src={item.imageSrc}
-                  alt={item.title}
-                  layout="fill"
-                  objectFit="contain"
-                  className=" transition-transform duration-300"
-                  quality={100}
-                  
-                />
-              </div>
-              <div className="mt-4 text-center">
-                <h3 className="text-[20px]  text-gray-900 mb-2 line-clamp-1">
-                  {item.title}
-                </h3>
-                <p className="text-[14px] text-gray-600 line-clamp-3">
+      {/* Carousel Section */}
+
+      {servicesData.length > 0 && (
+        <Carousel
+          ref={carouselRef}
+          arrows={false}
+          swipeable={true}
+          draggable={true}
+          showDots={false}
+          responsive={responsive}
+          infinite={true}
+          autoPlay={false}
+          keyBoardControl={true}
+          customTransition="all 500ms ease"
+          transitionDuration={500}
+          containerClass="carousel-container pb-4"
+          itemClass="px-2 sm:px-3"
+          partialVisible={true}
+        >
+          {servicesData.map((item, index) => (
+            <div
+              key={index + item?.title}
+              className="group bg-white  transition-shadow duration-300 p-4 h-full cursor-pointer"
+              role="button"
+              onClick={() => router.push(`/facilities/${item?.slug}`)}
+            >
+              <div className="flex flex-col items-center">
+                <div className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-100 group">
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.title}
+                    layout="fill"
+                    objectFit="contain"
+                    quality={100}
+                    className="transition-transform duration-300 transform group-hover:scale-110"
+                  />
+                </div>
+
+                <div className="mt-4 text-center">
+                  <h3 className="text-[20px]  text-gray-900 mb-2 line-clamp-1">
+                    {item.title}
+                  </h3>
+                  {/* <p className="text-[14px] text-gray-600 line-clamp-3">
                   {item.description}
-                </p>
+                </p> */}
+                </div>
               </div>
-            </div>
-                  {/* SVG Separator
+              {/* SVG Separator
                   {index !== servicesData.length - 1 && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,17 +163,15 @@ const Facilities = () => {
                 />
               </svg>
             )} */}
-                  </div>
-                ))}
-              </Carousel>
-            )}
-      
+            </div>
+          ))}
+        </Carousel>
+      )}
     </section>
   );
 };
 
 export default Facilities;
-
 
 const servicesData = [
   {

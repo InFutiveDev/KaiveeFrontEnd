@@ -107,9 +107,7 @@ const HomePopularPackeges = ({
     <div className="w-full">
       <div className="w-full flex items-center justify-between space-x-3 p-2">
         <div className=" inline-flex justify-start  lg:w-[560px] md:w-[560px] w-[420px]">
-          <p className=" lg:text-[32px] text-xl font-source-pro">
-            {title}
-          </p>
+          <p className=" lg:text-[32px] text-xl font-source-pro">{title}</p>
         </div>
 
         {navbar.length !== 0 && (

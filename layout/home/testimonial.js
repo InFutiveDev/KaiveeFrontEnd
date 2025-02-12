@@ -53,10 +53,10 @@ const Testimonial = () => {
     <section className="bg-white py-16 px-6 lg:px-20">
       <div className="text-center ">
         <h2 className="text-3xl lg:text-4xl  text-gray-800 mb-2">
-        Happy Customers
+          Happy Customers
         </h2>
         <p className="text-gray-600 lg:text-lg">
-        Don't take our word for it. See what customers are saying about us.
+          Don't take our word for it. See what customers are saying about us.
         </p>
       </div>
 
