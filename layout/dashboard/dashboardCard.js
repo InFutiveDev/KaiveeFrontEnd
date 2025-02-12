@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { CallYellowImg } from "assets/images/SvgImage";
 import { EmailYellowSVG } from "assets/images/SvgImage";
 import ImgOne from "assets/images/dashboard/Frame 1410140987.png";
-import EditImgActive from "assets/images/check-out/Frame 1410140987.png"
+import EditImgActive from "assets/images/check-out/download_45x45.png"
 import Profileicon from "assets/images/dashboard/Profile-icon.png";
 import ImgTwo from "assets/images/dashboard/Frame 1410140987 (1).png";
 import ImgThree from "assets/images/dashboard/Frame 1410140987 (2).png";

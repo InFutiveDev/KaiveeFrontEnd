@@ -92,24 +92,21 @@ const FreeHomeSampleCollectionLayout = () => {
           <div className="lg:w-5/6 md:w-3/4 w-full">
             <div>
               <h1 className="text-lg sm:text-[26px] font-[400] mb-[20px]">
-                Blood Test At Home By us
+                Various Tests At Home By us
               </h1>
 
               <div className="flex flex-col gap-y-2">
-                <p className="text-secondary text-[16px] sm:text-[16px]">
-                  At <span className="font-bold">Kaivee Healthcare</span>, we make healthcare more convenient by offering
-                  <span className="font-bold"> home sample collection</span> for your blood tests. Skip the hassle of
-                  visiting a lab and let our <span className="font-bold">certified professionals</span> come to your home
-                  at a time that works best for you.
+                <p className="text-secondary text-[18px] sm:text-[18px]">
+                  At Kaivee Healthcare, we make healthcare more convenient by offering home sample collection for your blood tests. Skip the hassle of visiting a lab and let our certified professionals come to your home at a time that works best for you.
                 </p>
                 <h2 className="text-lg sm:text-[24px] font-[400] mb-[20px]">
                   You Just Need To Follow Some Simple Steps To Book A Home
                   Collection Visit.
                 </h2>
-                <div className="text-secondary text-[16px] sm:text-[16px]">
+                <div className="text-secondary text-[18px] sm:text-[18px]">
                   <p>
-                    <span className="font-bold ">Booking your home collection</span> with Kaivee Healthcare is easy and quick.
-                    Just follow these <span className="font-bold">simple steps</span>:
+                    Booking your home collection with Kaivee Healthcare is easy and quick.
+                    Just follow these simple steps:
                   </p>
 
                   <h3 className=" font-bold ">
@@ -118,35 +115,35 @@ const FreeHomeSampleCollectionLayout = () => {
 
                   Select the blood tests you want from our wide range of diagnostic services.
                 </div>
-                <div className="text-secondary text-[16px] sm:text-[16px]">
+                <div className="text-secondary text-[18px] sm:text-[16px]">
                   <h3 className=" font-bold ">
                     2. Enter Your Details
                   </h3>
 
                   Provide your personal details and preferred time for the home visit.
                 </div>
-                <div className="text-secondary text-[16px] sm:text-[16px]">
+                <div className="text-secondary text-[18px] sm:text-[18px]">
                   <h3 className=" font-bold ">
                     3. Schedule a Convenient Time
                   </h3>
 
                   Pick a time that suits you best for the sample collection.
                 </div>
-                <div className="text-secondary text-[16px] sm:text-[16px]">
+                <div className="text-secondary text-[18px] sm:text-[18px]">
                   <h3 className=" font-bold ">
                     4. Confirm the Booking
                   </h3>
 
                   Complete the booking and get a confirmation of your appointment.
                 </div>
-                <div className="text-secondary text-[16px] sm:text-[16px]">
+                <div className="text-secondary text-[18px] sm:text-[18px]">
                   <h3 className=" font-bold ">
                     4. Sit Back and Relax:
                   </h3>
 
                   Our professional technician will arrive at your location, collect the samples, and ensure your tests are processed with the highest accuracy.
                 </div>
-                <div className="text-secondary text-[16px] sm:text-[16px]">
+                <div className="text-secondary text-[18px] sm:text-[18px]">
                   <h3 className=" font-bold">
                     4. Get Results Online:
                   </h3>
@@ -154,7 +151,7 @@ const FreeHomeSampleCollectionLayout = () => {
                   Receive your test results securely through our online portal—quick and hassle-free.
                 </div>
               </div>
-              <p >It’s that simple to get your blood tests done without leaving your home!</p>
+              <p className="text-[#D41958]" >It's that simple to get your blood tests done without leaving your home!</p>
             </div>
           </div>
           <div className="sticky lg:top-[197px] xl:top-[161px] mt-2 h-min flex justify-end lg:w-2/4 ">
@@ -169,11 +166,11 @@ const FreeHomeSampleCollectionLayout = () => {
               Book Your Home Collection Today!
             </p>
             <p className="text-white text-center ">
-              🚪 Easy, Convenient, and Fast | 💻 Get Results Online | 📞 24/7 Customer Support
+              Easy, Convenient, and Fast | Get Results Online | 24/7 Customer Support
             </p>
             <div className="flex gap-2">
               <Link
-                href="tel:011-2000-2000"
+                href="tel:8800133928"
                 className="flex gap-x-1 md:gap-x-2 justify-center items-center text-blacke font-medium bg-[#D41958] rounded py-[10px] lg:px-[24px] px-[10px] lg:text-[18px] text-[14px]"
               >
                 <CallBlackImg />

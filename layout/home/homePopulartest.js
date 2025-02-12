@@ -20,13 +20,13 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
       <button
         disabled={currentSlide === 0}
         onClick={() => previous()}
-        className="left-button border text-[#fcc42c] hover:text-white bg-white h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center"
+        className="left-button border text-[#D41958]] hover:text-white bg-white h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center"
       >
         <IoMdArrowBack />
       </button>
       <button
         onClick={() => goToSlide(currentSlide + 1)}
-        className="text-[#fcc42c] right-button hover:text-white    bg-white border  h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center"
+        className="text-[#D41958] right-button hover:text-white    bg-white border  h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center"
       >
         <IoMdArrowForward />
       </button>
@@ -159,63 +159,62 @@ const HomePopularPackeges = ({
 
   return (
     <div className="w-full">
-      {/* md:!flex-nowrap flex-wrap */}
       <div className="relative w-full flex md:!flex-nowrap sm:flex-row	 sm:gap-1 sm:flex-wrap flex-col  sm:items-center items-start md:justify-between  justify-start space-x-3 p-2">
-        {/* md:w-[150px] lg:w-[300px] xl:w-[300px] */}
         <div className="inline-flex justify-start">
-          <p className=" lg:text-[32px] text-xl font-source-pro">
+          <p className="lg:text-[32px] text-xl font-source-pro">
             {title}
           </p>
         </div>
-        {/* <div className=""> */}
-        {/* <div className="relative lg:w-1/2 md:w-1/3 sm:w-full w-[50%] ">
-          <Carousel
-            arrows={false}
-            infinite={true}
-            draggable={true}
-            renderButtonGroupOutside={true}
-            containerClass="carousel-container"
-            className=" "
-            customButtonGroup={<ButtonGroupMenu />}
-            responsive={responsiveMenu}
-          >
-            {navbar?.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  onClick={() => {
-                    toggle(item, index);
-                  }}
-                  className=" mx-1"
-                >
-                  <p
-                    className={`break-words text-center	whitespace-normal lg:text-[14px] md:text-[12px] text-[14px]	 ${
-                      currentActiveTab == item?._id
-                        ? "text-orange !border-b-2 !border-t-0 !border-r-0 !border-l-0 !border-orange !p-0 font-[600] "
-                        : "text-secondary !border-0 !p-0 cursor-pointer "
-                    }`}
+        
+        {false && (
+          <div className="relative lg:w-1/2 md:w-1/3 sm:w-full w-[50%] ">
+            <Carousel
+              arrows={false}
+              infinite={true}
+              draggable={true}
+              renderButtonGroupOutside={true}
+              containerClass="carousel-container"
+              className=" "
+              customButtonGroup={<ButtonGroupMenu />}
+              responsive={responsiveMenu}
+            >
+              {navbar?.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    onClick={() => {
+                      toggle(item, index);
+                    }}
+                    className=" mx-1"
                   >
-                    {Object.keys(item).includes("hebitName")
-                      ? item?.hebitName
-                      : item?.category_name}
-                  </p>
-                </div>
-              );
-            })}
-          </Carousel>
-        </div> */}
+                    <p
+                      className={`break-words text-center	whitespace-normal lg:text-[14px] md:text-[12px] text-[14px]	 ${
+                        currentActiveTab == item?._id
+                          ? "text-orange !border-b-2 !border-t-0 !border-r-0 !border-l-0 !border-orange !p-0 font-[600] "
+                          : "text-secondary !border-0 !p-0 cursor-pointer "
+                      }`}
+                    >
+                      {Object.keys(item).includes("hebitName")
+                        ? item?.hebitName
+                        : item?.category_name}
+                    </p>
+                  </div>
+                );
+              })}
+            </Carousel>
+          </div>
+        )}
 
         <div className="sm:relative sm:top-0 sm:right-0 absolute top-8 right-0">
           <button
             onClick={() => {
               handleViewMore();
             }}
-            className=" bg-[#D41958] sm:w-36 w-fit	 text-white sm:text-[14px] text-[12px] rounded-md  px-[8px] sm:px-3  lg:px-2 py-1 font-[500] lg:ml-auto ml-0"
+            className="bg-[#D41958] sm:w-36 w-fit	text-white sm:text-[14px] text-[12px] rounded-md px-[8px] sm:px-3 lg:px-2 py-1 font-[500] lg:ml-auto ml-0"
           >
             View more
           </button>
         </div>
-        {/* </div> */}
       </div>
       <div className=" relative w-full ">
         {data?.length > 0 && (
@@ -237,12 +236,12 @@ const HomePopularPackeges = ({
             containerClass="carousel-container"
             className="w-full h-[50vh] "
             customLeftArrow={
-              <button className="absolute left-0 left-button border text-[#fcc42c] hover:text-white bg-white h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center">
+              <button className="absolute left-0 left-button border text-[#D41958] hover:text-white bg-white h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center">
                 <IoMdArrowBack />
               </button>
             }
             customRightArrow={
-              <button className="absolute right-0 text-[#fcc42c] right-button hover:text-white bg-white border  h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center">
+              <button className="absolute right-0 text-[#D41958] right-button hover:text-white bg-white border  h-5 w-5 lg:h-8 lg:w-8 rounded-full flex justify-center items-center">
                 <IoMdArrowForward />
               </button>
             }

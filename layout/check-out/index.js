@@ -1,7 +1,7 @@
 import BreadCrumb from "components/breadcrumb";
 import React, { useEffect, useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
-import EditImgActive from "assets/images/check-out/Frame 1410140987.png";
+import EditImgActive from "assets/images/check-out/download_45x45.png";
 import LineImg from "assets/images/check-out/Line_304_Pink_Transparent.png";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
@@ -220,53 +220,61 @@ const CheckOutLayout = () => {
                 )}
               </div>
               {selectedAccordOpen === "selectMember" && (
-                <div className="p-2">
-                  <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 my-3">
-                    {userFamilyMembers?.data?.map((item, index) => (
-                      <div
-                        key={index}
-                        onClick={() => handleFamilyMembers(item)}
-                        className={`cursor-pointer relative rounded-xl ${
-                          sendData.memberId == item?._id
-                            ? "bg-[#D419580D] border-[1px] border-[#D41958]"
-                            : "bg-white border-[1px] border-[#E4E4E7]"
-                        }  p-[24px]`}
-                      >
-                        <p className="text-[#3F3F46] text-base font-semibold">
-                          {item?.fullName}
-                        </p>
-                        <div className="my-[12px]">
-                          <span className="text-secondary text-capitalize text-base">
-                            {item?.relation == "self" ||
-                            item?.relation == "other"
-                              ? item?.relation
-                              : item?.fullName}{" "}
-                          </span>
-                          <span className="text-secondary text-base">
-                            +91{item?.phone}
-                          </span>
-                        </div>
+  <div className="p-2">
+    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-1 md:grid-cols-1 gap-2 my-3">
+      {userFamilyMembers?.data?.map((item, index) => (
+        <div
+          key={index}
+          onClick={() => handleFamilyMembers(item)}
+          className={`cursor-pointer relative rounded-xl p-[24px] ${
+            sendData.memberId == item?._id
+              ? " border-[1px] border-[#D41958]"
+              : "bg-white border-[1px] border-[#E4E4E7]"
+          }`}
+        >
+          {/* Profile & Name Section */}
+          <div className="flex items-center justify-between pb-3 border-b border-gray-200">
+            <div className="flex items-center gap-3">
+              <img
+                src={item?.profileImage || "/default-avatar.png"}
+                alt="Profile"
+                className="w-[40px] h-[40px] rounded-full object-cover"
+              />
+              <p className="text-[#18181B] text-20px font-semibold">
+                {item?.fullName}
+              </p>
+            </div>
+            {/* Edit Icon */}
+            <div
+              onClick={() => {
+                setMemberEditOpen(true);
+                setMemeberBy(item);
+              }}
+              className="cursor-pointer"
+            >
+              <img src={EditImgActive.src} alt="Edit" />
+            </div>
+          </div>
 
-                        <div className="flex flex-wrap justify-between gap-[12px]">
-                          <span className="text-secondary text-capitalize text-base">
-                            Relation :-{item?.relation}
-                          </span>
-                          <span className="text-secondary text-base">
-                            Age :- {item?.age}
-                          </span>
-                        </div>
-                        <div
-                          onClick={() => {
-                            setMemberEditOpen(true);
-                            setMemeberBy(item);
-                          }}
-                          className="cursor-pointer absolute top-2 right-3"
-                        >
-                          <img src={EditImgActive.src} />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+          {/* Details Section */}
+          <div className="py-3 border-b border-gray-200 flex justify-between text-[#3F3F46] text-16">
+            <span className="font-medium">Relation</span>
+            <span className="text-[#18181B]">{item?.relation}</span>
+          </div>
+          <div className="py-3 border-b border-gray-200 flex justify-between text-[#3F3F46] text-16">
+            <span className="font-medium">Age</span>
+            <span className="text-[#18181B]">{item?.age}</span>
+          </div>
+          <div className="py-3 flex justify-between text-[#3F3F46] text-16">
+            <span className="font-medium">Contact Number</span>
+            <span className="text-[#18181B]">+91 {item?.phone}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  
+
+
                   <div className="mt-[40px] flex justify-center gap-3">
                     <button
                       className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"
@@ -303,45 +311,56 @@ const CheckOutLayout = () => {
               </div>
               {step === 2 && (
                 <div className="p-3">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-1 md:grid-cols-1 gap-6">
                     {userAddresses?.data?.map((item, index) => (
                       <div key={index}>
                         <div
                           onClick={() => handleAddress(item)}
-                          className={`cursor-pointer relative rounded-xl ${
+                          className={`cursor-pointer relative rounded-xl p-4 ${
                             sendData.address == item?._id
-                              ? "bg-[#D419580D] border-[1px] border-[#D41958]"
+                              ? "border-[1px] border-[#D41958]"
                               : "bg-white border-[1px] border-[#E4E4E7]"
-                          } p-2`}
+                          }`}
                         >
-                          <p className="text-[#3F3F46] text-base font-semibold">
-                            City :-{item?.city}
-                          </p>
-                          <div className="my-[12px]">
-                            <span className="text-secondary text-base">
-                              {item?.address1}
-                            </span>
+                          {/* Edit Icon Row with Address Type */}
+            <div className="pb-3 border-b border-gray-200 flex justify-between items-center">
+              <span className="text-[#18181B] text-20px   font-semibold capitalize">
+                {item?.address_type || "Home"}
+              </span>
+              <div
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevents parent div click
+                  setEditOpen(true);
+                  setSingalAddress(item);
+                }}
+                className="cursor-pointer"
+              >
+                              <img src={EditImgActive.src} alt="edit icon" />
+                            </div>
                           </div>
-                          <div className="flex justify-between gap-[12px]">
-                            <span className="text-secondary text-base">
-                              Post Code :-{item?.postCode}
-                            </span>
+
+                          {/* City */}
+                          <div className="pb-3 border-b border-gray-200 flex justify-between text-[#3F3F46] text-base">
+                            <span className="font-semibold">City</span>
+                            <span className="text-[#18181B]">{item?.city}</span>
                           </div>
-                          <div
-                            onClick={() => {
-                              setEditOpen(true);
-                              setSingalAddress(item);
-                            }}
-                            className="cursor-pointer absolute top-2 right-3"
-                          >
-                            <img src={EditImgActive.src} alt="edit icon" />
+
+                          {/* Address */}
+                          <div className="py-3 border-b border-gray-200 flex justify-between text-[#3F3F46] text-base">
+                            <span className="font-semibold">Address</span>
+                            <span className="text-[#18181B]">{item?.address1}</span>
+                          </div>
+
+                          {/* Post Code */}
+                          <div className="py-3 flex justify-between text-[#3F3F46] text-base">
+                            <span className="font-semibold">Post Code</span>
+                            <span className="text-[#18181B]">{item?.postCode}</span>
                           </div>
                         </div>
-                        
                       </div>
                     ))}
                   </div>
-                 
+
                   <div className="mt-[40px] flex justify-center gap-3">
                     <button
                       className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"

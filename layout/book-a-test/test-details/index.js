@@ -7,15 +7,15 @@ import {
   MdOutlineKeyboardArrowDown,
 } from "react-icons/md";
 // why choose
-import ImageTwo from "assets/images/Finalimg/Why Choose Us/10M+ Happy Patients.webp";
-import ImageThree from "assets/images/Finalimg/Why Choose Us/30 Years of Excellence in Diagnostic Health Care.webp";
-import ImageFive from "assets/images/Finalimg/Why Choose Us/Affordable.webp";
-import ImageSix from "assets/images/Finalimg/Why Choose Us/Fast & Accurate Results.webp";
-import ImageSeven from "assets/images/Finalimg/Why Choose Us/Free Home Sample Collection.webp";
-import ImageNine from "assets/images/Finalimg/Why Choose Us/Large Menu of Tests Available.webp";
-import ImageEight from "assets/images/Finalimg/Why Choose Us/NABL & NABH Certified Centre.webp";
-import ImageOne from "assets/images/Finalimg/Why Choose Us/Team of Experienced Doctor & Staffs.webp";
-import ImageFour from "assets/images/Finalimg/Why Choose Us/World Class Technology.webp";
+import img11 from "assets/images/whychooseus/1.png";
+import img22 from "assets/images/whychooseus/2-png.png";
+import img33 from "assets/images/whychooseus/icon-3.png";
+import img44 from "assets/images/whychooseus/3-png.png";
+import img55 from "assets/images/whychooseus/4-png.png";
+import img66 from "assets/images/whychooseus/5-png.png";
+import img77 from "assets/images/whychooseus/6-png.png";
+import img88 from "assets/images/whychooseus/7-png.png";
+import Image from "next/image";
 import WhyChoose from "components/WhyChoose";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -173,7 +173,7 @@ const TestDetailsLayout = ({ byidData }) => {
                 </h1>
                 <div className="flex items-center gap-5 mt-[6px]">
                   <div className=" space-x-2 ">
-                    <span className="text-orange font-bold text-xl">
+                    <span className="text-[#D41958] font-bold text-xl">
                       ₹{byidData?.data[0]?.offer_price || "NaN"}
                     </span>
                     {byidData?.data[0]?.offer_price <
@@ -541,7 +541,7 @@ const TestDetailsLayout = ({ byidData }) => {
           <div className="container py-[35px] md:py-[70px]">
             <div>
               <div className="col-span-1 overflow-hidden rounded-xl border-[1px] border-[#E4E4E7]">
-                <div className="p-[18px] bg-[#FEF6E6] border-b-[1px] border-[#E4E4E7]">
+                <div className="p-[18px] bg-[#D419581A] border-b-[1px] border-[#E4E4E7]">
                   <p className="text-lg font-semibold">Related tests</p>
                 </div>
                 <div className="p-[16px] md:p-[24px] grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  gap-3">
@@ -570,41 +570,53 @@ const TestDetailsLayout = ({ byidData }) => {
 };
 
 const whyChooseData = [
-  {
-    title: `Team of Experienced  Doctors & Staffs`,
-    image: ImageOne,
+ {
+    id: 1,
+    title: "NABL Accredited Labs",
+    
+    icon: <Image src={img33} alt="NABL Accredited Icon" />,
   },
   {
-    title: "10M+ Happy Patients",
-    image: ImageTwo,
+    id: 2,
+    title: "Trusted by Leading Doctors & Hospitals",
+    
+    icon: <Image src={img22} alt="doctors Icon" />,
   },
   {
-    title: "31 Year of Excellence in <br /> Diagnostic Healthcare",
-    image: ImageThree,
+    id: 3,
+    title: "Shortest Reporting Time",
+  
+    icon: <Image src={img55} alt="time Icon" />,
   },
   {
-    title: "World Class Technology",
-    image: ImageFour,
+    id: 4,
+    title: "Accurate Test Reports",
+   
+    icon: <Image src={img44} alt="report Icon" />,
   },
   {
-    title: "Fast & Accurate Results",
-    image: ImageSix,
+    id: 5,
+    title: "Satisfied Customers",
+    
+    icon: <Image src={img11} alt="customer Icon" />,
   },
   {
-    title: "Affordable",
-    image: ImageFive,
+    id: 6,
+    title: "100+ Labs",
+    
+    icon: <Image src={img66} alt="NABL Accredited Icon" />,
   },
   {
-    title: "Free Home Sample <br /> Collection",
-    image: ImageSeven,
+    id: 7,
+    title: "3000+ Collection Centres",
+    
+    icon: <Image src={img77} alt="collection Icon" />,
   },
   {
-    title: "NABL & NABH Certified <br /> Centre",
-    image: ImageEight,
-  },
-  {
-    title: "Large Menu of Tests <br /> Available ",
-    image: ImageNine,
+    id: 8,
+    title: "Scientific Orientation",
+    
+    icon: <Image src={img88} alt="scientific Icon" />,
   },
 ];
 

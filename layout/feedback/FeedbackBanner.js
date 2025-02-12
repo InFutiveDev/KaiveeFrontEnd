@@ -43,26 +43,30 @@ const FeedbackBanner = () => {
       <div className="2xl:pl-[10rem] xl:pl-[4rem] lg:pl-[1rem] pl-[16px]">
         <BreadCrumb active="Feedback" breadcrumblist={breadcrumblist} />
       </div>
-      <div className="relative w-full  items-center hidden sm:flex">
+      <div className="relative w-full items-center hidden sm:flex">
         <Image
           quality={100}
           width={2000}
           height={400}
-          layout="fixed"
-          alt={"feedback"}
-          className=" object-fill md:mb-0 mb-3  h-auto w-full object-center"
+          priority={true}
+          loading="eager"
+          placeholder="blur"
+          alt="feedback"
+          className="object-cover md:mb-0 mb-3 h-auto w-full"
           src={BannerImage}
         />
       </div>
-      <div className="relative w-full  items-center flex  sm:hidden">
+      <div className="relative w-full items-center flex sm:hidden">
         <Image
           quality={100}
           width={1000}
           height={400}
-          layout="fixed"
-          alt={"feedback"}
-          className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src={MobileImage}
+          priority={true}
+          loading="eager"
+          placeholder="blur"
+          alt="feedback"
+          className="object-cover md:mb-0 mb-3 h-auto w-full"
+          src={BannerImage}
         />
       </div>
     </div>

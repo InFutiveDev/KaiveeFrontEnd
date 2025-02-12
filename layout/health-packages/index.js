@@ -72,16 +72,16 @@ const HealthPackagesLayout = ({ healthPackages }) => {
         <div className="container  py-[35px] md:py-[70px]">
           <ul className="md:ml-[10px] flex flex-col gap-2 mt-[10px]">
             <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              Stay ahead of health issues with <span className="font-bold">Kaivee Healthcare’s preventive health packages</span> designed to detect <span className="font-bold">potential risks early</span> and keep you in control of your well-being.
+              Stay ahead of health issues with Kaivee Healthcare’s preventive health packages designed to detect potential risks early and keep you in control of your well-being.
             </p>
 
           </ul>
-          <h2 className="text-[16px] lg:text-[24px] md:text-[18x]  font-semibold font-source-pro">
+          <h2 className="text-[16px] lg:text-[24px] md:text-[18x]  font-semibold font-source-pro mt-2" >
             Preventive Health Packages
           </h2>
           <ul className="md:ml-[10px] flex flex-col gap-2 mt-[10px]">
             <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
-              Health isn’t just about <span className="font-bold">treating illnesses</span>—it’s about <span className="font-bold">preventing them</span>. Our <span className="font-bold">preventive health packages</span> are tailored to suit different <span className="font-bold">age groups, lifestyles, and medical needs</span>, helping you catch health issues before they become serious.
+              Health isn’t just about treating illnesses—it’s about preventing them. Our preventive health packages are tailored to suit different age groups, lifestyles, and medical needs, helping you catch health issues before they become serious.
             </p>
 
             <li className="text-secondary text-[18px] lg:text-[16px] md:text-xl">
@@ -104,8 +104,8 @@ const HealthPackagesLayout = ({ healthPackages }) => {
                 <span className="font-bold">Women’s Health Packages:</span> Specialized tests for hormonal balance, reproductive health, and more.
               </li>
             </ul>
-            <li className="text-secondary text-[18px] lg:text-[16px] md:text-xl pb-[10px]">
-              Early detection can save lives—<strong>invest in your health today!</strong>
+            <li className=" text-[18px] text-[#D41958] lg:text-[18px] md:text-xl pb-[10px]">
+              Early detection can save lives—invest in your health today!
             </li>
           </ul>
           <h2 className="text-[16px] lg:text-[24px] md:text-[18x]  font-semibold font-source-pro mb-2">
@@ -113,10 +113,10 @@ const HealthPackagesLayout = ({ healthPackages }) => {
           </h2>
 
           <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
-            <span className="font-bold">Quality healthcare</span> shouldn’t come with a hefty price tag. At
-            <span className="font-bold"> Kaivee Healthcare</span>, we offer the <span className="font-bold">best health checkup packages</span>
-            at <span className="font-bold">affordable rates</span> without compromising on <span className="font-bold">accuracy</span> or
-            <span className="font-bold"> service quality</span>.
+            Quality healthcare shouldn’t come with a hefty price tag. At
+             Kaivee Healthcare, we offer the best health checkup packages
+            at affordable rates without compromising on accuracy or
+            service quality.
           </p>
 
           <ul className="md:ml-[10px] flex flex-col gap-2 mt-[10px]">
@@ -146,7 +146,7 @@ const HealthPackagesLayout = ({ healthPackages }) => {
             </li>
           </ul>
 
-          <p className="text-secondary text-[16px] lg:text-[16px] md:text-xl mt-2">
+          <p className="text-[#D41958] text-[18px] lg:text-[18px] md:text-xl mt-2">
             Stay healthy, stay informed—without breaking the bank.
           </p>
         </div>
@@ -160,7 +160,7 @@ const HealthPackagesLayout = ({ healthPackages }) => {
             Prioritize Your Health Today!
           </p>
           <p className="text-white text-center font-normal pb-3">
-            ✅ Book Your Health Package Now | 🏠 Home Sample Collection Available | 📋 Get Reports Online, Fast & Hassle-Free
+             Book Your Health Package Now | Home Sample Collection Available | Get Reports Online, Fast & Hassle-Free
           </p>
           <div className="flex gap-2">
             {/* <button className="flex gap-x-1 md:gap-x-2 justify-center items-center text-orange bg-white rounded py-[10px] lg:px-[24px] px-[10px] lg:text-[18px] text-[14px]">
@@ -168,7 +168,7 @@ const HealthPackagesLayout = ({ healthPackages }) => {
                   Call Now
                 </button> */}
             <Link
-              href="tel:011-2000-2000"
+              href="tel:8800133928"
               className="flex gap-x-1 md:gap-x-2 justify-center items-center text-blacke font-medium bg-[#D41958] rounded py-[10px] lg:px-[24px] px-[10px] lg:text-[18px] text-[14px]"
             >
               <CallBlackImg />

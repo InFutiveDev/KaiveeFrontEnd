@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import CityHealth from "assets/images/health-packages/city advanced health package website (1350x1050) 1.png";
+import CityHealth from "assets/images/health-packages/Home-collection.jpg";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { UPDATE_CART_QAUNTITY } from "redux/actions/cart";

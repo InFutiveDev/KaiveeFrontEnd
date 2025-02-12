@@ -101,7 +101,7 @@ const CartList = () => {
           {cartKeys?.length > 0 ? (
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 my-3">
               <div className="border cart-div ">
-                <div className="bg-[#fff4e0] border-b w-full p-2 rounded-t-lg flex justify-between items-center">
+                <div className="bg-[#D419580D] border-b w-full p-2 rounded-t-lg flex justify-between items-center">
                   <div className="cart-text-wrapper-3">Test Details </div>
                   <Link href="/book-a-test" className="AddMore">
                     <svg
