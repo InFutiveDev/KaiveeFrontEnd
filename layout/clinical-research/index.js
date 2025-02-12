@@ -152,8 +152,8 @@ const ClinicalResearchLayout = () => {
   }, []);
   return (
     <>
-      <section className="sliders banner_slider_wrap_clinical cstm-clinicresearch-bg">
-        <div className="web-view relative flexbox container">
+      <section>
+        <div>
           <ClinicalResearchBanner />
         </div>
       </section>

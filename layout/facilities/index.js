@@ -6,9 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { GET_TEST_BY_CATEGORY } from "redux/actions/test";
-import book1 from "assets/images/Finalimg/Book/Book a Health Package.webp";
-import book2 from "assets/images/Finalimg/Book/Book an Appoinment.webp";
-import book3 from "assets/images/Finalimg/Book/Book a test.webp";
+import book1 from "assets/images/home-icon/4 icon/package.png";
+import book2 from "assets/images//home-icon/4 icon/appointment.png";
+import book3 from "assets/images/home-icon/4 icon/book-a-test.png";
+
+
 import ReactPaginate from "react-paginate";
 import { ArrowLeft, ArrowRight } from "react-feather";
 import dynamic from "next/dynamic";
@@ -201,7 +203,7 @@ const FacilitiesCategoryLayout = ({ id, category }) => {
                   onClick={() => router.push(`/health-packages`)}
                 >
                   <div className="flex gap-3 xl:items-start lg:items-center items-start">
-                    <div className="rounded-lg bg-[#FCF6DD] p-[5px] md:p-[10px] md:w-72 w-[9rem]">
+                    <div className="rounded-lg bg-[#D419580D] p-[5px] md:p-[10px] md:w-72 w-[9rem]">
                       <img src={book1.src} alt="" className="w-72" />
                     </div>
                     <div>
@@ -220,7 +222,7 @@ const FacilitiesCategoryLayout = ({ id, category }) => {
                   onClick={() => router.push(`/dashboard/book-an-appointment`)}
                 >
                   <div className="flex gap-3 xl:items-start lg:items-center items-start">
-                    <div className="rounded-lg bg-[#FCF6DD] p-[5px] md:p-[10px] md:w-72 w-[9rem]">
+                    <div className="rounded-lg bg-[#D419580D] p-[5px] md:p-[10px] md:w-72 w-[9rem]">
                       <img src={book2.src} alt="" className="w-72" />
                     </div>
                     <div>
@@ -239,7 +241,7 @@ const FacilitiesCategoryLayout = ({ id, category }) => {
                   onClick={() => router.push(`/book-a-test`)}
                 >
                   <div className="flex gap-3 xl:items-start lg:items-center items-start">
-                    <div className="rounded-lg bg-[#FCF6DD] p-[5px] md:p-[10px] w-[7rem] md:w-56 ">
+                    <div className="rounded-lg bg-[#D419580D] p-[5px] md:p-[10px] w-[7rem] md:w-56 ">
                       <img src={book3.src} alt="" className="w-56" />
                     </div>
                     <div>

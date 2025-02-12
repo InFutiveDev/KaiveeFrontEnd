@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import BreadCrumb from "components/breadcrumb";
-import HealthImage from "assets/images/health-packages/city advanced health package website (1350x1050) 1.png";
+import CityHealth from "assets/images/health-packages/city advanced health package website (1350x1050) 1.png";
 import { ShareSVG } from "assets/images/SvgImage";
 import { HeartSVG } from "assets/images/SvgImage";
 import {
@@ -14,14 +14,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { GET_TEST_BY_ID } from "redux/actions/test";
 import SpinnerComponent from "components/spinner";
 import { UPDATE_CART_QAUNTITY } from "redux/actions/cart";
-import img1 from "assets/images/whychooseus/1.png";
-import img2 from "assets/images/whychooseus/2-png.png";
-import img3 from "assets/images/whychooseus/icon-3.png";
-import img4 from "assets/images/whychooseus/3-png.png";
-import img5 from "assets/images/whychooseus/4-png.png";
-import img6 from "assets/images/whychooseus/5-png.png";
-import img7 from "assets/images/whychooseus/6-png.png";
-import img8 from "assets/images/whychooseus/7-png.png";
+import img11 from "assets/images/whychooseus/1.png";
+import img22 from "assets/images/whychooseus/2-png.png";
+import img33 from "assets/images/whychooseus/icon-3.png";
+import img44 from "assets/images/whychooseus/3-png.png";
+import img55 from "assets/images/whychooseus/4-png.png";
+import img66 from "assets/images/whychooseus/5-png.png";
+import img77 from "assets/images/whychooseus/6-png.png";
+import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
 import { GET_ALL_LAB_DETAIL } from "redux/actions/lab";
 import Faqs from "components/faqs";
@@ -191,7 +191,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                 <div className="grid lg:grid-cols-3 md:grid-cols-1 gap-x-4 gap-y-1">
                   <div className="relative border h-auto md:h-[250px] w-full rounded-md overflow-hidden">
                     <img
-                      src={testInfo?.data[0]?.package_image || HealthImage.src}
+                      src={testInfo?.data[0]?.package_image || CityHealth.src}
                       width={"100%"}
                       height={"100%"}
                       className=" object-cover sm:h-44 h-auto "
@@ -603,49 +603,49 @@ const data = [
     id: 1,
     title: "NABL Accredited Labs",
     
-    icon: <Image src={img3} alt="NABL Accredited Icon" />,
+    icon: <Image src={img33} alt="NABL Accredited Icon" />,
   },
   {
     id: 2,
     title: "Trusted by Leading Doctors & Hospitals",
     
-    icon: <Image src={img2} alt="doctors Icon" />,
+    icon: <Image src={img22} alt="doctors Icon" />,
   },
   {
     id: 3,
     title: "Shortest Reporting Time",
   
-    icon: <Image src={img5} alt="time Icon" />,
+    icon: <Image src={img55} alt="time Icon" />,
   },
   {
     id: 4,
     title: "Accurate Test Reports",
    
-    icon: <Image src={img4} alt="report Icon" />,
+    icon: <Image src={img44} alt="report Icon" />,
   },
   {
     id: 5,
     title: "Satisfied Customers",
     
-    icon: <Image src={img1} alt="customer Icon" />,
+    icon: <Image src={img11} alt="customer Icon" />,
   },
   {
     id: 6,
     title: "100+ Labs",
     
-    icon: <Image src={img6} alt="NABL Accredited Icon" />,
+    icon: <Image src={img66} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
     title: "3000+ Collection Centres",
     
-    icon: <Image src={img7} alt="collection Icon" />,
+    icon: <Image src={img77} alt="collection Icon" />,
   },
   {
     id: 8,
     title: "Scientific Orientation",
     
-    icon: <Image src={img8} alt="scientific Icon" />,
+    icon: <Image src={img88} alt="scientific Icon" />,
   },
 ];
 export default HealthPackagesDetailLayout;

@@ -40,15 +40,10 @@ const CorporateHealthLayout = () => {
               </h1>
               <div className="flex flex-col gap-y-2">
                 <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
-                  At <span className="font-bold">Kaivee Healthcare</span>, we understand the importance of a <span className="font-bold">healthy workforce</span> in driving business success. Our <span className="font-bold">Corporate Health Enquiry</span> services are designed to provide <span className="font-bold">comprehensive health solutions</span> tailored to your organization’s needs. Whether you are looking to offer <span className="font-bold">employee wellness programs</span>, <span className="font-bold">preventive health check-ups</span>, or <span className="font-bold">customized diagnostic services</span>, we are here to partner with you to ensure the well-being of your employees.
+                  At Kaivee Healthcare, we understand the importance of a healthy workforce in driving business success. Our Corporate Health Enquiry services are designed to provide comprehensive health solutions tailored to your organization's needs. Whether you are looking to offer employee wellness programs, preventive health check-ups, or customized diagnostic services, we are here to partner with you to ensure the well-being of your employees.
                 </p>
                 <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
-                  By collaborating with us, you’ll ensure that your employees have access to
-                  <span className="font-bold"> high-quality diagnostics</span> and
-                  <span className="font-bold"> preventive healthcare</span>, enabling them to stay
-                  <span className="font-bold"> healthier</span>,
-                  <span className="font-bold"> happier</span>, and
-                  <span className="font-bold"> more productive</span>.
+                  By collaborating with us, you'll ensure that your employees have access to high-quality diagnostics and preventive healthcare, enabling them to stay healthier, happier, and more productive.
                 </p>
 
 
@@ -63,13 +58,13 @@ const CorporateHealthLayout = () => {
                   <b>2.  Boost Productivity & Engagement:</b> A healthier workforce is a more productive one. Offering healthcare benefits shows your employees that you care, leading to higher <strong>job satisfaction and increased engagement</strong> .
                 </p>
                 <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl">
-                  <b> 3.  Cost-Effective Healthcare Solutions:</b> Offering health services through corporate tie-ups is<strong> more affordable </strong> than individual health plans. It’s an <strong> investment in long-term productivity </strong>and reduced absenteeism.
+                  <b> 3.  Cost-Effective Healthcare Solutions:</b> Offering health services through corporate tie-ups is<strong> more affordable </strong> than individual health plans. It's an <strong> investment in long-term productivity </strong>and reduced absenteeism.
                 </p>
                 <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
-                  <b>4.  Comprehensive Health Screenings:</b> We offer a variety of<strong> health packages </strong>designed specifically for organizations. From basic screenings to advanced tests, our packages are customizable to fit your company’s needs.
+                  <b>4.  Comprehensive Health Screenings:</b> We offer a variety of<strong> health packages </strong>designed specifically for organizations. From basic screenings to advanced tests, our packages are customizable to fit your company's needs.
                 </p>
                 <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl">
-                  <b>5.  Convenient Services:</b> Our services are designed with your employees’ convenience in mind, including<strong> on-site check-ups, home sample collections, and easy access to reports</strong>.
+                  <b>5.  Convenient Services:</b> Our services are designed with your employees' convenience in mind, including<strong> on-site check-ups, home sample collections, and easy access to reports</strong>.
 
                 </p>
                 <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
@@ -77,7 +72,7 @@ const CorporateHealthLayout = () => {
                 </p>
 
                 <p>
-                  By integrating <span className="font-bold">Kaivee Healthcare</span> into your organization’s health
+                  By integrating <span className="font-bold">Kaivee Healthcare</span> into your organization's health
                   initiatives, you are investing in <span className="font-bold">preventive care</span>, <span className="font-bold">wellness</span>,
                   and the overall success of your team.
                 </p>

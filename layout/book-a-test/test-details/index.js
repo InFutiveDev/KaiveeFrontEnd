@@ -165,7 +165,7 @@ const TestDetailsLayout = ({ byidData }) => {
             active={byidData?.data[0]?.specialityName}
             breadcrumblist={breadcrumblist}
           />
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="col-span-2 ">
               <div className="shadow-md bg-[#FFFFFF] border-[1px] rounded-xl border-[#E4E4E7] p-[16px] md:p-[24px]">
                 <h1 className="text-black  font-semibold">
@@ -199,114 +199,7 @@ const TestDetailsLayout = ({ byidData }) => {
                   </div>
                 </div>
               </div>
-              <div className="block mt-[10px] sm:hidden mb-2 shadow-md rounded-xl bg-white border-[1px] border-[#E4E4E7] p-[16px] md:p-[24px]">
-                <p className="text-black text-[20px] font-semibold">
-                  Nearest branch
-                </p>
-                <div className="form-group">
-                  <div className="mt-[6px]">
-                    <select
-                      value={selectedBranch}
-                      onChange={(e) => setSelectedBranch(e.target.value)}
-                      className="border rounded-lg p-2 w-full focus:outline-none text-[14px] font-poppins font-normal "
-                      placeholder="Select City"
-                    >
-                      <option value={""}>Select Branch</option>
-                      {lab?.data?.data?.LabData.map((item, index) => (
-                        <option key={index} value={JSON.stringify(item)}>
-                          {item?.branch_Name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                <p className="text-[14px]">
-                  {selectedBranch
-                    ? JSON.parse(selectedBranch)?.branch_address
-                    : ""}
-                </p>
-                <p className="text-blue-500 text-[14px] mb-[15px]">
-                  {byidData?.data[0]?.reporting}
-                </p>
-                <div className="flex gap-3 my-[12px]">
-                  <ApproveSVG />
-                  <span className="text-black text-capitalize text-sm ">
-                    {byidData?.data[0]?.collection_type.includes("home")
-                      ? "Home Collection / Centre Visit"
-                      : "Centre Visit"}
-                  </span>
-                </div>
-
-                <div className="flex  items-center gap-5 mt-[6px]">
-                  <div className=" space-x-2 ">
-                    <span className="text-orange font-bold text-xl">
-                      ₹{byidData?.data[0]?.offer_price || "NaN"}
-                    </span>
-                    {byidData?.data[0]?.offer_price <
-                      byidData?.data[0]?.mrp && (
-                        <span className="text-gray-400 font-[300] text-[14px]">
-                          <del>₹{byidData?.data[0]?.mrp}</del>
-                        </span>
-                      )}
-
-                    {byidData?.data[0]?.offer_price < byidData?.data[0]?.mrp ? (
-                      <span className="text-[#005E54] text-[14px] font-semibold">
-                        {(
-                          ((byidData?.data[0]?.mrp -
-                            byidData?.data[0]?.offer_price) /
-                            byidData?.data[0]?.mrp) *
-                          100
-                        ).toFixed()}
-                        % off
-                      </span>
-                    ) : (
-                      <span />
-                    )}
-                  </div>
-                </div>
-                {/* </div> */}
-                <div className=" flex gap-x-2 my-[6px]">
-                  {cart?.hasOwnProperty(byidData?.data[0]?._id || "") ? (
-                    <button
-                      onClick={handleRemoveCart}
-                      className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
-                    >
-                      Remove item
-                    </button>
-                  ) : (
-                    <button
-                      onClick={handleAddToCart}
-                      className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
-                    >
-                      Add To Cart
-                    </button>
-                  )}
-                  {open && (
-                    <CheckOutLogin
-                      open={open}
-                      setOpen={setOpen}
-                      redirectUrl={"/check-out"}
-                    />
-                  )}
-                  <button
-                    onClick={() => {
-                      checkOutRedirect();
-                    }}
-                    className="w-full border-[1px] border-orange text-orange bg-white rounded px-[12px] py-[8px] text-xs font-semibold"
-                  >
-                    Check out
-                  </button>
-                </div>
-                <div className="mt-[20px]">
-                  <Link
-                    href="tel:011-2000-2000"
-                    className=" flex gap-2 justify-center items-center text-orange bg-[#FEF6E6] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
-                  >
-                    <CallYellowImg />
-                    Call to Book
-                  </Link>
-                </div>
-              </div>
+              
               <div className="mt-[10px] md:mt-[30px]">
                 <table className="shadow-md rounded-xl overflow-hidden border-[2x] !border-[#E8E8EB] w-full">
                   <thead>
@@ -421,8 +314,16 @@ const TestDetailsLayout = ({ byidData }) => {
                 )}
               </div>
             </div>
-            <div className="col-span-1 h-min  sticky lg:top-[197px] xl:top-[161px]">
-              <div className="hidden sm:block mb-2 shadow-md rounded-xl bg-white border-[1px] border-[#E4E4E7] p-[16px] md:p-[24px]">
+            
+          </div>
+        </div>
+
+        <div className="container">
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="col-span-2 ">
+              
+              <div className="block mt-[10px] sm:hidden mb-2 shadow-md rounded-xl bg-white border-[1px] border-[#E4E4E7] p-[16px] md:p-[24px]">
                 <p className="text-black text-[20px] font-semibold">
                   Nearest branch
                 </p>
@@ -530,10 +431,122 @@ const TestDetailsLayout = ({ byidData }) => {
                   </Link>
                 </div>
               </div>
-              <div className="">
+              
+            </div>
+            <div className="col-span-1 h-min  sticky lg:top-[197px] xl:top-[161px]">
+              <div className="hidden sm:block mb-2 shadow-md rounded-xl bg-white border-[1px] border-[#E4E4E7] p-[16px] md:p-[24px]">
+                <p className="text-black text-[20px] font-semibold">
+                  Nearest branch 
+                </p>
+                <div className="form-group">
+                  <div className="mt-[6px]">
+                    <select
+                      value={selectedBranch}
+                      onChange={(e) => setSelectedBranch(e.target.value)}
+                      className="border rounded-lg p-2 w-full focus:outline-none text-[14px] font-poppins font-normal "
+                      placeholder="Select City"
+                    >
+                      <option value={""}>Select Branch</option>
+                      {lab?.data?.data?.LabData.map((item, index) => (
+                        <option key={index} value={JSON.stringify(item)}>
+                          {item?.branch_Name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <p className="text-[14px]">
+                  {selectedBranch
+                    ? JSON.parse(selectedBranch)?.branch_address
+                    : ""}
+                </p>
+                <p className="text-blue-500 text-[14px] mb-[15px]">
+                  {byidData?.data[0]?.reporting}
+                </p>
+                <div className="flex gap-3 my-[12px]">
+                  <ApproveSVG />
+                  <span className="text-black text-capitalize text-sm ">
+                    {byidData?.data[0]?.collection_type.includes("home")
+                      ? "Home Collection / Centre Visit"
+                      : "Centre Visit"}
+                  </span>
+                </div>
+
+                <div className="flex  items-center gap-5 mt-[6px]">
+                  <div className=" space-x-2 ">
+                    <span className="text-[#D41958] font-bold text-xl">
+                      ₹{byidData?.data[0]?.offer_price || "NaN"}
+                    </span>
+                    {byidData?.data[0]?.offer_price <
+                      byidData?.data[0]?.mrp && (
+                        <span className="text-gray-400 font-[300] text-[14px]">
+                          <del>₹{byidData?.data[0]?.mrp}</del>
+                        </span>
+                      )}
+
+                    {byidData?.data[0]?.offer_price < byidData?.data[0]?.mrp ? (
+                      <span className="text-[#005E54] text-[14px] font-semibold">
+                        {(
+                          ((byidData?.data[0]?.mrp -
+                            byidData?.data[0]?.offer_price) /
+                            byidData?.data[0]?.mrp) *
+                          100
+                        ).toFixed()}
+                        % off
+                      </span>
+                    ) : (
+                      <span />
+                    )}
+                  </div>
+                </div>
+                {/* </div> */}
+                <div className=" flex gap-x-2 my-[6px]">
+                  {cart?.hasOwnProperty(byidData?.data[0]?._id || "") ? (
+                    <button
+                      onClick={handleRemoveCart}
+                      className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
+                    >
+                      Remove item
+                    </button>
+                  ) : (
+                    <button
+                      onClick={handleAddToCart}
+                      className="w-full bg-[#D41958] text-white rounded md:px-[12px] md:py-[8px] px-[8px] py-[6px] text-xs font-semibold"
+                    >
+                      Add To Cart
+                    </button>
+                  )}
+                  {open && (
+                    <CheckOutLogin
+                      open={open}
+                      setOpen={setOpen}
+                      redirectUrl={"/check-out"}
+                    />
+                  )}
+                  <button
+                    onClick={() => {
+                      checkOutRedirect();
+                    }}
+                    className="w-full border-[1px] border-[#D41958] text-[#D41958] bg-white rounded px-[12px] py-[8px] text-xs font-semibold"
+                  >
+                    Check out
+                  </button>
+                </div>
+                <div className="mt-[20px]">
+                  <Link
+                    href="tel:011-2000-2000"
+                    className=" flex gap-2 justify-center items-center text-[#D41958] bg-[#D419580D] rounded-2xl w-full py-[8px] text-[16px] md:text-[20px]"
+                  >
+                    <CallYellowImg />
+                    Call to Book
+                  </Link>
+                </div>
+              </div>
+              
+            </div>
+            <div className="">
                 <InquiryForm />
               </div>
-            </div>
           </div>
         </div>
 

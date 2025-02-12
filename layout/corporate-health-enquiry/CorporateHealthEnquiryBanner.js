@@ -64,37 +64,6 @@ const CorporateHealthEnquiryBanner = () => {
     </div>
   );
 };
-// <div className="container" style={{ width: "100%" }}>
-//   <Slider {...settings} className="carousel desktop-banner about">
-//     <div className="home-slider-swiper">
-//       <div className="grid gap-[50px] justify-between items-center grid-cols-1 sm:grid-cols-1 lg:grid-cols-2  xl:grid-cols-2 md:grid-cols-1 ">
-//         <div>
-//           <BreadCrumb
-//             active="Corporate Health Enquiry"
-//             breadcrumblist={breadcrumblist}
-//           />
-//           <p className="lg:text-[36px] text-lg font-bold font-source-pro ">
-//             {" "}
-//             Secure Youe Family’s Health With Corporate Health Insurance
-//           </p>
 
-//           <p className="text-secondary lg:text-[18px] text-[14px] mt-[24px]">
-//             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//             eiusmod tempor incididunt ut labore Lorem ipsum dolor sit
-//             amet,Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-//             sed do eiusmod tempor.
-//           </p>
-//           <button className="mt-[36px] bg-orange text-white rounded px-[30px] py-[12px]">
-//             Grt Quote
-//           </button>
-//         </div>
-//         <div>
-//           <img src={CorporateHealthBannerImg.src} className="!w-full" />
-//         </div>
-//       </div>
-//     </div>
-
-//   </Slider>
-// </div>
 
 export default CorporateHealthEnquiryBanner;
