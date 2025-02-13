@@ -138,7 +138,7 @@ const HomeLayout = () => {
                   {features.map((feature, index) => (
                     <div
                       key={index}
-                      className="flex justify-start items-center space-x-4 font-[Poppins] text-sm md:text-lg transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-[#8DBD4D0D] p-2 rounded-lg"
+                      className="flex justify-start items-center space-x-2 font-[Poppins] text-sm md:text-lg transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-[#8DBD4D0D] p-2 rounded-lg"
                     >
                       <Image
                         src={feature.icon}

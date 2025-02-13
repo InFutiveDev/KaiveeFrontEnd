@@ -2,7 +2,7 @@ import Aboutbanner from "./aboutBanner";
 import AboutFireImage from "assets/images/about/fireworks 3.svg";
 import AboutUs from "./aboutus";
 
-import OurVersion from "assets/images/about/vision.png";
+import OurVersion from "assets/images/about/vision.jpg";
 import OurMission from "assets/images/about/mission.png";
 import { AboutPattern } from "assets/images/SvgImage";
 import img1 from "assets/images/Finalimg/ourValue/Compassion.webp";

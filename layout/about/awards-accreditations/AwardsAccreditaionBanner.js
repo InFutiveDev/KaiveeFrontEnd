@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import AwardsImg from "assets/images/about/awards/healthcare-award 1.png";
+// import AwardsImg from "assets/images/about/awards/healthcare-award 1.png";
 import BreadCrumb from "components/breadcrumb";
 import { PrevIcons } from "assets/images/SvgImage";
 import { NextIcons } from "assets/images/SvgImage";

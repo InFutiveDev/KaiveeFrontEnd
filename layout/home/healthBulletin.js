@@ -2,6 +2,7 @@ import React, { memo, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CalendarIcons from "assets/images/home/Calendar.png";
+import CityHealth from "assets/images/health-packages/pixelcut-export.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { GET_ALL_BLOGS } from "redux/actions/homepage";
 import moment from "moment";
@@ -67,9 +68,9 @@ const HealthBulletin = () => {
     <div className="relative px-2">
       <div className="flex flex-wrap justify-between items-center gap-2 lg:pb-0 pb-3">
         <p className=" lg:text-[32px] text-lg font-source-pro">
-          Blog – Health Bulletin & Articles
+        Health Bulletin & Articles
         </p>
-        <a target="_blank" href="https://blog.cityxrayclinic.com/">
+        <a target="_blank" href="/">
           <div className="bg-[#D41958] text-white text-[14px] md:text-[18px] px-2 rounded-md">
             View All
           </div>
@@ -93,11 +94,12 @@ const HealthBulletin = () => {
                 <div className="rounded-xl shadow bg-white">
                   <a
                     target="_blank"
-                    href={`https://blog.cityxrayclinic.com/${item?.post_url}`}
+                    //href={`https://blog.cityxrayclinic.com/${item?.post_url}`}
+                   
                     className="rounded-lg"
                   >
                     <img
-                      src={item?.post_img}
+                      src={item?.post_img||CityHealth}
                       alt="block thumbnial"
                       className="w-full rounded-t-xl h-full max-h-44  object-cover "
                     />
@@ -105,7 +107,7 @@ const HealthBulletin = () => {
 
                   <div className="px-2 py-[12px] flex flex-col gap-y-2">
                     <a
-                      href={`https://blog.cityxrayclinic.com/${item?.post_url}`}
+                     // href={`https://blog.cityxrayclinic.com/${item?.post_url}`}
                       className="rounded-lg"
                       target="_blank"
                     >
