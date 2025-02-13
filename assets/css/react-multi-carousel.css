@@ -19,6 +19,14 @@
   width: 100%; 
   height: auto;
 }
+@media (max-width: 768px) {
+  .gap .react-multi-carousel-track li {
+    margin: 0px; /* Adjust margin for mobile */
+    width: 100%; 
+    height: auto;
+  }
+}
+
 
 /* styles.css */
 .carousel-container {

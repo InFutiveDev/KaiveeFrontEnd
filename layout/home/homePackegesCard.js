@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import CityHealth from "assets/images/health-packages/Lab-Test-Resized (1).jpg";
+import CityHealth from "assets/images/health-packages/pixelcut-export.jpg";
 import { UPDATE_CART_QAUNTITY } from "redux/actions/cart";
 import { useDispatch } from "react-redux";
 import { StarSVG } from "assets/images/SvgImage";

@@ -62,11 +62,11 @@ const Testimonial = () => {
 
       {/* First Carousel */}
       <div
-        className="gap mb-4"
+        className="gap mb-2"
         style={{
           transform: "translateX(40px)",
           transition: "transform 0.3s ease-in-out",
-          padding: "0 32px",
+          
         }}
       >
         <Carousel
@@ -116,11 +116,11 @@ const Testimonial = () => {
 
       {/* Second Carousel */}
       <div
-        className="gap mt-6"
+        className="gap mt-2"
         style={{
           transform: "translateX(-40px)",
           transition: "transform 0.3s ease-in-out",
-          padding: "0 32px",
+          
         }}
       >
         <Carousel

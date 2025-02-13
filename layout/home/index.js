@@ -2,7 +2,7 @@
 import { memo, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import Laptop from "assets/images/home/Screenshot 2025-01-27 at 12.59.37 PM.png";
+import Laptop from "assets/images/home/pixelcut-export.png";
 
 import { GET_FEATURED_BY_ID, GET_TEST_BY_HABIT } from "redux/actions/test";
 
