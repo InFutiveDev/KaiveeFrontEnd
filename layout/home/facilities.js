@@ -1,16 +1,17 @@
 import Image from "next/image";
-import img1 from "assets/images/Finalimg/Facility/7.webp";
-import img12 from "assets/images/Finalimg/Facility/3d4D-ultrasound.webp";
-import img2 from "assets/images/Finalimg/Facility/CT-Scan.webp";
-import img3 from "assets/images/Finalimg/Facility/Digital-Xray.webp";
-import img4 from "assets/images/Finalimg/Facility/pathalogy-laboratory.webp";
-import img5 from "assets/images/Finalimg/Facility/Dental-Imaging.webp";
+import img1 from "assets/images/Finalimg/Facility/mri-22.jpeg";
+import img12 from "assets/images/Finalimg/Facility/ultrasound.avif";
+import img2 from "assets/images/Finalimg/Facility/ct-scan.jpeg";
+import img3 from "assets/images/Finalimg/Facility/digital-xray.jpeg";
+import img4 from "assets/images/Finalimg/Facility/nuerology.jpeg";
+import img5 from "assets/images/Finalimg/Facility/dental.jpeg";
 // import img6 from "assets/images/Finalimg/Facility/mammography.webp";
-import img7 from "assets/images/Finalimg/Facility/CT-Corona-Angiography.webp";
-import img8 from "assets/images/Finalimg/Facility/cardiologist.webp";
-import img9 from "assets/images/Finalimg/Facility/neuclear-imaging.webp";
-import img10 from "assets/images/Finalimg/Facility/Dexa.webp";
-import img11 from "assets/images/Finalimg/Facility/pathalogy-laboratory.webp";
+import img7 from "assets/images/Finalimg/Facility/corinary.jpeg";
+import img8 from "assets/images/Finalimg/Facility/cardio.jpeg";
+import img9 from "assets/images/Finalimg/Facility/nuclear1.jpeg";
+import img10 from "assets/images/Finalimg/Facility/dexa.jpeg";
+import img11 from "assets/images/Finalimg/Facility/pathalogy.avif";
+import img13 from "assets/images/Finalimg/Facility/Fibroscan.webp";
 import { GET_ALL_HEALTHRISK } from "redux/actions/healthrisk";
 import { useEffect, useRef } from "react";
 import Carousel from "react-multi-carousel";
@@ -118,7 +119,7 @@ const Facilities = () => {
                     src={item.imageSrc}
                     alt={item.title}
                     layout="fill"
-                    objectFit="contain"
+                    objectFit="unset"
                     quality={100}
                     className="transition-transform duration-300 transform group-hover:scale-110"
                   />
@@ -260,7 +261,7 @@ const servicesData = [
   },
   {
     title: "Fibroscan",
-    imageSrc: img10,
+    imageSrc: img13,
     description:
       "At City Imaging, we offer comprehensive details about FibroScan test price in Delhi.",
     slug: "fibroscan-test-price",

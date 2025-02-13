@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import BreadCrumb from "components/breadcrumb";
-import CityHealth from "assets/images/health-packages/city advanced health package website (1350x1050) 1.png";
+import CityHealth from "assets/images/health-packages/Lab-Test-Resized (1).jpg";
 import { ShareSVG } from "assets/images/SvgImage";
 import { HeartSVG } from "assets/images/SvgImage";
 import {

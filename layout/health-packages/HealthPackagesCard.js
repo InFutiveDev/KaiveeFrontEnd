@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import CityHealth from "assets/images/health-packages/Home-collection.jpg";
+import CityHealth from "assets/images/health-packages/Lab-Test-Resized (1).jpg";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { UPDATE_CART_QAUNTITY } from "redux/actions/cart";
@@ -61,7 +61,8 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
         onClick={() => router.push(`/health-packages/${data?.test_url}`)}
       >
         <Image
-          src={data?.package_image || CityHealth.src}
+         // src={data?.package_image || CityHealth.src}
+          src={ CityHealth.src}
           width={1000}
           height={1000}
           className="object-full h-32 w-full"

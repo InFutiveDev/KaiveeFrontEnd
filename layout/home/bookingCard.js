@@ -35,7 +35,7 @@ const ServicesSection = () => {
         </h2>
 
         {/* Image Section */}
-        <div className="grid gap-6 md:gap-8 lg:gap-12 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 mx-auto w-full max-w-[942px]">
+        <div className="grid gap-6 md:gap-8 lg:gap-14 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 mx-auto w-full ">
           {/* Service Items */}
           {[
             { img: img1, text: "Book a Health Package", link: "/health-packages" },

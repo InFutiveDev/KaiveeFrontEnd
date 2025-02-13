@@ -117,6 +117,7 @@ const HomeLayout = () => {
 
     { icon: icon6, label: "Trusted Doctors" },
   ];
+  
   return (
     <>
       {loaderBanner ? (
@@ -124,7 +125,7 @@ const HomeLayout = () => {
       ) : (
         <>
           <section className="py-0  banner_slider_wrap relative z-[1] h-[auto] sm:h-[600px]">
-            <div className="container flex justify-between items-center h-full">
+            <div className="container  md:flex justify-between items-center h-full">
               <Homebanner />
             </div>
             <div className="backImageBox" />

@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import bannerImage from "assets/images/home/home-banner-2-new.jpg";
-import bannerImage2 from "assets/images/home/HOME-BANNER-NEW.jpg";
+import bannerImage from "assets/images/home/pixelcut-export.jpg";
+import bannerImage2 from "assets/images/home/pixelcut-export-2.jpg";
 // import bannerImage3 from "assets/images/home/HOME-BANNER-3.jpg";
 
 
@@ -44,7 +44,7 @@ const Homebanner = () => {
               responsive={responsive}
               infinite={true}
               autoPlay={true}
-              autoPlaySpeed={3000}
+              autoPlaySpeed={10000}
               showDots={true}
               arrows={false}
               
