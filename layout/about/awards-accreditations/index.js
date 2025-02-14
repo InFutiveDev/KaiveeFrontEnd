@@ -5,7 +5,7 @@ import IcmrLogo from "assets/images/about/awards/icmr.webp";
 import MsmeLogo from "assets/images/about/awards/msme2.webp";
 import NablLogo from "assets/images/about/awards/nabl-logo.webp";
 import redLogo from "assets/images/about/awards/red-cross.webp";
-import skillLogo from "assets/images/about/awards/Skill-india.webp";
+import skillLogo from "assets/images/about/awards/Skill-India.webp";
 import Line from "assets/images/about/ourTeam/Line 304.png";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
