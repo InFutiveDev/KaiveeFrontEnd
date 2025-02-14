@@ -201,118 +201,105 @@ const TestDetailsLayout = ({ byidData }) => {
               </div>
               
               <div className="mt-[10px] md:mt-[30px]">
-                <table className="shadow-md rounded-xl overflow-hidden border-[2x] !border-[#E8E8EB] w-full">
-                  <thead>
-                    <tr>
-                      <th
-                        colSpan="2"
-                        className="border cursor-pointer md:py-[10px] bg-[#FAFBFC] p-[16px] md:px-[24px] border-slate-600 "
-                        onClick={() => setCollapse(!collapse)}
-                      >
-                        <div className="flex justify-between items-center">
-                          <div className="text-base md:text-[20px]">
-                            Additional information
-                          </div>
-                          <div onClick={() => setCollapse(!collapse)}>
-                            {collapse ? (
-                              <MdOutlineKeyboardArrowUp className="text-lg" />
-                            ) : (
-                              <MdOutlineKeyboardArrowDown className="text-lg" />
-                            )}
-                          </div>
-                        </div>
-                      </th>
-                    </tr>
-                  </thead>
-                  {collapse && (
-                    <tbody>
-                      {Object.keys(byidData?.data[0])?.map((keyname) => {
-                        if (
-                          keyname === "no_of_parameters" &&
-                          !byidData?.data[0][keyname]
-                        ) {
-                          return;
-                        }
-                        return (
-                          <Fragment key={keyname}>
-                            {!dataNotToShow.includes(keyname) && (
-                              <tr key={keyname}>
-                                <td className="border border-slate-700 text-[18px] py-[10px] px-[24px]">
-                                  {getTitleOfKeyname(keyname)}
-                                </td>
-                                <td className="border border-slate-700 text-[18px] py-[10px] px-[24px]">
-                                  {keyname === "test_pre_test_info" ? (
-                                    <div
-                                      className="text-[18px]"
-                                      dangerouslySetInnerHTML={renderHTML(
-                                        byidData?.data[0][keyname]
-                                      )}
-                                    />
-                                  ) : (
-                                    byidData?.data[0][keyname]
-                                  )}
-                                </td>
-                              </tr>
-                            )}
-                          </Fragment>
-                        );
-                      })}
-                    </tbody>
+  <table className="shadow-md rounded-xl overflow-hidden border-[2x] !border-[#E8E8EB] w-full">
+    <thead>
+      <tr>
+        <th
+          colSpan="2"
+          className="border cursor-pointer md:py-[10px] bg-[#FAFBFC] p-[16px] md:px-[24px] border-slate-600"
+        >
+          <div className="flex justify-between items-center">
+            <div className="text-base md:text-[20px]">Additional information</div>
+            {/* Removed collapse button */}
+          </div>
+        </th>
+      </tr>
+    </thead>
+    {/* Always render tbody */}
+    <tbody>
+      {Object.keys(byidData?.data[0])?.map((keyname) => {
+        if (
+          keyname === "no_of_parameters" &&
+          !byidData?.data[0][keyname]
+        ) {
+          return;
+        }
+        return (
+          <Fragment key={keyname}>
+            {!dataNotToShow.includes(keyname) && (
+              <tr key={keyname}>
+                <td className=" text-[18px] py-[10px] px-[24px]">
+                  {getTitleOfKeyname(keyname)}
+                </td>
+                <td className=" text-[18px] py-[10px] px-[24px]">
+                  {keyname === "test_pre_test_info" ? (
+                    <div
+                      className="text-[18px]"
+                      dangerouslySetInnerHTML={renderHTML(
+                        byidData?.data[0][keyname]
+                      )}
+                    />
+                  ) : (
+                    byidData?.data[0][keyname]
                   )}
-                </table>
-                {byidData?.data?.length > 0 ? (
-                  <div className="my-3 md:my-4 w-full  flex flex-col md:mt-0 mt-[10px]">
-                    {byidData?.data[0]?.preparation && (
-                      <>
-                        <h2 className="text-gray-900 font-semibold">
-                          {" "}
-                          <div>
-                            {" "}
-                            <span className="border_text">Preparation</span>
-                          </div>
-                        </h2>
+                </td>
+              </tr>
+            )}
+          </Fragment>
+        );
+      })}
+    </tbody>
+  </table>
+  {byidData?.data?.length > 0 ? (
+    <div className="my-3 md:my-4 w-full flex flex-col md:mt-0 mt-[10px]">
+      {byidData?.data[0]?.preparation && (
+        <>
+          <h2 className="mt-2 text-gray-900 font-semibold">
+            <div>
+              <span >Preparation</span>
+            </div>
+          </h2>
 
-                        <div
-                          className="my-2 text-gray-700 editor_div "
-                          dangerouslySetInnerHTML={renderHTML(
-                            byidData?.data[0]?.preparation
-                          )}
-                        />
-                      </>
-                    )}
-                    {byidData?.data[0]?.test_components && (
-                      <>
-                        <h2 className="text-gray-900 font-semibold">
-                          {" "}
-                          <span className="border_text">Components</span>
-                        </h2>
-                        <div
-                          className="my-2 text-gray-700 editor_div components_editor_div"
-                          dangerouslySetInnerHTML={renderHTML(
-                            byidData?.data[0]["test_components"]
-                          )}
-                        />
-                      </>
-                    )}
-                    {byidData?.data[0]?.test_pre_test_info && (
-                      <>
-                        <h2 className="text-gray-900 font-semibold">
-                          <span className="border_text"> Overview</span>
-                        </h2>
-                        {/* md:text-[20px] text-[14px] */}
-                        <div
-                          className="my-2 text-gray-700 editor_div "
-                          dangerouslySetInnerHTML={renderHTML(
-                            byidData?.data[0]["test_pre_test_info"]
-                          )}
-                        />
-                      </>
-                    )}
-                  </div>
-                ) : (
-                  ""
-                )}
-              </div>
+          <div
+            className="my-3 margin: 2px text-gray-700 editor_div"
+            dangerouslySetInnerHTML={renderHTML(
+              byidData?.data[0]?.preparation
+            )}
+          />
+        </>
+      )}
+      {byidData?.data[0]?.test_components && (
+        <>
+          <h2 className="mt-2 text-gray-900 font-semibold">
+            <span >Components</span>
+          </h2>
+          <div
+            className="my-3 text-gray-700 editor_div components_editor_div"
+            dangerouslySetInnerHTML={renderHTML(
+              byidData?.data[0]["test_components"]
+            )}
+          />
+        </>
+      )}
+      {byidData?.data[0]?.test_pre_test_info && (
+        <>
+          <h2 className="mt-2 text-gray-900 font-semibold">
+            <span > Overview</span>
+          </h2>
+          <div
+            className="my-3 text-gray-700 editor_div"
+            dangerouslySetInnerHTML={renderHTML(
+              byidData?.data[0]["test_pre_test_info"]
+            )}
+          />
+        </>
+      )}
+    </div>
+  ) : (
+    ""
+  )}
+</div>
+
             </div>
             
           </div>
