@@ -31,6 +31,9 @@ import { LOGIN_MODAL_OPEN, LOGIN_SUBMIT_REDIRECT } from "redux/actions/auth";
 import InquiryForm from "components/inquiryForm";
 import CheckOutLogin from "layout/auth/checkOutLogin";
 
+// Import your static image
+import staticBannerImage from "assets/images/health-packages/health-banner.jpg";  // Adjust the path as needed
+
 const breadcrumblist = [
   { name: "Home", path: "/" },
   {
@@ -181,6 +184,18 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
         <SpinnerComponent />
       ) : (
         <div className=" relative ">
+          {/* Static Banner Image */}
+          <div className="relative w-full h-[250px] md:h-[300px] lg:h-[400px]">
+            <Image
+              src={staticBannerImage}
+              alt="Health Package Banner"
+              fill
+              priority
+              className="object-cover w-full h-full"
+              sizes="100vw"
+            />
+          </div>
+
           <div className="container py-6">
             <BreadCrumb
               active={id.replaceAll("-", " ")}
