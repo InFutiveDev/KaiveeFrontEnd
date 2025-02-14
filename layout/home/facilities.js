@@ -61,12 +61,12 @@ const Facilities = () => {
     },
     desktop: {
       breakpoint: { max: 1536, min: 1024 },
-      items: 3,
+      items: 4,
       partialVisibilityGutter: 30,
     },
     tablet: {
       breakpoint: { max: 1024, min: 640 },
-      items: 2,
+      items: 3,
       partialVisibilityGutter: 20,
     },
     mobile: {

@@ -124,17 +124,8 @@ const HealthRisks = ({
                   key={index}
                   onClick={() => singlePage(item._id)}
                 >
-                  <div className="w-full rounded border-[1px] border-[#D41958]">
-                    <div className="py-[12px] bg-[#D419580D]">
-                      <p className="text-center font-[600] text-[18px] font-source-pro ">
-                        {Object.keys(item).includes("healthRiskTitle")
-                          ? item?.healthRiskTitle
-                          : Object.keys(item).includes("perent_category_name")
-                          ? item?.category_name
-                          : item?.hebitName}
-                      </p>
-                    </div>
-                    <div className="flex justify-center items-center">
+                  <div className="w-full rounded-lg relative overflow-hidden  ">
+                  <div className="flex  justify-center items-center ">
                       <Image
                         loading="eager"
                         width={500}
@@ -144,6 +135,16 @@ const HealthRisks = ({
                         className="object-cover h-32 !w-full"
                       />
                     </div>
+                    <div className="py-[12px] ">
+                      <p className="text-center font-[600] text-[18px] font-source-pro ">
+                        {Object.keys(item).includes("healthRiskTitle")
+                          ? item?.healthRiskTitle
+                          : Object.keys(item).includes("perent_category_name")
+                          ? item?.category_name
+                          : item?.hebitName}
+                      </p>
+                    </div>
+                    
                   </div>
                 </div>
               ))}

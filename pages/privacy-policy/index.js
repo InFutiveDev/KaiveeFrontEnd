@@ -6,12 +6,12 @@ import Head from "next/head";
 
 const PrivacyPolicy = () => {
   const metaData = {
-    title: "Privacy Policy | City X-Ray",
+    title: "Privacy Policy | Kaivee Healthcare",
     description:
-      "Privacy Policy | City X-Ray. Learn how we protect your privacy and handle your personal information.",
-    url: "https://www.cityxrayclinic.com/privacy-policy", // Replace with the canonical URL of the page
+      "Privacy Policy | Kaivee Healthcare. Learn how we protect your privacy and handle your personal information.",
+    url: "", // Replace with the canonical URL of the page
     image:
-      "https://www.cityxrayclinic.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.e921700e.png&w=750&q=100", // Replace with the actual image URL
+      "", // Replace with the actual image URL
   };
 
   return (
@@ -26,11 +26,11 @@ const PrivacyPolicy = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={metaData.url} />
         <meta property="og:image" content={metaData.image} />
-        <meta property="og:site_name" content="City X-Ray" />
+        <meta property="og:site_name" content="" />
 
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@CityXrayClinic" />
+        <meta name="twitter:site" content="" />
         <meta name="twitter:title" content={metaData.title} />
         <meta name="twitter:description" content={metaData.description} />
         <meta name="twitter:image" content={metaData.image} />
@@ -107,7 +107,7 @@ const PrivacyPolicy = () => {
             <p className="text-gray-500 text-[18px] mt-3">
               If you have any questions regarding these Terms and Conditions, please feel free to contact us at:
               <p>📧<strong> Email</strong> : info@kaiveehealthcare.com</p>
-              <p>📞<strong> Phone</strong> : +91++++++++++</p>
+              <p>📞<strong> Phone</strong> : 084483 38674</p>
             </p>
           </div>
         </div>

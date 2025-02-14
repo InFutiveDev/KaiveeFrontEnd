@@ -62,7 +62,7 @@ const Testimonial = () => {
 
       {/* First Carousel */}
       <div
-        className="gap mb-2"
+        className="gap "
         style={{
           transform: "translateX(40px)",
           transition: "transform 0.3s ease-in-out",
@@ -75,7 +75,7 @@ const Testimonial = () => {
           autoPlay
           autoPlaySpeed={3000}
           transitionDuration={500}
-          showDots
+          // showDots
           removeArrowOnDeviceType={["tablet", "mobile"]}
           arrows={false}
           rtl
@@ -116,7 +116,7 @@ const Testimonial = () => {
 
       {/* Second Carousel */}
       <div
-        className="gap mt-2"
+        className="gap "
         style={{
           transform: "translateX(-40px)",
           transition: "transform 0.3s ease-in-out",
@@ -129,7 +129,7 @@ const Testimonial = () => {
           autoPlay
           autoPlaySpeed={3000}
           transitionDuration={500}
-          showDots
+          // showDots
           removeArrowOnDeviceType={["tablet", "mobile"]}
           arrows={false}
         >

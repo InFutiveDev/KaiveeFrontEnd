@@ -31,7 +31,7 @@ const FranchiseeBanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src={MobileImage}
+          src={BannerImage}
         />
       </div>
     </div>

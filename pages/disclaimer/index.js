@@ -6,10 +6,10 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>Disclaimer - City X-Ray & Scan Clinic</title>
+        <title>Disclaimer - Kaivee Healthcare</title>
         <meta
           name="description"
-          content="Disclaimer - Diagnostic Laboratory Services at City X-Ray"
+          content="Disclaimer - Diagnostic Laboratory Services at Kaivee Healthcare"
         />
       </Head>
       <LazyLoad>
@@ -23,16 +23,16 @@ const Index = () => {
                 Introduction
               </h2>
               <p className="text-gray-500 text-[18px] mt-3">
-                The information provided on the<strong> Kaivee Healthcare </strong> website, including all text, graphics, images, and other materials, is intended for informational purposes only. By accessing or using our website and services, you agree to the following disclaimer terms. If you do not agree with the terms outlined in this disclaimer, please refrain from using our website.              </p>
+                The information provided on the Kaivee Healthcare  website, including all text, graphics, images, and other materials, is intended for informational purposes only. By accessing or using our website and services, you agree to the following disclaimer terms. If you do not agree with the terms outlined in this disclaimer, please refrain from using our website.              </p>
             </div>
             <h2 className=" text-[24px] mt-3 font-semibold">
               Medical Disclaimer
             </h2>
             <div className="mt-3">
-              <ul className="list-disc ms-9 text-gray-500 text-[16px]">
+              <ul className="list-disc ms-9 text-gray-500 text-[18px]">
                 <li>
                   <p >
-                    <strong>Not a Substitute for Professional Medical Advice:</strong> The content provided on this website is not intended to be a substitute for<strong> professional medical advice, diagnosis, or treatment</strong>. Always seek the advice of your physician or other qualified healthcare providers with any questions you may have regarding a medical condition.
+                    <strong>Not a Substitute for Professional Medical Advice:</strong> The content provided on this website is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified healthcare providers with any questions you may have regarding a medical condition.
                   </p>
 
                 </li>
@@ -52,10 +52,10 @@ const Index = () => {
             </h2>
             <div className="mt-3">
 
-              <ul className="list-disc ms-9 text-gray-500 text-[16px]">
+              <ul className="list-disc ms-9 text-gray-500 text-[18px]">
                 <li>
                   <p >
-                    <strong>Limitation of Liability:</strong> Kaivee Healthcare will not be liable for any<strong>direct, indirect, incidental, special, consequential, or punitive damages </strong> resulting from the use of, or inability to use, this website or any services offered by us. This includes, without limitation, any errors or omissions in the content, loss of data, or loss of income or profits.                    .
+                    <strong>Limitation of Liability:</strong> Kaivee Healthcare will not be liable for any direct, indirect, incidental, special, consequential, or punitive damages resulting from the use of, or inability to use, this website or any services offered by us. This includes, without limitation, any errors or omissions in the content, loss of data, or loss of income or profits.                    .
                   </p>
 
                 </li>
@@ -105,7 +105,7 @@ const Index = () => {
               <p className="text-gray-500 text-[18px] mt-3">
                 If you have any questions regarding this Disclaimer or need further clarification, please feel free to contact us at:
                 <p>📧<strong> Email</strong> : info@kaiveehealthcare.com</p>
-                <p>📞<strong> Phone</strong> : +91++++++++++</p>
+                <p>📞<strong> Phone</strong> : 084483 38674</p>
               </p>
             </div>
             <div>

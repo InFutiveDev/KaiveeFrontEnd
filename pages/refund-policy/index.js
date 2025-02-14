@@ -6,12 +6,12 @@ import Head from "next/head";
 
 const RefundAndCancellationPolicy = () => {
   const metaData = {
-    title: "Refund And Cancellation Policy | City X-Ray",
+    title: "Refund And Cancellation Policy | Kaivee Healthcare",
     description:
-      "Refund And Cancellation Policy | City X-Ray. Understand our policy on refunds and cancellations.",
-    url: "https://www.cityxrayclinic.com/refund-policy", // Replace with the canonical URL of the page
+      "Refund And Cancellation Policy | Kaivee Healthcare. Understand our policy on refunds and cancellations.",
+    url: "", // Replace with the canonical URL of the page
     image:
-      "https://www.cityxrayclinic.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.e921700e.png&w=750&q=100", // Replace with the actual image URL
+      "", // Replace with the actual image URL
   };
 
   return (
@@ -30,7 +30,7 @@ const RefundAndCancellationPolicy = () => {
 
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@CityXrayClinic" />
+        <meta name="twitter:site" content="" />
         <meta name="twitter:title" content={metaData.title} />
         <meta name="twitter:description" content={metaData.description} />
         <meta name="twitter:image" content={metaData.image} />
@@ -55,8 +55,8 @@ const RefundAndCancellationPolicy = () => {
             </h1>
           </div>
           <div className="mt-3">
-            <p className="list-disc text-gray-500 text-[16px]">
-              All services are<strong> non-refundable</strong>, but if there’s an issue, we’ll be happy to<strong> schedule a corrective service </strong>free of charge. For cancellations, please notify us at least<strong> 24 hours in advance </strong>to avoid any charges.
+            <p className="list-disc text-gray-500 text-[18px]">
+              All services are non-refundable, but if there’s an issue, we’ll be happy to schedule a corrective service free of charge. For cancellations, please notify us at least 24 hours in advance to avoid any charges.
             </p>
           </div>
         </div>

@@ -7,12 +7,12 @@ import Head from "next/head";
 
 const TermsOfUse = () => {
   const metaData = {
-    title: "Terms Of Use - Terms & Conditions | City X-Ray",
+    title: "Terms Of Use - Terms & Conditions | Kaivee Healthcare",
     description:
-      "Read the terms of use and conditions for City X-Ray. Understand your rights and obligations while using our website.",
-    url: "https://www.cityxrayclinic.com/terms-conditions", // Replace with the canonical URL of the page
+      "Read the terms of use and conditions for Kaivee Healthcare. Understand your rights and obligations while using our website.",
+    url: "", // Replace with the canonical URL of the page
     image:
-      "https://www.cityxrayclinic.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.e921700e.png&w=750&q=100", // Replace with the actual image URL
+      "", // Replace with the actual image URL
   };
 
   return (
@@ -27,11 +27,11 @@ const TermsOfUse = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={metaData.url} />
         <meta property="og:image" content={metaData.image} />
-        <meta property="og:site_name" content="City X-Ray" />
+        <meta property="og:site_name" content="" />
 
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@CityXrayClinic" />
+        <meta name="twitter:site" content="" />
         <meta name="twitter:title" content={metaData.title} />
         <meta name="twitter:description" content={metaData.description} />
         <meta name="twitter:image" content={metaData.image} />
@@ -55,7 +55,7 @@ const TermsOfUse = () => {
               Terms & Conditions
             </h1>
             <p className="text-gray-500 text-[18px] mt-3">
-              Welcome to<strong> Kaivee Healthcare </strong> ! By accessing and using our website and services, you agree to be bound by the following<strong> Terms and Conditions</strong>. Please read these terms carefully before using our services. If you do not agree with these terms, please refrain from using our website.
+              Welcome to Kaivee Healthcare! By accessing and using our website and services, you agree to be bound by the following Terms and Conditions. Please read these terms carefully before using our services. If you do not agree with these terms, please refrain from using our website.
             </p>
           </div>
           <h2 className=" text-[24px] mt-3 font-semibold">
@@ -63,7 +63,7 @@ const TermsOfUse = () => {
           </h2>
           <div className="mt-3">
             <p className="text-gray-500 text-[18px] ">By using our services, you agree to:</p>
-            <ul className="list-disc ms-9 text-gray-500 text-[16px]">
+            <ul className="list-disc ms-9 text-gray-500 text-[18px]">
               <li>
                 <p >
                   <strong>Provide accurate information:</strong> All information you provide must be true, complete, and accurate.
@@ -85,7 +85,7 @@ const TermsOfUse = () => {
           </h2>
           <div className="mt-3">
 
-            <ul className="list-disc ms-9 text-gray-500 text-[16px]">
+            <ul className="list-disc ms-9 text-gray-500 text-[18px]">
               <li>
                 <p >
                   <strong>Booking Process:</strong> Users can book appointments for tests or home collection services through the website or mobile application. By booking, you confirm your understanding and agreement to these Terms and Conditions.s
