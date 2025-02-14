@@ -66,7 +66,7 @@ const Facilities = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 640 },
-      items: 3,
+      items: 4,
       partialVisibilityGutter: 20,
     },
     mobile: {

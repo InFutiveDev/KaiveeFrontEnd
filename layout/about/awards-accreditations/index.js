@@ -61,7 +61,7 @@ const AwardsAccreditaionLayout = () => {
                   <div className="flex justify-center items-center my-2">
                     <Image width={280} height={10} alt="line" src={Line.src} />
                   </div>
-                  <p className="text-secondary text-center line-clamp-3 text-[14px]">
+                  <p className="text-secondary text-center line-clamp-3 text-[18px]">
                     {item?.description}
                   </p>
                 </div>
@@ -80,7 +80,7 @@ const AwardsAccreditaionLayout = () => {
                 <div className="flex justify-center items-center my-2">
                   <Image width={280} height={10} alt="line" src={Line.src} />
                 </div>
-                <p className="text-secondary text-center line-clamp-3 text-[14px]">
+                <p className="text-secondary text-center line-clamp-3 text-[18px]">
                   Recognized for our exceptional quality and standards.
                 </p>
               </div>
@@ -97,7 +97,7 @@ const AwardsAccreditaionLayout = () => {
                 <div className="flex justify-center items-center my-2">
                   <Image width={280} height={10} alt="line" src={Line.src} />
                 </div>
-                <p className="text-secondary text-center line-clamp-3 text-[14px]">
+                <p className="text-secondary text-center line-clamp-3 text-[18px]">
                   Approved by ICMR for research excellence.
                 </p>
               </div>
@@ -114,7 +114,7 @@ const AwardsAccreditaionLayout = () => {
                 <div className="flex justify-center items-center my-2">
                   <Image width={280} height={10} alt="line" src={Line.src} />
                 </div>
-                <p className="text-secondary text-center line-clamp-3 text-[14px]">
+                <p className="text-secondary text-center line-clamp-3 text-[18px]">
                   Recognized as a leading MSME in healthcare.
                 </p>
               </div>
@@ -130,7 +130,7 @@ const AwardsAccreditaionLayout = () => {
     <div className="flex justify-center items-center my-2">
       <Image width={280} height={10} alt="line" src={Line.src} />
     </div>
-    <p className="text-secondary text-center line-clamp-3 text-[16px]">
+    <p className="text-secondary text-center line-clamp-3 text-[18px]">
       Accredited for laboratory excellence.
     </p>
   </div>
@@ -147,7 +147,7 @@ const AwardsAccreditaionLayout = () => {
     <div className="flex justify-center items-center my-2">
       <Image width={280} height={10} alt="line" src={Line.src} />
     </div>
-    <p className="text-secondary text-center line-clamp-3 text-[16px]">
+    <p className="text-secondary text-center line-clamp-3 text-[18px]">
       Recognized for humanitarian contributions.
     </p>
   </div>
@@ -164,7 +164,7 @@ const AwardsAccreditaionLayout = () => {
     <div className="flex justify-center items-center my-2">
       <Image width={280} height={10} alt="line" src={Line.src} />
     </div>
-    <p className="text-secondary text-center line-clamp-3 text-[16px]">
+    <p className="text-secondary text-center line-clamp-3 text-[18px]">
       Recognized for skill development excellence.
     </p>
   </div>
