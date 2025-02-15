@@ -15,6 +15,48 @@ const responsive = {
   mobile: { breakpoint: { max: 640, min: 0 }, items: 1 },
 };
 
+const CustomRightArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute right-0 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 z-10 mr-4"
+    aria-label="Next slide"
+  >
+    <svg 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="#D41958"  // Changed color to match your theme
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M9 18l6-6-6-6"/>
+    </svg>
+  </button>
+);
+
+const CustomLeftArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute left-0 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 z-10 ml-4"
+    aria-label="Previous slide"
+  >
+    <svg 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="#D41958"  // Changed color to match your theme
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
+  </button>
+);
+
 const Homebanner = () => {
   const [mounted, setMounted] = useState(false);
   const [carouselKey, setCarouselKey] = useState(0);
@@ -40,7 +82,10 @@ const Homebanner = () => {
                 autoPlaySpeed={10000}
                 className="w-full h-full"
                 showDots={true}
-                arrows={false}
+                arrows={true}
+                customRightArrow={<CustomRightArrow />}
+                customLeftArrow={<CustomLeftArrow />}
+                
               >
                 {images.map((image, index) => (
                   <div key={index} className="relative w-full h-full">
