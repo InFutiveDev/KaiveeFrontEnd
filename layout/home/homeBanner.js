@@ -117,7 +117,7 @@ const Homebanner = () => {
 
           {/* Buttons */}
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/book-test">
+            <Link href="/book-a-test">
               <button className="bg-[#D41958] text-white py-2 px-6 rounded-lg shadow-lg hover:bg-[#8DBD4D] w-full sm:w-auto">
                 Book a Test
               </button>
