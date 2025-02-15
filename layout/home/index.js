@@ -125,7 +125,8 @@ const HomeLayout = () => {
       ) : (
         <>
           <section className="py-0  banner_slider_wrap relative z-[1] h-[auto] sm:h-[600px]">
-            <div className="container  md:flex justify-between items-center h-full">
+          <div className="container md:flex justify-between items-center h-[94%]">
+
               <Homebanner />
             </div>
             <div className="backImageBox" />
@@ -133,7 +134,7 @@ const HomeLayout = () => {
 
           <div className="container">
             <div className="container ">
-              <div className="py-6 mb-2 bg-white bg-opacity-80 rounded-lg">
+              <div className=" mb-2 bg-white bg-opacity-80 rounded-lg">
                 <div className="container mx-auto grid grid-cols-2  lg:grid-cols-4 gap-6 text-centre">
                   {features.map((feature, index) => (
                     <div
@@ -162,7 +163,7 @@ const HomeLayout = () => {
             <div className="bg-[white]">
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
               <div className="container">
-                <div className=" pb-4 py-2">
+                <div className=" pb-0 lg:pb-4 py-2 lg:pt-4 pt-2">
                   <Facilities
                     facilitiedData={categories?.data?.categoryData || []}
                   />
@@ -189,7 +190,7 @@ const HomeLayout = () => {
           <div className="bg-[#FAFAFA]">
             <div className="container">
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-              <div className=" pb-0 lg:pb-4 pt-2">
+              <div className=" pb-0 lg:pb-4 py-2 lg:pt-4 pt-2">
                 <HomePopularTest
                   viewAll="/book-a-test"
                   title={"Popular Test"}
@@ -205,7 +206,7 @@ const HomeLayout = () => {
           </div>
           <div className="container">
             {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-            <div className=" pb-0 lg:pb-8 py-2 lg:pt-8 pt-4">
+            <div className=" pb-0 lg:pb-4 py-2 lg:pt-4 pt-2">
               <HealthRisks
                 altImageKey="home_image_altTag"
                 imageKey="healthRisk_image"
@@ -218,7 +219,7 @@ const HomeLayout = () => {
           <div className="bg-[#FAFAFA]">
             <div className="container">
               {/* sm:ml-1 md:ml-2 lg:ml-1 xl:lg:ml-24 */}
-              <div className=" pb-8 pt-8">
+              <div className=" pb-0 lg:pb-4 py-2 lg:pt-4 pt-2">
                 <HealthRisks
                   altImageKey="home_image_altTag"
                   imageKey="hebit_image"

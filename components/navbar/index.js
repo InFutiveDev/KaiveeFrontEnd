@@ -132,7 +132,7 @@ const Navbar = () => {
           : "header-nav web-view header-nav-web lg:sticky bg-white  top-[0px] z-[1000]"
       }
     >
-      <div className=" sm:p-1 sm:container mx-auto">
+      <div className="  sm:container mx-auto">
         <div className="navigation_bar">
           <div className="  sm:pb-0 w-full sm:w-auto flex justify-between items-center">
             <div className="logo-main">
@@ -282,7 +282,7 @@ const Navbar = () => {
                 </a>
               </div>
               <span className="hidden sm:block h-5 w-px bg-gray-300"></span>
-              <div className="track">
+              {/* <div className="track">
                 <Link href={"/dashboard/report-tracking"}>
                   <svg
                     width="24"
@@ -305,7 +305,7 @@ const Navbar = () => {
                   </svg>
                   <span className="text-[#D41958]">Track My Sample</span>
                 </Link>
-              </div>
+              </div> */}
               <div className="login-btn-wrap hidden sm:block hover-menu">
                 <a className="loginbutton ">
                   {userLogin || auth?.logedInUser ? (

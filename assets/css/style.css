@@ -625,10 +625,10 @@ input:focus {
 
 .web-view .profile a {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  color: #52525b;
+  color: #212121;
   position: relative;
 }
 
@@ -7329,7 +7329,7 @@ input[type="radio"] {
 }
 
 .web-view .profile a:last-child {
-  margin: 5px 7px;
+  margin: 0px 10px;
 }
 
 .certification-logo {

@@ -27,9 +27,10 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section className="my-16 lg:my-20 text-center">
+      <section className="my-14 md:my-14 lg:my-16 text-center">
         {/* Heading */}
-        <h2 className="mt-10 text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">
+        <h2 className="-mt-[3.5rem] text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">
+
           From <span className="text-[#8DBD4D]">Tests to </span> 
           <span className="text-[#8DBD4D]">Prescriptions</span>, We’ve Got You Covered
         </h2>

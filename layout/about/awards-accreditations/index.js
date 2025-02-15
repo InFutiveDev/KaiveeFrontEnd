@@ -38,7 +38,7 @@ const AwardsAccreditaionLayout = () => {
         </div>
       </section>
 
-      <div className="container bg-white pt-[70px]">
+      <div className="container bg-white pt-[50px]">
         <div className="pb-[70px]">
           <h2 className="text-black font-semibold lg:text-[24px] text-lg mb-[32px] font-source-pro">
             Awards
@@ -51,8 +51,8 @@ const AwardsAccreditaionLayout = () => {
                 key={index}
                 className="shadow-md rounded-2xl cursor-pointer"
               >
-                <div className="pt-[10px] h-[300px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
-                  <Image width={200} height={200} className="object-fill h-36" src={item?.img} alt={item?.title} />
+                <div className="pt-[2px] h-[260px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
+                  <Image  className="object-contain w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-lg" src={item?.img} alt={item?.title} />
                 </div>
                 <div className="p-[24px]">
                   <p className="lg:text-[18px] h-[51px] line-clamp-2 text-[16px] font-semibold text-center font-source-pro">
@@ -70,25 +70,30 @@ const AwardsAccreditaionLayout = () => {
 
             {/* Static Awards */}
             <div className="shadow-md rounded-2xl cursor-pointer">
-              <div className="pt-[10px] h-[300px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
-                <Image width={250} height={250} className="object-fill h-36" src={IsoLogo} alt="ISO Award" />
-              </div>
-              <div className="p-[24px]">
-                <p className="lg:text-[20px] h-[55px] line-clamp-2 text-[16px] font-semibold text-center font-source-pro">
-                  ISO Certification
-                </p>
-                <div className="flex justify-center items-center my-2">
-                  <Image width={280} height={10} alt="line" src={Line.src} />
-                </div>
-                <p className="text-secondary text-center line-clamp-3 text-[18px]">
-                  Recognized for our exceptional quality and standards.
-                </p>
-              </div>
-            </div>
+  <div className="pt-[2px] h-[260px] flex items-center bg-[#F3F3F3] justify-center rounded-t-2xl">
+    <Image 
+      className="object-contain w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-lg" 
+      src={IsoLogo} 
+      alt="ISO Award" 
+    />
+  </div>
+  <div className="p-[24px]">
+    <p className="lg:text-[20px] h-[55px] line-clamp-2 text-[16px] font-semibold text-center font-source-pro">
+      ISO Certification
+    </p>
+    <div className="flex justify-center items-center my-2">
+      <Image width={280} height={10} alt="line" src={Line.src} />
+    </div>
+    <p className="text-secondary text-center line-clamp-3 text-[18px]">
+      Recognized for our exceptional quality and standards.
+    </p>
+  </div>
+</div>
+
 
             <div className="shadow-md rounded-2xl cursor-pointer">
-              <div className="pt-[10px] h-[300px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
-                <Image width={250} height={250} className="object-fill h-36" src={IcmrLogo} alt="ICMR Award" />
+              <div className="pt-[2px] h-[260px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
+                <Image  className="object-contain w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-lg" src={IcmrLogo} alt="ICMR Award" />
               </div>
               <div className="p-[24px]">
                 <p className="lg:text-[20px] h-[55px] line-clamp-2 text-[18px] font-semibold text-center font-source-pro">
@@ -104,8 +109,8 @@ const AwardsAccreditaionLayout = () => {
             </div>
 
             <div className="shadow-md rounded-2xl cursor-pointer">
-              <div className="pt-[10px] h-[300px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
-                <Image width={250} height={250} className="object-fill h-36" src={MsmeLogo} alt="MSME Award" />
+              <div className="pt-[2px] h-[260px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
+                <Image  className="object-contain w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-lg" src={MsmeLogo} alt="MSME Award" />
               </div>
               <div className="p-[24px]">
                 <p className="lg:text-[20px] h-[55px] line-clamp-2 text-[18px] font-semibold text-center font-source-pro">
@@ -120,8 +125,8 @@ const AwardsAccreditaionLayout = () => {
               </div>
             </div>
             <div className="shadow-md rounded-2xl cursor-pointer">
-  <div className="pt-[10px] h-[350px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
-    <Image width={250} height={250} className="object-fill h-48" src={NablLogo} alt="NABL Award" />
+  <div className="pt-[2px] h-[260px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
+    <Image  className="object-contain w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-lg" src={NablLogo} alt="NABL Award" />
   </div>
   <div className="p-[24px]">
     <p className="lg:text-[20px] h-[55px] line-clamp-2 text-[18px] font-semibold text-center font-source-pro">
@@ -137,8 +142,8 @@ const AwardsAccreditaionLayout = () => {
 </div>
 
 <div className="shadow-md rounded-2xl cursor-pointer">
-  <div className="pt-[10px] h-[350px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
-    <Image width={250} height={250} className="object-fill h-48" src={redLogo} alt="Red Cross Award" />
+  <div className="pt-[2px] h-[260px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
+    <Image  className="object-contain w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-lg" src={redLogo} alt="Red Cross Award" />
   </div>
   <div className="p-[24px]">
     <p className="lg:text-[20px] h-[55px] line-clamp-2 text-[18px] font-semibold text-center font-source-pro">
@@ -154,8 +159,8 @@ const AwardsAccreditaionLayout = () => {
 </div>
 
 <div className="shadow-md rounded-2xl cursor-pointer">
-  <div className="pt-[10px] h-[350px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
-    <Image width={250} height={250} className="object-fill h-48" src={skillLogo} alt="Skill India Award" />
+  <div className="pt-[2px] h-[260px] items-center bg-[#F3F3F3] flex justify-center rounded-t-2xl">
+    <Image  className="object-contain w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-lg" src={skillLogo} alt="Skill India Award" />
   </div>
   <div className="p-[24px]">
     <p className="lg:text-[20px] h-[55px] line-clamp-2 text-[18px] font-semibold text-center font-source-pro">

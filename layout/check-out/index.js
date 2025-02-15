@@ -368,6 +368,13 @@ const CheckOutLayout = () => {
                     >
                       <AiOutlinePlus className="text-lg" /> Add Address
                     </button>
+                    <button
+                      disabled={sendData?.memberId ? false : true}
+                      onClick={() => setStep(2)}
+                      className="flex gap-1 items-center border-[1px] border-[#D41958] text-[#D41958] bg-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                    >
+                      Next <BsArrowRight className="text-lg" />
+                    </button>
                   </div>
                 </div>
               )}

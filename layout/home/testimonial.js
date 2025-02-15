@@ -50,7 +50,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="bg-white py-16 px-6 lg:px-20">
+    <section className="bg-white  px-6 lg:px-20">
       <div className="text-center ">
         <h2 className="text-3xl lg:text-4xl  text-gray-800 mb-2">
           Happy Customers

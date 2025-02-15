@@ -3,14 +3,14 @@ import QualityAssuranceBanner from "./QualityAssuranceBanner";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slideImgOne from "assets/images/whychooseus/1.png";
-import slideImgTwo from "assets/images/whychooseus/2-png.png";
-import slideImgThree from "assets/images/whychooseus/icon-3.png";
-import slideImgFour from "assets/images/whychooseus/3-png.png";
-import slideImgFive from "assets/images/whychooseus/4-png.png";
-import slideImgSix from "assets/images/whychooseus/5-png.png";
-import slideImgSeven from "assets/images/whychooseus/6-png.png";
-import slideImgEight from "assets/images/whychooseus/7-png.png";
+import slideImgOne from "assets/images/about/qualityAssurance/slideOne/1.jpeg";
+import slideImgTwo from "assets/images/about/qualityAssurance/slideOne/2.jpeg";
+import slideImgThree from "assets/images/about/qualityAssurance/slideOne/3.jpeg";
+import slideImgFour from "assets/images/about/qualityAssurance/slideTwo/4.jpeg";
+import slideImgFive from "assets/images/about/qualityAssurance/slideTwo/5.jpeg";
+import slideImgSix from "assets/images/about/qualityAssurance/slideTwo/6.jpeg";
+import slideImgSeven from "assets/images/about/qualityAssurance/slideTwo/7.jpeg";
+import slideImgEight from "assets/images/about/qualityAssurance/slideTwo/8.jpeg";
 import { PrevIcons } from "assets/images/SvgImage";
 import { NextIcons } from "assets/images/SvgImage";
 import Image from "next/image";
@@ -52,7 +52,7 @@ const QualityAssuranceLayout = () => {
           <QualityAssuranceBanner />
         </div>
       </section>
-      <div className="py-[35px] md:py-[70px] 2xl:pl-[10rem] xl:pl-[4rem] lg:pl-[1rem] pl-[16px]">
+      <div className="py-[20px] md:py-[70px] 2xl:pl-[10rem] xl:pl-[4rem] lg:pl-[1rem] pl-[16px]">
         <div className="grid  grid-cols-1 sm:grid-cols-1 lg:grid-cols-2  xl:grid-cols-2 md:grid-cols-1 gap-10">
           <div>
             <h1 className="lg:text-[26px] text-xl text-black font-semibold md:pb-4 pb-2 font-source-pro mb-2">
@@ -68,7 +68,14 @@ const QualityAssuranceLayout = () => {
 
 
           </div>
-          <div className="quality-assurance-slider-main md:py-[103px] py-[50px] overflow-hidden">
+          <div
+                  className="quality-assurance-slider-main md:py-[103px] py-[50px] overflow-hidden"
+                  style={{
+                    paddingTop: "50px",
+                    paddingBottom: "56px",
+                  }}
+                >
+
             <Slider {...settings} className="carousel quality_assurance">
               <div className="flex flex-col ">
                 <div className="flex gap-5">
@@ -278,23 +285,23 @@ const QualityAssuranceLayout = () => {
         <h2 className="lg:text-[24px] text-xl font-semibold md:pb-4 pb-2 font-source-pro">
           How We Measure Our Quality Standards?
         </h2>
-        <p className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
+        <p className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
           We believe in continuous improvement, which is why we regularly monitor and evaluate our performance through:
         </p>
         <ul className="list-disc md:ml-[40px] ml-[20px] flex flex-col gap-2 mt-[10px]">
-          <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
+          <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
             <strong> Internal Quality Control (IQC) </strong>: Daily checks to ensure equipment and processes are functioning optimally.
           </li>
-          <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
+          <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
             <strong> External Quality Assessment (EQA) </strong> : Participation in external proficiency testing programs to benchmark our accuracy against national and international standards.
           </li>
-          <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
+          <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
             <strong> Performance Metrics </strong>: Tracking key indicators such as turnaround time, error rates, and customer satisfaction to identify areas for improvement.
           </li>
-          <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
+          <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
             <strong> Staff Training & Development </strong>: Ongoing training programs to keep our team updated with the latest diagnostic advancements and quality protocols.
           </li>
-          <li className="lg:text-[16px] text-[14px] text-[#71717A] mb-[6px]">
+          <li className="lg:text-[18px] text-[14px] text-[#71717A] mb-[6px]">
             <strong> Patient Feedback </strong> : We actively seek feedback to improve our services and address concerns promptly.
           </li>
         </ul>

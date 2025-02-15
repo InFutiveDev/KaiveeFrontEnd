@@ -47,7 +47,7 @@ const AboutLayout = () => {
       </section>
 
       <AboutUs />
-      <section className="py-12 px-6 bg-[#D419580D]">
+      <section className="py-4 px-6 bg-[#D419580D]">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800">Know Our Journey</h2>
         <p className=" text-[18px] mt-4 text-gray-600">
@@ -85,7 +85,7 @@ const AboutLayout = () => {
       <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />
       </div>
-      <div className="bg-white lg:py-[70px] py-[35px] relative container">
+      <div className="bg-white lg:py-[35px] py-[35px] relative container">
         <div className="grid relative items-center md:grid-cols-2 grid-cols-1 lg:gap-[90px] lg:pr-[120px]">
           <div className="">
             <div className="lg:mb-0 mb-8">
@@ -94,7 +94,7 @@ const AboutLayout = () => {
                   src={OurVersion}
                   // width={"100%"}
                   // width={1000}
-                  className="object-cover w-full "
+                  className="object-cover w-[80%] max-w-[500px] rounded-2xl shadow-md"
                   alt="our-mission"
                 />
               </div>
@@ -116,7 +116,7 @@ const AboutLayout = () => {
                 <Image
                   src={OurMission}
                   // width={"100%"}
-                  className="object-cover  w-full"
+                  className="object-cover  w-[80%] max-w-[500px] rounded-2xl shadow-md"
                   alt="our-mission"
                 />
               </div>
@@ -191,14 +191,13 @@ const AboutLayout = () => {
         </div>
       </div> */}
 
-      <div className="bg-rgb(199, 229, 247)">
-        <div className=" container py-[70px]">
+        <div className=" container pb-[30px]">
           <p className="font-semibold text-center">
            Kaivee Healthcare is clearly your best partner at Health & Checkups.
 
           </p>
         </div>
-      </div>
+     
     </>
   );
 };

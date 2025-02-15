@@ -6,7 +6,7 @@ import { useState } from "react";
 const AboutUs = () => {
   const [readMore, setReadMore] = useState(false);
   return (
-    <section className="py-[2rem] md:py-[3rem] lg:py-[4rem] px-[0] mt-0 relative">
+    <section className=" px-[0] mt-0 relative">
       <div className="container">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-[50px] items-center justify-center">
           <div className="">

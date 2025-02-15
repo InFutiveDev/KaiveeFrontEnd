@@ -102,7 +102,7 @@ const Facilities = () => {
           keyBoardControl={true}
           customTransition="all 500ms ease"
           transitionDuration={500}
-          containerClass="carousel-container pb-4"
+          containerClass="carousel-container pb-4 pt-[4px]"
           itemClass="px-2 sm:px-3"
           partialVisible={true}
         >
