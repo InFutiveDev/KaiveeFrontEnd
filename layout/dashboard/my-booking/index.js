@@ -86,39 +86,14 @@ const MyBookingLayout = () => {
                                 {/* Booking Status :- */}
                                 Booking ID :
                               </span>
-                              <p className="text-capitalize text-orange">
+                              <p className="text-capitalize text-[#D41958]">
                                 {booking?.id || ""}
                               </p>
                               {/* <button className="ml-[10px] py-[6px] px-[16px] rounded-full bg-[#E3F2FF] text-[#216FB0]">
                                 pending
                               </button> */}
                             </div>
-                            {/* {booking?.paymentType === "online" &&
-                            !booking?.is_paid ? (
-                              <div>
-                                <button
-                                  onClick={() => {
-                                    handlePaymentStatus(booking?.id);
-                                    // router.push("/dashboard/my-booking/1)
-                                  }}
-                                  className=" bg-orange text-white rounded px-[20px] py-[7px]"
-                                >
-                                  Check Pyament Status
-                                </button>
-                              </div>
-                            ) : (
-                              ""
-                            )} */}
-                            {/* <div>
-                              <button
-                                onClick={() =>
-                                  router.push("/dashboard/my-booking/1")
-                                }
-                                className=" bg-orange text-white rounded px-[30px] py-[12px]"
-                              >
-                                Booking Again
-                              </button>
-                            </div> */}
+                            
                           </div>
                           <div className="mt-[24px]">
                             <div className="my-[5px] flex justify-start space-x-2">
@@ -148,7 +123,7 @@ const MyBookingLayout = () => {
                                 Payment Type :
                               </p>
                               <div className="flex flex-wrap ">
-                                <span className="text-orange text-[14px] sm:text-[16px] font-semibold">
+                                <span className="text-[#D41958] text-[14px] sm:text-[16px] font-semibold">
                                   {booking?.paymentType === "cod"
                                     ? "COD"
                                     : "Online"}

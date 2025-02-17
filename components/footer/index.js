@@ -41,7 +41,7 @@ const Footer = () => {
         {!collapse ? (
           <div className="fixed right-0 top-[50%] z-[111111111]">
             <div
-              className="bg-[#D41958] shadow-2xl px-1.5 py-2 rounded-l-full relative cursor-pointer"
+              className="bg-[#D41958] hidden shadow-2xl px-1.5 py-2 rounded-l-full relative cursor-pointer"
               onClick={() => setCollapse(!collapse)}
             >
               <div className="text-white flex justify-start items-center space-x-1">
@@ -85,16 +85,7 @@ const Footer = () => {
                   Book a Test
                 </span>
               </a>
-              {/* <a
-                href="https://lis.cityxrayclinic.com/CityLab/Design/cxr/"
-                target="_blank"
-                className=" space-x-3 absolute cursor-pointer flex-col flex justify-start items-center left-[50px] top-[217px] text-white"
-              >
-                <div className="flex justify-center items-center shadow-lg bg-[#8D8D8D] rounded-full  w-12 h-12 ">
-                  <Image src={ReportIcon} width={24} height={24} alt="cancel" />
-                </div>
-                <span className="text-white text-[15px] !m-0"> My Report</span>
-              </a> */}
+              
               <a
                 href="/free-home-sample-collection"
                 target="_blank"

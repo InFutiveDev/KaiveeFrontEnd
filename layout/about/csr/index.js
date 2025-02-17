@@ -114,7 +114,7 @@ const CsrLayout = () => {
             </p>
            <h2 className="text-[20px] mt-2 mb-2">Diversification and Innovation</h2>
            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]" >
-           Never content with the status quo, Zen Health diversified its
+           Never content with the status quo, Kaivee HealthCare diversified its
 portfolio in 2023. Beyond medical tests, we introduced comprehensive safety training programs accredited by the
 Indian Red Cross Society and Skill India. From first-aid to fire safety, ergonomics, and security training, our offerings evolved to meet the dynamic needs of our clientele.
            </p>
@@ -126,7 +126,7 @@ Indian Red Cross Society and Skill India. From first-aid to fire safety, ergonom
           How We Measure the Impact of Our CSR Initiatives
         </h2>
         <p className="text-secondary lg:text-[18px] text-[14px]">
-        As our reach expanded, Zen Health remained steadfast in our commitment to quality. In 2023, we fortified our
+        As our reach expanded, Kaivee HealthCare remained steadfast in our commitment to quality. In 2023, we fortified our
 infrastructure, establishing a corporate office in Sector 16, Noida, alongside our state-of-the-art laboratory in Delta 2,
 Greater Noida. Accredited by NABL, our commitment to excellence w a s unwavering.        </p>
         <ul className="list-disc ml-[20px] md:ml-[40px] flex flex-col gap-2 mt-[32px]">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Input, Modal } from "reactstrap";
-import ImageOne from "assets/images/dashboard/Frame 1410140988.png";
+import ImageOne from "assets/images/dashboard/precription.png";
 import PDFImage from "assets/images/dashboard/PDFIcon.png";
 import { DeleteSVG } from "assets/images/SvgImage";
 import { useDispatch } from "react-redux";

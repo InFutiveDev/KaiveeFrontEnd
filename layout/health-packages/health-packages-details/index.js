@@ -32,7 +32,7 @@ import InquiryForm from "components/inquiryForm";
 import CheckOutLogin from "layout/auth/checkOutLogin";
 
 // Import your static image
-import staticBannerImage from "assets/images/health-packages/health-banner.jpg";  // Adjust the path as needed
+import staticBannerImage from "assets/images/health-packages/health package 1400x300.webp";  // Adjust the path as needed
 
 const breadcrumblist = [
   { name: "Home", path: "/" },

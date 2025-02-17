@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { CallYellowImg } from "assets/images/SvgImage";
 import { EmailYellowSVG } from "assets/images/SvgImage";
-import ImgOne from "assets/images/dashboard/Frame 1410140987.png";
+import ImgOne from "assets/images/dashboard/booking.png";
 import EditImgActive from "assets/images/check-out/download_45x45.png"
 import Profileicon from "assets/images/dashboard/Profile-icon.png";
-import ImgTwo from "assets/images/dashboard/Frame 1410140987 (1).png";
-import ImgThree from "assets/images/dashboard/Frame 1410140987 (2).png";
-import ImgFour from "assets/images/dashboard/Frame 1410140987 (3).png";
-import ImgFive from "assets/images/dashboard/Frame 1410140987 (4).png";
-import ImgSix from "assets/images/dashboard/Frame 1410140987 (5).png";
-import ImgSeven from "assets/images/dashboard/Frame 1410140987 (6).png";
-import ImgEight from "assets/images/dashboard/Frame 1410140987 (7).png";
-import ImgNine from "assets/images/dashboard/Frame 1410140987 (8).png";
-import ImgTen from "assets/images/dashboard/Frame 1410140987 (9).png";
-import ImgEleven from "assets/images/dashboard/Frame 1410140987 (10).png";
+import ImgTwo from "assets/images/dashboard/report.png";
+import ImgThree from "assets/images/dashboard/sample.png";
+import ImgFour from "assets/images/dashboard/address.png";
+import ImgFive from "assets/images/dashboard/member.png";
+import ImgSix from "assets/images/dashboard/upload.png";
+import ImgSeven from "assets/images/dashboard/feedback.png";
+import ImgEight from "assets/images/dashboard/test.png";
+import ImgNine from "assets/images/dashboard/collection.png";
+
+import ImgEleven from "assets/images/dashboard/appoint.png";
 import { RightArrowSVG } from "assets/images/SvgImage";
 import { GET_USER_DETAILS } from "redux/actions/auth";
 import { useDispatch, useSelector } from "react-redux";
@@ -58,7 +58,7 @@ const DashboardCard = () => {
 
   return (
     <div>
-      <div className="grid  lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
+      <div className="grid  lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
         <div
           onClick={() => setOpen(true)}
           className="rounded-xl bg-white cursor-pointer shadow-md"

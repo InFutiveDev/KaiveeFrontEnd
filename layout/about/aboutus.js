@@ -20,7 +20,7 @@ const AboutUs = () => {
 
               
                   <h2 className="text-[22px] text-black font-semibold mt-4 mb-2">We Strive for a Healthier Tomorrow</h2>
-                  <p className="text-[18px]">Established in 2021, Zen Health Solutions has seen remarkable growth. Starting with a single diagnostic center, today we are proud to have ICMR, NABL and ISO 9001:2015 certified lab, providing quality healthcare and medical services to all our patients across India.</p>
+                  <p className="text-[18px]">Established in 2021, Kaivee Healthcare has seen remarkable growth. Starting with a single diagnostic center, today we are proud to have ICMR, NABL and ISO 9001:2015 certified lab, providing quality healthcare and medical services to all our patients across India.</p>
 
                 
             </p>

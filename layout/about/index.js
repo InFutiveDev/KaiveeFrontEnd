@@ -68,7 +68,7 @@ const AboutLayout = () => {
         <div className="bg-white p-6 rounded-lg shadow-md md:mr-auto md:max-w-[85%]">
           <h3 className="text-2xl font-semibold text-gray-700">Defining The Problem</h3>
           <p className="text-[18px] mt-2 text-gray-600">
-            We have seen the harsh realities of both urban and rural life - from the issue of affordability to the problem of accessibility. Our strong desire to improve the overall well-being of people, by providing them with accurate diagnostics, motivated us to create 'Zen Health Labs'. Through our innovative solutions, we strive to ensure that everyone has access to the diagnostic healthcare they need, regardless of their location or financial situation.
+            We have seen the harsh realities of both urban and rural life - from the issue of affordability to the problem of accessibility. Our strong desire to improve the overall well-being of people, by providing them with accurate diagnostics, motivated us to create 'Kaivee HealthCare'. Through our innovative solutions, we strive to ensure that everyone has access to the diagnostic healthcare they need, regardless of their location or financial situation.
           </p>
         </div>
 
@@ -76,7 +76,7 @@ const AboutLayout = () => {
         <div className="bg-white p-6 rounded-lg shadow-md md:ml-auto md:max-w-[85%]">
           <h3 className="text-2xl font-semibold text-gray-700">Creating a Pan-India Dx Revolution</h3>
           <p className="text-[18px] mt-2 text-gray-600">
-            We believe in the philosophy of preventive health and disease management. In just four short years, we have been able to provide care to 2.5 million Indians, making us a leader in the field of diagnostics. We are proud to be able to make a positive impact in the lives of so many people.
+            We believe in the philosophy of preventive health and disease management. In just four short years, we have been able to provide care to many Indians, making us a leader in the field of diagnostics. We are proud to be able to make a positive impact in the lives of so many people.
           </p>
         </div>
       </div>
@@ -127,7 +127,7 @@ const AboutLayout = () => {
               Our Mission
             </h2>
             <p className="text-secondary lg:text-[18px] text-base mt-[16px]">
-            As a trusted and quality-focused partner for health care around the world, Zen Health is committed to delivering an exceptional experience to our customers. We strive to provide the highest quality of service, tailored to meet the unique needs of each individual and organization. Our goal is to ensure that everyone who chooses us as their health care partner is provided with the best possible service and assistance. With our team of experienced professionals and a personalized approach, we strive to provide the best care and support for our clients.
+            As a trusted and quality-focused partner for health care around the world, Kaivee HealthCare is committed to delivering an exceptional experience to our customers. We strive to provide the highest quality of service, tailored to meet the unique needs of each individual and organization. Our goal is to ensure that everyone who chooses us as their health care partner is provided with the best possible service and assistance. With our team of experienced professionals and a personalized approach, we strive to provide the best care and support for our clients.
              </p>
           </div>
         </div>
