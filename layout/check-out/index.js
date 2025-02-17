@@ -205,7 +205,7 @@ const CheckOutLayout = () => {
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 my-3">
           <div className="flex flex-col gap-4">
             <div className="shadow-md bg-white border-[1px] border-[#E4E4E7] overflow-hidden rounded-xl">
-              <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
+              <div className="py-[18px] px-[24px] bg-[#FFF4E0] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                 <p ref={memberRef} className="text-lg font-semibold">
                   1. Add/Select Member
                 </p>
@@ -220,64 +220,56 @@ const CheckOutLayout = () => {
                 )}
               </div>
               {selectedAccordOpen === "selectMember" && (
-  <div className="p-2">
-    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-1 md:grid-cols-1 gap-2 my-3">
-      {userFamilyMembers?.data?.map((item, index) => (
-        <div
-          key={index}
-          onClick={() => handleFamilyMembers(item)}
-          className={`cursor-pointer relative rounded-xl p-[24px] ${
-            sendData.memberId == item?._id
-              ? " border-[1px] border-[#D41958]"
-              : "bg-white border-[1px] border-[#E4E4E7]"
-          }`}
-        >
-          {/* Profile & Name Section */}
-          <div className="flex items-center justify-between pb-3 border-b border-gray-200">
-            <div className="flex items-center gap-3">
-              <img
-                src={item?.profileImage || "/default-avatar.png"}
-                alt="Profile"
-                className="w-[40px] h-[40px] rounded-full object-cover"
-              />
-              <p className="text-[#18181B] text-20px font-semibold">
-                {item?.fullName}
-              </p>
-            </div>
-            {/* Edit Icon */}
-            <div
-              onClick={() => {
-                setMemberEditOpen(true);
-                setMemeberBy(item);
-              }}
-              className="cursor-pointer"
-            >
-              <img src={EditImgActive.src} alt="Edit" />
-            </div>
-          </div>
+                <div className="p-2">
+                  <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 my-3">
+                    {userFamilyMembers?.data?.map((item, index) => (
+                      <div
+                        key={index}
+                        onClick={() => handleFamilyMembers(item)}
+                        className={`cursor-pointer relative rounded-xl ${
+                          sendData.memberId == item?._id
+                            ? "bg-[#FEF6E6] border-[1px] border-[#FCC42C]"
+                            : "bg-white border-[1px] border-[#E4E4E7]"
+                        }  p-[24px]`}
+                      >
+                        <p className="text-[#3F3F46] text-base font-semibold">
+                          {item?.fullName}
+                        </p>
+                        <div className="my-[12px]">
+                          <span className="text-secondary text-capitalize text-base">
+                            {item?.relation == "self" ||
+                            item?.relation == "other"
+                              ? item?.relation
+                              : item?.fullName}{" "}
+                          </span>
+                          <span className="text-secondary text-base">
+                            +91{item?.phone}
+                          </span>
+                        </div>
 
-          {/* Details Section */}
-          <div className="py-3 border-b border-gray-200 flex justify-between text-[#3F3F46] text-16">
-            <span className="font-medium">Relation</span>
-            <span className="text-[#18181B]">{item?.relation}</span>
-          </div>
-          <div className="py-3 border-b border-gray-200 flex justify-between text-[#3F3F46] text-16">
-            <span className="font-medium">Age</span>
-            <span className="text-[#18181B]">{item?.age}</span>
-          </div>
-          <div className="py-3 flex justify-between text-[#3F3F46] text-16">
-            <span className="font-medium">Contact Number</span>
-            <span className="text-[#18181B]">+91 {item?.phone}</span>
-          </div>
-        </div>
-      ))}
-    </div>
-  
-
-
+                        <div className="flex flex-wrap justify-between gap-[12px]">
+                          <span className="text-secondary text-capitalize text-base">
+                            Relation :-{item?.relation}
+                          </span>
+                          <span className="text-secondary text-base">
+                            Age :- {item?.age}
+                          </span>
+                        </div>
+                        <div
+                          onClick={() => {
+                            setMemberEditOpen(true);
+                            setMemeberBy(item);
+                          }}
+                          className="cursor-pointer absolute top-2 right-3"
+                        >
+                          <img src={EditImgActive.src} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                   <div className="mt-[40px] flex justify-center gap-3">
                     <button
-                      className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                      className="flex gap-1 items-center bg-orange text-white rounded px-[16px] py-[10px] text-xs font-semibold"
                       onClick={() => setMemberOpen(true)}
                     >
                       <AiOutlinePlus className="text-lg" /> Add Member
@@ -285,7 +277,7 @@ const CheckOutLayout = () => {
                     <button
                       disabled={sendData?.memberId ? false : true}
                       onClick={() => setStep(2)}
-                      className="flex gap-1 items-center border-[1px] border-[#D41958] text-[#D41958] bg-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                      className="flex gap-1 items-center border-[1px] border-orange text-orange bg-white rounded px-[16px] py-[10px] text-xs font-semibold"
                     >
                       Next <BsArrowRight className="text-lg" />
                     </button>
@@ -295,7 +287,7 @@ const CheckOutLayout = () => {
             </div>
 
             <div className="shadow-md bg-white border-[1px] border-[#E4E4E7] overflow-hidden rounded-xl">
-              <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
+              <div className="py-[18px] px-[24px] bg-[#FFF4E0] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                 <p id="address" className="text-lg font-semibold">
                   2. Add Address/Appointment Details
                 </p>
@@ -311,59 +303,151 @@ const CheckOutLayout = () => {
               </div>
               {step === 2 && (
                 <div className="p-3">
-                  <div className="grid grid-cols-1 lg:grid-cols-1 md:grid-cols-1 gap-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-6">
                     {userAddresses?.data?.map((item, index) => (
                       <div key={index}>
                         <div
                           onClick={() => handleAddress(item)}
-                          className={`cursor-pointer relative rounded-xl p-4 ${
+                          className={`cursor-pointer relative rounded-xl ${
                             sendData.address == item?._id
-                              ? "border-[1px] border-[#D41958]"
+                              ? "bg-[#FEF6E6] border-[1px] border-[#FCC42C]"
                               : "bg-white border-[1px] border-[#E4E4E7]"
-                          }`}
+                          } p-2`}
                         >
-                          {/* Edit Icon Row with Address Type */}
-            <div className="pb-3 border-b border-gray-200 flex justify-between items-center">
-              <span className="text-[#18181B] text-20px   font-semibold capitalize">
-                {item?.address_type || "Home"}
-              </span>
-              <div
-                onClick={(e) => {
-                  e.stopPropagation(); // Prevents parent div click
-                  setEditOpen(true);
-                  setSingalAddress(item);
-                }}
-                className="cursor-pointer"
-              >
-                              <img src={EditImgActive.src} alt="edit icon" />
-                            </div>
+                          <p className="text-[#3F3F46] text-base font-semibold">
+                            City :-{item?.city}
+                          </p>
+                          <div className="my-[12px]">
+                            <span className="text-secondary text-base">
+                              {item?.address1}
+                            </span>
                           </div>
-
-                          {/* City */}
-                          <div className="pb-3 border-b border-gray-200 flex justify-between text-[#3F3F46] text-base">
-                            <span className="font-semibold">City</span>
-                            <span className="text-[#18181B]">{item?.city}</span>
+                          <div className="flex justify-between gap-[12px]">
+                            <span className="text-secondary text-base">
+                              Post Code :-{item?.postCode}
+                            </span>
                           </div>
-
-                          {/* Address */}
-                          <div className="py-3 border-b border-gray-200 flex justify-between text-[#3F3F46] text-base">
-                            <span className="font-semibold">Address</span>
-                            <span className="text-[#18181B]">{item?.address1}</span>
-                          </div>
-
-                          {/* Post Code */}
-                          <div className="py-3 flex justify-between text-[#3F3F46] text-base">
-                            <span className="font-semibold">Post Code</span>
-                            <span className="text-[#18181B]">{item?.postCode}</span>
+                          <div
+                            onClick={() => {
+                              setEditOpen(true);
+                              setSingalAddress(item);
+                            }}
+                            className="cursor-pointer absolute top-2 right-3"
+                          >
+                            <img src={EditImgActive.src} alt="edit icon" />
                           </div>
                         </div>
+                        {/* {collectionType === "home-collection" ? (
+                          <p className="text-secondary text-base">
+                            {item?.date_add
+                              ? moment(new Date(item?.date_add)).format(
+                                  "DD-MM-YYYY"
+                                )
+                              : ""}{" "}
+                            {item?.time}
+                          </p>
+                        ) : (
+                          ""
+                        )} */}
                       </div>
                     ))}
                   </div>
+                  <div className="my-3" />
+                  {collectionType === "home-collection" ? (
+                    <div>
+                      {/* Date Section */}
+                      <div className="grid gap-2 grid-cols-1">
+                        <div>
+                          <p className="text-[16px] text-gray-700">Date</p>
+                          <div className="flex gap-[6px]">
+                            <input
+                              type="date"
+                              id="date_add"
+                              placeholder="date_add"
+                              name="date_add"
+                              value={moment(
+                                new Date(sendData?.sampleCollectionDateTime)
+                              ).format("YYYY-MM-DD")}
+                              min={moment(new Date()).format("YYYY-MM-DD")} // Prevents past dates
+                              required
+                              onChange={(e) =>
+                                setSendData({
+                                  ...sendData,
+                                  sampleCollectionDateTime: e.target.value,
+                                })
+                              }
+                              className="text-gray-900 border rounded-lg font-[300] text-[16px] p-1 w-full"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="my-2" />
 
-                  <div className="mt-[40px] flex justify-center gap-3">
+                      {/* Time Slot Section */}
+                      <div>
+                        <select
+                          required="required"
+                          tabIndex={3}
+                          className="form-select radius"
+                          name="relation"
+                          value={sendData?.timeslot}
+                          onChange={(e) => {
+                            setSendData({
+                              ...sendData,
+                              timeslot: e.target.value,
+                            });
+                            e.target.size = 1; // Collapse dropdown immediately after selection
+                          }}
+                          onClick={(e) => {
+                            e.target.size = 5; // Show 5 options on click
+                          }}
+                          onBlur={(e) => {
+                            setTimeout(() => {
+                              // Delay the collapse to prevent early collapse
+                              e.target.size = 1; // Collapse list on blur
+                            }, 100); // Wait a bit after clicking to avoid the immediate collapse
+                          }}
+                          style={{ position: "relative" }} // Ensures dropdown does not affect the layout
+                        >
+                          <option value="">Select Time Slot</option>
+                          {[
+                            "07:00 AM - 07:30 AM",
+                            "07:30 AM - 08:00 AM",
+                            "08:00 AM - 08:30 AM",
+                            "08:30 AM - 09:00 AM",
+                            "09:00 AM - 09:30 AM",
+                            "09:30 AM - 10:00 AM",
+                            "10:00 AM - 10:30 AM",
+                            "10:30 AM - 11:00 AM",
+                            "11:00 AM - 11:30 AM",
+                            "11:30 AM - 12:00 PM",
+                            "12:00 PM - 12:30 PM",
+                            "12:30 PM - 01:00 PM",
+                            "01:00 PM - 01:30 PM",
+                            "01:30 PM - 02:00 PM",
+                            "02:00 PM - 02:30 PM",
+                            "02:30 PM - 03:00 PM",
+                            "03:00 PM - 03:30 PM",
+                            "03:30 PM - 04:00 PM",
+                            "04:00 PM - 04:30 PM",
+                            "04:30 PM - 05:00 PM",
+                            "05:00 PM - 05:30 PM",
+                            "05:30 PM - 06:00 PM",
+                          ].map((slot, index) => (
+                            <option key={index} value={slot}>
+                              {slot}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+
+                  <div className="mt-[40px] flex justify-center  gap-3">
                     <button
-                      className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                      className="flex gap-1 items-center bg-orange text-white rounded px-[16px] py-[10px] text-xs font-semibold"
                       onClick={() => setOpen(true)}
                     >
                       <AiOutlinePlus className="text-lg" /> Add Address
@@ -371,11 +455,12 @@ const CheckOutLayout = () => {
                   </div>
                 </div>
               )}
+              <div className="my-1" />
             </div>
           </div>
           <div>
             <div className="shadow-md bg-white border-[1px] border-[#E4E4E7] overflow-hidden rounded-xl">
-              <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px]  border-[#E4E4E7] ">
+              <div className="py-[16px] px-[24px] bg-[#FFF4E0] border-b-[1px]  border-[#E4E4E7] ">
                 <p className="text-lg font-semibold">Cart Summary</p>
               </div>
               <div className="p-[24px]">
@@ -399,12 +484,12 @@ const CheckOutLayout = () => {
                     <input
                       onChange={(e) => setCouponCode(e?.target.value?.trim())}
                       type="text"
-                      className="font-[200] w-full p-1.5 outline-none text-gray-700"
+                      className="font-[200] w-full p-1.5 outline-none  text-gray-700"
                       placeholder="Enter Coupon code"
                     />
                     <button
                       onClick={applyCoupan}
-                      className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                      className="flex gap-1 items-center bg-orange text-white rounded px-[16px] py-[10px] mr-1 text-xs font-semibold"
                     >
                       Apply
                     </button>
@@ -414,10 +499,12 @@ const CheckOutLayout = () => {
                       <thead className="text-lg">
                         <tr>
                           <th className="py-1">
-                            <span className="font-[500] py-2 ">Test Name</span>
+                            <span className="font-[500] py-2 text-[16px] ">
+                              Test Name
+                            </span>
                           </th>
                           <th className="px-2 py-1 text-right ">
-                            <span className="font-[500] py-2 ">
+                            <span className="font-[500] py-2 text-[16px] ">
                               Offer Price / MRP
                             </span>
                           </th>
@@ -428,15 +515,15 @@ const CheckOutLayout = () => {
                           <tr key={index} className="bg-white border-t">
                             <th
                               scope="row"
-                              className="font-medium py-2 text-gray-900 whitespace-nowrap "
+                              className="font-medium py-2  text-[16px] text-gray-900 whitespace-nowrap "
                             >
-                              <span className="text-lg font-[300]">
+                              <span className="text-[16px] font-[300]">
                                 {item.test_name}
                               </span>
                             </th>
                             <td className="px-2 py-1 text-right">
                               <div className="space-x-1 ">
-                                <span className="offerprice">
+                                <span className="offerprice text-[18px]">
                                   ₹{item?.offer_price}
                                 </span>
                                 {item?.price > item?.offer_price && (
@@ -468,9 +555,11 @@ const CheckOutLayout = () => {
                   </div>
 
                   <div className="mb-[16px] flex gap-3 justify-between">
-                    <span className="text-xl font-medium">Sub Total :</span>
+                    <span className="text-[18px] font-medium ">
+                      Sub Total :
+                    </span>
                     <div>
-                      <span className="text-lg font-semibold text-[#D41958]">
+                      <span className="text-lg font-semibold text-orange">
                         ₹{discoutnAmount}
                       </span>
                     </div>
@@ -486,7 +575,7 @@ const CheckOutLayout = () => {
                   </div> */}
 
                   <div className="mb-[16px] flex gap-3 justify-between">
-                    <span className="text-xl ">Coupon Discount</span>
+                    <span className="text-[18px] ">Coupon Discount</span>
                     <div>
                       <span className="text-lg font-semibold ">
                         -₹{coupanDiscount}
@@ -495,11 +584,11 @@ const CheckOutLayout = () => {
                   </div>
 
                   <div className="flex justify-between mb-[16px] py-[12px] rounded-xl ">
-                    <span className="text-xl font-medium">
+                    <span className="text-[18px] font-medium">
                       Collection Charges
                     </span>
                     <div>
-                      <span className="text-lg font-semibold text-[#D41958]">
+                      <span className="text-lg font-semibold text-orange">
                         ₹{" "}
                         {collectionType === "home-collection"
                           ? discoutnAmount - coupanDiscount <= 500
@@ -510,7 +599,7 @@ const CheckOutLayout = () => {
                     </div>
                   </div>
                   <div className="mb-[16px] border-t-[2px] border-[#12C644] border-dashed flex gap-3 py-[12px] justify-between">
-                    <span className="text-xl font-medium text-[#20A946]">
+                    <span className="text-[18px] font-medium text-[#20A946]">
                       Total Savings
                     </span>
                     <div>
@@ -520,9 +609,11 @@ const CheckOutLayout = () => {
                     </div>
                   </div>
                   <div className="mb-[16px] flex gap-3 justify-between">
-                    <span className="text-xl font-medium">Total Payable</span>
+                    <span className="text-[18px] font-medium">
+                      Total Payable
+                    </span>
                     <div>
-                      <span className="text-lg font-semibold text-[#D41958]">
+                      <span className="text-lg font-semibold text-orange">
                         ₹{payable}
                       </span>
                     </div>
@@ -594,7 +685,7 @@ const CheckOutLayout = () => {
                       />{" "}
                       <label
                         htmlFor="cod"
-                        className=" mb-0 checked-text font-source-pro"
+                        className=" mb-0 checked-text text-[18px] font-source-pro"
                       >
                         COD
                       </label>
@@ -611,105 +702,12 @@ const CheckOutLayout = () => {
                       />{" "}
                       <label
                         htmlFor="payment Type"
-                        className=" mb-0 checked-text font-source-pro"
+                        className=" mb-0 checked-text text-[18px] font-source-pro"
                       >
                         Online Payment
                       </label>
                     </div>
                   </div>
-                  <div className="my-3" />
-                  {collectionType === "home-collection" ? (
-                    <div>
-                      {/* Date Section */}
-                      <div className="grid gap-2 grid-cols-1">
-                        <div>
-                          <p className="text-[16px] text-gray-700">Date</p>
-                          <div className="flex gap-[6px]">
-                            <input
-                              type="date"
-                              id="date_add"
-                              placeholder="date_add"
-                              name="date_add"
-                              value={moment(
-                                new Date(sendData?.sampleCollectionDateTime)
-                              ).format("YYYY-MM-DD")}
-                              min={moment(new Date()).format("YYYY-MM-DD")} // Prevents past dates
-                              required
-                              onChange={(e) =>
-                                setSendData({
-                                  ...sendData,
-                                  sampleCollectionDateTime: e.target.value,
-                                })
-                              }
-                              className="text-gray-900 border rounded-lg font-[300] text-[16px] p-1 w-full"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="my-2" />
-
-                      {/* Time Slot Section */}
-                      <div>
-                        <p className="text-[16px] text-gray-700">Slot Time</p>
-                        <select
-                          required="required"
-                          tabIndex={3}
-                          className="form-select radius"
-                          name="relation"
-                          value={sendData?.timeslot}
-                          onChange={(e) => {
-                            setSendData({
-                              ...sendData,
-                              timeslot: e.target.value,
-                            });
-                            e.target.size = 1; // Collapse dropdown immediately after selection
-                          }}
-                          onClick={(e) => {
-                            e.target.size = 5; // Show 5 options on click
-                          }}
-                          onBlur={(e) => {
-                            setTimeout(() => {
-                              // Delay the collapse to prevent early collapse
-                              e.target.size = 1; // Collapse list on blur
-                            }, 100); // Wait a bit after clicking to avoid the immediate collapse
-                          }}
-                          style={{ position: "relative" }} // Ensures dropdown does not affect the layout
-                        >
-                          <option value="">Select Time Slot</option>
-                          {[
-                            "07:00 AM - 07:30 AM",
-                            "07:30 AM - 08:00 AM",
-                            "08:00 AM - 08:30 AM",
-                            "08:30 AM - 09:00 AM",
-                            "09:00 AM - 09:30 AM",
-                            "09:30 AM - 10:00 AM",
-                            "10:00 AM - 10:30 AM",
-                            "10:30 AM - 11:00 AM",
-                            "11:00 AM - 11:30 AM",
-                            "11:30 AM - 12:00 PM",
-                            "12:00 PM - 12:30 PM",
-                            "12:30 PM - 01:00 PM",
-                            "01:00 PM - 01:30 PM",
-                            "01:30 PM - 02:00 PM",
-                            "02:00 PM - 02:30 PM",
-                            "02:30 PM - 03:00 PM",
-                            "03:00 PM - 03:30 PM",
-                            "03:30 PM - 04:00 PM",
-                            "04:00 PM - 04:30 PM",
-                            "04:30 PM - 05:00 PM",
-                            "05:00 PM - 05:30 PM",
-                            "05:30 PM - 06:00 PM",
-                          ].map((slot, index) => (
-                            <option key={index} value={slot}>
-                              {slot}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-                  ) : (
-                    ""
-                  )}
                   <div className="my-2">
                     {/* {sendData.memberId && sendData.address ? ( */}
                     <BookingConfirm

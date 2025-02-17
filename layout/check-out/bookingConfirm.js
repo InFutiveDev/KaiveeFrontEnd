@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const BookingConfirm = ({ handleConfirmBooking, blur }) => {
   const route = useRouter();
@@ -9,7 +9,13 @@ const BookingConfirm = ({ handleConfirmBooking, blur }) => {
     setLoading(true);
     let res = await handleConfirmBooking();
     if (res?.success) {
-      route.push(`/booking-success?orderId=${res?.data?.data?.id}`);
+      if (res?.data?.data?.payment_method === "online") {
+        sessionStorage.setItem("pendingOrderId", res?.data?.data?.id);
+        sessionStorage.setItem("paymentPending", "true");
+        window.location.href = res?.data?.data?.payment_url;
+      } else {
+        route.push(`/booking-success?orderId=${res?.data?.data?.id}`);
+      }
     }
     setLoading(false);
   };
@@ -20,7 +26,7 @@ const BookingConfirm = ({ handleConfirmBooking, blur }) => {
         disabled={loading}
         className={`${
           blur ? "opacity-60" : "opacity-100"
-        } w-full bg-[#D41958] text-white rounded py-[10px] text-xs font-semibold`}
+        } w-full bg-orange text-white rounded py-[10px] text-xs font-semibold`}
         onClick={handleConfirm}
       >
         {loading ? "Processing..." : "Confirm Booking"}
