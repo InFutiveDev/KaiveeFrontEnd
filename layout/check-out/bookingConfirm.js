@@ -26,7 +26,7 @@ const BookingConfirm = ({ handleConfirmBooking, blur }) => {
         disabled={loading}
         className={`${
           blur ? "opacity-60" : "opacity-100"
-        } w-full bg-orange text-white rounded py-[10px] text-xs font-semibold`}
+        } w-full bg-[#D41958] text-white rounded py-[10px] text-xs font-semibold`}
         onClick={handleConfirm}
       >
         {loading ? "Processing..." : "Confirm Booking"}

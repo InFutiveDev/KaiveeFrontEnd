@@ -204,8 +204,8 @@ const CheckOutLayout = () => {
         <BreadCrumb active="Check Out" breadcrumblist={breadcrumblist} />
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 my-3">
           <div className="flex flex-col gap-4">
-            <div className="shadow-md bg-white border-[1px] border-[#E4E4E7] overflow-hidden rounded-xl">
-              <div className="py-[18px] px-[24px] bg-[#FFF4E0] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
+            <div className="shadow-md bg-white border-[1px] border-[#D41958] overflow-hidden rounded-xl">
+              <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                 <p ref={memberRef} className="text-lg font-semibold">
                   1. Add/Select Member
                 </p>
@@ -228,7 +228,7 @@ const CheckOutLayout = () => {
                         onClick={() => handleFamilyMembers(item)}
                         className={`cursor-pointer relative rounded-xl ${
                           sendData.memberId == item?._id
-                            ? "bg-[#FEF6E6] border-[1px] border-[#FCC42C]"
+                            ? "bg-[#D419580D] border-[1px] border-[#D41958]"
                             : "bg-white border-[1px] border-[#E4E4E7]"
                         }  p-[24px]`}
                       >
@@ -269,7 +269,7 @@ const CheckOutLayout = () => {
                   </div>
                   <div className="mt-[40px] flex justify-center gap-3">
                     <button
-                      className="flex gap-1 items-center bg-orange text-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                      className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"
                       onClick={() => setMemberOpen(true)}
                     >
                       <AiOutlinePlus className="text-lg" /> Add Member
@@ -277,7 +277,7 @@ const CheckOutLayout = () => {
                     <button
                       disabled={sendData?.memberId ? false : true}
                       onClick={() => setStep(2)}
-                      className="flex gap-1 items-center border-[1px] border-orange text-orange bg-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                      className="flex gap-1 items-center border-[1px] border-[#D41958] text-[#D41958] bg-white rounded px-[16px] py-[10px] text-xs font-semibold"
                     >
                       Next <BsArrowRight className="text-lg" />
                     </button>
@@ -286,8 +286,8 @@ const CheckOutLayout = () => {
               )}
             </div>
 
-            <div className="shadow-md bg-white border-[1px] border-[#E4E4E7] overflow-hidden rounded-xl">
-              <div className="py-[18px] px-[24px] bg-[#FFF4E0] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
+            <div className="shadow-md bg-white border-[1px] border-[#D41958] overflow-hidden rounded-xl">
+              <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                 <p id="address" className="text-lg font-semibold">
                   2. Add Address/Appointment Details
                 </p>
@@ -310,7 +310,7 @@ const CheckOutLayout = () => {
                           onClick={() => handleAddress(item)}
                           className={`cursor-pointer relative rounded-xl ${
                             sendData.address == item?._id
-                              ? "bg-[#FEF6E6] border-[1px] border-[#FCC42C]"
+                              ? "bg-[#D419580D] border-[1px] border-[#D41958]"
                               : "bg-white border-[1px] border-[#E4E4E7]"
                           } p-2`}
                         >
@@ -353,101 +353,11 @@ const CheckOutLayout = () => {
                     ))}
                   </div>
                   <div className="my-3" />
-                  {collectionType === "home-collection" ? (
-                    <div>
-                      {/* Date Section */}
-                      <div className="grid gap-2 grid-cols-1">
-                        <div>
-                          <p className="text-[16px] text-gray-700">Date</p>
-                          <div className="flex gap-[6px]">
-                            <input
-                              type="date"
-                              id="date_add"
-                              placeholder="date_add"
-                              name="date_add"
-                              value={moment(
-                                new Date(sendData?.sampleCollectionDateTime)
-                              ).format("YYYY-MM-DD")}
-                              min={moment(new Date()).format("YYYY-MM-DD")} // Prevents past dates
-                              required
-                              onChange={(e) =>
-                                setSendData({
-                                  ...sendData,
-                                  sampleCollectionDateTime: e.target.value,
-                                })
-                              }
-                              className="text-gray-900 border rounded-lg font-[300] text-[16px] p-1 w-full"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="my-2" />
-
-                      {/* Time Slot Section */}
-                      <div>
-                        <select
-                          required="required"
-                          tabIndex={3}
-                          className="form-select radius"
-                          name="relation"
-                          value={sendData?.timeslot}
-                          onChange={(e) => {
-                            setSendData({
-                              ...sendData,
-                              timeslot: e.target.value,
-                            });
-                            e.target.size = 1; // Collapse dropdown immediately after selection
-                          }}
-                          onClick={(e) => {
-                            e.target.size = 5; // Show 5 options on click
-                          }}
-                          onBlur={(e) => {
-                            setTimeout(() => {
-                              // Delay the collapse to prevent early collapse
-                              e.target.size = 1; // Collapse list on blur
-                            }, 100); // Wait a bit after clicking to avoid the immediate collapse
-                          }}
-                          style={{ position: "relative" }} // Ensures dropdown does not affect the layout
-                        >
-                          <option value="">Select Time Slot</option>
-                          {[
-                            "07:00 AM - 07:30 AM",
-                            "07:30 AM - 08:00 AM",
-                            "08:00 AM - 08:30 AM",
-                            "08:30 AM - 09:00 AM",
-                            "09:00 AM - 09:30 AM",
-                            "09:30 AM - 10:00 AM",
-                            "10:00 AM - 10:30 AM",
-                            "10:30 AM - 11:00 AM",
-                            "11:00 AM - 11:30 AM",
-                            "11:30 AM - 12:00 PM",
-                            "12:00 PM - 12:30 PM",
-                            "12:30 PM - 01:00 PM",
-                            "01:00 PM - 01:30 PM",
-                            "01:30 PM - 02:00 PM",
-                            "02:00 PM - 02:30 PM",
-                            "02:30 PM - 03:00 PM",
-                            "03:00 PM - 03:30 PM",
-                            "03:30 PM - 04:00 PM",
-                            "04:00 PM - 04:30 PM",
-                            "04:30 PM - 05:00 PM",
-                            "05:00 PM - 05:30 PM",
-                            "05:30 PM - 06:00 PM",
-                          ].map((slot, index) => (
-                            <option key={index} value={slot}>
-                              {slot}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-                  ) : (
-                    ""
-                  )}
+                  
 
                   <div className="mt-[40px] flex justify-center  gap-3">
                     <button
-                      className="flex gap-1 items-center bg-orange text-white rounded px-[16px] py-[10px] text-xs font-semibold"
+                      className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] text-xs font-semibold"
                       onClick={() => setOpen(true)}
                     >
                       <AiOutlinePlus className="text-lg" /> Add Address
@@ -459,8 +369,8 @@ const CheckOutLayout = () => {
             </div>
           </div>
           <div>
-            <div className="shadow-md bg-white border-[1px] border-[#E4E4E7] overflow-hidden rounded-xl">
-              <div className="py-[16px] px-[24px] bg-[#FFF4E0] border-b-[1px]  border-[#E4E4E7] ">
+            <div className="shadow-md bg-white border-[1px] border-[#D41958] overflow-hidden rounded-xl">
+              <div className="py-[16px] px-[24px] bg-[#D419580D] border-b-[1px]  border-[#E4E4E7] ">
                 <p className="text-lg font-semibold">Cart Summary</p>
               </div>
               <div className="p-[24px]">
@@ -489,7 +399,7 @@ const CheckOutLayout = () => {
                     />
                     <button
                       onClick={applyCoupan}
-                      className="flex gap-1 items-center bg-orange text-white rounded px-[16px] py-[10px] mr-1 text-xs font-semibold"
+                      className="flex gap-1 items-center bg-[#D41958] text-white rounded px-[16px] py-[10px] mr-1 text-xs font-semibold"
                     >
                       Apply
                     </button>
@@ -559,7 +469,7 @@ const CheckOutLayout = () => {
                       Sub Total :
                     </span>
                     <div>
-                      <span className="text-lg font-semibold text-orange">
+                      <span className="text-lg font-semibold text-[#D41958]">
                         ₹{discoutnAmount}
                       </span>
                     </div>
@@ -588,7 +498,7 @@ const CheckOutLayout = () => {
                       Collection Charges
                     </span>
                     <div>
-                      <span className="text-lg font-semibold text-orange">
+                      <span className="text-lg font-semibold text-[#D41958]">
                         ₹{" "}
                         {collectionType === "home-collection"
                           ? discoutnAmount - coupanDiscount <= 500
@@ -613,7 +523,7 @@ const CheckOutLayout = () => {
                       Total Payable
                     </span>
                     <div>
-                      <span className="text-lg font-semibold text-orange">
+                      <span className="text-lg font-semibold text-[#D41958]">
                         ₹{payable}
                       </span>
                     </div>
@@ -708,6 +618,97 @@ const CheckOutLayout = () => {
                       </label>
                     </div>
                   </div>
+                  {collectionType === "home-collection" ? (
+                    <div>
+                      {/* Date Section */}
+                      <div className="grid gap-2 grid-cols-1">
+                        <div>
+                          <p className="text-[16px] text-gray-700">Date</p>
+                          <div className="flex gap-[6px]">
+                            <input
+                              type="date"
+                              id="date_add"
+                              placeholder="date_add"
+                              name="date_add"
+                              value={moment(
+                                new Date(sendData?.sampleCollectionDateTime)
+                              ).format("YYYY-MM-DD")}
+                              min={moment(new Date()).format("YYYY-MM-DD")} // Prevents past dates
+                              required
+                              onChange={(e) =>
+                                setSendData({
+                                  ...sendData,
+                                  sampleCollectionDateTime: e.target.value,
+                                })
+                              }
+                              className="text-gray-900 border rounded-lg font-[300] text-[16px] p-1 w-full"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="my-2" />
+
+                      {/* Time Slot Section */}
+                      <div>
+                        <select
+                          required="required"
+                          tabIndex={3}
+                          className="form-select radius"
+                          name="relation"
+                          value={sendData?.timeslot}
+                          onChange={(e) => {
+                            setSendData({
+                              ...sendData,
+                              timeslot: e.target.value,
+                            });
+                            e.target.size = 1; // Collapse dropdown immediately after selection
+                          }}
+                          onClick={(e) => {
+                            e.target.size = 5; // Show 5 options on click
+                          }}
+                          onBlur={(e) => {
+                            setTimeout(() => {
+                              // Delay the collapse to prevent early collapse
+                              e.target.size = 1; // Collapse list on blur
+                            }, 100); // Wait a bit after clicking to avoid the immediate collapse
+                          }}
+                          style={{ position: "relative" }} // Ensures dropdown does not affect the layout
+                        >
+                          <option value="">Select Time Slot</option>
+                          {[
+                            "07:00 AM - 07:30 AM",
+                            "07:30 AM - 08:00 AM",
+                            "08:00 AM - 08:30 AM",
+                            "08:30 AM - 09:00 AM",
+                            "09:00 AM - 09:30 AM",
+                            "09:30 AM - 10:00 AM",
+                            "10:00 AM - 10:30 AM",
+                            "10:30 AM - 11:00 AM",
+                            "11:00 AM - 11:30 AM",
+                            "11:30 AM - 12:00 PM",
+                            "12:00 PM - 12:30 PM",
+                            "12:30 PM - 01:00 PM",
+                            "01:00 PM - 01:30 PM",
+                            "01:30 PM - 02:00 PM",
+                            "02:00 PM - 02:30 PM",
+                            "02:30 PM - 03:00 PM",
+                            "03:00 PM - 03:30 PM",
+                            "03:30 PM - 04:00 PM",
+                            "04:00 PM - 04:30 PM",
+                            "04:30 PM - 05:00 PM",
+                            "05:00 PM - 05:30 PM",
+                            "05:30 PM - 06:00 PM",
+                          ].map((slot, index) => (
+                            <option key={index} value={slot}>
+                              {slot}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                   <div className="my-2">
                     {/* {sendData.memberId && sendData.address ? ( */}
                     <BookingConfirm
