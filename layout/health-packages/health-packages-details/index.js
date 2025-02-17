@@ -191,7 +191,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
               alt="Health Package Banner"
               fill
               priority
-              className="object-cover w-full h-full"
+              className="object-contain w-full h-full"
               sizes="100vw"
             />
           </div>

@@ -8,15 +8,15 @@ const Testimonial = () => {
       name: "Lokesh Singh",
     },
     {
-      text: "Very efficient ad prompt. Have well established contactless transfer of info, receipts and data. Dev from Zen health extends great co-operation and co-ordination.Strongly recommend to avail their services",
+      text: "Very efficient ad prompt. Have well established contactless transfer of info, receipts and data. Dev from Kaivee HealthCare extends great co-operation and co-ordination.Strongly recommend to avail their services",
       name: "Rahul Vats",
     },
     {
-      text: "Recently I got my test done from Zen Health Solutions, I would highly recommend zen health if you are looking for reasonable prices, clean environment with accurate and on-time results. Best services I got ever",
+      text: "Recently I got my test done from Kaivee HEalthCare, I would highly recommend Kaivee HealthCare if you are looking for reasonable prices, clean environment with accurate and on-time results. Best services I got ever",
       name: "Sonu Goel",
     },
     {
-      text: "Zen Health is a very professional establishment and their services are the best bar none. Also, the reports usually arrive before the expected time. Quite happy and satisfied with my experience with them",
+      text: "Kaivee HealthCare is a very professional establishment and their services are the best bar none. Also, the reports usually arrive before the expected time. Quite happy and satisfied with my experience with them",
       name: "Sadh Khan",
     },
   ];
