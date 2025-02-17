@@ -84,6 +84,8 @@ const ClinicalResearchLayout = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,
+    autoplayspeed: 2000,
     nextArrow: <LeftArrow />,
     prevArrow: <RightArrow />,
   };
@@ -127,7 +129,7 @@ const ClinicalResearchLayout = () => {
           email: "",
           mobile_number: "",
           write_up: "",
-          inquiry_from: "city x-ray website",
+          inquiry_from: "kaivee website",
         });
       } else {
         setLoading(false);
@@ -161,8 +163,8 @@ const ClinicalResearchLayout = () => {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Advancing Healthcare Through Reliable Clinical Research</h2>
-          <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
-            At <span className="font-bold">Kaivee Healthcare</span>, we’re committed to driving medical progress through <span className="font-bold">ethical, precise, and data-driven clinical research</span> that shapes the future of healthcare.
+          <p className="lg:text-[18px] md:text-[18px] text-[14px] text-[#71717A]">
+            At Kaivee Healthcare, we’re committed to driving medical progress through ethical, precise, and data-driven clinical research that shapes the future of healthcare.
           </p>
 
 
@@ -174,13 +176,13 @@ const ClinicalResearchLayout = () => {
 
 
       {/* Key Stats */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-10">
         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { number: "100+", label: "Clinical Studies" },
             { number: "22+", label: "Publications" },
             { number: "25+", label: "Clinical Trials" },
-            { number: "30+", label: "Years Experience" },
+            { number: "4+", label: "Years Experience" },
           ].map((stat, index) => (
             <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
               <div className="text-4xl font-bold text-pink-600 mb-2">{stat.number}</div>
@@ -191,14 +193,14 @@ const ClinicalResearchLayout = () => {
       </section>
 
       {/* Content Section Above Research Focus Areas */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-10 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Why Clinical Research Matters</h2>
           <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
-            <span className="font-bold">Kaivee Healthcare</span> isn’t just a trusted name in diagnostics—we’re also at the forefront of <span className="font-bold">clinical research and development</span>. Our state-of-the-art facilities, combined with a team of experienced researchers, enable us to conduct high-quality <span className="font-bold">clinical studies</span> that contribute to new medical discoveries, improved treatments, and patient care innovations.
+            Kaivee Healthcare isn’t just a trusted name in diagnostics—we’re also at the forefront of clinical research and development. Our state-of-the-art facilities, combined with a team of experienced researchers, enable us to conduct high-quality clinical studies that contribute to new medical discoveries, improved treatments, and patient care innovations.
           </p>
           <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
-            We collaborate with <span className="font-bold">pharmaceutical companies</span>, <span className="font-bold">healthcare institutions</span>, and <span className="font-bold">research organizations</span> to ensure our studies meet the highest standards of <span className="font-bold">ethics, accuracy, and reliability</span>.
+            We collaborate with pharmaceutical companies, healthcare institutions, and research organizations to ensure our studies meet the highest standards of ethics, accuracy, and reliability.
           </p>
 
           {/* <button className="bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-pink-700 transition-colors font-medium">
@@ -209,7 +211,7 @@ const ClinicalResearchLayout = () => {
 
 
       {/* Research Focus Areas */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Our Research Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -233,7 +235,7 @@ const ClinicalResearchLayout = () => {
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <img src={area.icon.src} alt={area.title} className="w-16 h-16 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">{area.title}</h3>
-                <p className="text-gray-600">{area.content}</p>
+                <p className="text-[14px] text-gray-600">{area.content}</p>
               </div>
             ))}
           </div>
@@ -241,7 +243,7 @@ const ClinicalResearchLayout = () => {
       </section>
 
       {/* Interactive Process Timeline */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Our Research Process</h2>
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
@@ -256,7 +258,7 @@ const ClinicalResearchLayout = () => {
                   {step.step}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.desc}</p>
+                <p className="text-gray-600 text-[14px]">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -264,7 +266,7 @@ const ClinicalResearchLayout = () => {
       </section>
 
       {/* Enhanced Testimonials */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Trusted By Researchers</h2>
           <Slider {...settings} className="px-12">
@@ -290,115 +292,109 @@ const ClinicalResearchLayout = () => {
       </section>
 
       {/* Modern Contact Form */}
-      <section className="py-16 bg-white">
-        <div className="w-full px-4">
-          <div className=" mx-auto bg-gradient-to-br from-blue-50 to-gray-50 p-8 rounded-xl shadow-lg">
-            <h2 className="text-3xl font-bold mb-8 text-center">Partner With Us</h2>
+      <section className="py-8 bg-white">
+  <div className="w-full px-4">
+    <div className="mx-auto bg-gradient-to-br from-green-50 to-gray-50 p-6 rounded-xl shadow-lg max-[85px]">
+      <h2 className="text-2xl font-bold mb-6 text-center">Partner With Us</h2>
 
-            {/* Original Enquiry Form */}
-            <div className="border border-[#E4E4E7] bg-white p-[24px] rounded-[24px] w-full">
-              <div
-                className="p-[20px] md:p-[23px] rounded-[10px] mb-[12px]"
-                style={{
-                  background: "rgb(199, 229, 247)"
-                }}
-              >
-                <div className="flex justify-center gap-x-2 flex-nowrap items-center">
-                  <FacilitesBooksSvg />
-                  <p className="text-[#3F3F46] xl:text-xl lg:text-[18px] md:text-[18px] text-[14px] font-bold font-source-pro">
-                    Get in Touch!
-                  </p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                {/* First Row: Name, Email, Phone */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {/* Name Field */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Your Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="your_name"
-                      value={payload?.your_name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter Your Name"
-                    />
-                    {errorKeyName === "your_name" && (
-                      <p className="text-red-500 text-sm mt-1">Please enter your name</p>
-                    )}
-                  </div>
-
-                  {/* Email Field */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={payload?.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter Your Email"
-                    />
-                    {errorKeyName === "email" && (
-                      <p className="text-red-500 text-sm mt-1">Please enter a valid email</p>
-                    )}
-                  </div>
-
-                  {/* Phone Field */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Mobile Number *
-                    </label>
-                    <input
-                      type="text"
-                      name="mobile_number"
-                      value={payload?.mobile_number}
-                      maxLength="10"
-                      onChange={(e) =>
-                        /^[0-9]*$/.test(e.target.value) && handleChange(e)
-                      }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter Mobile Number"
-                    />
-                    {errorKeyName === "mobile_number" && (
-                      <p className="text-red-500 text-sm mt-1">Please enter a valid number</p>
-                    )}
-                  </div>
-                </div>
-
-                {/* Second Row: Message */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Message</label>
-                  <textarea
-                    name="write_up"
-                    value={payload?.write_up}
-                    onChange={handleChange}
-                    rows="4"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your message"
-                  ></textarea>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  onClick={handleSubmit}
-                  disabled={loading}
-                  className="w-full bg-pink-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  {loading ? "Submitting..." : "Submit Enquiry"}
-                </button>
-              </div>
-            </div>
+      {/* Enquiry Form */}
+      <div className="border border-[#E4E4E7] bg-white p-6 rounded-xl">
+        <div
+          className="p-4 rounded-lg mb-4"
+          style={{ background: "rgb(199, 229, 247)" }}
+        >
+          <div className="flex justify-center gap-x-2 items-center">
+            <FacilitesBooksSvg />
+            <p className="text-[#3F3F46] font-semibold text-lg">Get in Touch!</p>
           </div>
         </div>
-      </section>
+
+        <div className="space-y-6">
+          {/* First Row: Name, Email, Phone */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Name Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Your Name *</label>
+              <input
+                type="text"
+                name="your_name"
+                value={payload?.your_name}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter Your Name"
+              />
+              {errorKeyName === "your_name" && (
+                <p className="text-red-500 text-sm mt-1">Please enter your name</p>
+              )}
+            </div>
+
+            {/* Email Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Email *</label>
+              <input
+                type="email"
+                name="email"
+                value={payload?.email}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter Your Email"
+              />
+              {errorKeyName === "email" && (
+                <p className="text-red-500 text-sm mt-1">Please enter a valid email</p>
+              )}
+            </div>
+          </div>
+
+          {/* Second Row: Phone & Message */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Phone Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Mobile Number *</label>
+              <input
+                type="text"
+                name="mobile_number"
+                value={payload?.mobile_number}
+                maxLength="10"
+                onChange={(e) =>
+                  /^[0-9]*$/.test(e.target.value) && handleChange(e)
+                }
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter Mobile Number"
+              />
+              {errorKeyName === "mobile_number" && (
+                <p className="text-red-500 text-sm mt-1">Please enter a valid number</p>
+              )}
+            </div>
+
+            {/* Message Field */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Message</label>
+              <textarea
+                name="write_up"
+                value={payload?.write_up}
+                onChange={handleChange}
+                rows="3"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            disabled={loading}
+            className="w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors font-medium"
+          >
+            {loading ? "Submitting..." : "Submit Enquiry"}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
       {/* Interactive Map Section */}
@@ -414,138 +410,7 @@ const ClinicalResearchLayout = () => {
         </div>
       </section>
 
-      {/* <div>
-        <div className="container  py-[35px] md:py-[70px]">
-          <p className="text-black font-semibold lg:text-[32px] text-lg mb-[20px]">
-            Research is creating new Knowledge
-          </p>
-          <div className="flex flex-col gap-y-2">
-            <p className="text-secondary lg:text-[18px] text-[14px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore
-            </p>
-            <p className="text-secondary lg:text-[18px] text-[14px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FAFAFA]">
-        <div className="container  py-[35px] md:py-[70px]">
-          <div className="flex flex-col gap-6">
-            <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 rounded-xl shadow-md bg-white lg:p-[40px] p-[15px]">
-              <div className="rounded-xl border-[1px] border-[#FFE9BC] lg:p-[24px] p-[15px]">
-                <div>
-                  <img src={ImagesOne.src} width={"100%"} />
-                </div>
-                <div className="mt-[10px] flex gap-[10px] justify-between items-center">
-                  <div className="lg:flex gap-3 items-center">
-                    <div className="lg:mb-0 mb-2">
-                      <Pdfsvg />
-                    </div>
-                    <div>
-                      <p className="text-black font-semibold lg:text-lg text-[14px]">
-                        Research is creating new Knowledge
-                      </p>
-                      <span className="text-secondary text-[14px]">
-                        1 Page . 1.8 MB . PDF
-                      </span>
-                    </div>
-                  </div>
-                  <div>
-                    <DownloadSVG />
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-xl border-[1px] border-[#FFE9BC] lg:p-[24px] p-[15px]">
-                <div className="lg:mb-0 mb-2">
-                  <img src={ImagesOne.src} width={"100%"} />
-                </div>
-                <div className=" mt-[10px] flex justify-between items-center">
-                  <div className="lg:flex gap-3  items-center">
-                    <div className="lg:mb-0 mb-2">
-                      <FileExplorSVG />
-                    </div>
-                    <div>
-                      <p className="text-black font-semibold lg:text-lg text-[14px]">
-                        Research is creating new Knowledge
-                      </p>
-                      <span className="text-secondary text-[14px]">
-                        1 Page . 1.8 MB . PDF
-                      </span>
-                    </div>
-                  </div>
-                  <div>
-                    <EyeYellowBgSVG />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 rounded-xl shadow-md bg-white lg:p-[40px] p-[15px]">
-              <div className="rounded-xl border-[1px] border-[#FFE9BC] p-[24px]">
-                <div>
-                  <img src={ImagesOne.src} width={"100%"} />
-                </div>
-                <div className=" mt-[10px] flex justify-between items-center">
-                  <div className="lg:flex gap-3 items-center">
-                    <div className="lg:mb-0 mb-2">
-                      <Pdfsvg />
-                    </div>
-                    <div>
-                      <p className="text-black font-semibold lg:text-lg text-[14px]">
-                        Research is creating new Knowledge
-                      </p>
-                      <span className="text-secondary text-[14px]">
-                        1 Page . 1.8 MB . PDF
-                      </span>
-                    </div>
-                  </div>
-                  <div>
-                    <DownloadSVG />
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-xl border-[1px] border-[#FFE9BC] p-[24px]">
-                <div>
-                  <img src={ImagesOne.src} width={"100%"} />
-                </div>
-                <div className=" mt-[10px] flex justify-between items-center">
-                  <div className="lg:flex gap-3 items-center">
-                    <div className="lg:mb-0 mb-2">
-                      <FileExplorSVG />
-                    </div>
-                    <div>
-                      <p className="text-black font-semibold lg:text-lg text-[14px]">
-                        Research is creating new Knowledge
-                      </p>
-                      <span className="text-secondary text-[14px]">
-                        1 Page . 1.8 MB . PDF
-                      </span>
-                    </div>
-                  </div>
-                  <div>
-                    <EyeYellowBgSVG />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <WhyChoose data={data} />
-      </div> */}
+      
     </>
   );
 };

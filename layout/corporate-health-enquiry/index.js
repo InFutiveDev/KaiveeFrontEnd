@@ -47,36 +47,36 @@ const CorporateHealthLayout = () => {
                 </p>
 
 
-                <h2 className="text-[16px] lg:text-[24px] md:text-[18x]  font-semibold font-source-pro">
+                <h2 className="text-[16px] lg:text-[24px] md:text-[18x]  font-semibold font-source-pro mt-2 mb-2">
                   Key Benefits of Corporate Health Enquiry
                 </h2>
                 {/* <p className="text-black font-semibold text-[32px] "></p> */}
                 <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
-                  <b>1.  Improved Employee Well-Being:</b> Regular health check-ups and preventive care can <strong>identify health risks </strong>  early, leading to healthier, more engaged employees.
+                  <b>1.  Improved Employee Well-Being:</b> Regular health check-ups and preventive care can identify health risks  early, leading to healthier, more engaged employees.
                 </p>
                 <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl  ">
-                  <b>2.  Boost Productivity & Engagement:</b> A healthier workforce is a more productive one. Offering healthcare benefits shows your employees that you care, leading to higher <strong>job satisfaction and increased engagement</strong> .
+                  <b>2.  Boost Productivity & Engagement:</b> A healthier workforce is a more productive one. Offering healthcare benefits shows your employees that you care, leading to higher job satisfaction and increased engagement .
                 </p>
                 <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl">
-                  <b> 3.  Cost-Effective Healthcare Solutions:</b> Offering health services through corporate tie-ups is<strong> more affordable </strong> than individual health plans. It's an <strong> investment in long-term productivity </strong>and reduced absenteeism.
+                  <b> 3.  Cost-Effective Healthcare Solutions:</b> Offering health services through corporate tie-ups is more affordable than individual health plans. It's an  investment in long-term productivity and reduced absenteeism.
                 </p>
                 <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
-                  <b>4.  Comprehensive Health Screenings:</b> We offer a variety of<strong> health packages </strong>designed specifically for organizations. From basic screenings to advanced tests, our packages are customizable to fit your company's needs.
+                  <b>4.  Comprehensive Health Screenings:</b> We offer a variety of health packages designed specifically for organizations. From basic screenings to advanced tests, our packages are customizable to fit your company's needs.
                 </p>
                 <p className="text-secondary text-[18px] lg:text-[18px] md:text-xl">
-                  <b>5.  Convenient Services:</b> Our services are designed with your employees' convenience in mind, including<strong> on-site check-ups, home sample collections, and easy access to reports</strong>.
+                  <b>5.  Convenient Services:</b> Our services are designed with your employees' convenience in mind, including on-site check-ups, home sample collections, and easy access to reports.
 
                 </p>
                 <p className="text-secondary text-[18px]  lg:text-[18px] md:text-xl">
-                  <b> 6. Data-Driven Insights:</b> Access detailed <strong>health reports and analytics </strong> that can help your company monitor overall employee health trends and identify potential wellness programs.
+                  <b> 6. Data-Driven Insights:</b> Access detailed health reports and analytics that can help your company monitor overall employee health trends and identify potential wellness programs.
                 </p>
 
                 <p>
-                  By integrating <span className="font-bold">Kaivee Healthcare</span> into your organization's health
-                  initiatives, you are investing in <span className="font-bold">preventive care</span>, <span className="font-bold">wellness</span>,
+                  By integrating Kaivee Healthcare into your organization's health
+                  initiatives, you are investing in preventive care, wellness,
                   and the overall success of your team.
                 </p>
-                <p>Let us help you create a healthier, happier, and more productive workplace.</p>
+                <p className="text-[#D41958] mt-2">Let us help you create a healthier, happier, and more productive workplace.</p>
               </div>
             </div>
             <div className="col-span-1 h-min  sticky lg:top-[197px] xl:top-[161px]  lg:order-last order-first">

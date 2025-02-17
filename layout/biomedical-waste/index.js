@@ -94,8 +94,8 @@ const BiomedicalWasteLayout = () => {
           <BiomedicalWasteBanner />
         </div>
       </section>
-      <div className="w-full bg-pink-50">
-  <h1 className="text-2xl font-semibold text-black font-source-pro text-center">
+      <div className="w-full bg-pink-50 py-4">
+  <h1 className="text-2xl  text-black font-source-pro text-center">
     Select Month and Year to View Biomedical Waste Data
   </h1>
 
@@ -206,31 +206,7 @@ const BiomedicalWasteLayout = () => {
                 </tbody>
               ) : null}
             </table>
-            {/* {bioWaste?.data?.wasteData?.length ? (
-              <ReactPaginate
-                previousLabel={
-                  <span>
-                    <ArrowLeft />
-                  </span>
-                }
-                nextLabel={
-                  <span>
-                    {" "}
-                    <ArrowRight />{" "}
-                  </span>
-                }
-                pageCount={count || 1}
-                activeClassName="active"
-                forcePage={currentPage !== 0 ? currentPage - 1 : 0}
-                onPageChange={(page) => handlePagination(page)}
-                pageClassName={"page-item"}
-                nextClassName={"page-item next"}
-                pageLinkClassName={"page-link"}
-                containerClassName={
-                  "pagination react-paginate justify-content-center my-2 pr-1 font-[500] !text-[18px]"
-                }
-              />
-            ) : null} */}
+            
           </div>
         </div>
       </div>
