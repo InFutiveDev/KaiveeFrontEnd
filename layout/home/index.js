@@ -28,10 +28,10 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 
 import icon2 from "assets/images/home/banner/icon-1.png";
-import icon3 from "assets/images/home/banner/icon-2.png";
-import icon4 from "assets/images/home/banner/icon-3.png";
-import icon5 from "assets/images/home/banner/5.png";
-import icon6 from "assets/images/home/banner/icon-4.png";
+import icon3 from "assets/images/home/banner/2.png";
+import icon4 from "assets/images/whychooseus/icon-3.png";
+
+import icon6 from "assets/images/home/banner/prescription.png";
 
 const Homebanner = dynamic(() => import("./homeBanner"));
 const BookingCard = dynamic(() => import("./bookingCard"));
@@ -636,13 +636,13 @@ const data = [
   },
   {
     id: 6,
-    title: "100+ Labs",
+    title: "Most Affordable Prices",
 
     icon: <Image src={img6} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
-    title: "3000+ Collection Centres",
+    title: "Painless Sample Collection",
 
     icon: <Image src={img7} alt="collection Icon" />,
   },

@@ -177,13 +177,13 @@ const data=[
   },
   {
     id: 6,
-    title: "100+ Labs",
+    title: "Most Affordable Prices",
     
     icon: <Image src={img66} alt="NABL Accredited Icon" />,
   },
   {
     id: 7,
-    title: "3000+ Collection Centres",
+    title: "Painless Sample Collection",
     
     icon: <Image src={img77} alt="collection Icon" />,
   },

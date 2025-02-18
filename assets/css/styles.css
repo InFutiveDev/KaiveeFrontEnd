@@ -931,7 +931,7 @@ ul.slick-dots {
   list-style-type: none !important;
 }
 
-ul.slick-dots li>button {
+/* ul.slick-dots li>button {
   background: #fff;
   border: none;
   margin: 0 2px;
@@ -946,8 +946,8 @@ ul.slick-dots li>button {
 
 ul.slick-dots li.slick-active>button {
   background: #ed1d26;
-  /* border: 3px solid #fff; */
-}
+ 
+} */
 
 .blog_inner_col {
   background: #fff;

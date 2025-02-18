@@ -2243,13 +2243,13 @@ section.space.special_offer ul.slick-dots {
       rgba(255, 208, 210, 0.4) 100%);
 }
 
-button.slick-prev.slick-arrow {
+/* button.slick-prev.slick-arrow {
   font-size: 0;
   width: 40px;
   height: 40px;
   border: none;
   position: absolute;
-  /* transform: rotate(180deg); */
+ 
   left: -2%;
   top: 46%;
   background-color: #D41958;
@@ -2259,7 +2259,7 @@ button.slick-prev.slick-arrow {
   display: flex !important;
   justify-content: center;
   align-items: center;
-}
+} */
 
 @media (max-width: 576px) {
   button.slick-prev.slick-arrow {
@@ -2293,7 +2293,7 @@ button.slick-prev.slick-arrow {
   align-items: center;
 }
 
-button.slick-next.slick-arrow {
+/* button.slick-next.slick-arrow {
   font-size: 0;
   width: 40px;
   height: 40px;
@@ -2305,11 +2305,11 @@ button.slick-next.slick-arrow {
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  /* padding-top: 5px; */
+  
   display: flex !important;
   justify-content: center;
   align-items: center;
-}
+} */
 
 @media(max-width: 576px) {
   button.slick-next.slick-arrow {

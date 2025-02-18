@@ -1,17 +1,50 @@
 import React from "react";
 import CsrBanner from "./CsrBanner";
-import CsrImgOne from "assets/images/about/csr/s1.png";
-import CsrImgTwo from "assets/images/about/csr/logo-3.png";
-import CsrImgThree from "assets/images/about/csr/logo-4.png";
-import CsrImgFour from "assets/images/about/csr/logo-5.png";
-import CsrImgFive from "assets/images/about/csr/logo-7.png";
-import CsrImgSix from "assets/images/about/csr/logo-8.png";
-import CsrImgSeven from "assets/images/about/csr/logo2.png";
-import CsrImgEight from "assets/images/about/csr/logo6.png";
+import CsrImgOne from "assets/images/about/csr/slider/1.jpg";
+import CsrImgTwo from "assets/images/about/csr/slider/2.jpg";
+import CsrImgThree from "assets/images/about/csr/slider/3.jpg";
+import CsrImgFour from "assets/images/about/csr/slider/4.jpg";
+import CsrImgFive from "assets/images/about/csr/slider/5.jpg";
+import CsrImgSix from "assets/images/about/csr/slider/6.jpg";
+import CsrImgSeven from "assets/images/about/csr/slider/7.jpg";
+import CsrImgEight from "assets/images/about/csr/slider/8.jpg";
+import CsrImgNine from "assets/images/about/csr/slider/9.jpg";
+import CsrImgTen from "assets/images/about/csr/slider/10.jpg";
+import CsrImgEeleven from "assets/images/about/csr/slider/11.jpg";
+import CsrImgTwelve from "assets/images/about/csr/slider/12.jpg";
+import CsrImgThirteen from "assets/images/about/csr/slider/13.jpg";
+import CsrImgFourteen from "assets/images/about/csr/slider/14.jpg";
 // import CsrImgNine from "assets/images/about/csr/Rectangle 27036 (2).png";
 // import CsrImgTen from "assets/images/about/csr/Rectangle 27037.png";
 // import CsrImgEleven from "assets/images/about/csr/Rectangle 27037 (1).png";
 import Image from "next/image";
+import Slider from "react-slick";
+
+const images = [
+  CsrImgOne, CsrImgTwo, CsrImgThree, CsrImgFour, CsrImgFive,
+  CsrImgSix, CsrImgSeven, CsrImgEight, CsrImgNine, CsrImgTen,
+  CsrImgEeleven, CsrImgTwelve, CsrImgThirteen, CsrImgFourteen,
+  CsrImgSeven,CsrImgThree
+];
+
+// Group images into sets of 8 (for 4x2 layout)
+const chunkArray = (arr, size) => {
+  return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  );
+};
+const imageGroups = chunkArray(images, 8); // Each group contains 8 images
+
+const settings = {
+  autoplay: true,
+  autoplaySpeed: 3000,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1, // Each slide contains 8 images in 4x2 layout
+  slidesToScroll: 1,
+  dots: true,
+};
+  
 
 const CsrLayout = () => {
   return (
@@ -32,8 +65,8 @@ const CsrLayout = () => {
             Established in 2021, Kaivee Healthcare began its journey with a single collection center in Gurugram. Since then, we've
             evolved and expanded our services, driven by our commitment to providing exceptional healthcare solutions and fostering a culture of well-being.
            </p>
-           <h2 className="text-[22px] mt-2">Breaking New Grounds</h2>
-            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mt-2 mb-2">
+           <h2 className="text-[22px] mt-4">Breaking New Grounds</h2>
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A] mt-4 mb-2">
             The year 2022 marked a pivotal moment in Kaivee Healthcare's journey. seizing an opportunity to serve on a larger scale, Kaivee Healthcare ventured into the B2B sector with Samsung Display Noida. This collaboration not only expanded our reach but also introduced us to new
             avenues of service, conducting antigen and PHP tests with excellence.
             </p>
@@ -41,66 +74,28 @@ const CsrLayout = () => {
             
 
           </div>
-          <div className="quality-assurance-slider-main px-[73px]">
-            <div className="grid grid-cols-3 grid-flow-row-9 grid-flow-row-dense gap-4">
-              <div className="row-span-1">
+          <div className="quality-assurance-slider-main px-4">
+      <Slider {...settings}>
+        {imageGroups.map((group, index) => (
+          <div key={index} className="p-6">
+            <div className="grid grid-cols-4 grid-rows-2 gap-4">
+              {group.map((img, i) => (
                 <Image
-                  src={CsrImgOne}
-                  width={200}
-                  height={170}
-                  className="w-full"
-                  alt="CsrImgOne"
+                  key={i}
+                  src={img}
+                  width={300}
+                  height={270}
+                  className="w-full rounded-lg"
+                  alt={`CSR Image ${i + 1}`}
                 />
-              </div>
-              <div className="row-span-2">
-                <Image
-                  src={CsrImgTwo}
-                  width={200}
-                  height={170}
-                  className="w-full"
-                  alt="CsrImgTwo"
-                />
-              </div>
-              <div className="row-span-2">
-                <Image
-                  src={CsrImgThree}
-                  width={200}
-                  height={170}
-                  className="w-full"
-                  alt="CsrImgThree"
-                />
-              </div>
-              <div className="row-span-3">
-                <Image
-                  src={CsrImgFour}
-                  width={200}
-                  height={170}
-                  className="w-full"
-                  alt="CsrImgFour"
-                />
-              </div>
-              <div className="row-span-3">
-                <Image
-                  src={CsrImgSeven}
-                  width={200}
-                  height={170}
-                  className="w-full"
-                  alt="CsrImgFive"
-                />
-              </div>
-              <div className="row-span-3">
-                <Image
-                  src={CsrImgSix}
-                  width={200}
-                  height={170}
-                  className="w-full"
-                  alt="CsrImgSix"
-                />
-              </div>
-
-             
+              ))}
             </div>
           </div>
+        ))}
+      </Slider>
+    </div>
+             
+          
         </div>
       </div>
       <div className="bg-[#D419580D]">

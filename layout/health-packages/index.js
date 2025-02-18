@@ -112,7 +112,7 @@ const HealthPackagesLayout = ({ healthPackages }) => {
             Best Health Checkup Packages at Affordable Prices
           </h2>
 
-          <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
+          <p className="lg:text-[18px] md:text-[18px] text-[14px] text-[#71717A]">
             Quality healthcare shouldn’t come with a hefty price tag. At
              Kaivee Healthcare, we offer the best health checkup packages
             at affordable rates without compromising on accuracy or
@@ -121,25 +121,25 @@ const HealthPackagesLayout = ({ healthPackages }) => {
 
           <ul className="md:ml-[10px] flex flex-col gap-2 mt-[10px]">
             <li
-              className="text-secondary text-[16px] lg:text-[16px] md:text-xl ml-[30px]"
+              className="text-secondary text-[18px] lg:text-[18px] md:text-xl ml-[30px]"
               style={{ listStyleType: "disc" }}
             >
                <strong>Transparent Pricing </strong>: No hidden costs—just clear, upfront rates.
             </li>
             <li
-              className="text-secondary text-[16px] lg:text-[16px] md:text-xl ml-[30px]"
+              className="text-secondary text-[18px] lg:text-[18px] md:text-xl ml-[30px]"
               style={{ listStyleType: "disc" }}
             >
                <strong>Comprehensive Test Panels</strong>: Covering everything from basic blood tests to advanced diagnostics.
             </li>
             <li
-              className="text-secondary text-[16px] lg:text-[16px] md:text-xl ml-[30px]"
+              className="text-secondary text-[18px] lg:text-[18px] md:text-xl ml-[30px]"
               style={{ listStyleType: "disc" }}
             >
                <strong>Quick Turnaround</strong>: Fast reporting without compromising accuracy.
             </li>
             <li
-              className="text-secondary text-[16px] lg:text-[16px] md:text-xl ml-[30px]"
+              className="text-secondary text-[18px] lg:text-[18px] md:text-xl ml-[30px]"
               style={{ listStyleType: "disc" }}
             >
                <strong>Convenient Home Sample Collection</strong>: Get tested from the comfort of your home.
@@ -156,10 +156,10 @@ const HealthPackagesLayout = ({ healthPackages }) => {
       </div>
       <div className="background-image-health flex justify-center items-center ">
         <div className="flex px-[30px] justify-center items-center flex-col gap-4">
-          <p className="text-white text-center text-[40px] font-source-pro font-bold pb-2">
+          <p className="text-black text-center text-[40px] font-source-pro font-bold pb-2">
             Prioritize Your Health Today!
           </p>
-          <p className="text-white text-center font-normal pb-3">
+          <p className="text-black text-center font-normal pb-3">
              Book Your Health Package Now | Home Sample Collection Available | Get Reports Online, Fast & Hassle-Free
           </p>
           <div className="flex gap-2">
@@ -215,13 +215,13 @@ const data = [
   },
   {
     id: 6,
-    title: "100+ Labs",
+    title: "Most Affordable Prices",
     
-    icon: <Image src={img6} alt="NABL Accredited Icon" />,
+    icon: <Image src={img6} alt="Rates Icon" />,
   },
   {
     id: 7,
-    title: "3000+ Collection Centres",
+    title: "Painless Sample Collection",
     
     icon: <Image src={img7} alt="collection Icon" />,
   },
