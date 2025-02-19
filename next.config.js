@@ -12,6 +12,7 @@ const nextConfig = {
       "images.pexels.com",
       "pexels.com",
       "blog.cityxrayclinic.com",
+      "ik.imagekit.io",
     ],
   },
   env: {
