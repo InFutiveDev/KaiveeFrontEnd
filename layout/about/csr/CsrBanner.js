@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CsrBannerImg from "assets/images/about/csr/csr-banner.png";
+// import CsrBannerImg from "assets/images/about/csr/csr-banner.png";
 import { AboutCsrSocial } from "assets/images/SvgImage";
 import { AboutCsrEducation } from "assets/images/SvgImage";
 import { AboutCsrHealth } from "assets/images/SvgImage";
@@ -12,7 +12,7 @@ import { PrevIcons } from "assets/images/SvgImage";
 import { NextIcons } from "assets/images/SvgImage";
 import Image from "next/image";
 import BannerImage from "assets/images/about/csr/CSR 140X300.webp";
-import MobileImage from "assets/images/about/csr/CSR 1000 x 600.webp";
+// import MobileImage from "assets/images/about/csr/CSR 1000 x 600.webp";
 const RightArrow = (props) => {
   const { className, style, onClick } = props;
   return (

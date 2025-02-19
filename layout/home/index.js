@@ -27,7 +27,7 @@ import { GET_ALL_HEALTH_PACKAGES } from "redux/actions/healthPackages";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-import icon2 from "assets/images/home/banner/icon-1.png";
+import icon2 from "assets/images/home/banner/1.png";
 import icon3 from "assets/images/home/banner/2.png";
 import icon4 from "assets/images/whychooseus/icon-3.png";
 

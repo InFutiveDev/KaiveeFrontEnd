@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-const siteUrl = "https://www.cityxrayclinic.com";
+const siteUrl = "http://103.68.40.157:3002/";
 module.exports = {
   siteUrl: siteUrl,
   generateRobotsTxt: true,

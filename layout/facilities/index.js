@@ -260,10 +260,10 @@ const FacilitiesCategoryLayout = ({ id, category }) => {
           </div>
           <div className="background-image-health h-[40vh] lg:h-[50vh] md:h-[40vh] sm:h-[40vh]  flex justify-center items-center  mb-[20px]">
             <div className="flex lg:px-[30px] px-[12px] justify-center items-center flex-col gap-4">
-              <p className="text-white text-center lg:text-[40px] text:[26px] font-bold font-source-pro">
+              <p className="text-black text-center lg:text-[40px] text:[26px] font-bold font-source-pro">
                 Your Health Our Happiness
               </p>
-              <p className="text-white text-center lg:text-[20px] text-[16px]">
+              <p className="text-black text-center lg:text-[20px] text-[16px]">
                 Didn't find what you were looking for! Click to call us now.
               </p>
               <div className="flex gap-2">
