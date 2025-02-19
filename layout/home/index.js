@@ -134,7 +134,7 @@ const HomeLayout = () => {
 
           <div className="container">
             <div className="container ">
-              <div className=" mb-2 bg-white bg-opacity-80 rounded-lg">
+              <div className=" mb-3 bg-white bg-opacity-80 rounded-lg">
                 <div className="container mx-auto grid grid-cols-2  lg:grid-cols-4 gap-6 text-centre">
                   {features.map((feature, index) => (
                     <div

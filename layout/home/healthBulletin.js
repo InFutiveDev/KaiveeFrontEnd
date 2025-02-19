@@ -94,7 +94,7 @@ const HealthBulletin = () => {
                 <div className="rounded-xl shadow bg-white">
                   <a
                     target="_blank"
-                    //href={`https://blog.cityxrayclinic.com/${item?.post_url}`}
+                    href={`https://pos2.flashdeal.in/kaivee-blog/${item?.post_url}`}
                    
                     className="rounded-lg"
                   >
@@ -107,7 +107,7 @@ const HealthBulletin = () => {
 
                   <div className="px-2 py-[12px] flex flex-col gap-y-2">
                     <a
-                     // href={`https://blog.cityxrayclinic.com/${item?.post_url}`}
+                      href={`https://pos2.flashdeal.in/kaivee-blog/${item?.post_url}`}
                       className="rounded-lg"
                       target="_blank"
                     >

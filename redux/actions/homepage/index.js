@@ -8,7 +8,7 @@ const getHeaders = () => {
   };
 };
 
-const baseUrl = "/";
+const baseUrl = "https://pos2.flashdeal.in/kaivee-blog/";
 
 export const GET_ALL_BLOGS = () => {
   return async (dispatch) => {

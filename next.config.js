@@ -11,7 +11,7 @@ const nextConfig = {
       "storage.googleapis.com",
       "images.pexels.com",
       "pexels.com",
-      "blog.cityxrayclinic.com",
+      "https://pos2.flashdeal.in/kaivee-blog/",
       "ik.imagekit.io",
     ],
   },
@@ -60,52 +60,52 @@ const nextConfig = {
       {
         source: "/blog/pneumonia-type-symptoms-causes.aspx",
         destination:
-          "https://blog.cityxrayclinic.com/pneumonia-type-symptoms-causes",
+          "https://pos2.flashdeal.in/kaivee-blog/pneumonia-type-symptoms-causes",
         permanent: false,
       },
       {
         source: "/blog/blood-cancer-symptoms-type-causes-and-test.aspx",
         destination:
-          "https://blog.cityxrayclinic.com/blood-cancer-symptoms-type-causes-and-test",
+          "https://pos2.flashdeal.in/kaivee-blog/blood-cancer-symptoms-type-causes-and-test",
         permanent: false,
       },
       {
         source: "/blog/asthma-types-causes-symptoms-tests.aspx",
         destination:
-          "https://blog.cityxrayclinic.com/asthma-types-causes-symptoms-tests",
+          "https://pos2.flashdeal.in/kaivee-blog/asthma-types-causes-symptoms-tests",
         permanent: false,
       },
       {
         source: "/blog/symptoms-of-gestational-diabetes-in-pregnancy.aspx",
         destination:
-          "https://blog.cityxrayclinic.com/symptoms-of-gestational-diabetes-in-pregnancy",
+          "https://pos2.flashdeal.in/kaivee-blog/symptoms-of-gestational-diabetes-in-pregnancy",
         permanent: false,
       },
       {
         source: "/blog/symptoms-of-conjunctivitis-viral-pink-eye-flu.aspx",
         destination:
-          "https://blog.cityxrayclinic.com/symptoms-of-conjunctivitis-viral-pink-eye-flu",
+          "https://pos2.flashdeal.in/kaivee-blog/symptoms-of-conjunctivitis-viral-pink-eye-flu",
         permanent: false,
       },
       {
         source: "/blog/what-is-dehydration-symptoms-causes.aspx",
         destination:
-          "https://blog.cityxrayclinic.com/what-is-dehydration-symptoms-causes",
+          "https://pos2.flashdeal.in/kaivee-blog/what-is-dehydration-symptoms-causes",
         permanent: false,
       },
       {
         source: "/blog/chikungunya-fever.aspx",
-        destination: "https://blog.cityxrayclinic.com/chikungunya-fever",
+        destination: "https://pos2.flashdeal.in/kaivee-blog/chikungunya-fever",
         permanent: false,
       },
       {
         source: "/blog/malaria-fever-symptoms.aspx",
-        destination: "https://blog.cityxrayclinic.com/malaria-fever-symptoms",
+        destination: "https://pos2.flashdeal.in/kaivee-blog/malaria-fever-symptoms",
         permanent: false,
       },
       {
         source: "/blog/common-monsoon-diseases.aspx",
-        destination: "https://blog.cityxrayclinic.com/common-monsoon-diseases",
+        destination: "https://pos2.flashdeal.in/kaivee-blog/common-monsoon-diseases",
         permanent: false,
       },
       {
