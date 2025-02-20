@@ -55,7 +55,7 @@ const OurTeamBanner = () => {
           src={BannerImage}
         />
       </div>
-      {/* <div className="relative w-full  items-center flex  sm:hidden">
+      <div className="relative w-full  items-center flex  sm:hidden">
         <Image
           quality={100}
           width={1000}
@@ -63,9 +63,9 @@ const OurTeamBanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src={MobileImage}
+          src={BannerImage}
         />
-      </div> */}
+      </div>
     </div>
   );
 };
