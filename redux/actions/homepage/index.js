@@ -27,90 +27,90 @@ export const GET_ALL_BLOGS = () => {
   };
 };
 
-export const GET_ALL_AWARDS = () => {
-  return async (dispatch) => {
-    try {
-      const url = `${baseUrl}api/getAwards`;
-      const res = await MakeProtectedApiCall(url, "GET", getHeaders());
-      if (res?.status === 200) {
-        dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
-        return { success: true, data: res.data?.data };
-      } else {
-        return { success: false, data: res?.data };
-      }
-    } catch (error) {
-      console.log(error.response.data.replace(/\\/g, ""));
-    }
-  };
-};
+// export const GET_ALL_AWARDS = () => {
+//   return async (dispatch) => {
+//     try {
+//       const url = `${baseUrl}api/getAwards`;
+//       const res = await MakeProtectedApiCall(url, "GET", getHeaders());
+//       if (res?.status === 200) {
+//         dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
+//         return { success: true, data: res.data?.data };
+//       } else {
+//         return { success: false, data: res?.data };
+//       }
+//     } catch (error) {
+//       console.log(error.response.data.replace(/\\/g, ""));
+//     }
+//   };
+// };
 
-export const GET_ALL_AWARD = () => {
-  return async (dispatch) => {
-    try {
-      const url = `${baseUrl}api/getAllAwards`;
-      const res = await MakeProtectedApiCall(url, "GET", getHeaders());
-      if (res?.status === 200) {
-        dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
-        return { success: true, data: res.data?.data };
-      } else {
-        return { success: false, data: res?.data };
-      }
-    } catch (error) {
-      console.log(error.response.data.replace(/\\/g, ""));
-    }
-  };
-};
+// export const GET_ALL_AWARD = () => {
+//   return async (dispatch) => {
+//     try {
+//       const url = `${baseUrl}api/getAllAwards`;
+//       const res = await MakeProtectedApiCall(url, "GET", getHeaders());
+//       if (res?.status === 200) {
+//         dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
+//         return { success: true, data: res.data?.data };
+//       } else {
+//         return { success: false, data: res?.data };
+//       }
+//     } catch (error) {
+//       console.log(error.response.data.replace(/\\/g, ""));
+//     }
+//   };
+// };
 
-export const GET_ALL_AWARDS_DETAILS = (slug) => {
-  return async (dispatch) => {
-    try {
-      const url = `${baseUrl}api/getAwardByUrl/${slug}`;
-      const res = await MakeProtectedApiCall(url, "GET", getHeaders());
-      if (res?.status === 200) {
-        // dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
-        return { success: true, data: res.data?.data };
-      } else {
-        return { success: false, data: res?.data };
-      }
-    } catch (error) {
-      console.log(error.response.data.replace(/\\/g, ""));
-    }
-  };
-};
+// export const GET_ALL_AWARDS_DETAILS = (slug) => {
+//   return async (dispatch) => {
+//     try {
+//       const url = `${baseUrl}api/getAwardByUrl/${slug}`;
+//       const res = await MakeProtectedApiCall(url, "GET", getHeaders());
+//       if (res?.status === 200) {
+//         // dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
+//         return { success: true, data: res.data?.data };
+//       } else {
+//         return { success: false, data: res?.data };
+//       }
+//     } catch (error) {
+//       console.log(error.response.data.replace(/\\/g, ""));
+//     }
+//   };
+// };
 
-export const GET_ALL_ACCREDITIONS = () => {
-  return async (dispatch) => {
-    try {
-      const url = `${baseUrl}api/getAccreditions`;
-      const res = await MakeProtectedApiCall(url, "GET", getHeaders());
-      if (res?.status === 200) {
-        // dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
-        return { success: true, data: res.data?.data };
-      } else {
-        return { success: false, data: res?.data };
-      }
-    } catch (error) {
-      console.log(error.response.data.replace(/\\/g, ""));
-    }
-  };
-};
+// export const GET_ALL_ACCREDITIONS = () => {
+//   return async (dispatch) => {
+//     try {
+//       const url = `${baseUrl}api/getAccreditions`;
+//       const res = await MakeProtectedApiCall(url, "GET", getHeaders());
+//       if (res?.status === 200) {
+//         // dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
+//         return { success: true, data: res.data?.data };
+//       } else {
+//         return { success: false, data: res?.data };
+//       }
+//     } catch (error) {
+//       console.log(error.response.data.replace(/\\/g, ""));
+//     }
+//   };
+// };
 
-export const GET_ALL_ACCREDITIONS_DETAILS = (slug) => {
-  return async (dispatch) => {
-    try {
-      const url = `${baseUrl}api/getAccreditionByUrl/${slug}`;
-      const res = await MakeProtectedApiCall(url, "GET", getHeaders());
-      if (res?.status === 200) {
-        // dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
-        return { success: true, data: res.data?.data };
-      } else {
-        return { success: false, data: res?.data };
-      }
-    } catch (error) {
-      console.log(error.response.data.replace(/\\/g, ""));
-    }
-  };
-};
+// export const GET_ALL_ACCREDITIONS_DETAILS = (slug) => {
+//   return async (dispatch) => {
+//     try {
+//       const url = `${baseUrl}api/getAccreditionByUrl/${slug}`;
+//       const res = await MakeProtectedApiCall(url, "GET", getHeaders());
+//       if (res?.status === 200) {
+//         // dispatch({ type: "GET_ALL_AWARDS", data: res?.data?.data });
+//         return { success: true, data: res.data?.data };
+//       } else {
+//         return { success: false, data: res?.data };
+//       }
+//     } catch (error) {
+//       console.log(error.response.data.replace(/\\/g, ""));
+//     }
+//   };
+// };
 export const GET_ALL_MEDIA = () => {
   return async (dispatch) => {
     try {

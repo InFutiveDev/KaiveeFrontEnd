@@ -103,6 +103,10 @@ const HomePopularPackeges = ({
       handleTestsTabChange(navbar[0]?._id);
     }
   }, [navbar]);
+
+
+  // Sort health package data based on "position"
+  const sortedData = data ? [...data].sort((a, b) => a.position - b.position) : [];
   return (
     <div className="w-full">
       <div className="w-full flex items-center justify-between space-x-3 p-2">
@@ -120,14 +124,14 @@ const HomePopularPackeges = ({
             </button>
             <Nav
               tabs
-              className="!border-0  space-x-2  font-[400] flex items-center cstm-navbar overflow-x-scroll overflow-y-hidden flex-nowrap whitespace-nowrap overflow-scroll max-w-[460px] pr-10"
+              className="!border-0 space-x-2 font-[400] flex items-center cstm-navbar overflow-x-scroll flex-nowrap whitespace-nowrap pr-10"
             >
               {visibleItems?.map((item, index) => (
                 <NavItem key={index}>
                   <NavLink
                     className={` ${
                       currentActiveTab == item?._id
-                        ? "text-orange !border-b-2 !border-t-0 !border-r-0 !border-l-0 !border-orange !p-0 font-[600] text-[16px]"
+                        ? "text-orange !border-b-2 !border-orange !p-0 font-[600] text-[16px]"
                         : "text-secondary !border-0 !p-0 cursor-pointer text-[16px]"
                     }`}
                     onClick={() => {
@@ -151,19 +155,18 @@ const HomePopularPackeges = ({
         )}
         <button
           onClick={() => router.push(viewAll)}
-          className="bg-[#D41958] w-36 text-white lg:text-[14px] md:text-[14px] text-[12px] rounded-md px-2 lg:px-2 py-1 font-[500]"
+          className="bg-[#D41958] w-36 text-white lg:text-[14px] md:text-[14px] text-[12px] rounded-md px-2 py-1 font-[500]"
         >
           View more
         </button>
       </div>
-      <div className=" relative w-full ">
-        {data?.length > 0 && (
+      <div className="relative w-full">
+        {sortedData?.length > 0 && (
           <Carousel
             arrows={false}
             infinite={true}
             draggable={true}
             renderButtonGroupOutside={true}
-            // ref={carouselRef}
             rewind={false}
             partialVisible
             minimumTouchDrag={80}
@@ -174,13 +177,13 @@ const HomePopularPackeges = ({
             showDots={false}
             slidesToSlide={1}
             containerClass="carousel-container"
-            className="w-full h-[50vh] "
+            className="w-full h-[50vh]"
             customButtonGroup={<ButtonGroup />}
             responsive={responsive}
           >
-            {data?.map((item) => {
+            {sortedData?.map((item) => {
               return (
-                <div key={item?._id} className=" p-2 ">
+                <div key={item?._id} className="p-2">
                   <HomePackegesCard
                     data={item}
                     cart={cart}

@@ -17,18 +17,18 @@ const AwardsAccreditaionLayout = () => {
   const [dataAwards, setDataAwards] = useState([]);
   const router = useRouter();
 
-  const fetchAllAwards = async () => {
-    const res = await dispatch(GET_ALL_AWARD());
-    if (res?.success) {
-      setDataAwards(res?.data);
-    } else {
-      setDataAwards([]);
-    }
-  };
+  // const fetchAllAwards = async () => {
+  //   const res = await dispatch(GET_ALL_AWARD());
+  //   if (res?.success) {
+  //     setDataAwards(res?.data);
+  //   } else {
+  //     setDataAwards([]);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchAllAwards();
-  }, []);
+  // useEffect(() => {
+  //   fetchAllAwards();
+  // }, []);
 
   return (
     <>
