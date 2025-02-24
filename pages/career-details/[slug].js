@@ -23,7 +23,7 @@ import { MakeProtectedApiCall } from "utility/api";
 
 const CareerDetails = ({ id, data }) => {
   const [open, setOpen] = useState(false);
-  const SharePageUrl = "https://www.cityxrayclinic.com/careers";
+  const SharePageUrl = "http://103.68.40.157:3002/careers";
 
   const renderHTML = (htmlString) => {
     return { __html: htmlString };
@@ -224,7 +224,7 @@ const CareerDetails = ({ id, data }) => {
           <WhatsappShareButton
             style={{ margin: 5 }}
             title="CityXRay Lab: "
-            url="https://www.cityxrayclinic.com/careers"
+            url="http://103.68.40.157:3002/careers"
           >
             <Image
               src={whatsapp}

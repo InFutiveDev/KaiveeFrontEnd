@@ -28,7 +28,7 @@ const Footer = () => {
     <>
       <div className="fixed bottom-6 right-6 z-50">
         <a
-          href="https://api.whatsapp.com/send/?phone=%2B919319274356&text=Hi+Kaivee+HealthCare"
+          href="https://api.whatsapp.com/send/?phone=%2B9220817222&text=Hi+Kaivee+HealthCare"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg transition-transform hover:scale-110"

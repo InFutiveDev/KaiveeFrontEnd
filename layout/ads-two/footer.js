@@ -62,7 +62,7 @@ const FooterAds = ({ data }) => {
     <footer className=" bg-[#f6f0d9] body-font">
       <div className="absolute bottom-4 right-[13px]">
         <a
-          href="https://api.whatsapp.com/send/?phone=%2B919319274356&text=Hi+Kaivee+HealthCare"
+          href="https://api.whatsapp.com/send/?phone=%2B9220817222&text=Hi+Kaivee+HealthCare"
           target="_black"
           className="flex items-center justify-center"
         >
@@ -75,8 +75,7 @@ const FooterAds = ({ data }) => {
             Contact Us
           </h2>
           <p className="p-0 mb-1 text-gray-800  text-[20px] font-[400] font-source-pro">
-            <snap className="font-semibold"> Our Main Hub :</snap> 5A/34, Tilak
-            Nagar, Najafgarh <br /> Road, New Delhi–110018
+            <snap className="font-semibold"> Our Main Hub :</snap> Noida
           </p>
           <p className=" text-gray-800  text-[20px] font-[400] font-source-pro">
             <span className="font-semibold"> Timing :</span> 7:30am to 11:00pm
@@ -99,7 +98,7 @@ const FooterAds = ({ data }) => {
             <div>
               <p className="mb-0 pb-0 text-[16px]">Email</p>
               <p className="font-[500] -mt-1 text-black text-[14px]">
-                lft@cityxrayclinic.com
+                
               </p>
             </div>
           </div>
@@ -119,7 +118,7 @@ const FooterAds = ({ data }) => {
             <div>
               <p className="mb-0 text-[16px]">Phone No.</p>
               <p className="font-[500]  -mt-1 text-black text-[14px]">
-                01147252098
+              9289088633
               </p>
             </div>
           </div>
@@ -177,7 +176,7 @@ const FooterAds = ({ data }) => {
       <div className="container pb-3">
         <div className="flex flex-wrap justify-between pt-[24px]">
           <span className=" text-[14px] font-normal">
-            © 2015 City X-Ray & Scan Clinic Pvt. Ltd. All Rights Reserved!
+            © 2015 Kaivee HealthCare All Rights Reserved!
           </span>
           <ul className="flex flex-wrap  ">
             <span className=" text-[14px] font-normal">

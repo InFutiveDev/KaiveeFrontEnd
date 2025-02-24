@@ -12,7 +12,7 @@ const Testimonial = () => {
       name: "Rahul Vats",
     },
     {
-      text: "Recently I got my test done from Kaivee HEalthCare, I would highly recommend Kaivee HealthCare if you are looking for reasonable prices, clean environment with accurate and on-time results. Best services I got ever",
+      text: "Recently I got my test done from Kaivee HealthCare, I would highly recommend Kaivee HealthCare if you are looking for reasonable prices, clean environment with accurate and on-time results. Best services I got ever",
       name: "Sonu Goel",
     },
     {

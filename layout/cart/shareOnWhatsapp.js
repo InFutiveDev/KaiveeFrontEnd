@@ -5,14 +5,14 @@ const CaptureScreenshot = ({ cartData, payableAmount }) => {
 
   function formatDataForWhatsApp() {
     const data = Object.values(cartData);
-    let message = "*City X-Ray & Scan Clinic*\nWe are pleased to provide you the price for the Tests asked by you.\nPlease find the details below:\n\n";
+    let message = "Please find the details below:\n\n";
     
     data.forEach((item, index) => {
       message += `${index + 1}. ${item?.test_name} - ₹${item?.offer_price}/-\n`;
     });
     
     message += `*Total Payable Amount - ₹${payableAmount}/-*\n\n`;
-    message += "Please note that prices are subject to change without prior notice.\nTo know more about these services or to book a free home collection, please feel free to contact us:\n 📞 Call: 011-47252000\n 📲 WhatsApp: 9577727772\nWebsite - www.cityxrayclinic.com\nT&C Apply";
+    message += "Please note that prices are subject to change without prior notice.\nTo know more about these services or to book a free home collection, please feel free to contact us:\n 📞 Call: 9289088633\n 📲 WhatsApp: 9220817222\nWebsite - www.kaiveehealthcare.com\nT&C Apply";
 
     return message;
   }

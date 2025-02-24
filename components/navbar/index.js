@@ -265,7 +265,7 @@ const Navbar = () => {
           <div className="profile w-full sm:w-auto">
             <div className="w-full flex flex-wrap  justify-between sm:justify-start ">
               <div className="phone">
-                <a href="tel:084483 38674">
+                <a href="tel:9289088633">
                   <svg
                     width="17"
                     height="18"
@@ -278,7 +278,7 @@ const Navbar = () => {
                       fill="#52525B"
                     />
                   </svg>
-                  <span className="">084483 38674</span>
+                  <span className="">9289088633</span>
                 </a>
               </div>
               <span className="hidden sm:block h-5 w-px bg-gray-300"></span>
