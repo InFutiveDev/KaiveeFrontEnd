@@ -9,7 +9,7 @@ import skillLogo from "assets/images/about/awards/Skill-India.webp";
 import Line from "assets/images/about/ourTeam/Line 304.png";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
-import { GET_ALL_AWARD } from "redux/actions/homepage";
+// import { GET_ALL_AWARD } from "redux/actions/homepage";
 import { useRouter } from "next/router";
 
 const AwardsAccreditaionLayout = () => {
