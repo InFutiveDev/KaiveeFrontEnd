@@ -7,7 +7,7 @@ const nextConfig = {
   },
   images: {
     domains: [
-      "www.cityxrayclinic.in",
+      "",
       "storage.googleapis.com",
       "images.pexels.com",
       "pexels.com",

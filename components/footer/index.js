@@ -26,7 +26,7 @@ const Footer = () => {
   // console.log("categories", categories);
   return (
     <>
-      <div className="fixed bottom-6 right-6 z-50">
+      {/* <div className="fixed bottom-6 right-6 z-50">
         <a
           href="https://api.whatsapp.com/send/?phone=%2B9220817222&text=Hi+Kaivee+HealthCare"
           target="_blank"
@@ -35,7 +35,7 @@ const Footer = () => {
         >
           <WhatsappSVG className="w-10 h-10 text-white" />
         </a>
-      </div>
+      </div> */}
 
       <div className=" footer-bg relative">
         {!collapse ? (
