@@ -100,7 +100,7 @@ const ClinicalResearchLayout = () => {
     email: "",
     mobile_number: "",
     write_up: "",
-    inquiry_from: "city x-ray website",
+    inquiry_from: "kaivee Healthcare website",
   });
   const fetchTest = async () => {
     const res = await dispatch(GET_BOOK_A_TEST(1, 100000, ""));
@@ -162,7 +162,7 @@ const ClinicalResearchLayout = () => {
 
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Advancing Healthcare Through Reliable Clinical Research</h2>
+          <h2 className="text-3xl font-semibold mb-8">Advancing Healthcare Through Reliable Clinical Research</h2>
           <p className="lg:text-[18px] md:text-[18px] text-[14px] text-[#71717A]">
             At Kaivee Healthcare, we’re committed to driving medical progress through ethical, precise, and data-driven clinical research that shapes the future of healthcare.
           </p>
@@ -185,7 +185,7 @@ const ClinicalResearchLayout = () => {
             { number: "4+", label: "Years Experience" },
           ].map((stat, index) => (
             <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-pink-600 mb-2">{stat.number}</div>
+              <div className="text-4xl font-semibold text-pink-600 mb-2">{stat.number}</div>
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}
@@ -195,7 +195,7 @@ const ClinicalResearchLayout = () => {
       {/* Content Section Above Research Focus Areas */}
       <section className="py-10 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Why Clinical Research Matters</h2>
+          <h2 className="text-3xl font-semibold mb-8">Why Clinical Research Matters</h2>
           <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#71717A]">
             Kaivee Healthcare isn’t just a trusted name in diagnostics—we’re also at the forefront of clinical research and development. Our state-of-the-art facilities, combined with a team of experienced researchers, enable us to conduct high-quality clinical studies that contribute to new medical discoveries, improved treatments, and patient care innovations.
           </p>
@@ -213,7 +213,7 @@ const ClinicalResearchLayout = () => {
       {/* Research Focus Areas */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Research Expertise</h2>
+          <h2 className="text-3xl font-semibold mb-8 text-center">Our Research Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -245,7 +245,7 @@ const ClinicalResearchLayout = () => {
       {/* Interactive Process Timeline */}
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Research Process</h2>
+          <h2 className="text-3xl font-semibold mb-8 text-center">Our Research Process</h2>
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             {[
               { step: "1", title: "Study Design", desc: "Protocol development & feasibility" },
@@ -268,7 +268,7 @@ const ClinicalResearchLayout = () => {
       {/* Enhanced Testimonials */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Trusted By Researchers</h2>
+          <h2 className="text-3xl font-semibold mb-8 text-center">Trusted By Researchers</h2>
           <Slider {...settings} className="px-12">
             {data.map((testimonial, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-sm">
@@ -294,8 +294,8 @@ const ClinicalResearchLayout = () => {
       {/* Modern Contact Form */}
       <section className="py-8 bg-white">
   <div className="w-full px-4">
-    <div className="mx-auto bg-gradient-to-br from-green-50 to-gray-50 p-6 rounded-xl shadow-lg max-[85px]">
-      <h2 className="text-2xl font-bold mb-6 text-center">Partner With Us</h2>
+    <div className="mx-auto bg-gradient-to-br from-pink-50 to-gray-50 p-6 rounded-xl shadow-lg max-[85px]">
+      <h2 className="text-2xl font-semibold mb-6 text-center">Partner With Us</h2>
 
       {/* Enquiry Form */}
       <div className="border border-[#E4E4E7] bg-white p-6 rounded-xl">
@@ -314,7 +314,7 @@ const ClinicalResearchLayout = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Name Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Your Name *</label>
+              <label className="block text-[16px] font-medium text-gray-700">Your Name *</label>
               <input
                 type="text"
                 name="your_name"
@@ -324,13 +324,13 @@ const ClinicalResearchLayout = () => {
                 placeholder="Enter Your Name"
               />
               {errorKeyName === "your_name" && (
-                <p className="text-red-500 text-sm mt-1">Please enter your name</p>
+                <p className="text-red-500 text-[16px] mt-1">Please enter your name</p>
               )}
             </div>
 
             {/* Email Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Email *</label>
+              <label className="block text-[16px] font-medium text-gray-700">Email *</label>
               <input
                 type="email"
                 name="email"
@@ -340,7 +340,7 @@ const ClinicalResearchLayout = () => {
                 placeholder="Enter Your Email"
               />
               {errorKeyName === "email" && (
-                <p className="text-red-500 text-sm mt-1">Please enter a valid email</p>
+                <p className="text-red-500 text-[16px] mt-1">Please enter a valid email</p>
               )}
             </div>
           </div>
@@ -349,7 +349,7 @@ const ClinicalResearchLayout = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Phone Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Mobile Number *</label>
+              <label className="block text-[16px] font-medium text-gray-700">Mobile Number *</label>
               <input
                 type="text"
                 name="mobile_number"
@@ -362,13 +362,13 @@ const ClinicalResearchLayout = () => {
                 placeholder="Enter Mobile Number"
               />
               {errorKeyName === "mobile_number" && (
-                <p className="text-red-500 text-sm mt-1">Please enter a valid number</p>
+                <p className="text-red-500 text-[16px] mt-1">Please enter a valid number</p>
               )}
             </div>
 
             {/* Message Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Message</label>
+              <label className="block text-[16px] font-medium text-gray-700">Message</label>
               <textarea
                 name="write_up"
                 value={payload?.write_up}
