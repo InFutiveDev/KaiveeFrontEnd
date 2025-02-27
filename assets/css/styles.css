@@ -3491,12 +3491,12 @@ input[type="radio"]:checked {
 
 .labContactBtn {
   padding: 7px 13px;
-  border: 1px solid #e4af1f;
+  border: 1px solid #d41959;
   border-radius: 5px;
   font-size: 16px;
   margin: 10px 0;
   float: left;
-  background: #fcc42c;
+  background: #d41959;
   color: #fff;
   width: 50%;
   text-align: center;

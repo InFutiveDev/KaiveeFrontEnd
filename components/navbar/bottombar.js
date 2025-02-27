@@ -304,7 +304,7 @@ const Bottombar = () => {
                 <a
                   className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block`}
                   // franchisee
-                  href="/"
+                  href="https://pos2.flashdeal.in/kaivee-blog"
                   target="_blank"
                 >
                   Blogs
