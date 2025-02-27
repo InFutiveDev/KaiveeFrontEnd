@@ -3455,10 +3455,12 @@ input[type="radio"]:checked {
 
 .ContactUsBoxInner {
   width: 100%;
+  display: flex
+  ;
 }
 
 .MapBox {
-  width: 38%;
+  width: 100%;
   height: 200px;
   float: left;
   margin: 0px 0px 15px;
@@ -3471,7 +3473,7 @@ input[type="radio"]:checked {
 
 .LabContactDetails {
   float: left;
-  width: 60%;
+  width: 80%;
 }
 
 .LabContactDetails>h2 {
