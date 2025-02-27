@@ -170,7 +170,7 @@ const Footer = () => {
                     <Link href="/media-coverage">Media coverage</Link>
                   </li>
                   <li>
-                    <Link href="/print-media-coverage">News</Link>
+                    <Link href="https://pos2.flashdeal.in/kaivee-blog/">News</Link>
                   </li>
                 </ul>
               </div>

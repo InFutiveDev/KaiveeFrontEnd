@@ -7,10 +7,10 @@ const MediaPress = ({ data }) => {
   return (
     <div>
       <Head>
-        <title>News & Print Media Coverages | City X-Ray</title>
+        <title>News & Print Media Coverages</title>
         <meta
           name="description"
-          content={"News & print media coverages, e-news article | City X-Ray"}
+          content={"News & print media coverages, e-news article"}
         />
       </Head>
       <MediaPressLayout data={data} />
@@ -21,7 +21,7 @@ const MediaPress = ({ data }) => {
 export default MediaPress;
 
 export const getServerSideProps = async (context) => {
-  const baseUrl = "https://blog.cityxrayclinic.com/";
+  const baseUrl = "https://pos2.flashdeal.in/kaivee-blog/";
 
   let data;
   const url = `${baseUrl}api/getPrintMedia`;
