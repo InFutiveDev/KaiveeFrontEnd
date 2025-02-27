@@ -73,6 +73,7 @@ const Careers = () => {
                           width={22}
                           height={22}
                           style={{ width: 18, margin: 5, float: "left" }}
+                          alt="Location"
                         />
                         <span>{item.Address_1}</span>
                       </li>
@@ -82,6 +83,7 @@ const Careers = () => {
                           width={22}
                           height={22}
                           style={{ width: 18, margin: 5, float: "left" }}
+                          alt="Job Type"
                         />
                         <span>{item.job_Type_1}</span>
                       </li>
@@ -91,6 +93,7 @@ const Careers = () => {
                           width={22}
                           height={22}
                           style={{ width: 18, margin: 5, float: "left" }}
+                          alt="Job Shift"
                         />
                         <span>{item.job_Type_2}</span>
                       </li>

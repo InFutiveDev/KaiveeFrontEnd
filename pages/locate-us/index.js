@@ -45,7 +45,7 @@ const LocateUs = () => {
       setTotalPages(Math.ceil(res.data.data.LabData.length / itemsPerPage));
       console.log(res.data.data.LabData);
     });
-  }, []);
+  }, [itemsPerPage]);
 
   useEffect(() => {
     const paginatedLabDetails = labDetails.slice(

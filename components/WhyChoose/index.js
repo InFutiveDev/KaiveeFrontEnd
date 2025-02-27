@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const WhyChoose = ({ data }) => {
   const sectionStyle = {
@@ -77,7 +78,7 @@ const WhyChoose = ({ data }) => {
               {item.icon ? (
                 <div style={iconStyle}>{item.icon}</div>
               ) : (
-                <img
+                <Image
                   src={item.image?.src}
                   alt={`Feature ${index}`}
                   style={{ width: "50px", height: "50px", objectFit: "cover" }}

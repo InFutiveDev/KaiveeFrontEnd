@@ -71,7 +71,7 @@ const CorporateHealthEnquiry = ({ hideUX = false, leads_source = "" }) => {
             <div className="flex justify-center gap-x-2 flex-nowrap items-center">
               <FacilitesBooksSvg />
               <p className="text-[#3F3F46]  xl:text-xl lg:text-[18px] md:text-[18px] text-[14px] font-bold font-source-pro">
-              Let's Improve Workplace Well-being Together
+              Let Improve Workplace Well-being Together
               </p>
             </div>
           </div>

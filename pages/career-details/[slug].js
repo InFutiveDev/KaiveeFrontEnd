@@ -84,6 +84,7 @@ const CareerDetails = ({ id, data }) => {
                   width={22}
                   height={22}
                   style={{ width: 18, margin: 5, float: "left" }}
+                  alt="Job Type"
                 />
                 <span>{data?.job_Type_1}</span>
               </li>
@@ -93,6 +94,7 @@ const CareerDetails = ({ id, data }) => {
                   width={22}
                   height={22}
                   style={{ width: 18, margin: 5, float: "left" }}
+                  alt="Job Shift"
                 />
                 <span>{data?.job_Type_2}</span>
               </li>
@@ -102,6 +104,7 @@ const CareerDetails = ({ id, data }) => {
                   width={22}
                   height={22}
                   style={{ width: 18, margin: 5, float: "left" }}
+                  alt="Location Map"
                 />
                 <span>{data?.Address_2}</span>
               </li>
@@ -207,6 +210,7 @@ const CareerDetails = ({ id, data }) => {
               src={facebook}
               className="CareerSocialimg"
               title="Share on Facebook"
+              alt="Facebook Logo"
             />
           </FacebookShareButton>
           <TwitterShareButton
@@ -218,6 +222,7 @@ const CareerDetails = ({ id, data }) => {
               src={twitter}
               className="CareerSocialimg"
               title="Share on Twitter"
+              alt="Twitter Logo"
             />
           </TwitterShareButton>
 
@@ -230,6 +235,7 @@ const CareerDetails = ({ id, data }) => {
               src={whatsapp}
               className="CareerSocialimg"
               title="WhatsApp"
+              alt="WhatsApp Logo"
             />
           </WhatsappShareButton>
 

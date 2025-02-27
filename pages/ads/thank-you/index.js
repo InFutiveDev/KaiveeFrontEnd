@@ -11,8 +11,8 @@ const ThankYou = ({ data }) => {
   return (
     <>
       {/* Add Gtag in Head */}
-      <Head>
-        {/* Load Google Tag for the Thank You page */}
+      {/* <Head>
+        
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-10839812032"
@@ -27,7 +27,7 @@ const ThankYou = ({ data }) => {
             `,
           }}
         />
-      </Head>
+      </Head> */}
 
       <Navbar data={data} />
       <div className=" min-h-[50vh] my-5 flex flex-col items-center container mx-auto bg-[#F7A708]/20 rounded-xl text-center p-2">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Modal } from "reactstrap";
 import { useDispatch } from "react-redux";
+import Image from "next/image";
 import { GET_USER_DETAILS, UPDATE_USER_DETAILS } from "redux/actions/auth";
 
 const EditProfileModal = ({ userInfo, setUserInfo, setOpen, open }) => {
@@ -161,7 +162,7 @@ const EditProfileModal = ({ userInfo, setUserInfo, setOpen, open }) => {
                         {avatar ? (
                           <div>
                             <span>Image Preview: </span>
-                            <img
+                            <Image
                               src={URL.createObjectURL(avatar)}
                               alt="avatar"
                               className=" h-24 w-24 rounded-full border "

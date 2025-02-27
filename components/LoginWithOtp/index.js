@@ -82,20 +82,33 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
     setotpsend(false);
     setcounter(30);
   };
+  // useEffect(() => {
+  //   if (!otpsend) {
+  //     setcounter(30);
+  //   }
+  //   if (otpsend) {
+  //     setTimeout(() => {
+  //       if (counter <= 0) {
+  //         setcounter(String(0).padStart(2, "0"));
+  //       } else {
+  //         setcounter(String(counter - 1).padStart(2, "0"));
+  //       }
+  //     }, 1000);
+  //   }
+  // });
   useEffect(() => {
     if (!otpsend) {
       setcounter(30);
     }
-    if (otpsend) {
-      setTimeout(() => {
-        if (counter <= 0) {
-          setcounter(String(0).padStart(2, "0"));
-        } else {
-          setcounter(String(counter - 1).padStart(2, "0"));
-        }
+  
+    if (otpsend && counter > 0) {
+      const timer = setTimeout(() => {
+        setcounter(String(counter - 1).padStart(2, "0"));
       }, 1000);
+  
+      return () => clearTimeout(timer); // Cleanup the timeout
     }
-  });
+  }, [otpsend, counter]);
 
   return (
     <>
@@ -108,6 +121,7 @@ const LoginWithOtp = ({ setOpen, redirectUrl = "" }) => {
                 loading="eager"
                 width={300}
                 height={300}
+                alt="Doctor"
               />
             </div>
             {/* <p className="mt-2 text-sm font-semibold text-black font-source-pro ">
