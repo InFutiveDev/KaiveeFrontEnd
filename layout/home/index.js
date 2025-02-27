@@ -35,18 +35,18 @@ import icon6 from "assets/images/home/banner/prescription.png";
 
 const Homebanner = dynamic(() => import("./homeBanner"));
 const BookingCard = dynamic(() => import("./bookingCard"));
-const Media = dynamic(() => import("./media"));
-const OurJourney = dynamic(() => import("./OurJourney"));
-const PrintMedia = dynamic(() => import("./printMedia"));
+// const Media = dynamic(() => import("./media"));
+// const OurJourney = dynamic(() => import("./OurJourney"));
+// const PrintMedia = dynamic(() => import("./printMedia"));
 const HomePopularPackeges = dynamic(() => import("./homePopularPackeges"));
 const HomePopularTest = dynamic(() => import("./homePopulartest"));
 const Facilities = dynamic(() => import("./facilities"));
 const HealthRisks = dynamic(() => import("./healthRisks"));
-const LatestAnnouncement = dynamic(() => import("./latestAnnouncement"));
+// const LatestAnnouncement = dynamic(() => import("./latestAnnouncement"));
 const WhyChoose = dynamic(() => import("components/WhyChoose"));
-const HealthcareVideos = dynamic(() => import("./healthcareVideos"));
+// const HealthcareVideos = dynamic(() => import("./healthcareVideos"));
 const HealthBulletin = dynamic(() => import("./healthBulletin"));
-const AccreditationsAwards = dynamic(() => import("./accreditationsAwards"));
+// const AccreditationsAwards = dynamic(() => import("./accreditationsAwards"));
 const Testimonial = dynamic(() => import("./testimonial"));
 
 const HomeLayout = () => {
@@ -529,80 +529,9 @@ const HomeLayout = () => {
     </>
   );
 };
-// const whyChooseUs = [
-//   {
-//     description: `✔India’s most trusted lab featuring cutting-edge, medically-certified equipment and trained professionals`,
-//   },
-//   { description: `✔Free home sample collection ` },
-//   {
-//     description: `✔Comprehensive & tailored health check-up packages under one roof `,
-//   },
-//   { description: `✔Highly qualified doctors and certified technicians ` },
-//   {
-//     description: `✔Delhi’s one-of-a-kind PCR lab guarantees high standards of accuracy in testing`,
-//   },
-//   { description: `✔Prompt reports; access anywhere and anytime` },
-// ];
 
-const ourServices = [
-  {
-    id: 1,
-    title: "✔ CT Scan",
-    description: `We are the #1 choice for 194 slice/sec spiral CT scans in Delhi. We specialize in
-  CT scans of the brain, chest, abdomen, and neck along with Angiography
-  studies`,
-  },
-  {
-    id: 2,
-    title: "✔ Digital X-ray ",
-    description: ` clinic has state-of-the-art 800 MA digital radiology scanners offering
-    high-quality, quick, low-cost scans.`,
-  },
-  {
-    id: 3,
-    title: "✔ MRI  ",
-    description: `Looking for the best diagnostic center near me for accurate and reliable MRI
-    testing? We offer 1.5 and 3 Tesla MRI services that are safe and precise`,
-  },
-  {
-    id: 4,
-    title: "✔ Ultrasound  ",
-    description: `Our latest 4D ultrasound procedures adhere to world-class industry standards
-    and health guidelines. Specializing in the ultrasound of the whole abdomen,
-    fetus, etc`,
-  },
-  {
-    id: 5,
-    title: "✔ Cardiology Tests ",
-    description: `We provide cardiology diagnostic services in Delhi, expertly conducted to detect
-    a wide range of heart conditions and diseases.`,
-  },
-  {
-    id: 6,
-    title: "✔ Dental Radiology ",
-    description: `Dental radiology is an important part of your dental care plan, helping provide
-    diagnostic and preventive measures for optimum dental health.`,
-  },
-  {
-    id: 7,
-    title: "✔ Molecular Biology  ",
-    description: ` clinic boasts an advanced molecular lab, specializing in viral testing,
-    pathogen testing, HLA B27, and oncology testing.`,
-  },
-  {
-    id: 8,
-    title: "✔ Pathology ",
-    description: ` specializes in diverse fields of clinical pathology,
-    including hematology, biochemistry & immunology, microbiology, cytopathology,
-    etc.`,
-  },
-  {
-    id: 9,
-    title: "✔ Neuro Physiology  ",
-    description: `Get excellent-quality neurology tests done at our center at the best prices. We
-    specialise in EEG, NCV, BERA, EMG, VEP & VER.`,
-  },
-];
+
+
 const data = [
   {
     id: 1,
