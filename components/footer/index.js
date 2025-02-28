@@ -243,7 +243,7 @@ const Footer = () => {
                     <Link href="/health-packages">Health Package</Link>
                   </li>
                   <li>
-                    <Link href="/" target="_blank">
+                    <Link href="https://pos2.flashdeal.in/kaivee-blog/" target="_blank">
                       Blogs
                     </Link>
                   </li>

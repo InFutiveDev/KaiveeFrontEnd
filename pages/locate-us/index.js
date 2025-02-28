@@ -40,7 +40,7 @@ const LocateUs = () => {
   };
 
   useEffect(() => {
-    axios.get("http://103.68.40.157:3004/v1/lab-detail/getAll").then((res) => {
+    axios.get("https://api.kaiveehealthcare.com/v1/lab-detail/getAll").then((res) => {
       setLabDetails(res.data.data.LabData);
       setTotalPages(Math.ceil(res.data.data.LabData.length / itemsPerPage));
       console.log(res.data.data.LabData);
