@@ -3216,8 +3216,8 @@ input[type="radio"]:checked {
   border-radius: 5px;
   font-size: 15px;
   /* color: #fff; */
-  background-color: #fcc42c;
-  border: 1px solid #fcc42c;
+  background-color: #d41959;
+  border: 1px solid #d41959;
 }
 
 .CareerSocialimg {
@@ -3300,7 +3300,7 @@ input[type="radio"]:checked {
 }
 
 .JobApplyBtn {
-  background-color: #fcc42c !important;
+  background-color: #d41959 !important;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;

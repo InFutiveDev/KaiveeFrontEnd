@@ -204,7 +204,7 @@ const CareerDetails = ({ id, data }) => {
           <FacebookShareButton
             className="SocialButtonbtn"
             url={SharePageUrl}
-            hashtag="https://www.cityxrayclinic.com/careers"
+            hashtag="https://kaiveehealthcare.com/careers"
           >
             <Image
               src={facebook}
@@ -215,7 +215,7 @@ const CareerDetails = ({ id, data }) => {
           </FacebookShareButton>
           <TwitterShareButton
             className="SocialButtonbtn"
-            title="CityXRay Lab"
+            title="Kaivee Healthcare"
             url={SharePageUrl}
           >
             <Image
@@ -228,8 +228,8 @@ const CareerDetails = ({ id, data }) => {
 
           <WhatsappShareButton
             style={{ margin: 5 }}
-            title="CityXRay Lab: "
-            url="http://103.68.40.157:3002/careers"
+            title="Kaivee Healthcare: "
+            url="https://kaiveehealthcare.com/careers"
           >
             <Image
               src={whatsapp}

@@ -15,7 +15,7 @@ import Head from "next/head";
 const Careers = () => {
   const [myJobs, setmyJobs] = useState();
   useEffect(() => {
-    axios.get("/").then((res) => {
+    axios.get("https://api.kaiveehealthcare.com/v1/career/get-carrer").then((res) => {
       setmyJobs(res.data.data.careerData);
       console.log(res.data.data.careerData);
     });
@@ -101,7 +101,7 @@ const Careers = () => {
                   </div>
                   <div className="JobBoxRight">
                     <Link
-                      className="CareerButton bg-orange  hover:text-black"
+                      className="CareerButton bg-[#D41958]  hover:text-black"
                       href={`/career-details/${item.job_title_url}`}
                     >
                       View Job
