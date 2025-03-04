@@ -2,20 +2,22 @@ import { useEffect, useState } from "react";
 import { CheckObjectValidation } from "utility/Utils";
 import { useDispatch } from "react-redux";
 import { ADD_NEW_INQUIRY } from "redux/actions/inquiry";
-import { LOGIN_MODAL_OPEN } from "redux/actions/auth";
+import { FacilitesBooksSvg } from "assets/images/SvgImage";
 import { useRouter } from "next/router";
 
-const InquiryForm = ({ leads_source = "" }) => {
+const InquiryForm = ({
+  hideUX = false,
+  leads_source = "",
+  hideEmail = false,
+}) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const [payload, setPayload] = useState({
     patient_name: "",
     patient_email: "",
     mobile_number: "",
-    location: "",
-    option: "",
     message: "",
-    inquiry_from: leads_source || "city x-ray website",
+    inquiry_from: leads_source || "Kaivee Healthcare website",
   });
 
   const [errorKeyName, setErrorKeyName] = useState("");
@@ -25,19 +27,27 @@ const InquiryForm = ({ leads_source = "" }) => {
     e.preventDefault();
     const checkValidation = CheckObjectValidation(payload, ["patient_email"]);
     setErrorKeyName(checkValidation.keyname);
+
     if (checkValidation.isvalid) {
       setLoading(true);
-      const res = await dispatch(ADD_NEW_INQUIRY(payload));
+      const res = await dispatch(
+        ADD_NEW_INQUIRY({
+          ...payload,
+          inquiry_from: leads_source || "city x-ray website",
+        })
+      );
+
+      console.log("res", res);
+
       if (res?.success) {
         setPayload({
           patient_name: "",
           patient_email: "",
           mobile_number: "",
           message: "",
-          inquiry_from: "city x-ray website",
+          inquiry_from: "Kaivee HealthCare website",
+          url: window.location.href,
         });
-      } else {
-        dispatch(LOGIN_MODAL_OPEN(true));
       }
       setLoading(false);
     }
@@ -51,83 +61,110 @@ const InquiryForm = ({ leads_source = "" }) => {
     setPayload({ ...payload, [name]: value });
   };
 
-  return (
-    <div className="max-w-lg mx-auto bg-white shadow-lg rounded-xl p-6">
-      <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-        <span>☰</span> Enquire Now
-      </h2>
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setPayload((prev) => ({ ...prev, url: window.location.href }));
+    }
+  }, []);
 
-      <form onSubmit={handleSubmit} className="mt-4 ">
-      <label htmlFor="patient_name" className="block text-gray-700 ">
-            Full Name *
-          </label>
-        <input
-          type="text"
-          name="patient_name"
-          value={payload.patient_name}
-          onChange={handleChange}
-          placeholder="Your Name"
-          className="w-full border border-gray-300 rounded-lg px-4 py-2 shadow-sm focus:ring-2 focus:ring-indigo-500"
-        />
-        {errorKeyName === "patient_name" && (
-          <p className="text-red-500 text-sm">Please enter your name</p>
+  return (
+    <div id="enquiry_form">
+      <div className="shadow-md bg-white border border-[#E4E4E7] h-auto rounded-xl">
+        {!hideUX && (
+          <div className="facilities-enquiry rounded-xl p-2 md:p-3 m-2">
+            <div className="flex justify-center gap-x-2 flex-nowrap items-center">
+              <p className="text-[#3F3F46] xl:text-xl lg:text-[18px] md:text-[18px] text-[14px] font-bold font-source-pro">
+                Enquire Now
+              </p>
+            </div>
+          </div>
         )}
-        <label htmlFor="patient_email" className="block text-gray-700">
-            Email *
+        <div className="col-md-12 form-group mb-2">
+          <label className="col-form-label md:text-[16px] text-[14px]">
+            Name *
           </label>
-        <input
-          type="email"
-          name="patient_email"
-          value={payload.patient_email}
-          onChange={handleChange}
-          placeholder="example@gmail.com"
-          className="w-full border border-gray-300 rounded-lg px-4 py-2 shadow-sm focus:ring-2 focus:ring-indigo-500"
-        />
-        {errorKeyName === "patient_email" && (
-          <p className="text-red-500 text-sm">Please enter a valid email</p>
-        )}
-        <label htmlFor="mobile_number" className="block text-gray-700 ">
+          <input
+            value={payload?.patient_name}
+            type="text"
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            name="patient_name"
+            id="patient_name"
+            placeholder="Your name"
+            onChange={handleChange}
+          />
+          {errorKeyName === "patient_name" && (
+            <p className="text-red-500 text-sm">Please Enter your name</p>
+          )}
+
+          {!hideEmail && (
+            <div>
+              <label className="col-form-label md:text-[16px] text-[14px]">
+                Email
+              </label>
+              <input
+                value={payload?.patient_email}
+                type="text"
+                className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+                name="patient_email"
+                id="patient_email"
+                placeholder="Your email"
+                onChange={handleChange}
+              />
+              {errorKeyName === "patient_email" && (
+                <p className="text-red-500 text-sm">
+                  Please Enter a valid Email
+                </p>
+              )}
+            </div>
+          )}
+
+          <label className="col-form-label md:text-[16px] text-[14px]">
             Phone *
           </label>
-        <input
-          type="text"
-          name="mobile_number"
-          value={payload.mobile_number}
-          onChange={(e) => {
-            if (/^[0-9\s]*$/.test(e.target.value)) {
-              handleChange(e);
-            }
-          }}
-          placeholder="Enter Phone"
-          maxLength="10"
-          className="w-full border border-gray-300 rounded-lg px-4 py-2 shadow-sm focus:ring-2 focus:ring-indigo-500"
-        />
-        {errorKeyName === "mobile_number" && (
-          <p className="text-red-500 text-sm">Please enter a valid phone number</p>
-        )}
+          <input
+            value={payload?.mobile_number}
+            type="text"
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            name="mobile_number"
+            maxLength="10"
+            placeholder="Phone"
+            onChange={(e) => {
+              if (/^[0-9\s]*$/.test(e.target?.value)) {
+                handleChange(e);
+              }
+            }}
+          />
+          {errorKeyName === "mobile_number" && (
+            <p className="text-red-500 text-sm">Please Enter your number</p>
+          )}
 
-       
-<label htmlFor="message" className="block text-gray-700 ">
+          <label className="col-form-label md:text-[16px] text-[14px]">
             Message *
           </label>
-        <textarea
-          name="message"
-          value={payload.message}
-          onChange={handleChange}
-          placeholder="Write your message"
-          className="w-full border border-gray-300 rounded-lg px-4 py-2 shadow-sm focus:ring-2 focus:ring-indigo-500 h-24"
-        />
-        {errorKeyName === "message" && (
-          <p className="text-red-500 text-sm">Please enter your inquiry</p>
-        )}
+          <textarea
+            value={payload?.message}
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            name="message"
+            id="message"
+            placeholder="Message"
+            onChange={handleChange}
+          />
+          {errorKeyName === "message" && (
+            <p className="text-red-500 text-sm">Please Enter your Inquiry</p>
+          )}
+        </div>
 
-        <button
-          type="submit"
-          className="w-full bg-[#D41958] text-white font-bold rounded-lg py-2 hover:bg-[#B0164A] transition-all"
-        >
-          {loading ? "Processing..." : "Submit"}
-        </button>
-      </form>
+        <div className="w-full flex justify-end items-center p-2">
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            id={"btnInquiry"}
+            className="bg-[#D41958] text-white rounded px-3 py-1"
+          >
+            {loading ? "Processing..." : "Submit"}
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
