@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { useMemo,useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const DynamicHead = ({ scritpChat = false, favicon = "/favicon.ico" }) => {
@@ -10,9 +10,10 @@ const DynamicHead = ({ scritpChat = false, favicon = "/favicon.ico" }) => {
     (state) => state?.manageCommonVarReducer?.dynamicMetaTitle
   );
 
-  useMemo(() => {
+  useEffect(() => {
     dispatch({ type: "GET_DYNAMIC_META_TITLE_DES", data: {} });
-  }, [router?.pathname]);
+  }, [router?.pathname, dispatch]);
+  
 
   return (
     <Head>

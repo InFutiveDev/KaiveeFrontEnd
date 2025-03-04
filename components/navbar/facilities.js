@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useMemo,useEffect, useState } from "react";
 
 const Facilities = ({ categories, closeMenu }) => {
   const router = useRouter();
@@ -7,23 +7,22 @@ const Facilities = ({ categories, closeMenu }) => {
   const [modifyCategfories, setModifyCategfories] = useState([]);
   const [facilitiesOpen, setFacilitiesOpen] = useState(false);
   const toggle = () => setFacilitiesOpen(!facilitiesOpen);
+  const filteredCategories = useMemo(() => {
+    return categories.map((item) => ({
+      ...item,
+      child: categories.filter((ele) => item?._id === ele?.perent_category_name),
+    }));
+  }, [categories]);
+  
   useEffect(() => {
-    // const categoriesCopy = [...categories];
-    const filtercategories = categories.map((item) => {
-      return {
-        ...item,
-        child: categories.filter((ele) => {
-          return item?._id === ele?.perent_category_name;
-        }),
-      };
-    });
-    const newFilter = filtercategories.filter(
+    const newFilter = filteredCategories.filter(
       (ele) => ele?.perent_category_name == null
     );
-    if (newFilter) {
-      setModifyCategfories(newFilter);
-    }
-  }, []);
+  
+    setModifyCategfories(newFilter);
+  }, [filteredCategories]);
+  
+    
   // console.log("router", router?.query?.slug);
   return (
     <div className="group relative ">

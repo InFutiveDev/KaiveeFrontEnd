@@ -53,10 +53,11 @@ const LandingInquiryForm = ({
     setPayload({ ...payload, [name]: value });
   };
   useEffect(() => {
-    if (window) {
-      setPayload({ ...payload, url: window.location.href });
+    if (typeof window !== "undefined") {
+      setPayload(prev => ({ ...prev, url: window.location.href }));
     }
   }, []);
+  
   return (
     <div>
       <div className="shadow-md bg-white border border-[#E4E4E7] h-auto rounded-xl">

@@ -21,7 +21,8 @@ const FAQsComponents = ({ id }) => {
 
   useEffect(() => {
     dispatch(GET_FAQ_S(id));
-  }, []);
+  }, [dispatch, id]); 
+  
 
   const toggle = (id) => {
     if (open === id) {
