@@ -52,7 +52,7 @@ const OurTeamLayout = () => {
                       height={210}
                       className=" h-40 object-fill "
                       alt={item.team_name}
-                      src={item.team_image}
+                      src={item.team_image || "https://ik.imagekit.io/InFutiveTechnology/kaivee/836.jpg?updatedAt=1741167588322"}
                     />
                   </div>
                   <div className="p-[24px] text-center">

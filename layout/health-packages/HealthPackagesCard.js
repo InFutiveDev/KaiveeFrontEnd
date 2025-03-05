@@ -1,15 +1,22 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import CityHealth from "assets/images/health-packages/Lab-Test-Resized (1).jpg";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { UPDATE_CART_QAUNTITY } from "redux/actions/cart";
 import Image from "next/image";
+
 const HealthPackagesCard = ({ data, cart, handleCartData }) => {
   const router = useRouter();
-
   const dispatch = useDispatch();
+  const [isInCart, setIsInCart] = useState(cart?.hasOwnProperty(data?._id || "")); // Local state
+
+  // Sync local state with cart prop when it changes
+  useEffect(() => {
+    setIsInCart(cart?.hasOwnProperty(data?._id || ""));
+  }, [cart, data?._id]);
+
   const handleAddToCart = () => {
-    let cartData = cart;
+    let cartData = { ...cart }; // Create a new object to avoid mutating the prop directly
     cartData[data?._id || ""] = {
       price: data?.mrp,
       test_name: data?.specialityName,
@@ -20,6 +27,18 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
     handleCartData(cartData);
     dispatch(UPDATE_CART_QAUNTITY(Object.keys(cartData).length));
     localStorage.setItem("cart", JSON.stringify(cartData));
+    setIsInCart(true); // Update local state immediately
+  };
+
+  const handleRemoveCart = () => {
+    let cartData = { ...cart };
+    if (cartData.hasOwnProperty(data?._id || "")) {
+      delete cartData[data?._id || ""];
+    }
+    handleCartData(cartData);
+    dispatch(UPDATE_CART_QAUNTITY(Object.keys(cartData).length));
+    localStorage.setItem("cart", JSON.stringify(cartData));
+    setIsInCart(false); // Update local state immediately
   };
 
   const richTagConvert = (richTag) => {
@@ -30,8 +49,8 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
       );
       return richTag
         .replace(/<\/?[^>]+(>|$)/g, "")
-        .replace(/&nbsp;/g, " ")
-        .replace(/&amp;/g, "&")
+        .replace(/ /g, " ")
+        .replace(/&/g, "&")
         .replace(/\n/g, " ");
     }
     return "";
@@ -44,25 +63,14 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
     return "";
   }, [data?.test_pre_test_info]);
 
-  const handleRemoveCart = () => {
-    let cartData = cart;
-    if (cartData.hasOwnProperty(data?._id || "")) {
-      delete cartData[data?._id || ""];
-    }
-    handleCartData(cartData);
-    dispatch(UPDATE_CART_QAUNTITY(Object.keys(cartData).length));
-    localStorage.setItem("cart", JSON.stringify(cartData));
-  };
-
   return (
-    <div className="rounded-lg shadow-md flex flex-col ">
+    <div className="rounded-lg shadow-md flex flex-col">
       <div
         className="rounded-lg relative overflow-hidden cursor-pointer"
         onClick={() => router.push(`/health-packages/${data?.test_url}`)}
       >
         <Image
-         // src={data?.package_image || CityHealth.src}
-          src={ CityHealth.src}
+          src={CityHealth.src}
           width={1000}
           height={1000}
           className="object-full h-32 w-full"
@@ -82,10 +90,10 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
           }}
         />
 
-        <div className="flex  items-center gap-5 my-[6px]">
+        <div className="flex items-center gap-5 my-[6px]">
           <div>
             {data?.offer_price && (
-              <span className="text-[#7DB440]  font-semibold text-xl">
+              <span className="text-[#7DB440] font-semibold text-xl">
                 ₹{data?.offer_price}
               </span>
             )}
@@ -96,7 +104,7 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
             )}
           </div>
           {data?.offer_price < data?.mrp ? (
-            <span className="text-[#7DB440]  lg:text-[14px] font-semibold">
+            <span className="text-[#7DB440] lg:text-[14px] font-semibold">
               {(((data?.mrp - data?.offer_price) / data?.mrp) * 100).toFixed()}%
               off
             </span>
@@ -105,17 +113,17 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
           )}
         </div>
 
-        <div className=" flex gap-x-2 items-center">
-          {cart?.hasOwnProperty(data?._id || "") ? (
+        <div className="flex gap-x-2 items-center">
+          {isInCart ? ( // Use local state instead of cart prop
             <button
-              className=" bg-[#D41958] w-full text-white rounded-[8px] px-[12px] py-[8px] text-[14px] font-semibold"
+              className="bg-[#8DBD4D] w-full text-white rounded-[8px] px-[12px] py-[8px] text-[14px] font-semibold"
               onClick={handleRemoveCart}
             >
-              Remove item
+              Remove Item
             </button>
           ) : (
             <button
-              className=" bg-[#D41958] w-full text-white rounded-[8px] px-[12px] py-[8px] text-[14px] font-semibold"
+              className="bg-[#D41958] w-full text-white rounded-[8px] px-[12px] py-[8px] text-[14px] font-semibold"
               onClick={handleAddToCart}
             >
               Add To Cart
@@ -123,7 +131,7 @@ const HealthPackagesCard = ({ data, cart, handleCartData }) => {
           )}
           <button
             onClick={() => router.push(`/health-packages/${data?.test_url}`)}
-            className="border-[1px] w-full border-[#D41958]  text-[#D41958]  bg-white rounded-[8px] px-[12px] py-[8px] text-xs font-semibold"
+            className="border-[1px] w-full border-[#D41958] text-[#D41958] bg-white rounded-[8px] px-[12px] py-[8px] text-xs font-semibold"
           >
             View Details
           </button>
