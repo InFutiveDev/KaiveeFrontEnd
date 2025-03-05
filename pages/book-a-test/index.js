@@ -7,7 +7,7 @@ const BookATest = ({ data }) => {
     title: "Find a Test | Info and Test Cost | Kaivee Healthcare",
     description:
       "Find a test you're looking for and check the price. Search and find test costs, preparation, and other information.",
-    url: "/", // Replace with the canonical URL of the page
+    url: "https://www.kaiveehealthcare.com//", // Replace with the canonical URL of the page
     image: "/", // Replace with the actual image URL
   };
 

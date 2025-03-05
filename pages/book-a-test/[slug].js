@@ -7,11 +7,11 @@ const TestDetails = ({ data }) => {
   const metaData = {
     title: data?.[0]?.meta_title || "Maivee Healthcare tests",
     description: data?.[0]?.meta_desc || "Healthcare tests",
-    url: `https://www.cityxrayclinic.com/book-a-test/${
+    url: `https://www.kaiveehealthcare.com//${
       data?.[0]?.test_url || "default"
     }`, // Replace with actual URL logic
     image:
-      "https://www.cityxrayclinic.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.e921700e.png&w=750&q=100", // Replace with actual image URL
+      "", // Replace with actual image URL
   };
 
   return (
@@ -26,11 +26,11 @@ const TestDetails = ({ data }) => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={metaData.url} />
         <meta property="og:image" content={metaData.image} />
-        <meta property="og:site_name" content="City X-Ray" />
+        <meta property="og:site_name" content="kaivee healthcare" />
 
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@CityXrayClinic" />
+        <meta name="twitter:site" content="@KaiveeHealthcare" />
         <meta name="twitter:title" content={metaData.title} />
         <meta name="twitter:description" content={metaData.description} />
         <meta name="twitter:image" content={metaData.image} />

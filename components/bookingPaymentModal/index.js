@@ -31,7 +31,7 @@ const BookingPaymentModal = ({ open, setOpen, handlePayNow, data }) => {
               </div>
               <div className="modal-body">
                 <p className="text-capitalize text-center">
-                  if you have made payment then ignore please contact city xray
+                  if you have made payment then ignore please contact kaivee
                   customer care
                 </p>
               </div>

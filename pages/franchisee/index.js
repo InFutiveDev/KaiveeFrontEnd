@@ -7,7 +7,7 @@ const Franchisee = () => {
     title: "Franchise | Become A Partner - Kaivee Healthcare",
     description:
       "Partner with a Leading Diagnostic Center in Delhi. Explore Franchise Opportunities for Mutual Growth and Success. Contact Us Today",
-    url: "/", // Replace with the canonical URL of the page
+    url: "https://www.kaiveehealthcare.com/", // Replace with the canonical URL of the page
     image: "/", // Replace with the actual image URL
   };
 

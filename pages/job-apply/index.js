@@ -127,7 +127,7 @@ const JobApply = () => {
       formData.append("Cv_document", file);
 
       axios
-        .post("http://103.68.40.157:3004/v1/carrer-form/add", formData, {
+        .post("https://api.kaiveehealthcare.com/v1/carrer-form/add", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

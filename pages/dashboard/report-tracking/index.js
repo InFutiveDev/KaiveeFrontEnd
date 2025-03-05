@@ -7,7 +7,7 @@ const ReportTracking = () => {
     <div>
       <Head>
         <title>
-          Track Sample - Monitor Progress & Status Updates | City X-Ray
+          Track Sample - Monitor Progress & Status Updates 
         </title>
         <meta
           name="description"

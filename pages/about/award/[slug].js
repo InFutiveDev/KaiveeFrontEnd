@@ -7,8 +7,8 @@ const Page = ({ id, data }) => {
   return (
     <div className="container">
       <Head>
-        <title>{data?.meta_title || "city x-ray"}</title>
-        <meta name="description" content={data?.meta_desc || "city x-ray"} />
+        <title>{data?.meta_title || ""}</title>
+        <meta name="description" content={data?.meta_desc || ""} />
       </Head>
       <AwardDetails slug={id} data={data} />
     </div>
@@ -18,7 +18,7 @@ const Page = ({ id, data }) => {
 export default Page;
 export const getServerSideProps = async (context) => {
   let slugContent = context.params.slug;
-  const baseUrl = "https://blog.cityxrayclinic.com/";
+  const baseUrl = "https://pos2.flashdeal.in/kaivee-blog/";
   let data;
   const url = `${baseUrl}api/getAwardByUrl/${slugContent}`;
   const getHeaders = () => {

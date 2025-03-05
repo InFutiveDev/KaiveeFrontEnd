@@ -8,10 +8,10 @@ const Slug = ({ data, id }) => {
   const metaData = {
     title: data?.[0]?.meta_title || "Kaivee Healthcare Facility",
     description: data?.[0]?.meta_desc || "Healthcare Facility",
-    url: `https://www.cityxrayclinic.com/facilities/${
+    url: `https://www.kaiveehealthcare.com/facilities/${
       data?.[0]?.category_url || "default"
     }`, // Default URL
-    image: `https://www.cityxrayclinic.com/facilities/${
+    image: `https://www.kaiveehealthcare.com//facilities/${
       data?.[0]?.category_image || "default"
     }`, // Default image
   };
@@ -28,11 +28,11 @@ const Slug = ({ data, id }) => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={metaData.url} />
         <meta property="og:image" content={metaData.image} />
-        <meta property="og:site_name" content="City X-Ray" />
+        <meta property="og:site_name" content="Kaivee Healthcare" />
 
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@CityXrayClinic" />
+        <meta name="twitter:site" content="@KaiveeHealthcare" />
         <meta name="twitter:title" content={metaData.title} />
         <meta name="twitter:description" content={metaData.description} />
         <meta name="twitter:image" content={metaData.image} />

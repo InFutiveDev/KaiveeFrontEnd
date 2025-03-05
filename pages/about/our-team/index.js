@@ -3,10 +3,10 @@ import Head from "next/head";
 
 const OurTeam = () => {
   const metaData = {
-    title: "Our Doctors - City X-Ray",
-    description: "Meet Our Expert Team at City X-Ray",
-    url: "https://www.cityxrayclinic.com/about/our-team", // Replace with the canonical URL of the page
-    image: "https://www.cityxrayclinic.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Four%20team%201000%20x%20600.a4b799ad.webp&w=1080&q=100", // Replace with the actual image URL
+    title: "Our Doctors - Kaivee Heallthcare",
+    description: "Meet Our Expert Team at Kaivee Heallthcare",
+    url: "https://www.kaiveehealthcare.com/", // Replace with the canonical URL of the page
+    image: "", // Replace with the actual image URL
   };
 
   return (
@@ -21,11 +21,11 @@ const OurTeam = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={metaData.url} />
         <meta property="og:image" content={metaData.image} />
-        <meta property="og:site_name" content="City X-Ray" />
+        <meta property="og:site_name" content="" />
 
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@CityXrayClinic" />
+        <meta name="twitter:site" content="" />
         <meta name="twitter:title" content={metaData.title} />
         <meta name="twitter:description" content={metaData.description} />
         <meta name="twitter:image" content={metaData.image} />
