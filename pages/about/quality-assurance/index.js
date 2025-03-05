@@ -5,9 +5,11 @@ import Head from "next/head";
 const QualityAssurance = () => {
   const metaData = {
     title: "Our Quality Assurance",
-    description: " Kaivee Heallthcare Renowned for Accurate & Reliable Diagnostic Testing. Our Quality Assurance Ensures Excellence Throughout ",
+    description:
+      " Kaivee Heallthcare Renowned for Accurate & Reliable Diagnostic Testing. Our Quality Assurance Ensures Excellence Throughout ",
     url: "https://www.kaiveehealthcare.com/", // Replace with the canonical URL of the page
-    image: "", // Replace with the actual image URL
+    image:
+      "https://www.kaiveehealthcare.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.eaef1c84.png&w=384&q=100", // Replace with the actual image URL
   };
 
   return (
