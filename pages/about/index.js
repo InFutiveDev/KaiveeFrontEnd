@@ -4,9 +4,9 @@ import Head from "next/head";
 const Home = () => {
   const metaData = {
     title: "About City X-Ray and Scan Clinic Pvt. Ltd.",
-    description: "About City X-Ray and Scan Clinic Pvt. Ltd. | The Radiology & Pathology Specialist in Delhi",
-    url: `https://www.cityxrayclinic.com/about`, // Replace with the canonical URL of the page
-    image: "https://www.cityxrayclinic.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout%20us%201000%20x%20600.4c5040e9.webp&w=1080&q=100", // Replace with the actual image URL
+    description: "About Kaivee Healthcare | The Radiology & Pathology Specialist in Delhi-Ncr",
+    url: `https://www.kaiveehealthcare.com/`, // Replace with the canonical URL of the page
+    image: "", // Replace with the actual image URL
   };
 
   return (
