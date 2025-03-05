@@ -3,7 +3,7 @@ import Head from "next/head";
 
 const Home = () => {
   const metaData = {
-    title: "About City X-Ray and Scan Clinic Pvt. Ltd.",
+    title: "About Kaivee Heallthcare.",
     description: "About Kaivee Healthcare | The Radiology & Pathology Specialist in Delhi-Ncr",
     url: `https://www.kaiveehealthcare.com/`, // Replace with the canonical URL of the page
     image: "", // Replace with the actual image URL
@@ -21,11 +21,11 @@ const Home = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={metaData.url} />
         <meta property="og:image" content={metaData.image} />
-        <meta property="og:site_name" content="City X-Ray" />
+        <meta property="og:site_name" content="Kaivee Heallthcare" />
 
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@CityXrayClinic" />
+        <meta name="twitter:site" content="@Kaivee Heallthcare" />
         <meta name="twitter:title" content={metaData.title} />
         <meta name="twitter:description" content={metaData.description} />
         <meta name="twitter:image" content={metaData.image} />
