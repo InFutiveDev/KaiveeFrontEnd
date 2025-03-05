@@ -6,7 +6,7 @@ const Home = () => {
     title: "Kaivee Healthcare",
     description:
       "Kaivee Healthcare is one of the leading diagnostic centres in Delhi NCR. We provide numerous diagnostic tests in Delhi and are NABL & NABH approved.",
-    url: "http://localhost:3002/", // Replace with the canonical URL of the page
+    url: "https://www.kaiveehealthcare.com/", // Replace with the canonical URL of the page
     image: "/",
   };
 
