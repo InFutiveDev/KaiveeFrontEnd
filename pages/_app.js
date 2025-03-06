@@ -1,4 +1,5 @@
 import "../assets/css/globals.css";
+import Head from "next/head";
 // import "assets/css/index.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -57,6 +58,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div>
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
       <noscript>
         <iframe
           src="https://www.googletagmanager.com/ns.html?id=GTM-N78CGTH"

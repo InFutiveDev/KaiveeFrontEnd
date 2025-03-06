@@ -17,6 +17,7 @@ const DynamicHead = ({ scritpChat = false, favicon = "/favicon.ico" }) => {
 
   return (
     <Head>
+      
       {/* Meta tags for SEO */}
       {/* <meta name="google-site-verification" content="W02fYyVHnRB50LdhbjZgjgu4iKiYm8HWgTXbqW5sW1c" /> */}
       
