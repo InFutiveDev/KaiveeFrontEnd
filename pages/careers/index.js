@@ -2,16 +2,19 @@ import Navbar from "components/navbar";
 import TopNavbar from "components/topnav";
 import Link from "next/link";
 import LocationMap from "assets/career/location.png";
+import BreadCrumb from "components/breadcrumb";
 import JobType from "assets/career/JobType.png";
 import JobShift from "assets/career/JobShift.png";
 import MainBanner from "assets/career/banner.jpg";
 import MainBanner1 from "assets/career/banner1.webp";
-import MainBanner2 from "assets/career/banner2.webp";
+// import MainBanner2 from "assets/career/banner2.webp";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Head from "next/head";
 
+
+const breadcrumblist = [{ name: "Home", path: "/" }];
 const Careers = () => {
   const [myJobs, setmyJobs] = useState();
   useEffect(() => {
@@ -23,6 +26,9 @@ const Careers = () => {
   console.log("myJobs", myJobs);
   return (
     <>
+    <div className="2xl:pl-[10rem] xl:pl-[4rem] lg:pl-[1rem] pl-[16px]">
+            <BreadCrumb active="Careers" breadcrumblist={breadcrumblist} />
+          </div>
       <Head>
         <title>Latest Job Vacancy Openings in Delhi - Career</title>
         <meta
@@ -39,7 +45,7 @@ const Careers = () => {
       </div>
       <div className="CareerBannerMob">
         <Image
-          src={MainBanner2}
+          src={MainBanner1}
           alt="Career Banner Mob"
           style={{ width: "100%" }}
         />

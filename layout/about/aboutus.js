@@ -32,7 +32,7 @@ const AboutUs = () => {
               className="  object-cover"
               width={400}
               height={400}
-              alt="Mask group"
+              alt="image"
               src={about.src}
             />
           </div>
