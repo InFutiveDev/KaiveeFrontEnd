@@ -1,15 +1,22 @@
 import { AboutLayout } from "../../layout";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 
 const Home = () => {
-  const metaData = {
-    title: "About Kaivee Heallthcare.",
+  const [metaData, setMetaData] = useState({
+    title: "About Kaivee Healthcare.",
     description:
-      "About Kaivee Healthcare | The Radiology & Pathology Specialist in Delhi-Ncr",
-    url: `https://www.kaiveehealthcare.com/`, // Replace with the canonical URL of the page
+      "About Kaivee Healthcare | The Radiology & Pathology Specialist in Delhi-NCR",
+    url: "https://www.kaiveehealthcare.com/about",
     image:
-      "https://www.kaiveehealthcare.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.eaef1c84.png&w=384&q=100", // Replace with the actual image URL
-  };
+      "https://www.kaiveehealthcare.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.eaef1c84.png&w=384&q=100",
+  });
+
+  useEffect(() => {
+    document.title = metaData.title;
+    const metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) metaDescription.setAttribute("content", metaData.description);
+  }, [metaData]); // Runs when metaData changes
 
   return (
     <div>
@@ -24,17 +31,16 @@ const Home = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={metaData.url} />
         <meta property="og:image" content={metaData.image} />
-        <meta property="og:site_name" content="Kaivee Heallthcare" />
+        <meta property="og:site_name" content="Kaivee Healthcare" />
 
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@Kaivee Heallthcare" />
+        <meta name="twitter:site" content="@KaiveeHealthcare" />
         <meta name="twitter:title" content={metaData.title} />
         <meta name="twitter:description" content={metaData.description} />
         <meta name="twitter:image" content={metaData.image} />
-
-        {/* Set the language attribute */}
       </Head>
+
       <AboutLayout />
     </div>
   );

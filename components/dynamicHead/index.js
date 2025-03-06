@@ -17,7 +17,7 @@ const DynamicHead = ({ scritpChat = false, favicon = "/favicon.ico" }) => {
 
   return (
     <Head>
-      
+      <meta name="robots" content="noindex" />
       {/* Meta tags for SEO */}
       {/* <meta name="google-site-verification" content="W02fYyVHnRB50LdhbjZgjgu4iKiYm8HWgTXbqW5sW1c" /> */}
       
@@ -25,7 +25,7 @@ const DynamicHead = ({ scritpChat = false, favicon = "/favicon.ico" }) => {
       <link rel="icon" href={favicon} />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={`https://www.dummywebsite.com${router?.asPath}`} />
+      <link rel="canonical" href={`https://www.kaiveehealthcare.com/${router?.asPath}`} />
       
       {/* Google Analytics */}
       <script async src="https://www.googletagmanager.com/gtag/"></script>
