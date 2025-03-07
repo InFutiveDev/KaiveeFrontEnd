@@ -11,6 +11,7 @@ import book2 from "assets/images//home-icon/4 icon/appointment.png";
 import book3 from "assets/images/home-icon/4 icon/book-a-test.png";
 
 
+
 import ReactPaginate from "react-paginate";
 import { ArrowLeft, ArrowRight } from "react-feather";
 import dynamic from "next/dynamic";

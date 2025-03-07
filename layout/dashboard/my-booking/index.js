@@ -79,7 +79,7 @@ const MyBookingLayout = () => {
                   {userBookings?.data?.data?.map((booking, index) => {
                     return (
                       <div className="p-[10px] sm:p-[32px]" key={index}>
-                        <div className="bg-[#FAFAFA] p-[12px] sm:p-[24px] rounded-xl">
+                        <div className="bg-[#def3e338] p-[12px] sm:p-[24px] rounded-xl">
                           <div className="flex items-center justify-between pb-[24px] border-b-[1px] border-[#E4E4E7]">
                             <div className="flex gap-1">
                               <span className="text-xl font-semibold">

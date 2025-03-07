@@ -1,6 +1,6 @@
 import BreadCrumb from "components/breadcrumb";
 import React from "react";
-import ImageOne from "assets/images/dashboard/medical-insurance-illustration-concept-white-background_701961-847-removebg-preview 1.png";
+import ImageOne from "assets/images/dashboard/reportimg.jpg";
 import StartImg from "assets/images/dashboard/Group.png";
 import ShadoImg from "assets/images/dashboard/Vector (1).png";
 import RoundImg from "assets/images/dashboard/Ellipse 4004.png";
@@ -56,7 +56,7 @@ const MyReportLayout = () => {
               </div>
             </div>
             <div className="mt-[6px]">
-              <button className=" bg-orange text-white rounded w-full py-[8px] text-xs font-semibold">
+              <button className=" bg-[#d31b5e] text-white rounded w-full py-[8px] text-xs font-semibold">
                 Check Report
               </button>
             </div>
@@ -64,7 +64,7 @@ const MyReportLayout = () => {
               Please enter UHID and Password as printed on the receip
             </span>
           </div>
-          <div className="lg:col-span-2 relative bg-[#FDE4A6] rounded-xl px-[20px] md:px-[40px] flex items-center lg:pt-0 pt-[60px]">
+          <div className="lg:col-span-2 relative bg-[#def3e338] rounded-xl px-[20px] md:px-[40px] flex items-center lg:pt-0 pt-[60px]">
             <div className="grid-cols-1 grid md:grid-cols-2 items-center">
               <div>
                 <p className="text-xl font-bold pb-3">Health Report</p>
@@ -84,7 +84,7 @@ const MyReportLayout = () => {
                 />
               </div>
             </div>
-            <div className="absolute bottom-0 left-0">
+            {/* <div className="absolute bottom-0 left-0">
               <Image
                 width={80}
                 height={80}
@@ -92,15 +92,15 @@ const MyReportLayout = () => {
                 loading="eager"
                 src={ShadoImg.src}
               />
-            </div>
-            <div className="absolute top-0 left-0">
+            </div> */}
+            {/* <div className="absolute top-0 left-0">
               <Image
                 width={80}
                 height={80}
                 className=" object-fill "
                 src={StartImg.src}
               />
-            </div>
+            </div> */}
             <div className="absolute bottom-4 left-0">
               <Image
                 width={80}
@@ -120,7 +120,7 @@ const MyReportLayout = () => {
           </div>
         </div>
         <div className="mt-[35px] md:mt-[70px]">
-          <p className="text-lg md:text-xl lg:text-2xl font-semibold text-orange">
+          <p className="text-lg md:text-xl lg:text-2xl font-semibold text-[#d31b5e]">
             Now Just Enter your Reg No & Lab No And Get your Lab Reports Any
             Where and Any Time
           </p>

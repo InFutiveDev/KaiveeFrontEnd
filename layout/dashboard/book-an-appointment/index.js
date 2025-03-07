@@ -249,7 +249,7 @@ const BookAppointmentLayout = () => {
                 <p className="py-2 text-xl sm:text-lg font-[600] ">
                   I Want to Book an Appointment
                 </p>
-                <div className="shadow-md bg-white border-[1px] border-[#E4E4E7] overflow-hidden rounded-xl">
+                <div className="shadow-md bg-white border-[1px] border-[#8abc59] overflow-hidden rounded-xl">
                   <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                     <p className="text-lg font-semibold">Select Member</p>
                   </div>
@@ -265,7 +265,7 @@ const BookAppointmentLayout = () => {
                           }}
                           className={`cursor-pointer relative rounded-xl ${
                             selectMember?._id == item?._id
-                              ? "bg-[#FEF6E6] border-[1px] border-[#FCC42C]"
+                              ? "bg-[#D419580D] border-[1px] border-[#8abc59]"
                               : "bg-white border-[1px] border-[#E4E4E7]"
                           }  p-[24px]`}
                         >

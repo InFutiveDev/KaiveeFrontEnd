@@ -33,7 +33,7 @@ const InquiryForm = ({
       const res = await dispatch(
         ADD_NEW_INQUIRY({
           ...payload,
-          inquiry_from: leads_source || "city x-ray website",
+          inquiry_from: leads_source || "Kaivee HealthCare website",
         })
       );
 
@@ -74,7 +74,7 @@ const InquiryForm = ({
           <div className="facilities-enquiry rounded-xl p-2 md:p-3 m-2">
             <div className="flex justify-center gap-x-2 flex-nowrap items-center">
               <p className="text-[#3F3F46] xl:text-xl lg:text-[18px] md:text-[18px] text-[14px] font-bold font-source-pro">
-                Enquire Now
+              Submit Your Inquiry Now
               </p>
             </div>
           </div>

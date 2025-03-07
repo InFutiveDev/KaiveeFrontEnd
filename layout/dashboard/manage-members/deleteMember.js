@@ -53,7 +53,7 @@ const DeleteMembers = ({ itemToDelete, setItemToDelete }) => {
                                 <span className="sr-only">Close modal</span>
                             </button>
                             <svg
-                                className="text-orange w-11 h-11 mb-3.5 mx-auto"
+                                className="text-[#8abc59] w-11 h-11 mb-3.5 mx-auto"
                                 aria-hidden="true"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"

@@ -15,7 +15,9 @@ const MediaCoverage = () => {
   }, []);
   return (
     <div className="container my-4">
-      <h3 className="mb-3"> Broadcast Media Coverage</h3>
+      <h1 className="mb-6 text-[#D41958] text-2xl md:text-3xl font-bold text-center">
+    Broadcast Media Coverage
+  </h1>
       <div className="boxMedia">
         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4">
           {getMedia?.map((item) => {

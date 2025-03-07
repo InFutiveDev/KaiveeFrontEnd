@@ -177,7 +177,7 @@ const EditMemberModal = ({ member, open, setOpen }) => {
                 <button
                   type="button"
                   // data-bs-dismiss="modal"
-                  className="mt-[20px] bg-white text-orange border-[1px] border-orange rounded px-[24px] py-[12px]"
+                  className="mt-[20px] bg-white text-[#8abc59] border-[1px] border-[#8abc59] rounded px-[24px] py-[12px]"
                   onClick={() => setOpen(!open)}
                 >
                   Cancel
@@ -185,7 +185,7 @@ const EditMemberModal = ({ member, open, setOpen }) => {
                 <button
                   type="submit"
                   onClick={handleSubmit}
-                  className="mt-[20px] bg-orange text-white rounded px-[24px] py-[12px]"
+                  className="mt-[20px] bg-[#8abc59] text-white rounded px-[24px] py-[12px]"
                 >
                   {loading ? "Processing..." : "Submit"}
                 </button>

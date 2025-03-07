@@ -18,7 +18,7 @@ const SelectAddress = ({
               key={index}
               className={`cursor-pointer relative rounded-xl ${
                 address == item?._id
-                  ? "bg-[#FEF6E6] border-[1px] border-[#FCC42C]"
+                  ? "bg-[#D419580D] border-[1px] border-[#8abc59]"
                   : "bg-white border-[1px] border-[#E4E4E7]"
               } p-2`}
             >

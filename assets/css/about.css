@@ -359,7 +359,7 @@ input[type=number] {
 
 .editor_div_facilites a,
 .editor_div a {
-    color: #FCC42C;
+    color: #d31b5e;
 }
 
 .editor_div_carrier ol,
@@ -387,7 +387,7 @@ input[type=number] {
 
 .editor_div ul li::marker,
 .editor_div_facilites li::marker {
-    color: #FCC42C
+    color: #d31b5e
 }
 
 .editor_div_facilites h2,

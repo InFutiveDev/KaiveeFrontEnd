@@ -12,7 +12,7 @@ const FranchiseeForm = ({ hideUX = false, leads_source = "" }) => {
   const dispatch = useDispatch();
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("Submitting data");
+    // console.log("Submitting data");
     const your_name = event.target.your_name.value;
     const phone_number = event.target.phone_number.value;
     const your_email = event.target.your_email.value;
@@ -33,6 +33,7 @@ const FranchiseeForm = ({ hideUX = false, leads_source = "" }) => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(your_email);
     };
+
     if (!validateEmail(your_email)) {
       toast("Invalid email format!", {
         progress: 0,
@@ -113,6 +114,8 @@ const FranchiseeForm = ({ hideUX = false, leads_source = "" }) => {
                     id="phone_number"
                     name="phone_number"
                     placeholder="mobile"
+                    maxLength="10"
+                    onInput={(e) => {e.target.value = e.target.value.replace(/\D/g, "").slice(0, 10);}}
                     className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
                     required
                   />
