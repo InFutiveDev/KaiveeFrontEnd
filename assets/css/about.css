@@ -247,8 +247,8 @@ input:checked {
 
 /* When the checkbox is checked, add a blue background */
 .cusmCheckBox input:checked~.checkmark {
-    background-color: #FCC42C;
-    border-color: #FCC42C;
+    background-color: #d41959;
+    border-color: #d41959;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */

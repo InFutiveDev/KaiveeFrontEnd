@@ -174,7 +174,7 @@ const EditProfileModal = ({ userInfo, setUserInfo, setOpen, open }) => {
                     <div className="modal-footer-dashboard">
                       <button
                         type="button"
-                        className="mt-[20px] bg-white text-orange border border-orange rounded-md px-2 py-1"
+                        className="mt-[20px] bg-white text-[#d41959] border border-[#d41959] rounded-md px-2 py-1"
                         onClick={() => setOpen(!open)}
                       >
                         Cancel
@@ -182,7 +182,7 @@ const EditProfileModal = ({ userInfo, setUserInfo, setOpen, open }) => {
                       <button
                         type="submit"
                         onClick={handleSubmit}
-                        className="mt-[20px] bg-orange text-white rounded-md px-2 py-1"
+                        className="mt-[20px] bg-[#d41959] text-white rounded-md px-2 py-1"
                       >
                         {loading ? "Processing..." : "Update"}
                       </button>
