@@ -23,7 +23,7 @@ const Home = () => {
       <Head>
         <title>{metaData.title}</title>
         <meta name="description" content={metaData.description} />
-        <meta name="robots" content="noindex" />
+        
 
         {/* Open Graph meta tags */}
         <meta property="og:title" content={metaData.title} />
