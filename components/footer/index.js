@@ -275,12 +275,12 @@ const Footer = () => {
           </div>
           <div className="flex  md:justify-start sm:justify-start justify-start gap-[16px] mt-[24px]">
             <div>
-              <a href="https://www.instagram.com/kaivee.in/" target="_black">
+              <a href="https://www.instagram.com/kaiveehealthcare/" target="_black">
                 <HealthInstagramSVG />
               </a>
             </div>
             <div className="flex items-center">
-              <a href="https://twitter.com/" target="_black">
+              <a href="https://x.com/Kaivee_in" target="_black">
                 <Image
                   src={HealthTwiter}
                   alt="twitter"
@@ -296,7 +296,7 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <a href="https://www.linkedin.com/" target="_black">
+              <a href="https://www.linkedin.com/in/kaivee-a-unit-of-zen-health/" target="_black">
                 <LinkedinSVG />
               </a>
             </div>
