@@ -70,8 +70,8 @@ const HealthBulletin = () => {
         <p className=" lg:text-[32px] text-lg font-source-pro">
         Health Bulletin & Articles
         </p>
-        <a target="_blank" href="/">
-          <div className="bg-[#D41958] text-white text-[14px] md:text-[18px] px-2 rounded-md">
+        <a href="https://pos2.flashdeal.in/kaivee-blog/" target="_blank" rel="noopener noreferrer" className="inline-block">
+          <div className="bg-[#D41958] hover:bg-[#b31549] transition-colors duration-300 text-white text-[14px] md:text-[18px] px-4 py-2 rounded-md">
             View All
           </div>
         </a>

@@ -427,7 +427,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                       <>
                         <h2 className="text-gray-900 font-semibold">
                           {" "}
-                          <span className="border_text"> Preparation</span>
+                          <span className=""> Preparation</span>
                         </h2>
                         <div
                           className="my-2 text-gray-700 editor_div "
@@ -440,7 +440,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                     {testInfo?.data && testInfo.data[0]?.test_components && (
                       <>
                         <h2 className="text-gray-900 font-semibold">
-                          <span className="border_text">Components</span>
+                          <span className="">Components</span>
                         </h2>
                         <div
                           className="my-2 text-gray-700 editor_div components_editor_div"
@@ -451,7 +451,7 @@ const HealthPackagesDetailLayout = ({ id, testInfo }) => {
                     {testInfo?.data && testInfo.data[0]?.test_pre_test_info && (
                       <>
                         <h2 className="text-gray-900 md:mt-0 mt-[10px] font-semibold">
-                          <span className="border_text"> Overview</span>
+                          <span className=""> Overview</span>
                         </h2>
                         <div
                           className="my-2 text-gray-700 editor_div md:text-[20px] text-[14px]"

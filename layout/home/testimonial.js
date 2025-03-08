@@ -4,8 +4,10 @@ import "react-multi-carousel/lib/styles.css";
 const Testimonial = () => {
   const testimonials = [
     {
-      text: "I made RT PCR test from this lab.My experience with this lab was wonderful and each process was easy and fast. Highly recommended services.",
-      name: "Lokesh Singh",
+      text: "When I signed up with Lendwise it was a no-brainer. It's been one of the best decisions I've made to ensure my finances are on point",
+      name: "Alex Bergwijn",
+      position: "Accounting at Mailchimp",
+      image: "/path/to/profile-image.jpg" // Add profile image path
     },
     {
       text: "Very efficient ad prompt. Have well established contactless transfer of info, receipts and data. Dev from Kaivee HealthCare extends great co-operation and co-ordination.Strongly recommend to avail their services",
@@ -105,7 +107,7 @@ const Testimonial = () => {
               </p>
               <div className="flex items-center">
                 <div className="h-10 w-10 bg-[#D41958] rounded-full flex-shrink-0"></div>
-                <div className="mr-4">
+                <div className="ml-4">
                   <h4 className="font-bold text-gray-800">{item.name}</h4>
                 </div>
               </div>
