@@ -599,7 +599,7 @@ const CheckOutLayout = () => {
                       >
                         COD
                       </label>
-                      {/* <input
+                      <input
                         className="ml-sm-2"
                         id="payment Type"
                         type="checkbox"
@@ -615,7 +615,7 @@ const CheckOutLayout = () => {
                         className=" mb-0 checked-text text-[18px] font-source-pro"
                       >
                         Online Payment
-                      </label> */}
+                      </label>
                     </div>
                   </div>
                   {collectionType === "home-collection" ? (
