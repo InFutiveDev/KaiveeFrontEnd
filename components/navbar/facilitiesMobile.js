@@ -44,7 +44,7 @@ const FacilitiesMobile = ({
         } `}
       >
         <p className="cursor-pointer font-[400] !text-[16px] menuText" onClick={toggle}>
-          Facilities
+        Lab Test
         </p>
         <div className="block sm:hidden cursor-pointer">
           {!facilitiesOpen ? (

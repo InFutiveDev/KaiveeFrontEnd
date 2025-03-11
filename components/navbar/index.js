@@ -262,6 +262,7 @@ const Navbar = () => {
               </div>
             </form>
           </div>
+          
           <div className="profile w-full sm:w-auto">
             <div className="w-full flex flex-wrap  justify-between sm:justify-start ">
               <div className="phone">

@@ -28,7 +28,7 @@ const Facilities = ({ categories, closeMenu }) => {
     <div className="group relative ">
       <div className="flex justify-between items-start sm:p-0 p-[15px] ">
         <p className="cursor-pointer font-[400] menuText !text-[16px]">
-          Facilities
+          Lab Test
         </p>
         <div className="block sm:hidden cursor-pointer">
           {!facilitiesOpen ? (

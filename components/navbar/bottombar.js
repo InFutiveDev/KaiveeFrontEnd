@@ -14,6 +14,8 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import FacilitiesMobile from "./facilitiesMobile";
+import abmbuimg from "assets/images/ambu.gif";
+import Image from "next/image";
 
 const Bottombar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,7 +109,7 @@ const Bottombar = () => {
               <NavItem>
                 <Link
                   prefetch
-                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block  ${asPath == "/" && "active"
+                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[16px] inline-block  ${asPath == "/" && "active"
                     }`}
                   href="/"
                   onClick={closeMenu}
@@ -119,7 +121,7 @@ const Bottombar = () => {
                 <UncontrolledDropdown className="hover-menu-about ">
                   <div
 
-                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[15px]  ${aboutOpen ? "bg-[#7DB440]" : ""
+                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${aboutOpen ? "bg-[#7DB440]" : ""
                       } `}
                   >
                     <div
@@ -234,6 +236,42 @@ const Bottombar = () => {
                   )}
                 </NavItem>
               )}
+               <NavItem>
+                <Link
+                  prefetch
+                  onClick={closeMenu}
+                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[16px] inline-block ${asPath == "/print-media-coverage" && "active"
+                    }`}
+                  href="/"
+                >
+                  Home Care
+                </Link>
+              </NavItem>
+
+              <NavItem>
+                <Link
+                  prefetch
+                  onClick={closeMenu}
+                  className={` cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[16px] inline-block ${asPath == "/feedback" && "active"
+                    }`}
+                  href="/corporate-health-enquiry"
+                >
+                  Corporate
+                </Link>
+              </NavItem>
+
+              <NavItem>
+                <Link
+                  prefetch
+                  onClick={closeMenu}
+                  className={` cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[16px] inline-block ${asPath == "/feedback" && "active"
+                    }`}
+                  href="/corporate-health-enquiry"
+                >
+                  Doctor's OPD
+                </Link>
+              </NavItem>
+             
               <NavItem>
                 <UncontrolledDropdown className="hover-menu">
                   <Link
@@ -252,54 +290,14 @@ const Bottombar = () => {
                 <Link
                   prefetch
                   onClick={closeMenu}
-                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[15px] inline-block ${asPath == "/book-a-test" && "active"
-                    }`}
-                  href="/book-a-test"
+                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[15px] inline-block`}
+                  href="/free-home-sample-collection"
                 >
-                  Book a Test
+                  Book Services
                 </Link>
               </NavItem>
 
-              {/* <NavItem>
-                <UncontrolledDropdown className="hover-menu">
-                  <div
-                    className={`transition-all cursor-pointer font-[400] menuText !text-[16px] ${
-                      asPath?.includes("/covid-19") &&
-                      "active text-[#D41958] border-b-2 border-[#f7a70b]"
-                    }`}
-                  >
-                    Covid-19
-                  </div>
-                  <DropdownMenu className="show-menu m-0">
-                    <>
-                      <Link
-                        prefetch
-                        className={`transition-all font-[400] menuText  ${
-                          asPath == `/covid-19/covid-19-RT-PCR` &&
-                          "!text-[#D41958] !font-medium"
-                        }`}
-                        href={`/covid-19/covid-19-RT-PCR`}
-                      >
-                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
-                          Covid 19 RT-PCR
-                        </DropdownItem>
-                      </Link>
-                      <Link
-                        prefetch
-                        className={`transition-all font-[400] menuText  ${
-                          asPath == `/covid-19/COVID-19-vaccination` &&
-                          "!text-[#D41958] !font-medium"
-                        }`}
-                        href={`/covid-19/COVID-19-vaccination`}
-                      >
-                        <DropdownItem className="transition-all hover:bg-[#D41958] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
-                          COVID-19 Vaccination
-                        </DropdownItem>
-                      </Link>
-                    </>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </NavItem> */}
+             
               <NavItem>
                 <a
                   className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block`}
@@ -310,40 +308,9 @@ const Bottombar = () => {
                   Blogs
                 </a>
               </NavItem>
-              <NavItem>
-                <Link
-                  prefetch
-                  onClick={closeMenu}
-                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${asPath == "/print-media-coverage" && "active"
-                    }`}
-                  href="/locate-us"
-                >
-                  Locate
-                </Link>
-              </NavItem>
 
-              <NavItem>
-                <Link
-                  prefetch
-                  onClick={closeMenu}
-                  className={` cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[15px] inline-block ${asPath == "/feedback" && "active"
-                    }`}
-                  href="/feedback"
-                >
-                  Feedback
-                </Link>
-              </NavItem>
-              <NavItem className="block lg:hidden">
-                <Link
-                  prefetch
-                  onClick={closeMenu}
-                  className={` cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[15px] inline-block ${asPath == "/contact-us" && "active"
-                    }`}
-                  href="/contact-us"
-                >
-                  Contact Us
-                </Link>
-              </NavItem>
+              
+             
             </Nav>
           </Collapse>
         </NavbarStrap>
