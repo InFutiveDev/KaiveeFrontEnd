@@ -268,7 +268,7 @@ const Bottombar = () => {
                     }`}
                   href="/corporate-health-enquiry"
                 >
-                  Doctor's OPD
+                  Doctors OPD
                 </Link>
               </NavItem>
              
