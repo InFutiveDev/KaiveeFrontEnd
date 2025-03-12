@@ -63,6 +63,8 @@ const Bottombar = () => {
     "/about/quality-assurance",
     "/about/awards-accreditations",
     "/about/csr",
+    "/home-care",
+    "/home-care/ecg-x-ray"
   ].includes(router.asPath);
 
   return (
@@ -199,7 +201,7 @@ const Bottombar = () => {
                           }`}
                       >
                         <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
-                          Awards & Accreditations
+                        Awards & Accreditations
                         </DropdownItem>
                       </Link>
                       <Link
@@ -236,16 +238,155 @@ const Bottombar = () => {
                   )}
                 </NavItem>
               )}
-               <NavItem>
-                <Link
-                  prefetch
-                  onClick={closeMenu}
-                  className={`transition-all cursor-pointer font-[400] menuText !text-[16px] sm:p-0 p-[16px] inline-block ${asPath == "/print-media-coverage" && "active"
-                    }`}
-                  href="/"
-                >
-                  Home Care
-                </Link>
+              
+                <NavItem>
+                <UncontrolledDropdown className="hover-menu-about ">
+                  <div
+
+                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${aboutOpen ? "bg-[#7DB440]" : ""
+                      } `}
+                  >
+                    <div
+                      className={`transition-all font-[400] menuText !text-[16px]  ${asPath == "" && "active"
+                        }`}
+                    >
+                      Home Care
+                    </div>
+                    <div className="block sm:hidden cursor-pointer">
+                      {!aboutOpen ? (
+                        <span className="text-[20px]" onClick={toggleAbout}>
+                          {" "}
+                          +
+                        </span>
+                      ) : (
+                        <span className="text-[20px]" onClick={toggleAbout}>
+                          -
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pl-[28px] pt-[2px]">
+                    <DropdownMenu
+                      className={`${!isXS ? "show-menu-about" : "!block"
+                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${aboutOpen
+                          ? " !h-auto	"
+                          : isXS
+                            ? "overflow-hidden  !h-0  !p-0 !border-none"
+                            : ""
+                        } `}
+                    >
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`transition-all align-middle menuText   ${asPath == "/home-care" && "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all  hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                          Nursing Care at Home
+                        </DropdownItem>
+                      </Link>
+
+                      <Link
+                        prefetch
+                        href={`/home-care/ecg-x-ray`}
+                        onClick={closeMenu}
+                        className={`transition-all align-middle menuText  ${asPath == "/home-care/ecg-x-ray" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all  hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                          ECG & X-Ray at Home
+                        </DropdownItem>
+                      </Link>
+
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`transition-all align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                          Vaccination at Home
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                          Holter Monitoring 
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                          Sleep Study
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                          ABPM
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                          Blood Sample Collection
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                          Doctors at Home
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                          Physiotherapy at Home
+                        </DropdownItem>
+                      </Link>
+                    </DropdownMenu>
+                  </div>
+                </UncontrolledDropdown>
               </NavItem>
 
               <NavItem>
@@ -260,18 +401,285 @@ const Bottombar = () => {
                 </Link>
               </NavItem>
 
+              
               <NavItem>
-                <Link
-                  prefetch
-                  onClick={closeMenu}
-                  className={` cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[16px] inline-block ${asPath == "/feedback" && "active"
-                    }`}
-                  href="/corporate-health-enquiry"
-                >
-                  Doctors OPD
-                </Link>
+                <UncontrolledDropdown className="hover-menu-about ">
+                  <div
+
+                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${aboutOpen ? "bg-[#7DB440]" : ""
+                      } `}
+                  >
+                    <div
+                      className={`transition-all font-[400] menuText !text-[16px]  ${asPath == "" && "active"
+                        }`}
+                    >
+                      Doctor&apos;s OPD
+                    </div>
+                    <div className="block sm:hidden cursor-pointer">
+                      {!aboutOpen ? (
+                        <span className="text-[20px]" onClick={toggleAbout}>
+                          {" "}
+                          +
+                        </span>
+                      ) : (
+                        <span className="text-[20px]" onClick={toggleAbout}>
+                          -
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pl-[28px] pt-[2px]">
+                    <DropdownMenu
+                      className={`${!isXS ? "show-menu-about" : "!block"
+                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${aboutOpen
+                          ? " !h-auto	"
+                          : isXS
+                            ? "overflow-hidden  !h-0  !p-0 !border-none"
+                            : ""
+                        } `}
+                    >
+                      
+                      <div className="relative group">
+                        <Link
+                          prefetch
+                          href={`/home-care`}
+                          onClick={closeMenu}
+                          className={`transition-all align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                        >
+                          <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                            General Medicine &amp; Specialties
+                          </DropdownItem>
+                        </Link>
+
+                        {/* Right-Aligned Submenu */}
+                        <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-48">
+                          <Link
+                            href="/home-care/general-physician"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            General Physician
+                          </Link>
+                          <Link
+                            href="/home-care/pediatrician"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            Pediatrician
+                          </Link>
+                          <Link
+                            href="/home-care/geriatrician"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            Geriatrician
+                          </Link>
+                        </div>
+                      </div>
+
+
+                      <div className="relative group">
+                          <Link
+                            prefetch
+                            href={`/home-care/ecg-x-ray`}
+                            onClick={closeMenu}
+                            className={`transition-all align-middle menuText ${asPath == "/home-care/ecg-x-ray" && "!text-[#D41958] !font-medium"}`}
+                          >
+                            <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                              Surgical Specialties
+                            </DropdownItem>
+                          </Link>
+
+                          {/* Sub-dropdown for Surgical Specialties */}
+                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
+                            <Link
+                              href="/home-care/general-surgeon"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            >
+                              General Surgeon
+                            </Link>
+                            <Link
+                              href="/home-care/orthopedic-surgeon"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            >
+                              Orthopedic Surgeon
+                            </Link>
+                            <Link
+                              href="/home-care/neurosurgeon"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            >
+                              Neurosurgeon
+                            </Link>
+                            <Link
+                              href="/home-care/cardiac-surgeon"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            >
+                              Cardiac Surgeon
+                            </Link>
+                            <Link
+                              href="/home-care/plastic-cosmetic-surgeon"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            >
+                              Plastic &amp; Cosmetic Surgeon
+                            </Link>
+                            <Link
+                              href="/home-care/ent-surgeon"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            >
+                              ENT Surgeon
+                            </Link>
+                          </div>
+                        </div>
+
+
+                        <div className="relative group">
+                          <Link
+                            prefetch
+                            href={`/home-care`}
+                            onClick={closeMenu}
+                            className={`transition-all align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                          >
+                            <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                              Super Specialties
+                            </DropdownItem>
+                          </Link>
+
+                          {/* Submenu */}
+                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
+                            <Link href="/home-care/cardiologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              Cardiologist
+                            </Link>
+                            <Link href="/home-care/neurologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              Neurologist
+                            </Link>
+                            <Link href="/home-care/nephrologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              Nephrologist
+                            </Link>
+                            <Link href="/home-care/endocrinologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              Endocrinologist
+                            </Link>
+                            <Link href="/home-care/hepatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              Hepatologist
+                            </Link>
+                            <Link href="/home-care/rheumatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              Rheumatologist
+                            </Link>
+                          </div>
+                        </div>
+
+                        <div className="relative group">
+                            <Link
+                              prefetch
+                              href={`/home-care`}
+                              onClick={closeMenu}
+                              className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                            >
+                              <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                                Other Medical Specialties
+                              </DropdownItem>
+                            </Link>
+
+                            {/* Submenu */}
+                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
+                              <Link href="/home-care/dermatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Dermatologist
+                              </Link>
+                              <Link href="/home-care/psychiatrist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Psychiatrist
+                              </Link>
+                              <Link href="/home-care/pulmonologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Pulmonologist
+                              </Link>
+                              <Link href="/home-care/gastroenterologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Gastroenterologist
+                              </Link>
+                              <Link href="/home-care/hematologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Hematologist
+                              </Link>
+                            </div>
+                          </div>
+
+                          <div className="relative group">
+                          <Link
+                            prefetch
+                            href={`/home-care`}
+                            onClick={closeMenu}
+                            className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                          >
+                            <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                              Women &amp; Child Care
+                            </DropdownItem>
+                          </Link>
+
+                          {/* Submenu */}
+                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
+                            <Link href="/home-care/gynecologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              Gynecologist
+                            </Link>
+                            <Link href="/home-care/obstetrician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              Obstetrician
+                            </Link>
+                            <Link href="/home-care/neonatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              Neonatologist
+                            </Link>
+                          </div>
+                        </div>
+
+                        <div className="relative group">
+                            <Link
+                              prefetch
+                              href={`/home-care`}
+                              onClick={closeMenu}
+                              className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                            >
+                              <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                                Eye &amp; Dental Care
+                              </DropdownItem>
+                            </Link>
+
+                            {/* Submenu */}
+                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
+                              <Link href="/home-care/opthalmologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Ophthalmologist
+                              </Link>
+                              <Link href="/home-care/dentist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Dentist
+                              </Link>
+                              <Link href="/home-care/oral-maxillofacial-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Oral &amp; Maxillofacial Surgeon
+                              </Link>
+                            </div>
+                          </div>
+
+                          <div className="relative group">
+                                <Link
+                                  prefetch
+                                  href={`/home-care`}
+                                  onClick={closeMenu}
+                                  className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                                >
+                                  <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                                    Alternative Medicine &amp; Rehabilitation
+                                  </DropdownItem>
+                                </Link>
+
+                                {/* Submenu */}
+                                <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
+                                  <Link href="/home-care/physiotherapist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    Physiotherapist
+                                  </Link>
+                                  <Link href="/home-care/homeopathy-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    Homeopathy Doctor
+                                  </Link>
+                                  <Link href="/home-care/ayurveda-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    Ayurveda Doctor
+                                  </Link>
+                                </div>
+                              </div>
+
+                     
+                     
+                    </DropdownMenu>
+                  </div>
+                </UncontrolledDropdown>
               </NavItem>
-             
               <NavItem>
                 <UncontrolledDropdown className="hover-menu">
                   <Link

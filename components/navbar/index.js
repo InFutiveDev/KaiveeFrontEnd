@@ -25,6 +25,8 @@ import { UserIconSVG } from "assets/images/SvgImage";
 import { GET_BOOK_A_TEST } from "redux/actions/book-a-test";
 import Bottombar from "./bottombar";
 import { Search } from "react-feather";
+import abmbuimg from "assets/images/ambu.gif";
+
 
 const Navbar = () => {
   const [filterDataShow, setFilterDataShow] = useState(false);
@@ -262,7 +264,21 @@ const Navbar = () => {
               </div>
             </form>
           </div>
-          
+          <div className="profile  sm:w-auto ml-10 sm:ml-2">
+              <div className="w-full flex items-center gap-2 sm:gap-3">
+                
+                <Image
+                  src={abmbuimg}
+                  alt="Ambulance"
+                  className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                />
+
+                {/* Title on the right */}
+                <span className="text-sm sm:text-base font-medium text-black">
+                for Ambulance
+                </span>
+              </div>
+            </div>
           <div className="profile w-full sm:w-auto">
             <div className="w-full flex flex-wrap  justify-between sm:justify-start ">
               <div className="phone">

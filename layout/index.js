@@ -14,8 +14,10 @@ import CouponLayout from "./coupon";
 import HealthriskLayout from "./healthrisk";
 import CovidLayout from "./covid";
 import FacilitiesCategoryLayout from "./facilities";
+import HomeCareLayout from "./home-care";
 export {
   HomeLayout,
+  HomeCareLayout,
   AboutLayout,
   MediaPressLayout,
   ContactUsLayout,
