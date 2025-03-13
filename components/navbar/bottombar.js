@@ -390,16 +390,142 @@ const Bottombar = () => {
               </NavItem>
 
               <NavItem>
-                <Link
-                  prefetch
-                  onClick={closeMenu}
-                  className={` cursor-pointer font-[400] menuText !text-[16px]  sm:p-0 p-[16px] inline-block ${asPath == "/feedback" && "active"
-                    }`}
-                  href="/corporate-health-enquiry"
-                >
-                  Corporate
-                </Link>
+                <UncontrolledDropdown className="hover-menu-about ">
+                  <div
+
+                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${aboutOpen ? "bg-[#7DB440]" : ""
+                      } `}
+                  >
+                    <div
+                      className={`transition-all font-[400] menuText !text-[16px]  ${asPath == "" && "active"
+                        }`}
+                    >
+                      Partnership
+                    </div>
+                    <div className="block sm:hidden cursor-pointer">
+                      {!aboutOpen ? (
+                        <span className="text-[20px]" onClick={toggleAbout}>
+                          {" "}
+                          +
+                        </span>
+                      ) : (
+                        <span className="text-[20px]" onClick={toggleAbout}>
+                          -
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pl-[28px] pt-[2px]">
+                    <DropdownMenu
+                      className={`${!isXS ? "show-menu-about" : "!block"
+                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${aboutOpen
+                          ? " !h-auto	"
+                          : isXS
+                            ? "overflow-hidden  !h-0  !p-0 !border-none"
+                            : ""
+                        } `}
+                    >
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`transition-all align-middle menuText   ${asPath == "/home-care" && "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all  hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        Partner With Us
+                        </DropdownItem>
+                      </Link>
+
+                      <Link
+                        prefetch
+                        href={`/home-care/ecg-x-ray`}
+                        onClick={closeMenu}
+                        className={`transition-all align-middle menuText  ${asPath == "/home-care/ecg-x-ray" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all  hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        Become A Vendor
+                        </DropdownItem>
+                      </Link>
+
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`transition-all align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        Corporate Tie-up
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        Franchisee 
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        Annual Health Check up
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        International PartnerShip
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                        Clinical Research/Trials
+                        </DropdownItem>
+                      </Link>
+                      <Link
+                        prefetch
+                        href={`/home-care`}
+                        onClick={closeMenu}
+                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                          "!text-[#D41958] !font-medium"
+                          }`}
+                      >
+                        
+                      </Link>
+                    </DropdownMenu>
+                  </div>
+                </UncontrolledDropdown>
               </NavItem>
+
+
 
               
               <NavItem>

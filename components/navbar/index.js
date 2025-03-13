@@ -275,7 +275,7 @@ const Navbar = () => {
 
                 {/* Title on the right */}
                 <span className="text-sm sm:text-base font-medium text-black">
-                for Ambulance
+                 Ambulance
                 </span>
               </div>
             </div>
