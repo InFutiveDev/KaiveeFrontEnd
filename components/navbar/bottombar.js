@@ -14,8 +14,8 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import FacilitiesMobile from "./facilitiesMobile";
-import abmbuimg from "assets/images/ambu.gif";
-import Image from "next/image";
+// import abmbuimg from "assets/images/ambu.gif";
+// import Image from "next/image";
 
 const Bottombar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +64,14 @@ const Bottombar = () => {
     "/about/awards-accreditations",
     "/about/csr",
     "/home-care",
-    "/home-care/ecg-x-ray"
+    "/home-care/ecg-x-ray",
+    "/home-care/vaccination",
+    "/home-care/holter",
+    "/home-care/sleep",
+    "home-care/abpm",
+    "/home-care/blood-sample",
+    "home-care/doctors",
+    "/home-care/physiothreapy"
   ].includes(router.asPath);
 
   return (
@@ -302,9 +309,9 @@ const Bottombar = () => {
 
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/home-care/vaccination`}
                         onClick={closeMenu}
-                        className={`transition-all align-middle menuText  ${asPath == "/home-care" &&
+                        className={`transition-all align-middle menuText  ${asPath == "/home-care/vaccination" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -314,9 +321,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/home-care/holter`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "/home-care/holter" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -326,9 +333,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/home-care/sleep`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "/home-care/sleep" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -338,9 +345,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/home-care/abpm`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "/home-care/abpm" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -350,9 +357,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/home-care/blood-sample`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "/home-care/blood-sample" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -362,9 +369,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`home-care/doctors`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "home-care/doctors" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -374,9 +381,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/home-care/physiothreapy`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "/home-care/physiothreapy" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
