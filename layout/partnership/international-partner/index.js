@@ -1,4 +1,4 @@
-import Ecgbanner from "./physiotherapy-banner";
+import Ecgbanner from "./international-banner";
 // import AboutFireImage from "assets/images/about/fireworks 3.svg";
 // import AboutUs from "./aboutus";
 
@@ -26,7 +26,7 @@ import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
 
-const PhysioLayout = () => {
+const InternationalLayout = () => {
   return (
     <>
       {/* className="sliders banner_slider_wrap_facilities" */}
@@ -40,55 +40,66 @@ const PhysioLayout = () => {
 
       
       <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Physiotherapy at Home</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Our Home Physiotherapy Services</h2>
-          <p className="text-gray-700">
-            Recover faster and improve mobility with professional physiotherapy sessions at home. Our certified physiotherapists provide personalized treatment plans for pain relief, rehabilitation, and post-surgery recovery.
-          </p>
-          
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Benefits:</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>One-on-one physiotherapy sessions at home</li>
-              <li>Customized treatment for various conditions</li>
-              <li>Pain management and mobility improvement</li>
-              <li>Post-surgery and injury rehabilitation</li>
-              <li>Convenient and stress-free therapy</li>
-            </ul>
-          </div>
+      <h1 className="text-3xl font-bold text-center mb-8">Our Global Healthcare Partnerships</h1>
+
+      <div className="bg-blue-100 p-8 rounded-lg shadow-lg text-center">
+        <h2 className="text-2xl font-semibold">Partner with Us for International Healthcare Excellence</h2>
+        <p className="text-gray-700 mt-4">
+          We collaborate with renowned healthcare institutions, medical professionals, and organizations worldwide to provide 
+          top-tier medical services, training, and research opportunities.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div className="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-xl font-semibold">Global Healthcare Network</h3>
+          <p className="text-gray-600 mt-2">Connecting with leading hospitals and healthcare providers worldwide.</p>
         </div>
 
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Why Choose Us?</h2>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Certified Physiotherapists</h3>
-              <p className="text-gray-600">Our experts are trained to provide specialized treatment for different conditions.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Convenience & Comfort</h3>
-              <p className="text-gray-600">Receive therapy in your home without the hassle of traveling.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Personalized Recovery Plans</h3>
-              <p className="text-gray-600">Each session is tailored to your specific needs for optimal results.</p>
-            </div>
+        <div className="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-xl font-semibold">Medical Training & Exchange</h3>
+          <p className="text-gray-600 mt-2">Providing opportunities for medical professionals to gain international experience.</p>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-xl font-semibold">Research & Innovation</h3>
+          <p className="text-gray-600 mt-2">Collaborating on groundbreaking research and healthcare innovations.</p>
+        </div>
+      </div>
+
+      <div className="mt-12 text-center">
+        <h2 className="text-2xl font-semibold">Why Partner with Us?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 className="font-semibold">International Expertise</h3>
+            <p className="text-gray-600">Access a network of globally recognized healthcare professionals.</p>
+          </div>
+
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 className="font-semibold">State-of-the-Art Medical Facilities</h3>
+            <p className="text-gray-600">Utilize advanced medical technology and infrastructure.</p>
+          </div>
+
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 className="font-semibold">Collaborative Growth</h3>
+            <p className="text-gray-600">Foster partnerships for mutual growth and medical advancements.</p>
+          </div>
+
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h3 className="font-semibold">Enhanced Patient Care</h3>
+            <p className="text-gray-600">Deliver world-class healthcare solutions to patients globally.</p>
           </div>
         </div>
-</div>
-  
+      </div>
+
     </div>
+ 
 
     </>
   );
 };
 
-export default PhysioLayout;
+export default InternationalLayout;
 
 const data = [
   {

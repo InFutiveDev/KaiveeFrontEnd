@@ -1,4 +1,4 @@
-import Ecgbanner from "./physiotherapy-banner";
+import Ecgbanner from "./annual-banner";
 // import AboutFireImage from "assets/images/about/fireworks 3.svg";
 // import AboutUs from "./aboutus";
 
@@ -26,7 +26,7 @@ import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
 
-const PhysioLayout = () => {
+const AnnualLayout = () => {
   return (
     <>
       {/* className="sliders banner_slider_wrap_facilities" */}
@@ -39,56 +39,75 @@ const PhysioLayout = () => {
       </section>
 
       
-      <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Physiotherapy at Home</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Our Home Physiotherapy Services</h2>
-          <p className="text-gray-700">
-            Recover faster and improve mobility with professional physiotherapy sessions at home. Our certified physiotherapists provide personalized treatment plans for pain relief, rehabilitation, and post-surgery recovery.
-          </p>
-          
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Benefits:</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>One-on-one physiotherapy sessions at home</li>
-              <li>Customized treatment for various conditions</li>
-              <li>Pain management and mobility improvement</li>
-              <li>Post-surgery and injury rehabilitation</li>
-              <li>Convenient and stress-free therapy</li>
-            </ul>
+      <div className="py-16">
+  <div className="container mx-auto px-6">
+    {/* Hero Section */}
+    <div className="text-center mb-12">
+      <h1 className="text-4xl font-bold text-blue-900">Annual Health Check-Ups at Our Clinic</h1>
+      <p className="text-gray-700 mt-3 max-w-2xl mx-auto">
+        Get a complete health assessment with advanced diagnostics and expert consultations for a healthier life.
+      </p>
+    </div>
+
+    {/* Image + Content Section */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      {/* Image Section */}
+      <div className="relative">
+        <img 
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/15e61adf8c0e947a4e7a398bba5154fc%20(1).jpg?updatedAt=1742370907015" 
+          alt="Health Check-Up" 
+          className="w-full rounded-lg shadow-lg transition-transform transform hover:scale-105"
+        />
+      </div>
+
+      {/* Information Section */}
+      <div className="space-y-6 animate-fadeIn">
+        <h2 className="text-2xl font-semibold text-blue-900">Comprehensive Health Check-Up</h2>
+        <p className="text-gray-700 leading-relaxed">
+          Ensure early detection of potential health issues with our state-of-the-art diagnostic tools and professional medical guidance.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+            <h3 className="font-semibold text-blue-800">✔ Advanced Equipment</h3>
+            <p className="text-gray-600 mt-1">Modern diagnostic tools for precise health assessment.</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+            <h3 className="font-semibold text-blue-800">✔ Early Detection</h3>
+            <p className="text-gray-600 mt-1">Identify health risks before they become serious.</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+            <h3 className="font-semibold text-blue-800">✔ Expert Consultation</h3>
+            <p className="text-gray-600 mt-1">Personalized health guidance from specialists.</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+            <h3 className="font-semibold text-blue-800">✔ Quick Reports</h3>
+            <p className="text-gray-600 mt-1">Receive timely and accurate test results.</p>
           </div>
         </div>
 
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Why Choose Us?</h2>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Certified Physiotherapists</h3>
-              <p className="text-gray-600">Our experts are trained to provide specialized treatment for different conditions.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Convenience & Comfort</h3>
-              <p className="text-gray-600">Receive therapy in your home without the hassle of traveling.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Personalized Recovery Plans</h3>
-              <p className="text-gray-600">Each session is tailored to your specific needs for optimal results.</p>
-            </div>
-          </div>
-        </div>
-</div>
-  
+        {/* CTA Button */}
+        <a href="/contact-us" className="inline-block">
+          <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg transition-transform transform hover:scale-110 hover:bg-blue-700">
+            Book Your Health Check-Up
+          </button>
+        </a>
+      </div>
     </div>
+  </div>
+
+
+    </div>
+ 
 
     </>
   );
 };
 
-export default PhysioLayout;
+export default AnnualLayout;
 
 const data = [
   {

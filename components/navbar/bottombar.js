@@ -71,7 +71,15 @@ const Bottombar = () => {
     "home-care/abpm",
     "/home-care/blood-sample",
     "home-care/doctors",
-    "/home-care/physiothreapy"
+    "/home-care/physiothreapy",
+    "/partnership/annual-health-checkups",
+    "/partnership/international-partner",
+    "/partnership/franchise",
+    "/partnership/clinical-reasearch",
+   
+    "/partnership/vendor",
+    "/partnership/partner-with-us"
+
   ].includes(router.asPath);
 
   return (
@@ -434,9 +442,9 @@ const Bottombar = () => {
                     >
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/partnership/partner-with-us`}
                         onClick={closeMenu}
-                        className={`transition-all align-middle menuText   ${asPath == "/home-care" && "!text-[#D41958] !font-medium"
+                        className={`transition-all align-middle menuText   ${asPath == "/partnership/partner-with-us" && "!text-[#D41958] !font-medium"
                           }`}
                       >
                         <DropdownItem className="transition-all  hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
@@ -446,9 +454,9 @@ const Bottombar = () => {
 
                       <Link
                         prefetch
-                        href={`/home-care/ecg-x-ray`}
+                        href={`/partnership/vendor`}
                         onClick={closeMenu}
-                        className={`transition-all align-middle menuText  ${asPath == "/home-care/ecg-x-ray" &&
+                        className={`transition-all align-middle menuText  ${asPath == "/partnership/vendor" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -459,9 +467,9 @@ const Bottombar = () => {
 
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/corporate-health-enquiry`}
                         onClick={closeMenu}
-                        className={`transition-all align-middle menuText  ${asPath == "/home-care" &&
+                        className={`transition-all align-middle menuText  ${asPath == "/corporate-health-enquiry" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -471,9 +479,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/partnership/franchise`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "/partnership/franchise" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -483,9 +491,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/partnership/annual-health-checkups`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "/partnership/annual-health-checkups" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -495,9 +503,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/partnership/international-partner`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "/home-care/international-partner" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >
@@ -507,9 +515,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`/home-care`}
+                        href={`/partnership/clinical-reasearch`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "/home-care" &&
+                        className={`align-middle menuText  ${asPath == "/home-care/clinical-reasearch" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >

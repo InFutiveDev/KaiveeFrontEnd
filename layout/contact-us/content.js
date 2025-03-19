@@ -78,7 +78,7 @@ const Content = () => {
         <div className="row mt-3">
           <div className="col-12 col-md-6 flex items-center justify-end">
             <div>
-              <p>lft@xyz.com</p>
+              <p>care@zenhealthsolutions.com</p>
               <p>Email us for any information or feedback</p>
             </div>
             <img src={img1.src} alt="Email img" />
@@ -86,7 +86,7 @@ const Content = () => {
           <div className="col-12 col-md-6 flex items-center">
             <img src={img2.src} alt="Phone img" />
             <div>
-              <p>+011 4725 0000</p>
+              <p>9289088633</p>
               <p>
                 Our call centre would be happy to assist you with your query.
               </p>
@@ -237,7 +237,7 @@ const Content = () => {
                 <p className="text-lg mt-1">
                   Please feel free to reach out to us at our corporate office
                 </p>
-                <p className="text-lg mt-1">New Delhi, Delhi-110075</p>
+                <p className="text-lg mt-1">Kaivee HealthCare Noida, K-4, Sector-116, U.P-201305</p>
               </div>
             </div>
           </div>

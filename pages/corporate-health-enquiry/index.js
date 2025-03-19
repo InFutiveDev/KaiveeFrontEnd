@@ -12,7 +12,7 @@ const CorporateHealthEnquiry = () => {
         <meta
           name="description"
           content={
-            "Looking for affordable corporate health checkup prices in Delhi? City X-ray has got you covered! Get comprehensive health assessments for your pre-employment"
+            "Looking for affordable corporate health checkup prices in Delhi?  has got you covered! Get comprehensive health assessments for your pre-employment"
           }
         />
       </Head>
