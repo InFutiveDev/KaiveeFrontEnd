@@ -129,23 +129,19 @@ const Footer = () => {
                         </Link>
                       </li>
                     ))}
-                  {count === 9 && (
+                  {count === 5 && (
                     <li
                       className="font-bold cursor-pointer"
-                      onClick={() => setCount(20)}
+                      onClick={() => setCount(9)}
                     >
                       View more...
                     </li>
                   )}
-                  {/* {count === 20 && (
-                    <li>
-                      <Link href={"/biomedical-waste"}>Biomedical Waste</Link>
-                    </li>
-                  )} */}
-                  {count === 20 && (
+                  
+                  {count === 9 && (
                     <li
                       className="font-bold cursor-pointer"
-                      onClick={() => setCount(9)}
+                      onClick={() => setCount(5)}
                     >
                       View Less...
                     </li>

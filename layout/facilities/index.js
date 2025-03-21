@@ -277,7 +277,7 @@ const FacilitiesCategoryLayout = ({ id, category }) => {
                   Call Now
                 </button> */}
                 <Link
-                  href="tel:011-2000-2000"
+                  href="tel:9289088633"
                   className="flex gap-x-1 md:gap-x-2 justify-center items-center text-blacke font-medium bg-[#D41958] rounded py-[10px] lg:px-[24px] px-[10px] lg:text-[18px] text-[14px]"
                 >
                   <CallBlackImg />
