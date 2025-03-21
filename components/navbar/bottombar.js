@@ -377,9 +377,9 @@ const Bottombar = () => {
                       </Link>
                       <Link
                         prefetch
-                        href={`home-care/doctors`}
+                        href={`/home-care/doctors`}
                         onClick={closeMenu}
-                        className={`align-middle menuText  ${asPath == "home-care/doctors" &&
+                        className={`align-middle menuText  ${asPath == "/home-care/doctors" &&
                           "!text-[#D41958] !font-medium"
                           }`}
                       >

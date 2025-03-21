@@ -5,7 +5,7 @@ import Ecgbanner from "./holter-banner";
 import OurVersion from "assets/images/about/vision.jpg";
 import OurMission from "assets/images/about/mission.png";
 import { AboutPattern } from "assets/images/SvgImage";
-import img1 from "assets/images/Finalimg/ourValue/Compassion.webp";
+import img1 from "assets/images/home-care/holter.jpg";
 import img2 from "assets/images/Finalimg/ourValue/Accountability.webp";
 import img3 from "assets/images/Finalimg/ourValue/Executional Excellence.webp";
 import img4 from "assets/images/Finalimg/ourValue/Innovation.webp";
@@ -40,51 +40,80 @@ const HolterLayout = () => {
 
       
       <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Holter Monitoring at Home</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Our Holter Monitoring Home Services</h2>
-          <p className="text-gray-700">
-            Holter monitoring is a continuous ECG recording that tracks heart activity over 24 to 48 hours. Our trained professionals provide this service at your home, ensuring a comfortable and hassle-free experience.
-          </p>
-          
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Benefits:</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Convenient at-home monitoring</li>
-              <li>Continuous heart activity tracking</li>
-              <li>Non-invasive and painless procedure</li>
-              <li>Accurate and detailed heart analysis</li>
-              <li>Expert review and quick report delivery</li>
-            </ul>
-          </div>
-        </div>
+  {/* Header */}
+  <h1 className="text-3xl text-[#8DBD4D] text-center font-bold mb-6">Holter Monitoring at Home</h1>
+  <p className="text-[20px] text-gray-700">
+    Kaivee Healthcare is Holter Monitoring at Home service provides a practical and convenient solution. Logistics are easy as our team can set multiple Holter monitors on-site, storing a direct channel of your heart's activity on a daily basis in the comfort of your home.
+  </p>
 
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Why Choose Us?</h2>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Professional Healthcare Experts</h3>
-              <p className="text-gray-600">Our trained technicians ensure proper setup and guidance for Holter monitoring.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Comfort & Convenience</h3>
-              <p className="text-gray-600">No need to visit a clinic—get monitored in the comfort of your home.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Accurate Results</h3>
-              <p className="text-gray-600">Get detailed reports analyzed by cardiology experts for accurate diagnosis.</p>
-            </div>
-          </div>
-        </div>
+  {/* Introduction */}
+  <div className="mt-8">
+    <h2 className="text-2xl font-semibold">What is Holter Monitoring?</h2>
+    <p className="mt-4 text-gray-700">
+      A Holter Monitor is a small, portable device that records your heart is electrical activity for 24 to 72 hours or longer. Unlike a traditional ECG, which captures heart rhythms for a few seconds, a Holter continuously collects long-term data, allowing doctors to detect irregularities that might otherwise go unnoticed.
+    </p>
+  </div>
+
+  {/* How It Works */}
+  <div className="mt-8">
+    <h2 className="text-2xl font-semibold">How Our Holter Monitoring Service Works</h2>
+    <ul className="list-decimal pl-5 space-y-3 mt-4 text-gray-700">
+      <li>
+        <strong>Schedule an Appointment:</strong> Call or visit the website of Kaivee Healthcare to schedule a time for Holter monitoring. We provide local scheduling to suit your schedule. We will confirm the appointment and guide you through the fitting of the device.
+      </li>
+      <li>
+        <strong>Device Delivery and Setup:</strong> Our healthcare professional will come to your place to set up the Holter monitor and ensure that the electrodes are placed correctly to avoid inaccurate recording. The process is quick, painless, and non-invasive.
+      </li>
+      <li>
+        <strong>Continuous Monitoring:</strong> After the device is connected, you will wear it during your normal activities. This lightweight monitor records your heart is rhythm continuously. Keeping a diary of symptoms and activities helps doctors correlate the findings.
+      </li>
+      <li>
+        <strong>Data Collection and Report:</strong> After the monitoring period, we retrieve the device from your home. The data is analyzed by experienced cardiologists, who provide a detailed report for you and your doctor.
+      </li>
+    </ul>
+  </div>
+
+  {/* Benefits */}
+  <div className="mt-8 flex flex-col md:flex-row items-start gap-6">
+  {/* Text Section */}
+  <div className="md:w-1/2">
+    <h2 className="text-2xl font-semibold">Why Choose Holter Monitoring at Home?</h2>
+    <ul className="list-disc pl-5 mt-4 text-gray-700">
+      <li><strong>Convenient Home-Based Testing:</strong> No need to visit a hospital.</li>
+      <li><strong>Professional Setup & Support:</strong> Trained technicians ensure accurate placement.</li>
+      <li><strong>Accurate and Reliable Data:</strong> Advanced Holter monitors for precise results.</li>
+      <li><strong>Comfort and Privacy:</strong> Monitor your heart health from the comfort of your home.</li>
+    </ul>
+  </div>
+  
+
+  {/* Image Section */}
+  <div className="md:w-1/2 flex justify-center">
+    <Image src={img1} alt="Holter Home Service" className="rounded-xl shadow-md w-[80%] max-w-[500px]" />
+  </div>
 </div>
 
 
-     
-    </div>
+  {/* Eligibility */}
+ <div className="mt-8">
+    <h2 className="text-2xl font-semibold">Who is Eligible?</h2>
+    <ul className="mt-4 text-gray-700 list-disc pl-5">
+      <li>People with irregular heartbeat or palpitations.</li>
+      <li>Patients experiencing dizziness, fainting, or chest discomfort.</li>
+      <li>Individuals requiring post-procedure or medication adjustment monitoring.</li>
+      <li>General cardiac testing as advised by a doctor.</li>
+      <li>Unique patient group: Those seen by their cardiologist and advised to monitor arrhythmias over time.</li>
+    </ul>
+  </div> 
+
+  {/* Call to Action */}
+  <div className="mt-8">
+    <h2 className="text-xl font-semibold">Schedule Your Holter Monitor Appointment Now</h2>
+    <p className="mt-2 text-gray-700">
+    If your physician has suggested continuous heart monitoring, Kaivee Healthcare has an easy solution. Our Holter Monitoring at Home service guarantees precise testing without interfering with your routine.    </p>
+  </div>
+</div>
+
  
 
     </>

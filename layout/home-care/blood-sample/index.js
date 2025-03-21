@@ -5,7 +5,7 @@ import Ecgbanner from "./bloodsample-banner";
 import OurVersion from "assets/images/about/vision.jpg";
 import OurMission from "assets/images/about/mission.png";
 import { AboutPattern } from "assets/images/SvgImage";
-import img1 from "assets/images/Finalimg/ourValue/Compassion.webp";
+import img1 from "assets/images/home-care/blood.jpg";
 import img2 from "assets/images/Finalimg/ourValue/Accountability.webp";
 import img3 from "assets/images/Finalimg/ourValue/Executional Excellence.webp";
 import img4 from "assets/images/Finalimg/ourValue/Innovation.webp";
@@ -37,56 +37,100 @@ const BloodSampleLayout = () => {
         </div>
        
       </section>
-
-      
+       
       <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Blood Sample Collection at Home</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Our Home Blood Sample Collection Services</h2>
-          <p className="text-gray-700">
-            Get your blood tests done from the comfort of your home with our reliable and professional sample collection service. Our trained phlebotomists ensure a safe, hygienic, and hassle-free experience.
-          </p>
-          
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Benefits:</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Hassle-free home sample collection</li>
-              <li>Certified and trained phlebotomists</li>
-              <li>Safe and hygienic procedures</li>
-              <li>Quick and accurate test results</li>
-              <li>Wide range of blood tests available</li>
-            </ul>
-          </div>
-        </div>
+      <h1 className="text-3xl font-bold mb-4 text-center text-[#8DBD4D]">
+      Blood Sample Collection at Home
+    </h1>
+      <div className="flex flex-col md:flex-row items-center  mx-auto gap-8">
+  {/* Text Section */}
+  <div className="md:w-1/2 text-left">
+   
+    <p className="text-[20px] text-gray-700">
+      Blood tests are essential for detecting health issues, monitoring treatments, 
+      or routine health checkups. However, visiting a lab can be inconvenient, 
+      especially for seniors or individuals with mobility restrictions.
+    </p>
+    <p className="mt-4 text-lg text-gray-700">
+      Kaivee Healthcare provides at-home blood sample collection, ensuring a 
+      hassle-free, hygienic, and professional experience. Our expert phlebotomists 
+      collect samples at your convenience, eliminating the need for lab visits.
+    </p>
+  </div>
 
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Why Choose Us?</h2>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Professional & Experienced Staff</h3>
-              <p className="text-gray-600">Our phlebotomists are trained to collect blood samples safely and efficiently.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Convenience & Comfort</h3>
-              <p className="text-gray-600">No need to visit a lab—get your tests done at home at your preferred time.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Accurate & Fast Reports</h3>
-              <p className="text-gray-600">Receive timely, expert-analyzed test results with high accuracy.</p>
-            </div>
-          </div>
-        </div>
+  {/* Image Section */}
+  <div className="md:w-1/2 flex justify-center">
+    <Image 
+      src={img1} 
+      alt="Blood Sample Collection at Home" 
+      className="rounded-xl shadow-md w-[80%] max-w-[500px]"
+    />
+  </div>
 </div>
 
+{/* Steps Section */}
+<div className="  mx-auto mt-12">
+  <h2 className="text-2xl font-semibold text-gray-900 text-center mb-6">
+    How Home Blood Sample Collection Works
+  </h2>
 
+  <div className="grid md:grid-cols-2 gap-6">
+    {/* Step 1 */}
+    <div className="p-4 border rounded-lg shadow-sm">
+      <h3 className="text-lg font-semibold text-gray-900">1. Easy Appointment Scheduling</h3>
+      <p className="text-gray-700 mt-2">
+        Book an appointment via call or website. Our team confirms your 
+        schedule and provides fasting or preparation guidelines.
+      </p>
+    </div>
+
+    {/* Step 2 */}
+    <div className="p-4 border rounded-lg shadow-sm">
+      <h3 className="text-lg font-semibold text-gray-900">2. Sample Collection at Home</h3>
+      <p className="text-gray-700 mt-2">
+        Our expert phlebotomist arrives on time with sterile equipment. The 
+        collection process is quick, hygienic, and comfortable.
+      </p>
+    </div>
+
+    {/* Step 3 */}
+    <div className="p-4 border rounded-lg shadow-sm">
+      <h3 className="text-lg font-semibold text-gray-900">3. Secure Transportation & Testing</h3>
+      <p className="text-gray-700 mt-2">
+        Samples are securely packed and sent to accredited labs for analysis, 
+        ensuring accuracy and safety.
+      </p>
+    </div>
+
+    {/* Step 4 */}
+    <div className="p-4 border rounded-lg shadow-sm">
+      <h3 className="text-lg font-semibold text-gray-900">4. Quick Report Delivery</h3>
+      <p className="text-gray-700 mt-2">
+        Receive reports via email, online portals, or directly from your doctor, 
+        ensuring privacy and prompt follow-up.
+      </p>
+    </div>
+  </div>
+  <div className=" mx-auto mt-12 p-6 bg-[#D419580D] border-l-4 border-[#D41958] rounded-lg">
+  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+    What You Should Know About Home Sample Collection
+  </h2>
+  <ul className="list-disc list-inside text-gray-700">
+    <li className="mb-2">Older patients who value the familiarity of home-based services.</li>
+    <li className="mb-2">People with chronic illness needing frequent examinations.</li>
+    <li className="mb-2">Individuals with restricted mobility or those recovering from surgery.</li>
+    <li className="mb-2">Professionals who are pressed for time and need flexibility.</li>
+    <li className="mb-2">Parents seeking child-friendly services for pediatric tests.</li>
+  </ul>
+</div>
+
+</div>
 
      
     </div>
- 
+ <div className="bg-[#FAFAFA]">
+         <WhyChoose data={data} />
+       </div>
 
     </>
   );

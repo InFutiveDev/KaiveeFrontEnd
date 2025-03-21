@@ -48,79 +48,115 @@ const HomeCareLayout = () => {
 
       {/* <AboutUs /> */}
       <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Nursing Care at Home</h1>
-      
+      {/* Header Section */}
+      <h1 className="text-3xl font-bold text-center mb-8 text-[#8DBD4D]">
+        Nursing Care at Home: Compassionate Support from Kaivee Healthcare
+      </h1>
+
+      {/* Challenge Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Our Nursing Care  Services</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">
+            The Challenge: When Home Becomes a Hospital Room
+          </h2>
           <p className="text-gray-700">
-            Get professional Nursing Care services in the comfort of your home. Our experienced technicians bring state-of-the-art equipment to your doorstep, ensuring accurate diagnostics with maximum convenience.
-          </p>
-          
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Benefits:</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Convenient home service</li>
-              <li>Professional healthcare technicians</li>
-              <li>State-of-the-art portable equipment</li>
-              <li>Quick report delivery</li>
-              <li>24/7 service availability</li>
-            </ul>
+          Nursing a loved one after an operation, coping with chronic illness, navigating the challenges of elder care — all can take an emotional and physical toll. A long hospital stay can be stressful, expensive, and unpleasant — for both the patient and the family.
+          You want your loved one to feel safe and comforted, but you have concerns:          </p>
+          <ul className="list-disc pl-5 space-y-2 text-gray-700">
+            <li>Am I doing enough?</li>
+            <li>What if I forget a medication?</li>
+            <li>How do I handle wound care or injections?</li>
+          </ul>
+        </div>
+        <div className="flex justify-center">
+          <Image src={OurVersion} alt="Nursing Care" className="rounded-xl shadow-md w-[80%] max-w-[500px]" />
+        </div>
+      </div>
+
+      {/* Nursing Care at Home Section */}
+      <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          Professional Nursing Care at Home
+        </h2>
+        <p className="text-gray-700 text-center mt-4">
+          Kaivee Healthcare brings professional nursing services to your home, ensuring expert care in a comfortable environment.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="font-semibold text-lg">Personalized Care</h3>
+            <p className="text-gray-600">Receive expert medical attention from highly trained nurses at home.</p>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="font-semibold text-lg">Safety First</h3>
+            <p className="text-gray-600">Strict hygiene and infection control measures ensure the best care.</p>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="font-semibold text-lg">Customized Care Plans</h3>
+            <p className="text-gray-600">Each plan is tailored to the patient is needs and family preferences.</p>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="font-semibold text-lg">Affordable Packages</h3>
+            <p className="text-gray-600">Quality home nursing at transparent and flexible pricing.</p>
           </div>
         </div>
-</div>
-</div>
+      </div>
+
+      {/* How It Works Section */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          How Our Nursing Care Works
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+          <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
+            <h3 className="font-semibold text-lg">Step 1: Assessment</h3>
+            <p className="text-gray-600">Conducting an Assessment and Developing a Plan.</p>
+          </div>
+          <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
+            <h3 className="font-semibold text-lg">Step 2: Nurse Assignment</h3>
+            <p className="text-gray-600">A qualified nurse is assigned based on medical requirements.</p>
+          </div>
+          <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
+            <h3 className="font-semibold text-lg">Step 3: Home Care</h3>
+            <p className="text-gray-600">The nurse provides care, including medication, wound dressing, and IV therapy.</p>
+          </div>
+          <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
+            <h3 className="font-semibold text-lg">Step 4: Ongoing Monitoring</h3>
+            <p className="text-gray-600">We keep families and doctors updated with regular reports.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* When Do You Need Home Nursing? */}
+      <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          When Do You Need Nursing Care at Home?
+        </h2>
+        <ul className="list-disc pl-5 space-y-2 text-gray-700 mt-4">
+          <li>After extensive surgery (orthopaedic, cardiac, etc.) involving post post-operative care.</li>
+          <li> For older family members that require daily health check-ups.</li>
+          <li> In recovery after injury or stroke.</li>
+          <li> For patients needing palliative or end-of-life care.</li>
+          <li>Chronic conditions like diabetes, hypertension, or COPD require professional interventions at home.</li>
+        </ul>
+      </div>
+
+      {/* CTA Section */}
+      <div className="mt-12 text-center">
+        <h2 className="text-2xl font-semibold text-gray-800">
+        Allow Kaivee Healthcare Help You and Your Family is Health Journey
+        </h2>
+        <p className="text-gray-700 mt-4">
+        Your family should receive quality care and you should have peace of mind. That is you can have both with Kaivee Healthcare is Nursing Care at Home.
+Our trained professionals deliver hospital-level expertise in the comfort and safety of your own home.
+You can trust us to offer compassionate support that is specific to your loved one is health needs.
+        </p>
+       
+      </div>
+    </div>
       <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />
       </div>
-      <div className="bg-white lg:py-[35px] py-[35px] relative container">
-        <div className="grid relative items-center md:grid-cols-2 grid-cols-1 lg:gap-[90px] lg:pr-[120px]">
-          <div className="">
-            <div className="lg:mb-0 mb-8">
-              <div className="our-vision lg:pr-0 md:!pr-[16px] pr-0">
-                <Image
-                  src={OurVersion}
-                  // width={"100%"}
-                  // width={1000}
-                  className="object-cover w-[80%] max-w-[500px] rounded-2xl shadow-md"
-                  alt="our-mission"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="lg:pl-0 md:pl-[100px] pl-0">
-            <h2 className="text-black lg:text-[24px] text-xl font-semibold font-source-pro ">
-              Our Vision
-            </h2>
-            <p className="text-secondary lg:text-[18px] text-base mt-[16px]">
-            We are committed to delivering exceptional patient-centered healthcare solutions that provide the highest quality, service, and access to in-home and ambulatory care from highly trained medical professionals and aides. Our goal is to ensure each patient receives the best care possible, giving them the attention and care they deserve.
-            </p>
-          </div>
-        </div>
-        <div className="grid relative items-center xl:mt-28 lg:mt-10 mt-8 md:grid-cols-2 grid-cols-1 lg:gap-[90px] xl:pl-[120px] lg:pl-auto md:pl-auto  md:order-1 order-2">
-          <div className="md:order-2">
-            <div className="">
-              <div className="our-mission flex justify-end lg:pl-0 md:!pl-[16px] pl-0 md:mb-0 mb-4">
-                <Image
-                  src={OurMission}
-                  // width={"100%"}
-                  className="object-cover  w-[80%] max-w-[500px] rounded-2xl shadow-md"
-                  alt="our-mission"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="lg:pl-[16px] md:pl-0 pl-0 lg:mb-0 mb-8 ">
-            <h2 className="text-black lg:text-[24px] text-xl font-semibold font-source-pro">
-              Our Mission
-            </h2>
-            <p className="text-secondary lg:text-[18px] text-base mt-[16px]">
-            As a trusted and quality-focused partner for health care around the world, Kaivee HealthCare is committed to delivering an exceptional experience to our customers. We strive to provide the highest quality of service, tailored to meet the unique needs of each individual and organization. Our goal is to ensure that everyone who chooses us as their health care partner is provided with the best possible service and assistance. With our team of experienced professionals and a personalized approach, we strive to provide the best care and support for our clients.
-             </p>
-          </div>
-        </div>
-
-        </div>
+      
         
 
 

@@ -5,7 +5,7 @@ import Ecgbanner from "./ecg-banner";
 import OurVersion from "assets/images/about/vision.jpg";
 import OurMission from "assets/images/about/mission.png";
 import { AboutPattern } from "assets/images/SvgImage";
-import img1 from "assets/images/Finalimg/ourValue/Compassion.webp";
+import img1 from "assets/images/home-care/ecg.jpg";
 import img2 from "assets/images/Finalimg/ourValue/Accountability.webp";
 import img3 from "assets/images/Finalimg/ourValue/Executional Excellence.webp";
 import img4 from "assets/images/Finalimg/ourValue/Innovation.webp";
@@ -39,50 +39,116 @@ const EcgLayout = () => {
       </section>
 
       
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">ECG & X-Ray at Home</h1>
-      
+      <div className="container mx-auto px-4 py-8">
+      {/* Header Section */}
+      <h1 className="text-3xl font-bold text-center mb-8 text-[#8DBD4D]">
+        ECG & X-Ray at Home: Convenient Diagnostics by Kaivee Healthcare
+      </h1>
+
+      {/* Challenge Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Our ECG & X-Ray Home Services</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">
+            The Challenge: When Getting Tests Done Feels Impossible
+          </h2>
           <p className="text-gray-700">
-            Get professional ECG and X-Ray services in the comfort of your home. Our experienced technicians bring state-of-the-art equipment to your doorstep, ensuring accurate diagnostics with maximum convenience.
+            At times, carrying out basic tests like ECG or X-Ray can be tough. Whether it is chest pain, fatigue, or an injury, these health issues demand urgent care. But transportation issues, long wait times, and crowded hospitals delay essential tests.
           </p>
-          
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Benefits:</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Convenient home service</li>
-              <li>Professional healthcare technicians</li>
-              <li>State-of-the-art portable equipment</li>
-              <li>Quick report delivery</li>
-              <li>24/7 service availability</li>
-            </ul>
-          </div>
+          <ul className="list-disc pl-5 space-y-2 text-gray-700">
+            <li>Long wait times.</li>
+            <li>Crowded hospitals.</li>
+            <li>Struggles with mobility.</li>
+            <li>Transport problems for elderly or critically ill patients.</li>
+          </ul>
         </div>
+        <div className="flex justify-center">
+          <Image src={img1} alt="ECG & X-Ray Home Service" className="rounded-xl shadow-md w-[80%] max-w-[500px]" />
+        </div>
+      </div>
 
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Why Choose Us?</h2>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Experienced Staff</h3>
-              <p className="text-gray-600">Our technicians are highly trained and experienced in conducting home-based diagnostic tests.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Quick Turnaround</h3>
-              <p className="text-gray-600">Get your test results quickly with our efficient reporting system.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Safety Protocols</h3>
-              <p className="text-gray-600">We follow strict safety and sanitization protocols for all our home visits.</p>
-            </div>
+      {/* Solution Section */}
+      <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          THE SOLUTION: ECG & X-RAY FACILITIES AT HOME
+        </h2>
+        <p className="text-gray-700 text-center mt-4">
+          Kaivee Healthcare brings professional ECG and Digital X-Ray services to your doorstep. Our trained professionals use advanced, portable equipment to ensure accurate and comfortable diagnostics at home.
+        </p>
+      </div>
+
+      {/* How It Works */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          How ECG & X-Ray at Home Works
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+          <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
+            <h3 className="font-semibold text-lg">Step 1: Book Your Appointment</h3>
+            <p className="text-gray-600">Call us or book online at your convenience.</p>
+          </div>
+          <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
+            <h3 className="font-semibold text-lg">Step 2: Technician Visit</h3>
+            <p className="text-gray-600">A certified technician arrives with portable equipment.</p>
+          </div>
+          <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
+            <h3 className="font-semibold text-lg">Step 3: Test Completion</h3>
+            <p className="text-gray-600">Quick, painless, and non-invasive procedures.</p>
+          </div>
+          <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
+            <h3 className="font-semibold text-lg">Step 4: Results and Reports</h3>
+            <p className="text-gray-600">Reports are reviewed by specialists and delivered digitally.</p>
           </div>
         </div>
       </div>
 
-     
+      {/* Why Choose Us Section */}
+      <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          Why Choose Kaivee Healthcare for ECG & X-Ray at Home?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="font-semibold text-lg">1.Quick Turnaround</h3>
+            <p className="text-gray-600">Get results fast for timely medical decisions.</p>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="font-semibold text-lg">2.Certified Technologists</h3>
+            <p className="text-gray-600">Trained professionals follow strict medical protocols.</p>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="font-semibold text-lg">3.Comfort & Privacy</h3>
+            <p className="text-gray-600">Stay home for stress-free diagnostics.</p>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="font-semibold text-lg">4.Transparent Pricing</h3>
+            <p className="text-gray-600">Affordable, no hidden charges.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Choose ECG & X-Ray at Home */}
+      <div className="mt-12 bg-gray-50 p-6 rounded-xl shadow-md">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          When Should You Opt for ECG & X-Ray at Home?
+        </h2>
+        <ul className="list-disc pl-5 space-y-2 text-gray-700 mt-4">
+          <li>Chest pain, palpitations, or breathlessness.</li>
+          <li>Mobility challenges or difficulty visiting a diagnostic center.</li>
+          <li>Post-surgical recovery requiring regular imaging.</li>
+          <li>Elderly patients needing routine monitoring.</li>
+          <li>Avoiding crowded hospitals post-COVID.</li>
+        </ul>
+      </div>
+
+      {/* CTA Section */}
+      <div className="mt-12 text-center">
+        <h2 className="text-2xl font-semibold text-gray-800">
+          Your Health, Your Home: Book ECG & X-Ray Services Now
+        </h2>
+        <p className="text-gray-700 mt-4">
+        There is no reason to hold back on vital diagnostics. You get hospital-grade diagnostics without having to set foot outside, thanks to Kaivee Healthcare is ECG & X-Ray at Home services.        </p>
+       
+      </div>
     </div>
  
 

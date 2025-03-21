@@ -5,8 +5,8 @@ import Ecgbanner from "./abpm-banner";
 import OurVersion from "assets/images/about/vision.jpg";
 import OurMission from "assets/images/about/mission.png";
 import { AboutPattern } from "assets/images/SvgImage";
-import img1 from "assets/images/Finalimg/ourValue/Compassion.webp";
-import img2 from "assets/images/Finalimg/ourValue/Accountability.webp";
+import img1 from "assets/images/home-care/abpm.jpg";
+import img2 from "assets/images/home-care/abpm2.jpg";
 import img3 from "assets/images/Finalimg/ourValue/Executional Excellence.webp";
 import img4 from "assets/images/Finalimg/ourValue/Innovation.webp";
 import img5 from "assets/images/Finalimg/ourValue/Integrity.webp";
@@ -40,51 +40,108 @@ const AbpmLayout = () => {
 
       
       <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">ABPM (Ambulatory Blood Pressure Monitoring) at Home</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Our ABPM Home Services</h2>
-          <p className="text-gray-700">
-            Ambulatory Blood Pressure Monitoring (ABPM) is a 24-hour test that records your blood pressure at regular intervals throughout the day and night. Our trained professionals provide this service at your home for a stress-free and accurate assessment.
-          </p>
-          
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Benefits:</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Convenient at-home setup</li>
-              <li>24-hour continuous blood pressure monitoring</li>
-              <li>Helps diagnose hypertension and related conditions</li>
-              <li>Accurate assessment of blood pressure variations</li>
-              <li>Expert-reviewed reports for better diagnosis</li>
-            </ul>
-          </div>
-        </div>
+      <h1 className="text-3xl font-bold mb-6 text-[#8DBD4D] text-center">
+      ABPM (Ambulatory Blood Pressure Monitoring) at Home
+    </h1>
+      <div className="flex flex-col md:flex-row   mx-auto gap-8 ">
+  {/* Text Section */}
+  <div className="md:w-1/2 text-left">
+    
+    
+    <p className="text-[20px] text-gray-700">Home Ambulatory Blood Pressure Monitoring (ABPM) at Kaivee Healthcare provides the most reliable option in such cases. Our portable ABPM device takes your blood pressure over a 24-hour period, or longer, in the familiar surroundings of your own home. You are now giving your doctor a lot of information that is helpful for accurate diagnosis and treatment planning.</p>
+  </div>
 
-        <div className="space-y-6">
-          <h2 className="text-2xl font-semibold">Why Choose Us?</h2>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Certified Professionals</h3>
-              <p className="text-gray-600">Our trained experts ensure a proper setup for accurate BP monitoring at home.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Comfort & Convenience</h3>
-              <p className="text-gray-600">No hospital visits needed—monitor your BP in the comfort of your home.</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">Precise Diagnosis</h3>
-              <p className="text-gray-600">Receive expert-analyzed reports for better diagnosis and treatment plans.</p>
-            </div>
-          </div>
-        </div>
+  {/* Image Section */}
+  <div className="md:w-1/2 flex justify-center">
+    <Image 
+      src={img1} 
+      alt="ABPM at Home" 
+      className="rounded-xl shadow-md w-[80%] max-w-[500px]"
+    />
+  </div>
 </div>
 
 
-     
+  {/* What is ABPM? */}
+  <div className="mt-8">
+    <h2 className="text-2xl font-semibold">What is Ambulatory Blood Pressure Monitoring (ABPM)?</h2>
+    <p className="mt-4 text-gray-700">
+      ABPM is a method of measuring blood pressure at multiple intervals over a 24-hour period, including while sleeping.
+      Unlike a one-time clinic reading, this approach helps doctors analyze fluctuations and detect conditions like
+      white coat hypertension or masked hypertension.
+    </p>
+  </div>
+
+  {/* How It Works */}
+  <div className="mt-8">
+    <h2 className="text-2xl font-semibold">How Our At-Home ABPM Works</h2>
+    <ul className="list-decimal pl-5 space-y-3 mt-4 text-gray-700">
+      <li>
+        <strong>Start with a Consultation:</strong> Contact Kaivee Healthcare via our helpline or website. We will discuss your needs
+        and schedule an appointment that fits your lifestyle.
+      </li>
+      <li>
+        <strong>Home Visit and Device Fitting:</strong> Our healthcare professional visits your home to fit a lightweight ABPM monitor
+        to your waist or shoulder, with a comfortable cuff around your upper arm.
+      </li>
+      <li>
+        <strong>Live Your Day, While We Track:</strong> The monitor records blood pressure at intervals (every 15-30 minutes in the daytime,
+        every 30-60 minutes at night). You continue your daily routine without disruption.
+      </li>
+      <li>
+        <strong>Easy Collection and Expert Reporting:</strong> After the monitoring period, our technician retrieves the device. Our specialists
+        analyze the data and provide a detailed report for you and your doctor.
+      </li>
+    </ul>
+  </div>
+
+  {/* Why Choose Kaivee Healthcare? */}
+  <div className="mt-8 flex flex-col md:flex-row items-start gap-6">
+    {/* Image Section */}
+    
+
+    {/* Text Section */}
+    <div className="md:w-1/2">
+      <h2 className="text-2xl font-semibold">Why Choose Kaivee Healthcare?</h2>
+      <ul className="list-disc pl-5 mt-4 text-gray-700">
+        <li><strong>Day and Night Analysis:</strong> Get a complete picture of blood pressure fluctuations.</li>
+        <li><strong>Comfortable & Non-Intrusive Devices:</strong> Lightweight and easy to wear.</li>
+        <li><strong>Minimal Disruption:</strong> No hospital visits required, reducing stress and anxiety.</li>
+        <li><strong>Reliable & Accurate Readings:</strong> Continuous monitoring provides valuable data for proper diagnosis.</li>
+      </ul>
     </div>
+    <div className="md:w-1/2 flex justify-center">
+      <Image src={img2} alt="Blood Pressure Monitoring" className="rounded-xl shadow-md w-[80%] max-w-[500px]" />
+    </div>
+  </div>
+
+  {/* Who Should Get ABPM? */}
+  <div className="mt-8">
+    <h2 className="text-2xl font-semibold">Who Should Consider ABPM at Home?</h2>
+    <ul className="list-disc pl-5 mt-4 text-gray-700">
+      <li>Individuals with unexplained blood pressure fluctuations.</li>
+      <li>Patients suspected of having white coat hypertension.</li>
+      <li>Those with masked hypertension (normal clinic readings but high at home).</li>
+      <li>People assessing the effectiveness of their hypertension medication.</li>
+      <li>Patients with chronic kidney disease, diabetes, or cardiovascular risk factors.</li>
+    </ul>
+  </div>
+
+  {/* Call to Action */}
+  <div className="mt-8 text-center">
+    <h2 className="text-xl font-semibold">Take Control of Your Heart Health Today</h2>
+    <p className="mt-2 text-gray-700">
+      Kaivee Healthcare is ABPM at Home provides accurate insights into your blood pressure without disrupting your daily life.
+      Whether it is recommended by your doctor or you're taking a proactive step, our service ensures a stress-free experience.
+    </p>
+  </div>
+</div>
+
+ <div className="bg-[#FAFAFA]">
+        <WhyChoose data={data} />
+      </div>
+     
+   
  
 
     </>
