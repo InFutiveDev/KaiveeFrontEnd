@@ -53,7 +53,8 @@ const CorporateHealthEnquiry = ({ hideUX = false, leads_source = "" }) => {
     setPayload({ ...payload, [name]: value });
   };
   const Select_Enquiry = [
-    "Corporate Health Checkup",
+    "For Partnership",
+    "Become a Vendor",
     "Pre-employment Checkup",
     "Annual health checkup",
     "Onsite Corporate Health Camps",

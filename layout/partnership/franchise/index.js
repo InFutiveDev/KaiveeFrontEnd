@@ -26,109 +26,99 @@ const FranchiseeLayout = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             <h1 className="text-[24px] text-black font-source-pro mb-[20px]">
-              Become a Clinic Franchise
+            Franchisee - Kaivee Healthcare
             </h1>
             <h2 className="text-[18px] lg:text-[18px] md:text-[18px] text-[#D41958] font-source-pro mb-[20px]">
-              Partner with Kaivee Healthcare – Grow with India's Trusted Diagnostic Network
+            Become a Franchise Partner and Be Part of Our Healthcare Success Story
             </h2>
             <div className="flex flex-col gap-y-2 mb-[35px]">
               <p className="lg:text-[18px] md:text-[18px] text-[18px] text-[#71717A]">
-                Looking to start your own diagnostic center? Join hands with Kaivee Healthcare and become part of a fast-growing, trusted healthcare brand. With our cutting-edge technology, proven business model, and strong brand reputation, you can build a successful diagnostic franchise while contributing to healthier communities.
-              </p>
-
+              Healthcare is among the most expanding industries with continual demand for quality, available, and affordable services. Kaivee Healthcare, a reputed name in the field of diagnostic services, home healthcare & outpatient care, has introduced franchise opportunities for entrepreneurs and investors keen on revolutionizing the healthcare delivery process.              </p>
+              <p className="lg:text-[18px] md:text-[18px] text-[18px] text-[#71717A]">
+              We are designing a strong patient-centered care based model to leverage your existing infrastructure to join as a Franchisee with Kaivee Healthcare. Our profit-sharing partnership model allows you to run your healthcare facility while we provide you with our expertise and brand value for a profitable and sustainable healthcare opportunity.</p>
               <h2 className="text-[20px]   font-source-pro font-semibold my-[10px]">
-                Why join hands with us?
+              How Do You Apply for a Kaivee Healthcare Franchise?
               </h2>
               <p className="text-black font-semibold text-lg "></p>
               <div className="text-secondary ">
-                <p className="text-[18px]  text-[#71717A] mb-2">
+                {/* <p className="text-[18px]  text-[#71717A] mb-2">
                   At Kaivee Healthcare, we don't just offer a franchise—we offer a partnership for growth and success. Here's why entrepreneurs choose us:
-                </p>
+                </p> */}
 
                 <ul className="text-[18px] list-disc ml-4">
                   <li>
-                    <strong> Strong Brand Recognition</strong>: Be part of a trusted name in the diagnostics industry.
+                  Healthcare providers interested in practicing more.
                   </li>
                   <li>
-                     <strong> Advanced Technology & Infrastructure</strong>: Access to the latest diagnostic equipment and lab management systems.
+                  Picture entrepreneurs and business owners thinking about entering the healthcare industry.
                   </li>
-                  <li><strong>  Proven Business Model</strong>: Benefit from a scalable, profitable business structure with consistent support.</li>
+                  <li>Acquirers looking for a solid and profitable healthcare company.
+                  </li>
                   <li>
-                     <strong> Comprehensive Training & Support</strong>: From operations to marketing, we've got you covered.
+                  Hospitals and clinics looking to diversify services under an established brand.
                   </li>
-                  <li> <strong> Low Investment, High Returns</strong>: Affordable entry with great growth potential in the booming healthcare sector.</li>
-                  <li>
-                     <strong> Continuous Guidance</strong>: Ongoing operational, technical, and marketing support to help your franchise thrive.
-                  </li>
+                  <li> Service Motivated — People who are excited about healthcare and wellness services.</li>
+                  
                 </ul>
               </div>
               <h2 className="text-[20px] font-source-pro font-semibold my-[10px]">
-                Who is an Ideal Franchise Partner for Diagnostics?
+              Franchisee Support from Kaivee Healthcare
               </h2>
-              <p className="text-[18px]  text-[#71717A]">
-                We're looking for passionate, growth-driven individuals or organizations who:
-              </p>
+              
 
 
               <div className="text-secondary  text-[18px]">
                 <ul className="list-disc ml-4">
                   <li>
-                    Are committed to delivering quality healthcare services.
+                  A Long Way to Go: Location, clinic, equipment.
                   </li>
                   <li>
-                    Have a basic understanding of healthcare or business operations (not mandatory).
+                  Hiring of qualified doctors, technicians and support staff.
                   </li>
                   <li>
-                    Possess a strong entrepreneurial spirit and leadership qualities.
+                  Train to Learn: Staff training regarding operations, patient care, and technology use.
                   </li>
                   <li>
-                    Are ready to invest in infrastructure and team building.
+                  Marketing and Branding: Local and digital marketing campaigns, branding materials.
                   </li>
-                  <li>Believe in ethical business practices and customer-centric values.</li>
+                  <li>Operational Support: Ongoing operational support and performance oversight.</li>
+
                 </ul>
-                <p className=" text-[18px] text-[#D41958] mt-2">
-                  Whether you're a healthcare professional, entrepreneur, or investor, if you're eager to make an impact, you're the perfect fit for Kaivee Healthcare!
-                </p>
+                
 
               </div>
               <h2 className="text-[20px]   font-semibold font-source-pro my-[10px]">
-                What we offers?
+              Advantages of partnering with Kaivee Healthcare Franchising
               </h2>
               <p className="text-[18px] text-[#71717A]">
-                When you partner with Kaivee Healthcare, you get more than just a franchise—you get a complete support system:
-              </p>
+              With diagnostics, OPD consultations, home healthcare services, health check-up packages, and telemedicine consultations, franchisees can get multiple streams of revenue and maximize their business.              </p>
 
               <div className="text-secondary  text-[18px]">
                 <ul className="list-disc ml-4">
 
                   <li>
-                     <span className="font-bold">Brand Power:</span> Leverage our trusted name to attract customers effortlessly.
+                  1. Established Brand Recognition.
                   </li>
                   <li>
-                     <span className="font-bold">Setup Assistance:</span> Guidance in selecting the right location, designing the clinic, and procuring equipment.
+                  2. Proven Business Model.
                   </li>
                   <li>
-                     <span className="font-bold">Training & Development:</span> Hands-on training for your staff in lab operations, customer service, and quality control.
+                  3. Comprehensive Training and Support.
                   </li>
                   <li>
-                     <span className="font-bold">Marketing Support:</span> Comprehensive marketing strategies, digital promotions, and local outreach programs.
+                  4. MovingTowards Technology-Enabled Healthcare Operations.
                   </li>
                   <li>
-                     <span className="font-bold">Quality Assurance:</span> Strict quality protocols and regular audits to maintain high diagnostic standards.
+                  5. Opportunities For Revenue From Multiple Streams.
                   </li>
-                  <li>
-                     <span className="font-bold">Tech-Enabled Solutions:</span> Access to advanced software for smooth operations, billing, and reporting.
-                  </li>
-                  <li>
-                     <span className="font-bold">Growth Opportunities:</span> Scope for expansion into multiple services, health packages, and more.
-                  </li>
+                  
                 </ul>
               </div>
               <h2 className="text-[18x]  font-semibold font-source-pro my-[10px]">
-                Ready to build a successful diagnostic business with us?
+              Join Forces with Kaivee Healthcare and Make the Future Healthier
               </h2>
-              <p className=" font-semibold text-[18px] text-[#D41958]">
-                Join Kaivee Healthcare Today – Let's Shape the Future of Diagnostics Together!              </p>
+              <p className=" font-semibold text-[18px] text-[#71717A]">
+              Become a franchisee and team up with a rapidly expanding healthcare brand. With our collaborative efforts, we can make quality healthcare services accessible and thus the patient care shall be revolutionized.              </p>
             </div>
           </div>
           <div className="lg:sticky lg:top-[161px] h-min">
