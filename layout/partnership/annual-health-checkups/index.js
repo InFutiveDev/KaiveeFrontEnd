@@ -39,68 +39,154 @@ const AnnualLayout = () => {
       </section>
 
       
-      <div className="py-16">
-  <div className="container mx-auto px-6">
-    {/* Hero Section */}
-    <div className="text-center mb-12">
-      <h1 className="text-4xl font-bold text-blue-900">Annual Health Check-Ups at Our Clinic</h1>
-      <p className="text-gray-700 mt-3 max-w-2xl mx-auto">
-        Get a complete health assessment with advanced diagnostics and expert consultations for a healthier life.
-      </p>
-    </div>
-
-    {/* Image + Content Section */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-      {/* Image Section */}
-      <div className="relative">
-        <img 
-          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/15e61adf8c0e947a4e7a398bba5154fc%20(1).jpg?updatedAt=1742370907015" 
-          alt="Health Check-Up" 
-          className="w-full rounded-lg shadow-lg transition-transform transform hover:scale-105"
-        />
+      <div className="container mx-auto px-6 py-12">
+      {/* Header Section */}
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-[#8DBD4D] mb-4">
+          Annual Health Check-up – Kaivee Healthcare
+        </h1>
+        <h2 className="text-2xl font-bold  text-gray-600">
+          Proactive Health Monitoring for a Healthier Tomorrow
+        </h2>
       </div>
 
-      {/* Information Section */}
-      <div className="space-y-6 animate-fadeIn">
-        <h2 className="text-2xl font-semibold text-blue-900">Comprehensive Health Check-Up</h2>
-        <p className="text-gray-700 leading-relaxed">
-          Ensure early detection of potential health issues with our state-of-the-art diagnostic tools and professional medical guidance.
+      {/* Introduction */}
+      <div className="mt-8 bg-[#D419580D] p-6 rounded-lg shadow-md">
+        <p className="text-lg text-gray-700">
+          Health often takes a backseat in today is hectic lifestyle — until something goes awry. 
+          Regular check-ups can facilitate early diagnosis and treatment of diseases. At Kaivee Healthcare, 
+          we offer a variety of preventive care services. Our Annual Health Check-up packages for individuals, 
+          families, and corporate employees ensure that you remain informed about your health status throughout the year.
         </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <h3 className="font-semibold text-blue-800">✔ Advanced Equipment</h3>
-            <p className="text-gray-600 mt-1">Modern diagnostic tools for precise health assessment.</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <h3 className="font-semibold text-blue-800">✔ Early Detection</h3>
-            <p className="text-gray-600 mt-1">Identify health risks before they become serious.</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <h3 className="font-semibold text-blue-800">✔ Expert Consultation</h3>
-            <p className="text-gray-600 mt-1">Personalized health guidance from specialists.</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-            <h3 className="font-semibold text-blue-800">✔ Quick Reports</h3>
-            <p className="text-gray-600 mt-1">Receive timely and accurate test results.</p>
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <a href="/contact-us" className="inline-block">
-          <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg transition-transform transform hover:scale-110 hover:bg-blue-700">
-            Book Your Health Check-Up
-          </button>
-        </a>
+        <p className="mt-1 text-lg text-gray-700">
+        With this reasoning, the best way is to identify when you indeed have time and what services will suit you best through our thorough Annual Health Check-up packages, which not only help track your current health history and spot any potential risk factors as soon as possible, but also to encourage a proactive approach in you towards health. Whether you're a person wanting to take control of your health or an organization dedicated to employee wellness, Kaivee Healthcare offers easy and affordable solutions.
+        </p>
       </div>
-    </div>
+
+      {/* Reasons to Get Annual Health Check-ups */}
+      <div className="mt-10">
+        <h2 className="text-2xl font-semibold  mb-4">
+          Reasons to Get Annual Health Check-ups with Kaivee Healthcare
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              title: "Customized All-Inclusive Packages",
+              description:
+                "Our packages are tailored for all age groups, offering everything from basic screenings to advanced diagnostics.",
+            },
+            {
+              title: "Early Detection Saves Lives",
+              description:
+                "Routine health screenings detect silent killers like diabetes, hypertension, and heart disease in their early stages.",
+            },
+            {
+              title: "Convenient Scheduling & Home Testing",
+              description:
+                "Book flexible appointments and avail home sample collection services for maximum convenience.",
+            },
+            {
+              title: "Accurate and Timely Reports",
+              description:
+                "With world-class imaging equipment and expert technicians, we ensure accurate and timely results.",
+            },
+            {
+              title: "Transparent Pricing with No Hidden Fees",
+              description:
+                "Our affordable health packages come with clear pricing, ensuring you get the best value without surprises.",
+            },
+          ].map((item, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+              <h3 className="text-xl font-semibold text-black">{item.title}</h3>
+              <p className="text-gray-600 mt-2">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* What's Included Section */}
+      <div className="mt-10 bg-[#D419580D] p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold  mb-4">
+          Kaivee Healthcare Annual Health Check-ups: What is Included?
+        </h2>
+        <ul className="list-disc ml-6 text-lg text-gray-700">
+          <li>Blood Tests: CBC, Blood Sugar, Kidney & Liver Function, Lipid & Thyroid Profiles</li>
+          <li>Urine & Stool Analysis</li>
+          <li>Cardiac Health Detection: ECG, Echocardiography, Blood Pressure Tests</li>
+          <li>Imaging Tests: Chest X-ray, Ultrasound, and Additional Scans</li>
+          <li>Pap Smear (for women) & PSA (for men based on age and risk factors)</li>
+          <li>Physical Exam & Comprehensive Medical History Review</li>
+          <li>Specialist Referral: Cardiologists, Endocrinologists, Gynecologists</li>
+        </ul>
+      </div>
+
+      {/* Who Should Get an Annual Health Check-up? */}
+      <div className="mt-10 flex flex-col lg:flex-row items-center lg:gap-24 md:gap-15 gap-5 ">
+  {/* Left Side - Text Content */}
+  <div className="flex-1">
+    <h2 className="text-2xl font-semibold mb-4">
+      Who Should Go for an Annual Health Check-up?
+    </h2>
+    <ul className="list-disc ml-6 text-lg text-gray-700">
+      <li>Individuals aged over 30 years</li>
+      <li>Those with a hereditary history of chronic diseases</li>
+      <li>Corporate employees in wellness programs</li>
+      <li>Elderly individuals needing regular check-ups</li>
+      <li>People with lifestyle risks such as smoking, obesity, or excessive stress</li>
+    </ul>
   </div>
 
+  {/* Right Side - Image */}
+  <div className="flex-1">
+    <img 
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/flat-hand-drawn-patient-taking-medical-examination_52683-57829_converted%20(1).jpg?updatedAt=1742798300878" 
+      alt="Annual Health Check-up" 
+      className="w-full max-w-md rounded-lg shadow-lg"
+    />
+  </div>
+</div>
 
+
+      {/* Corporate Wellness Packages */}
+      <div className="mt-10 bg-[#D419580D] p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold  mb-4">
+          Annual Wellness Packages for Corporates
+        </h2>
+        <p className="text-lg text-gray-700">
+          Kaivee Healthcare provides personalized health check-up packages for organizations, 
+          ensuring a healthier workforce. Investing in employee health reduces absenteeism, 
+          maintains productivity, and fosters a culture of wellness in the workplace.
+        </p>
+
+        {/* Corporate Benefits */}
+        <div className="grid md:grid-cols-2 gap-6 mt-6">
+          {[
+            "Tailored packages for various employee segments",
+            "Special group discounts and wellness programs",
+            "End-to-end management from scheduling to report delivery",
+            "Confidential and secure employee health data access",
+          ].map((benefit, index) => (
+            <div key={index} className="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+              <p className="text-gray-600">{benefit}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Call-to-Action */}
+      <div className="mt-10 text-center">
+        <h2 className="text-2xl font-semibold  mb-4">
+        Why you should invest in your health with Kaivee Healthcare
+        </h2>
+        <p className="text-lg text-gray-700">
+        At Kaivee Healthcare, an Annual Health Check-up is not just a routine test, but a step towards a healthy and long life. Be sure to keep your health ahead of the curve.
+        </p>
+       
+      </div>
     </div>
+
+
+    
  
 
     </>

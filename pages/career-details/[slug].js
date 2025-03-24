@@ -23,7 +23,7 @@ import { MakeProtectedApiCall } from "utility/api";
 
 const CareerDetails = ({ id, data }) => {
   const [open, setOpen] = useState(false);
-  const SharePageUrl = "http://103.68.40.157:3002/careers";
+  const SharePageUrl = "https://www.kaiveehealthcare.com/careers";
 
   const renderHTML = (htmlString) => {
     return { __html: htmlString };

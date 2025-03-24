@@ -4,7 +4,7 @@ import Head from "next/head";
 
 const BiomedicalWaste = () => {
   const metaData = {
-    title: "Bio Medical Waste | Medical Waste Management",
+    title: "Bio Medical Waste data | Medical Waste Management",
     description:
       "kaivee healthcare manages Bio-Waste safely and legally. Biomedical Waste Management is handled effectively for biological diagnostic waste.",
     url: "https://www.kaiveehealthcare.com/biomedical-waste", // Replace with the canonical URL of the page

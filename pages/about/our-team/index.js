@@ -3,7 +3,7 @@ import Head from "next/head";
 
 const OurTeam = () => {
   const metaData = {
-    title: "Our Doctors - Kaivee Heallthcare",
+    title: "Our various Team member - Kaivee Heallthcare",
     description: "Meet Our Expert Team at Kaivee Heallthcare",
     url: "https://www.kaiveehealthcare.com/", // Replace with the canonical URL of the page
     image:
