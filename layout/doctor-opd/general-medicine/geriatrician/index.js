@@ -1,4 +1,4 @@
-import Alternativebanner from "./alternative-banner";
+import Alternativebanner from "./geriatrician-banner";
 // import AboutFireImage from "assets/images/about/fireworks 3.svg";
 // import AboutUs from "./aboutus";
 
