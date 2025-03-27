@@ -44,7 +44,7 @@ export const GET_USER_BOOKINGS = (offset) => {
 export const GET_REPORT_TRACKING = (phone) => {
   return async (dispatch) => {
     try {
-      const url = `https://crm.cityxrayclinic.com/citycrm/Api/getBookingData?bookingMobileNo=${phone}`;
+      const url = ``;
       // const url = `http://crm.cityxrayclinic.com/citycrm/Api/getBookingData?bookingMobileNo=9911990096`;
       // const url = `http://crm.cityxrayclinic.com/citycrm/Api/getBookingData?bookingMobileNo=7503200640`;
       // const url = `${baseUrl}/getBookingData?bookingMobileNo=${phone}`;

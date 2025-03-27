@@ -4,10 +4,8 @@ import "react-multi-carousel/lib/styles.css";
 const Testimonial = () => {
   const testimonials = [
     {
-      text: "When I signed up with Lendwise it was a no-brainer. It's been one of the best decisions I've made to ensure my finances are on point",
-      name: "Alex Bergwijn",
-      position: "Accounting at Mailchimp",
-      image: "/path/to/profile-image.jpg" // Add profile image path
+      text: "The home collection service saved me time and effort. Will definitely choose Kaivee Healthcare again!.",
+      name: "Meenal Joshi",
     },
     {
       text: "Very efficient ad prompt. Have well established contactless transfer of info, receipts and data. Dev from Kaivee HealthCare extends great co-operation and co-ordination.Strongly recommend to avail their services",
