@@ -15,6 +15,7 @@ import HealthriskLayout from "./healthrisk";
 import CovidLayout from "./covid";
 import FacilitiesCategoryLayout from "./facilities";
 import HomeCareLayout from "./home-care";
+import DoctorOPDLayout from "./doctor-opd";
 export {
   HomeLayout,
   HomeCareLayout,
@@ -33,4 +34,5 @@ export {
   HealthriskLayout,
   CovidLayout,
   FacilitiesCategoryLayout,
+  DoctorOPDLayout,
 };

@@ -106,19 +106,35 @@ const AnnualLayout = () => {
 
       {/* What's Included Section */}
       <div className="mt-10 bg-[#D419580D] p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold  mb-4">
-          Kaivee Healthcare Annual Health Check-ups: What is Included?
-        </h2>
-        <ul className="list-disc ml-6 text-lg text-gray-700">
-          <li>Blood Tests: CBC, Blood Sugar, Kidney & Liver Function, Lipid & Thyroid Profiles</li>
-          <li>Urine & Stool Analysis</li>
-          <li>Cardiac Health Detection: ECG, Echocardiography, Blood Pressure Tests</li>
-          <li>Imaging Tests: Chest X-ray, Ultrasound, and Additional Scans</li>
-          <li>Pap Smear (for women) & PSA (for men based on age and risk factors)</li>
-          <li>Physical Exam & Comprehensive Medical History Review</li>
-          <li>Specialist Referral: Cardiologists, Endocrinologists, Gynecologists</li>
-        </ul>
-      </div>
+  <h2 className="text-2xl font-semibold mb-4">
+    Kaivee Healthcare Annual Health Check-ups: What is Included?
+  </h2>
+  
+  <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+    
+    {/* Left Side: List of Health Check-ups */}
+    <ul className="list-disc ml-6 text-lg text-gray-700 lg:w-1/2 ">
+      <li>Blood Tests: Complete blood count (CBC), blood sugar levels, kidney function tests (KFT), liver function tests (LFT), lipid profile, thyroid profile, etc.</li>
+      <li>Urine & Stool Analysis</li>
+      <li>Cardiac Health detection: ECG, echocardiography (depends on your package), and blood pressure tests.</li>
+      <li>Imaging Tests: Chest X-ray, ultrasound abdomen, and other scans as per advice.</li>
+      <li>Pap Smear (for women) & PSA (for men based on age and risk factors)</li>
+      <li>Physical Exam: By a well-trained clinician, to include vital sign monitoring and comprehensive medical history review</li>
+      <li>Specialist Referral: Also based on findings, we refer clients to specialists — cardiologists, endocrinologists and gynaecologists</li>
+    </ul>
+
+    {/* Right Side: Image */}
+    <div className="flex-1">
+    <img 
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/flat-hand-drawn-patient-taking-medical-examination_52683-57829_converted%20(1).jpg?updatedAt=1742798300878" 
+      alt="Annual Health Check-up" 
+      className="w-full max-w-md rounded-lg shadow-lg"
+    />
+  </div>
+
+  </div>
+</div>
+
 
       {/* Who Should Get an Annual Health Check-up? */}
       <div className="mt-10 flex flex-col lg:flex-row items-center lg:gap-24 md:gap-15 gap-5 ">
@@ -137,13 +153,16 @@ const AnnualLayout = () => {
   </div>
 
   {/* Right Side - Image */}
-  <div className="flex-1">
-    <img 
-      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/flat-hand-drawn-patient-taking-medical-examination_52683-57829_converted%20(1).jpg?updatedAt=1742798300878" 
-      alt="Annual Health Check-up" 
-      className="w-full max-w-md rounded-lg shadow-lg"
-    />
-  </div>
+  <div className="flex justify-center lg:w-1/2">
+      <Image
+        src="https://ik.imagekit.io/InFutiveTechnology/kaivee/appointment-booking-with-calendar_23-2148549799.jpg?updatedAt=1743057917427"
+        alt="Annual Health Check-up"
+        width={450}
+        height={200}
+        className="rounded-xl shadow-md  w-[80%] max-w-[300px]"
+      />
+    </div>
+  
 </div>
 
 

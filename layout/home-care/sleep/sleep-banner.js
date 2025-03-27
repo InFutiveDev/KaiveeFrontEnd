@@ -7,8 +7,8 @@ import BreadCrumb from "components/breadcrumb";
 import { PrevIcons } from "assets/images/SvgImage";
 import { NextIcons } from "assets/images/SvgImage";
 import LazyLoad from "react-lazyload";
-import BannerImage from "assets/images/about/About us 1400x300.jpg";
-import MobileImage from "assets/images/about/about us 1000 x 600.webp";
+// import BannerImage from "assets/images/about/About us 1400x300.jpg";
+// import MobileImage from "assets/images/about/about us 1000 x 600.webp";
 const RightArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -59,7 +59,7 @@ const Sleepbanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center"
-          src={BannerImage}
+          src={"https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-03-26%20at%2016.56.10.jpg?updatedAt=1743047378123"}
         />
       </div>
       <div className="relative w-full  items-center flex  sm:hidden">
@@ -70,7 +70,7 @@ const Sleepbanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src={BannerImage}
+          src={"https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-03-26%20at%2016.56.10.jpg?updatedAt=1743047378123"}
         />
       </div>
     </div>

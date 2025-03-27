@@ -69,8 +69,13 @@ const HomeCareLayout = () => {
           </ul>
         </div>
         <div className="flex justify-center">
-          <Image src={OurVersion} alt="Nursing Care" className="rounded-xl shadow-md w-[80%] max-w-[500px]" />
-        </div>
+        <Image 
+    src="https://ik.imagekit.io/InFutiveTechnology/kaivee/portrait-female-pediatrician-work_23-2151686783.webp?updatedAt=1743051634795" 
+    alt="ECG & X-Ray Home Service" 
+    width={500} 
+    height={300} 
+    className="rounded-xl shadow-md w-[80%] max-w-[500px]" 
+  />        </div>
       </div>
 
       {/* Nursing Care at Home Section */}

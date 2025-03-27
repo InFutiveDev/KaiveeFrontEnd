@@ -68,7 +68,7 @@ const Bottombar = () => {
     "/home-care/vaccination",
     "/home-care/holter",
     "/home-care/sleep",
-    "home-care/abpm",
+    // "home-care/abpm",
     "/home-care/blood-sample",
     "home-care/doctors",
     "/home-care/physiothreapy",
@@ -78,7 +78,8 @@ const Bottombar = () => {
     "/partnership/clinical-reasearch",
    
     "/partnership/vendor",
-    "/partnership/partner-with-us"
+    "/partnership/partner-with-us",
+    "/doctor-opd/alternative-medicine"
 
   ].includes(router.asPath);
 
@@ -351,7 +352,7 @@ const Bottombar = () => {
                           Sleep Study
                         </DropdownItem>
                       </Link>
-                      <Link
+                      {/* <Link
                         prefetch
                         href={`/home-care/abpm`}
                         onClick={closeMenu}
@@ -362,7 +363,7 @@ const Bottombar = () => {
                         <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                           ABPM
                         </DropdownItem>
-                      </Link>
+                      </Link> */}
                       <Link
                         prefetch
                         href={`/home-care/blood-sample`}
@@ -583,9 +584,9 @@ const Bottombar = () => {
                       <div className="relative group">
                         <Link
                           prefetch
-                          href={`/home-care`}
+                          href={`/doctor-opd/general-medicine`}
                           onClick={closeMenu}
-                          className={`transition-all align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                          className={`transition-all align-middle menuText ${asPath == "/doctor-opd/general-medicine" && "!text-[#D41958] !font-medium"}`}
                         >
                           <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                             General Medicine &amp; Specialties
@@ -595,19 +596,19 @@ const Bottombar = () => {
                         {/* Right-Aligned Submenu */}
                         <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-48">
                           <Link
-                            href="/home-care/general-physician"
+                            href="/doctor-opd/general-medicine/general-physician"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
                             General Physician
                           </Link>
                           <Link
-                            href="/home-care/pediatrician"
+                            href="/doctor-opd/pediatrician"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
                             Pediatrician
                           </Link>
                           <Link
-                            href="/home-care/geriatrician"
+                            href="/doctor-opd/geriatrician"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
                             Geriatrician
@@ -619,7 +620,7 @@ const Bottombar = () => {
                       <div className="relative group">
                           <Link
                             prefetch
-                            href={`/home-care/ecg-x-ray`}
+                            href={`/doctor-opd/`}
                             onClick={closeMenu}
                             className={`transition-all align-middle menuText ${asPath == "/home-care/ecg-x-ray" && "!text-[#D41958] !font-medium"}`}
                           >
@@ -631,37 +632,37 @@ const Bottombar = () => {
                           {/* Sub-dropdown for Surgical Specialties */}
                           <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
                             <Link
-                              href="/home-care/general-surgeon"
+                              href="/doctor-opd/general-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               General Surgeon
                             </Link>
                             <Link
-                              href="/home-care/orthopedic-surgeon"
+                              href="/doctor-opd/orthopedic-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Orthopedic Surgeon
                             </Link>
                             <Link
-                              href="/home-care/neurosurgeon"
+                              href="/doctor-opd/neurosurgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Neurosurgeon
                             </Link>
                             <Link
-                              href="/home-care/cardiac-surgeon"
+                              href="/doctor-opd/cardiac-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Cardiac Surgeon
                             </Link>
                             <Link
-                              href="/home-care/plastic-cosmetic-surgeon"
+                              href="/doctor-opd/plastic-cosmetic-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Plastic &amp; Cosmetic Surgeon
                             </Link>
                             <Link
-                              href="/home-care/ent-surgeon"
+                              href="/doctor-opd/ent-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               ENT Surgeon
@@ -673,7 +674,7 @@ const Bottombar = () => {
                         <div className="relative group">
                           <Link
                             prefetch
-                            href={`/home-care`}
+                            href={`/doctor-opd`}
                             onClick={closeMenu}
                             className={`transition-all align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
                           >
@@ -683,23 +684,23 @@ const Bottombar = () => {
                           </Link>
 
                           {/* Submenu */}
-                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
-                            <Link href="/home-care/cardiologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
+                            <Link href="/doctor-opd/cardiologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Cardiologist
                             </Link>
-                            <Link href="/home-care/neurologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/neurologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Neurologist
                             </Link>
-                            <Link href="/home-care/nephrologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/nephrologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Nephrologist
                             </Link>
-                            <Link href="/home-care/endocrinologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/endocrinologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Endocrinologist
                             </Link>
-                            <Link href="/home-care/hepatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/hepatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Hepatologist
                             </Link>
-                            <Link href="/home-care/rheumatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/rheumatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Rheumatologist
                             </Link>
                           </div>
@@ -708,7 +709,7 @@ const Bottombar = () => {
                         <div className="relative group">
                             <Link
                               prefetch
-                              href={`/home-care`}
+                              href={`/doctor-opd`}
                               onClick={closeMenu}
                               className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
                             >
@@ -718,20 +719,20 @@ const Bottombar = () => {
                             </Link>
 
                             {/* Submenu */}
-                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
-                              <Link href="/home-care/dermatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
+                              <Link href="/doctor-opd/dermatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Dermatologist
                               </Link>
-                              <Link href="/home-care/psychiatrist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/psychiatrist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Psychiatrist
                               </Link>
-                              <Link href="/home-care/pulmonologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/pulmonologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Pulmonologist
                               </Link>
-                              <Link href="/home-care/gastroenterologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/gastroenterologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Gastroenterologist
                               </Link>
-                              <Link href="/home-care/hematologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/hematologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Hematologist
                               </Link>
                             </div>
@@ -740,7 +741,7 @@ const Bottombar = () => {
                           <div className="relative group">
                           <Link
                             prefetch
-                            href={`/home-care`}
+                            href={`/doctor-opd`}
                             onClick={closeMenu}
                             className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
                           >
@@ -750,14 +751,14 @@ const Bottombar = () => {
                           </Link>
 
                           {/* Submenu */}
-                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
-                            <Link href="/home-care/gynecologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ">
+                            <Link href="/doctor-opd/gynecologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Gynecologist
                             </Link>
-                            <Link href="/home-care/obstetrician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/obstetrician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Obstetrician
                             </Link>
-                            <Link href="/home-care/neonatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/neonatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Neonatologist
                             </Link>
                           </div>
@@ -766,7 +767,7 @@ const Bottombar = () => {
                         <div className="relative group">
                             <Link
                               prefetch
-                              href={`/home-care`}
+                              href={`/doctor-opd`}
                               onClick={closeMenu}
                               className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
                             >
@@ -776,14 +777,14 @@ const Bottombar = () => {
                             </Link>
 
                             {/* Submenu */}
-                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
-                              <Link href="/home-care/opthalmologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
+                              <Link href="/doctor-opd/opthalmologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Ophthalmologist
                               </Link>
-                              <Link href="/home-care/dentist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/dentist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Dentist
                               </Link>
-                              <Link href="/home-care/oral-maxillofacial-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/oral-maxillofacial-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Oral &amp; Maxillofacial Surgeon
                               </Link>
                             </div>
@@ -792,9 +793,9 @@ const Bottombar = () => {
                           <div className="relative group">
                                 <Link
                                   prefetch
-                                  href={`/home-care`}
+                                  href={`/doctor-opd/alternative-medicine`}
                                   onClick={closeMenu}
-                                  className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                                  className={`align-middle menuText ${asPath == "/doctor-opd/alternative-medicine" && "!text-[#D41958] !font-medium"}`}
                                 >
                                   <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                                     Alternative Medicine &amp; Rehabilitation
@@ -802,14 +803,14 @@ const Bottombar = () => {
                                 </Link>
 
                                 {/* Submenu */}
-                                <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ml-2">
-                                  <Link href="/home-care/physiotherapist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ">
+                                  <Link href="/doctor-opd/alternative-medicine/physiotherapist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                     Physiotherapist
                                   </Link>
-                                  <Link href="/home-care/homeopathy-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                  <Link href="/doctor-opd/alternative-medicine/homeopathy-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                     Homeopathy Doctor
                                   </Link>
-                                  <Link href="/home-care/ayurveda-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                  <Link href="/doctor-opd/alternative-medicine/ayurveda-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                     Ayurveda Doctor
                                   </Link>
                                 </div>

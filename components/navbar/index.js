@@ -264,41 +264,46 @@ const Navbar = () => {
               </div>
             </form>
           </div>
-          <div className="profile  sm:w-auto ml-10 sm:ml-2">
-              <div className="w-full flex items-center gap-2 sm:gap-3">
-                
-                <Image
-                  src={abmbuimg}
-                  alt="Ambulance"
-                  className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
-                />
+          <div className="profile sm:w-auto ml-10 sm:ml-2">
+  {/* Flex container to align items in a row */}
+  <div className="w-full flex items-center gap-4 sm:gap-6">
+    {/* Ambulance Icon and Title */}
+    <div className="flex items-center gap-2">
+      <Image
+        src={abmbuimg}
+        alt="Ambulance"
+        className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+      />
+      <span className="text-sm sm:text-base font-medium text-black">
+        Ambulance
+      </span>
+    </div>
 
-                {/* Title on the right */}
-                <span className="text-sm sm:text-base font-medium text-black">
-                 Ambulance
-                </span>
-              </div>
-            </div>
+    {/* Phone Number */}
+    <div className="phone flex items-center ml-8 gap-1">
+      <a href="tel:9289088633" className="flex items-center gap-1">
+        <svg
+          width="17"
+          height="18"
+          viewBox="0 0 17 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.8263 11.9883L12.6038 11.7225C12.0701 11.6583 11.5451 11.8508 11.1688 12.245L9.55882 13.9317C7.08255 12.6117 5.05254 10.4942 3.79253 7.89083L5.41129 6.195C5.78755 5.80083 5.9713 5.25083 5.91005 4.69167L5.65629 2.38167C5.55129 1.45583 4.80754 0.759167 3.91503 0.759167H2.40128C1.41252 0.759167 0.590015 1.62083 0.651266 2.65667C1.11502 10.485 7.0913 16.7367 14.5551 17.2225C15.5439 17.2867 16.3664 16.425 16.3664 15.3892V13.8033C16.3751 12.8775 15.7101 12.0983 14.8263 11.9883V11.9883Z"
+            fill="#52525B"
+          />
+        </svg>
+        <span className=" text-sm sm:text-base text-black">9289088633</span>
+      </a>
+    </div>
+  </div>
+</div>
+
           <div className="profile w-full sm:w-auto">
             <div className="w-full flex flex-wrap  justify-between sm:justify-start ">
-              <div className="phone">
-                <a href="tel:9289088633">
-                  <svg
-                    width="17"
-                    height="18"
-                    viewBox="0 0 17 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14.8263 11.9883L12.6038 11.7225C12.0701 11.6583 11.5451 11.8508 11.1688 12.245L9.55882 13.9317C7.08255 12.6117 5.05254 10.4942 3.79253 7.89083L5.41129 6.195C5.78755 5.80083 5.9713 5.25083 5.91005 4.69167L5.65629 2.38167C5.55129 1.45583 4.80754 0.759167 3.91503 0.759167H2.40128C1.41252 0.759167 0.590015 1.62083 0.651266 2.65667C1.11502 10.485 7.0913 16.7367 14.5551 17.2225C15.5439 17.2867 16.3664 16.425 16.3664 15.3892V13.8033C16.3751 12.8775 15.7101 12.0983 14.8263 11.9883V11.9883Z"
-                      fill="#52525B"
-                    />
-                  </svg>
-                  <span className="">9289088633</span>
-                </a>
-              </div>
-              <span className="hidden sm:block h-5 w-px bg-gray-300"></span>
+             
+              {/* <span className="hidden sm:block h-5 w-px bg-gray-300"></span> */}
               {/* <div className="track">
                 <Link href={"/dashboard/report-tracking"}>
                   <svg
@@ -346,6 +351,7 @@ const Navbar = () => {
               </div>
               <div className="cart-icon hidden sm:block">
                 <Link href={"/cart"} className="align-middle loginbutton">
+                <span className="hidden sm:block h-5 w-px bg-gray-300"></span>
                   <div className="relative">
                     <svg
                       width="24"

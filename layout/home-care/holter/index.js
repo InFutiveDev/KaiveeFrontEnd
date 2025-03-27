@@ -114,7 +114,9 @@ const HolterLayout = () => {
   </div>
 </div>
 
- 
+  <div className="bg-[#FAFAFA]">
+         <WhyChoose data={data} />
+       </div>
 
     </>
   );

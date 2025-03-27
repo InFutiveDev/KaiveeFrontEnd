@@ -167,7 +167,10 @@ const DoctorLayout = () => {
   </div>
 
   {/* When to Seek Doctors at Home? */}
-  <div className=" mx-auto mt-12 p-6 bg-[#D419580D] border-l-4 border-[#D41958] rounded-lg">
+  <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 mx-auto mt-12 p-6 bg-[#D419580D] border-l-4 border-[#D41958] rounded-lg">
+  
+  {/* Left Side: Text Content */}
+  <div className="lg:w-1/2">
     <h2 className="text-2xl font-semibold text-gray-900 mb-4">
       When to Seek Doctors at Home?
     </h2>
@@ -180,6 +183,20 @@ const DoctorLayout = () => {
       <li className="mb-2">Patients requiring palliative care.</li>
     </ul>
   </div>
+
+  {/* Right Side: Image */}
+  <div className="flex justify-center lg:w-1/2">
+    <Image 
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/asian-doctor-talking-senior-caucasian-patient-home-discussing-medication_1098-20695.jpg?updatedAt=1743053803031" 
+      alt="ECG & X-Ray Home Service" 
+      width={500} 
+      height={300} 
+      className="rounded-xl shadow-md w-[80%] max-w-[500px]" 
+    />
+  </div>
+
+</div>
+
 
   {/* Call to Action */}
   <div className="mt-12 text-center">

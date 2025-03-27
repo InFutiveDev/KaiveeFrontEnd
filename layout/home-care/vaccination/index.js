@@ -84,8 +84,10 @@ const EcgLayout = () => {
   </div>
   <div className="md:w-1/2 flex justify-center">
     <Image
-      src={img1}
+      src={"https://ik.imagekit.io/InFutiveTechnology/kaivee/patient-getting-vaccine_23-2148801436.jpg?updatedAt=1743050817275"}
       alt="ECG & X-Ray Home Service"
+      width={500} 
+      height={300} 
       className="rounded-xl shadow-md w-[80%] max-w-[500px]"
     />
   </div>
