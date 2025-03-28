@@ -71,7 +71,7 @@ const FacilitiesBanner = ({ category }) => {
             layout="fixed"
             alt="Static Facilities Banner"
             className="object-fill md:mb-0 mb-3 h-auto w-full object-center"
-            src={bannerImg}
+            src={category?.category_image || nodatImage}
           />
         </div>
       )}
@@ -86,7 +86,7 @@ const FacilitiesBanner = ({ category }) => {
             layout="fixed"
             alt={category?.category_image_altTag}
             className="object-fill md:mb-0 mb-3 h-auto w-full object-center"
-            src={category?.mobile_banner || nodatImage}
+            src={category?.category_image || nodatImage}
           />
         </div>
       ) : (
@@ -99,7 +99,7 @@ const FacilitiesBanner = ({ category }) => {
             layout="fixed"
             alt="Static Mobile Facilities Banner"
             className="object-fill md:mb-0 mb-3 h-auto w-full object-center"
-            src={bannerImg}
+            src={category?.category_image || nodatImage}
           />
         </div>
       )}

@@ -38,111 +38,144 @@ const DoctorOPDLayout = () => {
         
       </section>
 
-      <div className="container mx-auto px-4 py-8">
-      {/* Header Section */}
-      <h1 className="text-3xl font-bold text-center mb-8 text-[#8DBD4D]">
-        Doctor OPD Services: Expert Consultations with Kaivee Healthcare
-      </h1>
+      <div className="container mx-auto px-4 py-12">
+  {/* Section Header */}
+  <div className="text-center">
+    <h2 className="text-3xl font-bold text-[#8DBD4D]">General Medicine & Specialties at Kaivee Healthcare</h2>
+    <h3 className="text-2xl font-semibold text-gray-800 mt-3 ">Comprehensive Medical Support for Every Stage of Life</h3>
+  </div>
 
-      {/* General Medicine Section */}
-      <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
-        <h2 className="text-2xl font-semibold text-gray-800 text-center">
-          General Medicine: Comprehensive Healthcare for All Ages
-        </h2>
-        <p className="text-gray-700 text-center mt-4">
-          Our experienced general physicians diagnose and treat common health issues, ensuring your well-being.
+  {/* Introduction Section */}
+  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    <div className="lg:w-1/2">
+      <p className="text-gray-700 leading-relaxed">
+        The General Medicine & Specialties department forms the backbone of Kaivee Healthcare's clinical services. Whether diagnosing common ailments or managing chronic diseases, our physicians provide evidence-based care that emphasizes accuracy, early intervention, and patient comfort.
+      </p>
+      <p className="text-gray-700 mt-4">
+      Kaivee Healthcare's General Medicine isn't specific to demographic or disease type. Our team sees a wide range of clinical presentations, and works across specialties to ensure that care delivery is seamless. Be it a patient that walked in with a fever or came for help with chronic fatigue, our systematic diagnostic process means nothing is missed out.      </p>
+    </div>
+    <div className="lg:w-1/2 flex justify-center">
+      <Image
+        src="https://ik.imagekit.io/InFutiveTechnology/kaivee/medical-prescription-concept-illustration_114360-29561.webp?updatedAt=1743159918839"
+        alt="General Medicine"
+        width={500}
+        height={300}
+        className="rounded-xl shadow-lg transition-transform duration-500 hover:scale-105"
+      />
+    </div>
+  </div>
+
+  {/* Key Features Section */}
+  <div className="mt-12">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">A Big-Feature Department with Specific Attention</h3>
+    <p className="text-gray-700 text-center mt-3">
+      Kaivee Healthcare's General Medicine isn't limited to a single demographic or disease type. Our team manages diverse clinical cases and collaborates across specialties for seamless care delivery.
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      {/* Feature 1 */}
+      <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <h4 className="text-xl font-semibold">Preventive Healthcare</h4>
+        <p className="text-gray-700 mt-2">
+          Lifestyle counseling, wellness checks, and risk profiling to keep you healthier, longer.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-          <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-semibold text-lg">Fever & Infections</h3>
-            <p className="text-gray-600">Treatment for viral, bacterial, and seasonal infections.</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-semibold text-lg">Chronic Conditions</h3>
-            <p className="text-gray-600">Management of diabetes, hypertension, and heart disease.</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-semibold text-lg">Preventive Care</h3>
-            <p className="text-gray-600">Routine check-ups, vaccinations, and health screenings.</p>
-          </div>
-        </div>
       </div>
-
-      {/* Specialty Consultations Section */}
-      <div className="mt-12 p-6 rounded-xl shadow-md border border-gray-300">
-        <h2 className="text-2xl font-semibold text-gray-800 text-center">
-          Specialized Consultations for Advanced Medical Care
-        </h2>
-        <p className="text-gray-700 text-center mt-4">
-          Access expert consultations across multiple specialties for accurate diagnosis and effective treatment.
+      {/* Feature 2 */}
+      <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <h4 className="text-xl font-semibold">Comprehensive Diagnosis</h4>
+        <p className="text-gray-700 mt-2">
+          Our systematic diagnostic process ensures that no underlying condition is overlooked.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-          <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-semibold text-lg">Cardiology</h3>
-            <p className="text-gray-600">For heart health, BP management, and cardiac conditions.</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-semibold text-lg">Orthopedics</h3>
-            <p className="text-gray-600">Bone, joint, and muscle-related treatments.</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-semibold text-lg">Neurology</h3>
-            <p className="text-gray-600">For stroke recovery, migraines, and neurological disorders.</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-semibold text-lg">Gynecology</h3>
-            <p className="text-gray-600">Women’s health, pregnancy care, and hormonal issues.</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-semibold text-lg">Dermatology</h3>
-            <p className="text-gray-600">Skin, hair, and cosmetic treatments.</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-semibold text-lg">ENT (Ear, Nose, Throat)</h3>
-            <p className="text-gray-600">Treatment for allergies, sinus issues, and infections.</p>
-          </div>
-        </div>
       </div>
-
-      {/* Image Section */}
-      {/* Image Section */}
-<div className="flex flex-wrap justify-center gap-6 mt-12">
-  <Image
-    src="https://ik.imagekit.io/InFutiveTechnology/kaivee/portrait-female-pediatrician-work_23-2151686700.jpg?updatedAt=1742981219205"
-    alt="Doctor Consultation"
-    width={500}
-    height={300}
-    className="rounded-xl shadow-md w-[80%] max-w-[500px]"
-  />
-  <Image
-    src="https://ik.imagekit.io/InFutiveTechnology/kaivee/male-doctor-examining-patient_1170-2148.jpg?updatedAt=1742815147139"
-    alt="Doctor Consultation"
-    width={500}
-    height={300}
-    className="rounded-xl shadow-md w-[80%] max-w-[500px]"
-  />
-</div>
-
-
-      {/* CTA Section */}
-      <div className="mt-12 text-center">
-        <h2 className="text-2xl font-semibold text-gray-800">
-          Get Quality Medical Advice Anytime, Anywhere
-        </h2>
-        <p className="text-gray-700 mt-4">
-          Whether it’s a minor illness, a routine check-up, or a specialized consultation, our OPD services ensure expert guidance. Book your appointment today!
+      {/* Feature 3 */}
+      <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <h4 className="text-xl font-semibold">Integrated Care Approach</h4>
+        <p className="text-gray-700 mt-2">
+          Seamless coordination with specialists for advanced medical care when needed.
         </p>
       </div>
     </div>
+  </div>
+
+  {/* Conditions Managed */}
+  <div className="mt-12">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">Conditions Commonly Managed</h3>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      {[
+        { title: "Respiratory + Viral Infections", desc: "Cough, cold, flu, sinusitis, and chest infections are diagnosed and managed efficiently." },
+        { title: "Digestive Distress & Food Intolerances", desc: "Acidity, indigestion, and IBS symptoms treated with food-friendly interventions." },
+        { title: "Headaches and Body Aches", desc: "We analyze patterns to detect underlying causes and prevent chronic issues." },
+        { title: "Allergies & Environmental Triggers", desc: "Diagnosing and managing allergies from food, dust, and skin sensitivities." },
+        { title: "Fever and General Weakness", desc: "A systemic approach to fever management and fatigue assessment." },
+        { title: "✨ Lifestyle Monitoring & Screening", desc: "Routine health checks including BP, sugar levels, BMI, and heart health markers." }
+      ].map((item, index) => (
+        <div key={index} className="bg-[#8DBD4D0D] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h4 className="text-lg font-semibold">{item.title}</h4>
+          <p className="text-gray-700 mt-2">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Sub-Specialties Section */}
+  <div className="mt-12">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">General Medicine Sub-Specialties</h3>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      {[
+        { title: "General Practitioners", desc: "Specialists in internal medicine, managing chronic conditions and preventive screenings." },
+        { title: "Pediatricians", desc: "Care for infants, children, and adolescents, including immunizations and growth tracking." },
+        { title: "Geriatricians", desc: "Experts in elder care, mobility support, and age-related health conditions." }
+      ].map((item, index) => (
+        <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h4 className="text-lg font-semibold">{item.title}</h4>
+          <p className="text-gray-700 mt-2">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Team Operations */}
+  <div className="mt-12">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">How Our Team Operates</h3>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+      {[
+        { title: "▶ Integrated Diagnosis", desc: "Decisions are based on lifestyle, medical history, family risk, and test results." },
+        { title: "▶ Clear Care Pathways", desc: "Patients are treated in-house or referred to specialists when necessary." },
+        { title: "▶ Preventive Health Focus", desc: "Early identification of health risks and proactive treatment plans." },
+        { title: "▶ Easy Access & Follow-Up", desc: "Stay in touch with your physician via in-person or digital consultations." }
+      ].map((item, index) => (
+        <div key={index} className="bg-[#D419580D] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h4 className="text-lg font-semibold">{item.title}</h4>
+          <p className="text-gray-700 mt-2">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+
+   {/* IMAGE SECTION */}
+   <div className="flex flex-wrap justify-center gap-6 mt-12">
+    <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/portrait-female-pediatrician-work_23-2151686700.jpg?updatedAt=1742981219205"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105"
+    />
+    <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/male-doctor-examining-patient_1170-2148.jpg?updatedAt=1742815147139"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105"
+    />
+  </div>
+</div>
+
 
       <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />
       </div>
-      
-        
-
-
-
       
 
         <div className=" container pb-[30px]">

@@ -20,6 +20,9 @@ import FacilitiesMobile from "./facilitiesMobile";
 const Bottombar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [homeCareOpen, setHomeCareOpen] = useState(false);
+  const [partnershipOpen, setPartnershipOpen] = useState(false);
+  const [doctorOpdOpen, setDoctorOpdOpen] = useState(false);
   const [isXS, setisXS] = useState(false);
 
   const [facilitiesOpen, setFacilitiesOpen] = useState(false);
@@ -28,12 +31,18 @@ const Bottombar = () => {
     if (!isOpen) {
       setAboutOpen(false);
       setFacilitiesOpen(false);
+      setHomeCareOpen(false);
+      setPartnershipOpen(false);
+      setDoctorOpdOpen(false);
     }
   };
   const closeMenu = () => {
     setIsOpen(false);
   };
   const toggleAbout = () => setAboutOpen(!aboutOpen);
+  const toggleHomeCare = () => setHomeCareOpen(!homeCareOpen);
+  const togglePartnership = () => setPartnershipOpen(!partnershipOpen);
+  const toggleDoctorOpd = () => setDoctorOpdOpen(!doctorOpdOpen);
   const router = useRouter();
   const { asPath } = router;
   const store = useSelector((state) => state);
@@ -259,7 +268,7 @@ const Bottombar = () => {
                 <UncontrolledDropdown className="hover-menu-about ">
                   <div
 
-                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${aboutOpen ? "bg-[#7DB440]" : ""
+                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${homeCareOpen ? "bg-[#7DB440]" : ""
                       } `}
                   >
                     <div
@@ -269,13 +278,13 @@ const Bottombar = () => {
                       Home Care
                     </div>
                     <div className="block sm:hidden cursor-pointer">
-                      {!aboutOpen ? (
-                        <span className="text-[20px]" onClick={toggleAbout}>
+                      {!homeCareOpen ? (
+                        <span className="text-[20px]" onClick={toggleHomeCare}>
                           {" "}
                           +
                         </span>
                       ) : (
-                        <span className="text-[20px]" onClick={toggleAbout}>
+                        <span className="text-[20px]" onClick={toggleHomeCare}>
                           -
                         </span>
                       )}
@@ -284,7 +293,7 @@ const Bottombar = () => {
                   <div className="pl-[28px] pt-[2px]">
                     <DropdownMenu
                       className={`${!isXS ? "show-menu-about" : "!block"
-                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${aboutOpen
+                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${homeCareOpen
                           ? " !h-auto	"
                           : isXS
                             ? "overflow-hidden  !h-0  !p-0 !border-none"
@@ -409,7 +418,7 @@ const Bottombar = () => {
                 <UncontrolledDropdown className="hover-menu-about ">
                   <div
 
-                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${aboutOpen ? "bg-[#7DB440]" : ""
+                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${partnershipOpen ? "bg-[#7DB440]" : ""
                       } `}
                   >
                     <div
@@ -419,13 +428,13 @@ const Bottombar = () => {
                       Partnership
                     </div>
                     <div className="block sm:hidden cursor-pointer">
-                      {!aboutOpen ? (
-                        <span className="text-[20px]" onClick={toggleAbout}>
+                      {!partnershipOpen ? (
+                        <span className="text-[20px]" onClick={togglePartnership}>
                           {" "}
                           +
                         </span>
                       ) : (
-                        <span className="text-[20px]" onClick={toggleAbout}>
+                        <span className="text-[20px]" onClick={togglePartnership}>
                           -
                         </span>
                       )}
@@ -434,7 +443,7 @@ const Bottombar = () => {
                   <div className="pl-[28px] pt-[2px]">
                     <DropdownMenu
                       className={`${!isXS ? "show-menu-about" : "!block"
-                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${aboutOpen
+                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${partnershipOpen
                           ? " !h-auto	"
                           : isXS
                             ? "overflow-hidden  !h-0  !p-0 !border-none"
@@ -548,7 +557,7 @@ const Bottombar = () => {
                 <UncontrolledDropdown className="hover-menu-about ">
                   <div
 
-                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${aboutOpen ? "bg-[#7DB440]" : ""
+                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${doctorOpdOpen ? "bg-[#7DB440]" : ""
                       } `}
                   >
                     <div
@@ -558,13 +567,13 @@ const Bottombar = () => {
                       Doctor&apos;s OPD
                     </div>
                     <div className="block sm:hidden cursor-pointer">
-                      {!aboutOpen ? (
-                        <span className="text-[20px]" onClick={toggleAbout}>
+                      {!doctorOpdOpen ? (
+                        <span className="text-[20px]" onClick={toggleDoctorOpd}>
                           {" "}
                           +
                         </span>
                       ) : (
-                        <span className="text-[20px]" onClick={toggleAbout}>
+                        <span className="text-[20px]" onClick={toggleDoctorOpd}>
                           -
                         </span>
                       )}
@@ -573,7 +582,7 @@ const Bottombar = () => {
                   <div className="pl-[28px] pt-[2px]">
                     <DropdownMenu
                       className={`${!isXS ? "show-menu-about" : "!block"
-                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${aboutOpen
+                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${doctorOpdOpen
                           ? " !h-auto	"
                           : isXS
                             ? "overflow-hidden  !h-0  !p-0 !border-none"
@@ -620,9 +629,9 @@ const Bottombar = () => {
                       <div className="relative group">
                           <Link
                             prefetch
-                            href={`/doctor-opd/`}
+                            href={`/doctor-opd/surgical-specialties`}
                             onClick={closeMenu}
-                            className={`transition-all align-middle menuText ${asPath == "/home-care/ecg-x-ray" && "!text-[#D41958] !font-medium"}`}
+                            className={`transition-all align-middle menuText ${asPath == "/doctor-opd/surgical-specialties" && "!text-[#D41958] !font-medium"}`}
                           >
                             <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                               Surgical Specialties
@@ -674,9 +683,9 @@ const Bottombar = () => {
                         <div className="relative group">
                           <Link
                             prefetch
-                            href={`/doctor-opd`}
+                            href={`/doctor-opd/super-specialties`}
                             onClick={closeMenu}
-                            className={`transition-all align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                            className={`transition-all align-middle menuText ${asPath == "/doctor-opd/super-specialties" && "!text-[#D41958] !font-medium"}`}
                           >
                             <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                               Super Specialties
@@ -709,9 +718,9 @@ const Bottombar = () => {
                         <div className="relative group">
                             <Link
                               prefetch
-                              href={`/doctor-opd`}
+                              href={`/doctor-opd/other-medical-specialties`}
                               onClick={closeMenu}
-                              className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                              className={`align-middle menuText ${asPath == "/doctor-opd/other-medical-specialties" && "!text-[#D41958] !font-medium"}`}
                             >
                               <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                                 Other Medical Specialties
@@ -741,9 +750,9 @@ const Bottombar = () => {
                           <div className="relative group">
                           <Link
                             prefetch
-                            href={`/doctor-opd`}
+                            href={`/doctor-opd/women-child-care`}
                             onClick={closeMenu}
-                            className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                            className={`align-middle menuText ${asPath == "/doctor-opd/women-child-care" && "!text-[#D41958] !font-medium"}`}
                           >
                             <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                               Women &amp; Child Care
