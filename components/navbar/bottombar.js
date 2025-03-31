@@ -611,13 +611,13 @@ const Bottombar = () => {
                             General Physician
                           </Link>
                           <Link
-                            href="/doctor-opd/pediatrician"
+                            href="/doctor-opd/general-medicine/pediatrician"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
                             Pediatrician
                           </Link>
                           <Link
-                            href="/doctor-opd/geriatrician"
+                            href="/doctor-opd/general-medicine/geriatrician"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
                             Geriatrician
@@ -641,13 +641,13 @@ const Bottombar = () => {
                           {/* Sub-dropdown for Surgical Specialties */}
                           <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
                             <Link
-                              href="/doctor-opd/general-surgeon"
+                              href="/doctor-opd/surgical-specialties/general-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               General Surgeon
                             </Link>
                             <Link
-                              href="/doctor-opd/orthopedic-surgeon"
+                              href="/doctor-opd/surgical-specialties/orthopedic-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Orthopedic Surgeon
@@ -776,9 +776,9 @@ const Bottombar = () => {
                         <div className="relative group">
                             <Link
                               prefetch
-                              href={`/doctor-opd`}
+                              href={`/doctor-opd/eye-dental-care`}
                               onClick={closeMenu}
-                              className={`align-middle menuText ${asPath == "/home-care" && "!text-[#D41958] !font-medium"}`}
+                              className={`align-middle menuText ${asPath == "/doctor-opd/eye-dental-care" && "!text-[#D41958] !font-medium"}`}
                             >
                               <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                                 Eye &amp; Dental Care

@@ -1,13 +1,13 @@
-import  AlternativeLayout  from "../../../../layout/doctor-opd/general-medicine/pediatrician";
+import  AlternativeLayout  from "../../../../layout/doctor-opd/surgical-specialties/general-surgeon";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
 const AlternativeMed = () => {
   const [metaData, setMetaData] = useState({
-    title: "Pediatrician Kaivee Healthcare.",
+    title: "General Surgical Specialties Kaivee Healthcare.",
     description:
-      "Pediatrician Kaivee Healthcare | Various Alternative Medicine in Delhi-NCR",
-    url: "https://www.kaiveehealthcare.com/doctor-opd/pediatrician", // Replace with the canonical URL of the page
+      "General Surgical Specialties Kaivee Healthcare | Various Alternative Medicine in Delhi-NCR",
+    url: "https://www.kaiveehealthcare.com/doctor-opd/surgical-specialties/general-surgeon", // Replace with the canonical URL of the page
     image:
       "https://www.kaiveehealthcare.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.eaef1c84.png&w=384&q=100",
   });

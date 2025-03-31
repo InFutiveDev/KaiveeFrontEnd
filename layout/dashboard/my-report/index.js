@@ -69,10 +69,7 @@ const MyReportLayout = () => {
               <div>
                 <p className="text-xl font-bold pb-3">Health Report</p>
                 <span className="text-secondary text-[14px] md:text-[20px]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit
-                  amet,
-                </span>
+                If you have undergone a test with Kaivee Healthcare, you can easily access your health report through our platform.                </span>
               </div>
               <div>
                 <Image

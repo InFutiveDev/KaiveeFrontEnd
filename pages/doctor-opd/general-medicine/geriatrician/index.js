@@ -4,10 +4,10 @@ import Head from "next/head";
 
 const AlternativeMed = () => {
   const [metaData, setMetaData] = useState({
-    title: "Alternative Medicine Kaivee Healthcare.",
+    title: "Geriatrician at Kaivee Healthcare.",
     description:
-      "Alternative Medicine Kaivee Healthcare | Various Alternative Medicine in Delhi-NCR",
-    url: "https://www.kaiveehealthcare.com/doctor-opd", // Replace with the canonical URL of the page
+      "Geriatrician at Kaivee Healthcare | Various Alternative Medicine in Delhi-NCR",
+    url: "https://www.kaiveehealthcare.com/doctor-opd/general-medicine/geriatrician", // Replace with the canonical URL of the page
     image:
       "https://www.kaiveehealthcare.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.eaef1c84.png&w=384&q=100",
   });

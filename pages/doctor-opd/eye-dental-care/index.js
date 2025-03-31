@@ -1,13 +1,13 @@
-import  AlternativeLayout  from "../../../layout/doctor-opd/general-medicine";
+import  AlternativeLayout  from "../../../layout/doctor-opd/eye-dental-care";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
 const AlternativeMed = () => {
   const [metaData, setMetaData] = useState({
-    title: "General Medicine Kaivee Healthcare.",
+    title: "Eye and Dental Care at Kaivee Healthcare.",
     description:
-      "General Medicine Kaivee Healthcare | Various Alternative Medicine in Delhi-NCR",
-    url: "https://www.kaiveehealthcare.com/doctor-opd/general-medicine", // Replace with the canonical URL of the page
+      "Eye and Dental Care at Kaivee Healthcare | Various Alternative Medicine in Delhi-NCR",
+    url: "https://www.kaiveehealthcare.com/doctor-opd/eye-dental-care", // Replace with the canonical URL of the page
     image:
       "https://www.kaiveehealthcare.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappLogo.eaef1c84.png&w=384&q=100",
   });
