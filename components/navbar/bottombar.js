@@ -653,25 +653,25 @@ const Bottombar = () => {
                               Orthopedic Surgeon
                             </Link>
                             <Link
-                              href="/doctor-opd/neurosurgeon"
+                              href="/doctor-opd/surgical-specialties/neurosurgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Neurosurgeon
                             </Link>
                             <Link
-                              href="/doctor-opd/cardiac-surgeon"
+                              href="/doctor-opd/surgical-specialties/cardiac-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Cardiac Surgeon
                             </Link>
                             <Link
-                              href="/doctor-opd/plastic-cosmetic-surgeon"
+                              href="/doctor-opd/surgical-specialties/plastic-cosmetic-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Plastic &amp; Cosmetic Surgeon
                             </Link>
                             <Link
-                              href="/doctor-opd/ent-surgeon"
+                              href="/doctor-opd/surgical-specialties/ent-surgeon"
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               ENT Surgeon

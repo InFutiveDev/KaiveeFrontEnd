@@ -1,4 +1,4 @@
-import  AlternativeLayout  from "../../../layout/doctor-opd/surgical-specialties";
+import  AlternativeLayout  from "../../../../layout/doctor-opd/surgical-specialties/plastic-cosmetic-surgeon";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
