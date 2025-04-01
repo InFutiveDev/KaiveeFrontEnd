@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -38,116 +40,192 @@ const DoctorOPDLayout = () => {
         
       </section>
 
-      {/* <AboutUs /> */}
-     <div className="container mx-auto px-4 py-8">
-  {/* Header Section */}
-  <h1 className="text-3xl font-bold text-center mb-8 text-[#8DBD4D]">
-    Doctor OPD Services: Expert Consultations with Kaivee Healthcare
-  </h1>
+      <div className="container mx-auto px-4 py-8">
+      {/* Title Section */}
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-[#8DBD4D]">
+          Consult an ENT Surgeon at Kaivee Healthcare
+        </h1>
+        <h2 className="mt-2 text-2xl font-bold text-gray-800">
+          Specialized Surgical Care for Ear, Nose, and Throat Conditions
+        </h2>
+        <p className="text-gray-700 mt-1 max-w-2xl mx-auto">
+          From chronic sinus infections to hearing problems, our ENT Surgeons provide advanced care 
+          to restore function and comfort for both adults and children. We offer a range of surgical treatments 
+          for improved breathing, hearing, and voice quality.
+        </p>
+      </div>
 
-  {/* About OPD Services Section */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-gray-800">
-        Why Choose OPD Services?
-      </h2>
-      <p className="text-gray-700">
-        Visiting a hospital for regular checkups and minor treatments can be time-consuming and stressful. With Kaivee Healthcare is OPD services, you get access to experienced doctors, personalized consultations, and expert medical guidance—all from the comfort of your home or nearby OPD centers.
-      </p>
-      <ul className="list-disc pl-5 space-y-2 text-gray-700">
-        <li>Convenient doctor consultations without long waiting hours.</li>
-        <li>Timely diagnosis and treatment for various health conditions.</li>
-        <li>Medical care tailored to your needs.</li>
-      </ul>
+      {/* What Does an ENT Surgeon Do? */}
+      <div className="mt-12 flex flex-col lg:flex-row items-center lg:items-start gap-6">
+        <div className="lg:w-1/2">
+          <h2 className="text-2xl font-semibold text-gray-800">
+            What Does an ENT Surgeon Do?
+          </h2>
+          <p className="text-gray-700 mt-4">
+            An ENT Surgeon, also known as an Otolaryngologist, specializes in diagnosing and surgically 
+            managing diseases of the ear, nose, throat, head, and neck. Our surgeons handle a variety of 
+            cases, from functional issues like hearing loss or breathing difficulties to aesthetic concerns 
+            like nasal deformities.
+          </p>
+          <p className="text-gray-700 mt-4">
+          Our surgeons provide advanced care, from complex procedures on the delicate structures of the ear to minimally invasive surgeries of the sinuses, with precision and expertise. Personalized surgical treatments for better breathing, hearing and voice.
+        </p>
+        <p className="text-gray-700 mt-4">Our ENT Surgeons at Kaivee Healthcare can handle all surgical aspects from the common tonsillectomies to the complex anatomy of the inner ear.</p>
+        </div>
+        <div className="flex justify-center lg:w-1/2">
+          <Image
+            src="https://ik.imagekit.io/InFutiveTechnology/kaivee/otolaryngologist-concept-illustration_114360-25809.jpg?updatedAt=1743493667517"
+            alt="ENT Surgeon Consultation"
+            width={500}
+            height={300}
+            className="rounded-xl shadow-md w-[80%] max-w-[500px]"
+          />
+        </div>
+      </div>
+
+      {/* What We Treat | Our ENT Surgeons */}
+      <div className="mt-12 p-6 rounded-xl shadow-md bg-[#D419580D]">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          What We Treat | Our ENT Surgeons
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {[
+            {
+              title: "🔸 Chronic Sinusitis",
+              desc: "When medications fail, sinus surgery may be required to relieve facial pain, congestion, and headaches.",
+            },
+            {
+              title: "🔸 Drug-Induced Ototoxicity and Ear Infections",
+              desc: "Surgery can restore hearing or prevent complications from conditions like otosclerosis or chronic ear infections.",
+            },
+            {
+              title: "🔸 Tonsils and Adenoids Advances",
+              desc: "In children, frequent infections may make tonsil and adenoid removal necessary to improve breathing and comfort.",
+            },
+            {
+              title: "🔸 Voice & Swallowing Disorders",
+              desc: "Surgical treatment to reconstruct vocal cords and address throat cancers or swallowing disorders.",
+            },
+            {
+              title: "🔸 Head and Neck Tumors",
+              desc: "Removal of non-cancerous or cancerous growths in the throat, neck, or salivary glands, with possible reconstructive surgery.",
+            },
+          ].map((item, index) => (
+            <div key={index} className="bg-white p-4 rounded-lg shadow">
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ENT Surgery Procedures */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          ENT (Otolaryngology) Surgeries at Kaivee Healthcare
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {[
+            {
+              title: "▶ Functional Endoscopic Sinus Surgery (FESS)",
+              desc: "A minimally invasive procedure to treat blocked sinuses and restore normal sinus drainage.",
+            },
+            {
+              title: "▶ Ear Surgery (Tympanoplasty, Mastoidectomy)",
+              desc: "Reconstructive surgery to repair perforated eardrums or treat chronic ear infections.",
+            },
+            {
+              title: "▶ Tonsillectomy and Adenoidectomy",
+              desc: "Surgical removal of tonsils and adenoids, typically for children with chronic infections or breathing problems.",
+            },
+          ].map((item, index) => (
+            <div key={index} className="bg-white p-4 rounded-lg shadow">
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Why Choose Kaivee Healthcare’s ENT Surgeons */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+          Why Choose Kaivee Healthcare’s ENT Surgeons?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          {[
+            {
+              title: "🟢 Anatomical Surgical Precision",
+              desc: "Our ENT surgeons possess a wealth of experience working with the sensitive structures of the head and neck.",
+            },
+            {
+              title: "🟢 Faster Recovery with Minimally Invasive Techniques",
+              desc: "We prioritize less invasive surgical methods to minimize pain, scarring, and recovery time.",
+            },
+            {
+              title: "🟢 Comprehensive Care with Head and Neck Specialists",
+              desc: "We collaborate with audiologists, speech therapists, and allergy specialists for complete patient care.",
+            },
+            {
+              title: "🟢 Individualized Care Plans",
+              desc: "Every procedure is thoroughly discussed with the patient and their family, including risks and recovery plans.",
+            },
+          ].map((item, index) => (
+            <div key={index} className="bg-white p-4 rounded-lg shadow">
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+ 
+       {/* How to Prepare for Your Appointment */}
+       <div className="mt-12 flex flex-col lg:flex-row items-start gap-8">
+        <div className="lg:w-1/2">
+          <h2 className="mt-4 text-2xl font-semibold text-gray-800 text-center lg:text-left">
+            How to Prepare for Your Appointment
+          </h2>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6">
+            {[
+              {
+                title: "➡️ Diagnostic Evaluation",
+                desc: "Comprehensive analysis of imaging tests, lab reports, and medical history.",
+              },
+              {
+                title: "➡️ Exploring Surgical Options",
+                desc: "A transparent overview of recommended procedures, risks, and recovery timelines.",
+              },
+              {
+                title: "➡️ Pre-Operative Preparations",
+                desc: "Health screenings, lifestyle guidance, and medication adjustments before surgery.",
+              },
+            ].map((item, index) => (
+              <div key={index} className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
+                <h3 className="font-semibold">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <InquiryForm />
+        </div>
+      </div>
+  
+      
+
+      {/* Closing Statement */}
+      <div className="mt-12 text-center">
+        <h2 className="text-2xl font-bold text-gray-800">
+          Ear, Nose & Throat Surgery: Restoring Comfort and Function
+        </h2>
+        <p className="text-gray-700 mt-2 max-w-2xl mx-auto">
+          Kaivee Healthcare’s ENT Surgeons provide exceptional care to enhance hearing, breathing, and overall quality of life, from chronic sinusitis treatment to intricate reconstructive surgeries. We’re here to help you feel better.
+        </p>
+      </div>
     </div>
-    <div className="flex justify-center">
-  <Image 
-    src="https://ik.imagekit.io/InFutiveTechnology/kaivee/medium-shot-middle-aged-doctor-explaining-diagnosis-via-tablet-pc_1098-19316.jpg?updatedAt=1742885226340"
-    alt="Doctor Consultation"
-    width={500} 
-    height={300} 
-    className="rounded-xl shadow-md w-[80%] max-w-[500px]"
-  />
-</div>
-  </div>
-
-  {/* OPD Services Benefits Section */}
-  <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
-    <h2 className="text-2xl font-semibold text-gray-800 text-center">
-      What We Offer in OPD Services
-    </h2>
-    <p className="text-gray-700 text-center mt-4">
-      Our OPD services provide accessible, high-quality medical care through professional consultations and diagnostic support.
-    </p>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">General Physician Consultation</h3>
-        <p className="text-gray-600">For common illnesses, infections, and routine check-ups.</p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Specialist Consultations</h3>
-        <p className="text-gray-600">Access to experts in cardiology, orthopedics, neurology, and more.</p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Diagnostics & Lab Tests</h3>
-        <p className="text-gray-600">Convenient blood tests, X-rays, and health screenings.</p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Chronic Disease Management</h3>
-        <p className="text-gray-600">Expert guidance for diabetes, hypertension, and other chronic conditions.</p>
-      </div>
-    </div>
-  </div>
-
-  {/* How It Works Section */}
-  <div className="mt-12">
-    <h2 className="text-2xl font-semibold text-gray-800 text-center">
-      How Our OPD Service Works
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
-      <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
-        <h3 className="font-semibold text-lg">Step 1: Appointment Booking</h3>
-        <p className="text-gray-600">Schedule a consultation with a doctor of your choice.</p>
-      </div>
-      <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
-        <h3 className="font-semibold text-lg">Step 2: Consultation</h3>
-        <p className="text-gray-600">Get expert advice from qualified doctors via in-person visits or online.</p>
-      </div>
-      <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
-        <h3 className="font-semibold text-lg">Step 3: Diagnostic Support</h3>
-        <p className="text-gray-600">Receive lab tests or imaging as recommended by the doctor.</p>
-      </div>
-      <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
-        <h3 className="font-semibold text-lg">Step 4: Follow-up Care</h3>
-        <p className="text-gray-600">Continuous monitoring and future consultations as needed.</p>
-      </div>
-    </div>
-  </div>
-
-  {/* When Should You Use OPD Services? */}
-  <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
-    <h2 className="text-2xl font-semibold text-gray-800 text-center">
-      When Should You Visit an OPD?
-    </h2>
-    <ul className="list-disc pl-5 space-y-2 text-gray-700 mt-4">
-      <li>For routine health check-ups and preventive care.</li>
-      <li>When experiencing symptoms like fever, cough, or stomach pain.</li>
-      <li>For chronic disease management and prescription refills.</li>
-      <li>To consult a specialist for a specific health concern.</li>
-      <li>For post-operative follow-ups and ongoing medical guidance.</li>
-    </ul>
-  </div>
-
-  {/* CTA Section */}
-  <div className="mt-12 text-center">
-    <h2 className="text-2xl font-semibold text-gray-800">
-      Get Quality Medical Advice Anytime, Anywhere
-    </h2>
-    <p className="text-gray-700 mt-4">
-      Whether it’s a minor illness, a routine health check-up, or a chronic condition, our OPD services ensure expert guidance at your convenience. Book an appointment today with Kaivee Healthcare.
-    </p>
-  </div>
-</div>
 
       <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />

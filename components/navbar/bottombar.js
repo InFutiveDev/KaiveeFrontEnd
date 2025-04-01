@@ -694,22 +694,22 @@ const Bottombar = () => {
 
                           {/* Submenu */}
                           <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
-                            <Link href="/doctor-opd/cardiologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/super-specialties/cardiologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Cardiologist
                             </Link>
-                            <Link href="/doctor-opd/neurologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/super-specialties/neurologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Neurologist
                             </Link>
-                            <Link href="/doctor-opd/nephrologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/super-specialties/nephrologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Nephrologist
                             </Link>
-                            <Link href="/doctor-opd/endocrinologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/super-specialties/endocrinologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Endocrinologist
                             </Link>
-                            <Link href="/doctor-opd/hepatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/super-specialties/hepatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Hepatologist
                             </Link>
-                            <Link href="/doctor-opd/rheumatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/super-specialties/rheumatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Rheumatologist
                             </Link>
                           </div>
@@ -729,19 +729,19 @@ const Bottombar = () => {
 
                             {/* Submenu */}
                             <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
-                              <Link href="/doctor-opd/dermatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/other-medical-specialties/dermatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Dermatologist
                               </Link>
-                              <Link href="/doctor-opd/psychiatrist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/other-medical-specialties/psychiatrist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Psychiatrist
                               </Link>
-                              <Link href="/doctor-opd/pulmonologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/other-medical-specialties/pulmonologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Pulmonologist
                               </Link>
-                              <Link href="/doctor-opd/gastroenterologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/other-medical-specialties/gastroenterologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Gastroenterologist
                               </Link>
-                              <Link href="/doctor-opd/hematologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/other-medical-specialties/hematologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Hematologist
                               </Link>
                             </div>
