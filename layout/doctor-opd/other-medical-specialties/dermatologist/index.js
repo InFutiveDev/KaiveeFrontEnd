@@ -70,7 +70,7 @@ const DoctorOPDLayout = () => {
             alt="Dermatology Consultation"
             width={500}
             height={250}
-            className="rounded-xl shadow-md w-[80%] max-w-[500px]"
+            className="rounded-xl shadow-lg transition-transform duration-500 hover:scale-105"
           />
         </div>
       </div>

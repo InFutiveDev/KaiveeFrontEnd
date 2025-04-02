@@ -63,7 +63,7 @@ const DoctorOPDLayout = () => {
             alt="Psychiatrist Consultation"
             width={500}
             height={250}
-            className="rounded-xl shadow-md w-[80%] max-w-[500px]"
+            className="rounded-xl shadow-lg transition-transform duration-500 hover:scale-105"
           />
         </div>
       </div>
@@ -167,18 +167,18 @@ const DoctorOPDLayout = () => {
   <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />
       </div>
-      
-</div>
-
-
-  
-
-        <div className=" container pb-[30px]">
+      <div className=" container ">
           <p className="font-semibold text-center">
            Kaivee Healthcare is clearly your best partner at Health & Checkups.
 
           </p>
         </div>
+</div>
+
+
+  
+
+       
      
     </>
   );

@@ -761,13 +761,13 @@ const Bottombar = () => {
 
                           {/* Submenu */}
                           <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ">
-                            <Link href="/doctor-opd/gynecologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/women-child-care/gynecologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Gynecologist
                             </Link>
-                            <Link href="/doctor-opd/obstetrician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/women-child-care/obstetrician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Obstetrician
                             </Link>
-                            <Link href="/doctor-opd/neonatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <Link href="/doctor-opd/women-child-care/neonatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                               Neonatologist
                             </Link>
                           </div>
@@ -787,13 +787,13 @@ const Bottombar = () => {
 
                             {/* Submenu */}
                             <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
-                              <Link href="/doctor-opd/opthalmologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/eye-dental-care/ophthalmologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Ophthalmologist
                               </Link>
-                              <Link href="/doctor-opd/dentist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/eye-dental-care/dentist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Dentist
                               </Link>
-                              <Link href="/doctor-opd/oral-maxillofacial-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                              <Link href="/doctor-opd/eye-dental-care/oral-maxillofacial-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Oral &amp; Maxillofacial Surgeon
                               </Link>
                             </div>

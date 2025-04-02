@@ -22,6 +22,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -35,134 +37,149 @@ const DoctorOPDLayout = () => {
         
       </section>
 
-      {/* <AboutUs /> */}
-      <div className="container mx-auto px-4 py-12">
-  {/* Hero Section */}
-  <div className="text-center max-w-3xl mx-auto">
-    <h2 className="text-3xl font-bold text-[#8DBD4D]">Other Medical Specialties at Kaivee Healthcare</h2>
-    <p className="text-gray-800 font-semibold mt-3 text-1xl">
-      A Multidisciplinary Team for Specialized Conditions Beyond the Conventional Scope
-    </p>
-  </div>
-
-  {/* Introduction */}
-  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
-    <div className="lg:w-1/2">
-      <p className="text-gray-700 leading-relaxed">
-      Not all health issues fit into general medicine or surgery. Some need targeted support in areas such as skin health, mental clarity, lung function, or digestive balance. The Other Medical Specialties department at Kaivee Healthcare consists of highly qualified consultants in a range of specialties, offering integrated and focused care for disease and conditions that require a specialist input, long-term management, and individualized treatment.      </p>
-      <p className="text-gray-700 mt-4">
-        Our team of specialists provides expert care, advanced diagnostics, and tailored treatment plans to ensure seamless healthcare without navigating multiple clinics.
-      </p>
-    </div>
-    <div className="lg:w-1/2 flex justify-center">
-      <Image
-        src="https://ik.imagekit.io/InFutiveTechnology/kaivee/psychologist-concept-illustration_114360-2141.jpg?updatedAt=1743164325864"
-        alt="Other Medical Specialties"
-        width={500}
-        height={300}
-        className="rounded-xl shadow-lg transition-transform duration-500 hover:scale-105"
-      />
-    </div>
-  </div>
-
-  {/* Commonly Treated Conditions */}
-  <div className="mt-12 p-6 bg-gray-100 rounded-xl shadow-md border border-gray-300">
-    <h3 className="text-2xl font-semibold text-gray-800 text-center">Commonly Treated Conditions</h3>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-      {[
-        { title: "Skin, Hair & Nail Disorders", desc: "Expert care for acne, eczema, fungal infections, pigmentation issues, dandruff, and cosmetic dermatology." },
-        { title: "Respiratory Disorders", desc: "Comprehensive treatment for asthma, COPD, bronchitis, allergic rhinitis, and other lung-related conditions." },
-        { title: "Mental & Behavioral Health", desc: "Psychiatric and psychological support for anxiety, depression, sleep disorders, mood imbalances, and stress management." },
-        { title: "Digestive Tract Imbalances", desc: "Diagnosis and treatment for indigestion, food intolerance, acid reflux, chronic constipation, and IBS." },
-        { title: "Blood-Related Conditions", desc: "Medical management for anemia, clotting disorders, platelet abnormalities, and hematologic conditions." }
-      ].map((condition, index) => (
-        <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all">
-          <h4 className="font-semibold text-lg">{condition.title}</h4>
-          <p className="text-gray-600 mt-2">{condition.desc}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  {/* Expert Specialists */}
-  <div className="mt-12">
-    <h3 className="text-2xl font-semibold text-gray-800 text-center">Meet Our Specialists</h3>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-      {[
-        { title: "🩺 Dermatologists", desc: "Medical and cosmetic skin care experts for chronic and aesthetic skin conditions." },
-        { title: "🧠 Psychiatrists", desc: "Mental health specialists offering diagnosis, therapy, and medication management." },
-        { title: "💨 Pulmonologists", desc: "Experts in treating lung and airway diseases, ensuring better respiratory health." },
-        { title: "🍽️ Gastroenterologists", desc: "Specialists focusing on digestion, absorption, and bowel health." },
-        { title: "🩸 Hematologists", desc: "Doctors dedicated to treating blood and bone marrow disorders with precision care." }
-      ].map((expert, index) => (
-        <div key={index} className="bg-gray-50 p-4 rounded-lg shadow-md hover:shadow-lg transition-all">
-          <h4 className="font-semibold text-lg">{expert.title}</h4>
-          <p className="text-gray-600 mt-2">{expert.desc}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-
-   {/* Image Section */}
-       <div className="flex flex-wrap justify-center gap-6 mt-12">
-        {[
-          { src: "https://ik.imagekit.io/InFutiveTechnology/kaivee/cosmetologist-applying-mask-face-client-beauty-salon_1303-16770.jpg?updatedAt=1743165374912", alt: "Surgical Procedure" },
-          { src: "https://ik.imagekit.io/InFutiveTechnology/kaivee/doctor-performing-medical-research-lab_23-2149335693.jpg?updatedAt=1743165307114", alt: "Surgical Team" }
-        ].map((image, index) => (
-          <Image
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            width={500}
-            height={300}
-            className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105"
-          />
-        ))}
+      <div className="container mx-auto px-4 lg:px-16 py-12">
+      {/* Header Section */}
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-[#2D85C9]">
+          Consult a Haematologist at Kaivee Healthcare
+        </h1>
+        <p className="mt-4 font-semibold text-2xl text-gray-800">
+          Specialized Blood Disorder Management with Precision and Compassion
+        </p>
       </div>
 
-  
-
-  {/* Why Choose Kaivee Healthcare */}
-  <div className="mt-12 p-6 bg-[#8DBD4D0D]">
-    <h3 className="text-2xl font-semibold text-gray-800 text-center">Why Choose Kaivee Healthcare for Specialized Medical Attention?</h3>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-      {[
-        { title: "🏥 All Specialties Under One Roof", desc: "No need to visit multiple clinics—our coordinated care approach ensures seamless treatment." },
-        { title: "⚕️ Non-Surgical Methods", desc: "Most conditions treated here do not require surgery, focusing on long-term management and lifestyle interventions." },
-        { title: "🔒 Patient Privacy & Empathy", desc: "Mental health and dermatology cases are handled with discretion, respect, and support." },
-        { title: "📚 Therapeutic & Lifestyle Support", desc: "Beyond medical treatment, we provide stress management, skincare guidance, and preventive measures." }
-      ].map((reason, index) => (
-        <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all">
-          <h4 className="font-semibold text-lg">{reason.title}</h4>
-          <p className="text-gray-600 mt-2">{reason.desc}</p>
+      {/* Introduction Section */}
+      <div className="mt-8 flex flex-col lg:flex-row gap-8">
+        <div className="lg:w-3/5">
+          <p className="text-gray-700">
+            Blood is essential to all bodily functions—carrying oxygen, fighting infections, and healing wounds. When issues arise, expert care is crucial. At Kaivee Healthcare, our Haematologists diagnose and treat a wide range of blood disorders, including anaemia, clotting disorders, leukaemia, and bone marrow diseases.
+          </p>
+          <p className="mt-4 text-gray-700">
+            Our goal is to provide personalized, cutting-edge treatments to help you achieve the best possible health outcomes.
+          </p>
+          <p className="mt-4 text-gray-700">
+          Our experienced Clinical Haematologists at Kaivee Healthcare specialize in clinical evaluation as well as laboratory analysis providing detailed care that relies on scientific precision and human touch.
+          </p>
         </div>
-      ))}
-    </div>
-  </div>
+        <div className="flex justify-center lg:w-1/2">
+          <Image
+            src="https://ik.imagekit.io/InFutiveTechnology/kaivee/blood-test-covid-19-concept-illustration_114360-2232.jpg?updatedAt=1743575795475"
+            alt="Haematology Consultation"
+            width={500}
+            height={250}
+            className="rounded-xl shadow-lg transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      </div>
 
-  {/* Conclusion */}
-  <div className="mt-12 text-center max-w-3xl mx-auto">
-    <h3 className="text-2xl font-semibold text-gray-800">Focused Care for Daily Problems and Long-Term Health</h3>
-    <p className="text-gray-700 mt-4">
-      You shouldn't have to suffer from discomfort, worry, or chronic health problems.  
-      If you're facing a condition that doesn't fit the traditional medical mold, let our trusted experts help you reclaim your health—one personalized consultation at a time.
-    </p>
-  </div>
+      {/* What Does a Haematologist Do? */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-gray-800">
+          What Does a Haematologist Do?
+        </h2>
+        <p className="mt-4 text-gray-700">
+          A Haematologist is a medical specialist focused on diagnosing and treating blood disorders. These range from benign conditions like anaemia to malignant disorders like leukaemia and lymphoma. 
+        </p>
+        <p className="mt-4 text-gray-700">
+          At Kaivee Healthcare, our experienced Haematologists provide both clinical evaluations and advanced laboratory diagnostics to ensure accurate and timely treatment.
+        </p>
+      </div>
+
+      {/* Conditions Treated */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-gray-800">
+          Conditions Treated by Our Haematology Team
+        </h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: "🔸 Anaemia (Iron & Vitamin B12 Deficiency)", desc: "Diagnosis and management of nutritional and hereditary anaemia." },
+            { title: "🔸 Bleeding & Clotting Disorders", desc: "Treatment of haemophilia, von Willebrand disease, and deep vein thrombosis (DVT)." },
+            { title: "🔸 Leukaemia & Lymphoma", desc: "Advanced cancer care, including chemotherapy and bone marrow transplants." },
+            { title: "🔸 Myeloma & Plasma Cell Disorders", desc: "Specialized treatment for multiple myeloma and plasma-related diseases." },
+            { title: "🔸 Sickle Cell Disease & Thalassemia", desc: "Chronic management of inherited blood disorders." },
+            { title: "🔸 Bone Marrow Failure Syndromes", desc: "Diagnosis and treatment of rare conditions affecting blood cell production." },
+          ].map((item, index) => (
+            <div key={index} className="p-4 border-l-4 border-[#2D85C9] bg-white shadow rounded-lg">
+              <h3 className="font-semibold">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Diagnostic & Therapeutic Services */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-gray-800">
+          Diagnostic & Therapeutic Services in Haematology
+        </h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          {[
+            { title: "▶ Complete Blood Count (CBC) & Peripheral Smear", desc: "Comprehensive analysis of red and white blood cells for overall health." },
+            { title: "▶ Bone Marrow Aspiration & Biopsy", desc: "Critical test for diagnosing blood cancers and bone marrow disorders." },
+            { title: "▶ Coagulation Profile & Clotting Factor Analysis", desc: "Assessing clotting disorders and risks before surgery." },
+            { title: "▶ Flow Cytometry & Immunophenotyping", desc: "Advanced blood cancer diagnostics for precise subtyping." },
+          ].map((item, index) => (
+            <div key={index} className="p-4 border-l-4 border-[#2D85C9] bg-white shadow rounded-lg">
+              <h3 className="font-semibold">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Why Choose Kaivee Healthcare? */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-gray-800">
+          Why Choose Kaivee Healthcare’s Haematology Services?
+        </h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          {[
+            { title: "🟢 Specialized Expertise", desc: "From common anaemias to rare blood cancers, our specialists provide precise and effective treatments." },
+            { title: "🟢 Comprehensive Blood Disorder Management", desc: "We work with oncologists and transplant teams for integrated treatment of complex conditions." },
+            { title: "🟢 On-Site Advanced Lab Support", desc: "Our state-of-the-art lab provides rapid and accurate test results." },
+            { title: "🟢 Long-Term Monitoring & Patient Education", desc: "We help patients manage chronic conditions and recognize early warning signs." },
+          ].map((item, index) => (
+            <div key={index} className="p-4 border-l-4 border-[#2D85C9] bg-white shadow rounded-lg">
+              <h3 className="font-semibold">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Healing & Support */}
+      <div className="mt-12 flex flex-col lg:flex-row gap-8">
+      <div className="lg:w-1/2">
+        <h2 className="text-2xl font-semibold text-gray-800">
+          A Process of Healing and Rebuilding
+        </h2>
+        <p className="mt-4 text-gray-700">
+          Living with a blood disorder can be challenging, but early diagnosis, expert treatment, and continuous follow-up can significantly improve quality of life. At Kaivee Healthcare, we provide compassionate, evidence-based care tailored to each patient's needs.
+        </p>
+        <p className="mt-4 text-gray-700">
+          Whether you're managing a chronic condition or adjusting to a new diagnosis, our Haematology team is here to support you every step of the way.
+        </p>
+      </div>
+
+      <div className="lg:w-1/2 flex justify-center">
+          <InquiryForm />
+        </div>
+    </div>
   <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />
       </div>
-      
-</div>
-
-
-  
-
-        <div className=" container pb-[30px]">
+      <div className=" container ">
           <p className="font-semibold text-center">
            Kaivee Healthcare is clearly your best partner at Health & Checkups.
 
           </p>
         </div>
+</div>
+
+
+  
+
+      
      
     </>
   );

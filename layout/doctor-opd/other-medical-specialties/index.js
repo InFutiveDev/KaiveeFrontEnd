@@ -39,7 +39,7 @@ const DoctorOPDLayout = () => {
       <div className="container mx-auto px-4 py-12">
   {/* Hero Section */}
   <div className="text-center max-w-3xl mx-auto">
-    <h2 className="text-3xl font-bold text-[#8DBD4D]">Other Medical Specialties at Kaivee Healthcare</h2>
+    <h2 className="text-3xl font-bold text-[#2D85C9]">Other Medical Specialties at Kaivee Healthcare</h2>
     <p className="text-gray-800 font-semibold mt-3 text-1xl">
       A Multidisciplinary Team for Specialized Conditions Beyond the Conventional Scope
     </p>
