@@ -615,14 +615,5 @@ const locationData = [
     email: "care@zenhealthsolutions.com",
     iframe:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1278876753586!2d77.3960429!3d28.5659222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef823d515f91%3A0xd4d4ace124409340!2sZen%20Health%20Services!5e0!3m2!1sen!2sin!4v1737958352844!5m2!1sen!2sin",
-  },
-  {
-    mainTilte: "Kaivee Healthcare Greater Noida",
-    address: "Greater Noida, J-185, Delta-2, UP-201308",
-    serviceAvailable: "Neurology, Dental Imaging, Pathology Test, etc",
-    contactNumber: "+91-9289088633",
-    timing: "24 hours open",
-    email: "care@zenhealthsolutions.com",
-    iframe:
-"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7013.232193116872!2d77.51457435869143!3d28.491106000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cebaa69611629%3A0x6ab2ebc90ea3c8a8!2sZen%20Health!5e0!3m2!1sen!2sin!4v1739945596772!5m2!1sen!2sin"   },
+  }
 ];
