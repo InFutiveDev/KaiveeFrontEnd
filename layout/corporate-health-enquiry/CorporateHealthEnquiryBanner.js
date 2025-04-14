@@ -47,7 +47,7 @@ const CorporateHealthEnquiryBanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center"
-          src={BannerImage}
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/Coporate%20(1).jpg?updatedAt=1744635506115"
         />
       </div>
       <div className="relative w-full  items-center flex  sm:hidden">
@@ -58,7 +58,7 @@ const CorporateHealthEnquiryBanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src={MobileImage}
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/Coporate%20(1).jpg?updatedAt=1744635506115"
         />
       </div>
     </div>

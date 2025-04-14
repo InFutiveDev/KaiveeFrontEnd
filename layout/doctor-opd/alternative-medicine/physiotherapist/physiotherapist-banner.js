@@ -33,7 +33,7 @@ const LeftArrow = (props) => {
 };
 
 const breadcrumblist = [{ name: "Home", path: "/" }];
-const PartnerBanner = () => {
+const Alternativebanner = () => {
   let settings = {
     dots: false,
     infinite: true,
@@ -49,7 +49,7 @@ const PartnerBanner = () => {
   return (
     <div className="w-full">
       <div className="2xl:pl-[10rem] xl:pl-[4rem] lg:pl-[1rem] pl-[16px]">
-        <BreadCrumb active="Partner With Us" breadcrumblist={breadcrumblist} />
+        <BreadCrumb active="Physiotherapist" breadcrumblist={breadcrumblist} />
       </div>
       <div className="relative w-full  items-center hidden sm:flex">
         <Image
@@ -59,7 +59,7 @@ const PartnerBanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center"
-          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/partner%20(1).jpg?updatedAt=1744635189820"
+          src={BannerImage}
         />
       </div>
       <div className="relative w-full  items-center flex  sm:hidden">
@@ -70,7 +70,7 @@ const PartnerBanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/partner%20(1).jpg?updatedAt=1744635189820"
+          src={BannerImage}
         />
       </div>
     </div>
@@ -78,4 +78,4 @@ const PartnerBanner = () => {
 };
 
 
-export default PartnerBanner;
+export default Alternativebanner;

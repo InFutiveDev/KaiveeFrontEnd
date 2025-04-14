@@ -49,7 +49,7 @@ const Alternativebanner = () => {
   return (
     <div className="w-full">
       <div className="2xl:pl-[10rem] xl:pl-[4rem] lg:pl-[1rem] pl-[16px]">
-        <BreadCrumb active="Eye & Dental Care" breadcrumblist={breadcrumblist} />
+        <BreadCrumb active="Dentist" breadcrumblist={breadcrumblist} />
       </div>
       <div className="relative w-full  items-center hidden sm:flex">
         <Image

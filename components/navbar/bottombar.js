@@ -66,6 +66,8 @@ const Bottombar = () => {
     };
   }, []);
 
+  
+  
   const isBaseURL = [
     "/about",
     "/about/our-team",
@@ -91,7 +93,9 @@ const Bottombar = () => {
     "/doctor-opd/alternative-medicine"
 
   ].includes(router.asPath);
-
+  const DoctorsOpdDropdown = ({ isXS, doctorOpdOpen, toggleDoctorOpd, closeMenu }) => {
+    const [selected, setSelected] = useState(null);
+  }  
   return (
     <div className="nav-bg">
       <div

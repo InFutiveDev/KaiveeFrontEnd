@@ -22,6 +22,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -35,178 +37,135 @@ const DoctorOPDLayout = () => {
         
       </section>
 
-     {/* <AboutUs /> */}
-<div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 lg:px-16 py-12">
   {/* Header Section */}
-  <h1 className="text-3xl font-bold text-center mb-4 text-[#8DBD4D]">
-    Eye and Dental Care at Kaivee Healthcare
-  </h1>
-  <p className="text-center font-semibold text-gray-800 text-2xl">
-    Two Vital Senses. One Trusted Destination for Vision and Oral Wellness.
-  </p>
+  <div className="text-center">
+    <h1 className="text-3xl font-bold text-[#346D14]">
+      Oral and Maxillofacial Surgery at Kaivee Healthcare
+    </h1>
+    <p className="mt-4 font-semibold text-2xl text-gray-800">
+      Expert Surgical Solutions for Complex Dental and Facial Conditions
+    </p>
+  </div>
 
   {/* Introduction Section */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-    <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-gray-800">
-        Why Choose Our Eye & Dental Care?
-      </h2>
+  <div className="mt-8 flex flex-col lg:flex-row gap-8">
+    <div className="lg:w-3/5">
       <p className="text-gray-700">
-        Your eyes and oral health play a crucial role in your overall well-being. At Kaivee Healthcare, we offer a holistic approach to vision and dental care, combining expert knowledge, advanced technology, and compassionate service to ensure a lifetime of healthy eyesight and confident smiles.
+        Some teeth problems are beyond repair, and no amount of filling or cleaning can save them. Some converge surgical precision, deep anatomical knowledge, and specialized care. That’s when our Oral & Maxillofacial Surgeons come in. At Kaivee Healthcare, we provide complex operative treatments of the mouth, jaw, face, and neck, including removal of impacted teeth and all types of reconstructive surgery.
       </p>
-      <p className="text-gray-700">
-        Our team of experienced optometrists and dentists are dedicated to providing personalized care tailored to your unique needs. We utilize the latest diagnostic tools and treatment options to ensure you receive the best possible care.
+      <p className="mt-4 text-gray-700">
+        Equipped with cutting-edge surgical suites, 3D imaging, and a team trained in both dentistry and facial surgery, we offer safe, effective care customized for each patient’s specific needs.
       </p>
-      <ul className="list-disc pl-5 space-y-2 text-gray-700">
-        <li>State-of-the-art diagnostic tools for accurate assessments.</li>
-        <li>Preventive care to detect problems before they worsen.</li>
-        <li>Customized treatment plans for all age groups.</li>
-      </ul>
     </div>
-    <div className="flex justify-center">
-      <Image
-        src="https://ik.imagekit.io/InFutiveTechnology/kaivee/ChatGPT%20Image%20Mar%2031,%202025,%2003_14_48%20PM.webp?updatedAt=1743414369788"
-        alt="Eye and Dental Care"
-        width={500}
-        height={300}
-        className="rounded-xl shadow-md w-[80%] max-w-[500px]"
+    <div className="flex justify-center lg:w-1/2">
+      <img
+        src="https://ik.imagekit.io/InFutiveTechnology/kaivee/dentist-assistant-surgery-dental-clinic_140725-7688.jpg?updatedAt=1744617185755"
+        alt="Oral Surgery"
+        className="rounded-xl shadow-lg w-[80%] max-w-[500px] transform transition duration-500 hover:scale-105 hover:shadow-xl"
       />
     </div>
   </div>
 
-  {/* Eye Care Services */}
-  <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
-    <h2 className="text-2xl font-semibold text-gray-800 text-center">
-      Our Eye Care Services
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Vision Testing & Correction</h3>
-        <p className="text-gray-600">
-          Routine eye exams, prescriptions for glasses and contact lenses, and digital vision tests for refractive errors.
-        </p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Eye Disease Management</h3>
-        <p className="text-gray-600">
-          Diagnosis and treatment for glaucoma, cataracts, diabetic eye disease, and macular degeneration.
-        </p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Pediatric Eye Evaluation</h3>
-        <p className="text-gray-600">
-          Early detection and management of conditions like lazy eye (amblyopia) and squint (strabismus) in children.
-        </p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Emergency Eye Consults</h3>
-        <p className="text-gray-600">
-          Immediate care for eye injuries, infections, or sudden vision loss.
-        </p>
-      </div>
-    </div>
-  </div>
-  {/* Image Section */}
-  <div className="flex flex-wrap justify-center gap-6 mt-12">
-          {[
-            { src: "https://ik.imagekit.io/InFutiveTechnology/kaivee/eye-test-concept-illustration_114360-23098.webp?updatedAt=1743414635032", alt: "eye testing" },
-            { src: "https://ik.imagekit.io/InFutiveTechnology/kaivee/ophthalmologist-vision-correction-clinic-flat-icons-set-with-eye-symbol-abstract-isolated-vector-il_1284-12230.jpg?updatedAt=1743414918514", alt: "eye testing procedure" }
-          ].map((image, index) => (
-            <Image
-              key={index}
-              src={image.src}
-              alt={image.alt}
-              width={500}
-              height={300}
-              className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105"
-            />
-          ))}
-        </div>
-
-  {/* Dental Care Services */}
-  <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
-    <h2 className="text-2xl font-semibold text-gray-800 text-center">
-      Our Dental Care Services
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Routine Cleaning & Exams</h3>
-        <p className="text-gray-600">
-          Preventive care including scaling, polishing, and oral hygiene education for all ages.
-        </p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Fillings & Restorations</h3>
-        <p className="text-gray-600">
-          Natural-looking fillings and crowns to restore damaged teeth.
-        </p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Gum Health & Periodontal Care</h3>
-        <p className="text-gray-600">
-          Treatment for gingivitis, bleeding gums, and deep cleaning procedures.
-        </p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold text-lg">Cosmetic & Restorative Dentistry</h3>
-        <p className="text-gray-600">
-          Teeth whitening, smile design, and prosthetic treatments including bridges, dentures, and implants.
-        </p>
-      </div>
-    </div>
-  </div>
-  {/* Image Section */}
-  <div className="flex flex-wrap justify-center gap-6 mt-12">
-          {[
-            { src: "https://ik.imagekit.io/InFutiveTechnology/kaivee/flat-dental-care-concept-illustration_23-2149002069.jpg?updatedAt=1743415657952", alt: "dental_img" },
-            { src: "https://ik.imagekit.io/InFutiveTechnology/kaivee/happy-children-holding-toothpaste-toothbrush-floss-white_1308-108896.jpg?updatedAt=1743416040127", alt: "child teeth" }
-          ].map((image, index) => (
-            <Image
-              key={index}
-              src={image.src}
-              alt={image.alt}
-              width={500}
-              height={300}
-              className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105"
-            />
-          ))}
-        </div>
-
-  {/* How It Works Section */}
+  {/* Surgeon Definition */}
   <div className="mt-12">
-    <h2 className="text-2xl font-semibold text-gray-800 text-center">
-      How Our Eye & Dental Care Services Work
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
-      <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
-        <h3 className="font-semibold text-lg">Step 1: Consultation</h3>
-        <p className="text-gray-600">Book an appointment with our specialists for an initial evaluation.</p>
-      </div>
-      <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
-        <h3 className="font-semibold text-lg">Step 2: Diagnosis</h3>
-        <p className="text-gray-600">Undergo comprehensive screenings and tests for accurate assessment.</p>
-      </div>
-      <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
-        <h3 className="font-semibold text-lg">Step 3: Treatment Plan</h3>
-        <p className="text-gray-600">Receive a personalized treatment plan tailored to your needs.</p>
-      </div>
-      <div className="p-4 border-l-4 border-[#8DBD4D] bg-white shadow rounded-lg">
-        <h3 className="font-semibold text-lg">Step 4: Follow-up Care</h3>
-        <p className="text-gray-600">Regular check-ups to monitor progress and ensure lasting results.</p>
-      </div>
-    </div>
-  </div>
-
-  {/* CTA Section */}
-  <div className="mt-12 text-center">
     <h2 className="text-2xl font-semibold text-gray-800">
-      Experience the Best in Eye & Dental Care
+      What Is an Oral & Maxillofacial Surgeon?
     </h2>
-    <p className="text-gray-700 mt-4">
-      Whether it's a routine check-up, corrective treatment, or emergency care, our specialists are here to help. Book an appointment today at Kaivee Healthcare.
+    <p className="mt-4 text-gray-700">
+      An Oral & Maxillofacial Surgeon is a dental specialist who has undergone medical level education and training to perform complicated surgical procedures on the oral cavity and surrounding structures. A bridge between dentistry and surgery, these specialists perform anything from trauma repairs to facial realignment operations. They often collaborate with dentists, orthodontists, ENT specialists, and plastic surgeons.
+    </p>
+    <p className="mt-4 text-gray-700">
+      Your health is on a continuum, and sometimes you need preventive surgery to remain healthy.
     </p>
   </div>
+
+  {/* Conditions Treated */}
+  <div className="mt-12">
+    <h2 className="text-2xl font-semibold text-gray-800">
+      Conditions for Which We Offer Surgical Treatments
+    </h2>
+    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        { title: "🔸 Impacted Wisdom Teeth", desc: "Extraction of third molars impacted under gum or bone, causing pain or crowding." },
+        { title: "🔸 Jaw Misalignment & TMJ Dysfunction", desc: "Surgical correction for structural issues affecting chewing, speaking, or chronic TMJ pain." },
+        { title: "🔸 Facial & Dental Trauma", desc: "Repairs for fractured jaws, bones, and soft tissue injuries caused by trauma or accidents." },
+        { title: "🔸 Oral Pathologies", desc: "Biopsies and removals of cysts, tumors, or suspicious lesions in the mouth or jaw." },
+        { title: "🔸 Bone Grafting for Prosthesis", desc: "Bone grafting for rebuilding jaw structure before dental implants or dentures." },
+        { title: "🔸 Maxillofacial Infections", desc: "Treatment and drainage of infections extending into facial structures." },
+      ].map((item, index) => (
+        <div key={index} className="p-4 border-l-4 border-[#346D14] bg-white shadow rounded-lg">
+          <h3 className="font-semibold">{item.title}</h3>
+          <p className="text-gray-600">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Surgical Services */}
+  <div className="mt-12">
+    <h2 className="text-2xl font-semibold text-gray-800">
+      Surgery Services Provided Safely and Skillfully
+    </h2>
+    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      {[
+        { title: "▶ Surgical Tooth Extractions", desc: "Removal of compromised, carious, or impacted teeth with minimal discomfort." },
+        { title: "▶ Orthognathic (Jaw) Surgery", desc: "Jaw repositioning to improve bite and facial symmetry, often combined with orthodontic care." },
+        { title: "▶ Dental Implant Placement", desc: "Surgical insertion of implants for missing teeth, with or without bone grafting." },
+        { title: "▶ Biopsy with Oxidizing Agents", desc: "Tissue examination for early cancer detection or pathology diagnosis." },
+        { title: "▶ Facial Reconstruction After Trauma", desc: "Reconstruction of facial structures post-trauma, ensuring function and aesthetics." },
+      ].map((item, index) => (
+        <div key={index} className="p-4 border-l-4 border-[#346D14] bg-white shadow rounded-lg">
+          <h3 className="font-semibold">{item.title}</h3>
+          <p className="text-gray-600">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Why Kaivee */}
+  <div className="mt-12">
+    <h2 className="text-2xl font-semibold text-gray-800">
+      Why Kaivee Healthcare for Surgical Dental Care?
+    </h2>
+    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      {[
+        { title: "🟢 Dual Expertise in Medicine & Dentistry", desc: "Our surgeons are trained in both fields, ensuring comprehensive treatment from diagnosis to recovery." },
+        { title: "🟢 Advanced Imaging & Operating Suite", desc: "We use 3D CBCT and real-time surgical navigation for enhanced safety and precision." },
+        { title: "🟢 Pain & Anxiety Control Options", desc: "From local anesthesia to general sedation, tailored to the procedure and your comfort." },
+        { title: "🟢 Multi-Specialist Collaboration", desc: "Our team works with ENT, orthodontic, and prosthodontic specialists for complex cases." },
+        { title: "🟢 Detailed Aftercare & 24/7 Support", desc: "Aggressive follow-up care, wound instructions, and round-the-clock help for recovery questions." },
+      ].map((item, index) => (
+        <div key={index} className="p-4 border-l-4 border-[#346D14] bg-white shadow rounded-lg">
+          <h3 className="font-semibold">{item.title}</h3>
+          <p className="text-gray-600">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Final Call to Action */}
+  <div className="mt-12 flex flex-col lg:flex-row gap-8">
+    <div className="lg:w-2/3">
+      <h2 className="text-2xl font-semibold text-gray-800">
+        When Surgery Becomes the Best Option
+      </h2>
+      <p className="mt-4 text-gray-700">
+        Some oral conditions go beyond discomfort — they can seriously affect your quality of life. If you experience persistent jaw pain, difficulty chewing, facial swelling, or have sustained facial trauma, oral & maxillofacial surgery might be the key to lasting relief and function.
+      </p>
+      <p className="mt-4 text-gray-700">
+        At Kaivee Healthcare, our surgical precision meets compassionate care to guide you through diagnosis, treatment, and recovery — transparently and safely.
+      </p>
+    </div>
+
+    {/* Inquiry Form */}
+    <div className="lg:w-1/3 flex justify-center">
+      <InquiryForm />
+    </div>
+  </div>
 </div>
+
+   
 
 
       <div className="bg-[#FAFAFA]">

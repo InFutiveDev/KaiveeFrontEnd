@@ -1,4 +1,5 @@
 import Alternativebanner from "./dentist-banner";
+
 // import AboutFireImage from "assets/images/about/fireworks 3.svg";
 // import AboutUs from "./aboutus";
 
@@ -22,6 +23,7 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+
 import dynamic from "next/dynamic";
 const InquiryForm = dynamic(() => import("components/inquiryForm"));
 const DoctorOPDLayout = () => {
@@ -40,7 +42,7 @@ const DoctorOPDLayout = () => {
      <div className="container mx-auto px-4 lg:px-16 py-12">
       {/* Header Section */}
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-[#346D14]">
+        <h1 className="text-3xl font-bold text-[#346D14] wave-animation">
           Comprehensive Dental Services at Kaivee Healthcare
         </h1>
         <p className="mt-4 font-semibold text-2xl text-gray-800">
@@ -76,31 +78,39 @@ const DoctorOPDLayout = () => {
 
       {/* Services We Offer */}
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold text-gray-800">
-          Our Dental Services
-        </h2>
-        <p className="mt-4 text-gray-700">
-          We provide a full range of dental treatments, from preventive care to advanced dental procedures.
-        </p>
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { title: "🦷 Preventive Dentistry", desc: "Routine check-ups, cleanings, fluoride treatments, and sealants." },
-            { title: "🦷 Cosmetic Dentistry", desc: "Teeth whitening, veneers, and smile makeovers." },
-            { title: "🦷 Orthodontics", desc: "Braces and Invisalign for teeth alignment." },
-            { title: "🦷 Restorative Dentistry", desc: "Dental fillings, crowns, and bridges." },
-            { title: "🦷 Root Canal Treatment", desc: "Pain-free root canal therapy." },
-            { title: "🦷 Gum Disease Treatment", desc: "Gingivitis and periodontitis management." },
-            { title: "🦷 Pediatric Dentistry", desc: "Gentle care for children’s dental needs." },
-            { title: "🦷 Dental Implants", desc: "Permanent solutions for missing teeth." },
-            { title: "🦷 Emergency Dental Care", desc: "Urgent treatment for dental trauma." },
-          ].map((item, index) => (
-            <div key={index} className="p-4 border-l-4 border-[#346D14] bg-white shadow rounded-lg">
-              <h3 className="font-semibold">{item.title}</h3>
-              <p className="text-gray-600">{item.desc}</p>
-            </div>
-          ))}
+  <h2 className="text-2xl font-semibold text-gray-800">Our Dental Services</h2>
+  <p className="mt-4 text-gray-700">
+    We provide a full range of dental treatments, from preventive care to advanced dental procedures.
+  </p>
+  <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {[
+      { title: "Preventive Dentistry", desc: "Routine check-ups, cleanings, fluoride treatments, and sealants." },
+      { title: "Cosmetic Dentistry", desc: "Teeth whitening, veneers, and smile makeovers." },
+      { title: "Orthodontics", desc: "Braces and Invisalign for teeth alignment." },
+      { title: "Restorative Dentistry", desc: "Dental fillings, crowns, and bridges." },
+      { title: "Root Canal Treatment", desc: "Pain-free root canal therapy." },
+      { title: "Gum Disease Treatment", desc: "Gingivitis and periodontitis management." },
+      { title: "Pediatric Dentistry", desc: "Gentle care for children’s dental needs." },
+      { title: "Dental Implants", desc: "Permanent solutions for missing teeth." },
+      { title: "Emergency Dental Care", desc: "Urgent treatment for dental trauma." },
+    ].map((item, index) => (
+      <div
+        key={index}
+        className="p-4 border-l-4 border-[#346D14] bg-white shadow rounded-lg flex items-center gap-3"
+      >
+        {/* Teeth Icon with Effects */}
+        <span className="text-2xl transition-transform transform hover:scale-125 animate-bounce">
+          🦷
+        </span>
+        <div>
+          <h3 className="font-semibold">{item.title}</h3>
+          <p className="text-gray-600">{item.desc}</p>
         </div>
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* Why Choose Us? */}
       <div className="mt-12">
