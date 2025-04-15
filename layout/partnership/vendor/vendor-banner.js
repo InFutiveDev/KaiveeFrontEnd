@@ -59,7 +59,7 @@ const VendorBanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center"
-          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/vendor%20(1).jpg?updatedAt=1744635326834"
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/vendor%20(2)%20(1).jpg?updatedAt=1744708430434"
         />
       </div>
       <div className="relative w-full  items-center flex  sm:hidden">
@@ -70,7 +70,7 @@ const VendorBanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/vendor%20(1).jpg?updatedAt=1744635326834"
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/vendor%20(2)%20(1).jpg?updatedAt=1744708430434"
         />
       </div>
     </div>

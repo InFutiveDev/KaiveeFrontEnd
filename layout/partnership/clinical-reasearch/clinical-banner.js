@@ -47,6 +47,9 @@ const ClinicalResearchBanner = () => {
   
   return (
     <div className="w-full">
+       <div className="2xl:pl-[10rem] xl:pl-[4rem] lg:pl-[1rem] pl-[16px]">
+              <BreadCrumb active="Clinical Research & Trials" breadcrumblist={breadcrumblist} />
+            </div>
       <div className="relative w-full items-center hidden sm:flex">
         <Image
           quality={100}
@@ -54,8 +57,7 @@ const ClinicalResearchBanner = () => {
           height={400}
           alt="about image"
           className="object-fill md:mb-0 mb-3 h-auto w-full object-center"
-          src={ClinicalBannerImage2}
-        />
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-04-15%20at%2015.20.15.jpg?updatedAt=1744710703315"/>
       </div>
       {/* Mobile image commented out for now */}
       <div className="relative w-full items-center flex sm:hidden">
@@ -65,7 +67,7 @@ const ClinicalResearchBanner = () => {
           height={400}
           alt="about image"
           className="object-fill md:mb-0 mb-3 h-auto w-full object-center"
-          src={ClinicalBannerImage2}
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-04-15%20at%2015.20.15.jpg?updatedAt=1744710703315"
         />
       </div>
     </div>
