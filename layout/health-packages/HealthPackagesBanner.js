@@ -48,7 +48,8 @@ const HealthPackagesBanner = () => {
       </div>
       <div className="relative w-full  items-center hidden sm:flex">
         <Image
-          quality={100}
+          priority
+          quality={80}
           width={2000}
           height={400}
           layout="fixed"
@@ -59,7 +60,8 @@ const HealthPackagesBanner = () => {
       </div>
       <div className="relative w-full  items-center flex  sm:hidden">
         <Image
-          quality={100}
+          priority
+          quality={80}
           width={1000}
           height={400}
           layout="fixed"

@@ -14,24 +14,26 @@ const FranchiseeBanner = () => {
       </div>
       <div className="relative w-full  items-center hidden sm:flex">
         <Image
-          quality={100}
+          priority
+          quality={80}
           width={2000}
           height={400}
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center"
-          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/franchise%20(1).jpg?updatedAt=1744708617380"
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/franchise%20(1).jpg?updatedAt=1744708617380?tr=f-auto,q-80"
         />
       </div>
       <div className="relative w-full  items-center flex  sm:hidden">
         <Image
-          quality={100}
+          priority
+          quality={80}
           width={1000}
           height={400}
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/franchise%20(1).jpg?updatedAt=1744708617380"
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/franchise%20(1).jpg?updatedAt=1744708617380?tr=f-auto,q-80"
         />
       </div>
     </div>

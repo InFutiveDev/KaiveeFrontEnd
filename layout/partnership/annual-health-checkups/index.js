@@ -1,4 +1,4 @@
-import Ecgbanner from "./annual-banner";
+import Annualbanner from "./annual-banner";
 // import AboutFireImage from "assets/images/about/fireworks 3.svg";
 // import AboutUs from "./aboutus";
 
@@ -29,18 +29,18 @@ import Image from "next/image";
 const AnnualLayout = () => {
   return (
     <>
-      {/* className="sliders banner_slider_wrap_facilities" */}
+      
       <section>
-        {/* className="web-view relative cstm-flexbox flexbox container" */}
+       
         <div>
-          <Ecgbanner />
+          <Annualbanner />
         </div>
        
       </section>
 
       
       <div className="container mx-auto px-6 py-12">
-      {/* Header Section */}
+     
       <div className="text-center">
         <h1 className="text-3xl font-bold text-[#8DBD4D] mb-4">
           Annual Health Check-up – Kaivee Healthcare

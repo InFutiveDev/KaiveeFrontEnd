@@ -60,8 +60,8 @@ const BloodSampleLayout = () => {
 
   {/* Image Section */}
   <div className="md:w-1/2 flex justify-center">
-    <Image 
-      src={img1} 
+    <img
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/close-up-glass-vacutainer-filled-with-dna-solution_482257-10200.jpg?updatedAt=1744784393220" 
       alt="Blood Sample Collection at Home" 
       className="rounded-xl shadow-md w-[80%] max-w-[500px]"
     />
