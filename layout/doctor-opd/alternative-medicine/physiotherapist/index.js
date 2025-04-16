@@ -75,7 +75,7 @@ const DoctorOPDLayout = () => {
     </div>
 
     {/* Right: Image */}
-    <div className="lg:w-1/2 flex justify-end">
+    <div className="lg:w-1/2 flex justify-end pt-[60px]">
       <Image
         src="https://ik.imagekit.io/InFutiveTechnology/kaivee/flat-physiotherapy-doctors-take-care-people-rehab-physical-therapist-orthopedic-help-patient-recovery-after-leg-knee-back-injuries-exercises-with-medical-equipment-rehabilitation-clinic_88138-860.jpg?updatedAt=1744626308026"
         alt="Physiotheraphy at Kaivee Healthcare"
@@ -154,7 +154,7 @@ const DoctorOPDLayout = () => {
     </div>
 
     {/* Right: Inquiry Form */}
-    <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0">
+    <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0 pt-[60px]">
       <InquiryForm />
     </div>
   </div>

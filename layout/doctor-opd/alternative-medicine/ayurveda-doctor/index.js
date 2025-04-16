@@ -59,7 +59,7 @@ const DoctorOPDLayout = () => {
 </div>
 
 {/* Right: Image */}
-<div className="lg:w-1/2 flex justify-end">
+<div className="lg:w-1/2 flex justify-end pt-[60px]">
   <Image
     src="https://ik.imagekit.io/InFutiveTechnology/kaivee/flat-design-essential-oil-herb-collection_23-2148811722.jpg?updatedAt=1744629476053"
     alt="Ayurveda at Kaivee Healthcare"
@@ -108,7 +108,7 @@ const DoctorOPDLayout = () => {
         </div>
 
         {/* Right: Inquiry Form */}
-        <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0">
+        <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0 pt-[60px]">
           <InquiryForm />
         </div>
       </div>

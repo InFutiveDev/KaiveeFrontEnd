@@ -101,7 +101,7 @@ const DoctorOPDLayout = () => {
         Whether you’re dealing with a chronic condition or looking for a holistic approach, our certified homeopaths are here to help. Book a consultation to discover remedies that work with your body — not against it.
       </p>
     </div>
-    <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0">
+    <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0 pt-[60px]">
       <InquiryForm />
     </div>
   </div>
