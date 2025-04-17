@@ -62,24 +62,25 @@ const CartList = () => {
       let amount = 0;
       let mrp = 0;
       setCart(cartData);
-      console.log("cartData--->>", cartData);
       setCartKeys(Object.keys(cartData));
-      Object.keys(cartData).map((key) => {
-        if (cartData[key]?.offer_price) {
-          discount += cartData[key]?.price - cartData[key]?.offer_price;
-        } else {
-          discount += 0;
-        }
-        amount += cartData[key]?.offer_price;
-        mrp += cartData[key]?.price;
+  
+      Object.keys(cartData).forEach((key) => {
+        const item = cartData[key];
+  
+        const price = Number(item?.price) || 0;
+        const offerPrice = Number(item?.offer_price) || 0;
+  
+        discount += price > 0 && offerPrice > 0 ? price - offerPrice : 0;
+        amount += offerPrice;
+        mrp += price;
       });
+  
       setdiscoutnAmount(discount);
       setTotalAmount(amount);
-      console.log("mrp-----///", mrp);
       setTotalMRP(mrp);
     }
   }, []);
-
+  
   useEffect(() => {
     if (totalAmount <= 500 && collecttionType === "home-collection") {
       setPayable(totalAmount + 100);

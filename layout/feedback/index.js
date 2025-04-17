@@ -60,8 +60,8 @@ const FeedBackLayout = () => {
   };
 
   const ratingLevels = [
-    { emoji: "😢", value: 1, label: "Very Bad", color: "bg-red-500" },
-    { emoji: "😞", value: 2, label: "Bad", color: "bg-gray-500" },
+    { emoji: "😢", value: 1, label: "sad", color: "bg-red-500" },
+    { emoji: "😞", value: 2, label: "not good", color: "bg-gray-500" },
     { emoji: "😐", value: 3, label: "Neutral", color: "bg-yellow-500" },
     { emoji: "🙂", value: 4, label: "Good", color: "bg-green-500" },
     { emoji: "😃", value: 5, label: "Excellent", color: "bg-pink-500" },

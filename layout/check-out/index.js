@@ -202,6 +202,11 @@ const CheckOutLayout = () => {
     <>
       <div className="container py-[70px]">
         <BreadCrumb active="Check Out" breadcrumblist={breadcrumblist} />
+        <p className="text-lg font-semibold text-red-600 bg-[#D419580D] border-[1px] border-[#D41958] rounded-md px-4 py-3 mb-4 shadow-sm flex items-center gap-2">
+  <span className="animate-bounce">👇</span>
+  Please select member and address before confirming your booking.
+</p>
+
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 my-3">
           <div className="flex flex-col gap-4">
             <div className="shadow-md bg-white border-[1px] border-[#D41958] overflow-hidden rounded-xl">
