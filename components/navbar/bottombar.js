@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import FacilitiesMobile from "./facilitiesMobile";
+import DoctorOpdMobile from "./doctorOpdMobile";
 // import abmbuimg from "assets/images/ambu.gif";
 // import Image from "next/image";
 
@@ -26,6 +27,15 @@ const Bottombar = () => {
   const [isXS, setisXS] = useState(false);
 
   const [facilitiesOpen, setFacilitiesOpen] = useState(false);
+  const [generalMedicineOpen, setGeneralMedicineOpen] = useState(false);
+
+  const [surgicalOpen, setSurgicalOpen] = useState(false);
+  const [superSpecialtiesOpen, setSuperSpecialtiesOpen] = useState(false);
+  const [otherMedicalOpen, setOtherMedicalOpen] = useState(false);
+  const [womenChildOpen, setWomenChildOpen] = useState(false);
+  const [eyeDentalOpen, setEyeDentalOpen] = useState(false);
+  const [alternativeMedicineOpen, setAlternativeMedicineOpen] = useState(false);
+
   const toggle = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
@@ -558,180 +568,133 @@ const Bottombar = () => {
 
               
               <NavItem>
-                <UncontrolledDropdown className="hover-menu-about ">
-                  <div
-
-                    className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px]  ${doctorOpdOpen ? "bg-[#7DB440]" : ""
-                      } `}
-                  >
-                    <div
-                      className={`transition-all font-[400] menuText !text-[16px]  ${asPath == "" && "active"
-                        }`}
-                    >
-                      Doctor&apos;s OPD
-                    </div>
-                    <div className="block sm:hidden cursor-pointer">
-                      {!doctorOpdOpen ? (
-                        <span className="text-[20px]" onClick={toggleDoctorOpd}>
-                          {" "}
-                          +
-                        </span>
-                      ) : (
-                        <span className="text-[20px]" onClick={toggleDoctorOpd}>
-                          -
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  <div className="pl-[28px] pt-[2px]">
-                    <DropdownMenu
-                      className={`${!isXS ? "show-menu-about" : "!block"
-                        }  m-0 transition-all duration-1000 transform ease-in-out ${!isBaseURL ? "mt-[25px]" : ""} ${doctorOpdOpen
-                          ? " !h-auto	"
-                          : isXS
-                            ? "overflow-hidden  !h-0  !p-0 !border-none"
-                            : ""
-                        } `}
-                    >
-                      
-                      <div className="relative group">
-                        <Link
-                          prefetch
-                          href={`/doctor-opd/general-medicine`}
-                          onClick={closeMenu}
-                          className={`transition-all align-middle menuText ${asPath == "/doctor-opd/general-medicine" && "!text-[#D41958] !font-medium"}`}
-                        >
-                          <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
-                            General Medicine &amp; Specialties
-                          </DropdownItem>
-                        </Link>
-
-                        {/* Right-Aligned Submenu */}
-                        <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-48">
-                          <Link
-                            href="/doctor-opd/general-medicine/general-physician"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            General Physician
-                          </Link>
-                          <Link
-                            href="/doctor-opd/general-medicine/pediatrician"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            Pediatrician
-                          </Link>
-                          <Link
-                            href="/doctor-opd/general-medicine/geriatrician"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            Geriatrician
-                          </Link>
+                <UncontrolledDropdown className="hover-menu-about">
+                  {!isXS ? (
+                    <UncontrolledDropdown className="hover-menu-about">
+                      <div className={`cursor-pointer flex justify-between items-start sm:p-0 p-[16px] ${
+                        doctorOpdOpen ? "bg-[#7DB440]" : ""
+                      }`}>
+                        <div className={`transition-all font-[400] menuText !text-[16px] ${
+                          asPath == "" && "active"
+                        }`}>
+                          Doctor&apos;s OPD
+                        </div>
+                        <div className="block sm:hidden cursor-pointer">
+                          {!doctorOpdOpen ? (
+                            <span className="text-[20px]" onClick={toggleDoctorOpd}>+</span>
+                          ) : (
+                            <span className="text-[20px]" onClick={toggleDoctorOpd}>-</span>
+                          )}
                         </div>
                       </div>
 
-
-                      <div className="relative group">
-                          <Link
-                            prefetch
-                            href={`/doctor-opd/surgical-specialties`}
-                            onClick={closeMenu}
-                            className={`transition-all align-middle menuText ${asPath == "/doctor-opd/surgical-specialties" && "!text-[#D41958] !font-medium"}`}
-                          >
-                            <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
-                              Surgical Specialties
-                            </DropdownItem>
-                          </Link>
-
-                          {/* Sub-dropdown for Surgical Specialties */}
-                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
-                            <Link
-                              href="/doctor-opd/surgical-specialties/general-surgeon"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              General Surgeon
-                            </Link>
-                            <Link
-                              href="/doctor-opd/surgical-specialties/orthopedic-surgeon"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              Orthopedic Surgeon
-                            </Link>
-                            <Link
-                              href="/doctor-opd/surgical-specialties/neurosurgeon"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              Neurosurgeon
-                            </Link>
-                            <Link
-                              href="/doctor-opd/surgical-specialties/cardiac-surgeon"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              Cardiac Surgeon
-                            </Link>
-                            <Link
-                              href="/doctor-opd/surgical-specialties/plastic-cosmetic-surgeon"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              Plastic &amp; Cosmetic Surgeon
-                            </Link>
-                            <Link
-                              href="/doctor-opd/surgical-specialties/ent-surgeon"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              ENT Surgeon
-                            </Link>
-                          </div>
-                        </div>
-
-
-                        <div className="relative group">
-                          <Link
-                            prefetch
-                            href={`/doctor-opd/super-specialties`}
-                            onClick={closeMenu}
-                            className={`transition-all align-middle menuText ${asPath == "/doctor-opd/super-specialties" && "!text-[#D41958] !font-medium"}`}
-                          >
-                            <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
-                              Super Specialties
-                            </DropdownItem>
-                          </Link>
-
-                          {/* Submenu */}
-                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
-                            <Link href="/doctor-opd/super-specialties/cardiologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Cardiologist
-                            </Link>
-                            <Link href="/doctor-opd/super-specialties/neurologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Neurologist
-                            </Link>
-                            <Link href="/doctor-opd/super-specialties/nephrologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Nephrologist
-                            </Link>
-                            <Link href="/doctor-opd/super-specialties/endocrinologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Endocrinologist
-                            </Link>
-                            <Link href="/doctor-opd/super-specialties/hepatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Hepatologist
-                            </Link>
-                            <Link href="/doctor-opd/super-specialties/rheumatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Rheumatologist
-                            </Link>
-                          </div>
-                        </div>
-
-                        <div className="relative group">
+                      <div className="pl-[28px] pt-[2px]">
+                        <DropdownMenu className={`${
+                          !isXS ? "show-menu-about" : "!block"
+                        } m-0 transition-all duration-1000 transform ease-in-out ${
+                          !isBaseURL ? "mt-[25px]" : ""
+                        }`}>
+                          {/* General Medicine & Specialties */}
+                          <div className="relative group">
                             <Link
                               prefetch
-                              href={`/doctor-opd/other-medical-specialties`}
-                              onClick={closeMenu}
-                              className={`align-middle menuText ${asPath == "/doctor-opd/other-medical-specialties" && "!text-[#D41958] !font-medium"}`}
+                              href="/doctor-opd/general-medicine"
+                              className="transition-all align-middle menuText"
+                            >
+                              <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                                General Medicine &amp; Specialties
+                              </DropdownItem>
+                            </Link>
+                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
+                              <Link href="/doctor-opd/general-medicine/general-physician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                General Physician
+                              </Link>
+                              <Link href="/doctor-opd/general-medicine/pediatrician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Pediatrician
+                              </Link>
+                              <Link href="/doctor-opd/general-medicine/geriatrician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Geriatrician
+                              </Link>
+                            </div>
+                          </div>
+
+                          {/* Surgical Specialties */}
+                          <div className="relative group">
+                            <Link
+                              prefetch
+                              href="/doctor-opd/surgical-specialties"
+                              className="transition-all align-middle menuText"
+                            >
+                              <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                                Surgical Specialties
+                              </DropdownItem>
+                            </Link>
+                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
+                              <Link href="/doctor-opd/surgical-specialties/general-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                General Surgeon
+                              </Link>
+                              <Link href="/doctor-opd/surgical-specialties/orthopedic-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Orthopedic Surgeon
+                              </Link>
+                              <Link href="/doctor-opd/surgical-specialties/neurosurgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Neurosurgeon
+                              </Link>
+                              <Link href="/doctor-opd/surgical-specialties/cardiac-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Cardiac Surgeon
+                              </Link>
+                              <Link href="/doctor-opd/surgical-specialties/plastic-cosmetic-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Plastic &amp; Cosmetic Surgeon
+                              </Link>
+                              <Link href="/doctor-opd/surgical-specialties/ent-surgeon" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                ENT Surgeon
+                              </Link>
+                            </div>
+                          </div>
+
+                          {/* Super Specialties */}
+                          <div className="relative group">
+                            <Link
+                              prefetch
+                              href="/doctor-opd/super-specialties"
+                              className="transition-all align-middle menuText"
+                            >
+                              <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                                Super Specialties
+                              </DropdownItem>
+                            </Link>
+                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
+                              <Link href="/doctor-opd/super-specialties/cardiologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Cardiologist
+                              </Link>
+                              <Link href="/doctor-opd/super-specialties/neurologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Neurologist
+                              </Link>
+                              <Link href="/doctor-opd/super-specialties/nephrologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Nephrologist
+                              </Link>
+                              <Link href="/doctor-opd/super-specialties/endocrinologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Endocrinologist
+                              </Link>
+                              <Link href="/doctor-opd/super-specialties/hepatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Hepatologist
+                              </Link>
+                              <Link href="/doctor-opd/super-specialties/rheumatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Rheumatologist
+                              </Link>
+                            </div>
+                          </div>
+
+                          {/* Other Medical Specialties */}
+                          <div className="relative group">
+                            <Link
+                              prefetch
+                              href="/doctor-opd/other-medical-specialties"
+                              className="transition-all align-middle menuText"
                             >
                               <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                                 Other Medical Specialties
                               </DropdownItem>
                             </Link>
-
-                            {/* Submenu */}
                             <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
                               <Link href="/doctor-opd/other-medical-specialties/dermatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Dermatologist
@@ -751,45 +714,41 @@ const Bottombar = () => {
                             </div>
                           </div>
 
+                          {/* Women & Child Care */}
                           <div className="relative group">
-                          <Link
-                            prefetch
-                            href={`/doctor-opd/women-child-care`}
-                            onClick={closeMenu}
-                            className={`align-middle menuText ${asPath == "/doctor-opd/women-child-care" && "!text-[#D41958] !font-medium"}`}
-                          >
-                            <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
-                              Women &amp; Child Care
-                            </DropdownItem>
-                          </Link>
-
-                          {/* Submenu */}
-                          <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ">
-                            <Link href="/doctor-opd/women-child-care/gynecologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Gynecologist
-                            </Link>
-                            <Link href="/doctor-opd/women-child-care/obstetrician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Obstetrician
-                            </Link>
-                            <Link href="/doctor-opd/women-child-care/neonatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Neonatologist
-                            </Link>
-                          </div>
-                        </div>
-
-                        <div className="relative group">
                             <Link
                               prefetch
-                              href={`/doctor-opd/eye-dental-care`}
-                              onClick={closeMenu}
-                              className={`align-middle menuText ${asPath == "/doctor-opd/eye-dental-care" && "!text-[#D41958] !font-medium"}`}
+                              href="/doctor-opd/women-child-care"
+                              className="transition-all align-middle menuText"
+                            >
+                              <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                                Women &amp; Child Care
+                              </DropdownItem>
+                            </Link>
+                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
+                              <Link href="/doctor-opd/women-child-care/gynecologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Gynecologist
+                              </Link>
+                              <Link href="/doctor-opd/women-child-care/obstetrician" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Obstetrician
+                              </Link>
+                              <Link href="/doctor-opd/women-child-care/neonatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Neonatologist
+                              </Link>
+                            </div>
+                          </div>
+
+                          {/* Eye & Dental Care */}
+                          <div className="relative group">
+                            <Link
+                              prefetch
+                              href="/doctor-opd/eye-dental-care"
+                              className="transition-all align-middle menuText"
                             >
                               <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
                                 Eye &amp; Dental Care
                               </DropdownItem>
                             </Link>
-
-                            {/* Submenu */}
                             <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
                               <Link href="/doctor-opd/eye-dental-care/ophthalmologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 Ophthalmologist
@@ -803,36 +762,40 @@ const Bottombar = () => {
                             </div>
                           </div>
 
+                          {/* Alternative Medicine & Rehabilitation */}
                           <div className="relative group">
-                                <Link
-                                  prefetch
-                                  href={`/doctor-opd/alternative-medicine`}
-                                  onClick={closeMenu}
-                                  className={`align-middle menuText ${asPath == "/doctor-opd/alternative-medicine" && "!text-[#D41958] !font-medium"}`}
-                                >
-                                  <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
-                                    Alternative Medicine &amp; Rehabilitation
-                                  </DropdownItem>
-                                </Link>
-
-                                {/* Submenu */}
-                                <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56 ">
-                                  <Link href="/doctor-opd/alternative-medicine/physiotherapist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                    Physiotherapist
-                                  </Link>
-                                  <Link href="/doctor-opd/alternative-medicine/homeopathy-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                    Homeopathy Doctor
-                                  </Link>
-                                  <Link href="/doctor-opd/alternative-medicine/ayurveda-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                    Ayurveda Doctor
-                                  </Link>
-                                </div>
-                              </div>
-
-                     
-                     
-                    </DropdownMenu>
-                  </div>
+                            <Link
+                              prefetch
+                              href="/doctor-opd/alternative-medicine"
+                              className="transition-all align-middle menuText"
+                            >
+                              <DropdownItem className="transition-all hover:bg-[#D419580D] text-sm text-gray-700 hover:text-gray-700 focus:text-gray-700 hover:font-semibold">
+                                Alternative Medicine &amp; Rehabilitation
+                              </DropdownItem>
+                            </Link>
+                            <div className="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg border border-gray-200 rounded-md w-56">
+                              <Link href="/doctor-opd/alternative-medicine/physiotherapist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Physiotherapist
+                              </Link>
+                              <Link href="/doctor-opd/alternative-medicine/homeopathy-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Homeopathy Doctor
+                              </Link>
+                              <Link href="/doctor-opd/alternative-medicine/ayurveda-doctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Ayurveda Doctor
+                              </Link>
+                            </div>
+                          </div>
+                        </DropdownMenu>
+                      </div>
+                    </UncontrolledDropdown>
+                  ) : (
+                    <DoctorOpdMobile
+                      isXS={isXS}
+                      closeMenu={closeMenu}
+                      setDoctorOpdOpen={setDoctorOpdOpen}
+                      doctorOpdOpen={doctorOpdOpen}
+                    />
+                  )}
                 </UncontrolledDropdown>
               </NavItem>
               <NavItem>

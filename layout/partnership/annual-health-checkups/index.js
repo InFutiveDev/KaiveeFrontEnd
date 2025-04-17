@@ -1,20 +1,11 @@
 import Annualbanner from "./annual-banner";
-// import AboutFireImage from "assets/images/about/fireworks 3.svg";
-// import AboutUs from "./aboutus";
 
-import OurVersion from "assets/images/about/vision.jpg";
-import OurMission from "assets/images/about/mission.png";
-import { AboutPattern } from "assets/images/SvgImage";
 import img1 from "assets/images/Finalimg/ourValue/Compassion.webp";
 import img2 from "assets/images/Finalimg/ourValue/Accountability.webp";
 import img3 from "assets/images/Finalimg/ourValue/Executional Excellence.webp";
 import img4 from "assets/images/Finalimg/ourValue/Innovation.webp";
 import img5 from "assets/images/Finalimg/ourValue/Integrity.webp";
-// import Clint1 from "assets/images/Finalimg/Leadership/Dr. Aakaar Kapoor.webp";
-// import Clint2 from "assets/images/Finalimg/Leadership/Dr. Ravi Kapoor.webp";
-// import Clint3 from "assets/images/Finalimg/Leadership/Dr. Sunita Kapoor.webp";
-// import Clint4 from "assets/images/Finalimg/Leadership/Dr. Apurva Kapoor.webp";
-import { AboutTeamwork } from "assets/images/SvgImage";
+
 import WhyChoose from "components/WhyChoose";
 import img11 from "assets/images/whychooseus/1.png";
 import img22 from "assets/images/whychooseus/2-png.png";
@@ -29,9 +20,8 @@ import Image from "next/image";
 const AnnualLayout = () => {
   return (
     <>
-      
       <section>
-       
+        
         <div>
           <Annualbanner />
         </div>
@@ -40,7 +30,7 @@ const AnnualLayout = () => {
 
       
       <div className="container mx-auto px-6 py-12">
-     
+      {/* Header Section */}
       <div className="text-center">
         <h1 className="text-3xl font-bold text-[#8DBD4D] mb-4">
           Annual Health Check-up – Kaivee Healthcare

@@ -20,107 +20,73 @@ const MyReportLayout = () => {
       <div className="container py-[35px] md:py-[70px]">
         <BreadCrumb active="My Reports" breadcrumblist={breadcrumblist} />
         <p className="text-lg font-semibold">My Reports</p>
-        <div className="grid-cols-1 lg:grid-cols-3 grid gap-4  my-[30px]">
-          <div className="lg:col-span-1 border-[1px] border-[#E4E4E7] rounded-xl p-[20px] md:p-[24px]">
-            <div className="form-group">
-              <label
-                htmlFor="organizationName"
-                className="font-medium text-[15px] md:text-[20px]"
-              >
-                Patient
-              </label>
-              <div className="mt-[6px]">
-                <select
-                  className="border shadow-md  rounded-2xl px-[16px] w-full py-[14px] focus:outline-none text-[15px] md:text-[20px]"
-                  placeholder="Select Patient"
-                >
-                  <option>Panel</option>
-                  <option>Doctor</option>
-                  {/* <option></option> */}
-                </select>
-              </div>
-            </div>
-            <div className="form-group">
-              <label
-                htmlFor="organizationName"
-                className="font-medium text-[15px] md:text-[20px]"
-              >
-                Password*
-              </label>
-              <div className="mt-[6px]">
-                <input
-                  type="number"
-                  className="border shadow-md  rounded-2xl px-[16px] w-full py-[14px] focus:outline-none text-[15px] md:text-[20px]"
-                  placeholder="**********"
-                />
-              </div>
-            </div>
-            <div className="mt-[6px]">
-              <button className=" bg-[#d31b5e] text-white rounded w-full py-[8px] text-xs font-semibold">
-                Check Report
-              </button>
-            </div>
-            <span className="text-sm ">
-              Please enter UHID and Password as printed on the receip
-            </span>
-          </div>
-          <div className="lg:col-span-2 relative bg-[#def3e338] rounded-xl px-[20px] md:px-[40px] flex items-center lg:pt-0 pt-[60px]">
-            <div className="grid-cols-1 grid md:grid-cols-2 items-center">
-              <div>
-                <p className="text-xl font-bold pb-3">Health Report</p>
-                <span className="text-secondary text-[14px] md:text-[20px]">
-                If you have undergone a test with Kaivee Healthcare, you can easily access your health report through our platform.                </span>
-              </div>
-              <div>
-                <Image
-                  width={380}
-                  height={380}
-                  className=" object-fill "
-                  loading="eager"
-                  src={ImageOne.src}
-                />
-              </div>
-            </div>
-            {/* <div className="absolute bottom-0 left-0">
-              <Image
-                width={80}
-                height={80}
-                className=" object-fill "
-                loading="eager"
-                src={ShadoImg.src}
-              />
-            </div> */}
-            {/* <div className="absolute top-0 left-0">
-              <Image
-                width={80}
-                height={80}
-                className=" object-fill "
-                src={StartImg.src}
-              />
-            </div> */}
-            <div className="absolute bottom-4 left-0">
-              <Image
-                width={80}
-                height={80}
-                className=" object-fill "
-                src={RoundImg.src}
-              />
-            </div>
-            <div className="absolute bottom-0 left-0">
-              <Image
-                width={80}
-                height={80}
-                className=" object-fill "
-                src={RoundImg.src}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="mt-[35px] md:mt-[70px]">
-          <p className="text-lg md:text-xl lg:text-2xl font-semibold text-[#d31b5e]">
-            Now Just Enter your Reg No & Lab No And Get your Lab Reports Any
-            Where and Any Time
-          </p>
+        <div className="grid-cols-1 lg:grid-cols-3 grid gap-4 my-[30px]">
+  {/* Left Column: Link Section with background image */}
+  <div
+  className="lg:col-span-1 border-[1px] border-[#E4E4E7] rounded-xl p-[20px] md:p-[24px] flex flex-col justify-between bg-no-repeat bg-center bg-contain min-h-[300px]"
+  style={{
+    backgroundImage: `url('https://ik.imagekit.io/InFutiveTechnology/kaivee/work-team-checking-giant-check-list_23-2148074630%20(1)%20(1).jpg?updatedAt=1744877017223')`,
+  }}
+>
+  {/* Empty div can act as spacing above */}
+  <div></div>
+
+  {/* Link/button at bottom */}
+  <div className="flex justify-center">
+    <a
+      href="http://115.246.78.204/zenhealth/Design/onlinelab/Default.aspx"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#d31b5e] underline text-center text-sm md:text-lg font-semibold bg-white bg-opacity-80 px-4 py-2 rounded"
+    >
+      Click here to access your lab reports directly
+    </a>
+  </div>
+</div>
+
+
+
+
+  {/* Right Column: Health Report Content */}
+  <div className="lg:col-span-2 relative bg-[#b8d4ff] rounded-xl px-[20px] md:px-[40px] flex items-center lg:pt-0 pt-[60px]">
+    <div className="grid-cols-1 grid md:grid-cols-2 items-center">
+      <div>
+        <p className="text-xl font-bold pb-3">Health Report</p>
+        <span className="text-secondary text-[14px] md:text-[20px]">
+          If you have undergone a test with Kaivee Healthcare, you can easily access your health report through our platform.
+        </span>
+      </div>
+      <div>
+        <Image
+          width={380}
+          height={380}
+          className="object-fill"
+          loading="eager"
+          src={ImageOne.src}
+        />
+      </div>
+    </div>
+
+    <div className="absolute bottom-4 left-0">
+      <Image
+        width={80}
+        height={80}
+        className="object-fill"
+        src={RoundImg.src}
+      />
+    </div>
+    <div className="absolute bottom-0 left-0">
+      <Image
+        width={80}
+        height={80}
+        className="object-fill"
+        src={RoundImg.src}
+      />
+    </div>
+  </div>
+
+
+          
         </div>
       </div>
       <div className="bg-[#FAFAFA]">
