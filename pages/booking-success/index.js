@@ -8,10 +8,19 @@ const BookingSuccess = () => {
     return (
         <>
             {/* <Navbar /> */}
-            <div className=" min-h-[50vh] my-5 flex flex-col items-center container mx-auto bg-[#D419580D]/20 rounded-xl text-center p-2">
+            <div className="  my-5 flex flex-col items-center container mx-auto  rounded-xl text-center ">
                 <div className="w-full flex justify-center  ">
-                    <div className='relative d-flex align-items-center'>
-                        <Image width={200} height={200} layout='fixed' className="rounded-lg h-32 w-44 object-fill" alt="About" src={orderImage?.src} />
+                    <div className='relative d-flex align-items-center mb-4'>
+                    
+
+                        <Image
+                        src="https://ik.imagekit.io/InFutiveTechnology/kaivee/appointment-booking-with-man-smartphone_23-2148564095.jpg?updatedAt=1744980082531"
+                        alt="booking-success"
+                        width={300}
+                        height={400}
+                        className="rounded-lg object-cover transition-transform duration-700 ease-in-out hover:scale-105"
+                        />
+
                     </div>
                 </div>
                 <p className="text-center text-gray-800 text-[16px] font-[500]">

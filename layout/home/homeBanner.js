@@ -122,11 +122,32 @@ const Homebanner = () => {
                 Book a Test
               </button>
             </Link>
-            <Link href="/health-packages">
-              <button className="border border-[#D41958] text-[#D41958] py-2 px-6 rounded-lg hover:bg-[#8DBD4D] hover:text-white w-full sm:w-auto">
-                Explore Health Packages
+            <Link href="/dashboard/my-report">
+              <button className="border border-[#D41958] text-[#D41958] py-2 px-6 rounded-lg hover:bg-[#8DBD4D] hover:text-white w-full sm:w-auto flex items-center gap-2 transition-all duration-300">
+                Check Report
+                <img
+                  src="https://ik.imagekit.io/InFutiveTechnology/kaivee/left-click.svg?updatedAt=1744971152894"
+                  alt="Click Icon"
+                  className="w-5 h-6"
+                  style={{
+                    animation: 'zoomEffect 1.5s ease-in-out infinite',
+                  }}
+                />
               </button>
             </Link>
+
+            <style jsx>{`
+              @keyframes zoomEffect {
+                0%, 100% {
+                  transform: scale(1);
+                }
+                50% {
+                  transform: scale(1.2);
+                }
+              }
+            `}</style>
+
+
           </div>
 
           {/* Stats Section */}
@@ -137,7 +158,7 @@ const Homebanner = () => {
             </div>
             <span className="hidden sm:block h-6 w-px bg-gray-300"></span>
             <div className="text-center">
-              <h2 className="text-[24px] sm:text-[24px] font-bold text-gray-800">240k+</h2>
+              <h2 className="text-[24px] sm:text-[24px] font-bold text-gray-800">24k+</h2>
               <p className="text-gray-600 text-sm sm:text-base">Patients Benefiting</p>
             </div>
           </div>

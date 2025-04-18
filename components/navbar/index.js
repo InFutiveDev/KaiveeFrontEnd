@@ -266,7 +266,7 @@ const Navbar = () => {
           </div>
           <div className="profile sm:w-auto ml-10 sm:ml-2">
   {/* Flex container to align items in a row */}
-  <div className="w-full flex items-center gap-4 sm:gap-6">
+  <div className="w-full flex items-center gap-4 sm:gap-2">
     {/* Ambulance Icon and Title */}
     <div className="flex items-center gap-2">
       <Image
@@ -283,8 +283,8 @@ const Navbar = () => {
     <div className="phone flex items-center ml-8 gap-1">
       <a href="tel:9289088633" className="flex items-center gap-1">
         <svg
-          width="17"
-          height="18"
+          width="28"
+          height="28"
           viewBox="0 0 17 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
 import BreadCrumb from "components/breadcrumb";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import EditImgActive from "assets/images/check-out/download_45x45.png";
 import LineImg from "assets/images/check-out/Line_304_Pink_Transparent.png";
@@ -20,7 +20,6 @@ import CheckOutEditMemeberModal from "components/checkOutEditMemberModal";
 import BookingConfirm from "./bookingConfirm";
 import { UPDATE_CART_QAUNTITY } from "redux/actions/cart";
 import { AlertError } from "utility/api";
-import { useRef } from "react";
 import moment from "moment";
 
 const breadcrumblist = [{ name: "Home", path: "/" }];
@@ -63,6 +62,10 @@ const CheckOutLayout = () => {
   const [payable, setPayable] = useState(0);
   const [couponCode, setCouponCode] = useState("");
   const [collectionType, setCollectionsType] = useState("centre-visit");
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [blinkMember, setBlinkMember] = useState(false);
+  const [blinkAddress, setBlinkAddress] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -71,25 +74,40 @@ const CheckOutLayout = () => {
       (it) => it?.collection_type !== "home-collection"
     );
 
+    const showAlertAndBlink = (message, isMember = false, isAddress = false) => {
+      setAlertMessage(message);
+      setShowAlert(true);
+      if (isMember) {
+        setBlinkMember(true);
+        setTimeout(() => setBlinkMember(false), 2000);
+      }
+      if (isAddress) {
+        setBlinkAddress(true);
+        setTimeout(() => setBlinkAddress(false), 2000);
+      }
+    };
+
     if (!sendData.memberId && !sendData.address) {
-      document.body.scrollTop = 0;
-      AlertError("Please select member and address");
+      showAlertAndBlink("Please select member and address", true, true);
+      memberRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setSelectedAccordOpen("selectMember");
     } else if (!sendData?.memberId) {
-      document.body.scrollTop = 0;
-      AlertError("Please select member ");
+      showAlertAndBlink("Please select member", true, false);
+      memberRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setSelectedAccordOpen("selectMember");
     } else if (!sendData?.address) {
-      document.getElementById("address").scrollIntoView({ block: "center" });
+      showAlertAndBlink("Please select address", false, true);
+      document.getElementById("address")?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setStep(2);
-      AlertError("Please select  address");
     } else if (!paymentType) {
-      AlertError("Please select  payment type");
+      setAlertMessage("Please select payment type");
+      setShowAlert(true);
     } else if (
       collectionType === "home-collection" &&
       getListOfItems.length > 0
     ) {
-      AlertError(
-        "The Tests in your cart cannot be booked for Home Collection."
-      );
+      setAlertMessage("The Tests in your cart cannot be booked for Home Collection.");
+      setShowAlert(true);
     } else {
       let res = await dispatch(
         ADD_USER_BOOKING({
@@ -203,13 +221,13 @@ const CheckOutLayout = () => {
       <div className="container py-[70px]">
         <BreadCrumb active="Check Out" breadcrumblist={breadcrumblist} />
         <p className="text-lg font-semibold text-red-600 bg-[#D419580D] border-[1px] border-[#D41958] rounded-md px-4 py-3 mb-4 shadow-sm flex items-center gap-2">
-  <span className="animate-bounce">👇</span>
+  <span className="animate-bounce text-2xl">👇</span>
   Please select member and address before confirming your booking.
 </p>
 
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 my-3">
           <div className="flex flex-col gap-4">
-            <div className="shadow-md bg-white border-[1px] border-[#D41958] overflow-hidden rounded-xl">
+            <div className={`shadow-md bg-white border-[1px] ${blinkMember ? 'animate-blink border-red-500' : 'border-[#D41958]'} overflow-hidden rounded-xl`}>
               <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                 <p ref={memberRef} className="text-lg font-semibold">
                   1. Add/Select Member
@@ -291,7 +309,7 @@ const CheckOutLayout = () => {
               )}
             </div>
 
-            <div className="shadow-md bg-white border-[1px] border-[#D41958] overflow-hidden rounded-xl">
+            <div className={`shadow-md bg-white border-[1px] ${blinkAddress ? 'animate-blink border-red-500' : 'border-[#D41958]'} overflow-hidden rounded-xl`}>
               <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                 <p id="address" className="text-lg font-semibold">
                   2. Add Address/Appointment Details
@@ -764,7 +782,29 @@ const CheckOutLayout = () => {
       {memberOpen && (
         <CheckOutAddMemeberModal setOpen={setMemberOpen} open={memberOpen} />
       )}
+      {showAlert && (
+        <AlertModal 
+          message={alertMessage} 
+          onClose={() => setShowAlert(false)}
+        />
+      )}
     </>
+  );
+};
+
+const AlertModal = ({ message, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+      <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4">
+        <p className="text-lg text-center text-red-600 mb-4">{message}</p>
+        <button 
+          onClick={onClose}
+          className="w-full bg-[#D41958] text-white py-2 rounded-lg hover:bg-[#B31547]"
+        >
+          Okay
+        </button>
+      </div>
+    </div>
   );
 };
 

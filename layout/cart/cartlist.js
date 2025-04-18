@@ -166,23 +166,20 @@ const CartList = () => {
                         strokeLinecap="round"
                       />
                       <defs>
-                        <linearGradient
-                          id="paint0_linear_850_8136"
-                          x1="1"
-                          y1="1"
-                          x2="462.674"
-                          y2="-11.2605"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stopColor="#F7A708" stopOpacity="0.1" />
-                          <stop offset="0.514288" stopColor="#F7A708" />
-                          <stop
-                            offset="1"
-                            stopColor="#F7A708"
-                            stopOpacity="0.1"
-                          />
-                        </linearGradient>
-                      </defs>
+                      <linearGradient
+                        id="paint0_linear_850_8136"
+                        x1="1"
+                        y1="1"
+                        x2="462.674"
+                        y2="-11.2605"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stopColor="#D41958" stopOpacity="0.1" />
+                        <stop offset="0.514288" stopColor="#D41958" />
+                        <stop offset="1" stopColor="#D41958" stopOpacity="0.1" />
+                      </linearGradient>
+                    </defs>
+
                     </svg>
                     <div className="cart-frame-16">
                       <div className="cart-text-wrapper-10">Sub Total:</div>
