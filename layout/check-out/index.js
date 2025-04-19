@@ -62,10 +62,10 @@ const CheckOutLayout = () => {
   const [payable, setPayable] = useState(0);
   const [couponCode, setCouponCode] = useState("");
   const [collectionType, setCollectionsType] = useState("centre-visit");
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertMessage, setAlertMessage] = useState("");
-  const [blinkMember, setBlinkMember] = useState(false);
-  const [blinkAddress, setBlinkAddress] = useState(false);
+  const [bounceMember, setBounceMember] = useState(false);
+  const [bounceAddress, setBounceAddress] = useState(false);
+  const [headerMessage, setHeaderMessage] = useState("");
+  const [showHeaderMessage, setShowHeaderMessage] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -74,40 +74,44 @@ const CheckOutLayout = () => {
       (it) => it?.collection_type !== "home-collection"
     );
 
-    const showAlertAndBlink = (message, isMember = false, isAddress = false) => {
-      setAlertMessage(message);
-      setShowAlert(true);
+    const showBounceAndMessage = (message, isMember = false, isAddress = false) => {
+      setHeaderMessage(message);
+      setShowHeaderMessage(true);
+      
       if (isMember) {
-        setBlinkMember(true);
-        setTimeout(() => setBlinkMember(false), 2000);
+        setBounceMember(true);
+        setTimeout(() => setBounceMember(false), 1000);
       }
       if (isAddress) {
-        setBlinkAddress(true);
-        setTimeout(() => setBlinkAddress(false), 2000);
+        setBounceAddress(true);
+        setTimeout(() => setBounceAddress(false), 1000);
       }
+      
+      setTimeout(() => {
+        setShowHeaderMessage(false);
+        setHeaderMessage("");
+      }, 3000);
     };
 
     if (!sendData.memberId && !sendData.address) {
-      showAlertAndBlink("Please select member and address", true, true);
+      showBounceAndMessage("Please select member and address", true, true);
       memberRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setSelectedAccordOpen("selectMember");
     } else if (!sendData?.memberId) {
-      showAlertAndBlink("Please select member", true, false);
+      showBounceAndMessage("Please select member", true, false);
       memberRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setSelectedAccordOpen("selectMember");
     } else if (!sendData?.address) {
-      showAlertAndBlink("Please select address", false, true);
+      showBounceAndMessage("Please select address", false, true);
       document.getElementById("address")?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setStep(2);
     } else if (!paymentType) {
-      setAlertMessage("Please select payment type");
-      setShowAlert(true);
+      showBounceAndMessage("Please select payment type");
     } else if (
       collectionType === "home-collection" &&
       getListOfItems.length > 0
     ) {
-      setAlertMessage("The Tests in your cart cannot be booked for Home Collection.");
-      setShowAlert(true);
+      showBounceAndMessage("The Tests in your cart cannot be booked for Home Collection.");
     } else {
       let res = await dispatch(
         ADD_USER_BOOKING({
@@ -220,14 +224,44 @@ const CheckOutLayout = () => {
     <>
       <div className="container py-[70px]">
         <BreadCrumb active="Check Out" breadcrumblist={breadcrumblist} />
-        <p className="text-lg font-semibold text-red-600 bg-[#D419580D] border-[1px] border-[#D41958] rounded-md px-4 py-3 mb-4 shadow-sm flex items-center gap-2">
-  <span className="animate-bounce text-2xl">👇</span>
-  Please select member and address before confirming your booking.
-</p>
+        {showHeaderMessage && (
+          <div style={{
+            position: 'fixed',
+            top: '20px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 1000,
+            backgroundColor: '#D41958',
+            color: 'white',
+            padding: '16px 32px',
+            borderRadius: '8px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            maxWidth: '90%',
+            textAlign: 'center',
+            animation: 'slideIn 0.5s ease-out',
+            WebkitAnimation: 'slideIn 0.5s ease-out'
+          }}>
+            <p style={{
+              fontSize: '18px',
+              fontWeight: '600',
+              margin: 0
+            }}>{headerMessage}</p>
+          </div>
+        )}
 
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-2 my-3">
           <div className="flex flex-col gap-4">
-            <div className={`shadow-md bg-white border-[1px] ${blinkMember ? 'animate-blink border-red-500' : 'border-[#D41958]'} overflow-hidden rounded-xl`}>
+            <div style={{
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              backgroundColor: 'white',
+              border: bounceMember ? '2px solid #EF4444' : '1px solid #D41958',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              animation: bounceMember ? 'bounce 0.5s ease-in-out infinite' : 'none',
+              WebkitAnimation: bounceMember ? 'bounce 0.5s ease-in-out infinite' : 'none',
+              transform: bounceMember ? 'scale(1)' : 'none',
+              transition: 'transform 0.3s ease-in-out'
+            }}>
               <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                 <p ref={memberRef} className="text-lg font-semibold">
                   1. Add/Select Member
@@ -309,7 +343,17 @@ const CheckOutLayout = () => {
               )}
             </div>
 
-            <div className={`shadow-md bg-white border-[1px] ${blinkAddress ? 'animate-blink border-red-500' : 'border-[#D41958]'} overflow-hidden rounded-xl`}>
+            <div style={{
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              backgroundColor: 'white',
+              border: bounceAddress ? '2px solid #EF4444' : '1px solid #D41958',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              animation: bounceAddress ? 'bounce 0.5s ease-in-out infinite' : 'none',
+              WebkitAnimation: bounceAddress ? 'bounce 0.5s ease-in-out infinite' : 'none',
+              transform: bounceAddress ? 'scale(1)' : 'none',
+              transition: 'transform 0.3s ease-in-out'
+            }}>
               <div className="py-[18px] px-[24px] bg-[#D419580D] border-b-[1px] items-center border-[#E4E4E7] flex justify-between">
                 <p id="address" className="text-lg font-semibold">
                   2. Add Address/Appointment Details
@@ -552,59 +596,56 @@ const CheckOutLayout = () => {
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <div className=" w-full flex justify-start space-x-2">
-                      <p className="name space-x-1">
-                        <input
-                          checked={collectionType === "centre-visit"}
-                          type="checkbox"
-                          // disabled
-                          //remove disable attribute
-                          id="home_collection"
-                          name="collectionType"
-                          value="home_collection"
-                          onChange={(e) =>
-                            setCollectionsType(
-                              e.target.checked
-                                ? "centre-visit"
-                                : "home-collection"
-                            )
-                          }
-                        />{" "}
-                        <label
-                          htmlFor="home_collection"
-                          className=" mb-0 checked-text text-red-400 text-[16px] font-source-pro"
-                        >
-                          Centre Visit
-                        </label>
-                      </p>
-                      <p className="name space-x-1 ">
-                        <input
-                          // disabled
-                          className="ml-sm-2 mr-2"
-                          id="lab_collection"
-                          checked={collectionType === "home-collection"}
-                          type="checkbox"
-                          name="collectionType"
-                          value="lab_collection"
-                          onChange={(e) =>
-                            setCollectionsType(
-                              e.target.checked
-                                ? "home-collection"
-                                : "centre-visit"
-                            )
-                          }
-                        />{" "}
-                        <label
-                          htmlFor="lab_collection"
-                          className=" mb-0 checked-text text-red-400 text-[16px] font-source-pro"
-                        >
-                          Home Collection
-                        </label>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="flex justify-start items-center space-x-2">
+  <div className="w-full flex justify-start space-x-4">
+    <p className="name flex items-center space-x-1">
+      <input
+        checked={collectionType === "centre-visit"}
+        type="checkbox"
+        id="home_collection"
+        name="collectionType"
+        value="home_collection"
+        onChange={(e) =>
+          setCollectionsType(
+            e.target.checked ? "centre-visit" : "home-collection"
+          )
+        }
+      />
+      <img src="https://ik.imagekit.io/InFutiveTechnology/kaivee/clinic.gif?updatedAt=1745046721345" alt="Centre Visit" className="w-10 h-10" />
+      <label
+        htmlFor="home_collection"
+        className="mb-0 checked-text text-red-400 text-[16px] font-source-pro"
+      >
+        Centre Visit
+      </label>
+    </p>
+
+    <p className="name flex items-center space-x-1">
+      <input
+        className="ml-sm-2 mr-2"
+        id="lab_collection"
+        checked={collectionType === "home-collection"}
+        type="checkbox"
+        name="collectionType"
+        value="lab_collection"
+        onChange={(e) =>
+          setCollectionsType(
+            e.target.checked ? "home-collection" : "centre-visit"
+          )
+        }
+      />
+      <img src="https://ik.imagekit.io/InFutiveTechnology/kaivee/home.gif?updatedAt=1745046721461" alt="Home Collection" className="w-10 h-10" />
+      <label
+        htmlFor="lab_collection"
+        className="mb-0 checked-text text-red-400 text-[16px] font-source-pro"
+      >
+        Home Collection
+      </label>
+    </p>
+  </div>
+</div>
+
+                  <div className="mt-2 flex justify-between items-center space-x-4 ">
+                    <div className="flex justify-start items-center space-x-1">
                       <input
                         className=""
                         id="cod"
@@ -616,14 +657,16 @@ const CheckOutLayout = () => {
                           setPaymentType(e.target.checked ? "cod" : "online")
                         }
                       />{" "}
+                      <img src="https://ik.imagekit.io/InFutiveTechnology/kaivee/rupee.svg?updatedAt=1745055252341" alt="cod" className="w-8 h-8" />
+
                       <label
                         htmlFor="cod"
-                        className=" mb-0 checked-text text-[18px] font-source-pro"
+                        className=" mb-0 checked-text text-[18px] font-source-pro mr-5"
                       >
                         COD
                       </label>
                       <input
-                        className="ml-sm-2"
+                        className="ml-sm-2 mr-2"
                         id="payment Type"
                         type="checkbox"
                         name="collectionType"
@@ -633,6 +676,8 @@ const CheckOutLayout = () => {
                           setPaymentType(e.target.checked ? "online" : "cod")
                         }
                       />{" "}
+                     <img src="https://ik.imagekit.io/InFutiveTechnology/kaivee/rupee%20(1).svg?updatedAt=1745055252308" alt="Online" className="w-8 h-8" />
+
                       <label
                         htmlFor="payment Type"
                         className=" mb-0 checked-text text-[18px] font-source-pro"
@@ -782,29 +827,39 @@ const CheckOutLayout = () => {
       {memberOpen && (
         <CheckOutAddMemeberModal setOpen={setMemberOpen} open={memberOpen} />
       )}
-      {showAlert && (
-        <AlertModal 
-          message={alertMessage} 
-          onClose={() => setShowAlert(false)}
-        />
-      )}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+          }
+          @-webkit-keyframes bounce {
+            0%, 100% { -webkit-transform: translateY(0); }
+            50% { -webkit-transform: translateY(-10px); }
+          }
+          @keyframes slideIn {
+            from {
+              transform: translate(-50%, -100%);
+              opacity: 0;
+            }
+            to {
+              transform: translate(-50%, 0);
+              opacity: 1;
+            }
+          }
+          @-webkit-keyframes slideIn {
+            from {
+              -webkit-transform: translate(-50%, -100%);
+              opacity: 0;
+            }
+            to {
+              -webkit-transform: translate(-50%, 0);
+              opacity: 1;
+            }
+          }
+        `
+      }} />
     </>
-  );
-};
-
-const AlertModal = ({ message, onClose }) => {
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-      <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4">
-        <p className="text-lg text-center text-red-600 mb-4">{message}</p>
-        <button 
-          onClick={onClose}
-          className="w-full bg-[#D41958] text-white py-2 rounded-lg hover:bg-[#B31547]"
-        >
-          Okay
-        </button>
-      </div>
-    </div>
   );
 };
 
