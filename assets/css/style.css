@@ -12064,3 +12064,11 @@ input.contact-submitbutton {
   background-color: transparent !important;
 }
 
+input#payment\ Type {
+  margin-left: 33px !important;
+}
+@media only screen and (max-width: 768px) {
+  input#payment\ Type {
+    margin-left: -18px !important;
+  }
+}

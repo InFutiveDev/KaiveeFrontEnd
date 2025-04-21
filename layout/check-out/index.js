@@ -661,12 +661,13 @@ const CheckOutLayout = () => {
 
                       <label
                         htmlFor="cod"
-                        className=" mb-0 checked-text text-[18px] font-source-pro mr-5"
+                        className=" mb-0 checked-text text-[18px] font-source-pro mr-5 "
+                       
                       >
                         COD
                       </label>
-                      <input
-                        className="ml-sm-2 mr-2"
+                      <input 
+                        className="ml-sm-2 mr-2 "
                         id="payment Type"
                         type="checkbox"
                         name="collectionType"
@@ -680,7 +681,8 @@ const CheckOutLayout = () => {
 
                       <label
                         htmlFor="payment Type"
-                        className=" mb-0 checked-text text-[18px] font-source-pro"
+                        className=" mb-0 checked-text text-[18px] font-source-pro "
+                        
                       >
                         Online Payment
                       </label>
@@ -689,9 +691,9 @@ const CheckOutLayout = () => {
                   {collectionType === "home-collection" ? (
                     <div>
                       {/* Date Section */}
-                      <div className="grid gap-2 grid-cols-1">
+                      <div className="grid gap-2 grid-cols-1 mt-4">
                         <div>
-                          <p className="text-[16px] text-gray-700">Date</p>
+                          <p className="text-[16px] font-semibold text-gray-800 mb-2">Date</p>
                           <div className="flex gap-[6px]">
                             <input
                               type="date"
