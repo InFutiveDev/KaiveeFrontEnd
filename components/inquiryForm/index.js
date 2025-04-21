@@ -44,6 +44,7 @@ const InquiryForm = ({
           patient_name: "",
           patient_email: "",
           mobile_number: "",
+          appointment_date: "",
           message: "",
           inquiry_from: "Kaivee HealthCare website",
           url: window.location.href,
@@ -137,6 +138,33 @@ const InquiryForm = ({
           {errorKeyName === "mobile_number" && (
             <p className="text-red-500 text-sm">Please Enter your number</p>
           )}
+
+          <label className="col-form-label md:text-[16px] text-[14px]">
+            Appointment Date
+          </label>
+          <input
+            value={payload?.appointment_date || ""}
+            type="text"
+            className="form-control rounded placeholder:font-[300] placeholder:text-[14px]"
+            name="appointment_date"
+            maxLength="10"
+            placeholder="DD/MM/YYYY or DD-MM-YYYY"
+            onChange={(e) => {
+              const val = e.target.value;
+              if (/^[0-9\/-]*$/.test(val)) {
+                handleChange({
+                  target: {
+                    name: "appointment_date",
+                    value: val,
+                  },
+                });
+              }
+            }}
+          />
+          {errorKeyName === "appointment_date" && (
+            <p className="text-red-500 text-sm">Please mention date</p>
+          )}
+
 
           <label className="col-form-label md:text-[16px] text-[14px]">
             Message *

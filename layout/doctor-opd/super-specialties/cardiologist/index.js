@@ -155,7 +155,7 @@ const DoctorOPDLayout = () => {
 
       {/* When to See a Cardiologist */}
       <div className="mt-12 flex flex-col lg:flex-row gap-8">
-        <div className="lg:w-1/2">
+        <div className="lg:w-2/3">
           <h2 className="text-2xl font-semibold text-gray-800">
             When Should You See a Cardiologist?
           </h2>
@@ -169,7 +169,9 @@ const DoctorOPDLayout = () => {
           </ul>
         </div>
         <div className="lg:w-1/2 flex justify-center">
-          <InquiryForm />
+        <div className="w-full">
+    <InquiryForm />
+  </div>
         </div>
       </div>
 

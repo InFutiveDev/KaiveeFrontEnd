@@ -102,7 +102,9 @@ const DoctorOPDLayout = () => {
       </p>
     </div>
     <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0 pt-[60px]">
-      <InquiryForm />
+    <div className="w-full">
+    <InquiryForm />
+  </div>
     </div>
   </div>
   {/* Why Choose Section */}

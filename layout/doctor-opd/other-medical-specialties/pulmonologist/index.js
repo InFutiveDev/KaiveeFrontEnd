@@ -144,7 +144,7 @@ const DoctorOPDLayout = () => {
 
       {/* What Happens in a Pulmonary Consultation */}
       <div className="mt-12 flex flex-col lg:flex-row gap-8">
-      <div className="lg:w-1/2">
+      <div className="lg:w-2/3">
         <h2 className="text-2xl font-semibold text-gray-800">
           What to Expect During a Pulmonary Consultation
         </h2>
@@ -156,7 +156,9 @@ const DoctorOPDLayout = () => {
       </div>
 
       <div className="lg:w-1/2 flex justify-center">
-          <InquiryForm />
+      <div className="w-full">
+    <InquiryForm />
+  </div>
         </div>
         </div>
     

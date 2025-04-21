@@ -176,7 +176,9 @@ const DoctorOPDLayout = () => {
 
   {/* Right Section: Enquiry Form */}
   <div className="lg:w-1/3 flex justify-center">
+  <div className="w-full">
     <InquiryForm />
+  </div>
   </div>
 </div>
 

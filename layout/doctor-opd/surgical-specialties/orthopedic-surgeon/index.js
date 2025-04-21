@@ -174,7 +174,7 @@ const DoctorOPDLayout = () => {
 
   {/* How to Book an Appointment */}
   <div className="mt-12 flex flex-col lg:flex-row items-start gap-8">
-    <div className="lg:w-1/2">
+    <div className="lg:w-2/3">
       <h2 className="mt-4 text-2xl font-semibold text-gray-800 text-center lg:text-left">
         How to Book an Orthopaedic Surgeon Appointment?
       </h2>
@@ -207,7 +207,9 @@ const DoctorOPDLayout = () => {
 
     {/* Inquiry Form */}
     <div className="w-full lg:w-1/2 flex justify-center">
-      <InquiryForm />
+    <div className="w-full">
+    <InquiryForm />
+  </div>
     </div>
   </div>
 </div>

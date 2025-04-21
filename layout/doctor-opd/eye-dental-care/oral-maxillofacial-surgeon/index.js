@@ -160,7 +160,9 @@ const DoctorOPDLayout = () => {
 
     {/* Inquiry Form */}
     <div className="lg:w-1/3 flex justify-center">
-      <InquiryForm />
+    <div className="w-full">
+    <InquiryForm />
+  </div>
     </div>
   </div>
 </div>

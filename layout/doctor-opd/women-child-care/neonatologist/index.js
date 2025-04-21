@@ -161,7 +161,9 @@ const DoctorOPDLayout = () => {
       Our Neonatology team at Kaivee Healthcare is dedicated in providing care for small lives requiring skill, patience, and constant attention.      </p>
     </div>
     <div className="lg:w-1/3 flex justify-center">
-      <InquiryForm />
+    <div className="w-full">
+    <InquiryForm />
+  </div>
     </div>
   </div>
 
