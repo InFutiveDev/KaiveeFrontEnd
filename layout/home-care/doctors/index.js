@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorLayout = () => {
   return (
@@ -199,15 +201,36 @@ const DoctorLayout = () => {
 
 
   {/* Call to Action */}
-  <div className="mt-12 text-center">
+  <div className="mt-12 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 bg-[#F9FAFB] p-6 rounded-xl shadow">
+  {/* Left Content */}
+  <div className="lg:w-2/3 w-full">
     <h2 className="text-2xl font-bold text-gray-900 mb-4">
       Book a Doctor Visit at Home with Kaivee Healthcare Today
     </h2>
-    <p className="text-lg text-gray-700 mb-6">
-      Avoid the hassle of clinic visits. Get expert medical care at your convenience.We are a team of professionals who provide high-quality medical care in the comfort of your own home.
+    <p className="text-lg text-gray-700 mb-4">
+      Avoid the hassle of clinic visits. Get expert medical care at your convenience. We are a team of professionals who provide high-quality medical care in the comfort of your own home.
     </p>
-   
+    <h3 className="text-2xl font-semibold text-gray-900 mb-2">Need Help Deciding?</h3>
+      <p className="text-lg text-gray-700 mb-4">
+        Our medical team is available to guide you on the best at-home care services tailored to your health needs.
+      </p>
+      <ul className="list-disc list-inside text-lg text-gray-700">
+        <li className="mb-1">Talk to a coordinator</li>
+        <li className="mb-1">Understand your options</li>
+        <li className="mb-1">Book same-day visits</li>
+      </ul>
   </div>
+  {/* Additional Right Content */}
+  
+     
+   
+
+  {/* Right Inquiry Form */}
+  <div className="lg:w-1/3 w-full rounded-lg shadow-md">
+    <InquiryForm />
+  </div>
+</div>
+
 </div>
 <div className="bg-[#FAFAFA]">
          <WhyChoose data={data} />

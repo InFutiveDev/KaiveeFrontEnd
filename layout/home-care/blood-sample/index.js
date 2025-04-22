@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const BloodSampleLayout = () => {
   return (
@@ -38,6 +40,10 @@ const BloodSampleLayout = () => {
        
       </section>
        
+      <div
+  className="bg-[url('https://ik.imagekit.io/InFutiveTechnology/kaivee/beautiful-home_24877-50819.avif?updatedAt=1745297582785')] bg-cover bg-center bg-no-repeat"
+>
+  <div className="bg-white/90 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4 text-center text-[#8DBD4D]">
       Blood Sample Collection at Home
@@ -111,19 +117,45 @@ const BloodSampleLayout = () => {
       </p>
     </div>
   </div>
-  <div className=" mx-auto mt-12 p-6 bg-[#D419580D] border-l-4 border-[#D41958] rounded-lg">
-  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+  <div className="mx-auto mt-12 p-6 bg-[#D419580D] border-l-4 border-[#D41958] rounded-lg">
+  <h2 className="text-2xl font-semibold text-gray-900 mb-8">
     What You Should Know About Home Sample Collection
   </h2>
-  <ul className="list-disc list-inside text-gray-700">
-    <li className="mb-2">Older patients who value the familiarity of home-based services.</li>
-    <li className="mb-2">People with chronic illness needing frequent examinations.</li>
-    <li className="mb-2">Individuals with restricted mobility or those recovering from surgery.</li>
-    <li className="mb-2">Professionals who are pressed for time and need flexibility.</li>
-    <li className="mb-2">Parents seeking child-friendly services for pediatric tests.</li>
-  </ul>
+
+  {/* Flex container for content + form */}
+  <div className="flex flex-col lg:flex-row gap-8">
+    {/* Left: Text content */}
+    <div className="lg:w-2/3 w-full">
+      <ul className="list-disc list-inside text-gray-700 mb-6">
+        <li className="mb-2">Older patients who value the familiarity of home-based services.</li>
+        <li className="mb-2">People with chronic illness needing frequent examinations.</li>
+        <li className="mb-2">Individuals with restricted mobility or those recovering from surgery.</li>
+        <li className="mb-2">Professionals who are pressed for time and need flexibility.</li>
+        <li className="mb-2">Parents seeking child-friendly services for pediatric tests.</li>
+      </ul>
+
+      <p className="text-gray-800 text-2xl font-medium mb-2">
+        Schedule a home blood sample collection now
+      </p>
+      <p className="text-gray-700 text-xl mb-4">
+        If you require a blood test and would rather avoid the hassle of hospital or clinic visits, 
+        <span className="font-semibold"> Kaivee Healthcare </span> is a go-to name. 
+        <span className="font-semibold"> Blood Sample Collection at Home</span> — We collect samples 
+        at your home with utmost care so you can see your test results without any ruckus.
+      </p>
+    </div>
+
+    {/* Right: Inquiry form */}
+    <div className="lg:w-1/3 w-full">
+      <InquiryForm />
+    </div>
+  </div>
 </div>
 
+
+
+</div>
+</div>
 </div>
 
      

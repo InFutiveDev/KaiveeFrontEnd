@@ -18,6 +18,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const SleepLayout = () => {
   return (
@@ -93,25 +95,36 @@ const SleepLayout = () => {
   </div>
 
   {/* Who Needs a Sleep Study? */}
-  <div className="mt-8 bg-[#D419580D] pl-2">
-    <h2 className="text-2xl font-semibold">Who Should Get a Sleep Study at Home?</h2>
-    <ul className="list-disc pl-5 mt-4 text-gray-700">
+  <div className="mt-8 bg-[#D419580D] p-6 rounded-xl shadow flex flex-col lg:flex-row gap-10 items-start">
+
+  {/* Left Side: Content */}
+  <div className="lg:w-2/3 w-full">
+    <h2 className="text-2xl font-semibold text-gray-800">
+      Who Should Get a Sleep Study at Home?
+    </h2>
+    <ul className="list-disc pl-5 mt-4 text-gray-700 space-y-2">
       <li>People who snore loudly or experience gasping during sleep.</li>
       <li>Individuals with excessive daytime sleepiness or trouble focusing.</li>
       <li>Those with hypertension or heart disease linked to sleep disorders.</li>
       <li>Patients advised by their doctor to check for sleep apnea.</li>
       <li>Anyone suffering from insomnia or restless sleep patterns.</li>
     </ul>
-  </div>
-
-  {/* Call to Action */}
-  <div className="mt-8 text-center">
-    <h2 className="text-xl font-semibold">Schedule Your At-Home Sleep Study Now</h2>
+    <h2 className="text-xl font-semibold mt-4">Schedule Your At-Home Sleep Study Now</h2>
     <p className="mt-2 text-gray-700">
       If you or a loved one is struggling with sleep issues, do not delay diagnosis. 
       Kaivee Healthcare is Sleep Study at Home makes it easy and convenient.
     </p>
   </div>
+
+  {/* Right Side: Inquiry Form */}
+  <div className="lg:w-1/3 w-full">
+    <InquiryForm />
+  </div>
+
+</div>
+
+
+  
 </div>
 
  <div className="bg-[#FAFAFA]">

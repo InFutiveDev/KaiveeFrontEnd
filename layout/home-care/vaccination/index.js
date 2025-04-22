@@ -18,6 +18,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const EcgLayout = () => {
   return (
@@ -106,22 +108,32 @@ const EcgLayout = () => {
         </ul>
       </div>
       
-      <div className="mt-8 ">
-  <h2 className="text-2xl font-semibold">Who is Eligible?</h2>
-  <ul className="mt-4 text-gray-700 list-disc pl-5 space-y-2 text-left inline-block">
-    <li>Seniors, children, and people with limited mobility</li>
-    <li>Professionals needing flexible scheduling</li>
-    <li>Patients with chronic conditions</li>
-    <li>Frequent travelers needing destination-based vaccines</li>
-  </ul>
-</div>
+      <div className="mt-8 flex flex-col lg:flex-row gap-10 items-start bg-[#F9FAFB] p-6 rounded-xl shadow">
 
-      
-      <div className="mt-8 text-center">
-        <h2 className="text-2xl font-semibold">Make an Appointment Today</h2>
+  {/* Left Side: Eligibility List */}
+  <div className="lg:w-2/3 w-full">
+    <h2 className="text-2xl font-semibold text-gray-800">Who is Eligible?</h2>
+    <ul className="mt-4 text-gray-700 list-disc pl-5 space-y-2 text-left">
+      <li>Seniors, children, and people with limited mobility</li>
+      <li>Professionals needing flexible scheduling</li>
+      <li>Patients with chronic conditions</li>
+      <li>Frequent travelers needing destination-based vaccines</li>
+    </ul>
+    <h2 className="text-2xl font-semibold mt-4">Make an Appointment Today</h2>
         <p className="mt-4 text-gray-700">Don't delay essential vaccinations. Get protected with Kaivee Healthcare's home vaccination service.</p>
         
-      </div>
+  </div>
+
+
+  {/* Right Side: Inquiry Form */}
+  <div className="lg:w-1/3 w-full">
+    <InquiryForm />
+  </div>
+
+</div>
+
+
+
     
  </div>
 

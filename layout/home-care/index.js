@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const HomeCareLayout = () => {
   return (
@@ -132,22 +134,21 @@ const HomeCareLayout = () => {
       </div>
 
       {/* When Do You Need Home Nursing? */}
-      <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md">
-        <h2 className="text-2xl font-semibold text-gray-800 text-center">
-          When Do You Need Nursing Care at Home?
-        </h2>
-        <ul className="list-disc pl-5 space-y-2 text-gray-700 mt-4">
-          <li>After extensive surgery (orthopaedic, cardiac, etc.) involving post post-operative care.</li>
-          <li> For older family members that require daily health check-ups.</li>
-          <li> In recovery after injury or stroke.</li>
-          <li> For patients needing palliative or end-of-life care.</li>
-          <li>Chronic conditions like diabetes, hypertension, or COPD require professional interventions at home.</li>
-        </ul>
-      </div>
+      <div className="mt-12 bg-[#D419580D] p-6 rounded-xl shadow-md flex flex-col lg:flex-row gap-10 items-start">
 
-      {/* CTA Section */}
-      <div className="mt-12 text-center">
-        <h2 className="text-2xl font-semibold text-gray-800">
+{/* Left Side: Content */}
+<div className="lg:w-2/3 w-full">
+  <h2 className="text-2xl font-semibold text-gray-800 text-center lg:text-left">
+    When Do You Need Nursing Care at Home?
+  </h2>
+  <ul className="list-disc pl-5 space-y-2 text-gray-700 mt-4">
+    <li>After extensive surgery (orthopaedic, cardiac, etc.) involving post-operative care.</li>
+    <li>For older family members that require daily health check-ups.</li>
+    <li>In recovery after injury or stroke.</li>
+    <li>For patients needing palliative or end-of-life care.</li>
+    <li>Chronic conditions like diabetes, hypertension, or COPD require professional interventions at home.</li>
+  </ul>
+  <h2 className="text-2xl font-semibold text-gray-800 mt-4">
         Allow Kaivee Healthcare Help You and Your Family is Health Journey
         </h2>
         <p className="text-gray-700 mt-4">
@@ -155,8 +156,17 @@ const HomeCareLayout = () => {
 Our trained professionals deliver hospital-level expertise in the comfort and safety of your own home.
 You can trust us to offer compassionate support that is specific to your loved one is health needs.
         </p>
-       
-      </div>
+</div>
+
+{/* Right Side: Inquiry Form */}
+<div className="lg:w-1/3 w-full">
+  <InquiryForm />
+</div>
+
+</div>
+
+
+    
     </div>
       <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />

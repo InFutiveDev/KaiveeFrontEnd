@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const PhysioLayout = () => {
   return (
@@ -181,7 +183,7 @@ const PhysioLayout = () => {
 
   <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
     {/* Text Section */}
-    <div className="md:w-1/2">
+    <div className="md:w-2/3">
       <ul className="list-disc list-inside text-gray-700">
         <li className="mb-2">Patients recovering from orthopedic surgeries (e.g., joint replacements).</li>
         <li className="mb-2">Individuals with chronic pain, arthritis, or musculoskeletal disorders.</li>
@@ -190,28 +192,26 @@ const PhysioLayout = () => {
         <li className="mb-2">Athletes recovering from sports injuries.</li>
         <li className="mb-2">Patients needing post-injury rehabilitation programs.</li>
       </ul>
+      <h2 className="text-2xl font-semibold text-gray-900 mt-4">
+      Book Your Home Physiotherapy Session Today!
+    </h2>
+    <p className="text-xl text-gray-700 mt-2">
+    For those who require physiotherapy support yet find it challenging to travel, Kaivee Healthcare is Physiotherapy at Home service is the perfect option. Our skilled therapists are here to assist you in regaining strength, mobility, and confidence—all from the comfort of home!
+    </p>
     </div>
 
-    {/* Image Section */}
-    <div className="md:w-1/2 flex justify-center">
-      <Image 
-        src={img2} 
-        alt="Physiotherapy at Home" 
-        className="rounded-xl shadow-md w-[80%] max-w-[400px] "
-      />
-    </div>
+   
+    {/* Right Side: Inquiry Form */}
+<div className="lg:w-1/3 w-full">
+  <InquiryForm />
+</div>
   </div>
 </div>
 
 
   {/* Call to Action */}
   <div className="mt-12 text-center">
-    <h2 className="text-2xl font-bold text-gray-900 mb-4">
-      Book Your Home Physiotherapy Session Today!
-    </h2>
-    <p className="text-lg text-gray-700 mb-6">
-    For those who require physiotherapy support yet find it challenging to travel, Kaivee Healthcare is Physiotherapy at Home service is the perfect option. Our skilled therapists are here to assist you in regaining strength, mobility, and confidence—all from the comfort of home!
-    </p>
+    
     
   </div>
   <div className="bg-[#FAFAFA]">

@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const HolterLayout = () => {
   return (
@@ -95,23 +97,33 @@ const HolterLayout = () => {
 
 
   {/* Eligibility */}
- <div className="mt-8">
-    <h2 className="text-2xl font-semibold">Who is Eligible?</h2>
-    <ul className="mt-4 text-gray-700 list-disc pl-5">
-      <li>People with irregular heartbeat or palpitations.</li>
-      <li>Patients experiencing dizziness, fainting, or chest discomfort.</li>
-      <li>Individuals requiring post-procedure or medication adjustment monitoring.</li>
-      <li>General cardiac testing as advised by a doctor.</li>
-      <li>Unique patient group: Those seen by their cardiologist and advised to monitor arrhythmias over time.</li>
-    </ul>
-  </div> 
+  <div className="mt-8 flex flex-col lg:flex-row gap-10 items-start bg-[#F9FAFB] p-6 rounded-xl shadow">
 
-  {/* Call to Action */}
-  <div className="mt-8">
-    <h2 className="text-xl font-semibold">Schedule Your Holter Monitor Appointment Now</h2>
+{/* Left Side: Eligibility List */}
+<div className="lg:w-2/3 w-full">
+  <h2 className="text-2xl font-semibold text-gray-800">Who is Eligible?</h2>
+  <ul className="mt-4 text-gray-700 list-disc pl-5 space-y-2">
+    <li>People with irregular heartbeat or palpitations.</li>
+    <li>Patients experiencing dizziness, fainting, or chest discomfort.</li>
+    <li>Individuals requiring post-procedure or medication adjustment monitoring.</li>
+    <li>General cardiac testing as advised by a doctor.</li>
+    <li>Unique patient group: Those seen by their cardiologist and advised to monitor arrhythmias over time.</li>
+  </ul>
+
+  <h2 className="text-xl font-semibold mt-4">Schedule Your Holter Monitor Appointment Now</h2>
     <p className="mt-2 text-gray-700">
     If your physician has suggested continuous heart monitoring, Kaivee Healthcare has an easy solution. Our Holter Monitoring at Home service guarantees precise testing without interfering with your routine.    </p>
-  </div>
+</div>
+
+{/* Right Side: Inquiry Form */}
+<div className="lg:w-1/3 w-full">
+  <InquiryForm />
+</div>
+
+</div>
+
+
+ 
 </div>
 
   <div className="bg-[#FAFAFA]">

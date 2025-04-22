@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const EcgLayout = () => {
   return (
@@ -134,28 +136,40 @@ const EcgLayout = () => {
       </div>
 
       {/* When to Choose ECG & X-Ray at Home */}
-      <div className="mt-12 bg-gray-50 p-6 rounded-xl shadow-md">
-        <h2 className="text-2xl font-semibold text-gray-800 text-center">
-          When Should You Opt for ECG & X-Ray at Home?
-        </h2>
-        <ul className="list-disc pl-5 space-y-2 text-gray-700 mt-4">
-          <li>Chest pain, palpitations, or breathlessness.</li>
-          <li>Mobility challenges or difficulty visiting a diagnostic center.</li>
-          <li>Post-surgical recovery requiring regular imaging.</li>
-          <li>Elderly patients needing routine monitoring.</li>
-          <li>Avoiding crowded hospitals post-COVID.</li>
-        </ul>
-      </div>
+     
 
       {/* CTA Section */}
-      <div className="mt-12 text-center">
-        <h2 className="text-2xl font-semibold text-gray-800">
-          Your Health, Your Home: Book ECG & X-Ray Services Now
-        </h2>
-        <p className="text-gray-700 mt-4">
-        There is no reason to hold back on vital diagnostics. You get hospital-grade diagnostics without having to set foot outside, thanks to Kaivee Healthcare is ECG & X-Ray at Home services.        </p>
-       
-      </div>
+      <div className="mt-12 flex flex-col lg:flex-row items-start gap-10 bg-[#F9FAFB] p-6 rounded-xl shadow">
+
+  {/* Left Side: Heading, Description, and List */}
+  <div className="lg:w-2/3 w-full text-left">
+    <h2 className="text-2xl font-semibold text-gray-800">
+      Your Health, Your Home: Book ECG & X-Ray Services Now
+    </h2>
+    <p className="text-gray-700 mt-4">
+      There is no reason to hold back on vital diagnostics. You get hospital-grade diagnostics without having to set foot outside, thanks to Kaivee Healthcare's ECG & X-Ray at Home services.
+    </p>
+
+    <h2 className="text-2xl font-semibold text-gray-800 mt-8">
+      When Should You Opt for ECG & X-Ray at Home?
+    </h2>
+    <ul className="list-disc pl-5 space-y-2 text-gray-700 mt-4">
+      <li>Chest pain, palpitations, or breathlessness.</li>
+      <li>Mobility challenges or difficulty visiting a diagnostic center.</li>
+      <li>Post-surgical recovery requiring regular imaging.</li>
+      <li>Elderly patients needing routine monitoring.</li>
+      <li>Avoiding crowded hospitals post-COVID.</li>
+    </ul>
+  </div>
+
+  {/* Right Side: Inquiry Form */}
+  <div className="lg:w-1/3 w-full">
+    <InquiryForm />
+  </div>
+
+</div>
+
+
     </div>
  
 
