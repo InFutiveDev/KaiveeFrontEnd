@@ -59,7 +59,7 @@ const Alternativebanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center"
-          src={BannerImage}
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-04-19%20at%2013.02.22%20(1).jpg?updatedAt=1745402415447"
         />
       </div>
       <div className="relative w-full  items-center flex  sm:hidden">
@@ -70,7 +70,7 @@ const Alternativebanner = () => {
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src={BannerImage}
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-04-19%20at%2013.02.22%20(1).jpg?updatedAt=1745402415447"
         />
       </div>
     </div>
