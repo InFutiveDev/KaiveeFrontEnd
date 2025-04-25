@@ -63,7 +63,7 @@ const DoctorOPDLayout = () => {
     </div>
     <div className="flex justify-center lg:w-1/2">
       <Image
-        src="https://ik.imagekit.io/InFutiveTechnology/kaivee/newborn-care.jpg" 
+        src="https://ik.imagekit.io/InFutiveTechnology/kaivee/mother-holding-adorable-little-baby_23-2148342019.avif?updatedAt=1745583047198" 
         alt="Neonatology Care"
         width={500}
         height={250}
