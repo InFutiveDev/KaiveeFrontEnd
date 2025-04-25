@@ -16,6 +16,7 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import CorporateHealthEnquiry from "components/inquiryForm/CorporateHealthEnquiry";
 
 const AnnualLayout = () => {
   return (
@@ -127,33 +128,34 @@ const AnnualLayout = () => {
 
 
       {/* Who Should Get an Annual Health Check-up? */}
-      <div className="mt-10 flex flex-col lg:flex-row items-center lg:gap-24 md:gap-15 gap-5 ">
+      <div className="mt-10 flex flex-col lg:flex-row items-start lg:gap-24 md:gap-15 gap-10">
   {/* Left Side - Text Content */}
   <div className="flex-1">
     <h2 className="text-2xl font-semibold mb-4">
       Who Should Go for an Annual Health Check-up?
     </h2>
-    <ul className="list-disc ml-6 text-lg text-gray-700">
+    <ul className="list-disc ml-6 text-lg text-gray-700 space-y-2">
       <li>Individuals aged over 30 years</li>
       <li>Those with a hereditary history of chronic diseases</li>
       <li>Corporate employees in wellness programs</li>
       <li>Elderly individuals needing regular check-ups</li>
       <li>People with lifestyle risks such as smoking, obesity, or excessive stress</li>
     </ul>
+
+    <h2 className="text-2xl font-semibold  mt-6">
+        Why you should invest in your health with Kaivee Healthcare
+        </h2>
+        <p className="text-lg text-gray-700 mt-4 space-y-2">
+        At Kaivee Healthcare, an Annual Health Check-up is not just a routine test, but a step towards a healthy and long life. Be sure to keep your health ahead of the curve.
+        </p>
   </div>
 
-  {/* Right Side - Image */}
-  <div className="flex justify-center lg:w-1/2">
-      <Image
-        src="https://ik.imagekit.io/InFutiveTechnology/kaivee/appointment-booking-with-calendar_23-2148549799.jpg?updatedAt=1743057917427"
-        alt="Annual Health Check-up"
-        width={450}
-        height={200}
-        className="rounded-xl shadow-md  w-[80%] max-w-[300px]"
-      />
-    </div>
-  
+  {/* Right Side - Form */}
+  <div className="w-full lg:w-[550px]">
+    <CorporateHealthEnquiry />
+  </div>
 </div>
+
 
 
       {/* Corporate Wellness Packages */}
@@ -182,16 +184,7 @@ const AnnualLayout = () => {
         </div>
       </div>
 
-      {/* Call-to-Action */}
-      <div className="mt-10 text-center">
-        <h2 className="text-2xl font-semibold  mb-4">
-        Why you should invest in your health with Kaivee Healthcare
-        </h2>
-        <p className="text-lg text-gray-700">
-        At Kaivee Healthcare, an Annual Health Check-up is not just a routine test, but a step towards a healthy and long life. Be sure to keep your health ahead of the curve.
-        </p>
-       
-      </div>
+     
     </div>
 
 
