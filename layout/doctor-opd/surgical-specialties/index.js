@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -146,12 +148,29 @@ const DoctorOPDLayout = () => {
 
  
 
-  {/* Conclusion */}
-  <div className="mt-12 text-center max-w-3xl mx-auto">
-    <h3 className="text-2xl font-semibold text-gray-800">Surgery with the Support of Those You Can Trust</h3>
-    <p className="text-gray-700 mt-2">
-      Surgery can feel overwhelming, but with the right team, it becomes an opportunity for healing. Our Surgical Specialties department is focused on providing safe, advanced, and compassionate care to restore your health and daily life.
-    </p>
+  
+  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    {/* Left Section */}
+    <div className="lg:w-2/3 flex flex-col items-center">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">
+        Surgery with the Support of Those You Can Trust
+      </h3>
+      <p className="text-gray-700 mt-4 text-center">
+        Surgery can feel overwhelming, but with the right team, it becomes an opportunity for healing. Our Surgical Specialties department is focused on providing safe, advanced, and compassionate care to restore your health and daily life.
+      </p>
+      <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/high-angle-surgical-instruments-arrangement_23-2149352198.jpg?updatedAt=1745835562937"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mt-4"
+    />
+    </div>
+
+    {/* Right Section */}
+    <div className="lg:w-1/3 w-full  justify-end">
+      <InquiryForm />
+    </div>
   </div>
   <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />

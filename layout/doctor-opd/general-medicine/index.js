@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -153,23 +155,28 @@ const DoctorOPDLayout = () => {
   </div>
 
 
-   {/* IMAGE SECTION */}
-   <div className="flex flex-wrap justify-center gap-6 mt-12">
+  
+  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    <div className="lg:w-1/2">
     <Image
       src="https://ik.imagekit.io/InFutiveTechnology/kaivee/portrait-female-pediatrician-work_23-2151686700.jpg?updatedAt=1742981219205"
       alt="Doctor Consultation"
       width={500}
       height={300}
-      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105"
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mb-2"
     />
-    <Image
+      <Image
       src="https://ik.imagekit.io/InFutiveTechnology/kaivee/male-doctor-examining-patient_1170-2148.jpg?updatedAt=1742815147139"
       alt="Doctor Consultation"
       width={500}
       height={300}
       className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105"
     />
-  </div>
+    </div>
+<div className="lg:w-1/3 w-full">
+      <InquiryForm />
+    </div>
+    </div>
 </div>
 
 

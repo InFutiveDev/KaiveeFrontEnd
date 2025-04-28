@@ -25,6 +25,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -153,14 +155,30 @@ const DoctorOPDLayout = () => {
     </div>
   </div>
 
-  {/* Final Call to Action */}
-  <div className="mt-12 text-center max-w-3xl mx-auto">
-    <h3 className="text-2xl font-semibold text-gray-800">Care That Listens, Supports, and Grows With You</h3>
-    <p className="text-gray-700 mt-4">
+  
+  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    {/* Left Section */}
+    <div className="lg:w-2/3 flex flex-col items-center">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">
+    Care That Listens, Supports, and Grows With You
+      </h3>
+      <p className="text-gray-700 mt-4 text-center">
       From a teenager's first health check to a mother's pregnancy journey to a child's early development,  
       Kaivee Healthcare's Women & Child Care team provides continuous, compassionate, and expert care.  
-      We don't just treat—we nurture. We empower families with better health, confidence, and informed decisions at every step.
-    </p>
+      We don't just treat—we nurture. We empower families with better health, confidence, and informed decisions at every step.  </p>
+      <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/mother-daughter-spending-time-together-outside-park-mother-s-day_23-2150293152.jpg?updatedAt=1745840125046"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mt-4"
+    />
+    </div>
+
+    {/* Right Section */}
+    <div className="lg:w-1/3 w-full  justify-end">
+      <InquiryForm />
+    </div>
   </div>
   <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />

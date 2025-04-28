@@ -22,6 +22,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -141,16 +143,34 @@ const DoctorOPDLayout = () => {
     </div>
   </div>
 
-  {/* Conclusion */}
-  <div className="mt-12 text-center max-w-3xl mx-auto">
-    <h3 className="text-2xl font-semibold text-gray-800">Specialized Treatment for All Complex Conditions</h3>
-    <p className="text-gray-700 mt-4">
+  
+  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+  {/* Left Section */}
+  <div className="lg:w-2/3 flex flex-col items-center">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">
+      Specialized Treatment for All Complex Conditions
+    </h3>
+    <p className="text-gray-700 mt-4 text-center">
       For conditions that require depth over breadth, Kaivee Healthcare's Super Specialties Department ensures highly focused, collaborative, and compassionate care that prioritizes your long-term health and recovery.
     </p>
+    <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/healthcare-concept-clinic_23-2151117899.jpg?updatedAt=1745836798075"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mt-4"
+    />
   </div>
+
+  {/* Right Section */}
+  <div className="lg:w-1/3 w-full  justify-end">
+    <InquiryForm />
+  </div>
+</div>
   <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />
       </div>
+      
 </div>
 
  

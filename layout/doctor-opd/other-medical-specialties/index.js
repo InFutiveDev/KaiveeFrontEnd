@@ -22,6 +22,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -140,13 +142,30 @@ const DoctorOPDLayout = () => {
     </div>
   </div>
 
-  {/* Conclusion */}
-  <div className="mt-12 text-center max-w-3xl mx-auto">
-    <h3 className="text-2xl font-semibold text-gray-800">Focused Care for Daily Problems and Long-Term Health</h3>
-    <p className="text-gray-700 mt-4">
+  
+  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    {/* Left Section */}
+    <div className="lg:w-2/3 flex flex-col items-center">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">
+    Focused Care for Daily Problems and Long-Term Health
+      </h3>
+      <p className="text-gray-700 mt-4 text-center">
       You shouldn't have to suffer from discomfort, worry, or chronic health problems.  
       If you're facing a condition that doesn't fit the traditional medical mold, let our trusted experts help you reclaim your health—one personalized consultation at a time.
-    </p>
+          </p>
+      <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/concerned-young-female-doctor-wearing-medical-robe-with-stethoscope-sits-desk-with-medical-tools-holding-x-ray-putting-hand-head-isolated-olive-green-wall_141793-105648.jpg?updatedAt=1745838813266"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mt-4"
+    />
+    </div>
+
+    {/* Right Section */}
+    <div className="lg:w-1/3 w-full  justify-end">
+      <InquiryForm />
+    </div>
   </div>
   <div className="bg-[#FAFAFA]">
         <WhyChoose data={data} />
