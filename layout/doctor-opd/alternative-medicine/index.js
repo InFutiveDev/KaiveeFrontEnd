@@ -22,6 +22,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -217,14 +219,30 @@ const DoctorOPDLayout = () => {
   </div>
 </div>
 
-  {/* CTA Section */}
-<div className="mt-12 text-center">
-  <h2 className="text-2xl font-semibold text-gray-800">
+  
+<div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    {/* Left Section */}
+    <div className="lg:w-2/3 flex flex-col items-center">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">
     Experience the Power of Holistic Healing
-  </h2>
-  <p className="text-gray-700 mt-4">
-  Recovery isn't only getting rid of symptoms; it's finding fullness again. Whether your goal is pain relief, regained mobility, or simply a more centered existence, you'll find a culture of care, collaboration, and transformation within Kaivee Healthcare's Alternative Medicine & Rehabilitation department.  </p>
-</div>
+      </h3>
+      <p className="text-gray-700 mt-4 text-center">
+      Recovery isn't only getting rid of symptoms; it's finding fullness again. Whether your goal is pain relief, regained mobility, or simply a more centered existence, you'll find a culture of care, collaboration, and transformation within Kaivee Healthcare's Alternative Medicine & Rehabilitation department.  </p>
+      
+      <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/essential-oil-peppermint-bottle-with-fresh-green-peppermint_1150-38022.jpg?updatedAt=1745902022628"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mt-4"
+    />
+    </div>
+
+    {/* Right Section */}
+    <div className="lg:w-1/3 w-full  justify-end">
+      <InquiryForm />
+    </div>
+  </div>
 </div>
 
 

@@ -22,6 +22,8 @@ import img66 from "assets/images/whychooseus/5-png.png";
 import img77 from "assets/images/whychooseus/6-png.png";
 import img88 from "assets/images/whychooseus/7-png.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const InquiryForm = dynamic(() => import("components/inquiryForm"));
 
 const DoctorOPDLayout = () => {
   return (
@@ -197,14 +199,30 @@ const DoctorOPDLayout = () => {
     </div>
   </div>
 
-  {/* CTA Section */}
-  <div className="mt-12 text-center">
-    <h2 className="text-2xl font-semibold text-gray-800">
-      Experience the Best in Eye & Dental Care
-    </h2>
-    <p className="text-gray-700 mt-4">
+
+
+  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    {/* Left Section */}
+    <div className="lg:w-2/3 flex flex-col items-center">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">
+    Experience the Best in Eye & Dental Care
+      </h3>
+      <p className="text-gray-700 mt-4 text-center">
       Whether it's a routine check-up, corrective treatment, or emergency care, our specialists are here to help. Book an appointment today at Kaivee Healthcare.
-    </p>
+      </p>
+      <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/close-up-dentist-instruments_23-2151042898.jpg?updatedAt=1745901482377"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mt-4"
+    />
+    </div>
+
+    {/* Right Section */}
+    <div className="lg:w-1/3 w-full  justify-end">
+      <InquiryForm />
+    </div>
   </div>
 </div>
 
