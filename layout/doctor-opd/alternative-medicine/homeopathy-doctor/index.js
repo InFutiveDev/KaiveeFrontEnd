@@ -92,19 +92,28 @@ const DoctorOPDLayout = () => {
     If you're seeking a medical approach that listens, understands, and heals naturally — without side effects — homeopathy could be your answer. It brings together ancient principles with modern insight, guiding you toward lasting wellness.
   </p>
 
-  <div className="flex flex-col lg:flex-row lg:justify-between gap-10 items-start">
-    <div className="lg:w-2/3">
-      <h3 className="text-2xl font-semibold text-blue-700 mt-8 mb-4">
-        Get Personalized Homeopathic Advice
+  
+  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    {/* Left Section */}
+    <div className="lg:w-2/3 flex flex-col items-center">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">
+    Get Personalized Homeopathic Advice
       </h3>
-      <p>
-        Whether you’re dealing with a chronic condition or looking for a holistic approach, our certified homeopaths are here to help. Book a consultation to discover remedies that work with your body — not against it.
-      </p>
+      <p className="text-gray-700 mt-4 text-center">
+      Whether you’re dealing with a chronic condition or looking for a holistic approach, our certified homeopaths are here to help. Book a consultation to discover remedies that work with your body — not against it.
+      </p>      
+      <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/essential-oil-peppermint-bottle-with-fresh-green-peppermint_1150-38022.jpg?updatedAt=1745902022628"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mt-4"
+    />
     </div>
-    <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0 pt-[60px]">
-    <div className="w-full">
-    <InquiryForm />
-  </div>
+
+    {/* Right Section */}
+    <div className="lg:w-1/3 w-full  justify-end">
+      <InquiryForm />
     </div>
   </div>
   {/* Why Choose Section */}

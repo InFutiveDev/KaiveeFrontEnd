@@ -138,26 +138,28 @@ const DoctorOPDLayout = () => {
       
   
 
-
-
-      <div className="flex flex-col lg:flex-row lg:justify-between gap-10 items-start">
-    
-    {/* Left: Text Section */}
-    <div className="lg:w-2/3">
-      <h3 className="text-2xl font-semibold text-blue-700 mt-8 mb-4">
-        Get Professional Advice to Begin Your Recovery
+  <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    {/* Left Section */}
+    <div className="lg:w-2/3 flex flex-col items-center">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">
+    Get Professional Advice to Begin Your Recovery
       </h3>
-      <p>
-        Our expert physiotherapists at Kaivee Healthcare are ready to help you regain strength, restore movement,
-        and live independently. Let's work together, session by session, toward a healthier and more mobile life.
-      </p>
+      <p className="text-gray-700 mt-4 text-center">
+      Our expert physiotherapists at Kaivee Healthcare are ready to help you regain strength, restore movement,
+      and live independently. Let's work together, session by session, toward a healthier and more mobile life.
+      </p>      
+      <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/practitioner-man-doctor-helping-retiree-senior-male-wheelchair-physiotherapy-strength-exercise_482257-12761.jpg?updatedAt=1745903842769"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mt-4"
+    />
     </div>
 
-    {/* Right: Inquiry Form */}
-    <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0 pt-[60px]">
-    <div className="w-full">
-    <InquiryForm />
-  </div>
+    {/* Right Section */}
+    <div className="lg:w-1/3 w-full  justify-end">
+      <InquiryForm />
     </div>
   </div>
   {/* Why Choose Section */}

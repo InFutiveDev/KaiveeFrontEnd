@@ -94,26 +94,30 @@ const DoctorOPDLayout = () => {
       
      
 
-     
 
-      <div className="flex flex-col lg:flex-row lg:justify-between gap-10 items-start mt-12">
-        {/* Left: Text Section */}
-        <div className="lg:w-2/3">
-          <h3 className="text-2xl font-semibold text-blue-700 mb-4">
-            Restore Balance with Ayurvedic Wisdom
-          </h3>
-          <p>
-            If you’re in search of a natural approach to managing chronic health conditions, building resilience or merely feeling more connected to your body, Ayurvedic care provides time-tested, individualized healing. Our Ayurveda Doctors at Kaivee Healthcare walk beside you on a path to wellness that honors tradition while embracing innovation.
-          </p>
-        </div>
+      <div className="mt-8 flex flex-col lg:flex-row items-center gap-8">
+    {/* Left Section */}
+    <div className="lg:w-2/3 flex flex-col items-center">
+    <h3 className="text-2xl font-semibold text-gray-800 text-center">
+    Restore Balance with Ayurvedic Wisdom
+      </h3>
+      <p className="text-gray-700 mt-4 text-center">
+      If you’re in search of a natural approach to managing chronic health conditions, building resilience or merely feeling more connected to your body, Ayurvedic care provides time-tested, individualized healing. Our Ayurveda Doctors at Kaivee Healthcare walk beside you on a path to wellness that honors tradition while embracing innovation.
+      </p>      
+      <Image
+      src="https://ik.imagekit.io/InFutiveTechnology/kaivee/person-conducting-reiki-therapy_23-2149403921.jpg?updatedAt=1745904867950"
+      alt="Doctor Consultation"
+      width={500}
+      height={300}
+      className="rounded-xl shadow-md w-[80%] max-w-[500px] transition-transform duration-500 hover:scale-105 mt-4"
+    />
+    </div>
 
-        {/* Right: Inquiry Form */}
-        <div className="lg:w-1/3 w-full flex justify-end mt-8 lg:mt-0 pt-[60px]">
-        <div className="w-full">
-    <InquiryForm />
+    {/* Right Section */}
+    <div className="lg:w-1/3 w-full  justify-end">
+      <InquiryForm />
+    </div>
   </div>
-        </div>
-      </div>
       {/* Why Choose Section */}
 <div className="bg-[#FAFAFA]">
   <WhyChoose data={data} />
