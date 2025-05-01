@@ -7,10 +7,10 @@ import img4 from "assets/images/Finalimg/Facility/nuerology.avif";
 import img5 from "assets/images/Finalimg/Facility/dental.jpeg";
 // import img6 from "assets/images/Finalimg/Facility/mammography.webp";
 import img7 from "assets/images/Finalimg/Facility/corinary.jpeg";
-import img8 from "assets/images/Finalimg/Facility/cardio.jpeg";
+import img8 from "assets/images/Finalimg/Facility/ptcet.avif";
 import img9 from "assets/images/Finalimg/Facility/nuclear1.jpeg";
 import img10 from "assets/images/Finalimg/Facility/dexa.avif";
-import img11 from "assets/images/Finalimg/Facility/pathalogy.avif";
+import img11 from "assets/images/Finalimg/Facility/angio.avif";
 import img13 from "assets/images/Finalimg/Facility/Fibroscan.webp";
 import { GET_ALL_HEALTHRISK } from "redux/actions/healthrisk";
 import { useEffect, useRef } from "react";
@@ -180,35 +180,35 @@ const servicesData = [
     imageSrc: img1,
     description:
       "At our facility, we offer MRI scans that provide unparalleled clarity in diagnosing various medical conditions.",
-    slug: "mri-scan-price-in-delhi",
+    slug: "mri-scan",
   },
   {
     title: "CT Scan",
     imageSrc: img2,
     description:
       "Get comprehensive insights into your health with our CT scan services.",
-    slug: "ct-scan-price-delhi",
+    slug: "ct-scan",
   },
   {
     title: "3D/4D Ultrasound",
     imageSrc: img12,
     description:
       "Experience the wonder of pregnancy with our advanced 3D/4D ultrasound services.",
-    slug: "3d-4d-ultrasound-near-me",
+    slug: "ultrasound",
   },
   {
     title: "Digital X-Ray",
     imageSrc: img3,
     description:
       "Our digital X-ray services deliver fast and precise imaging, aiding in the swift diagnosis of injuries and illnesses.",
-    slug: "digital-x-ray-price",
+    slug: "digital-x-ray",
   },
   {
     title: "CT Coronary Angiography",
     imageSrc: img7,
     description:
       "Prioritize your heart health with our CT coronary angiography.",
-    slug: "ct-coronary-angiography-price",
+    slug: "ct-coronary",
   },
   // {
   //   title: "Mammography",
@@ -222,48 +222,48 @@ const servicesData = [
     imageSrc: img5,
     description:
       "Ensure your oral health with our advanced dental imaging services.",
-    slug: "dental-x-ray-near-me",
+    slug: "Dental-Imaging",
   },
   {
-    title: "Pathology Laboratory",
+    title: "Angiography",
     imageSrc: img11,
     description:
-      "Trust our pathology laboratory for accurate and timely diagnostic services.",
-    slug: "best-pathology-lab-in-delhi",
+      "Trust our angiography laboratory for accurate and timely diagnostic services.",
+    slug: "angiography",
   },
   {
-    title: "Nuclear Imaging",
+    title: "Nuclear Medicine",
     imageSrc: img9,
     description:
       "Nuclear imaging provides valuable insights into your body's functioning.",
-    slug: "nuclear-scan-cost-in-delhi",
+    slug: "nuclear-mediicine",
   },
   {
-    title: "Cardiology Test",
+    title: "PT CET Scan",
     imageSrc: img8,
     description:
-      "Our dedicated cardiology services focus on maintaining your heart's well-being.",
-    slug: "cardiology-test-price",
+      "Our dedicated pt-cet services focus on maintaining your heart's well-being.",
+    slug: "pet-ct",
   },
-  {
-    title: "Neurology Test",
-    imageSrc: img4,
-    description:
-      "Trust our specialized neurology tests to assess your brain and nervous system health.",
-    slug: "neurology-test-price-delhi",
-  },
-  {
-    title: "DEXA (BMD)",
-    imageSrc: img10,
-    description:
-      "Bone health is essential, and our DEXA (Bone Mineral Density) scans are a reliable way to assess it.",
-    slug: "dexa-bmd-test-price",
-  },
-  {
-    title: "Fibroscan",
-    imageSrc: img13,
-    description:
-      "At City Imaging, we offer comprehensive details about FibroScan test price in Delhi.",
-    slug: "fibroscan-test-price",
-  },
+  // {
+  //   title: "Neurology Test",
+  //   imageSrc: img4,
+  //   description:
+  //     "Trust our specialized neurology tests to assess your brain and nervous system health.",
+  //   slug: "neurology-test-price-delhi",
+  // },
+  // {
+  //   title: "DEXA (BMD)",
+  //   imageSrc: img10,
+  //   description:
+  //     "Bone health is essential, and our DEXA (Bone Mineral Density) scans are a reliable way to assess it.",
+  //   slug: "dexa-bmd-test-price",
+  // },
+  // {
+  //   title: "Fibroscan",
+  //   imageSrc: img13,
+  //   description:
+  //     "At City Imaging, we offer comprehensive details about FibroScan test price in Delhi.",
+  //   slug: "fibroscan-test-price",
+  // },
 ];
