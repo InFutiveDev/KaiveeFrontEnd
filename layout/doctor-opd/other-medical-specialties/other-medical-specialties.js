@@ -7,8 +7,7 @@ import BreadCrumb from "components/breadcrumb";
 import { PrevIcons } from "assets/images/SvgImage";
 import { NextIcons } from "assets/images/SvgImage";
 import LazyLoad from "react-lazyload";
-import BannerImage from "assets/images/about/About us 1400x300.jpg";
-import MobileImage from "assets/images/about/about us 1000 x 600.webp";
+
 const RightArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -56,10 +55,11 @@ const Alternativebanner = () => {
           quality={100}
           width={2000}
           height={400}
+          priority
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center"
-          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-04-25%20at%2012.47.43.jpg?updatedAt=1745581552399"
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-04-25%20at%2012.47.43.jpg?updatedAt=1745581552399?tr=f-auto,q-80"
         />
       </div>
       <div className="relative w-full  items-center flex  sm:hidden">
@@ -67,10 +67,11 @@ const Alternativebanner = () => {
           quality={100}
           width={1000}
           height={400}
+          priority
           layout="fixed"
           alt={"about image"}
           className=" object-fill md:mb-0 mb-3  h-auto w-full object-center "
-          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-04-25%20at%2012.47.43.jpg?updatedAt=1745581552399"
+          src="https://ik.imagekit.io/InFutiveTechnology/kaivee/WhatsApp%20Image%202025-04-25%20at%2012.47.43.jpg?updatedAt=1745581552399?tr=f-auto,q-80"
         />
       </div>
     </div>
