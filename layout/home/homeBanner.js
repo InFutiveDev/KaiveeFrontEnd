@@ -26,7 +26,7 @@ const CustomRightArrow = ({ onClick }) => (
       height="24" 
       viewBox="0 0 24 24" 
       fill="none" 
-      stroke="#D41958"  // Changed color to match your theme
+      stroke="#D41958" 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -47,7 +47,7 @@ const CustomLeftArrow = ({ onClick }) => (
       height="24" 
       viewBox="0 0 24 24" 
       fill="none" 
-      stroke="#D41958"  // Changed color to match your theme
+      stroke="#D41958" 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -67,33 +67,30 @@ const Homebanner = () => {
   }, []);
 
   return (
-    <section className="bg-white md:px-8 py-6 lg:py-8 lg:!pt-0 lg:!pb-0">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
+    <section className="bg-white md:px-3 md:py-5 py-6 lg:py-8 lg:!pt-0 lg:!pb-0">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-8 lg:gap-12">
         {/* Left Section: Carousel */}
-        <div className="flex justify-center w-full lg:w-1/2">
-          <div className="w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] relative">
+        <div className="flex justify-center w-full md:w-1/2">
+          <div className="w-full h-[250px] sm:h-[350px] md:h-[350px] lg:h-[500px] relative">
             {mounted && (
               <Carousel
                 key={carouselKey}
                 responsive={responsive}
                 infinite={true}
                 autoPlay={true}
-                
                 autoPlaySpeed={10000}
                 className="w-full h-full"
                 showDots={true}
                 arrows={true}
                 customRightArrow={<CustomRightArrow />}
                 customLeftArrow={<CustomLeftArrow />}
-                
               >
                 {images.map((image, index) => (
                   <div key={index} className="relative w-full h-full">
                     <Image
-                    loading="eager"
+                      loading="eager"
                       src={image}
                       alt={`Banner ${index + 1}`}
-                      
                       style={{ objectFit: "contain" }}
                       className="rounded-lg"
                       priority
@@ -106,17 +103,17 @@ const Homebanner = () => {
         </div>
 
         {/* Right Section: Content */}
-        <div className="w-full lg:w-1/2 bg-white rounded-lg p-5 lg:p-8">
-          <h1 className="text-[35px] sm:text-[35px] lg:text-[35px] text-gray-800 leading-normal text-center lg:text-left">
+        <div className="w-full md:w-1/2 bg-white rounded-lg p-5 md:p-6 lg:p-8">
+          <h1 className="text-[28px] sm:text-[32px] md:text-[32px] lg:text-[35px] text-gray-800 leading-normal text-center md:text-left">
             Your <span className="text-[#8DBD4D]">Trusted Partner</span> in Health Accurate Tests, Fast Results.
           </h1>
 
-          <p className="mt-4 text-gray-600 text-base sm:text-lg lg:text-xl text-center lg:text-left">
+          <p className="mt-4 text-gray-600 text-base sm:text-lg md:text-lg lg:text-xl text-center md:text-left">
             Book blood tests, full-body checkups, and health packages at the convenience of your home or nearest center.
           </p>
 
           {/* Buttons */}
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="mt-6 flex flex-col sm:flex-row items-center md:items-start md:justify-start justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Link href="/book-a-test">
               <button className="bg-[#D41958] text-white py-2 px-6 rounded-lg shadow-lg hover:bg-[#8DBD4D] w-full sm:w-auto">
                 Book a Test
@@ -135,7 +132,6 @@ const Homebanner = () => {
                 />
               </button>
             </Link>
-
             <style jsx>{`
               @keyframes zoomEffect {
                 0%, 100% {
@@ -146,18 +142,16 @@ const Homebanner = () => {
                 }
               }
             `}</style>
-
-
           </div>
 
           {/* Stats Section */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8">
-            <div className="text-center">
+          <div className="mt-8 flex flex-col sm:flex-row items-center md:items-start md:justify-start justify-center space-y-6 sm:space-y-0 sm:space-x-8">
+            <div className="text-center md:text-left">
               <h2 className="text-[24px] sm:text-[24px] font-bold text-gray-800">10k+</h2>
               <p className="text-gray-600 text-sm sm:text-base">Tests Available</p>
             </div>
             <span className="hidden sm:block h-6 w-px bg-gray-300"></span>
-            <div className="text-center">
+            <div className="text-center md:text-left">
               <h2 className="text-[24px] sm:text-[24px] font-bold text-gray-800">24k+</h2>
               <p className="text-gray-600 text-sm sm:text-base">Patients Benefiting</p>
             </div>

@@ -132,28 +132,35 @@ const HomeLayout = () => {
             <div className="backImageBox" />
           </section>
 
-          <div className="container">
-            <div className="container ">
-              <div className=" mb-3 bg-white bg-opacity-80 rounded-lg">
-                <div className="container mx-auto grid grid-cols-2  lg:grid-cols-4 gap-6 text-centre">
-                  {features.map((feature, index) => (
-                    <div
-                      key={index}
-                      className="flex justify-start items-center space-x-2 font-[Poppins] text-sm md:text-lg transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-[#8DBD4D0D] p-2 rounded-lg"
-                    >
-                      <Image
-                        src={feature.icon}
-                        alt={feature.label}
-                        className="w-auto object-contain"
-                        style={{ height: "70px", width: "70px" }} // Increased icon size
-                      />
-                      <span className="text-gray-800 ">{feature.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+        
+
+  <div className="container">
+    <div className="mb-3 bg-white bg-opacity-80 rounded-lg">
+      <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 text-center 
+                      
+                      
+                      lg:pt-[2px] lg:pl-[100px]">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="flex justify-start items-center space-x-2 font-[Poppins] text-sm md:text-lg transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-[#8DBD4D0D] p-2 rounded-lg"
+          >
+            <Image
+              src={feature.icon}
+              alt={feature.label}
+              className="w-auto object-contain"
+              style={{ height: "70px", width: "70px" }}
+            />
+            <span className="text-gray-800">{feature.label}</span>
           </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+
+
+
 
           <div className="bg-[#FAFAFA]">
             <div className="container pt-1 ">

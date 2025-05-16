@@ -264,10 +264,19 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 15px 0; */
   flex-wrap: wrap;
+  padding-bottom: 5px;
+  /* padding: 15px 0; */
   /* gap: 10px; */
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navigation_bar {
+    padding-bottom: 0px;
+  }
+}
+
+
 
 .web-view .logo-main {
   width: auto;

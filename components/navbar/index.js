@@ -136,7 +136,7 @@ const Navbar = () => {
     >
       <div className="  sm:container mx-auto">
         <div className="navigation_bar">
-          <div className="  sm:pb-0 w-full sm:w-auto flex justify-between items-center">
+          <div className="  sm:pb-0 w-full md:w-auto sm:w-auto flex justify-between items-center">
             <div className="logo-main">
               <Link href="/">
                 <Image
