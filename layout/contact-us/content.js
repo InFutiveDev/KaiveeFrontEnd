@@ -86,7 +86,7 @@ const Content = () => {
           <div className="col-12 col-md-6 flex items-center">
             <img src={img2.src} alt="Phone img" />
             <div>
-              <p>9289088633</p>
+              <p>+91 84483 35621</p>
               <p>
                 Our call centre would be happy to assist you with your query.
               </p>

@@ -617,7 +617,7 @@ const locationData = [
     mainTilte: "Kaivee HealthCare Noida",
     address: "Noida,K-4, Sector-116, U.P-201305",
     serviceAvailable: "MRI Scan, CT Scan, Digital X-Ray, Neurology Test, etc",
-    contactNumber: "+91 88001 33928",
+    contactNumber: "+91 84483 35621",
     timing: "24 hours open",
     email: "care@zenhealthsolutions.com",
     iframe:

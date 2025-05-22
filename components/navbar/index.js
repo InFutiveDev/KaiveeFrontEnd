@@ -281,7 +281,7 @@ const Navbar = () => {
 
     {/* Phone Number */}
     <div className="phone flex items-center ml-8 gap-1">
-      <a href="tel:88001 33928" className="flex items-center gap-1">
+      <a href="tel:84483 35621" className="flex items-center gap-1">
         <svg
           width="28"
           height="28"
@@ -294,7 +294,7 @@ const Navbar = () => {
             fill="#52525B"
           />
         </svg>
-        <span className=" text-sm sm:text-base text-black">+91 88001 33928</span>
+        <span className=" text-sm sm:text-base text-black">+91 84483 35621</span>
       </a>
     </div>
   </div>
