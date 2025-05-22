@@ -81,10 +81,10 @@ const Content = () => {
               <p>care@zenhealthsolutions.com</p>
               <p>Email us for any information or feedback</p>
             </div>
-            <img src={img1.src} alt="Email img" />
+            <img src="https://ik.imagekit.io/InFutiveTechnology/kaivee/icons8-email-100.png?updatedAt=1747904214942" alt="Email img" />
           </div>
           <div className="col-12 col-md-6 flex items-center">
-            <img src={img2.src} alt="Phone img" />
+            <img src="https://ik.imagekit.io/InFutiveTechnology/kaivee/icons8-fax-100.png?updatedAt=1747904215244" alt="Phone img" />
             <div>
               <p>+91 84483 35621</p>
               <p>
