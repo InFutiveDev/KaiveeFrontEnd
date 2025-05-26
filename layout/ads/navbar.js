@@ -27,7 +27,7 @@ const Navbar = ({ data }) => {
             </Link>
           </div>
 
-          <div className="bg-yellow-300 px-2 py-1 rounded-full">
+          <div className="bg-[#7bb44ceb] px-2 py-1 rounded-full">
             <Link href={`tel:${data?.mobile_landing}`}>
               <div className="space-x-2 text-[16px] flex justify-start items-center">
                 <Phone size={19} />

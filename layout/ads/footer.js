@@ -59,7 +59,7 @@ const FooterAds = ({ data }) => {
     }
   }, []);
   return (
-    <footer className=" bg-[#f6f0d9] body-font">
+    <footer className=" bg-[#D419580D] body-font">
       <div className="absolute bottom-4 right-[13px]">
         <a
           href="https://api.whatsapp.com/send/?phone=%2B9220817222&text=Hi+Kaivee+HealthCare"
@@ -75,7 +75,7 @@ const FooterAds = ({ data }) => {
             Contact Us
           </h2>
           <p className="p-0 mb-1 text-gray-800  text-[20px] font-[400] font-source-pro">
-            <snap className="font-semibold"> Our Main Hub :</snap> Noida 
+            <snap className="font-semibold"> Our Main Hub :</snap> Noida,K-4, Sector-116, U.P-201305
           </p>
           <p className=" text-gray-800  text-[20px] font-[400] font-source-pro">
             <span className="font-semibold"> Timing :</span> 7:30am to 11:00pm
@@ -97,8 +97,8 @@ const FooterAds = ({ data }) => {
             </svg>
             <div>
               <p className="mb-0 pb-0 text-[16px]">Email</p>
-              <p className="font-[500] -mt-1 text-black text-[14px]">
-                
+              <p className="font-[500] -mt-1 text-black text-[18px]">
+                care@zenhealthsolutions.com
               </p>
             </div>
           </div>
@@ -117,8 +117,8 @@ const FooterAds = ({ data }) => {
             </svg>
             <div>
               <p className="mb-0 text-[16px]">Phone No.</p>
-              <p className="font-[500]  -mt-1 text-black text-[14px]">
-                01147252098
+              <p className="font-[500]  -mt-1 text-black text-[18px]">
+                84483 35621
               </p>
             </div>
           </div>
@@ -165,7 +165,7 @@ const FooterAds = ({ data }) => {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className=" p-2 mt-2 text-[18px] rounded-md bg-[#fcc42f]"
+                className=" p-2 mt-2 text-[18px] text-white rounded-md bg-[#D41958]"
               >
                 Request a Call Back
               </button>

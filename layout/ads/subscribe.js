@@ -36,7 +36,7 @@ const SubscribeAds = ({ data }) => {
 
           <button
             // type="button"
-            className="min-w-[170px] w-full h-full py-2  !m-0 rounded-md bg-[#fcc42f] "
+            className="min-w-[170px] w-full h-full py-2  !m-0 rounded-md bg-[#7bb44ceb] "
             disabled={email ? false : true}
           >
             Subscribe Now

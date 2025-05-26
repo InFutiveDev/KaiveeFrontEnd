@@ -17,7 +17,7 @@ const ContentSection = ({ data }) => {
       <a
         title={data?.phone}
         href={`tel:${data?.phone}`}
-        className="rounded-full inline-flex text-gray-800 justify-start items-center px-4 py-1 bg-[#fcc42d] phone_number_center_svg"
+        className="rounded-full inline-flex text-gray-800 justify-start items-center px-4 py-1 bg-[#7bb44ceb] phone_number_center_svg"
       >
         <Phone size={20} className="mr-2" /> +{data?.phone} 
       </a>

@@ -1,60 +1,72 @@
 import WhyChoose from "components/WhyChoose";
-import img2 from "assets/images/Finalimg/Why Choose Us/10M+ Happy Patients.webp";
-import img3 from "assets/images/Finalimg/Why Choose Us/30 Years of Excellence in Diagnostic Health Care.webp";
-import img5 from "assets/images/Finalimg/Why Choose Us/Affordable.webp";
-import img6 from "assets/images/Finalimg/Why Choose Us/Fast & Accurate Results.webp";
-import img7 from "assets/images/Finalimg/Why Choose Us/Free Home Sample Collection.webp";
-import img9 from "assets/images/Finalimg/Why Choose Us/Large Menu of Tests Available.webp";
-import img8 from "assets/images/Finalimg/Why Choose Us/NABL & NABH Certified Centre.webp";
-import img1 from "assets/images/Finalimg/Why Choose Us/Team of Experienced Doctor & Staffs.webp";
-import img4 from "assets/images/Finalimg/Why Choose Us/World Class Technology.webp";
+import img1 from "assets/images/whychooseus/1.png";
+import img2 from "assets/images/whychooseus/2-png.png";
+import img3 from "assets/images/whychooseus/icon-3.png";
+import img4 from "assets/images/whychooseus/3-png.png";
+import img5 from "assets/images/whychooseus/4-png.png";
+import img6 from "assets/images/whychooseus/5-png.png";
+import img7 from "assets/images/whychooseus/6-png.png";
+import img8 from "assets/images/whychooseus/7-png.png";
+import Image from "next/image";
 
 const WhyChooseAds = () => {
   return (
     <>
-      <div className=" py-[70px]">
-        <WhyChoose data={data} />
-      </div>
+      <div>
+             <WhyChoose data={data} padding={"50px"} />
+     </div>
     </>
   );
 };
 
 const data = [
   {
-    title: "Team of Experienced <br /> Doctors & Staffs",
-    image: img1,
+    id: 1,
+    title: "NABL Accredited Labs",
+    description: "Follows all protocols as per NABL & CAP Guidelines",
+    icon: <Image src={img3} alt="NABL Accredited Icon" />,
   },
   {
-    title: "10M+ Happy Patients",
-    image: img2,
+    id: 2,
+    title: "Trusted by Leading Doctors & Hospitals",
+
+    icon: <Image src={img2} alt="doctors Icon" />,
   },
   {
-    title: "31 Year of Excellence in <br /> Diagnostic Healthcare",
-    image: img3,
+    id: 3,
+    title: "Shortest Reporting Time",
+
+    icon: <Image src={img5} alt="time Icon" />,
   },
   {
-    title: "World Class Technology",
-    image: img4,
+    id: 4,
+    title: "Accurate Test Reports",
+
+    icon: <Image src={img4} alt="report Icon" />,
   },
   {
-    title: "Fast & Accurate Results",
-    image: img6,
+    id: 5,
+    title: "Satisfied Customers",
+
+    icon: <Image src={img1} alt="customer Icon" />,
   },
   {
-    title: "Affordable",
-    image: img5,
+    id: 6,
+    title: "Most Affordable Prices",
+
+    icon: <Image src={img6} alt="NABL Accredited Icon" />,
   },
   {
-    title: "Free Home Sample <br /> Collection",
-    image: img7,
+    id: 7,
+    title: "Painless Sample Collection",
+
+    icon: <Image src={img7} alt="collection Icon" />,
   },
   {
-    title: "NABL & NABH Certified <br /> Centre",
-    image: img8,
-  },
-  {
-    title: "Large Menu of Tests <br /> Available ",
-    image: img9,
+    id: 8,
+    title: "Scientific Orientation",
+
+    icon: <Image src={img8} alt="scientific Icon" />,
   },
 ];
 export default WhyChooseAds;

@@ -106,10 +106,10 @@ const LookingFor = ({ data }) => {
               <span className="text-danger">Please Enter a valid number</span>
             ) : null}
           </div>
-          <div className="bg-orange px-3 py-2 rounded-full">
+          <div className="bg-[#7bb44ceb] px-3 py-2 rounded-full">
             <button
               onClick={handleSubmit}
-              className="w-full h-full bg-[#fcc42d] rounded"
+              className="w-full h-full rounded"
             >
               Request a Call Back
             </button>

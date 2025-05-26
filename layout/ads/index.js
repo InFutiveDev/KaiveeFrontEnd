@@ -50,7 +50,7 @@ const LayoutAds = () => {
       <section className="px-3 py-2.5 mt-2 relative z-10">
         <AdsBanner data={data} />
       </section>
-      <FeatureCard />
+      {/* <FeatureCard /> */}
       <RelativeService data={data} />
       <ItemList data={data} testInfo={data?.testInfo || []} />
       <LookingFor data={data} />

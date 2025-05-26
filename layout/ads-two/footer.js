@@ -59,7 +59,7 @@ const FooterAds = ({ data }) => {
     }
   }, []);
   return (
-    <footer className=" bg-[#f6f0d9] body-font">
+    <footer className=" bg-[#D419580D] body-font">
       <div className="absolute bottom-4 right-[13px]">
         <a
           href="https://api.whatsapp.com/send/?phone=%2B9220817222&text=Hi+Kaivee+HealthCare"
@@ -165,7 +165,7 @@ const FooterAds = ({ data }) => {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className=" p-2 mt-2 text-[18px] rounded-md bg-[#fcc42f]"
+                className=" p-2 mt-2 text-[18px] rounded-md bg-[#D41958] text-white"
               >
                 Request a Call Back
               </button>
