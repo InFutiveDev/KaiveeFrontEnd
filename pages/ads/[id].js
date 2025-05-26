@@ -4,7 +4,7 @@ import { MakeProtectedApiCall } from "utility/api";
 
 const AppAds = ({ data }) => {
   const metaData = {
-    title: data?.[0]?.metaTagTitle || "Maivee healthcare ads",
+    title: data?.[0]?.metaTagTitle || "Kaivee Healthcare ads",
     description: data?.[0]?.metaTagDescription || "",
   };
   return (

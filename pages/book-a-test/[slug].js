@@ -5,7 +5,7 @@ import { MakeProtectedApiCall } from "utility/api";
 
 const TestDetails = ({ data }) => {
   const metaData = {
-    title: data?.[0]?.meta_title || "Maivee Healthcare tests",
+    title: data?.[0]?.meta_title || "Kaivee Healthcare tests",
     description: data?.[0]?.meta_desc || "Healthcare tests",
     url: `https://www.kaiveehealthcare.com//${
       data?.[0]?.test_url || "default"
